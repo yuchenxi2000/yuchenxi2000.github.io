@@ -1,0 +1,680 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>Dirac方程的非相对论近似 - YCX&#039;s Blog</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="YCX&#039;s Blog"><meta name="msapplication-TileImage" content="favicon.ico"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="YCX&#039;s Blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="Chenxi Yu 2023.07.09 Dirac方程 $$ (\mathrm{i}\hbar \gamma^\mu \partial_\mu - mc)\psi&amp;#x3D;0 $$     $\gamma^\mu$ 有无数种选择，其中一种表象为  $$ \gamma^\mu&amp;#x3D; \begin{pmatrix} 0 &amp;amp; \sigma^\mu \\ \overline{\sigma}^\mu &amp;amp; 0 \\ \"><meta property="og:type" content="blog"><meta property="og:title" content="Dirac方程的非相对论近似"><meta property="og:url" content="https://yuchenxi2000.github.io/2023/07/09/Dirac%E6%96%B9%E7%A8%8B%E7%9A%84%E9%9D%9E%E7%9B%B8%E5%AF%B9%E8%AE%BA%E8%BF%91%E4%BC%BC/"><meta property="og:site_name" content="YCX&#039;s Blog"><meta property="og:description" content="Chenxi Yu 2023.07.09 Dirac方程 $$ (\mathrm{i}\hbar \gamma^\mu \partial_\mu - mc)\psi&amp;#x3D;0 $$     $\gamma^\mu$ 有无数种选择，其中一种表象为  $$ \gamma^\mu&amp;#x3D; \begin{pmatrix} 0 &amp;amp; \sigma^\mu \\ \overline{\sigma}^\mu &amp;amp; 0 \\ \"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://yuchenxi2000.github.io/img/og_image.png"><meta property="article:published_time" content="2023-07-09T08:06:25.000Z"><meta property="article:modified_time" content="2026-03-30T12:14:17.140Z"><meta property="article:author" content="Chenxi Yu"><meta property="article:tag" content="物理"><meta property="article:tag" content="量子力学"><meta property="article:tag" content="相对论"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://yuchenxi2000.github.io/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://yuchenxi2000.github.io/2023/07/09/Dirac%E6%96%B9%E7%A8%8B%E7%9A%84%E9%9D%9E%E7%9B%B8%E5%AF%B9%E8%AE%BA%E8%BF%91%E4%BC%BC/"},"headline":"Dirac方程的非相对论近似","image":["https://yuchenxi2000.github.io/img/og_image.png"],"datePublished":"2023-07-09T08:06:25.000Z","dateModified":"2026-03-30T12:14:17.140Z","author":{"@type":"Person","name":"Chenxi Yu"},"publisher":{"@type":"Organization","name":"YCX's Blog","logo":{"@type":"ImageObject","url":"https://yuchenxi2000.github.io/2023/07/09/Dirac%E6%96%B9%E7%A8%8B%E7%9A%84%E9%9D%9E%E7%9B%B8%E5%AF%B9%E8%AE%BA%E8%BF%91%E4%BC%BC/android-chrome-512x512.png"}},"description":"Chenxi Yu 2023.07.09 Dirac方程 $$ (\\mathrm{i}\\hbar \\gamma^\\mu \\partial_\\mu - mc)\\psi&#x3D;0 $$     $\\gamma^\\mu$ 有无数种选择，其中一种表象为  $$ \\gamma^\\mu&#x3D; \\begin{pmatrix} 0 &amp; \\sigma^\\mu \\\\ \\overline{\\sigma}^\\mu &amp; 0 \\\\ \\"}</script><link rel="canonical" href="https://yuchenxi2000.github.io/2023/07/09/Dirac%E6%96%B9%E7%A8%8B%E7%9A%84%E9%9D%9E%E7%9B%B8%E5%AF%B9%E8%AE%BA%E8%BF%91%E4%BC%BC/"><link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link data-pjax rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link data-pjax rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!--!--><!-- hexo injector head_end start --><script>
+  (function () {
+      function switchTab() {
+          if (!location.hash) {
+            return;
+          }
+
+          const id = '#' + CSS.escape(location.hash.substring(1));
+          const $tabMenu = document.querySelector(`.tabs a[href="${id}"]`);
+          if (!$tabMenu) {
+            return;
+          }
+
+          const $tabMenuContainer = $tabMenu.parentElement.parentElement;
+          Array.from($tabMenuContainer.children).forEach($menu => $menu.classList.remove('is-active'));
+          Array.from($tabMenuContainer.querySelectorAll('a'))
+              .map($menu => document.getElementById($menu.getAttribute("href").substring(1)))
+              .forEach($content => $content.classList.add('is-hidden'));
+
+          if ($tabMenu) {
+              $tabMenu.parentElement.classList.add('is-active');
+          }
+          const $activeTab = document.querySelector(id);
+          if ($activeTab) {
+              $activeTab.classList.remove('is-hidden');
+          }
+      }
+      switchTab();
+      window.addEventListener('hashchange', switchTab, false);
+  })();
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 8.1.1"></head><body class="is-1-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-12"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2023-07-09T08:06:25.000Z" title="2023/7/9 16:06:25">2023-07-09</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E7%89%A9%E7%90%86/">物理</a></span><span class="level-item">14 分钟读完 (大约2152个字)</span></div></div><h1 class="title is-3 is-size-4-mobile">Dirac方程的非相对论近似</h1><div class="content"><p>Chenxi Yu</p>
+<p>2023.07.09</p>
+<h2 id="Dirac方程"><a href="#Dirac方程" class="headerlink" title="Dirac方程"></a>Dirac方程</h2><div>
+$$
+(\mathrm{i}\hbar \gamma^\mu \partial_\mu - mc)\psi=0
+$$
+</div>
+
+
+<p> $\gamma^\mu$ 有无数种选择，其中一种表象为</p>
+<div>
+$$
+\gamma^\mu=
+\begin{pmatrix}
+0 & \sigma^\mu \\
+\overline{\sigma}^\mu & 0 \\
+\end{pmatrix}
+\label{eq:dirac-representation-1}
+$$
+</div>
+
+<p>其中 $\sigma^\mu&#x3D;(1,\sigma^1,\sigma^2,\sigma^3),\overline{\sigma}^\mu&#x3D;(1,-\sigma^1,-\sigma^2,-\sigma^3)$ </p>
+<p> $\sigma^1,\sigma^2,\sigma^3$ 为泡利矩阵</p>
+<div>
+$$
+\sigma^1=
+\begin{pmatrix}
+0 & 1 \\
+1 & 0 \\
+\end{pmatrix}
+\\
+\sigma^2=
+\begin{pmatrix}
+0 & -\mathrm{i} \\
+\mathrm{i} & 0 \\
+\end{pmatrix}
+\\
+\sigma^3=
+\begin{pmatrix}
+1 & 0 \\
+0 & -1 \\
+\end{pmatrix}
+$$
+</div>
+
+<p>从Dirac方程，给出其哈密顿算符</p>
+<div>
+$$
+H=\mathrm{i}\hbar \partial_t
+$$
+</div>
+
+
+<div>
+$$
+\mathrm{i}\hbar \gamma^\mu \partial_\mu - mc=0
+$$
+</div>
+
+
+<div>
+$$
+\frac{1}{c}\mathrm{i}\hbar \gamma^0 \partial_t+\mathrm{i}\hbar \sum_{j=0}^3 \gamma^j \partial_j - mc=0
+$$
+</div>
+
+
+<div>
+$$
+\mathrm{i}\hbar \partial_t+c\mathrm{i}\hbar \sum_{j=0}^3 \gamma^0\gamma^j \partial_j - \gamma^0 mc^2=0
+$$
+</div>
+
+
+<div>
+$$
+H-c \sum_{j=0}^3 \gamma^0\gamma^j p_j - \gamma^0 mc^2=0
+$$
+</div>
+
+
+<p>记 $\alpha^j&#x3D;\gamma^0\gamma^j,\beta&#x3D;\gamma^0$ </p>
+<div>
+$$
+H=c\alpha \cdot p+\beta mc^2
+$$
+</div>
+
+<p>根据 $\eqref{eq:dirac-representation-1}$ 中给出的表象，</p>
+<div>
+$$
+\alpha^j=\begin{pmatrix}
+-\sigma^j & 0 \\
+0 & \sigma^j \\
+\end{pmatrix}\\
+\beta=\begin{pmatrix}
+0 & 1 \\
+1 & 0 \\
+\end{pmatrix}\\
+$$
+</div>
+
+<p>另一种更方便的表象可以通过幺正变换 $U$ 得到</p>
+<div>
+$$
+U=\cfrac{1}{\sqrt{2}}\begin{pmatrix}
+1 & 1 \\
+-1 & 1
+\end{pmatrix}
+\\
+U^\dagger U=UU^\dagger=1
+$$
+</div>
+
+
+<div>
+$$
+\alpha^j \rightarrow U\alpha^j U^\dagger =\begin{pmatrix}
+0 & \sigma^j \\
+\sigma^j & 0 \\
+\end{pmatrix}\\
+$$
+</div>
+
+
+<div>
+$$
+\beta \rightarrow U\beta U^\dagger=\begin{pmatrix}
+1 & 0 \\
+0 & -1 \\
+\end{pmatrix}\\
+$$
+</div>
+
+
+<p>接下来的讨论都会使用该表象。</p>
+<h2 id="外场下Dirac方程"><a href="#外场下Dirac方程" class="headerlink" title="外场下Dirac方程"></a>外场下Dirac方程</h2><p>根据最小耦合原理，加入电磁场只需</p>
+<div>
+$$
+\mathrm{i}\hbar \partial_\mu \rightarrow \mathrm{i}\hbar \partial_\mu-qA_\mu
+$$
+</div>
+
+<p> $q$ 为电荷， $A_\mu&#x3D;(\cfrac{\phi}{c},A_1,A_2,A_3)&#x3D;(\cfrac{\phi}{c},-A^1,-A^2,-A^3)$ ， $\phi$ 为电势， $A&#x3D;(A^1,A^2,A^3)$ 为磁势。</p>
+<p>对于电子， $q&#x3D;-e$ </p>
+<p>Dirac方程成为</p>
+<div>
+$$
+\mathrm{i}\hbar\partial_t+e\phi=c\alpha \cdot (p+eA)+\beta mc^2
+$$
+</div>
+
+
+<div>
+$$
+H=c\alpha \cdot (p+eA)+\beta mc^2-e\phi
+$$
+</div>
+
+
+<p>记 $U&#x3D;-e\phi$ </p>
+<div>
+$$
+H=c\alpha \cdot (p+eA)+\beta mc^2+U
+\label{eq:dirac-with-external-fields}
+$$
+</div>
+
+
+<h2 id="非相对论近似"><a href="#非相对论近似" class="headerlink" title="非相对论近似"></a>非相对论近似</h2><p>设</p>
+<div>
+$$
+\psi=\begin{pmatrix}
+\psi_+ \\
+\psi_- \\
+\end{pmatrix}
+$$
+</div>
+
+<p>其中 $\psi_+$ 表示正频率解（正能量，电子）， $\psi_-$ 表示负频率解（负能量，正电子）</p>
+<p>代入存在外场下的Dirac方程 $\eqref{eq:dirac-with-external-fields}$ ，求解哈密顿量的特征值问题</p>
+<div>
+$$
+\begin{gathered}
+c\sigma \cdot (p+eA)\psi_- = (E-U-mc^2)\psi_+ \\
+c\sigma \cdot (p+eA)\psi_+ = (E-U+mc^2)\psi_- \\
+\\\end{gathered}
+$$
+</div>
+
+<p>[1]给出了一个近似求解的方法：</p>
+<p>利用其中一个式子消去 $\psi_-$ ，</p>
+<div>
+$$
+\psi_-= \cfrac{1}{E-U+mc^2} c\sigma \cdot (p+eA)\psi_+
+$$
+</div>
+
+
+<div>
+$$
+\begin{gathered}
+\cfrac{1}{2m}\left\lbrack \sigma \cdot (p+eA)\right\rbrack  f \left\lbrack \sigma \cdot (p+eA)\right\rbrack \psi_+ = (E-U-mc^2)\psi_+ \\
+\\\end{gathered}
+$$
+</div>
+
+
+<p>其中 $f&#x3D;\cfrac{2mc^2}{E-U+mc^2}$ </p>
+<p>我们先证明一个等式</p>
+<div>
+$$
+\lbrack p,f\rbrack \psi
+=-\mathrm{i}\hbar \left\lbrack \nabla(f\psi)-f\nabla\psi\right\rbrack 
+=-\mathrm{i}\hbar \nabla f \psi
+$$
+</div>
+
+
+<div>
+$$
+\lbrack p,f\rbrack =-\mathrm{i}\hbar \nabla f
+$$
+</div>
+
+
+<p>故</p>
+<div>
+$$
+\lbrack \sigma \cdot (p+eA)\rbrack f=f\lbrack \sigma \cdot (p+eA)\rbrack -\mathrm{i}\hbar \sigma \cdot \nabla f
+$$
+</div>
+
+
+<div>
+$$
+\left\lbrack \sigma \cdot (p+eA)\right\rbrack ^2 f=\left\lbrack \sigma \cdot (p+eA)\right\rbrack  f \left\lbrack \sigma \cdot (p+eA)\right\rbrack -\mathrm{i}\hbar\left\lbrack \sigma \cdot (p+eA)\right\rbrack ( \sigma \cdot \nabla f)
+$$
+</div>
+
+
+<p>此即正频率解所满足的方程。</p>
+<div>
+$$
+\begin{gathered}
+\cfrac{1}{2m}\left\lbrack \sigma \cdot (p+eA)\right\rbrack ^2f\psi_+ 
++\mathrm{i}\hbar\cfrac{1}{2m}\left\lbrack  \sigma \cdot (p+eA)\right\rbrack \left\lbrack \sigma \cdot (\nabla f)\right\rbrack \psi_+
+= (E-U-mc^2)\psi_+ \\
+\end{gathered}
+\label{eq:dirac-non-relativistic}
+$$
+</div>
+
+
+<h3 id="零阶近似"><a href="#零阶近似" class="headerlink" title="零阶近似"></a>零阶近似</h3><p>因为非相对论下静能远大于动能，</p>
+<span id="more"></span>
+<div>
+$$
+\begin{gathered}
+f=\cfrac{2mc^2}{E-U+mc^2} \\
+= \cfrac{2mc^2}{2mc^2+E-U-mc^2} \\
+= \left(1+\cfrac{E-U-mc^2}{2mc^2}\right)^{-1} \\
+\approx 1
+\\\end{gathered}
+$$
+</div>
+
+<p>则</p>
+<div>
+$$
+\begin{gathered}
+\cfrac{1}{2m}\left\lbrack \sigma \cdot (p+eA)\right\rbrack ^2\psi_+ = (E-U-mc^2)\psi_+ \\
+\\\end{gathered}
+$$
+</div>
+
+<p>记 $E^\prime&#x3D;E-mc^2$ ，能量中除去静能的部分</p>
+<div>
+$$
+\begin{gathered}
+\left\{ \cfrac{1}{2m}\left\lbrack \sigma \cdot (p+eA)\right\rbrack ^2 +U \right\} \psi_+ = E^\prime\psi_+ \\
+\\\end{gathered}
+$$
+</div>
+
+<p>此即Pauli方程。第一项可以继续展开，运用下面这个等式：</p>
+<div>
+$$
+(\sigma \cdot a) (\sigma \cdot b) = a \cdot b + \mathrm{i} \sigma \cdot (a \times b)
+$$
+</div>
+
+
+<div>
+$$
+\left\lbrack \sigma \cdot (p+eA)\right\rbrack ^2=(p+eA)^2+\mathrm{i}e\sigma \cdot (p\times A+A\times p)
+$$
+</div>
+
+
+<p>其中</p>
+<div>
+$$
+\begin{gathered}
+(p\times A+A\times p)\psi \\
+=-\mathrm{i}\hbar\left\lbrack \nabla \times (A\psi)+A\times (\nabla\psi)\right\rbrack  \\
+=-\mathrm{i}\hbar\left\lbrack (\nabla \times A)\psi+\nabla \psi \times A- \nabla\psi \times A\right\rbrack  \\
+=-\mathrm{i}\hbar(\nabla \times A)\psi \\
+=-\mathrm{i}\hbar B\psi \\
+\\\end{gathered}
+$$
+</div>
+
+
+<div>
+$$
+\begin{gathered}
+p\times A+A\times p = -\mathrm{i}\hbar B \\
+\cfrac{1}{2m}\mathrm{i}e \sigma \cdot ( p\times A+A\times p ) = \cfrac{e\hbar}{2m} \sigma \cdot B = \mu_B \sigma \cdot B \\
+\\\end{gathered}
+$$
+</div>
+
+
+<p>其中 $\mu_B &#x3D; \cfrac{e\hbar}{2m}$ 为Bohr磁子。</p>
+<p>其中</p>
+<div>
+$$
+(p+eA)^2=p^2+e^2A^2+e(p \cdot A + A \cdot p)
+$$
+</div>
+
+<p>根据Coulomb规范 $\nabla \cdot A&#x3D;0$ </p>
+<div>
+$$
+\begin{gathered}
+(p \cdot A + A \cdot p)\psi \\
+= p \cdot (A\psi) + A \cdot (p\psi) \\
+= -\mathrm{i}\hbar \left\lbrack  \nabla \cdot (A\psi) + A \cdot (\nabla\psi) \right\rbrack \\
+= -\mathrm{i}\hbar \left\lbrack  (\nabla \cdot A)\psi + A \cdot (\nabla\psi) + A \cdot (\nabla\psi) \right\rbrack \\
+= -2\mathrm{i}\hbar A \cdot (\nabla\psi) \\
+= 2 A \cdot (p\psi) \\
+\\\end{gathered}
+$$
+</div>
+
+
+<div>
+$$
+p \cdot A + A \cdot p = 2A\cdot p
+$$
+</div>
+
+
+<p>故Pauli方程全部展开后为（在Coulomb规范下）</p>
+<div>
+$$
+\begin{gathered}
+\left( \cfrac{p^2}{2m} + \cfrac{e}{m}A \cdot p + \cfrac{e^2}{2m}A^2 + \cfrac{e\hbar}{2m} \sigma \cdot B + U \right) \psi_+ = E^\prime\psi_+ \\
+\\\end{gathered}
+$$
+</div>
+
+
+<h3 id="一阶近似"><a href="#一阶近似" class="headerlink" title="一阶近似"></a>一阶近似</h3><div>
+$$
+\begin{gathered}
+f = \left(1+\cfrac{E-U-mc^2}{2mc^2}\right)^{-1} \\
+\approx 1-\cfrac{E-U-mc^2}{2mc^2} \\
+\\\end{gathered}
+$$
+</div>
+
+
+<p>上式中含 $E$ ，用 $E$ 的零阶近似（Pauli方程）消去</p>
+<div>
+$$
+\begin{gathered}
+f \approx 1-\cfrac{\left\lbrack \sigma \cdot (p+eA)\right\rbrack ^2}{4m^2c^2} \\
+\\\end{gathered}
+$$
+</div>
+
+<p> $\nabla f$ 直接求导即可</p>
+<div>
+$$
+\begin{gathered}
+\nabla f \approx \cfrac{\nabla U}{2mc^2} \\
+\\\end{gathered}
+$$
+</div>
+
+<p>代入正频率解所满足的方程 $\eqref{eq:dirac-non-relativistic}$ ，</p>
+<div>
+$$
+\begin{gathered}
+\left\{
+\cfrac{1}{2m}\left\lbrack \sigma \cdot (p+eA)\right\rbrack ^2
+- \cfrac{1}{8m^3c^2}\left\lbrack \sigma \cdot (p+eA)\right\rbrack ^4
++\mathrm{i}\hbar \cfrac{1}{4m^2c^2}\left\lbrack  \sigma \cdot (p+eA)\right\rbrack \left\lbrack \sigma \cdot (\nabla U)\right\rbrack 
+\right\}\psi_+ \\
+= (E-U-mc^2)\psi_+ \\
+\\\end{gathered}
+$$
+</div>
+
+<p>其中 $- \cfrac{1}{8m^3c^2}\left\lbrack \sigma \cdot (p+eA)\right\rbrack ^4$ 是对动能的相对论修正。</p>
+<p>接下来求这一项 $+\mathrm{i}\hbar\cfrac{1}{4m^2c^2}\left\lbrack  \sigma \cdot (p+eA)\right\rbrack \left\lbrack \sigma \cdot (\nabla U)\right\rbrack $ </p>
+<div>
+$$
+\begin{gathered}
+\left\lbrack  \sigma \cdot (p+eA)\right\rbrack \left\lbrack \sigma \cdot (\nabla U)\right\rbrack  \\
+= (p+eA) \cdot \nabla U + \mathrm{i}\sigma \cdot \left\lbrack (p+eA) \times \nabla U \right\rbrack  \\
+= p \cdot \nabla U + \mathrm{i}\sigma \cdot \left( p \times \nabla U \right) + eA \cdot \nabla U + \mathrm{i}e\sigma \cdot \left( A \times \nabla U \right) \\
+\\\end{gathered}
+$$
+</div>
+
+<p>对于这项 $\sigma \cdot \left( p \times \nabla U \right)$ ，假设势能 $U$ 是中心势场产生的（比如氢原子），则 $\nabla U&#x3D;\cfrac{1}{r}\cfrac{\partial U}{\partial r}r$ </p>
+<div>
+$$
+\begin{gathered}
+\sigma \cdot \left( p \times \nabla U \right) \\
+= \sigma \cdot \left( p \times \cfrac{1}{r}\cfrac{\partial U}{\partial r}r \right)
+\\\end{gathered}
+$$
+</div>
+
+<p>注意</p>
+<div>
+$$
+\begin{gathered}
+\left(\nabla \times \lbrack F(r)r\rbrack \right)_k=\varepsilon_{ijk}\nabla_i \lbrack F(r)r_j\rbrack  \\
+= F(r)\varepsilon_{ijk}\nabla_i r_j + \varepsilon_{ijk} \cfrac{1}{r} \cfrac{\partial F(r)}{\partial r}r_ir_j \\
+= \left(F(r)\nabla \times r\right)_k
+\\\end{gathered}
+$$
+</div>
+
+<p>故</p>
+<div>
+$$
+\begin{gathered}
+\sigma \cdot \left( p \times \nabla U \right) \\
+= -\cfrac{1}{r}\cfrac{\partial U}{\partial r} \sigma \cdot L \\
+= -\cfrac{2}{\hbar r}\cfrac{\partial U}{\partial r} S \cdot L \\
+\propto S \cdot L \\
+\\\end{gathered}
+$$
+</div>
+
+<p>这项就是自旋轨道耦合项。完整地写出是</p>
+<div>
+$$
+\begin{gathered}
+H_{\text{SOC}}
+=+\mathrm{i}\hbar\cfrac{1}{4m^2c^2}\mathrm{i}\sigma \cdot (p \times \nabla U) \\
+=-\mathrm{i}\hbar\cfrac{1}{4m^2c^2}\mathrm{i}\cfrac{2}{\hbar r}\cfrac{\partial U}{\partial r} S \cdot L \\
+=\cfrac{1}{2m^2c^2r}\cfrac{\partial U}{\partial r} S \cdot L \\
+\\\end{gathered}
+$$
+</div>
+
+<p>对于 $p \cdot \nabla U$ ，</p>
+<div>
+$$
+\begin{gathered}
+p \cdot \nabla U \\
+=\nabla U \cdot p - \mathrm{i}\hbar \nabla^2U
+\\\end{gathered}
+$$
+</div>
+
+<p>完整地写出是</p>
+<div>
+$$
+\mathrm{i}\hbar\cfrac{1}{4m^2c^2}\nabla U \cdot p + \cfrac{\hbar^2}{4m^2c^2} \nabla^2U
+$$
+</div>
+
+<p>其中第一项是非厄米算符，第二项只影响s轨道能量。对于第一项非厄米算符，曾谨言的《量子力学 II》[3]中给出了解释（详见p406），原因是近似的二分量波函数并不正交归一，所以这项应该舍弃。</p>
+<h3 id="另一种推导方法"><a href="#另一种推导方法" class="headerlink" title="另一种推导方法"></a>另一种推导方法</h3><p>能带downfolding方法，把Hilbert空间分为感兴趣的部分和其他高能部分[2]。假设哈密顿量分成</p>
+<div>
+$$
+H=
+\begin{pmatrix}
+H_{00} & T_{01} \\
+T_{10} & H_{11} \\
+\end{pmatrix}
+$$
+</div>
+
+<p>计算格林函数（resolvent, 预解式算子）</p>
+<div>
+$$
+G(\varepsilon)=(\varepsilon-H)^{-1} \\
+=
+\begin{pmatrix}
+\varepsilon-H_{00} & -T_{01} \\
+-T_{10} & \varepsilon-H_{11} \\
+\end{pmatrix}^{-1}
+$$
+</div>
+
+<p>求该矩阵逆的方法，可以用增广矩阵行变换方法</p>
+<div>
+$$
+\begin{pmatrix}
+1 & 0 & \varepsilon-H_{00} & -T_{01} \\
+0 & 1 & -T_{10} & \varepsilon-H_{11} \\
+\end{pmatrix}
+$$
+</div>
+
+<p>分别做行变换</p>
+<div>
+$$
+\begin{gathered}
+① \rightarrow ① + T_{01}(\varepsilon-H_{11})^{-1} ② \\
+② \rightarrow ② + T_{10}(\varepsilon-H_{00})^{-1} ①
+\\\end{gathered}
+$$
+</div>
+
+<p>得</p>
+<div>
+$$
+\begin{pmatrix}
+1 & T_{01}(\varepsilon-H_{11})^{-1} & \varepsilon-H_{00}-T_{01}(\varepsilon-H_{11})^{-1}T_{10} & 0 \\
+T_{10}(\varepsilon-H_{00})^{-1} & 1 & 0 & \varepsilon-H_{11}-T_{10}(\varepsilon-H_{00})^{-1}T_{01} \\
+\end{pmatrix}
+$$
+</div>
+
+<p>然后令</p>
+<div>
+$$
+\begin{gathered}
+G_{00} = \lbrack \varepsilon-H_{00}-T_{01}(\varepsilon-H_{11})^{-1}T_{10}\rbrack ^{-1} \\
+G_{11} = \lbrack \varepsilon-H_{11}-T_{10}(\varepsilon-H_{00})^{-1}T_{01}\rbrack ^{-1}
+\\\end{gathered}
+$$
+</div>
+
+<p>再在对①②分别乘 $G_{00},G_{11}$ ，</p>
+<div>
+$$
+\begin{pmatrix}
+G_{00} & G_{00}T_{01}(\varepsilon-H_{11})^{-1} & 1 & 0 \\
+G_{11}T_{10}(\varepsilon-H_{00})^{-1} & G_{11} & 0 & 1 \\
+\end{pmatrix}
+$$
+</div>
+
+<p>所以子空间的resolvent算子</p>
+<div>
+$$
+G_{00}(\varepsilon)=\left(\varepsilon-\lbrack H_{00}+T_{01}(\varepsilon-H_{11})^{-1}T_{10}\rbrack \right)^{-1}
+$$
+</div>
+
+<p>于是有效哈密顿量</p>
+<div>
+$$
+\begin{gathered}
+H_{eff}=H_{00}+T_{01}(\varepsilon-H_{11})^{-1}T_{10} \\
+\approx \lbrack H_{00}+T_{01}(\varepsilon_0-H_{11})^{-1}T_{10}\rbrack 
+\\\end{gathered}
+$$
+</div>
+
+<p>应用在该问题上，</p>
+<div>
+$$
+H=
+\begin{pmatrix}
+U+mc^2 & c\sigma \cdot (p+eA) \\
+c\sigma \cdot (p+eA) & U-mc^2 \\
+\end{pmatrix}
+$$
+</div>
+
+
+<div>
+$$
+H_{eff}=U+mc^2+c\sigma \cdot (p+eA)(E-U+mc^2)^{-1}c\sigma \cdot (p+eA)
+$$
+</div>
+
+
+<p>接下来的推导和上文一样，在此省略。</p>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p>[1] Shortley, G. H., The Theory Of Atomic Spectra, p129, <a target="_blank" rel="noopener" href="https://archive.org/details/in.ernet.dli.2015.212979/page/n143/mode/2up?view=theater">https://archive.org/details/in.ernet.dli.2015.212979/page/n143/mode/2up?view=theater</a></p>
+<p>[2] Erik Koch, Exchange Mechanisms, <a target="_blank" rel="noopener" href="https://cond-mat.de/events/correl12/manuscripts/koch.pdf">https://cond-mat.de/events/correl12/manuscripts/koch.pdf</a></p>
+<p>[3] 曾谨言，量子力学 II</p>
+</div><div class="article-licensing box"><div class="licensing-title"><p>Dirac方程的非相对论近似</p><p><a href="https://yuchenxi2000.github.io/2023/07/09/Dirac方程的非相对论近似/">https://yuchenxi2000.github.io/2023/07/09/Dirac方程的非相对论近似/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>Chenxi Yu</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2023-07-09</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2026-03-30</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/%E7%89%A9%E7%90%86/">物理</a><a class="link-muted mr-2" rel="tag" href="/tags/%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6/">量子力学</a><a class="link-muted mr-2" rel="tag" href="/tags/%E7%9B%B8%E5%AF%B9%E8%AE%BA/">相对论</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2023/07/10/%E5%91%A8%E6%9C%9F%E6%80%A7%E5%8A%BF%E5%9C%BA%E7%9A%84%E5%93%88%E5%AF%86%E9%A1%BF%E9%87%8F/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">周期性势场的哈密顿量</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2023/06/19/Legendre%20transformation/"><span class="level-item">Legendre transformation</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><!--!--><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a><p class="is-size-7"><span>&copy; 2026 Chenxi Yu</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="fab fa-creative-commons-nc"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/yuchenxi2000"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script data-pjax src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script data-pjax src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "此网站使用Cookie来改善您的体验。",
+          dismiss: "知道了！",
+          allow: "允许使用Cookie",
+          deny: "拒绝",
+          link: "了解更多",
+          policy: "Cookie政策",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js"></script><script src="/js/pjax.js"></script><!--!--><script type="text/javascript" id="MathJax-script" async>MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      },
+      svg: {
+        fontCache: 'global'
+      },
+      chtml: {
+        matchFontHeight: false
+      }
+    };</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js"></script><!--!--><!--!--><script data-pjax src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script data-pjax src="/js/insight.js" defer></script><script data-pjax>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script></body></html>

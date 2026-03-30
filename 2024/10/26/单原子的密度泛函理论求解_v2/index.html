@@ -1,0 +1,763 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>单原子的密度泛函理论求解_v2 - YCX&#039;s Blog</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="YCX&#039;s Blog"><meta name="msapplication-TileImage" content="favicon.ico"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="YCX&#039;s Blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="前言在量子力学中，求解孤立原子的问题归结到对其波函数的求解。假设某原子包含 $N$ 个电子，那么波函数就是这 $N$ 个电子的坐标的函数：  $$ \Psi &amp;#x3D; \Psi(r_1,r_2, \cdots,r_N) $$   该函数的维度是 $3N$ ，并且需要满足交换反对称性。除非需要计算的是原子序数小的轻原子，否则计算量是巨大的。假设对空间坐标 $r_i$ 进行离散化，每个坐标的网格格点数为 $"><meta property="og:type" content="blog"><meta property="og:title" content="单原子的密度泛函理论求解_v2"><meta property="og:url" content="https://yuchenxi2000.github.io/2024/10/26/%E5%8D%95%E5%8E%9F%E5%AD%90%E7%9A%84%E5%AF%86%E5%BA%A6%E6%B3%9B%E5%87%BD%E7%90%86%E8%AE%BA%E6%B1%82%E8%A7%A3_v2/"><meta property="og:site_name" content="YCX&#039;s Blog"><meta property="og:description" content="前言在量子力学中，求解孤立原子的问题归结到对其波函数的求解。假设某原子包含 $N$ 个电子，那么波函数就是这 $N$ 个电子的坐标的函数：  $$ \Psi &amp;#x3D; \Psi(r_1,r_2, \cdots,r_N) $$   该函数的维度是 $3N$ ，并且需要满足交换反对称性。除非需要计算的是原子序数小的轻原子，否则计算量是巨大的。假设对空间坐标 $r_i$ 进行离散化，每个坐标的网格格点数为 $"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://yuchenxi2000.github.io/2024/10/26/%E5%8D%95%E5%8E%9F%E5%AD%90%E7%9A%84%E5%AF%86%E5%BA%A6%E6%B3%9B%E5%87%BD%E7%90%86%E8%AE%BA%E6%B1%82%E8%A7%A3_v2/La.png"><meta property="og:image" content="https://yuchenxi2000.github.io/2024/10/26/%E5%8D%95%E5%8E%9F%E5%AD%90%E7%9A%84%E5%AF%86%E5%BA%A6%E6%B3%9B%E5%87%BD%E7%90%86%E8%AE%BA%E6%B1%82%E8%A7%A3_v2/O.png"><meta property="og:image" content="https://yuchenxi2000.github.io/2024/10/26/%E5%8D%95%E5%8E%9F%E5%AD%90%E7%9A%84%E5%AF%86%E5%BA%A6%E6%B3%9B%E5%87%BD%E7%90%86%E8%AE%BA%E6%B1%82%E8%A7%A3_v2/transition-metal.png"><meta property="article:published_time" content="2024-10-26T02:45:41.000Z"><meta property="article:modified_time" content="2026-03-30T12:14:18.119Z"><meta property="article:author" content="Chenxi Yu"><meta property="article:tag" content="物理"><meta property="article:tag" content="量子力学"><meta property="article:tag" content="密度泛函理论"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://yuchenxi2000.github.io/2024/10/26/%E5%8D%95%E5%8E%9F%E5%AD%90%E7%9A%84%E5%AF%86%E5%BA%A6%E6%B3%9B%E5%87%BD%E7%90%86%E8%AE%BA%E6%B1%82%E8%A7%A3_v2/La.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://yuchenxi2000.github.io/2024/10/26/%E5%8D%95%E5%8E%9F%E5%AD%90%E7%9A%84%E5%AF%86%E5%BA%A6%E6%B3%9B%E5%87%BD%E7%90%86%E8%AE%BA%E6%B1%82%E8%A7%A3_v2/"},"headline":"单原子的密度泛函理论求解_v2","image":["https://yuchenxi2000.github.io/2024/10/26/%E5%8D%95%E5%8E%9F%E5%AD%90%E7%9A%84%E5%AF%86%E5%BA%A6%E6%B3%9B%E5%87%BD%E7%90%86%E8%AE%BA%E6%B1%82%E8%A7%A3_v2/La.png","https://yuchenxi2000.github.io/2024/10/26/%E5%8D%95%E5%8E%9F%E5%AD%90%E7%9A%84%E5%AF%86%E5%BA%A6%E6%B3%9B%E5%87%BD%E7%90%86%E8%AE%BA%E6%B1%82%E8%A7%A3_v2/O.png","https://yuchenxi2000.github.io/2024/10/26/%E5%8D%95%E5%8E%9F%E5%AD%90%E7%9A%84%E5%AF%86%E5%BA%A6%E6%B3%9B%E5%87%BD%E7%90%86%E8%AE%BA%E6%B1%82%E8%A7%A3_v2/transition-metal.png"],"datePublished":"2024-10-26T02:45:41.000Z","dateModified":"2026-03-30T12:14:18.119Z","author":{"@type":"Person","name":"Chenxi Yu"},"publisher":{"@type":"Organization","name":"YCX's Blog","logo":{"@type":"ImageObject","url":"https://yuchenxi2000.github.io/2024/10/26/%E5%8D%95%E5%8E%9F%E5%AD%90%E7%9A%84%E5%AF%86%E5%BA%A6%E6%B3%9B%E5%87%BD%E7%90%86%E8%AE%BA%E6%B1%82%E8%A7%A3_v2/android-chrome-512x512.png"}},"description":"前言在量子力学中，求解孤立原子的问题归结到对其波函数的求解。假设某原子包含 $N$ 个电子，那么波函数就是这 $N$ 个电子的坐标的函数：  $$ \\Psi &#x3D; \\Psi(r_1,r_2, \\cdots,r_N) $$   该函数的维度是 $3N$ ，并且需要满足交换反对称性。除非需要计算的是原子序数小的轻原子，否则计算量是巨大的。假设对空间坐标 $r_i$ 进行离散化，每个坐标的网格格点数为 $"}</script><link rel="canonical" href="https://yuchenxi2000.github.io/2024/10/26/%E5%8D%95%E5%8E%9F%E5%AD%90%E7%9A%84%E5%AF%86%E5%BA%A6%E6%B3%9B%E5%87%BD%E7%90%86%E8%AE%BA%E6%B1%82%E8%A7%A3_v2/"><link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link data-pjax rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link data-pjax rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!--!--><!-- hexo injector head_end start --><script>
+  (function () {
+      function switchTab() {
+          if (!location.hash) {
+            return;
+          }
+
+          const id = '#' + CSS.escape(location.hash.substring(1));
+          const $tabMenu = document.querySelector(`.tabs a[href="${id}"]`);
+          if (!$tabMenu) {
+            return;
+          }
+
+          const $tabMenuContainer = $tabMenu.parentElement.parentElement;
+          Array.from($tabMenuContainer.children).forEach($menu => $menu.classList.remove('is-active'));
+          Array.from($tabMenuContainer.querySelectorAll('a'))
+              .map($menu => document.getElementById($menu.getAttribute("href").substring(1)))
+              .forEach($content => $content.classList.add('is-hidden'));
+
+          if ($tabMenu) {
+              $tabMenu.parentElement.classList.add('is-active');
+          }
+          const $activeTab = document.querySelector(id);
+          if ($activeTab) {
+              $activeTab.classList.remove('is-hidden');
+          }
+      }
+      switchTab();
+      window.addEventListener('hashchange', switchTab, false);
+  })();
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 8.1.1"></head><body class="is-1-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-12"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2024-10-26T02:45:41.000Z" title="2024/10/26 10:45:41">2024-10-26</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E7%89%A9%E7%90%86/">物理</a></span><span class="level-item">1 小时读完 (大约7528个字)</span></div></div><h1 class="title is-3 is-size-4-mobile">单原子的密度泛函理论求解_v2</h1><div class="content"><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>在量子力学中，求解孤立原子的问题归结到对其波函数的求解。假设某原子包含 $N$ 个电子，那么波函数就是这 $N$ 个电子的坐标的函数：</p>
+<div>
+$$
+\Psi = \Psi(r_1,r_2, \cdots,r_N)
+$$
+</div>
+
+<p>该函数的维度是 $3N$ ，并且需要满足交换反对称性。除非需要计算的是原子序数小的轻原子，否则计算量是巨大的。假设对空间坐标 $r_i$ 进行离散化，每个坐标的网格格点数为 $M$ ，那么计算复杂度至少是 $O(M^{3N})$ 。</p>
+<p>幸运地是Kohn-Sham定理解决了这个计算复杂度问题。根据Kohn-Sham定理，基态能量完全由电子密度决定，电子密度包含了所有我们关心的物理信息，实现了目标求解量的降维，从 $3N$ 维降至 $3$ 维。</p>
+<p>本文先阐述相关物理理论，然后给出具体计算细节，最后介绍本人编写的实现该算法的Python&amp;C++程序，以及一些结果展示。在相关物理理论的介绍中，我们先简单介绍密度泛函理论，然后阐述如何将密度泛函理论运用到孤立原子求解上，最后给出相关微分方程。具体计算细节部分会介绍计算流程以及其中运用到的数值方法。</p>
+<p>本文中使用如下约定：</p>
+<ul>
+<li><p>采用原子单位制， $e&#x3D;\hbar&#x3D;m&#x3D;4\pi \varepsilon_0&#x3D;1$ </p>
+</li>
+<li><p>无上下限的积分表示体积分，微元 $\mathrm{d}r$ 表示体积元。与之相对，有上下限的积分里的微元表示球坐标半径的微分。而方程里的 $r$ 都表示球坐标半径。注意全空间积分和对球极坐标半径积分的关系，当 $f$ 球对称时： $\int f\mathrm{d}r&#x3D;\int_0^{+\infty}4\pi fr^2\mathrm{d}r$</p>
+</li>
+</ul>
+<h1 id="孤立原子的密度泛函理论"><a href="#孤立原子的密度泛函理论" class="headerlink" title="孤立原子的密度泛函理论"></a>孤立原子的密度泛函理论</h1><h2 id="密度泛函理论"><a href="#密度泛函理论" class="headerlink" title="密度泛函理论"></a>密度泛函理论</h2><p>由密度泛函理论，存在一个关于电子密度的能量泛函，根据基态能量最小的原理就可以求出基态电子密度：</p>
+<div>
+$$
+E = E\lbrack n(r)\rbrack 
+$$
+</div>
+
+<p>然而，这个能量泛函是未知的。解决方法是将其拆分成熟悉的部分和剩下的部分之和，然后对剩下部分做近似：动能，电子与原子核的库伦作用，电子间库伦作用*，以及未知的交换关联作用。</p>
+<div>
+$$
+E = T + E_{ext} + E_H + E_{xc}
+$$
+</div>
+
+
+<blockquote>
+<p>*注：又叫Hatree能。严格来说不能叫电子间库伦作用，因为其中包含了非物理的自相互作用</p>
+</blockquote>
+<span id="more"></span>
+
+<p>其中 $E_{ext},E_H$ 可以由电子密度表示出来； $T$ 和波函数直接相关，和电子密度的关系不明显； $E_{xc}$ 是电子密度的泛函，形式未知，需要采取近似。我们采取单电子近似，假设把一个电子与原子核及其他的电子的作用等效为有效场，该电子只受到有效场的作用。在这个假设下， $T$ 能用单电子波函数表示，变分法求解能量最小值的过程变为求解单电子微分方程。各能量的表达式如下：</p>
+<div>
+$$
+\begin{gathered}
+T = \cfrac{1}{2}\sum_i \int \lvert \nabla \psi_i \rvert^2 \mathrm{d}r \\
+E_{ext} = -\int \cfrac{Zn(r)}{\lvert r \rvert} \mathrm{d}r \\
+E_{H} = \frac{1}{2}\iint \cfrac{n(r')n(r)}{\lvert r - r' \rvert} \mathrm{d}r \mathrm{d}r' \\
+E_{xc} = \int e_{xc}(r)n(r)\mathrm{d}r
+\\\end{gathered}
+$$
+</div>
+
+<p>其中 $Z$ 为原子序数， $T$ 为动能， $E_{ext}$ 为原子核与电子的库伦相互作用能， $E_H$ 为Hatree能， $E_{xc}$ 为电子的交换关联能， $e_{xc}$ 为交换关联能密度， $n$ 为电子密度。</p>
+<p>体系能量对波函数 $\psi_i$ 进行变分可以得到 $N$ 个单电子波函数的一系列方程</p>
+<div>
+$$
+-\cfrac{1}{2}\nabla^2\psi_i + V_{ext}\psi_i + V_{H}\psi_i + V_{xc}\psi_i = E_i\psi_i
+$$
+</div>
+
+<p>其中</p>
+<div>
+$$
+\begin{gathered}
+V_{ext} = -\cfrac{Z}{\lvert r \rvert} \\
+V_{H} = \int \cfrac{n(r')}{\lvert r - r' \rvert} \mathrm{d}r'
+\\\end{gathered}
+$$
+</div>
+
+<p>设有效势 $V_{eff}&#x3D;V_{ext}+V_H+V_{xc}$ ，那么单电子方程变为</p>
+<div>
+$$
+-\cfrac{1}{2}\nabla^2\psi_i + (V_{eff} - E_i)\psi_i = 0
+$$
+</div>
+
+<p>该方程有薛定谔方程类似的形式，在球坐标下可以用类似求解氢原子问题的方法进行求解。</p>
+<p>求解出波函数后，就能计算出体系能量。虽然总能量表达式已经在上面给出，但需要求波函数导数以及对电子密度做二体积分。这些计算开销较大，为避免进行这些计算，我们推导另一个表达式。先在单电子波函数满足的方程左右两边乘上自身波函数，然后对全空间积分：</p>
+<div>
+$$
+\int \cfrac{1}{2} \lvert \nabla\psi_i \rvert^2 + (V_{ext} + V_{H} + V_{xc} - E_i)\lvert \psi_i \rvert^2 \mathrm{d}r = 0
+$$
+</div>
+
+<p>上式对所有波函数相加，</p>
+<div>
+$$
+\begin{gathered}
+T + E_{ext} + 2E_H + \int V_{xc} n \mathrm{d}r - \sum_i E_i = 0 \\
+\end{gathered}
+\label{eq:energy-deriv1}
+$$
+</div>
+
+
+<blockquote>
+<p>注意上式中第四项不是交换关联能，因为 $V_{xc} &#x3D; \cfrac{\delta E_{xc}}{\delta n} &#x3D; \cfrac{\partial (e_{xc}n)}{\partial n}&#x3D;e_{xc}+n\cfrac{\partial e_{xc}}{\partial n}$ </p>
+</blockquote>
+<p>我们将上式代入总能量表达式，将 $T$ 消去，得到</p>
+<div>
+$$
+\begin{aligned}
+E &= T + E_{ext} + E_H + E_{xc} \\
+&=\sum_i E_i - E_H - \int V_{xc}n\mathrm{d}r+E_{xc} \\
+&=\sum_i E_i - \frac{1}{2}\int V_H n \mathrm{d}r - \int V_{xc}n\mathrm{d}r+E_{xc}
+\end{aligned}
+$$
+</div>
+
+<p>此即总能量的另一个表达式，它不依赖单电子波函数，且不存在电子密度的二体积分，但依赖单电子薛定谔方程的本征值 $E_i$ ，这些本征值在解方程过程中就能求出。</p>
+<p>现在唯一剩下的问题是单电子方程中 $V_H$ 依赖电子密度，但电子密度不是已知量，而是依赖单电子波函数：</p>
+<div>
+$$
+n = \sum_i \lvert \psi_i \rvert^2
+$$
+</div>
+
+<p>但是要求解单电子波函数，则又要求解电子密度，于是问题变成了一个循环，变成了“鸡生蛋，蛋生鸡”的问题。</p>
+<p>打破这个循环的方法是先给电子密度一个合理的假设，对这个假设的电子密度 $n_0$ 求出单电子波函数，然后计算其电子密度 $n_1$ 。 $n_0,n_1$ 必定有差别（除非已经找到解），我们根据 $n_0,n_1$ 用相关算法得到第二个猜测值 $n_2$ ，然后循环这些步骤直至收敛。这个循环求解方法被叫做自洽求解，每个循环步骤叫做电子步，通过上一个电子步的电子密度得到下一个电子步的初始猜测值的算法叫mixing。或者从迭代的角度，把从上一个电子步的电子密度得到下一个电子步的初始猜测值的过程看做作用在电子密度上的泛函 $F$ ，那么自洽求解的过程本质上就是求解这个泛函的不动点：</p>
+<div>
+$$
+n = F\lbrack n\rbrack 
+$$
+</div>
+
+<p>上式是对电子密度做mixing，也可以将自洽过程看做作用在有效势上的泛函，然后对有效势做mixing。</p>
+<h2 id="径向薛定谔方程"><a href="#径向薛定谔方程" class="headerlink" title="径向薛定谔方程"></a>径向薛定谔方程</h2><p>我们假设方程球对称。虽然球对称假设只对闭壳层原子成立，但是应用该假设得出的结果和实验相差不大，所以我们暂时用该假设简化计算。</p>
+<p>球坐标下拉普拉斯算子</p>
+<div>
+$$
+\nabla^2 = \cfrac{\partial^2}{\partial r^2}+\cfrac{2}{r}\cfrac{\partial}{\partial r}
++\cfrac{1}{r^2}\cfrac{\partial^2}{\partial \theta^2}
++\cfrac{\cos \theta}{r^2\sin\theta}\cfrac{\partial}{\partial \theta}
++\cfrac{1}{r^2\sin^2\theta}\cfrac{\partial^2}{\partial \phi^2}
+$$
+</div>
+
+<p>对单电子薛定谔方程进行分离变量，设 $\psi(r,\theta,\phi)&#x3D;R(r)Y(\theta,\phi)$ ：（为简洁起见我们省略波函数下标 $i$ ）</p>
+<div>
+$$
+\begin{cases}
+\cfrac{\partial^2 R}{\partial r^2}
++\cfrac{2}{r}\cfrac{\partial R}{\partial r}
++\left\lbrack \cfrac{2m}{\hbar^2}(E-V)
+-\cfrac{l(l+1)}{r^2}\right\rbrack R
+= 0 \\
+\cfrac{\partial^2 Y}{\partial \theta^2}
++\cfrac{\cos \theta}{\sin\theta}\cfrac{\partial Y}{\partial \theta}
++\cfrac{1}{\sin^2\theta}\cfrac{\partial^2 Y}{\partial \phi^2} + l(l+1)Y = 0
+\end{cases}
+$$
+</div>
+
+<p>其中第二个方程是球谐函数的本征方程，本征值 $l(l+1),l\in \mathbb{N}$ </p>
+<p>第一个即为径向薛定谔方程</p>
+<p>设 $\chi&#x3D;rR$ ，径向薛定谔方程变为（下标 $r$ 表示对 $r$ 求导）</p>
+<div>
+$$
+-\cfrac{1}{2}\chi_{rr}
++\left\lbrack V
++\cfrac{l(l+1)}{2r^2}\right\rbrack \chi
+= E\chi
+$$
+</div>
+
+<p>在该变换 $\chi&#x3D;rR$ 下，方程中一阶导数被消去，不同角动量量子数的波函数有着相同的边界条件（ $r\to 0^+$ 附近 $R \to r^l,\chi \to r^{l+1}$ ），且有着归一化条件</p>
+<div>
+$$
+4\pi \int_0^{+\infty} \chi^2 \,\mathrm{d}r = 1 
+$$
+</div>
+
+
+<p>径向薛定谔方程变成Sturm-Liouville方程标准形式，能够求出一系列本征值，且本征函数族正交归一。</p>
+<p>关于波函数渐进行为，在数值求解部分会做详细推导。</p>
+<h2 id="Hatree势求解"><a href="#Hatree势求解" class="headerlink" title="Hatree势求解"></a>Hatree势求解</h2><p>下面我们记 $V_H$ 为 $V$ ，并给出球对称条件下直接积分和解微分方程的两种解法。</p>
+<p>首先是直接积分法。</p>
+<p>因为 $n(r’)$ 球对称， $V(r)$ 也球对称，我们可以令 $r$ 的方向朝向 $+z$ 方向，记 $r,r’$ 的夹角为 $\theta$ ，</p>
+<div>
+$$
+\begin{aligned}
+V(r) &= \int_{\mathbb{R}^3} \cfrac{n(r')}{\lvert r-r' \rvert} \mathrm{d}r' \\
+&= 2\pi \int_0^{+\infty} \mathrm{d}r' \int_0^{\pi} \mathrm{d}\theta \cfrac{r'^2n(r')\sin\theta}{\sqrt{r^2+r'^2 - 2 rr' \cos\theta}} \\
+&= 2\pi \int_0^{+\infty} \cfrac{r'^2n(r')}{\sqrt{r^2+r'^2}} \mathrm{d}r' \int_0^{\pi} \mathrm{d}\theta \cfrac{\sin\theta}{\sqrt{1-a \cos\theta}} \\
+&= 2\pi \int_0^{+\infty} \cfrac{r'^2n(r')}{\sqrt{r^2+r'^2}} \mathrm{d}r' \int_0^{\pi} \mathrm{d}\theta \cfrac{\sin\theta}{\sqrt{1-a \cos\theta}} \\
+&= 2\pi \int_0^{+\infty} \cfrac{2\min(r,r')\sqrt{r^2+r'^2}}{rr'}\cfrac{r'^2n(r')}{\sqrt{r^2+r'^2}} \mathrm{d}r' \\
+&= 4\pi \int_0^{+\infty} \cfrac{\min(r,r')r'n(r')}{r} \mathrm{d}r' \\
+&= 4\pi \left\lbrack  \cfrac{1}{r} \int_0^{r} r'^2n(r') \mathrm{d}r'
++\int_r^{+\infty} r'n(r') \mathrm{d}r' \right\rbrack 
+\end{aligned}
+$$
+</div>
+
+
+<p>其中</p>
+<div>
+$$
+\begin{gathered}
+a=\cfrac{2rr'}{r^2+r'^2} \\
+\\\end{gathered}
+$$
+</div>
+
+<p>，关于 $\theta$ 的积分的求解如下</p>
+<div>
+$$
+\begin{gathered}
+\int_0^{\pi} \cfrac{\sin\theta}{\sqrt{1-a \cos \theta}} \mathrm{d}\theta\quad (\lvert a \rvert \leq 1) \\
+=-\int_0^{\pi} \cfrac{1}{\sqrt{1-a \cos \theta}} \mathrm{d}\cos\theta \\
+=\cfrac{2}{a}\int_0^{\pi} \cfrac{1}{2\sqrt{1-a \cos \theta}} \mathrm{d}(1-a\cos\theta) \\
+=\cfrac{2}{a}\int_0^{\pi} \mathrm{d}\sqrt{1-a\cos\theta} \\
+=\cfrac{2(\sqrt{1+a}-\sqrt{1-a})}{a} \\
+\\\end{gathered}
+$$
+</div>
+
+
+<p>所以 $V$ 的解析表达式</p>
+<div>
+$$
+\begin{gathered}
+V(r) = 4\pi \left\lbrack  \cfrac{1}{r} \int_0^{r} r'^2n(r') \mathrm{d}r'
++\int_r^{+\infty} r'n(r') \mathrm{d}r' \right\rbrack  \\
+\cfrac{\mathrm{d}V(r)}{\mathrm{d}r} = 
+-\cfrac{4\pi}{r^2} \int_0^{r} r'^2n(r') \mathrm{d}r' \\
+\\\end{gathered}
+$$
+</div>
+
+<p>根据 $V$ 的解析表达式，可以得出边界条件</p>
+<div>
+$$
+\begin{gathered}
+V(0) = 4\pi \int_0^{+\infty} r n(r)\mathrm{d}r \\
+V'(0) = 0 \\
+\lim_{r \to +\infty} r V(r) = 4\pi \int_0^{+\infty} r^2 n(r) \mathrm{d}r
+\\\end{gathered}
+$$
+</div>
+
+
+<p>然后是微分方程解法，数值求解时一般采用的方法。</p>
+<p>因为积分核</p>
+<div>
+$$
+-\cfrac{1}{4\pi\lvert r-r'\rvert}
+$$
+</div>
+
+<p>是拉普拉斯算子的格林函数，因此我们能写出它所满足的偏微分方程</p>
+<div>
+$$
+\nabla^2 V = -4\pi n
+$$
+</div>
+
+<p>在 $n$ 球对称的条件下，</p>
+<div>
+$$
+\cfrac{\mathrm{d}^2 V}{\mathrm{d}r^2}+\cfrac{2}{r}\cfrac{\mathrm{d} V}{\mathrm{d}r} = -4\pi n
+$$
+</div>
+
+<p>可以用类似解径向薛定谔方程的方法把一阶导数消去，然后用解常微分方程的方法求解。</p>
+<div>
+$$
+\cfrac{\mathrm{d}^2 (rV)}{\mathrm{d} r^2} = -4\pi rn
+$$
+</div>
+
+<p>下面求边界条件，首先有</p>
+<div>
+$$
+\left.\cfrac{\mathrm{d}V}{\mathrm{d}r}\right\vert_{r=0} = 0
+$$
+</div>
+
+<p>这是因为在 $r&#x3D;0$ 处电荷密度有限的条件下必然有 $V \sim c_0+c_2r^2+o(r^2)$ ，不然不满足方程。</p>
+<p>然后根据</p>
+<div>
+$$
+\left.\cfrac{\mathrm{d} (rV)}{\mathrm{d} r}\right\vert_{r=+\infty} - \left.\cfrac{\mathrm{d} (rV)}{\mathrm{d} r}\right\vert_{r=0} = - \int_0^{+\infty} 4\pi rn \mathrm{d}r
+$$
+</div>
+
+<p>和无穷远处 $V$ 趋于 $0$ （这个条件是我们指定的，因为泊松方程的解可以加上任意常数）的条件得出</p>
+<div>
+$$
+\begin{gathered}
+\left.\cfrac{\mathrm{d} (rV)}{\mathrm{d} r}\right\vert_{r=0} = \int_0^{+\infty} 4\pi rn \mathrm{d}r \\
+\\\end{gathered}
+$$
+</div>
+
+<p>结合 $r&#x3D;0$ 处导数为 $0$ 即得</p>
+<div>
+$$
+\begin{gathered}
+\left.V\right\vert_{r=0} = \int_0^{+\infty} 4\pi rn \mathrm{d}r \\
+\\\end{gathered}
+$$
+</div>
+
+
+<h2 id="自旋极化情形"><a href="#自旋极化情形" class="headerlink" title="自旋极化情形"></a>自旋极化情形</h2><p>根据上述讨论可以对单原子进行求解，针对非相对论、自旋非极化情形，并采用球对称近似。容易推广到自旋极化情形，自旋极化和自旋非极化的区别在于：</p>
+<p>电子密度为</p>
+<div>
+$$
+n=n_{\uparrow}+n_{\downarrow}
+$$
+</div>
+
+<p>因为交换关联能和自旋有关，径向薛定谔方程分为自旋 $\uparrow,\downarrow$ 两个</p>
+<div>
+$$
+\begin{gathered}
+-\cfrac{1}{2}\chi_{\uparrow,rr}
++\left\lbrack 
+V_{ext}+V_H+V_{xc,\uparrow}
++\cfrac{l(l+1)}{2r^2}\right\rbrack \chi_\uparrow
+= E\chi_\uparrow \\
+-\cfrac{1}{2}\chi_{\downarrow,rr}
++\left\lbrack 
+V_{ext}+V_H+V_{xc,\downarrow}
++\cfrac{l(l+1)}{2r^2}\right\rbrack \chi_\downarrow
+= E\chi_\downarrow \\
+\\\end{gathered}
+$$
+</div>
+
+<p>交换关联能</p>
+<div>
+$$
+E_{xc}=\int e_{xc,\uparrow}n_{\uparrow} + e_{xc,\downarrow}n_{\downarrow} \mathrm{d}r
+$$
+</div>
+
+<p>计算电子组态时，不同自旋的能级算作不同能级，其他求解过程中无变化。</p>
+<h1 id="数值求解方法"><a href="#数值求解方法" class="headerlink" title="数值求解方法"></a>数值求解方法</h1><h2 id="径向薛定谔方程求解方法比较"><a href="#径向薛定谔方程求解方法比较" class="headerlink" title="径向薛定谔方程求解方法比较"></a>径向薛定谔方程求解方法比较</h2><p>径向薛定谔方程求解本质是个Sturm-Liouville问题，有多种方法能够求解，比如用基函数展开然后求矩阵特征值，或者用打靶法求特征值。这些方法有着不同的实现难度、计算复杂度、求解精度，下面对不同方法进行比较。</p>
+<p>本人开发的程序第一版采用基函数展开方式，用“帽子”函数对径向波函数展开，然后求解矩阵的广义特征值问题。</p>
+<p>优点是代码和径向格点无关，就算采用均匀格点也能得到相对精确的解；不用特殊处理非束缚态（ $E\geq 0$ ），代码简洁。劣势是无法正确处理无穷远边界条件。按照WKB近似的思想，无穷远处波函数（假设束缚态）的渐进行为为 $\chi&#x3D;r\psi \propto \exp(-\sqrt{2E}r)$ ，然而这个边界条件与特征值 $E$ 有关，无法转化为矩阵的广义特征值问题进行求解。实际代码中简单的把无穷远处设为 $0$ ，这会带来系统误差。</p>
+<p>Aromanro做的类似项目采用Numerov方法（一种微分方程积分器）求解，相关网址：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/aromanro/DFTAtom">https://github.com/aromanro/DFTAtom</a></li>
+<li><a target="_blank" rel="noopener" href="https://compphys.go.ro/dft-for-an-atom/">https://compphys.go.ro/dft-for-an-atom/</a></li>
+</ul>
+<p>Numerov方法的好处是不需要求解波函数导数，劣势是由于方法的限制，一阶导数项不能出现，导致非均匀格点求解较为复杂。此外，Numerov方法需要额外判断发散，在步长不够时，过大的波函数值会导致下一步的求解出现不正确的变号，乃至震荡现象。</p>
+<p>Aromanro的程序全部采用Numerov方法求解，从无穷远处积分到0，用打靶法确定特征值。对于非s轨道求解（ $l\gt 0$ ），波函数在 $r&#x3D;0^+$ 附近可能出现发散现象，这是因为波函数在 $r&#x3D;0^+$ 附近的渐进行为为：</p>
+<div>
+$$
+\chi \propto c_1 r^{l+1} + c_2 r^{-l}
+$$
+</div>
+
+<p>对于 $l\gt 0$ 的波函数， $E$ 的数值误差会使得 $c_2$ 不严格为 $0$ ，从而导致发散。而 $l&#x3D;0$ 时只会差一常数，不会发散。</p>
+<p>Aromanro的处理方法是确定 $E$ 后，分别从无穷远处和原点求解，然后匹配中间的波函数值。然而这可能导致波函数的一阶导数不连续，这就是Numerov方法的一个弊端：不能得到一阶导数值。我还没试过，准确的说是没试过xc泛函正确的程序，之前用Numerov方法求解时泛函写错了，导致误以为他的Numerov方法不可行。现在还不知道误差到底有多少，据他博客说还挺准的，但一些原子有误差，我估计就是因为一阶导数不连续，导致 $E$ 其实还有误差。</p>
+<p>我试过去近似匹配点的左导数、右导数值，但求左导数、右导数时发现误差很大，特别是0附近，越靠近0误差越大。导数值应该满足在函数的极值点处严格等于0，但是用二阶差分方法求导数发现左导数、右导数对不上，尚不清楚是不是算法有误。后来查阅了数值方法相关资料，得知数值求导数难以达到机器精度，因为它涉及两个很接近的浮点数相减，系统误差和舍入误差不能同时达到最小，要在两者之间达到平衡，最后的精度是小于机器精度的。但数值积分是可以到机器精度，所以用解常微分方程的方法要优于Numerov方法，只要涉及需要求一阶导数的情形。</p>
+<p>从这儿开始，我就觉得应该用常微分方程解法同时求解波函数及其导数，然后从无穷远、原点两端求解，匹配连接点处的函数值以及导数值。文献 <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/1209.1752v2">https://arxiv.org/pdf/1209.1752v2</a> 的方法就是这样。我去看了源代码，尝试用类似的方法，但是发现能量值和NIST的数据总是差0.05eV，特征值大0.02左右。最后debug的结果是发现交换关联泛函没有选择和NIST一样的泛函。VWN交换泛函分两种，一个带RPA字眼的一个不带RPA的。然后文献中代码，包括NIST用的是不带RPA的，我却从头到尾用的带RPA的。改过来就对上了，小数点后6位都是正确的，由此可以确定文献中的方法基本上是最优的，虽然不知道后面会不会发现更优的方法。</p>
+<h2 id="常微分方程求解"><a href="#常微分方程求解" class="headerlink" title="常微分方程求解"></a>常微分方程求解</h2><p>对于径向薛定谔方程，设 $\chi&#x3D;P,\chi’&#x3D;Q$ ，有</p>
+<div>
+$$
+\begin{cases}
+\cfrac{\mathrm{d}P}{\mathrm{d}r}=Q \\
+\cfrac{\mathrm{d}Q}{\mathrm{d}r}=2(V-E)P \\
+\end{cases}
+$$
+</div>
+
+<p>求解方法有Runge-Kutta，Adams方法等。</p>
+<p>如果选择非均匀网格，我们可以将其变换到均匀网格 $u$ 上求解，比如对数网格</p>
+<div>
+$$
+\begin{gathered}
+r=r_0 \exp(u) \\
+\cfrac{\mathrm{d}r}{\mathrm{d}u}=r
+\\\end{gathered}
+$$
+</div>
+
+<p>有</p>
+<div>
+$$
+\begin{cases}
+\cfrac{\mathrm{d}P}{\mathrm{d}u}=rQ \\
+\cfrac{\mathrm{d}Q}{\mathrm{d}u}=2r(V-E)P \\
+\end{cases}
+$$
+</div>
+
+<p>对于泊松方程，设 $V&#x3D;P,V’&#x3D;Q$ ，有</p>
+<div>
+$$
+\begin{cases}
+\cfrac{\mathrm{d}P}{\mathrm{d}r}=Q \\
+\cfrac{\mathrm{d}Q}{\mathrm{d}r}=-\cfrac{2}{r}Q-4\pi n \\
+\end{cases}
+$$
+</div>
+
+<p>变换坐标后（对数格点），有</p>
+<div>
+$$
+\begin{cases}
+\cfrac{\mathrm{d}P}{\mathrm{d}u}=rQ \\
+\cfrac{\mathrm{d}Q}{\mathrm{d}u}=-2Q-4\pi r n \\
+\end{cases}
+$$
+</div>
+
+
+<p>本人写的程序里，径向薛定谔方程求解采用隐式4阶Adams，泊松方程求解先用4阶Runge-Kutta求解初始格点，然后用显式4阶Adams求解剩下的格点。</p>
+<h2 id="波函数渐进行为"><a href="#波函数渐进行为" class="headerlink" title="波函数渐进行为"></a>波函数渐进行为</h2><p>常微分方程求解径向薛定谔方程时，需要知道边界条件，也就是 $r \to 0^+, r \to +\infty$ 时波函数的行为。</p>
+<p>对于薛定谔方程</p>
+<div>
+$$
+\cfrac{\mathrm{d}^2}{\mathrm{d} x^2} \psi(x) = \cfrac{2m}{\hbar^2} \left\lbrack V(x) - E\right\rbrack  \psi(x)
+$$
+</div>
+
+<p>在非经典区域（ $E\lt V(x)$ ）有近似通解</p>
+<div>
+$$
+\psi(x) = \cfrac{C_1}{\sqrt{q(x)}} \exp \left\lbrack  +\frac{1}{\hbar} \int_{x_0}^x q(x) \,\mathrm{d} x \right\rbrack  + \cfrac{C_2}{\sqrt{q(x)}} \exp \left\lbrack  -\frac{1}{\hbar} \int_{x_0}^x q(x) \,\mathrm{d} x \right\rbrack 
+$$
+</div>
+
+<p>其中</p>
+<div>
+$$
+q(x) = \sqrt{2m \left\lbrack V(x) - E\right\rbrack }
+$$
+</div>
+
+<p>【参见本人写的《WKB近似与量子隧穿》】</p>
+<p>我们求解的是束缚态， $E\lt 0$ 情形，此时 $r$ 足够大时处在非经典区域。由于波函数无穷远处不能趋于无穷，所以只考虑其中一类解</p>
+<div>
+$$
+\psi(x) = \cfrac{1}{\sqrt{q(x)}} \exp \left\lbrack  -\frac{1}{\hbar} \int_{x_0}^x q(x) \,\mathrm{d} x \right\rbrack 
+$$
+</div>
+
+
+<p>对于径向薛定谔方程，我们考虑无穷远处 $V(r) \to 0$ ，类比薛定谔方程的WKB近似方法，有</p>
+<div>
+$$
+\chi(r) \to \exp (-\sqrt{2E} r)
+$$
+</div>
+
+
+<blockquote>
+<p>对于束缚态，由于无穷远处趋于无穷的解不可接受，因此有无穷远边界条件，能级是分立的。</p>
+<p>对于非束缚态（ $E\geq 0$ ），无穷远处不停振荡而不趋于无穷，因此无无穷远边界条件，能级是连续的。</p>
+</blockquote>
+<p>再考虑 $r&#x3D;0$ 处边界条件。假设此处波函数幂级数展开中指数最小的项为 $r^s$ ，根据方程</p>
+<div>
+$$
+\cfrac{\mathrm{d}^2 \chi}{\mathrm{d} r^2} = 2 \left\lbrack \cfrac{l(l+1)}{2r^2} - \cfrac{Z}{r} + V_{\text{ext}} - E\right\rbrack  \chi
+$$
+</div>
+
+
+<div>
+$$
+s(s-1)r^{s-2}=l(l+1)r^{s-2}+o(r^{s-2})
+$$
+</div>
+
+
+<p>因此</p>
+<div>
+$$
+s(s-1)=l(l+1)
+$$
+</div>
+
+<p>解得 $s&#x3D;l+1,-l$ ，因此</p>
+<div>
+$$
+\chi \to C_1 r^{l+1} + C_2 r^{-l}
+$$
+</div>
+
+<p>为保证波函数模方有限，渐进指数必须满足 $2s\gt -1$ ，因此第二个解是不可接受的，所以 $r&#x3D;0$ 处边界条件为</p>
+<div>
+$$
+\chi \to r^{l+1} ,\, r \to 0^+
+$$
+</div>
+
+
+<h2 id="非均匀格点数值积分"><a href="#非均匀格点数值积分" class="headerlink" title="非均匀格点数值积分"></a>非均匀格点数值积分</h2><p>数值积分用在波函数归一化和泊松方程边界条件。</p>
+<p>非均匀格点下，换元到均匀格点就可以用通常的数值积分方法求解积分，比如波函数的模方</p>
+<div>
+$$
+\begin{gathered}
+4\pi\int_{r_0}^{r_c} \chi^2 \mathrm{d}r \\
+= 4\pi\int_{u_0}^{u_c} \chi^2 \cfrac{\mathrm{d}r}{\mathrm{d}u} \mathrm{d}u \\
+\\\end{gathered}
+$$
+</div>
+
+
+<p> $u$ 为均匀格点，此时就可以用Simpson方法求解。</p>
+<h2 id="插值算法"><a href="#插值算法" class="headerlink" title="插值算法"></a>插值算法</h2><p>4阶Runge-Kutta需要格点中间的函数值，也就是需要插值算法。本人写的程序里使用的插值算法如下。</p>
+<p>假设已知函数的三个点 $(x_1,y_1),(x_2,y_2),(x_3,y_3)$ ，可以验证下式</p>
+<div>
+$$
+y
+=
+y_1\cfrac{(x-x_2)(x-x_3)}{(x_1-x_2)(x_1-x_3)}
++ y_2\cfrac{(x-x_1)(x-x_3)}{(x_2-x_1)(x_2-x_3)}
++ y_3\cfrac{(x-x_1)(x-x_2)}{(x_3-x_1)(x_3-x_2)}
+$$
+</div>
+
+
+<p>满足经过给定的三个点并且为二次多项式，因此构成原函数的多项式插值。</p>
+<p>下面是推广到任意插值点的公式</p>
+<div>
+$$
+y = \sum_i y_i \cfrac{\prod_{j \neq i} (x-x_j)}{\prod_{j \neq i} (x_i-x_j)}
+$$
+</div>
+
+
+<h2 id="占据态填充"><a href="#占据态填充" class="headerlink" title="占据态填充"></a>占据态填充</h2><p>一个自然的方法是根据能级的能量大小从下到上依次填充。但我发现这个方法对d-block和f-block元素不佳，存在不收敛的情况。原因是这些元素外层电子能量相近，计算到后面会出现电子组态在几个状态间来回切换的情形，比如在 $3d^5,4s^2$ 和 $3d^7$ 间来回切换。因此最好的方法是使用固定组态进行计算，至于到底是 $3d^5,4s^2$ 还是 $3d^7$ ，我们可以分别用两个组态计算它们的能量，能量较低的组态就是实际的电子组态。经过计算，此方法<strong>不能</strong><del>可以</del>正确预测过渡金属先填充 $4s$ 态再填充 $3d$ 态，以及两个特例（Cr, Cu）。（对于Ni，计算得到的是 $3d^9 , 4s^1$ ，但一般教材里是 $3d^8 , 4s^2$ ）</p>
+<blockquote>
+<p>本人写的程序中的泛函是LDA（自旋极化下叫LSDA）该泛函能正确给出过渡金属两个组态 $3d^{n}4s^2,3d^{n+1}4s^1$ 能量差随着原子序数的变化趋势，但是对于其中一个元素，其绝对能量差和正确结果大约差一个常数。这是LDA的缺陷，如果使用更精确的泛函可能能够给出更符合实验的结果。</p>
+</blockquote>
+<p>元素周期表中中性原子的电子组态由构造原理（Aufbau principle）给出。具体可以参考如下网站</p>
+<p><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Aufbau_principle">https://en.wikipedia.org/wiki/Aufbau_principle</a></p>
+<p><a target="_blank" rel="noopener" href="https://chem.libretexts.org/Bookshelves/Inorganic_Chemistry/Inorganic_Chemistry_(LibreTexts)/02%3A_Atomic_Structure/2.02%3A_The_Schrodinger_equation_particle_in_a_box_and_atomic_wavefunctions/2.2.03%3A_Aufbau_Principle%E3%80%82">https://chem.libretexts.org/Bookshelves/Inorganic_Chemistry/Inorganic_Chemistry_(LibreTexts)/02%3A_Atomic_Structure/2.02%3A_The_Schrodinger_equation_particle_in_a_box_and_atomic_wavefunctions/2.2.03%3A_Aufbau_Principle。</a></p>
+<h2 id="混合（mixing）算法"><a href="#混合（mixing）算法" class="headerlink" title="混合（mixing）算法"></a>混合（mixing）算法</h2><p>自洽求解的过程可以看作一个迭代求解不动点的问题</p>
+<div>
+$$
+x=g(x)
+$$
+</div>
+
+<p>简单的方法使用线性混合：</p>
+<div>
+$$
+\begin{gathered}
+x_{n+1}=(1-\alpha)x_n+\alpha g(x_n) \\
+= x_n + \alpha \lbrack g(x_n)-x_n\rbrack  \\
+= x_n + \alpha f_n \\
+\\\end{gathered}
+$$
+</div>
+
+<p>其中我们记残差向量 $f_n&#x3D;g(x_n)-x_n$ </p>
+<p>线性混合算法简单但是收敛较慢。一种更好的算法是Anderson mixing算法，记录一定的历史迭代结果，根据这些结果对真实解进行近似：</p>
+<p><a target="_blank" rel="noopener" href="https://doi.org/10.1016/j.apnum.2024.01.022">https://doi.org/10.1016/j.apnum.2024.01.022</a></p>
+<p>假设我们记录了 $k$ 个历史解 $x_k$ ，相应的残差 $f_k$ 。</p>
+<p>我们求解一个条件极值问题：</p>
+<div>
+$$
+\min \left\vert \sum_{i=1}^k a_i f_i \right\vert ,\, \text{s.t} \, \sum_{i=1}^k a_i = 1
+$$
+</div>
+
+<p>求解出 $a_1,a_2,\dots,a_k$ ，下一步的迭代变量为</p>
+<div>
+$$
+x_{\text{next}}=\sum_{i=1}^k \alpha_i x_i + \beta \sum_{i=1}^k \alpha_i f_i
+$$
+</div>
+
+<p>可以看出如果只记录 $1$ 个历史解，那么 $\alpha_1&#x3D;1$ ，就回到了线性混合。</p>
+<p>条件极值可以转化为最小二乘问题：</p>
+<div>
+$$
+\begin{gathered}
+\min \left\vert \sum_{i=1}^k f_i a_i \right\vert \\
+= \min \left\vert \sum_{i=1}^{k-1} (f_{i+1}-f_i) S_i - f_k \right\vert \\
+\\\end{gathered}
+$$
+</div>
+
+<p>其中</p>
+<div>
+$$
+S_i=\sum_{j=1}^i a_j
+$$
+</div>
+
+<p>求解这个最小二乘问题，得到系数 $a_i$ ，就能根据历史迭代结果猜测下一步的迭代初始值。注意需要定义解之间的内积，我比较懒就把电子密度的内积定义为两个向量（离散化后格点上的电子密度）的内积。</p>
+<h1 id="程序实现"><a href="#程序实现" class="headerlink" title="程序实现"></a>程序实现</h1><p>求解孤立原子的轨道、电子密度、能量等性质，使用密度泛函理论中的局域密度近似（LDA泛函，包括Slater交换作用、VWN关联作用），非相对论，支持自旋非极化&#x2F;极化计算。</p>
+<p>程序采用Python语言，对计算量较大的部分函数用调用C++库的方式进行了加速，这些函数包括径向薛定谔方程以及泊松方程的求解。参数输入，如原子序数、格点数、截断半径等采用读toml文件的形式，toml文件的读取使用Python自带的tomllib。使用numpy数组表示各离散化的物理量，scipy实现数值积分等算法，matplotlib进行画图。交换关联泛函直接调用泛函库pylibxc。</p>
+<p>代码在Github上开源：<a target="_blank" rel="noopener" href="https://github.com/yuchenxi2000/atom-dft2">https://github.com/yuchenxi2000/atom-dft2</a></p>
+<h1 id="结果展示"><a href="#结果展示" class="headerlink" title="结果展示"></a>结果展示</h1><p>La、O原子的电子密度以及波函数（只展示外层电子）</p>
+<p><img src="/2024/10/26/%E5%8D%95%E5%8E%9F%E5%AD%90%E7%9A%84%E5%AF%86%E5%BA%A6%E6%B3%9B%E5%87%BD%E7%90%86%E8%AE%BA%E6%B1%82%E8%A7%A3_v2/La.png"></p>
+<p><img src="/2024/10/26/%E5%8D%95%E5%8E%9F%E5%AD%90%E7%9A%84%E5%AF%86%E5%BA%A6%E6%B3%9B%E5%87%BD%E7%90%86%E8%AE%BA%E6%B1%82%E8%A7%A3_v2/O.png"></p>
+<p>铁原子的电子组态</p>
+<table>
+<thead>
+<tr>
+<th>Orbital</th>
+<th>Spin (up&#x2F;down)</th>
+<th>Energy (Hatree)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1s1</td>
+<td>u</td>
+<td>-254.2036613503376</td>
+</tr>
+<tr>
+<td>1s1</td>
+<td>d</td>
+<td>-254.20287181620876</td>
+</tr>
+<tr>
+<td>2s1</td>
+<td>u</td>
+<td>-29.57712224932282</td>
+</tr>
+<tr>
+<td>2s1</td>
+<td>d</td>
+<td>-29.501754081630878</td>
+</tr>
+<tr>
+<td>2p3</td>
+<td>u</td>
+<td>-25.55553450603184</td>
+</tr>
+<tr>
+<td>2p3</td>
+<td>d</td>
+<td>-25.498082870944934</td>
+</tr>
+<tr>
+<td>3s1</td>
+<td>u</td>
+<td>-3.415446100964441</td>
+</tr>
+<tr>
+<td>3s1</td>
+<td>d</td>
+<td>-3.2638104856286434</td>
+</tr>
+<tr>
+<td>3p3</td>
+<td>u</td>
+<td>-2.24132641647898</td>
+</tr>
+<tr>
+<td>3p3</td>
+<td>d</td>
+<td>-2.093197636613042</td>
+</tr>
+<tr>
+<td>3d5</td>
+<td>u</td>
+<td>-0.3438042038644191</td>
+</tr>
+<tr>
+<td>3d1</td>
+<td>d</td>
+<td>-0.2139118076205092</td>
+</tr>
+<tr>
+<td>4s1</td>
+<td>u</td>
+<td>-0.2099875415087925</td>
+</tr>
+<tr>
+<td>4s1</td>
+<td>d</td>
+<td>-0.1826125021370353</td>
+</tr>
+</tbody></table>
+<p>过渡金属 $3d^{n+1}4s^1$ 和 $3d^n4s^2$ 组态下的能量差。图中的数据和实验有差别，因为LSDA会低估这个能量差。实验上，除了铬和铜的组态为 $3d^{n+1}4s^1$ ，其他过渡金属元素的组态为 $3d^n4s^2$ 。更详细的讨论请参考Richard M. Martin所著Electronic Structure中的图10.2。</p>
+<p><img src="/2024/10/26/%E5%8D%95%E5%8E%9F%E5%AD%90%E7%9A%84%E5%AF%86%E5%BA%A6%E6%B3%9B%E5%87%BD%E7%90%86%E8%AE%BA%E6%B1%82%E8%A7%A3_v2/transition-metal.png"></p>
+<h1 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h1><p>本人做过一段时间的DFT计算，使用别人写的第一性原理软件。直到有一天突然异想天开，想着自己能不能开发一个属于自己的第一性原理软件？于是用Python写了一个巨慢的平面波代码（虽然用了numpy、scipy但还是很慢），发现平面波在靠近原子核部分有震荡现象，傅立叶变换后只有靠近原点的系数有值……结果当然和现有软件有差别。要继续改进，则必须要写赝势和PAW相关代码，把波函数中行为类似原子轨道的部分投影掉。发现工作量太大，于是就转向求解孤立原子了。原因是孤立原子相对简单，代码量小，还有求解孤立原子可以为平面波的赝势或者原子轨道基组铺路。</p>
+<p>至于后面这个项目的情况，应该短时间内不会动了。代码是前年底到去年初写的，当时写了技术报告，但写得比较乱，一直没时间整理，现在重新翻出来整理后发文。写这个的目的是好玩，然后是证明自己的能力，还有再熟悉一遍C++防止忘了（最近一直用Python）。还有很多事没做，包括工作学习以及自己感兴趣的事，这个项目就算告一段落了。</p>
+<p>我也在思考像这样不停造轮子的意义是什么。我个人理解有这些意义，一是实践出真知，只有自己实践过才能发现别人不会报道的细节。这些细节可能在作者看来无关紧要，或者限于篇幅无法全部介绍，但对理论理解和具体实现至关重要。二是长年适应了使用现成的东西，可能会丧失创造的能力，就比如“造不如买”这种思想。最后，可能是为了证明自己，就像爬珠峰的人，“因为山就在那里”。</p>
+</div><div class="article-licensing box"><div class="licensing-title"><p>单原子的密度泛函理论求解_v2</p><p><a href="https://yuchenxi2000.github.io/2024/10/26/单原子的密度泛函理论求解_v2/">https://yuchenxi2000.github.io/2024/10/26/单原子的密度泛函理论求解_v2/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>Chenxi Yu</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2024-10-26</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2026-03-30</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/%E7%89%A9%E7%90%86/">物理</a><a class="link-muted mr-2" rel="tag" href="/tags/%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6/">量子力学</a><a class="link-muted mr-2" rel="tag" href="/tags/%E5%AF%86%E5%BA%A6%E6%B3%9B%E5%87%BD%E7%90%86%E8%AE%BA/">密度泛函理论</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2024/11/27/Gummel%E8%BF%AD%E4%BB%A3%E6%B3%95/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">Gummel迭代法</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2024/10/21/Numerov%20method/"><span class="level-item">Numerov method</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><!--!--><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a><p class="is-size-7"><span>&copy; 2026 Chenxi Yu</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="fab fa-creative-commons-nc"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/yuchenxi2000"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script data-pjax src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script data-pjax src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "此网站使用Cookie来改善您的体验。",
+          dismiss: "知道了！",
+          allow: "允许使用Cookie",
+          deny: "拒绝",
+          link: "了解更多",
+          policy: "Cookie政策",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js"></script><script src="/js/pjax.js"></script><!--!--><script type="text/javascript" id="MathJax-script" async>MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      },
+      svg: {
+        fontCache: 'global'
+      },
+      chtml: {
+        matchFontHeight: false
+      }
+    };</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js"></script><!--!--><!--!--><script data-pjax src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script data-pjax src="/js/insight.js" defer></script><script data-pjax>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script></body></html>

@@ -1,0 +1,400 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>常数高斯曲率曲面 - YCX&#039;s Blog</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="YCX&#039;s Blog"><meta name="msapplication-TileImage" content="favicon.ico"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="YCX&#039;s Blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="先回顾一下微分几何相关定义，协变导数定义：  $$ D_{k}A_j&amp;#x3D;\partial_kA_j-\Gamma^i_{jk}A_i $$     $$ D_k A^j &amp;#x3D; \partial_k A^j + \Gamma^j_{ik}A^i $$    克里斯托弗符号表达式：  $$ \Gamma^\alpha_{\lambda\mu}&amp;#x3D;\frac{1}{2}g^{\alpha\nu}(g_{\mu"><meta property="og:type" content="blog"><meta property="og:title" content="常数高斯曲率曲面"><meta property="og:url" content="https://yuchenxi2000.github.io/2025/02/01/%E5%B8%B8%E6%95%B0%E9%AB%98%E6%96%AF%E6%9B%B2%E7%8E%87%E6%9B%B2%E9%9D%A2/"><meta property="og:site_name" content="YCX&#039;s Blog"><meta property="og:description" content="先回顾一下微分几何相关定义，协变导数定义：  $$ D_{k}A_j&amp;#x3D;\partial_kA_j-\Gamma^i_{jk}A_i $$     $$ D_k A^j &amp;#x3D; \partial_k A^j + \Gamma^j_{ik}A^i $$    克里斯托弗符号表达式：  $$ \Gamma^\alpha_{\lambda\mu}&amp;#x3D;\frac{1}{2}g^{\alpha\nu}(g_{\mu"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://yuchenxi2000.github.io/img/og_image.png"><meta property="article:published_time" content="2025-02-01T04:17:56.000Z"><meta property="article:modified_time" content="2026-03-30T12:14:17.964Z"><meta property="article:author" content="Chenxi Yu"><meta property="article:tag" content="数学"><meta property="article:tag" content="微分几何"><meta property="article:tag" content="非欧几何"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://yuchenxi2000.github.io/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://yuchenxi2000.github.io/2025/02/01/%E5%B8%B8%E6%95%B0%E9%AB%98%E6%96%AF%E6%9B%B2%E7%8E%87%E6%9B%B2%E9%9D%A2/"},"headline":"常数高斯曲率曲面","image":["https://yuchenxi2000.github.io/img/og_image.png"],"datePublished":"2025-02-01T04:17:56.000Z","dateModified":"2026-03-30T12:14:17.964Z","author":{"@type":"Person","name":"Chenxi Yu"},"publisher":{"@type":"Organization","name":"YCX's Blog","logo":{"@type":"ImageObject","url":"https://yuchenxi2000.github.io/2025/02/01/%E5%B8%B8%E6%95%B0%E9%AB%98%E6%96%AF%E6%9B%B2%E7%8E%87%E6%9B%B2%E9%9D%A2/android-chrome-512x512.png"}},"description":"先回顾一下微分几何相关定义，协变导数定义：  $$ D_{k}A_j&#x3D;\\partial_kA_j-\\Gamma^i_{jk}A_i $$     $$ D_k A^j &#x3D; \\partial_k A^j + \\Gamma^j_{ik}A^i $$    克里斯托弗符号表达式：  $$ \\Gamma^\\alpha_{\\lambda\\mu}&#x3D;\\frac{1}{2}g^{\\alpha\\nu}(g_{\\mu"}</script><link rel="canonical" href="https://yuchenxi2000.github.io/2025/02/01/%E5%B8%B8%E6%95%B0%E9%AB%98%E6%96%AF%E6%9B%B2%E7%8E%87%E6%9B%B2%E9%9D%A2/"><link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link data-pjax rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link data-pjax rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!--!--><!-- hexo injector head_end start --><script>
+  (function () {
+      function switchTab() {
+          if (!location.hash) {
+            return;
+          }
+
+          const id = '#' + CSS.escape(location.hash.substring(1));
+          const $tabMenu = document.querySelector(`.tabs a[href="${id}"]`);
+          if (!$tabMenu) {
+            return;
+          }
+
+          const $tabMenuContainer = $tabMenu.parentElement.parentElement;
+          Array.from($tabMenuContainer.children).forEach($menu => $menu.classList.remove('is-active'));
+          Array.from($tabMenuContainer.querySelectorAll('a'))
+              .map($menu => document.getElementById($menu.getAttribute("href").substring(1)))
+              .forEach($content => $content.classList.add('is-hidden'));
+
+          if ($tabMenu) {
+              $tabMenu.parentElement.classList.add('is-active');
+          }
+          const $activeTab = document.querySelector(id);
+          if ($activeTab) {
+              $activeTab.classList.remove('is-hidden');
+          }
+      }
+      switchTab();
+      window.addEventListener('hashchange', switchTab, false);
+  })();
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 8.1.1"></head><body class="is-1-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-12"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2025-02-01T04:17:56.000Z" title="2025/2/1 12:17:56">2025-02-01</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E6%95%B0%E5%AD%A6/">数学</a></span><span class="level-item">8 分钟读完 (大约1194个字)</span></div></div><h1 class="title is-3 is-size-4-mobile">常数高斯曲率曲面</h1><div class="content"><p>先回顾一下微分几何相关定义，协变导数定义：</p>
+<div>
+$$
+D_{k}A_j=\partial_kA_j-\Gamma^i_{jk}A_i
+$$
+</div>
+
+
+<div>
+$$
+D_k A^j = \partial_k A^j + \Gamma^j_{ik}A^i
+$$
+</div>
+
+
+<p>克里斯托弗符号表达式：</p>
+<div>
+$$
+\Gamma^\alpha_{\lambda\mu}=\frac{1}{2}g^{\alpha\nu}(g_{\mu\nu,\lambda}+g_{\nu\lambda,\mu}-g_{\lambda\mu,\nu})
+$$
+</div>
+
+
+<p>曲率张量定义：</p>
+<div>
+$$
+R^\rho_{\lambda\mu\nu}=-\Gamma^\rho_{\lambda\mu,\nu}+\Gamma^\rho_{\lambda\nu,\mu}-\Gamma^\sigma_{\lambda\mu}\Gamma^\rho_{\sigma\nu}+\Gamma^\sigma_{\lambda\nu}\Gamma^\rho_{\sigma\mu}
+$$
+</div>
+
+
+<p>在二维空间中，我们计算曲率张量。指标 $0,1$ 分别表示 $x,y$ 。设度规的形式为</p>
+<div>
+$$
+\mathrm{d}s^2 = G(\mathrm{d}x^2+\mathrm{d}y^2)
+$$
+</div>
+
+<div>
+$$
+g_{00}=G,g_{11}=G,g_{01}=g_{10}=0
+$$
+</div>
+
+
+<div>
+$$
+g^{00}=1/G,g^{11}=1/G,g^{01}=g^{10}=0
+$$
+</div>
+
+
+<div>
+$$
+\begin{gathered}
+\Gamma^0_{\lambda\mu}=\frac{1}{2}g^{00}(g_{\mu0,\lambda}+g_{0\lambda,\mu}-g_{\lambda\mu,0}) \\
+\Gamma^1_{\lambda\mu}=\frac{1}{2}g^{11}(g_{\mu1,\lambda}+g_{1\lambda,\mu}-g_{\lambda\mu,1})
+\\\end{gathered}
+$$
+</div>
+
+
+<div>
+$$
+\begin{gathered}
+\Gamma^0_{00}=\cfrac{G_0}{2G},\Gamma^0_{01}=\cfrac{G_1}{2G},\Gamma^0_{11}=-\cfrac{G_0}{2G} \\
+\Gamma^1_{00}=-\cfrac{G_1}{2G},\Gamma^1_{01}=\cfrac{G_0}{2G},\Gamma^1_{11}=\cfrac{G_1}{2G} \\
+\\\end{gathered}
+$$
+</div>
+
+
+<div>
+$$
+\begin{gathered}
+R^0_{101}
+=
+-\Gamma^0_{10,1}+\Gamma^0_{11,0}
+-\Gamma^0_{10}\Gamma^0_{01}-\Gamma^1_{10}\Gamma^0_{11}
++\Gamma^0_{11}\Gamma^0_{00}+\Gamma^1_{11}\Gamma^0_{10} \\
+=-\left(\cfrac{G_1}{2G}\right)_1-\left(\cfrac{G_0}{2G}\right)_0 \\
+\\\end{gathered}
+$$
+</div>
+
+
+
+<div>
+$$
+R_{0101}=g_{00}R^{0}_{101}
+$$
+</div>
+
+
+<div>
+$$
+g=\det(g_{\alpha\beta})=G^2
+$$
+</div>
+
+
+<p>在二维空间中，曲率张量只存在一个不为 $0$ 的分量 $R_{0101}$ ，以及指标交换导致的相等或相反分量。它和高斯曲率 $K$ 有如下关系：</p>
+<div>
+$$
+K = \cfrac{R_{0101}}{g}=-\cfrac{1}{2G}\left\lbrack \left(\cfrac{G_x}{G}\right)_x+\left(\cfrac{G_y}{G}\right)_y\right\rbrack 
+$$
+</div>
+
+
+<h2 id="常数负曲率的一个解"><a href="#常数负曲率的一个解" class="headerlink" title="常数负曲率的一个解"></a>常数负曲率的一个解</h2><p>常数负曲率的曲面为伪球面，其上的几何为罗巴切夫斯基几何&#x2F;双曲几何。我们设 $G$ 有如下形式，并代入高斯曲率公式</p>
+<div>
+$$
+G=\cfrac{C}{y^2},K=-\cfrac{y^2}{2C}(-2)(-1/y^2)=-\cfrac{1}{C}
+$$
+</div>
+
+
+<span id="more"></span>
+
+<p>然后设 $K&#x3D;-1&#x2F;a^2$ ，</p>
+<div>
+$$
+\mathrm{d}s^2=\cfrac{a^2}{y^2}(\mathrm{d}x^2+\mathrm{d}y^2)
+$$
+</div>
+
+
+<p>此为双曲几何在上半平面 $y\gt 0$ 上的表示（彭加莱平面）。</p>
+<h3 id="测地线"><a href="#测地线" class="headerlink" title="测地线"></a>测地线</h3><div>
+$$
+\begin{gathered}
+s = \int_{x_1}^{x_2} \cfrac{\sqrt{1+y'^2}}{y}\mathrm{d}x \\
+= \int_{x_1}^{x_2} \mathcal{F}\lbrack y,y'\rbrack  \mathrm{d}x
+\\\end{gathered}
+$$
+</div>
+
+
+<p>为求极小值，解欧拉-拉格朗日方程</p>
+<div>
+$$
+\cfrac{\partial \mathcal{F}}{\partial y}-\cfrac{\mathrm{d}}{\mathrm{d}x}\cfrac{\partial \mathcal{F}}{\partial y'}=0
+$$
+</div>
+
+
+<p>化简到最后为</p>
+<div>
+$$
+-yy''=y'^2+1
+$$
+</div>
+
+
+<p>用对应二阶常微分方程的解法，做换元</p>
+<div>
+$$
+\begin{gathered}
+y'=w \\
+y''=w\cfrac{\mathrm{d}w}{\mathrm{d}y} \\
+\\\end{gathered}
+$$
+</div>
+
+
+<p>然后积分求解</p>
+<div>
+$$
+\begin{gathered}
+-yw\cfrac{\mathrm{d}w}{\mathrm{d}y}=w^2+1 \\
+\cfrac{2w\mathrm{d}w}{w^2+1}=-\cfrac{2\mathrm{d}y}{y} \\
+\ln(w^2+1) = C - 2\ln y \\
+y'=\pm\sqrt{\cfrac{C}{y^2}-1} \\
+\mathrm{d}x=\pm\cfrac{y\mathrm{d}y}{\sqrt{C-y^2}} \\
+C'-x=\pm\sqrt{C-y^2} \\
+(x-C')^2+y^2=C
+\\\end{gathered}
+$$
+</div>
+
+
+<p>所以测地线为圆心在 $x$ 轴上的上半圆，以及垂直 $x$ 轴的上半直线（半圆的极限）</p>
+<h3 id="双曲距离"><a href="#双曲距离" class="headerlink" title="双曲距离"></a>双曲距离</h3><p>设测地线方程</p>
+<div>
+$$
+\begin{cases}
+x=x_0+r_0\cos\theta \\
+y=r_0\sin\theta
+\end{cases}
+$$
+</div>
+
+<p>测地线上两点 $\theta_1,\theta_2$ 。</p>
+<p>距离</p>
+<div>
+$$
+\begin{gathered}
+d=\int_{\theta_1}^{\theta_2} \cfrac{\sqrt{x'^2+y'^2}}{y}\mathrm{d}\theta \\
+=\int_{\theta_1}^{\theta_2} \cfrac{\mathrm{d}\theta}{\sin\theta} \\
+=\ln\cfrac{\tan (\theta_2/2)}{\tan(\theta_1/2)}
+\\\end{gathered}
+$$
+</div>
+
+<h2 id="常数正-负曲率的一个解"><a href="#常数正-负曲率的一个解" class="headerlink" title="常数正&#x2F;负曲率的一个解"></a>常数正&#x2F;负曲率的一个解</h2><p>设 $G$ 有如下形式</p>
+<div>
+$$
+\begin{gathered}
+G=\cfrac{B}{(1+Ar^2)^2} \\
+\\\end{gathered}
+$$
+</div>
+
+
+<p>然后把 $G_x&#x2F;G$ 用 $(\ln G)_x$ 表示，再用拉普拉斯算子的极坐标表示（参见<a href="/2024/10/10/%E6%9E%81%E5%9D%90%E6%A0%87%E3%80%81%E7%90%83%E5%9D%90%E6%A0%87%E4%B8%8A%E7%9A%84%E6%8B%89%E6%99%AE%E6%8B%89%E6%96%AF%E7%AE%97%E5%AD%90/" title="极坐标、球坐标上的拉普拉斯算子">极坐标、球坐标上的拉普拉斯算子</a>），可以把高斯曲率公式化为</p>
+<div>
+$$
+\begin{gathered}
+K
+=
+-\cfrac{1}{2G}\left\lbrack \left(\cfrac{G_x}{G}\right)_x+\left(\cfrac{G_y}{G}\right)_y\right\rbrack  \\
+=
+-\cfrac{1}{2G}\nabla^2 (\ln G) \\
+=
+-\cfrac{1}{2G}\left\lbrack (\ln G)_{rr}+\cfrac{1}{r}(\ln G)_r\right\rbrack  \\
+\\\end{gathered}
+$$
+</div>
+
+<p>可以求得</p>
+<div>
+$$
+BK=4A
+$$
+</div>
+
+
+<h3 id="常数负曲率"><a href="#常数负曲率" class="headerlink" title="常数负曲率"></a>常数负曲率</h3><p>设</p>
+<div>
+$$
+K=-1/a^2
+$$
+</div>
+
+
+<p>如果做坐标变换 $\sqrt{B}x \to x,\sqrt{B}y \to y$ ，</p>
+<div>
+$$
+\mathrm{d}s^2=\cfrac{4a^4(\mathrm{d}x^2+\mathrm{d}y^2)}{(a^2-x^2-y^2)^2}
+$$
+</div>
+
+
+<p>如果做尺度变换</p>
+<div>
+$$
+s/a \to s, x/a \to x,y/a \to y
+$$
+</div>
+
+
+<p>有</p>
+<div>
+$$
+\mathrm{d}s^2=\cfrac{4(\mathrm{d}x^2+\mathrm{d}y^2)}{(1-x^2-y^2)^2}
+$$
+</div>
+
+
+<h3 id="常数正曲率（彭加莱圆盘）"><a href="#常数正曲率（彭加莱圆盘）" class="headerlink" title="常数正曲率（彭加莱圆盘）"></a>常数正曲率（彭加莱圆盘）</h3><p>类似的有</p>
+<div>
+$$
+\mathrm{d}s^2=\cfrac{4(\mathrm{d}x^2+\mathrm{d}y^2)}{(1+x^2+y^2)^2}
+$$
+</div>
+
+
+<h2 id="彭加莱圆盘上测地线"><a href="#彭加莱圆盘上测地线" class="headerlink" title="彭加莱圆盘上测地线"></a>彭加莱圆盘上测地线</h2><p>可以验证分式线性映射</p>
+<div>
+$$
+w=\cfrac{z-\mathrm{i}}{z+\mathrm{i}}
+$$
+</div>
+
+<p>把上半平面映射为单位圆内部。</p>
+<p>逆映射为</p>
+<div>
+$$
+z=-\mathrm{i}\cfrac{w+1}{w-1}
+$$
+</div>
+
+<p>并且可以由此得出</p>
+<div>
+$$
+\begin{gathered}
+\mathrm{d}z=\cfrac{2\mathrm{i}}{(w-1)^2}\mathrm{d}w, |\mathrm{d}z|^2=\cfrac{4}{|w-1|^4}|\mathrm{d}w|^2 \\
+y=\cfrac{1-u^2-v^2}{u^2+v^2+1-2u} \\
+=\cfrac{1-u^2-v^2}{|w-1|^2} \\
+\\\end{gathered}
+$$
+</div>
+
+<p>所以由彭加莱平面度规，可以得出映射后的度规为</p>
+<div>
+$$
+\begin{gathered}
+\mathrm{d}s^2=\cfrac{|\mathrm{d}z|^2}{y^2} \\
+=\cfrac{4|\mathrm{d}w|^2}{(1-u^2-v^2)^2}
+\\\end{gathered}
+$$
+</div>
+
+<p>此即彭加莱圆盘。所以由彭加莱平面的测地线可以直接得出彭加莱圆盘的测地线。因为映射为等距映射，所以根据彭加莱平面的测地线为圆心在x轴上的圆，可以得出彭加莱圆盘的测地线为和单位圆正交的圆，以及极限情形——单位圆直径。</p>
+</div><div class="article-licensing box"><div class="licensing-title"><p>常数高斯曲率曲面</p><p><a href="https://yuchenxi2000.github.io/2025/02/01/常数高斯曲率曲面/">https://yuchenxi2000.github.io/2025/02/01/常数高斯曲率曲面/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>Chenxi Yu</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2025-02-01</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2026-03-30</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/%E6%95%B0%E5%AD%A6/">数学</a><a class="link-muted mr-2" rel="tag" href="/tags/%E5%BE%AE%E5%88%86%E5%87%A0%E4%BD%95/">微分几何</a><a class="link-muted mr-2" rel="tag" href="/tags/%E9%9D%9E%E6%AC%A7%E5%87%A0%E4%BD%95/">非欧几何</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2025/02/08/%E5%8F%8C%E6%9B%B2%E5%87%A0%E4%BD%95/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">双曲几何</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2025/01/20/%E6%A4%AD%E7%90%83%E9%9D%99%E7%94%B5%E5%9C%BA%E9%97%AE%E9%A2%98/"><span class="level-item">椭球静电场问题</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><!--!--><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a><p class="is-size-7"><span>&copy; 2026 Chenxi Yu</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="fab fa-creative-commons-nc"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/yuchenxi2000"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script data-pjax src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script data-pjax src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "此网站使用Cookie来改善您的体验。",
+          dismiss: "知道了！",
+          allow: "允许使用Cookie",
+          deny: "拒绝",
+          link: "了解更多",
+          policy: "Cookie政策",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js"></script><script src="/js/pjax.js"></script><!--!--><script type="text/javascript" id="MathJax-script" async>MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      },
+      svg: {
+        fontCache: 'global'
+      },
+      chtml: {
+        matchFontHeight: false
+      }
+    };</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js"></script><!--!--><!--!--><script data-pjax src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script data-pjax src="/js/insight.js" defer></script><script data-pjax>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script></body></html>

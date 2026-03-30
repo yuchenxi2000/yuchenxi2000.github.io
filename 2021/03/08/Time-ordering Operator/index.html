@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>Time-ordering Operator - YCX&#039;s Blog</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="YCX&#039;s Blog"><meta name="msapplication-TileImage" content="favicon.ico"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="YCX&#039;s Blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="考虑Schrödinger equation(取 $\hbar&amp;#x3D;1$ )  $$ {\rm i} \cfrac{\partial \phi}{\partial t} &amp;#x3D; H \phi $$   我们记时间演化算符 $U(t)$   $$ {\rm i} \cfrac{\partial U(t)}{\partial t} &amp;#x3D; H(t) U(t) \label{eq_u},\quad U(0"><meta property="og:type" content="blog"><meta property="og:title" content="Time-ordering Operator"><meta property="og:url" content="https://yuchenxi2000.github.io/2021/03/08/Time-ordering%20Operator/"><meta property="og:site_name" content="YCX&#039;s Blog"><meta property="og:description" content="考虑Schrödinger equation(取 $\hbar&amp;#x3D;1$ )  $$ {\rm i} \cfrac{\partial \phi}{\partial t} &amp;#x3D; H \phi $$   我们记时间演化算符 $U(t)$   $$ {\rm i} \cfrac{\partial U(t)}{\partial t} &amp;#x3D; H(t) U(t) \label{eq_u},\quad U(0"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://yuchenxi2000.github.io/img/og_image.png"><meta property="article:published_time" content="2021-03-08T15:22:00.000Z"><meta property="article:modified_time" content="2026-03-30T12:14:17.807Z"><meta property="article:author" content="Chenxi Yu"><meta property="article:tag" content="物理"><meta property="article:tag" content="量子力学"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://yuchenxi2000.github.io/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://yuchenxi2000.github.io/2021/03/08/Time-ordering%20Operator/"},"headline":"Time-ordering Operator","image":["https://yuchenxi2000.github.io/img/og_image.png"],"datePublished":"2021-03-08T15:22:00.000Z","dateModified":"2026-03-30T12:14:17.807Z","author":{"@type":"Person","name":"Chenxi Yu"},"publisher":{"@type":"Organization","name":"YCX's Blog","logo":{"@type":"ImageObject","url":"https://yuchenxi2000.github.io/2021/03/08/Time-ordering%20Operator/android-chrome-512x512.png"}},"description":"考虑Schrödinger equation(取 $\\hbar&#x3D;1$ )  $$ {\\rm i} \\cfrac{\\partial \\phi}{\\partial t} &#x3D; H \\phi $$   我们记时间演化算符 $U(t)$   $$ {\\rm i} \\cfrac{\\partial U(t)}{\\partial t} &#x3D; H(t) U(t) \\label{eq_u},\\quad U(0"}</script><link rel="canonical" href="https://yuchenxi2000.github.io/2021/03/08/Time-ordering%20Operator/"><link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link data-pjax rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link data-pjax rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!--!--><!-- hexo injector head_end start --><script>
+  (function () {
+      function switchTab() {
+          if (!location.hash) {
+            return;
+          }
+
+          const id = '#' + CSS.escape(location.hash.substring(1));
+          const $tabMenu = document.querySelector(`.tabs a[href="${id}"]`);
+          if (!$tabMenu) {
+            return;
+          }
+
+          const $tabMenuContainer = $tabMenu.parentElement.parentElement;
+          Array.from($tabMenuContainer.children).forEach($menu => $menu.classList.remove('is-active'));
+          Array.from($tabMenuContainer.querySelectorAll('a'))
+              .map($menu => document.getElementById($menu.getAttribute("href").substring(1)))
+              .forEach($content => $content.classList.add('is-hidden'));
+
+          if ($tabMenu) {
+              $tabMenu.parentElement.classList.add('is-active');
+          }
+          const $activeTab = document.querySelector(id);
+          if ($activeTab) {
+              $activeTab.classList.remove('is-hidden');
+          }
+      }
+      switchTab();
+      window.addEventListener('hashchange', switchTab, false);
+  })();
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 8.1.1"></head><body class="is-1-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-12"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-03-08T15:22:00.000Z" title="2021/3/8 23:22:00">2021-03-08</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E7%89%A9%E7%90%86/">物理</a></span><span class="level-item">2 分钟读完 (大约319个字)</span></div></div><h1 class="title is-3 is-size-4-mobile">Time-ordering Operator</h1><div class="content"><p>考虑Schrödinger equation(取 $\hbar&#x3D;1$ )</p>
+<div>
+$$
+{\rm i} \cfrac{\partial \phi}{\partial t} = H \phi
+$$
+</div>
+
+<p>我们记时间演化算符 $U(t)$ </p>
+<div>
+$$
+{\rm i} \cfrac{\partial U(t)}{\partial t} = H(t) U(t)
+\label{eq_u},\quad U(0) = 1
+$$
+</div>
+
+<p>用Dyson series求解方程 $\eqref{eq_u}$ ，零阶近似 $U_0(t) &#x3D; 1$ </p>
+<div>
+$$
+\begin{gather}
+U_1(t) = 1 + ({-\rm i}) \int_0^t {\rm d}t H(t) \\
+U_2(t) = 1 + ({-\rm i}) \int_0^t {\rm d}t H(t) + ({-\rm i})^2 \int_0^t {\rm d}t_1 H(t_1) \int_0^{t_1} {\rm d}t_2 H(t_2) \\
+...
+\end{gather}
+$$
+</div>
+
+<p>我们注意 $U_2(t)$ 表达式的第二项</p>
+<div>
+$$
+\begin{gather}
+\int_0^t {\rm d}t_1 H(t_1) \int_0^{t_1} {\rm d}t_2 H(t_2) = \\
+\frac{1}{2}\lbrack \int_0^t \int_0^{t_1} {\rm d}t_1 {\rm d}t_2 H(t_1) H(t_2) + \int_0^t \int_0^{t_1} {\rm d}t_1 {\rm d}t_2 H(t_1) H(t_2))\rbrack  = \\
+\frac{1}{2}{\cal T}\lbrack \int_0^t \int_0^{t_1} {\rm d}t_1 {\rm d}t_2 H(t_1) H(t_2) + \int_0^{t_2} \int_0^t {\rm d}t_1 {\rm d}t_2 H(t_1) H(t_2))\rbrack  = \\
+{\cal T}\lbrack \frac{1}{2}\int_0^t \int_0^{t} {\rm d}t_1 {\rm d}t_2 H(t_1) H(t_2)\rbrack  = \\
+{\cal T}\lbrack \frac{1}{2!}(\int_0^t H(t) {\rm d}t)^2\rbrack  \\
+\end{gather}
+$$
+</div>
+
+<p>其中时序算符 $\cal T$ 的作用是将时间发生在后面的算符提到前面。</p>
+<p>于是形式上可将 $U(t)$ 写做</p>
+<div>
+$$
+U(t) = {\cal T} \exp ({-\rm i} \int_0^t H(t) {\rm d}t)
+\label{eq_u_positive}
+$$
+</div>
+
+<p>上式 $\eqref{eq_u_positive}$ 只对 $t \gt  0$ 成立。 $t \lt  0$ 情况需要定义反时序算符，表达式类似。</p>
+</div><div class="article-licensing box"><div class="licensing-title"><p>Time-ordering Operator</p><p><a href="https://yuchenxi2000.github.io/2021/03/08/Time-ordering Operator/">https://yuchenxi2000.github.io/2021/03/08/Time-ordering Operator/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>Chenxi Yu</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2021-03-08</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2026-03-30</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/%E7%89%A9%E7%90%86/">物理</a><a class="link-muted mr-2" rel="tag" href="/tags/%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6/">量子力学</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2021/07/18/%E7%B2%92%E5%AD%90%E6%89%A9%E6%95%A3%E8%B7%9D%E7%A6%BB%E5%9D%87%E6%96%B9%E5%B7%AE%E7%9A%84%E6%8E%A8%E5%AF%BC/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">粒子扩散距离均方差的推导</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2020/09/23/PN%E7%BB%93%E8%80%97%E5%B0%BD%E8%BF%91%E4%BC%BC%E7%94%B5%E5%AE%B9%E7%AD%89%E6%95%88%E4%BA%8E%E5%B9%B3%E8%A1%8C%E6%9D%BF%E7%94%B5%E5%AE%B9%E7%9A%84%E8%AF%81%E6%98%8E/"><span class="level-item">PN结耗尽近似电容等效于平行板电容的证明</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><!--!--><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a><p class="is-size-7"><span>&copy; 2026 Chenxi Yu</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="fab fa-creative-commons-nc"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/yuchenxi2000"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script data-pjax src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script data-pjax src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "此网站使用Cookie来改善您的体验。",
+          dismiss: "知道了！",
+          allow: "允许使用Cookie",
+          deny: "拒绝",
+          link: "了解更多",
+          policy: "Cookie政策",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js"></script><script src="/js/pjax.js"></script><!--!--><script type="text/javascript" id="MathJax-script" async>MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      },
+      svg: {
+        fontCache: 'global'
+      },
+      chtml: {
+        matchFontHeight: false
+      }
+    };</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js"></script><!--!--><!--!--><script data-pjax src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script data-pjax src="/js/insight.js" defer></script><script data-pjax>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script></body></html>

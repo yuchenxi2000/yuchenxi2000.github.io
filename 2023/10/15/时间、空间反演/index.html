@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>时间、空间反演 - YCX&#039;s Blog</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="YCX&#039;s Blog"><meta name="msapplication-TileImage" content="favicon.ico"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="YCX&#039;s Blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="$$ \newcommand{\d}{\mathrm{d}} \newcommand{\i}{\mathrm{i}} $$    空间反演空间反演定义是 $x \rightarrow -x$ ，即坐标系做反演变换。 标量空间反演不变，矢量空间反演是否不变和极矢量（polar vector）、轴矢量（axial vector）分类有关。 空间反演下极矢量反向，轴矢量不变。 极矢量是真正的矢量，轴矢"><meta property="og:type" content="blog"><meta property="og:title" content="时间、空间反演"><meta property="og:url" content="https://yuchenxi2000.github.io/2023/10/15/%E6%97%B6%E9%97%B4%E3%80%81%E7%A9%BA%E9%97%B4%E5%8F%8D%E6%BC%94/"><meta property="og:site_name" content="YCX&#039;s Blog"><meta property="og:description" content="$$ \newcommand{\d}{\mathrm{d}} \newcommand{\i}{\mathrm{i}} $$    空间反演空间反演定义是 $x \rightarrow -x$ ，即坐标系做反演变换。 标量空间反演不变，矢量空间反演是否不变和极矢量（polar vector）、轴矢量（axial vector）分类有关。 空间反演下极矢量反向，轴矢量不变。 极矢量是真正的矢量，轴矢"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://yuchenxi2000.github.io/img/og_image.png"><meta property="article:published_time" content="2023-10-15T04:17:50.000Z"><meta property="article:modified_time" content="2026-03-30T12:14:19.615Z"><meta property="article:author" content="Chenxi Yu"><meta property="article:tag" content="物理"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://yuchenxi2000.github.io/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://yuchenxi2000.github.io/2023/10/15/%E6%97%B6%E9%97%B4%E3%80%81%E7%A9%BA%E9%97%B4%E5%8F%8D%E6%BC%94/"},"headline":"时间、空间反演","image":["https://yuchenxi2000.github.io/img/og_image.png"],"datePublished":"2023-10-15T04:17:50.000Z","dateModified":"2026-03-30T12:14:19.615Z","author":{"@type":"Person","name":"Chenxi Yu"},"publisher":{"@type":"Organization","name":"YCX's Blog","logo":{"@type":"ImageObject","url":"https://yuchenxi2000.github.io/2023/10/15/%E6%97%B6%E9%97%B4%E3%80%81%E7%A9%BA%E9%97%B4%E5%8F%8D%E6%BC%94/android-chrome-512x512.png"}},"description":"$$ \\newcommand{\\d}{\\mathrm{d}} \\newcommand{\\i}{\\mathrm{i}} $$    空间反演空间反演定义是 $x \\rightarrow -x$ ，即坐标系做反演变换。 标量空间反演不变，矢量空间反演是否不变和极矢量（polar vector）、轴矢量（axial vector）分类有关。 空间反演下极矢量反向，轴矢量不变。 极矢量是真正的矢量，轴矢"}</script><link rel="canonical" href="https://yuchenxi2000.github.io/2023/10/15/%E6%97%B6%E9%97%B4%E3%80%81%E7%A9%BA%E9%97%B4%E5%8F%8D%E6%BC%94/"><link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link data-pjax rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link data-pjax rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!--!--><!-- hexo injector head_end start --><script>
+  (function () {
+      function switchTab() {
+          if (!location.hash) {
+            return;
+          }
+
+          const id = '#' + CSS.escape(location.hash.substring(1));
+          const $tabMenu = document.querySelector(`.tabs a[href="${id}"]`);
+          if (!$tabMenu) {
+            return;
+          }
+
+          const $tabMenuContainer = $tabMenu.parentElement.parentElement;
+          Array.from($tabMenuContainer.children).forEach($menu => $menu.classList.remove('is-active'));
+          Array.from($tabMenuContainer.querySelectorAll('a'))
+              .map($menu => document.getElementById($menu.getAttribute("href").substring(1)))
+              .forEach($content => $content.classList.add('is-hidden'));
+
+          if ($tabMenu) {
+              $tabMenu.parentElement.classList.add('is-active');
+          }
+          const $activeTab = document.querySelector(id);
+          if ($activeTab) {
+              $activeTab.classList.remove('is-hidden');
+          }
+      }
+      switchTab();
+      window.addEventListener('hashchange', switchTab, false);
+  })();
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 8.1.1"></head><body class="is-1-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-12"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2023-10-15T04:17:50.000Z" title="2023/10/15 12:17:50">2023-10-15</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E7%89%A9%E7%90%86/">物理</a></span><span class="level-item">4 分钟读完 (大约534个字)</span></div></div><h1 class="title is-3 is-size-4-mobile">时间、空间反演</h1><div class="content"><div>
+$$
+\newcommand{\d}{\mathrm{d}}
+\newcommand{\i}{\mathrm{i}}
+$$
+</div>
+
+
+<h2 id="空间反演"><a href="#空间反演" class="headerlink" title="空间反演"></a>空间反演</h2><p>空间反演定义是 $x \rightarrow -x$ ，即坐标系做反演变换。</p>
+<p>标量空间反演不变，矢量空间反演是否不变和极矢量（polar vector）、轴矢量（axial vector）分类有关。</p>
+<p>空间反演下极矢量反向，轴矢量不变。</p>
+<p>极矢量是真正的矢量，轴矢量变化和坐标变换不一致，被称为赝矢量。</p>
+<p>这个概念和外微分有关。极矢量基矢是坐标微分，轴矢量基矢是坐标微分的楔积。比如电场与磁场：</p>
+<div>
+$$
+E = E_1 \mathrm{d} x_1 + E_2 \mathrm{d} x_2 + E_3 \mathrm{d} x_3
+$$
+</div>
+
+
+<div>
+$$
+B = B_{23} \mathrm{d} x_2 \wedge \mathrm{d} x_3 + B_{31} \mathrm{d} x_3 \wedge \mathrm{d} x_1 + B_{12} \mathrm{d} x_1 \wedge \mathrm{d} x_2
+$$
+</div>
+
+
+<p>如果把 $\frac{1}{2}\varepsilon_{ijk}\mathrm{d} x_j\wedge\mathrm{d} x_k$ 对应到 $\mathrm{d} x_i$ ，那么上面的 $B$ 张量也可表示成矢量形式，即轴矢量。</p>
+<p>一般来说表示成两个矢量的叉乘的是轴矢量。</p>
+<p>我们记坐标为 $x$ ，速度 $v$ ，力 $F$ ，力矩 $L$ 。</p>
+<p>因为</p>
+<div>
+$$
+B = \nabla \times A
+$$
+</div>
+
+
+<div>
+$$
+L = r \times F
+$$
+</div>
+
+
+<p>所以这些物理量的空间反演</p>
+<div>
+$$
+\begin{cases}
+x \rightarrow -x \\
+v \rightarrow -v \\
+a \rightarrow -a \\
+F \rightarrow -F \\
+E \rightarrow -E \\
+B \rightarrow B \\
+A \rightarrow -A \\
+L \rightarrow L \\
+\end{cases}
+$$
+</div>
+
+
+<h2 id="时间反演"><a href="#时间反演" class="headerlink" title="时间反演"></a>时间反演</h2><p>时间反演定义是 $t \rightarrow -t$ ，即时间箭头反向。</p>
+<p>下面列举不同物理量在时间反演下的行为</p>
+<h3 id="位置"><a href="#位置" class="headerlink" title="位置"></a>位置</h3><p>明显和时间无关， $x \rightarrow x$ </p>
+<h3 id="速度"><a href="#速度" class="headerlink" title="速度"></a>速度</h3><p>因为</p>
+<div>
+$$
+v = \cfrac{\mathrm{d} x}{\mathrm{d} t}
+$$
+</div>
+
+<p>所以</p>
+<div>
+$$
+v \rightarrow -v
+$$
+</div>
+
+
+<h3 id="加速度"><a href="#加速度" class="headerlink" title="加速度"></a>加速度</h3><p>因为</p>
+<div>
+$$
+a = \cfrac{\mathrm{d}^2 x}{\mathrm{d} t^2}
+$$
+</div>
+
+<p>所以</p>
+<div>
+$$
+a \rightarrow a
+$$
+</div>
+
+<p>同理，力</p>
+<div>
+$$
+F \rightarrow F
+$$
+</div>
+
+
+<h3 id="电磁场"><a href="#电磁场" class="headerlink" title="电磁场"></a>电磁场</h3><div>
+$$
+F = qE + q v \times B
+$$
+</div>
+
+
+<p>根据力和速度的变换，</p>
+<div>
+$$
+\begin{cases}
+E \rightarrow E \\
+B \rightarrow -B \\
+\end{cases}
+$$
+</div>
+
+<p>由电磁场的四矢量 $A$ 表达式，</p>
+<div>
+$$
+\begin{cases}
+E = -\nabla \phi - \cfrac{\partial A}{\partial t} \\
+B = \nabla \times A
+\end{cases}
+$$
+</div>
+
+<p>可知</p>
+<div>
+$$
+\begin{cases}
+\phi \rightarrow \phi \\
+A \rightarrow -A \\
+\end{cases}
+$$
+</div>
+
+
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><div>
+$$
+\begin{cases}
+x \rightarrow x \\
+v \rightarrow -v \\
+a \rightarrow a \\
+F \rightarrow F \\
+E \rightarrow E \\
+B \rightarrow -B \\
+\phi \rightarrow \phi \\
+A \rightarrow -A \\
+\end{cases}
+$$
+</div>
+
+
+</div><div class="article-licensing box"><div class="licensing-title"><p>时间、空间反演</p><p><a href="https://yuchenxi2000.github.io/2023/10/15/时间、空间反演/">https://yuchenxi2000.github.io/2023/10/15/时间、空间反演/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>Chenxi Yu</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2023-10-15</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2026-03-30</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/%E7%89%A9%E7%90%86/">物理</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2023/10/15/MTJ%E4%B8%ADJulliere%E6%A8%A1%E5%9E%8B/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">MTJ中Julliere模型</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2023/10/02/%E6%BD%AE%E6%B1%90%E7%8E%B0%E8%B1%A12/"><span class="level-item">潮汐现象2</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><!--!--><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a><p class="is-size-7"><span>&copy; 2026 Chenxi Yu</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="fab fa-creative-commons-nc"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/yuchenxi2000"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script data-pjax src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script data-pjax src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "此网站使用Cookie来改善您的体验。",
+          dismiss: "知道了！",
+          allow: "允许使用Cookie",
+          deny: "拒绝",
+          link: "了解更多",
+          policy: "Cookie政策",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js"></script><script src="/js/pjax.js"></script><!--!--><script type="text/javascript" id="MathJax-script" async>MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      },
+      svg: {
+        fontCache: 'global'
+      },
+      chtml: {
+        matchFontHeight: false
+      }
+    };</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js"></script><!--!--><!--!--><script data-pjax src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script data-pjax src="/js/insight.js" defer></script><script data-pjax>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script></body></html>

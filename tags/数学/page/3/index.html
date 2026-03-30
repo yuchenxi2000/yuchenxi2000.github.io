@@ -1,0 +1,1252 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="robots" content="noindex"><meta><title>标签: 数学 - YCX&#039;s Blog</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="YCX&#039;s Blog"><meta name="msapplication-TileImage" content="favicon.ico"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="YCX&#039;s Blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="一个分享数学物理笔记的博客"><meta property="og:type" content="blog"><meta property="og:title" content="YCX&#039;s Blog"><meta property="og:url" content="https://yuchenxi2000.github.io/"><meta property="og:site_name" content="YCX&#039;s Blog"><meta property="og:description" content="一个分享数学物理笔记的博客"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://yuchenxi2000.github.io/img/og_image.png"><meta property="article:author" content="Chenxi Yu"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://yuchenxi2000.github.io/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://yuchenxi2000.github.io"},"headline":"YCX's Blog","image":["https://yuchenxi2000.github.io/img/og_image.png"],"author":{"@type":"Person","name":"Chenxi Yu"},"publisher":{"@type":"Organization","name":"YCX's Blog","logo":{"@type":"ImageObject","url":"https://yuchenxi2000.github.io/android-chrome-512x512.png"}},"description":"一个分享数学物理笔记的博客"}</script><link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link data-pjax rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link data-pjax rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!--!--><!-- hexo injector head_end start --><script>
+  (function () {
+      function switchTab() {
+          if (!location.hash) {
+            return;
+          }
+
+          const id = '#' + CSS.escape(location.hash.substring(1));
+          const $tabMenu = document.querySelector(`.tabs a[href="${id}"]`);
+          if (!$tabMenu) {
+            return;
+          }
+
+          const $tabMenuContainer = $tabMenu.parentElement.parentElement;
+          Array.from($tabMenuContainer.children).forEach($menu => $menu.classList.remove('is-active'));
+          Array.from($tabMenuContainer.querySelectorAll('a'))
+              .map($menu => document.getElementById($menu.getAttribute("href").substring(1)))
+              .forEach($content => $content.classList.add('is-hidden'));
+
+          if ($tabMenu) {
+              $tabMenu.parentElement.classList.add('is-active');
+          }
+          const $activeTab = document.querySelector(id);
+          if ($activeTab) {
+              $activeTab.classList.remove('is-hidden');
+          }
+      }
+      switchTab();
+      window.addEventListener('hashchange', switchTab, false);
+  })();
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 8.1.1"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><div class="card-content"><nav class="breadcrumb" aria-label="breadcrumbs"><ul><li><a href="/tags/">标签</a></li><li class="is-active"><a href="#" aria-current="page">数学</a></li></ul></nav></div></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2025-02-08T09:37:28.000Z" title="2025/2/8 17:37:28">2025-02-08</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E6%95%B0%E5%AD%A6/">数学</a></span><span class="level-item">21 分钟读完 (大约3120个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2025/02/08/%E5%8F%8C%E6%9B%B2%E5%87%A0%E4%BD%95/">双曲几何</a></p><div class="content"><p>参考<a href="/2025/02/01/%E5%B8%B8%E6%95%B0%E9%AB%98%E6%96%AF%E6%9B%B2%E7%8E%87%E6%9B%B2%E9%9D%A2/" title="常数高斯曲率曲面">常数高斯曲率曲面</a>，里面给出的双曲空间定义（常数负曲率曲面）、测地线、双曲距离定义。以下我们为简单起见采用半平面表示。</p>
+<p>此外，还可对比<a href="/2024/08/13/%E7%90%83%E9%9D%A2%E4%B8%89%E8%A7%92%E4%B8%8E%E6%9F%8F%E6%8B%89%E5%9B%BE%E7%AB%8B%E4%BD%93/" title="球面三角与柏拉图立体">球面三角与柏拉图立体</a>中球面三角的正弦余弦定理。直观上，可以将球面距离乘虚数单位 $\mathrm{i}$ 得到双曲距离，从而证明双曲正弦余弦定理，但为严格起见，下面双曲正弦余弦定理做了严格证明。</p>
+<p>设双曲三角三条边和对应的三个内角分别为 $a,b,c,\alpha,\beta,\gamma$ ，则有</p>
+<p>双曲正弦定理：</p>
+<div>
+$$
+\cfrac{\sinh a}{\sin \alpha} = \cfrac{\sinh b}{\sin \beta} = \cfrac{\sinh c}{\sin \gamma}
+$$
+</div>
+
+<p>双曲余弦定理1：</p>
+<div>
+$$
+\cosh c = \cosh a \cosh b - \cos \gamma \sinh a \sinh b
+$$
+</div>
+
+<p>双曲余弦定理2：</p>
+<div>
+$$
+\cos \gamma = -\cos \alpha \cos \beta + \cosh c \sin \alpha \sin \beta
+$$
+</div>
+
+<h2 id="三定理相互关系"><a href="#三定理相互关系" class="headerlink" title="三定理相互关系"></a>三定理相互关系</h2><p>双曲正弦定理可以由余弦定理1推出：</p>
+<div>
+$$
+\begin{gathered}
+\sin \gamma = \sqrt{1 - \cos^2 \gamma} 
+= \sqrt{1 - \left(\cfrac{\cosh a \cosh b - \cosh c}{\sinh a \sinh b}\right)^2} \\
+=\cfrac{\sqrt{\sinh^2 a \sinh^2 b - (\cosh a \cosh b - \cosh c)^2}}{\sinh a \sinh b} \\
+=\cfrac{\sqrt{2\cosh a \cosh b \cosh c - \cosh^2 a - \cosh^2 b - \cosh^2 c + 1}}{\sinh a \sinh b} \\
+\\\end{gathered}
+$$
+</div>
+
+<p>所以</p>
+<div>
+$$
+\begin{gathered}
+\cfrac{\sin \gamma}{\sinh c} = \cfrac{\sqrt{2\cosh a \cosh b \cosh c - \cosh^2 a - \cosh^2 b - \cosh^2 c + 1}}{\sinh a \sinh b \sinh c} \\
+\\\end{gathered}
+$$
+</div>
+
+<p>该式关于 $a,b,c$ 轮换对称，所以得证。</p>
+<p>双曲余弦定理2可以由双曲余弦定理1推出：</p>
+<p>用余弦定理1和上面推出的 $\sin \gamma$ 表达式，把 $\cos\alpha,\cos\beta,\cos\gamma,\sin\alpha,\sin\beta$ 用 $a,b,c$ 代换，即得余弦定理2。</p>
+<p>反之亦然：先根据余弦定理2证明正弦定理</p>
+<div>
+$$
+\begin{gathered}
+\cfrac{\sinh c}{\sin \gamma}
+= \cfrac{\sqrt{2\cos\alpha\cos\beta\cos\gamma+\cos^2\alpha+\cos^2\beta+\cos^2\gamma-1}}{\sin\alpha\sin\beta\sin\gamma} \\
+\\\end{gathered}
+$$
+</div>
+
+<p>根据上式关于 $\alpha,\beta,\gamma$ 轮换对称得到正弦定理；</p>
+<p>然后将 $\cosh a,\cosh b,\cosh c,\sinh a,\sinh b$ 用 $\alpha,\beta,\gamma$ 代换，即得余弦定理1。</p>
+<p>因此两个余弦定理只需要证明其一，就可推出正弦定理和剩下一个余弦定理。</p>
+<h2 id="双曲余弦定理2的证明"><a href="#双曲余弦定理2的证明" class="headerlink" title="双曲余弦定理2的证明"></a>双曲余弦定理2的证明</h2><p>由上节讨论，我们知道只需证明其中一个余弦定理就可以得到三个定理的证明。</p>
+<p>我们选择双曲余弦定理2，因为双曲距离表达式相对复杂，双曲余弦定理2包含更少的双曲距离。而且，更多的三角函数使得我们可以用平面几何知识解决问题。</p>
+<p><img src="/2025/02/08/%E5%8F%8C%E6%9B%B2%E5%87%A0%E4%BD%95/fig1.svg"></p>
+<p>如图，双曲三角 $ABC$ ，我们设三条边和三个内角分别为 $a,b,c,\alpha,\beta,\gamma$ ，设边 $BC,CA,AB$ 在平面上对应的圆的半径为 $r_A,r_B,r_C$ 。（参见<a href="/2025/02/01/%E5%B8%B8%E6%95%B0%E9%AB%98%E6%96%AF%E6%9B%B2%E7%8E%87%E6%9B%B2%E9%9D%A2/" title="常数高斯曲率曲面">常数高斯曲率曲面</a>，双曲空间半平面表示中，测地线为圆心在 $x$ 轴上的上半圆或者垂直 $x$ 轴的上半直线）</p>
+<p>由平面三角余弦定理，可以得到 $s_A,s_B$ </p>
+<div>
+$$
+\begin{gathered}
+s_A=\sqrt{r_B^2+r_C^2-2r_Br_C \cos\alpha} \\
+s_B=\sqrt{r_A^2+r_C^2-2r_Ar_C \cos\beta} \\
+s_A+s_B=\sqrt{r_A^2+r_B^2+2r_Ar_B \cos\gamma} \\
+\\\end{gathered}
+$$
+</div>
+
+<p>由此可以得到 $s_As_B$ </p>
+<div>
+$$
+\begin{gathered}
+s_As_B=\cfrac{(s_A+s_B)^2-s_A^2-s_B^2}{2} \\
+=r_Br_C\cos\alpha+r_Cr_A\cos\beta+r_Ar_B\cos\gamma-r_C^2
+\\\end{gathered}
+$$
+</div>
+
+<p>根据正弦定理和余弦定理，给出 $\theta_1,\theta_2$ 的正弦、余弦：</p>
+<div>
+$$
+\begin{cases}
+\cos\theta_1=\cfrac{s_B^2+r_C^2-r_A^2}{2s_Br_C}=\cfrac{r_C-r_A\cos\beta}{s_B} \\
+\cos\theta_2=\cfrac{r_C-r_B\cos\alpha}{s_A} \\
+\sin\theta_1=\cfrac{r_A\sin\beta}{s_B} \\
+\sin\theta_2=\cfrac{r_B\sin\alpha}{s_A} \\
+\end{cases}
+$$
+</div>
+
+<p>我们要求的双曲距离 $c$ ：</p>
+<div>
+$$
+c=-\ln \left(\tan\cfrac{\theta_1}{2}\tan\cfrac{\theta_2}{2}\right)
+$$
+</div>
+
+<p>根据正切的半角公式：</p>
+<div>
+$$
+\tan\cfrac{\theta}{2}=\cfrac{1-\cos\theta}{\sin\theta}=\cfrac{\sin\theta}{1+\cos\theta}
+$$
+</div>
+
+<p>计算 $\cosh c$ ：</p>
+<div>
+$$
+\begin{gathered}
+\cosh c = \cfrac{\exp c + \exp (-c)}{2} \\
+=\cfrac{1}{2}\left(\cfrac{1-\cos\theta_1}{\sin\theta_1} \cfrac{1-\cos\theta_2}{\sin\theta_2}+\cfrac{1+\cos\theta_1}{\sin\theta_1} \cfrac{1+\cos\theta_2}{\sin\theta_2}\right) \\
+=\cfrac{1+\cos\theta_1\cos\theta_2}{\sin\theta_1\sin\theta_2} \\
+=\cfrac{s_As_B+(r_C-r_A\cos\beta)(r_C-r_B\cos\alpha)}{r_Ar_B\sin\alpha\sin\beta}
+\\\end{gathered}
+$$
+</div>
+
+<p>代入前面计算的 $s_As_B$ ，即得</p>
+<div>
+$$
+\cosh c = \cfrac{\cos\gamma+\cos\alpha\cos\beta}{\sin\alpha\sin\beta}
+$$
+</div>
+
+<p>此即双曲余弦定理2</p>
+<div>
+$$
+\cos\gamma = -\cos\alpha\cos\beta+\cosh c\sin\alpha\sin\beta
+$$
+</div>
+
+
+<p>对于角 $\alpha,\beta$ 的情形，以及其中一条边为垂直 $x$ 轴上半直线的情形，用类似方法可证结论仍成立，这里略去证明。</p>
+<p>由双曲余弦定理2可知，三个角完全确定三条边，即双曲几何中任何相似三角形都是全等三角形。</p>
+<h2 id="极限情形"><a href="#极限情形" class="headerlink" title="极限情形"></a>极限情形</h2><p>当 $a,b,c \to 0$ 时， $\sinh x \to x,\cosh x \to 1+x^2&#x2F;2$ ，此时双曲正弦定理、双曲余弦定理1近似为平面正弦定理、余弦定理。</p>
+<p>正弦定理易得，下面证余弦定理情形。</p></div><a class="article-more button is-small is-size-7" href="/2025/02/08/%E5%8F%8C%E6%9B%B2%E5%87%A0%E4%BD%95/#more">阅读更多</a></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2025-02-01T04:17:56.000Z" title="2025/2/1 12:17:56">2025-02-01</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E6%95%B0%E5%AD%A6/">数学</a></span><span class="level-item">8 分钟读完 (大约1194个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2025/02/01/%E5%B8%B8%E6%95%B0%E9%AB%98%E6%96%AF%E6%9B%B2%E7%8E%87%E6%9B%B2%E9%9D%A2/">常数高斯曲率曲面</a></p><div class="content"><p>先回顾一下微分几何相关定义，协变导数定义：</p>
+<div>
+$$
+D_{k}A_j=\partial_kA_j-\Gamma^i_{jk}A_i
+$$
+</div>
+
+
+<div>
+$$
+D_k A^j = \partial_k A^j + \Gamma^j_{ik}A^i
+$$
+</div>
+
+
+<p>克里斯托弗符号表达式：</p>
+<div>
+$$
+\Gamma^\alpha_{\lambda\mu}=\frac{1}{2}g^{\alpha\nu}(g_{\mu\nu,\lambda}+g_{\nu\lambda,\mu}-g_{\lambda\mu,\nu})
+$$
+</div>
+
+
+<p>曲率张量定义：</p>
+<div>
+$$
+R^\rho_{\lambda\mu\nu}=-\Gamma^\rho_{\lambda\mu,\nu}+\Gamma^\rho_{\lambda\nu,\mu}-\Gamma^\sigma_{\lambda\mu}\Gamma^\rho_{\sigma\nu}+\Gamma^\sigma_{\lambda\nu}\Gamma^\rho_{\sigma\mu}
+$$
+</div>
+
+
+<p>在二维空间中，我们计算曲率张量。指标 $0,1$ 分别表示 $x,y$ 。设度规的形式为</p>
+<div>
+$$
+\mathrm{d}s^2 = G(\mathrm{d}x^2+\mathrm{d}y^2)
+$$
+</div>
+
+<div>
+$$
+g_{00}=G,g_{11}=G,g_{01}=g_{10}=0
+$$
+</div>
+
+
+<div>
+$$
+g^{00}=1/G,g^{11}=1/G,g^{01}=g^{10}=0
+$$
+</div>
+
+
+<div>
+$$
+\begin{gathered}
+\Gamma^0_{\lambda\mu}=\frac{1}{2}g^{00}(g_{\mu0,\lambda}+g_{0\lambda,\mu}-g_{\lambda\mu,0}) \\
+\Gamma^1_{\lambda\mu}=\frac{1}{2}g^{11}(g_{\mu1,\lambda}+g_{1\lambda,\mu}-g_{\lambda\mu,1})
+\\\end{gathered}
+$$
+</div>
+
+
+<div>
+$$
+\begin{gathered}
+\Gamma^0_{00}=\cfrac{G_0}{2G},\Gamma^0_{01}=\cfrac{G_1}{2G},\Gamma^0_{11}=-\cfrac{G_0}{2G} \\
+\Gamma^1_{00}=-\cfrac{G_1}{2G},\Gamma^1_{01}=\cfrac{G_0}{2G},\Gamma^1_{11}=\cfrac{G_1}{2G} \\
+\\\end{gathered}
+$$
+</div>
+
+
+<div>
+$$
+\begin{gathered}
+R^0_{101}
+=
+-\Gamma^0_{10,1}+\Gamma^0_{11,0}
+-\Gamma^0_{10}\Gamma^0_{01}-\Gamma^1_{10}\Gamma^0_{11}
++\Gamma^0_{11}\Gamma^0_{00}+\Gamma^1_{11}\Gamma^0_{10} \\
+=-\left(\cfrac{G_1}{2G}\right)_1-\left(\cfrac{G_0}{2G}\right)_0 \\
+\\\end{gathered}
+$$
+</div>
+
+
+
+<div>
+$$
+R_{0101}=g_{00}R^{0}_{101}
+$$
+</div>
+
+
+<div>
+$$
+g=\det(g_{\alpha\beta})=G^2
+$$
+</div>
+
+
+<p>在二维空间中，曲率张量只存在一个不为 $0$ 的分量 $R_{0101}$ ，以及指标交换导致的相等或相反分量。它和高斯曲率 $K$ 有如下关系：</p>
+<div>
+$$
+K = \cfrac{R_{0101}}{g}=-\cfrac{1}{2G}\left\lbrack \left(\cfrac{G_x}{G}\right)_x+\left(\cfrac{G_y}{G}\right)_y\right\rbrack 
+$$
+</div>
+
+
+<h2 id="常数负曲率的一个解"><a href="#常数负曲率的一个解" class="headerlink" title="常数负曲率的一个解"></a>常数负曲率的一个解</h2><p>常数负曲率的曲面为伪球面，其上的几何为罗巴切夫斯基几何&#x2F;双曲几何。我们设 $G$ 有如下形式，并代入高斯曲率公式</p>
+<div>
+$$
+G=\cfrac{C}{y^2},K=-\cfrac{y^2}{2C}(-2)(-1/y^2)=-\cfrac{1}{C}
+$$
+</div></div><a class="article-more button is-small is-size-7" href="/2025/02/01/%E5%B8%B8%E6%95%B0%E9%AB%98%E6%96%AF%E6%9B%B2%E7%8E%87%E6%9B%B2%E9%9D%A2/#more">阅读更多</a></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2025-01-20T05:37:54.000Z" title="2025/1/20 13:37:54">2025-01-20</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E6%95%B0%E5%AD%A6/">数学</a></span><span class="level-item">4 分钟读完 (大约665个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2025/01/20/%E6%AD%A3%E4%BA%A4%E5%9D%90%E6%A0%87%E7%B3%BB%E5%90%84%E5%BE%AE%E5%88%86%E7%AE%97%E5%AD%90/">正交坐标系各微分算子</a></p><div class="content"><p>我们设正交坐标系的坐标 $\xi_1,\xi_2,\xi_3$ ，直角坐标系的坐标 $x,y,z$ 。</p>
+<p>因为是正交坐标系，所以度规具有如下形式：</p>
+<div>
+$$
+\mathrm{d} s^2 = h_1^2 \mathrm{d}\xi_1^2+h_2^2 \mathrm{d}\xi_2^2+h_3^2 \mathrm{d}\xi_3^2
+$$
+</div>
+
+<p> $h_1,h_2,h_3$ 为</p>
+<div>
+$$
+\begin{gathered}
+h_1
+=\left|\cfrac{\partial \vec{r}}{\partial \xi_1}\right| \\
+= \sqrt{
+\left(\cfrac{\partial x}{\partial \xi_1}\right)^2
++\left(\cfrac{\partial y}{\partial \xi_1}\right)^2
++\left(\cfrac{\partial z}{\partial \xi_1}\right)^2
+}
+\\\end{gathered}
+$$
+</div>
+
+<p> $h_2,h_3$ 同理。</p>
+<p>容易写出面元、体积元</p>
+<div>
+$$
+\vec{f} \cdot \mathrm{d}\vec{S}
+=f_1 h_2h_3 \mathrm{d}\xi_2\mathrm{d}\xi_3
++f_2 h_3h_1 \mathrm{d}\xi_3\mathrm{d}\xi_1
++f_3 h_1h_2 \mathrm{d}\xi_1\mathrm{d}\xi_2
+$$
+</div>
+
+
+<div>
+$$
+\mathrm{d}V=h_1h_2h_3 \mathrm{d}\xi_1\mathrm{d}\xi_2\mathrm{d}\xi_3
+$$
+</div>
+
+
+<p>梯度</p>
+<div>
+$$
+\nabla u 
+=\cfrac{1}{h_1}\cfrac{\partial u}{\partial \xi_1}\vec{e}_1
++\cfrac{1}{h_2}\cfrac{\partial u}{\partial \xi_2}\vec{e}_2
++\cfrac{1}{h_3}\cfrac{\partial u}{\partial \xi_3}\vec{e}_3
+$$
+</div>
+
+<p>其中 $e_1,e_2,e_3$ 表示坐标方向的单位矢量。</p>
+<p>散度。用两次Gauss定理（第二次使用Gauss定理，可以直接用外微分）</p>
+<div>
+$$
+\int \nabla \cdot \vec{f} \mathrm{d} V = \int \vec{f} \cdot \mathrm{d} \vec{S}
+$$
+</div>
+
+
+<div>
+$$
+\int h_1h_2h_3 \nabla \cdot \vec{f} \mathrm{d}\xi_1\mathrm{d}\xi_2\mathrm{d}\xi_3
+= \int 
+f_1 h_2h_3 \mathrm{d}\xi_2\mathrm{d}\xi_3
++f_2 h_3h_1 \mathrm{d}\xi_3\mathrm{d}\xi_1
++f_3 h_1h_2 \mathrm{d}\xi_1\mathrm{d}\xi_2
+$$
+</div>
+
+
+<div>
+$$
+\nabla \cdot \vec{f}=
+\cfrac{1}{h_1h_2h_3}
+\left\lbrack 
+\cfrac{\partial (f_1h_2h_3)}{\partial \xi_1}
++\cfrac{\partial (f_2h_3h_1)}{\partial \xi_2}
++\cfrac{\partial (f_3h_1h_2)}{\partial \xi_3}
+\right\rbrack 
+$$
+</div>
+
+
+<p>拉普拉斯算子。注意拉普拉斯算子等于先用梯度作用再用散度作用，所以直接写出</p>
+<div>
+$$
+\nabla^2 u
+=
+\cfrac{1}{h_1h_2h_3}\left\lbrack 
+\cfrac{\partial}{\partial\xi_1}\left(\cfrac{h_2h_3}{h_1}\cfrac{\partial u}{\partial \xi_1}\right)
++\cfrac{\partial}{\partial\xi_2}\left(\cfrac{h_3h_1}{h_2}\cfrac{\partial u}{\partial \xi_2}\right)
++\cfrac{\partial}{\partial\xi_3}\left(\cfrac{h_1h_2}{h_3}\cfrac{\partial u}{\partial \xi_3}\right)
+\right\rbrack 
+$$
+</div>
+
+<p>旋度。用两次Stokes定理</p>
+<div>
+$$
+\int \nabla \times \vec{f} \cdot \mathrm{d}\vec{S}=\int \vec{f} \cdot \mathrm{d}\vec{s}
+$$
+</div>
+
+
+<div>
+$$
+\begin{gathered}
+\int
+(\nabla \times \vec{f})_1 h_2h_3 \mathrm{d}\xi_2 \mathrm{d}\xi_3
++(\nabla \times \vec{f})_2 h_3h_1 \mathrm{d}\xi_3 \mathrm{d}\xi_1
++(\nabla \times \vec{f})_3 h_1h_2 \mathrm{d}\xi_1 \mathrm{d}\xi_2
+\\
+=
+\int
+f_1h_1 \mathrm{d}\xi_1
++f_2h_2 \mathrm{d}\xi_2
++f_3h_3 \mathrm{d}\xi_3
+\\\end{gathered}
+$$
+</div>
+
+
+<div>
+$$
+\begin{gathered}
+\int
+f_1h_1 \mathrm{d}\xi_1
++f_2h_2 \mathrm{d}\xi_2
++f_3h_3 \mathrm{d}\xi_3
+\\
+=
+\int
+\left\lbrack \cfrac{\partial (f_3h_3)}{\partial \xi_2} - \cfrac{\partial (f_2h_2)}{\partial \xi_3}\right\rbrack  \mathrm{d}\xi_2 \mathrm{d}\xi_3
++\left\lbrack \cfrac{\partial (f_1h_1)}{\partial \xi_3} - \cfrac{\partial (f_3h_3)}{\partial \xi_1}\right\rbrack  \mathrm{d}\xi_3 \mathrm{d}\xi_1 \\
++\left\lbrack \cfrac{\partial (f_2h_2)}{\partial \xi_1} - \cfrac{\partial (f_1h_1)}{\partial \xi_2}\right\rbrack  \mathrm{d}\xi_1 \mathrm{d}\xi_2
+\\\end{gathered}
+$$
+</div>
+
+
+<div>
+$$
+\begin{gathered}
+\nabla \times \vec{f}
+=
+\cfrac{1}{h_2h_3}\left\lbrack \cfrac{\partial (f_3h_3)}{\partial \xi_2} - \cfrac{\partial (f_2h_2)}{\partial \xi_3}\right\rbrack  e_1
++\cfrac{1}{h_3h_1}\left\lbrack \cfrac{\partial (f_1h_1)}{\partial \xi_3} - \cfrac{\partial (f_3h_3)}{\partial \xi_1}\right\rbrack  e_2 \\
++\cfrac{1}{h_1h_2}\left\lbrack \cfrac{\partial (f_2h_2)}{\partial \xi_1} - \cfrac{\partial (f_1h_1)}{\partial \xi_2}\right\rbrack  e_3
+\\\end{gathered}
+$$
+</div>
+
+
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2025-01-19T05:50:27.000Z" title="2025/1/19 13:50:27">2025-01-19</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E6%95%B0%E5%AD%A6/">数学</a></span><span class="level-item">6 分钟读完 (大约879个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2025/01/19/%E6%A4%AD%E7%90%83%E5%9D%90%E6%A0%87%E7%B3%BB/">椭球坐标系</a></p><div class="content"><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>椭球面方程为</p>
+<div>
+$$
+\cfrac{x^2}{a^2}+\cfrac{y^2}{b^2}+\cfrac{z^2}{c^2}=1
+$$
+</div>
+
+<p>设 $a,b,c$ 不存在两个相等的数。不失一般性可以设 $a\gt b\gt c\gt 0$ 。我们引入参数 $\lambda$ ，下方程是一个关于 $\lambda$ 的三次方程，</p>
+<div>
+$$
+F(\lambda)=\cfrac{x^2}{a^2+\lambda}+\cfrac{y^2}{b^2+\lambda}+\cfrac{z^2}{c^2+\lambda}=1
+$$
+</div>
+
+<p>可以说明其有三个实根：</p>
+<div>
+$$
+\begin{gathered}
+F(+\infty)=-1 \lt  0 \\
+F(-c^2+0)=+\infty\gt 0 \\
+F(-c^2-0)=-\infty\lt 0 \\
+F(-b^2+0)=+\infty\gt 0 \\
+F(-b^2-0)=-\infty\lt 0 \\
+F(-a^2+0)=+\infty\gt 0 \\
+F(\lambda)\lt 0,\,\lambda\lt -a^2 \\
+\\\end{gathered}
+$$
+</div>
+
+<p>我们记三个实根从大到小为 $\xi,\eta,\zeta$ ，因此</p>
+<div>
+$$
+\xi \gt  -c^2 \gt  \eta \gt  -b^2 \gt  \zeta \gt  -a^2
+$$
+</div>
+
+<p>下证明 $\xi,\eta,\zeta$ 构成正交坐标系。设任意两个参数为 $\lambda_1,\lambda_2$ 。设空间中一点为 $(x,y,z)$ 。故参数、坐标满足</p>
+<div>
+$$
+\begin{gathered}
+\cfrac{x^2}{a^2+\lambda_1}+\cfrac{y^2}{b^2+\lambda_1}+\cfrac{z^2}{c^2+\lambda_1}=1 \\
+\cfrac{x^2}{a^2+\lambda_2}+\cfrac{y^2}{b^2+\lambda_2}+\cfrac{z^2}{c^2+\lambda_2}=1 \\
+\\\end{gathered}
+$$
+</div>
+
+<p>两式相减</p>
+<div>
+$$
+(\lambda_1-\lambda_2) \left\lbrack 
+\cfrac{x^2}{(a^2+\lambda_1)(a^2+\lambda_2)}
++\cfrac{y^2}{(b^2+\lambda_1)(b^2+\lambda_2)}
++\cfrac{z^2}{(c^2+\lambda_1)(c^2+\lambda_2)}
+\right\rbrack = 0
+$$
+</div>
+
+<p>因为 $\lambda_1 \neq \lambda_2$ ，所以</p>
+<div>
+$$
+\cfrac{x^2}{(a^2+\lambda_1)(a^2+\lambda_2)}
++\cfrac{y^2}{(b^2+\lambda_1)(b^2+\lambda_2)}
++\cfrac{z^2}{(c^2+\lambda_1)(c^2+\lambda_2)}
+=0
+$$
+</div>
+
+<p>我们对椭球坐标系定义方程微分，可以得到法向量（即坐标方向）</p>
+<div>
+$$
+\cfrac{2x}{a^2+\lambda}\mathrm{d}x
++\cfrac{2y}{b^2+\lambda}\mathrm{d}y
++\cfrac{2z}{c^2+\lambda}\mathrm{d}z
+=0
+$$
+</div>
+
+<p>法向量为</p>
+<div>
+$$
+\left(\cfrac{2x}{a^2+\lambda}
+,\cfrac{2y}{b^2+\lambda}
+,\cfrac{2z}{c^2+\lambda}\right)
+$$
+</div>
+
+<p>容易看出不同参数对应的坐标方向正交。</p>
+<p>下面我们将 $x,y,z$ 用 $\xi,\eta,\zeta$ 表示。</p>
+<p>将椭球坐标系定义式化为多项式：</p>
+<div>
+$$
+\begin{gathered}
+(a^2+\lambda)(b^2+\lambda)(c^2+\lambda) \\
+-x^2(b^2+\lambda)(c^2+\lambda)-y^2(a^2+\lambda)(c^2+\lambda)-z^2(a^2+\lambda)(b^2+\lambda)\\
+=0
+\\\end{gathered}
+$$
+</div>
+
+<p>因为这个三次方程的解为 $\xi,\eta,\zeta$ ，所以</p>
+<div>
+$$
+\begin{gathered}
+(a^2+\lambda)(b^2+\lambda)(c^2+\lambda) \\
+-x^2(b^2+\lambda)(c^2+\lambda)-y^2(a^2+\lambda)(c^2+\lambda)-z^2(a^2+\lambda)(b^2+\lambda)\\
+=(\lambda-\xi)(\lambda-\eta)(\lambda-\zeta)
+\\\end{gathered}
+$$
+</div>
+
+<p>上式，用 $\lambda&#x3D;-a^2,-b^2,-c^2$ 分别代入，得</p>
+<div>
+$$
+\begin{cases}
+x^2=\cfrac{(a^2+\xi)(a^2+\eta)(a^2+\zeta)}{(a^2-b^2)(a^2-c^2)} \\
+y^2=\cfrac{(b^2+\xi)(b^2+\eta)(b^2+\zeta)}{(b^2-c^2)(b^2-a^2)} \\
+z^2=\cfrac{(c^2+\xi)(c^2+\eta)(c^2+\zeta)}{(c^2-a^2)(c^2-b^2)} \\
+\end{cases}
+$$
+</div>
+
+
+<h2 id="各微分算子表达式"><a href="#各微分算子表达式" class="headerlink" title="各微分算子表达式"></a>各微分算子表达式</h2><p>参考<a href="/2025/01/20/%E6%AD%A3%E4%BA%A4%E5%9D%90%E6%A0%87%E7%B3%BB%E5%90%84%E5%BE%AE%E5%88%86%E7%AE%97%E5%AD%90/" title="正交坐标系各微分算子">正交坐标系各微分算子</a>，我们计算 $h_1,h_2,h_3$ ：</p>
+<div>
+$$
+h_1
+= \sqrt{
+\left(\cfrac{\partial x}{\partial \xi_1}\right)^2
++\left(\cfrac{\partial y}{\partial \xi_1}\right)^2
++\left(\cfrac{\partial z}{\partial \xi_1}\right)^2
+}
+$$
+</div>
+
+
+<div>
+$$
+\begin{gathered}
+\cfrac{\partial x}{\partial \xi_1} \\
+= \cfrac{1}{2x}\cfrac{\partial x^2}{\partial \xi_1} \\
+= \cfrac{1}{2}\sqrt{\cfrac{(a^2-b^2)(a^2-c^2)}{(a^2+\xi)(a^2+\eta)(a^2+\zeta)}} \cfrac{(a^2+\eta)(a^2+\zeta)}{(a^2-b^2)(a^2-c^2)} \\
+=\cfrac{1}{2} \sqrt{\cfrac{(a^2+\eta)(a^2+\zeta)}{(a^2+\xi)(a^2-b^2)(a^2-c^2)}} \\
+=\cfrac{x}{2(a^2+\xi)}
+\\\end{gathered}
+$$
+</div>
+
+
+<p><del>然后我偷懒直接上符号计算了，</del>得到</p>
+<div>
+$$
+\begin{gathered}
+h_1=\cfrac{\sqrt{(\xi-\eta)(\xi-\zeta)}}{2R_\xi} \\
+h_2=\cfrac{\sqrt{(\eta-\zeta)(\eta-\xi)}}{2R_\eta} \\
+h_3=\cfrac{\sqrt{(\zeta-\xi)(\zeta-\eta)}}{2R_\zeta} \\
+\\\end{gathered}
+$$
+</div>
+
+<p>其中</p>
+<div>
+$$
+R_\lambda = \sqrt{(a^2+\lambda)(b^2+\lambda)(c^2+\lambda)}
+$$
+</div>
+
+<p>注意，因为有 $\xi \gt  -c^2 \gt  \eta \gt  -b^2 \gt  \zeta \gt  -a^2$ ，所以 $R_\eta$ 根号下的是负数，但 $h_2$ 分子根号下也是负数，所以最后能得到实数的 $h_2$ 。</p>
+<p>根据<a href="/2025/01/20/%E6%AD%A3%E4%BA%A4%E5%9D%90%E6%A0%87%E7%B3%BB%E5%90%84%E5%BE%AE%E5%88%86%E7%AE%97%E5%AD%90/" title="正交坐标系各微分算子">正交坐标系各微分算子</a>可以直接写出各微分算子表达式。下面给出拉普拉斯算子，因为它和泊松方程有关，这些将在其他笔记中讨论。</p>
+<div>
+$$
+\begin{gathered}
+\nabla^2 u
+=\cfrac{4}{-(\xi-\eta)(\eta-\zeta)(\zeta-\xi)}
+\left\lbrack 
+(\eta-\zeta)R_\xi\cfrac{\partial}{\partial \xi}\left(R_\xi\cfrac{\partial u}{\partial \xi}\right)
++(\zeta-\xi)R_\eta\cfrac{\partial}{\partial \eta}\left(R_\eta\cfrac{\partial u}{\partial \eta}\right) \right. \\ \left.
++(\xi-\eta)R_\zeta\cfrac{\partial}{\partial \zeta}\left(R_\zeta\cfrac{\partial u}{\partial \zeta}\right)
+\right\rbrack 
+\\\end{gathered}
+$$
+</div>
+
+
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2025-01-16T10:18:32.000Z" title="2025/1/16 18:18:32">2025-01-16</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E6%95%B0%E5%AD%A6/">数学</a></span><span class="level-item">1 分钟读完 (大约207个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2025/01/16/%E4%BA%8C%E9%98%B6%E7%BA%BF%E6%80%A7%E5%B8%B8%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B%EF%BC%8C%E7%94%B1%E4%B8%80%E4%B8%AA%E9%80%9A%E8%A7%A3%E5%BE%97%E5%88%B0%E7%AC%AC%E4%BA%8C%E4%B8%AA%E9%80%9A%E8%A7%A3/">二阶线性常微分方程，由一个通解得到第二个通解</a></p><div class="content"><p>二阶线性常微分方程</p>
+<div>
+$$
+y''+py'+q=0
+$$
+</div>
+
+<p>其中 $p,q$ 可能不是常数，而是变量的函数。</p>
+<p>假设我们已知其中一个解 $y_1$ ，那么由此可以得到第二个线性无关的解。假设第二个解为 $uy_1$ ，并可以求出其导数：</p>
+<div>
+$$
+\begin{gathered}
+y=uy_1 \\
+y'=u'y_1+uy_1' \\
+y''=u''y_1+2u'y_1'+uy_1'' \\
+\\\end{gathered}
+$$
+</div>
+
+
+<div>
+$$
+\begin{gathered}
+u''y_1+2u'y_1'+uy_1''+p(u'y_1+uy_1')+uy_1=0 \\
+u(y_1''+py_1'+y_1)+u''y_1+2u'y_1'+pu'y_1=0 \\
+\\\end{gathered}
+$$
+</div>
+
+
+<p>根据 $y_1$ 是一个解，可以进一步化简。</p>
+<div>
+$$
+u''+\left(p+\cfrac{2y_1'}{y_1}\right)u'=0
+$$
+</div>
+
+
+<div>
+$$
+(\ln u')'=-\left\lbrack p+2(\ln y_1)'\right\rbrack 
+$$
+</div>
+
+
+<div>
+$$
+\ln u' = \ln C - \int p \mathrm{d}x - 2\ln y_1
+$$
+</div>
+
+
+<div>
+$$
+u' = \cfrac{C}{y_1^2} \exp \left(-\int p \mathrm{d}x\right)
+$$
+</div>
+
+
+<div>
+$$
+y_2 = y_1 \int \cfrac{\exp\left(-\int p \mathrm{d}x\right)}{y_1^2} \mathrm{d}x
+$$
+</div>
+
+
+<p>此即得到的第二个线性无关的解。</p>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2025-01-15T05:21:29.000Z" title="2025/1/15 13:21:29">2025-01-15</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E6%95%B0%E5%AD%A6/">数学</a></span><span class="level-item">7 分钟读完 (大约1043个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2025/01/15/%E6%8B%89%E6%99%AE%E6%8B%89%E6%96%AF%E6%96%B9%E7%A8%8B%E7%9A%84%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0%E8%A7%A3%E6%B3%95/">拉普拉斯方程的复变函数解法</a></p><div class="content"><p>根据<a href="/2025/01/14/%E6%9F%AF%E8%A5%BF%E9%BB%8E%E6%9B%BC%E6%9D%A1%E4%BB%B6/" title="柯西黎曼条件">柯西黎曼条件</a>，解析函数的实部和虚部都满足拉普拉斯方程。所以对于二维拉普拉斯方程，我们只需找到满足边界条件的复变函数，然后取实部或者虚部就可以直接写出解。</p>
+<h2 id="正方形上拉普拉斯方程求解"><a href="#正方形上拉普拉斯方程求解" class="headerlink" title="正方形上拉普拉斯方程求解"></a>正方形上拉普拉斯方程求解</h2><p>下面用一个例子进行说明。求解二维拉普拉斯方程在 $\lbrack 0,1\rbrack \times\lbrack 0,1\rbrack $ 正方形上满足如下边界条件的解：</p>
+<div>
+$$
+\begin{cases}
+u(x,0)=0 \\
+u(x,1)=0 \\
+u(0,y)=1 \\
+u(1,y)=0 \\
+\end{cases}
+$$
+</div>
+
+<p>即三条边上的值为 $0$ ，剩下一条边上的值为 $1$ 。这个方程，粗略一看只能通过数值求解，写不出解析表达式。</p>
+<p>但这个正方形能让人联想到雅可比椭圆函数，这些函数是复平面上的周期函数，最小周期是矩形区域。</p>
+<p>简单定义一下雅可比椭圆函数。首先定义“弧度”</p>
+<div>
+$$
+\begin{gathered}
+x = \int_0^{\phi} \cfrac{\mathrm{d}\theta}{\sqrt{1-k^2\sin^2\theta}} \\
+\phi = \mathrm{am}(x,k)
+\\\end{gathered}
+$$
+</div>
+
+
+<p>椭圆正弦函数和余弦函数：</p>
+<div>
+$$
+\begin{gathered}
+\mathrm{sn}(x, k)=\sin \phi = \sin \mathrm{am}(x,k) \\
+\mathrm{cn}(x, k)=\cos \phi = \cos \mathrm{am}(x,k) \\
+\\\end{gathered}
+$$
+</div>
+
+
+<p>然后是一个没有三角函数类比的函数</p>
+<div>
+$$
+\mathrm{dn}(x, k) = \sqrt{1-k^2 \mathrm{sn}^2(x, k)}
+$$
+</div>
+
+<p>剩下的椭圆函数定义：</p>
+<div>
+$$
+\begin{gathered}
+\mathrm{ns}=\cfrac{1}{\mathrm{sn}} \\
+\mathrm{nc}=\cfrac{1}{\mathrm{cn}} \\
+\mathrm{nd}=\cfrac{1}{\mathrm{dn}} \\
+\mathrm{sc}=\cfrac{1}{\mathrm{cs}} = \cfrac{\mathrm{sn}}{\mathrm{cn}} \\
+\mathrm{cd}=\cfrac{1}{\mathrm{dc}} = \cfrac{\mathrm{cn}}{\mathrm{dn}} \\
+\mathrm{ds}=\cfrac{1}{\mathrm{sd}} = \cfrac{\mathrm{dn}}{\mathrm{sn}} \\
+\\\end{gathered}
+$$
+</div>
+
+<p>引入 $k$ 的共轭：</p>
+<div>
+$$
+k'^2+k^2=1
+$$
+</div>
+
+
+<p>对于复变椭圆正弦函数，其有两个周期，一个实周期 $4K$ ，一个复周期 $2\mathrm{i}K’$ ，其中</p>
+<div>
+$$
+\begin{gathered}
+K(k) = \int_0^{\pi/2} \cfrac{\mathrm{d}\theta}{\sqrt{1-k^2\sin^2\theta}} \\
+K=K(k) \\
+K'=K(k') \\
+\\\end{gathered}
+$$
+</div>
+
+<p>复变量雅可比椭圆函数用实变量函数展开[2]：</p>
+<div>
+$$
+\mathrm{sn}(x+\mathrm{i}y,k) 
+= \cfrac
+{\mathrm{ds}(y,k')\mathrm{nc}(y,k')+\mathrm{i}\,\mathrm{ds}(x,k)\mathrm{cn}(x,k)}
+{\mathrm{ns}(x,k)\mathrm{cs}(y,k')+k^2\mathrm{sn}(x,k)\mathrm{sc}(y,k')}
+$$
+</div>
+
+
+<p>通过它我们可以计算在矩形 $\lbrack 0,K\rbrack \times\lbrack 0,K’\rbrack $ 边上的函数值：（函数在该矩形内部无极点）</p>
+<div>
+$$
+\mathrm{sn}(x+\mathrm{i}K',k)=\cfrac{1}{k\mathrm{sn}(x,k)}
+$$
+</div>
+
+
+<div>
+$$
+\mathrm{sn}(K+\mathrm{i}y,k)
+= \cfrac
+{\mathrm{ds}(y,k')\mathrm{nc}(y,k')}
+{\mathrm{cs}(y,k')+k^2\mathrm{sc}(y,k')}
+$$
+</div>
+
+
+<div>
+$$
+\mathrm{sn}(\mathrm{i}y,k)
+= \mathrm{i}\,\mathrm{sc}(y,k')
+$$
+</div>
+
+
+<p>所以在 $y&#x3D;0,x \in \lbrack 0,K\rbrack $ ， $y&#x3D;K’,x\in(0,K\rbrack $ ， $x&#x3D;K,y\in\lbrack 0,K’\rbrack $ 上， $\mathrm{sn}(z,k)$ 为实数；在 $x&#x3D;0,y\in(0,K’)$ 上， $\mathrm{sn}(z,k)$ 为虚数。<del>为了凑我们的边界条件，</del>我们可以对其取辐角，正实数的辐角为 $0$ ，正虚数的辐角为 $\pi&#x2F;2$ （注意我们选取多值分支使得其连续），然后在乘 $2&#x2F;\pi$ 就满足我们的边界条件。</p>
+<p>对数函数可以实现取辐角的操作。再根据解析函数的实部和虚部都满足拉普拉斯方程，我们可以直接写出拉普拉斯方程满足该边界条件的解</p>
+<div>
+$$
+u(x,y)=\cfrac{2}{\pi}\Im \ln \mathrm{sn}(x+\mathrm{i}y,\sqrt{0.5})
+$$
+</div>
+
+<p>其中 $\Im$ 表示取复数虚部。因为是正方形区域，所以要求 $K&#x3D;K’$ ，即 $k&#x3D;k’&#x3D;\sqrt{0.5}$ 。</p>
+<p>用上面给出的复变量雅可比椭圆函数用实变量函数展开的表达式，可以将解用实变函数表示</p>
+<div>
+$$
+u(x,y)
+=\cfrac{2}{\pi} \arctan \cfrac{\mathrm{ds}(x,\sqrt{0.5})\mathrm{cn}(x,\sqrt{0.5})}{\mathrm{ds}(y,\sqrt{0.5})\mathrm{nc}(y,\sqrt{0.5})}
+$$
+</div>
+
+
+<h2 id="解析解-数值解对比"><a href="#解析解-数值解对比" class="headerlink" title="解析解&amp;数值解对比"></a>解析解&amp;数值解对比</h2><p>该边界条件问题的数值解法见<a href="/2020/06/08/%E6%AD%A3%E6%96%B9%E5%BD%A2%E4%B8%8A%E7%9A%84%E6%B3%8A%E6%9D%BE%E6%96%B9%E7%A8%8B/" title="正方形上的泊松方程">正方形上的泊松方程</a>。</p>
+<p>写这篇post的时候重新写了数值解法，增加了解析解和两者的对比，以及3D画图。</p>
+<p>Python代码：<a href="/2025/01/15/%E6%8B%89%E6%99%AE%E6%8B%89%E6%96%AF%E6%96%B9%E7%A8%8B%E7%9A%84%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0%E8%A7%A3%E6%B3%95/solve_analytic.py" title="solve_analytic.py">solve_analytic.py</a>，<a href="/2025/01/15/%E6%8B%89%E6%99%AE%E6%8B%89%E6%96%AF%E6%96%B9%E7%A8%8B%E7%9A%84%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0%E8%A7%A3%E6%B3%95/solve_numeric.py" title="solve_numeric.py">solve_numeric.py</a>，<a href="/2025/01/15/%E6%8B%89%E6%99%AE%E6%8B%89%E6%96%AF%E6%96%B9%E7%A8%8B%E7%9A%84%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0%E8%A7%A3%E6%B3%95/plot3d.py" title="plot3d.py">plot3d.py</a>。</p>
+<p>先运行前两个计算，再运行最后一个画图。</p>
+<h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><p>[1] <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Jacobi_elliptic_functions">https://en.wikipedia.org/wiki/Jacobi_elliptic_functions</a></p>
+<p>[2] Chapter “The Jacobian Elliptic Functions”, An Atlas of Functions, <a target="_blank" rel="noopener" href="https://link.springer.com/book/10.1007/978-0-387-48807-3">https://link.springer.com/book/10.1007/978-0-387-48807-3</a></p>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2025-01-14T15:49:18.000Z" title="2025/1/14 23:49:18">2025-01-14</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E6%95%B0%E5%AD%A6/">数学</a></span><span class="level-item">4 分钟读完 (大约656个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2025/01/14/%E6%9F%AF%E8%A5%BF%E9%BB%8E%E6%9B%BC%E6%9D%A1%E4%BB%B6/">柯西黎曼条件</a></p><div class="content"><p>设函数 $w&#x3D;w(z)$ ， $z&#x3D;x+\mathrm{i}y,w&#x3D;u+\mathrm{i}v$ 。</p>
+<p>假设复变函数可导，计算导数</p>
+<div>
+$$
+\begin{gathered}
+\cfrac{\Delta w}{\Delta z} = \cfrac{\Delta u+\mathrm{i} \Delta v}{\Delta x+\mathrm{i}\Delta y} \\
+= \cfrac{\Delta x\Delta u+ \Delta y \Delta v}{\Delta x^2+\Delta y^2} + \mathrm{i} \cfrac{\Delta x\Delta v- \Delta y \Delta u}{\Delta x^2+\Delta y^2} \\
+\\\end{gathered}
+$$
+</div>
+
+<p>二重极限存在，那么在 $x \to 0$ 和 $y \to 0$ 方向的极限应该相等，于是</p>
+<div>
+$$
+\begin{cases}
+\cfrac{\partial u}{\partial x} = \cfrac{\partial v}{\partial y} \\
+\cfrac{\partial v}{\partial x} = -\cfrac{\partial u}{\partial y} \\
+\end{cases}
+$$
+</div>
+
+<p>此即柯西黎曼条件。容易证明此条件也是充分条件（代入即可），并且得到导数值</p>
+<div>
+$$
+\cfrac{\mathrm{d}w}{\mathrm{d}z} 
+= \cfrac{\partial u}{\partial x} + \mathrm{i} \cfrac{\partial v}{\partial x} 
+= \cfrac{\partial v}{\partial y} - \mathrm{i} \cfrac{\partial u}{\partial y}
+$$
+</div>
+
+<p>可以证明这个条件等价于</p>
+<div>
+$$
+\cfrac{\partial w}{\partial \overline{z}}=0
+$$
+</div>
+
+<p>也就是说该函数可以写成只与 $z$ 有关而与 $\overline{z}$ 无关的函数。</p>
+<p>下面给出证明：</p>
+<div>
+$$
+\begin{gathered}
+\cfrac{\partial u}{\partial x} 
+= \cfrac{\partial u}{\partial z}\cfrac{\partial z}{\partial x}+\cfrac{\partial u}{\partial \overline{z}}\cfrac{\partial \overline{z}}{\partial x}
+= \cfrac{\partial u}{\partial z}+\cfrac{\partial u}{\partial \overline{z}} \\
+
+<p>\cfrac{\partial v}{\partial y}<br>&#x3D; \mathrm{i}\cfrac{\partial v}{\partial z}-\mathrm{i}\cfrac{\partial v}{\partial \overline{z}} \</p>
+<p>\cfrac{\partial v}{\partial x}<br>&#x3D; \cfrac{\partial v}{\partial z}+\cfrac{\partial v}{\partial \overline{z}} \</p>
+<p>\cfrac{\partial u}{\partial y}<br>&#x3D; \mathrm{i}\cfrac{\partial u}{\partial z}-\mathrm{i}\cfrac{\partial u}{\partial \overline{z}} \<br>\\end{gathered}<br>$$</p>
+</div>
+
+<p>代入柯西黎曼条件：</p>
+<div>
+$$
+\begin{cases}
+\cfrac{\partial u}{\partial z}+\cfrac{\partial u}{\partial \overline{z}} 
+= \mathrm{i}\cfrac{\partial v}{\partial z}-\mathrm{i}\cfrac{\partial v}{\partial \overline{z}} \\
+\cfrac{\partial v}{\partial z}+\cfrac{\partial v}{\partial \overline{z}} 
+= -\mathrm{i}\cfrac{\partial u}{\partial z}+\mathrm{i}\cfrac{\partial u}{\partial \overline{z}} \\
+\end{cases}
+$$
+</div>
+
+
+<div>
+$$
+\begin{cases}
+\cfrac{\partial \overline{w}}{\partial z}+\cfrac{\partial w}{\partial \overline{z}} 
+= 0 \\
+\cfrac{\partial \overline{w}}{\partial z}
+= \cfrac{\partial w}{\partial \overline{z}} \\
+\end{cases}
+$$
+</div>
+
+
+<div>
+$$
+\cfrac{\partial \overline{w}}{\partial z}
+= \cfrac{\partial w}{\partial \overline{z}} =0
+$$
+</div>
+
+
+<p>得证。</p>
+<p>可以证明解析函数无限可微，则根据柯西黎曼条件，解析函数的实部和虚部都满足拉普拉斯方程：</p>
+<div>
+$$
+\begin{gathered}
+\cfrac{\partial^2 u}{\partial x^2} + \cfrac{\partial^2 u}{\partial y^2} = 0 \\
+\cfrac{\partial^2 v}{\partial x^2} + \cfrac{\partial^2 v}{\partial y^2} = 0 \\
+\\\end{gathered}
+$$
+</div>
+
+
+<blockquote>
+<p>解析函数无限可微的证明暂不给出，因为证明篇幅较长。任意一本复变函数教材应该都有，思路是先证解析函数回路积分为0，然后柯西积分公式，最后对柯西积分公式求任意阶导数，证明其存在（任意阶导数根据柯西积分公式可以化为一个闭合回路积分，其中不包含原函数的导数，因此可以任意次求导）</p>
+</blockquote>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2025-01-14T15:11:34.000Z" title="2025/1/14 23:11:34">2025-01-14</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E6%95%B0%E5%AD%A6/">数学</a></span><span class="level-item">2 分钟读完 (大约260个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2025/01/14/%E5%B8%A6%E9%98%BB%E5%B0%BC%E7%9A%84%E6%8C%AF%E5%8A%A8%E5%92%8C%E5%8F%97%E8%BF%AB%E6%8C%AF%E5%8A%A8/">带阻尼的振动和受迫振动</a></p><div class="content"><div>
+$$
+\cfrac{\mathrm{d}^2x}{\mathrm{d}t^2} + 2\gamma \cfrac{\mathrm{d}x}{\mathrm{d}t} + \omega^2 x = 0
+$$
+</div>
+
+
+<p>特征方程</p>
+<div>
+$$
+r^2 + 2\gamma r + \omega^2 = 0
+$$
+</div>
+
+
+<div>
+$$
+\begin{gathered}
+r=\cfrac{-2\gamma \pm \sqrt{4\gamma^2-4\omega^2}}{2} \\
+= -\gamma \pm \sqrt{\gamma^2 - \omega^2}
+\\\end{gathered}
+$$
+</div>
+
+
+<p>解根据 $\gamma,\omega$ 相对大小，分三种解：</p>
+<h2 id="gamma-gt-omega"><a href="#gamma-gt-omega" class="headerlink" title="$\gamma \gt  \omega$"></a>$\gamma \gt  \omega$</h2><div>
+$$
+x=c_-\exp(r_-t)+c_+\exp(r_+t)
+$$
+</div>
+
+
+<h2 id="gamma-lt-omega"><a href="#gamma-lt-omega" class="headerlink" title="$\gamma \lt  \omega$"></a>$\gamma \lt  \omega$</h2><div>
+$$
+x=c \exp(-\gamma t) \sin (\sqrt{\omega^2-\gamma^2}t+\phi_0)
+$$
+</div>
+
+
+<h2 id="gamma-omega"><a href="#gamma-omega" class="headerlink" title="$\gamma &#x3D; \omega$"></a>$\gamma &#x3D; \omega$</h2><p>此时特征方程只有一个解 $r&#x3D;-\gamma$ 。为找到第二个线性无关的解，可以采用<a href="/2025/01/16/%E4%BA%8C%E9%98%B6%E7%BA%BF%E6%80%A7%E5%B8%B8%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B%EF%BC%8C%E7%94%B1%E4%B8%80%E4%B8%AA%E9%80%9A%E8%A7%A3%E5%BE%97%E5%88%B0%E7%AC%AC%E4%BA%8C%E4%B8%AA%E9%80%9A%E8%A7%A3/" title="二阶线性常微分方程，由一个通解得到第二个通解">二阶线性常微分方程，由一个通解得到第二个通解</a>中的方法，也可以直接验证 $t\exp(-\gamma t)$ 即为所求的第二个解。</p>
+<div>
+$$
+x=(c_1t+c_2)\exp(-\gamma t)
+$$
+</div>
+
+
+<div>
+$$
+\begin{gathered}
+x=t\exp(-\gamma t) \\
+x'=(1-\gamma t)\exp(-\gamma t) \\
+x''=(-2\gamma+\gamma^2t)\exp(-\gamma t) \\
+\\\end{gathered}
+$$
+</div>
+
+
+<h2 id="受迫振动"><a href="#受迫振动" class="headerlink" title="受迫振动"></a>受迫振动</h2><div>
+$$
+\cfrac{\mathrm{d}^2x}{\mathrm{d}t^2} + 2\gamma \cfrac{\mathrm{d}x}{\mathrm{d}t} + \omega^2 x = \exp(\mathrm{i}\omega' t)
+$$
+</div>
+
+
+<div>
+$$
+\begin{gathered}
+c(-\omega'^2+2\mathrm{i}\gamma \omega'+\omega^2)=1 \\
+c=\cfrac{1}{\omega^2-\omega'^2+2\mathrm{i}\gamma \omega'}
+\\\end{gathered}
+$$
+</div>
+
+
+<p>因此当 $\omega&#x3D;\omega’$ 时，振动幅度最大，此时发生共振。</p>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2025-01-04T07:36:53.000Z" title="2025/1/4 15:36:53">2025-01-04</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E6%95%B0%E5%AD%A6/">数学</a></span><span class="level-item">2 分钟读完 (大约292个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2025/01/04/%E7%90%83%E5%9D%90%E6%A0%87%E6%8B%89%E6%99%AE%E6%8B%89%E6%96%AF%E6%96%B9%E7%A8%8B%E6%B1%82%E8%A7%A3/">球坐标拉普拉斯方程求解</a></p><div class="content"><p>拉普拉斯方程</p>
+<div>
+$$
+-\nabla^2 V = 0
+$$
+</div>
+
+<p>球坐标下拉普拉斯算子（参见<a href="/2024/10/10/%E6%9E%81%E5%9D%90%E6%A0%87%E3%80%81%E7%90%83%E5%9D%90%E6%A0%87%E4%B8%8A%E7%9A%84%E6%8B%89%E6%99%AE%E6%8B%89%E6%96%AF%E7%AE%97%E5%AD%90/" title="极坐标、球坐标上的拉普拉斯算子">极坐标、球坐标上的拉普拉斯算子</a>）</p>
+<div>
+$$
+\nabla^2 = \cfrac{\partial^2}{\partial r^2}+\cfrac{2}{r}\cfrac{\partial}{\partial r}
++\cfrac{1}{r^2}\cfrac{\partial^2}{\partial \theta^2}
++\cfrac{\cos \theta}{r^2\sin\theta}\cfrac{\partial}{\partial \theta}
++\cfrac{1}{r^2\sin^2\theta}\cfrac{\partial^2}{\partial \phi^2}
+$$
+</div>
+
+<p>分离变量</p>
+<div>
+$$
+V=R(r)\Theta(\theta)\exp(\mathrm{i}m\phi)
+$$
+</div>
+
+<p>得</p>
+<div>
+$$
+\begin{cases}
+r^2 \cfrac{\partial^2 R}{\partial r^2}
++ 2r\cfrac{\partial R}{\partial r}=l(l+1)R \\
+
+<p>\cfrac{\partial^2 \Theta}{\partial \theta^2}<br>+\cfrac{\cos \theta}{\sin\theta}\cfrac{\partial \Theta}{\partial \theta}<br>+\left\lbrack l(l+1)-\cfrac{m^2}{\sin^2\theta}\right\rbrack \Theta&#x3D;0<br>\end{cases}<br>$$</p>
+</div>
+
+<p>第一个方程的解为多项式 $r^l,r^{-l-1}$ ；</p>
+<p>如果设 $z&#x3D;\cos \theta$ ，第二个方程变为</p>
+<div>
+$$
+(1-z^2)\Theta''-2z\Theta'+\left\lbrack l(l+1)-\cfrac{m^2}{1-z^2}\right\rbrack \Theta = 0
+$$
+</div>
+
+<p>此即连带勒让德方程，其解为连带勒让德函数 $P_l^m(z)$ 。</p>
+<p>所以球坐标下拉普拉斯方程的通解为</p>
+<div>
+$$
+\begin{gathered}
+V=\sum_{lm} A_{lm}r^lP_l^m(\cos \theta) \exp(\mathrm{i}m\phi) \\
++\sum_{lm} \cfrac{B_{lm}}{r^{l+1}}P_l^m(\cos \theta) \exp(\mathrm{i}m\phi) \\
+\\\end{gathered}
+$$
+</div>
+
+<p>由于 $r^l,r^{-l-1}$ 在 $r&#x3D;0^+$ 和 $r&#x3D;+\infty$ 有不同的渐进行为，因此要根据边界条件选取不同的解。</p>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2024-12-30T13:36:28.000Z" title="2024/12/30 21:36:28">2024-12-30</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E6%95%B0%E5%AD%A6/">数学</a></span><span class="level-item">3 分钟读完 (大约472个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2024/12/30/%E4%BB%8E%E9%BA%A6%E5%85%8B%E6%96%AF%E9%9F%A6%E6%96%B9%E7%A8%8B%E5%88%B0%E7%94%B5%E7%A3%81%E6%B3%A2/">从麦克斯韦方程到电磁波</a></p><div class="content"><p>我们求真空麦克斯韦方程的解</p>
+<div>
+$$
+\begin{cases}
+\nabla \cdot E = 0 \\
+\nabla \times E = -\cfrac{\partial B}{\partial t} \\
+\nabla \cdot B = 0 \\
+\nabla \times B = \cfrac{1}{c^2}\cfrac{\partial E}{\partial t} \\
+\end{cases}
+$$
+</div>
+
+<p>把电磁场用平面波 $\exp(-\mathrm{i}\omega t+\mathrm{i} k \cdot x)$ 展开，</p>
+<div>
+$$
+\begin{cases}
+k \cdot E = 0 \\
+k \times E = \omega B \\
+k \cdot B = 0 \\
+k \times B = -\cfrac{\omega}{c^2} E \\
+\end{cases}
+$$
+</div>
+
+<p>第二个式子用 $k$ 作叉乘然后用第四个式子代换：</p>
+<div>
+$$
+k \times (k \times E) =  -\cfrac{\omega^2}{c^2} E
+$$
+</div>
+
+<p>用一个矢量恒等式</p>
+<div>
+$$
+\begin{gathered}
+(a\times b) \times c \\
+= \sum_{ijkt} \varepsilon_{ijk} a_i b_j c_t \varepsilon_{ktq} \\
+= \sum_{ijt} (\delta_{it}\delta_{jq}-\delta_{iq}\delta_{jt}) a_i b_j c_t \\
+= (a \cdot c)b - (b \cdot c)a
+\\\end{gathered}
+$$
+</div>
+
+<p>即得</p>
+<div>
+$$
+\begin{gathered}
+k \times (k \times E) \\
+= -(k \times E) \times k \\
+= -k^2 E + (E \cdot k)k
+\\\end{gathered}
+$$
+</div>
+
+<p>因此</p>
+<div>
+$$
+k=\cfrac{\omega}{c}
+$$
+</div>
+
+<p>所以真空中电磁波以光速传播。</p>
+<p>从前面方程的第一和第三个式子 $k \cdot E &#x3D; 0,k \cdot B &#x3D; 0$ 知电磁波中电场、磁场和传播方向垂直；</p>
+<p>第二个式子，两边用 $E$ 点乘得 $E \cdot B &#x3D; 0$ ，由此知电磁波中电场、磁场相互垂直。</p>
+<h2 id="均匀介质"><a href="#均匀介质" class="headerlink" title="均匀介质"></a>均匀介质</h2><p>非真空，假设介质线性且各向同性，</p>
+<div>
+$$
+\begin{cases}
+\nabla \cdot D = 0 \\
+\nabla \times E = -\cfrac{\partial B}{\partial t} \\
+\nabla \cdot B = 0 \\
+\nabla \times H = \cfrac{\partial D}{\partial t} \\
+\end{cases}
+$$
+</div>
+
+<p>用同样的方法，</p>
+<div>
+$$
+\begin{cases}
+k \cdot D = 0 \\
+k \times E = \omega B \\
+k \cdot B = 0 \\
+k \times H = -\omega D \\
+\end{cases}
+$$
+</div>
+
+<p>对于线性电介质， $D&#x3D;\varepsilon E,B&#x3D;\mu H$ </p>
+<div>
+$$
+\begin{cases}
+k \cdot E = 0 \\
+k \times E = \omega \mu H \\
+k \cdot H = 0 \\
+k \times H = -\omega \varepsilon E \\
+\end{cases}
+$$
+</div>
+
+<p>所以 $E,H,k$ 构成右手系，并且大小有如下关系</p>
+<div>
+$$
+\begin{cases}
+k E = \omega \mu H \\
+k H = \omega \varepsilon E \\
+\end{cases}
+$$
+</div>
+
+
+<div>
+$$
+k^2 = \omega^2 \mu \varepsilon
+$$
+</div>
+
+
+<p>介质中光速（相速度）</p>
+<div>
+$$
+v=\cfrac{\omega}{k}=\cfrac{1}{\sqrt{\mu\varepsilon}}
+$$
+</div>
+
+<p>定义导纳 $Y&#x3D;\sqrt{\varepsilon&#x2F;\mu}$ ，阻抗 $Z&#x3D;\sqrt{\mu&#x2F;\varepsilon}$ ，则</p>
+<div>
+$$
+\begin{cases}
+H=YE \\
+E=ZH \\
+YZ=1
+\end{cases}
+$$
+</div>
+
+
+</div></article></div><nav class="pagination" role="navigation" aria-label="pagination"><div class="pagination-previous"><a href="/tags/%E6%95%B0%E5%AD%A6/page/2/">上一页</a></div><div class="pagination-next"><a href="/tags/%E6%95%B0%E5%AD%A6/page/4/">下一页</a></div><ul class="pagination-list is-hidden-mobile"><li><a class="pagination-link" href="/tags/%E6%95%B0%E5%AD%A6/">1</a></li><li><a class="pagination-link" href="/tags/%E6%95%B0%E5%AD%A6/page/2/">2</a></li><li><a class="pagination-link is-current" href="/tags/%E6%95%B0%E5%AD%A6/page/3/">3</a></li><li><a class="pagination-link" href="/tags/%E6%95%B0%E5%AD%A6/page/4/">4</a></li><li><a class="pagination-link" href="/tags/%E6%95%B0%E5%AD%A6/page/5/">5</a></li></ul></nav></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar is-rounded" src="/android-chrome-512x512.png" alt="Chenxi Yu"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">Chenxi Yu</p><p class="is-size-6 is-block">PhD in PKU</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>Beijing, China</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives/"><p class="title">108</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories/"><p class="title">4</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags/"><p class="title">31</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/yuchenxi2000" target="_blank" rel="me noopener">关注我</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="me noopener" title="Github" href="https://github.com/yuchenxi2000"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="me noopener" title="Bilibili" href="https://space.bilibili.com/244355869"><i class="fab fa-bilibili"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="me noopener" title="Zhihu" href="https://www.zhihu.com/people/cha-xi-74-16"><i class="fab fa-zhihu"></i></a></div></div></div><!--!--><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">分类</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/%E5%85%B6%E4%BB%96/"><span class="level-start"><span class="level-item">其他</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E6%95%B0%E5%AD%A6/"><span class="level-start"><span class="level-item">数学</span></span><span class="level-end"><span class="level-item tag">43</span></span></a></li><li><a class="level is-mobile" href="/categories/%E7%89%A9%E7%90%86/"><span class="level-start"><span class="level-item">物理</span></span><span class="level-end"><span class="level-item tag">50</span></span></a></li><li><a class="level is-mobile" href="/categories/%E9%9F%B3%E4%B9%90/"><span class="level-start"><span class="level-item">音乐</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></div></div></div><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2026-03-28T09:12:57.000Z">2026-03-28</time></p><p class="title"><a href="/2026/03/28/PvZ%E9%AB%98%E7%B2%BE%E5%BA%A6%E9%94%AE%E6%8E%A7%E6%A1%86%E6%9E%B6AvZ/">PvZ高精度键控框架AvZ</a></p><p class="categories"><a href="/categories/%E5%85%B6%E4%BB%96/">其他</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2026-03-23T07:44:37.000Z">2026-03-23</time></p><p class="title"><a href="/2026/03/23/%E7%94%9F%E6%97%A5%E9%97%AE%E9%A2%98/">生日问题</a></p><p class="categories"><a href="/categories/%E6%95%B0%E5%AD%A6/">数学</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2026-03-19T06:04:32.000Z">2026-03-19</time></p><p class="title"><a href="/about/">关于我</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2026-03-06T03:20:33.000Z">2026-03-06</time></p><p class="title"><a href="/2026/03/06/%E8%87%AA%E6%97%8B%E8%A7%92%E5%8A%A8%E9%87%8F%E8%80%A6%E5%90%88/">自旋角动量耦合</a></p><p class="categories"><a href="/categories/%E7%89%A9%E7%90%86/">物理</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2026-02-26T02:48:02.000Z">2026-02-26</time></p><p class="title"><a href="/2026/02/26/Land%C3%A9%20g-factor/">Landé g-factor</a></p></div></article></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/NEGF/"><span class="tag">NEGF</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E4%BB%A3%E6%95%B0/"><span class="tag">代数</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%85%89%E5%AD%A6/"><span class="tag">光学</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%85%B6%E4%BB%96/"><span class="tag">其他</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%87%A0%E4%BD%95%E4%BB%A3%E6%95%B0/"><span class="tag">几何代数</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%9B%BA%E4%BD%93%E7%89%A9%E7%90%86/"><span class="tag">固体物理</span><span class="tag">13</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0/"><span class="tag">复变函数</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%A4%A9%E4%BD%93%E7%89%A9%E7%90%86/"><span class="tag">天体物理</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%AF%86%E5%BA%A6%E6%B3%9B%E5%87%BD%E7%90%86%E8%AE%BA/"><span class="tag">密度泛函理论</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%B7%B4%E6%B4%9B%E5%85%8B%E9%9F%B3%E4%B9%90/"><span class="tag">巴洛克音乐</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%B9%B3%E9%9D%A2%E5%87%A0%E4%BD%95/"><span class="tag">平面几何</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%B9%BF%E4%B9%89%E7%9B%B8%E5%AF%B9%E8%AE%BA/"><span class="tag">广义相对论</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%BC%B9%E6%80%A7%E5%8A%9B%E5%AD%A6/"><span class="tag">弹性力学</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%BE%AE%E5%88%86%E5%87%A0%E4%BD%95/"><span class="tag">微分几何</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B/"><span class="tag">微分方程</span><span class="tag">9</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%95%B0%E5%80%BC%E6%96%B9%E6%B3%95/"><span class="tag">数值方法</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%95%B0%E5%AD%A6/"><span class="tag">数学</span><span class="tag">43</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/"><span class="tag">数学分析</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%95%B0%E8%AE%BA/"><span class="tag">数论</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%A6%82%E7%8E%87%E7%BB%9F%E8%AE%A1/"><span class="tag">概率统计</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/"><span class="tag">泛函分析</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%89%A9%E7%90%86/"><span class="tag">物理</span><span class="tag">55</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%89%B9%E6%AE%8A%E5%87%BD%E6%95%B0/"><span class="tag">特殊函数</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%94%B5%E5%8A%A8%E5%8A%9B%E5%AD%A6/"><span class="tag">电动力学</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%9B%B8%E5%AF%B9%E8%AE%BA/"><span class="tag">相对论</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%BB%9F%E8%AE%A1%E5%8A%9B%E5%AD%A6/"><span class="tag">统计力学</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%BE%A4%E8%AE%BA/"><span class="tag">群论</span><span class="tag">12</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6/"><span class="tag">量子力学</span><span class="tag">30</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E9%87%8F%E5%AD%90%E5%9C%BA%E8%AE%BA/"><span class="tag">量子场论</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E9%9D%9E%E6%AC%A7%E5%87%A0%E4%BD%95/"><span class="tag">非欧几何</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E9%9F%B3%E4%B9%90/"><span class="tag">音乐</span><span class="tag">1</span></a></div></div></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a><p class="is-size-7"><span>&copy; 2026 Chenxi Yu</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="fab fa-creative-commons-nc"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/yuchenxi2000"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script data-pjax src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script data-pjax src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "此网站使用Cookie来改善您的体验。",
+          dismiss: "知道了！",
+          allow: "允许使用Cookie",
+          deny: "拒绝",
+          link: "了解更多",
+          policy: "Cookie政策",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js"></script><script src="/js/pjax.js"></script><!--!--><script type="text/javascript" id="MathJax-script" async>MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      },
+      svg: {
+        fontCache: 'global'
+      },
+      chtml: {
+        matchFontHeight: false
+      }
+    };</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js"></script><!--!--><!--!--><script data-pjax src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script data-pjax src="/js/insight.js" defer></script><script data-pjax>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script></body></html>

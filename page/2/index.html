@@ -1,0 +1,662 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>YCX&#039;s Blog</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="YCX&#039;s Blog"><meta name="msapplication-TileImage" content="favicon.ico"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="YCX&#039;s Blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="一个分享数学物理笔记的博客"><meta property="og:type" content="blog"><meta property="og:title" content="YCX&#039;s Blog"><meta property="og:url" content="https://yuchenxi2000.github.io/"><meta property="og:site_name" content="YCX&#039;s Blog"><meta property="og:description" content="一个分享数学物理笔记的博客"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://yuchenxi2000.github.io/img/og_image.png"><meta property="article:author" content="Chenxi Yu"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://yuchenxi2000.github.io/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://yuchenxi2000.github.io"},"headline":"YCX's Blog","image":["https://yuchenxi2000.github.io/img/og_image.png"],"author":{"@type":"Person","name":"Chenxi Yu"},"publisher":{"@type":"Organization","name":"YCX's Blog","logo":{"@type":"ImageObject","url":"https://yuchenxi2000.github.io/android-chrome-512x512.png"}},"description":"一个分享数学物理笔记的博客"}</script><link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link data-pjax rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link data-pjax rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!--!--><!-- hexo injector head_end start --><script>
+  (function () {
+      function switchTab() {
+          if (!location.hash) {
+            return;
+          }
+
+          const id = '#' + CSS.escape(location.hash.substring(1));
+          const $tabMenu = document.querySelector(`.tabs a[href="${id}"]`);
+          if (!$tabMenu) {
+            return;
+          }
+
+          const $tabMenuContainer = $tabMenu.parentElement.parentElement;
+          Array.from($tabMenuContainer.children).forEach($menu => $menu.classList.remove('is-active'));
+          Array.from($tabMenuContainer.querySelectorAll('a'))
+              .map($menu => document.getElementById($menu.getAttribute("href").substring(1)))
+              .forEach($content => $content.classList.add('is-hidden'));
+
+          if ($tabMenu) {
+              $tabMenu.parentElement.classList.add('is-active');
+          }
+          const $activeTab = document.querySelector(id);
+          if ($activeTab) {
+              $activeTab.classList.remove('is-hidden');
+          }
+      }
+      switchTab();
+      window.addEventListener('hashchange', switchTab, false);
+  })();
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 8.1.1"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2026-02-16T04:01:41.000Z" title="2026/2/16 12:01:41">2026-02-16</time>发表</span><span class="level-item">9 分钟读完 (大约1397个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2026/02/16/Reissner-Nordstr%C3%B6m%E9%BB%91%E6%B4%9E%E8%A7%A3/">Reissner-Nordström黑洞解</a></p><div class="content"><p>本文先回顾一下四维时空里电磁场理论，然后进行求解。求解过程依赖<a href="/2026/02/15/Schwarzschild%E9%BB%91%E6%B4%9E%E8%A7%A3/" title="Schwarzschild黑洞解">Schwarzschild黑洞解</a>中的一些结果。</p>
+<h2 id="电磁场张量与能量动量张量"><a href="#电磁场张量与能量动量张量" class="headerlink" title="电磁场张量与能量动量张量"></a>电磁场张量与能量动量张量</h2><p>我们先给出闵可夫斯基空间中电磁场理论用张量描述形式，然后推广到任意弯曲时空。</p>
+<p>定义电流四矢量和电磁势四矢量：</p>
+<div>
+$$
+\begin{gathered}
+j^\mu = (\rho, j^1, j^2, j^3) \\
+A^\mu = (\phi, A^1, A^2, A^3)
+\\\end{gathered}
+$$
+</div>
+
+
+<p>根据电场强度、磁感应强度和电磁势的关系，</p>
+<div>
+$$
+\begin{gathered}
+E = -\nabla \phi - \cfrac{\partial A}{\partial t} \\
+B = \nabla \times A
+\\\end{gathered}
+$$
+</div>
+
+
+<p>我们定义一个反对称的电磁场张量，并且其6个非0分量即为电场强度与磁感应强度：</p>
+<div>
+$$
+F^{\mu\nu} = \partial^\mu A^\nu - \partial^\nu A^\mu \\
+=
+\begin{pmatrix}
+0 & E^1 & E^2 & E^3 \\
+-E^1 & 0 & B^3 & -B^2 \\
+-E^2 & -B^3 & 0 & B^1 \\
+-E^3 & B^2 & -B^1 & 0 \\
+\end{pmatrix}
+$$
+</div>
+
+
+<p>真空中麦克斯韦方程：</p>
+<div>
+$$
+\begin{cases}
+\nabla \cdot E = \rho \\
+\nabla \cdot B = 0 \\
+\nabla \times E = - \cfrac{\partial B}{\partial t} \\
+\nabla \times B - \cfrac{\partial E}{\partial t} = j
+\end{cases}
+$$
+</div>
+
+
+<p>可以验证，真空中麦克斯韦方程可以用电磁场张量表示。表现为电磁场张量的散度等于电流四矢量：</p>
+<div>
+$$
+\partial_\nu F^{\mu\nu} = (\rho, j^1,j^2,j^3)=j^\mu
+$$
+</div>
+
+
+<p>然后我们定义能量动量张量</p>
+<div>
+$$
+T^{\mu\nu}=-F^{\mu\lambda} F_{\lambda}^{\cdot\nu}-\cfrac{1}{4}g^{\mu\nu}F^{\alpha\beta}F_{\alpha\beta}
+$$
+</div>
+
+<p>可以验证其满足守恒律</p>
+<div>
+$$
+\partial_{\nu}T^{\mu\nu}=0
+$$
+</div>
+
+<p>并且为对称张量。</p>
+<p>电磁场能量动量张量的另一个重要性质是零迹（由定义式计算可得）：</p>
+<div>
+$$
+T^\mu_{\cdot\, \mu} = 0
+$$
+</div>
+
+<p>将电磁场张量定义、麦克斯韦方程、能量动量守恒律推广到任意弯曲时空，只需要把普通偏导数替换成协变导数：</p>
+<div>
+$$
+F^{\mu\nu}=A^{\nu;\mu}-A^{\mu;\nu}
+\quad
+F^{\mu\nu}_{\,\,\,\,\,;\nu}=j^\mu \quad T^{\mu\nu}_{\,\,\,\,\,;\nu}=0
+$$
+</div>
+
+
+<h2 id="Reissner-Nordstrom度规求解"><a href="#Reissner-Nordstrom度规求解" class="headerlink" title="Reissner-Nordström度规求解"></a>Reissner-Nordström度规求解</h2><p>参照<a href="/2026/02/15/Schwarzschild%E9%BB%91%E6%B4%9E%E8%A7%A3/" title="Schwarzschild黑洞解">Schwarzschild黑洞解</a>，在球对称、静态时空假设下，度规只包含两个未知函数，我们从度规出发给出了Ricci张量的表达式。在无物质情形，爱因斯坦方程就是Ricci张量为0；存在电磁场时，爱因斯坦方程为：</p>
+<div>
+$$
+R_{\mu\nu}=-8\pi G \left(T_{\mu\nu}-\cfrac{1}{2}g_{\mu\nu}T\right)
+$$
+</div>
+
+<p>电磁场能量动量张量零迹，因此只需要计算电磁场能量动量张量。为计算电磁场能量动量张量，我们先利用麦克斯韦方程求解电磁场张量。在球对称、静态时空假设下，空间中只存在径向电场，因此我们假设电磁场张量为：（其中 $u$ 为 $r$ 的函数）</p></div><a class="article-more button is-small is-size-7" href="/2026/02/16/Reissner-Nordstr%C3%B6m%E9%BB%91%E6%B4%9E%E8%A7%A3/#more">阅读更多</a></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2026-02-15T00:20:33.000Z" title="2026/2/15 08:20:33">2026-02-15</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E7%89%A9%E7%90%86/">物理</a></span><span class="level-item">6 分钟读完 (大约874个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2026/02/15/Schwarzschild%E9%BB%91%E6%B4%9E%E8%A7%A3/">Schwarzschild黑洞解</a></p><div class="content"><p>闵可夫斯基度规符号约定：</p>
+<div>
+$$
+\eta_{\mu\nu} = (-1, +1, +1, +1)
+$$
+</div>
+
+<p>矢量平移、平行移动与克里斯托弗符号：</p>
+<div>
+$$
+D_{k}A_j=\partial_kA_j-\Gamma^i_{jk}A_i
+$$
+</div>
+
+
+<div>
+$$
+D_k A^j = \partial_k A^j + \Gamma^j_{ik}A^i
+$$
+</div>
+
+
+<p>克里斯托弗符号表达式：</p>
+<div>
+$$
+\Gamma^\alpha_{\lambda\mu}=\frac{1}{2}g^{\alpha\nu}(g_{\mu\nu,\lambda}+g_{\nu\lambda,\mu}-g_{\lambda\mu,\nu})
+$$
+</div>
+
+
+<p>曲率张量定义：</p>
+<div>
+$$
+R^\rho_{\lambda\mu\nu}=-\Gamma^\rho_{\lambda\mu,\nu}+\Gamma^\rho_{\lambda\nu,\mu}-\Gamma^\sigma_{\lambda\mu}\Gamma^\rho_{\sigma\nu}+\Gamma^\sigma_{\lambda\nu}\Gamma^\rho_{\sigma\mu}
+$$
+</div>
+
+
+<p>Ricci张量：</p>
+<div>
+$$
+R_{\mu\nu} = R_{\mu\nu\lambda}^\lambda
+$$
+</div>
+
+
+<p>选择球坐标 $(t, r, \theta, \phi)$ ，在球对称、静态时空条件下，度规有如下形式</p>
+<div>
+$$
+g_{\mu\nu} = 
+\begin{pmatrix}
+-f & 0 & 0 & 0 \\
+0 & g & 0 & 0 \\
+0 & 0 & r^2 & 0 \\
+0 & 0 & 0 & r^2\sin^2\theta \\
+\end{pmatrix}
+$$
+</div>
+
+
+<p>其中 $f,g$ 只与 $r$ 有关， $g_{\mu\nu}$ 为（只需求逆矩阵）</p>
+<div>
+$$
+g^{\mu\nu} = 
+\begin{pmatrix}
+-\cfrac{1}{f} & 0 & 0 & 0 \\
+0 & \cfrac{1}{g} & 0 & 0 \\
+0 & 0 & \cfrac{1}{r^2} & 0 \\
+0 & 0 & 0 & \cfrac{1}{r^2\sin^2\theta} \\
+\end{pmatrix}
+$$
+</div>
+
+
+<p>所有非0的度规导数：</p>
+<div>
+$$
+\begin{gathered}
+g_{00,1} = -f_r \quad g_{11,1} = g_r \\
+g_{22,1} = 2r \quad g_{33,1} = 2r\sin^2\theta \quad g_{33,2} = 2r^2\sin\theta \cos \theta
+\\\end{gathered}
+$$
+</div>
+
+<p>因为度规有对角形式，因此联络只有三个指标至少两个相等时不为0：（下式不使用Einstein求和）</p>
+<div>
+$$
+\begin{gathered}
+\Gamma_{\alpha\alpha}^\lambda = -\cfrac{1}{2} g^{\lambda\lambda} g_{\alpha\alpha,\lambda} \quad
+\Gamma_{\alpha\alpha}^\alpha = \cfrac{1}{2} g^{\alpha\alpha} g_{\alpha\alpha,\alpha} \quad
+\Gamma_{\alpha\lambda}^\lambda = \cfrac{1}{2} g^{\lambda\lambda} g_{\lambda\lambda,\alpha} \\
+\\\end{gathered}
+$$
+</div>
+
+<p>所有非0联络：</p>
+<div>
+$$
+\begin{gathered}
+\Gamma_{00}^1 = \cfrac{f_r}{2g} \quad \Gamma_{11}^1 = \cfrac{g_r}{2g} \quad \Gamma_{10}^0 = \cfrac{f_r}{2f} \\
+\Gamma_{22}^1 = -\cfrac{r}{g} \quad \Gamma_{12}^2 = \cfrac{1}{r} \\
+\Gamma_{33}^1 = -\cfrac{r\sin^2\theta}{g} \quad \Gamma_{13}^3 = \cfrac{1}{r} \\
+\Gamma_{33}^2 = \dots \quad \Gamma_{23}^3 = \dots \\
+\\\end{gathered}
+$$
+</div>
+
+<p>下面求Ricci张量。因为球对称，因此只求对角部分。我们只有两个关于 $r$ 的未知函数，因此只需求两个分量，我们选择 $R_{00},R_{11}$ 。为此先求曲率张量：</p></div><a class="article-more button is-small is-size-7" href="/2026/02/15/Schwarzschild%E9%BB%91%E6%B4%9E%E8%A7%A3/#more">阅读更多</a></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2026-02-14T05:04:45.000Z" title="2026/2/14 13:04:45">2026-02-14</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E6%95%B0%E5%AD%A6/">数学</a></span><span class="level-item">4 分钟读完 (大约536个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2026/02/14/%E7%83%AD%E4%BC%A0%E5%AF%BC%E6%96%B9%E7%A8%8B%E7%9A%84%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2%E8%A7%A3%E6%B3%95/">热传导方程的傅里叶变换解法</a></p><div class="content"><p>一维无限长热传导方程</p>
+<div>
+$$
+\begin{cases}
+\cfrac{\partial u}{\partial t} = \cfrac{\partial^2 u}{\partial x^2} \\
+u(x, 0) = f(x)
+\end{cases}
+$$
+</div>
+
+<p>不失一般性地，我们令其中的常数因子为1，否则可以改变 $t,x$ 的尺度使得其为1。</p>
+<p>然后我们使用分离变量法，设 $u(x,t)&#x3D;X(x)T(t)$ 。因为要求解有边界，所以分离变量法中的常数必定为负数。</p>
+<div>
+$$
+T_t/T = X_{xx}/X = -k^2
+$$
+</div>
+
+<p>我们解得</p>
+<div>
+$$
+\begin{gathered}
+T_k(t) = \exp(-k^2t) \\
+X_k(x) = \exp (\pm\mathrm{i}kx)
+\\\end{gathered}
+$$
+</div>
+
+<p>对于任意的 $f(x)$ ，我们将其用 $\exp (\pm\mathrm{i}kx)$ 展开（傅里叶变换定义详见附录），</p>
+<div>
+$$
+f(x) = \cfrac{1}{2\pi} \int_{-\infty}^{+\infty} F(\omega) e^{\mathrm{i}\omega x} \mathrm{d}\omega
+$$
+</div>
+
+<p>根据分离变量的结果，边界条件为 $u(x,0)&#x3D;X_k(x)$ 的解为 $u(x,t)&#x3D;X_k(x)T_k(t)$ 。我们现在已经把任意函数 $f(x)$ 用 $X_k(x)$ 展开，由此可以写出任意边界条件的解为</p>
+<div>
+$$
+\begin{aligned}
+u(x, t) &= \cfrac{1}{2\pi} \int_{-\infty}^{+\infty} F(\omega) e^{\mathrm{i}\omega x - \omega^2 t} \mathrm{d}\omega \\
+&= \cfrac{1}{2\pi} \int_{-\infty}^{+\infty} F(\omega) e^{- \omega^2 t} e^{\mathrm{i}\omega x} \mathrm{d}\omega \\
+&= \mathcal{F}^{-1}\lbrack F(\omega)\rbrack  \ast \mathcal{F}^{-1}\lbrack e^{-\omega^2 t}\rbrack  \\
+&= f(x) \ast \cfrac{1}{\sqrt{4\pi t}}e^{-x^2/(4t)} \\
+&= \cfrac{1}{\sqrt{4\pi t}} \int_{-\infty}^{+\infty} f(y) e^{-(x-y)^2/(4t)} \mathrm{d}y
+\end{aligned}
+$$
+</div>
+
+<p>可以验证该函数满足方程以及边界条件。为计算简便，可以直接验证积分核</p>
+<div>
+$$
+K(x,t) = \cfrac{1}{\sqrt{4\pi t}}e^{-x^2/(4t)}
+$$
+</div>
+
+<p>满足方程且 $t \to 0$ 的极限为 $\delta(x)$ ，再根据 $u(x,t)$ 为积分核与 $f(x)$ 的卷积得出 $u(x,t)$ 满足方程以及边界条件。</p>
+<h2 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h2><p>傅里叶变换定义</p>
+<div>
+$$
+\begin{gathered}
+\mathcal{F}\lbrack f(x)\rbrack  = F(\omega) = \int_{-\infty}^{+\infty} f(x) e^{-\mathrm{i}\omega x} \mathrm{d}x \\
+\mathcal{F}^{-1}\lbrack F(\omega)\rbrack  = f(x) = \cfrac{1}{2\pi} \int_{-\infty}^{+\infty} F(\omega) e^{\mathrm{i}\omega x} \mathrm{d}\omega
+\\\end{gathered}
+$$
+</div>
+
+<p>高斯函数的傅里叶变换</p>
+<div>
+$$
+\begin{aligned}
+&\int_{-\infty}^{+\infty} e^{-\mathrm{i}\omega x - a x^2} \mathrm{d}x \\
+=& \int_{-\infty}^{+\infty} e^{-\omega^2/(4a)} e^{- a (x+\mathrm{i}\omega/(2a))^2} \mathrm{d}x \\
+=& \sqrt{\cfrac{\pi}{a}}e^{-\omega^2/(4a)}
+\end{aligned}
+$$
+</div>
+
+
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2026-01-22T10:54:07.000Z" title="2026/1/22 18:54:07">2026-01-22</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E6%95%B0%E5%AD%A6/">数学</a></span><span class="level-item">12 分钟读完 (大约1794个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2026/01/22/SU(2)%E5%92%8CSO(3)%E7%9A%84%E6%8C%87%E6%95%B0%E6%98%A0%E5%B0%84%E8%AE%A1%E7%AE%97/">SU(2)和SO(3)的指数映射计算</a></p><div class="content"><h1 id="mathrm-SU-2-和-mathrm-SO-3-的指数映射计算"><a href="#mathrm-SU-2-和-mathrm-SO-3-的指数映射计算" class="headerlink" title="$\mathrm{SU}(2)$ 和 $\mathrm{SO}(3)$ 的指数映射计算"></a>$\mathrm{SU}(2)$ 和 $\mathrm{SO}(3)$ 的指数映射计算</h1><p>暴力计算两个李群的指数映射，方法就是算矩阵的指数函数，通过幂级数展开式计算。</p>
+<p>计算结果可以给出旋量、向量绕某个轴旋转任意角度后的结果（罗德里格斯公式）</p>
+<p>本文默认采用爱因斯坦求和约定。</p>
+<h2 id="mathrm-SU-2"><a href="#mathrm-SU-2" class="headerlink" title="$\mathrm{SU}(2)$"></a>$\mathrm{SU}(2)$</h2><p> $\mathrm{SU}(2)$ 是行列式为1的二阶酉矩阵构成的群。先求其李群生成元，设二阶酉矩阵为</p>
+<div>
+$$
+U_{ij} = \delta_{ij} + w_{ij}
+$$
+</div>
+
+<p>其中 $w_{ij}$ 中的元素为小量。利用其为二阶酉矩阵，</p>
+<div>
+$$
+(U^\dagger U)_{ij}=U^*_{ki}U_{kj}=\delta_{ij}
+$$
+</div>
+
+
+<div>
+$$
+(\delta_{ki} + w_{ki}^*)(\delta_{kj} + w_{kj})=\delta_{ij}
+$$
+</div>
+
+
+<div>
+$$
+w_{ji}^* + w_{ij}=0
+$$
+</div>
+
+
+<p>再根据行列式为1，</p>
+<div>
+$$
+\det U \approx 1 + \operatorname{Tr} w = 1
+$$
+</div>
+
+
+<div>
+$$
+w_{ii}=0
+$$
+</div>
+
+
+<p>由此得出矩阵 $w$ 的形式为</p>
+<div>
+$$
+w=
+w_1
+\begin{pmatrix}
+0 & -\mathrm{i} \\
+-\mathrm{i} & 0
+\end{pmatrix}
++
+w_2
+\begin{pmatrix}
+0 & -1 \\
+1 & 0
+\end{pmatrix}
++
+w_3
+\begin{pmatrix}
+-\mathrm{i} & 0 \\
+0 & \mathrm{i}
+\end{pmatrix}
+$$
+</div>
+
+<p>由此得到三个生成元，用泡利矩阵表示为 $-\mathrm{i}\sigma_x,-\mathrm{i}\sigma_y,-\mathrm{i}\sigma_z$ 。它们的李括号为（下标 $1,2,3$ 分别对应三个坐标 $x,y,z$ ）</p>
+<div>
+$$
+\begin{gathered}
+\lbrack -\mathrm{i}\sigma_i, -\mathrm{i}\sigma_j\rbrack =-2\mathrm{i}\varepsilon_{ijk}\sigma_k \\
+\\\end{gathered}
+$$
+</div>
+
+
+<blockquote>
+<p>如果设 $S_i&#x3D;1&#x2F;2\hbar\sigma_i$ ，那么得到量子力学中1&#x2F;2自旋角动量的对易关系 $\lbrack S_i,S_j\rbrack &#x3D;\mathrm{i}\hbar \varepsilon_{ijk}S_k$ 。</p>
+</blockquote>
+<p>接下来计算指数映射，设一个任意向量 $a$ ，</p>
+<div>
+$$
+\exp(-\mathrm{i}a \cdot \sigma) = \sum_{k=0}^\infty \cfrac{(-\mathrm{i}a \cdot \sigma)^k}{k!}
+$$
+</div>
+
+<p>计算上式的重点是计算 $a \cdot \sigma$ 的任意次幂。为此我们先证一个等式：</p>
+<div>
+$$
+(\sigma \cdot a)(\sigma \cdot b)=a \cdot b + \mathrm{i} \sigma \cdot (a \times b)
+$$
+</div>
+
+<p>证明方法是利用泡利矩阵的性质</p>
+<div>
+$$
+\begin{cases}
+\sigma_i^2=1 \\
+\sigma_i \sigma_j = \mathrm{i} \varepsilon_{ijk}\sigma_k & (i \ne j)
+\end{cases}
+$$
+</div>
+
+
+<div>
+$$
+\begin{aligned}
+(\sigma \cdot a) (\sigma \cdot b) &= \sum_{ij} \sigma_i\sigma_j a_ib_j \\
+&= \sum_{ij} (\delta_{ij} + \sum_k \mathrm{i} \varepsilon_{ijk} \sigma_k) a_ib_j \\
+&= a \cdot b + \mathrm{i}\sigma \cdot (a \times b)
+\end{aligned}
+$$
+</div>
+
+
+<p>根据这个恒等式有</p>
+<div>
+$$
+(a \cdot \sigma)^2=\lvert a \rvert^2
+$$
+</div>
+
+
+<p>我们将偶数次幂的和与奇数次幂的和分开，</p>
+<div>
+$$
+\begin{gathered}
+\exp(-\mathrm{i} a \cdot \sigma)
+= \sum_{k=0} \cfrac{(-\mathrm{i} a \cdot \sigma)^{2k}}{(2k)!} + \sum_{k=0} \cfrac{(-\mathrm{i} a \cdot \sigma)^{2k+1}}{(2k+1)!} \\
+= \sum_{k=0} \cfrac{(-1)^k \lvert a \rvert^{2k}}{(2k)!} -\mathrm{i} \cfrac{a \cdot \sigma}{\lvert a \rvert} \sum_{k=0} \cfrac{(-1)^k \lvert a \rvert^{2k+1}}{(2k+1)!} \\
+= \cos \lvert a \rvert -\mathrm{i} \cfrac{a \cdot \sigma}{\lvert a \rvert} \sin\lvert a \rvert
+\\\end{gathered}
+$$
+</div>
+
+<p>上式出现 $a$ 的模长，为方便设 $a&#x3D;\alpha n$ ，其中 $\lvert n \rvert &#x3D; 1$ 。</p>
+<div>
+$$
+\exp(-\mathrm{i} a \cdot \sigma)
+= \cos \alpha -\mathrm{i} n \cdot \sigma \sin \alpha
+$$
+</div>
+
+<p>我们设</p>
+<div>
+$$
+\begin{cases}
+t = \cos \alpha \\
+x = n_1\sin \alpha \\
+y = n_2\sin \alpha \\
+z = n_3\sin \alpha
+\end{cases}
+$$
+</div>
+
+<p>那么 $t^2+x^2+y^2+z^2&#x3D;1$ ，且</p>
+<div>
+$$
+\exp(-\mathrm{i} a \cdot \sigma)
+= t - \mathrm{i} (x\sigma_1 + y\sigma_2 + z\sigma_3)
+$$
+</div>
+
+<p>于是 $SU(2)$ 群同胚于球面 $S^3$ 。</p>
+<h2 id="mathrm-SO-3"><a href="#mathrm-SO-3" class="headerlink" title="$\mathrm{SO}(3)$"></a>$\mathrm{SO}(3)$</h2><p>用类似的方法求李群生成元，设旋转矩阵 $R$ ，在单位矩阵附近展开：</p>
+<div>
+$$
+R_{ij}=\delta_{ij}+w_{ij}
+$$
+</div></div><a class="article-more button is-small is-size-7" href="/2026/01/22/SU(2)%E5%92%8CSO(3)%E7%9A%84%E6%8C%87%E6%95%B0%E6%98%A0%E5%B0%84%E8%AE%A1%E7%AE%97/#more">阅读更多</a></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2026-01-18T14:54:25.000Z" title="2026/1/18 22:54:25">2026-01-18</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E6%95%B0%E5%AD%A6/">数学</a></span><span class="level-item">5 分钟读完 (大约824个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2026/01/18/%E5%87%A0%E4%BD%95%E4%BB%A3%E6%95%B0%E8%A7%86%E8%A7%92%E4%B8%8B%E7%9A%84%E7%94%B5%E7%A3%81%E5%9C%BA%E7%90%86%E8%AE%BA/">几何代数视角下的电磁场理论</a></p><div class="content"><h2 id="单位制与符号约定"><a href="#单位制与符号约定" class="headerlink" title="单位制与符号约定"></a>单位制与符号约定</h2><p>本文采用自然单位制， $c&#x3D;\hbar&#x3D;\varepsilon_0&#x3D;1$ 。希腊字母上下标表示四个四维时空分量 $t,x,y,z$ ；而拉丁字母上下标表示三维空间分量 $x,y,z$ 。度规张量的符号约定如下</p>
+<div>
+$$
+\eta_{\mu\nu} = 
+\begin{pmatrix}
++1 & 0 & 0 & 0 \\
+0 & -1 & 0 & 0 \\
+0 & 0 & -1 & 0 \\
+0 & 0 & 0 & -1 \\
+\end{pmatrix}
+$$
+</div>
+
+
+<h2 id="时空代数"><a href="#时空代数" class="headerlink" title="时空代数"></a>时空代数</h2><p>时空代数为四维闵可夫斯基空间中的几何代数。其中定义了两个向量的几何积：</p>
+<div>
+$$
+ab = a \cdot b + a \wedge b
+$$
+</div>
+
+<p>右边第一项即向量的标量积（点乘），结果为标量，满足交换律；第二项为外积（锲积），满足反交换律。将两个向量锲积结果定义为二重矢量，类似可以定义多重矢量。根据锲积元素个数，将标量称为零形式，矢量为一形式，两个矢量的锲积为二形式，以此类推。</p>
+<p>将四维闵可夫斯基空间中四个基向量记为 $\gamma_\mu$ ；它们相互正交归一：</p>
+<div>
+$$
+\gamma_\mu \cdot \gamma_\nu = \eta_{\mu\nu}
+$$
+</div>
+
+<p>其中 $\eta_{\mu\nu}$ 为闵可夫斯基时空度规。根据正交归一条件可知对于不同的基向量，几何积就是锲积，以下不会区分两种积的形式。</p>
+<h2 id="麦克斯韦方程"><a href="#麦克斯韦方程" class="headerlink" title="麦克斯韦方程"></a>麦克斯韦方程</h2><p>在自然单位制下的真空麦克斯韦方程</p>
+<div>
+$$
+\begin{cases}
+\nabla \cdot E = \rho \\
+\nabla \cdot B = 0 \\
+\nabla \times E = - \cfrac{\partial B}{\partial t} \\
+\nabla \times B - \cfrac{\partial E}{\partial t} = j
+\end{cases}
+$$
+</div>
+
+<p>定义电流四矢量：</p>
+<div>
+$$
+J = \rho \gamma_0 + j^k \gamma_k
+$$
+</div>
+
+<p>以及电磁势矢量：</p>
+<div>
+$$
+A = \phi \gamma_0 + A^k \gamma_k
+$$
+</div>
+
+<p>如果知道麦克斯韦方程用电磁场张量的表示，可知电磁场张量和电磁势的梯度存在关系。下面我们计算电磁势矢量的梯度，首先给出梯度算子的形式：</p>
+<div>
+$$
+\nabla = \gamma^\mu \partial_\mu
+$$
+</div>
+
+<p>其中基矢量上下标的转换关系如下</p>
+<div>
+$$
+\gamma^\mu = \eta^{\mu\nu} \gamma_\nu
+$$
+</div>
+
+<p>电磁势矢量的梯度为</p>
+<div>
+$$
+\nabla A = \partial_0 \phi + \partial_k A^k + (\partial_k \phi + \partial_0 A^k) \gamma_0 \gamma_k - \cfrac{1}{2}(\partial_i A^j - \partial_j A^i) \gamma_i \gamma_j
+$$
+</div>
+
+<p>我们发现电磁势矢量的梯度是一个标量和一个二重矢量之和，而标量部分是洛伦兹规范条件。规范不止一种，如果需要考虑不同规范，那么就简单地取几何积的锲积部分得到电磁场。又根据电磁场和电磁势的关系，</p>
+<div>
+$$
+\begin{cases}
+E = -\nabla \phi - \cfrac{\partial A}{\partial t} \\
+B = \nabla \times A
+\end{cases}
+$$
+</div>
+
+<p>由此看出梯度和电磁势矢量的锲积就是电磁场，一个二重向量场：</p>
+<div>
+$$
+\begin{aligned}
+F =& \nabla \wedge A \\
+=& (\partial_k \phi + \partial_0 A^k) \gamma_0 \gamma_k - \cfrac{1}{2}(\partial_i A^j - \partial_j A^i) \gamma_i \gamma_j \\
+=& -E_k \gamma_0 \gamma_k - \varepsilon_{ijk} B_k \gamma_i \gamma_j
+\end{aligned}
+$$
+</div>
+
+<p>可以验证其梯度就是电流四矢量</p>
+<div>
+$$
+\begin{aligned}
+\nabla F =& (\nabla \cdot E)\gamma_0 + \left(\nabla \times B - \cfrac{\partial E}{\partial t}\right)_k \gamma_k \\
+&+ \left(\nabla \times E + \cfrac{\partial B}{\partial t}\right)_k \varepsilon_{ijk} \gamma_0\gamma_i\gamma_j + (\nabla \cdot B)\gamma_1\gamma_2\gamma_3 \\
+=& \rho \gamma_0 + j^k \gamma_k \\
+=& J
+\end{aligned}
+$$
+</div>
+
+<p>于是在时空代数下，麦克斯韦方程有简洁形式</p>
+<div>
+$$
+\nabla F = J
+$$
+</div>
+
+
+</div></article></div><nav class="pagination" role="navigation" aria-label="pagination"><div class="pagination-previous"><a href="/">上一页</a></div><div class="pagination-next"><a href="/page/3/">下一页</a></div><ul class="pagination-list is-hidden-mobile"><li><a class="pagination-link" href="/">1</a></li><li><a class="pagination-link is-current" href="/page/2/">2</a></li><li><a class="pagination-link" href="/page/3/">3</a></li><li><span class="pagination-ellipsis">&hellip;</span></li><li><a class="pagination-link" href="/page/22/">22</a></li></ul></nav></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar is-rounded" src="/android-chrome-512x512.png" alt="Chenxi Yu"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">Chenxi Yu</p><p class="is-size-6 is-block">PhD in PKU</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>Beijing, China</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives/"><p class="title">108</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories/"><p class="title">4</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags/"><p class="title">31</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/yuchenxi2000" target="_blank" rel="me noopener">关注我</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="me noopener" title="Github" href="https://github.com/yuchenxi2000"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="me noopener" title="Bilibili" href="https://space.bilibili.com/244355869"><i class="fab fa-bilibili"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="me noopener" title="Zhihu" href="https://www.zhihu.com/people/cha-xi-74-16"><i class="fab fa-zhihu"></i></a></div></div></div><!--!--><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">分类</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/%E5%85%B6%E4%BB%96/"><span class="level-start"><span class="level-item">其他</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E6%95%B0%E5%AD%A6/"><span class="level-start"><span class="level-item">数学</span></span><span class="level-end"><span class="level-item tag">43</span></span></a></li><li><a class="level is-mobile" href="/categories/%E7%89%A9%E7%90%86/"><span class="level-start"><span class="level-item">物理</span></span><span class="level-end"><span class="level-item tag">50</span></span></a></li><li><a class="level is-mobile" href="/categories/%E9%9F%B3%E4%B9%90/"><span class="level-start"><span class="level-item">音乐</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></div></div></div><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2026-03-28T09:12:57.000Z">2026-03-28</time></p><p class="title"><a href="/2026/03/28/PvZ%E9%AB%98%E7%B2%BE%E5%BA%A6%E9%94%AE%E6%8E%A7%E6%A1%86%E6%9E%B6AvZ/">PvZ高精度键控框架AvZ</a></p><p class="categories"><a href="/categories/%E5%85%B6%E4%BB%96/">其他</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2026-03-23T07:44:37.000Z">2026-03-23</time></p><p class="title"><a href="/2026/03/23/%E7%94%9F%E6%97%A5%E9%97%AE%E9%A2%98/">生日问题</a></p><p class="categories"><a href="/categories/%E6%95%B0%E5%AD%A6/">数学</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2026-03-19T06:04:32.000Z">2026-03-19</time></p><p class="title"><a href="/about/">关于我</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2026-03-06T03:20:33.000Z">2026-03-06</time></p><p class="title"><a href="/2026/03/06/%E8%87%AA%E6%97%8B%E8%A7%92%E5%8A%A8%E9%87%8F%E8%80%A6%E5%90%88/">自旋角动量耦合</a></p><p class="categories"><a href="/categories/%E7%89%A9%E7%90%86/">物理</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2026-02-26T02:48:02.000Z">2026-02-26</time></p><p class="title"><a href="/2026/02/26/Land%C3%A9%20g-factor/">Landé g-factor</a></p></div></article></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/NEGF/"><span class="tag">NEGF</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E4%BB%A3%E6%95%B0/"><span class="tag">代数</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%85%89%E5%AD%A6/"><span class="tag">光学</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%85%B6%E4%BB%96/"><span class="tag">其他</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%87%A0%E4%BD%95%E4%BB%A3%E6%95%B0/"><span class="tag">几何代数</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%9B%BA%E4%BD%93%E7%89%A9%E7%90%86/"><span class="tag">固体物理</span><span class="tag">13</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0/"><span class="tag">复变函数</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%A4%A9%E4%BD%93%E7%89%A9%E7%90%86/"><span class="tag">天体物理</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%AF%86%E5%BA%A6%E6%B3%9B%E5%87%BD%E7%90%86%E8%AE%BA/"><span class="tag">密度泛函理论</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%B7%B4%E6%B4%9B%E5%85%8B%E9%9F%B3%E4%B9%90/"><span class="tag">巴洛克音乐</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%B9%B3%E9%9D%A2%E5%87%A0%E4%BD%95/"><span class="tag">平面几何</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%B9%BF%E4%B9%89%E7%9B%B8%E5%AF%B9%E8%AE%BA/"><span class="tag">广义相对论</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%BC%B9%E6%80%A7%E5%8A%9B%E5%AD%A6/"><span class="tag">弹性力学</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%BE%AE%E5%88%86%E5%87%A0%E4%BD%95/"><span class="tag">微分几何</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B/"><span class="tag">微分方程</span><span class="tag">9</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%95%B0%E5%80%BC%E6%96%B9%E6%B3%95/"><span class="tag">数值方法</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%95%B0%E5%AD%A6/"><span class="tag">数学</span><span class="tag">43</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/"><span class="tag">数学分析</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%95%B0%E8%AE%BA/"><span class="tag">数论</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%A6%82%E7%8E%87%E7%BB%9F%E8%AE%A1/"><span class="tag">概率统计</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/"><span class="tag">泛函分析</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%89%A9%E7%90%86/"><span class="tag">物理</span><span class="tag">55</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%89%B9%E6%AE%8A%E5%87%BD%E6%95%B0/"><span class="tag">特殊函数</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%94%B5%E5%8A%A8%E5%8A%9B%E5%AD%A6/"><span class="tag">电动力学</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%9B%B8%E5%AF%B9%E8%AE%BA/"><span class="tag">相对论</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%BB%9F%E8%AE%A1%E5%8A%9B%E5%AD%A6/"><span class="tag">统计力学</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%BE%A4%E8%AE%BA/"><span class="tag">群论</span><span class="tag">12</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6/"><span class="tag">量子力学</span><span class="tag">30</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E9%87%8F%E5%AD%90%E5%9C%BA%E8%AE%BA/"><span class="tag">量子场论</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E9%9D%9E%E6%AC%A7%E5%87%A0%E4%BD%95/"><span class="tag">非欧几何</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E9%9F%B3%E4%B9%90/"><span class="tag">音乐</span><span class="tag">1</span></a></div></div></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a><p class="is-size-7"><span>&copy; 2026 Chenxi Yu</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="fab fa-creative-commons-nc"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/yuchenxi2000"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script data-pjax src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script data-pjax src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "此网站使用Cookie来改善您的体验。",
+          dismiss: "知道了！",
+          allow: "允许使用Cookie",
+          deny: "拒绝",
+          link: "了解更多",
+          policy: "Cookie政策",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js"></script><script src="/js/pjax.js"></script><!--!--><script type="text/javascript" id="MathJax-script" async>MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      },
+      svg: {
+        fontCache: 'global'
+      },
+      chtml: {
+        matchFontHeight: false
+      }
+    };</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js"></script><!--!--><!--!--><script data-pjax src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script data-pjax src="/js/insight.js" defer></script><script data-pjax>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script></body></html>

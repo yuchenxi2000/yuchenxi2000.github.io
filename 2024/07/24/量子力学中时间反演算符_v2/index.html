@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>量子力学中时间反演算符_v2 - YCX&#039;s Blog</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="YCX&#039;s Blog"><meta name="msapplication-TileImage" content="favicon.ico"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="YCX&#039;s Blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="量子力学中时间反演算符无自旋粒子要求时间反演后坐标不变，动量反向。 我们取坐标表象，下面证 $\mathcal{T}&amp;#x3D;\mathcal{K}$ 满足要求，其中 $\mathcal{K}$ 为共轭算符。计算坐标平均值：  $$ \int \psi(x)x\psi^*(x) \mathrm{d}x &amp;#x3D; \int \psi^*(x)x\psi(x) \mathrm{d}x $$   然后计算动"><meta property="og:type" content="blog"><meta property="og:title" content="量子力学中时间反演算符_v2"><meta property="og:url" content="https://yuchenxi2000.github.io/2024/07/24/%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E4%B8%AD%E6%97%B6%E9%97%B4%E5%8F%8D%E6%BC%94%E7%AE%97%E7%AC%A6_v2/"><meta property="og:site_name" content="YCX&#039;s Blog"><meta property="og:description" content="量子力学中时间反演算符无自旋粒子要求时间反演后坐标不变，动量反向。 我们取坐标表象，下面证 $\mathcal{T}&amp;#x3D;\mathcal{K}$ 满足要求，其中 $\mathcal{K}$ 为共轭算符。计算坐标平均值：  $$ \int \psi(x)x\psi^*(x) \mathrm{d}x &amp;#x3D; \int \psi^*(x)x\psi(x) \mathrm{d}x $$   然后计算动"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://yuchenxi2000.github.io/img/og_image.png"><meta property="article:published_time" content="2024-07-24T13:04:51.000Z"><meta property="article:modified_time" content="2026-03-30T12:14:19.038Z"><meta property="article:author" content="Chenxi Yu"><meta property="article:tag" content="物理"><meta property="article:tag" content="量子力学"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://yuchenxi2000.github.io/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://yuchenxi2000.github.io/2024/07/24/%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E4%B8%AD%E6%97%B6%E9%97%B4%E5%8F%8D%E6%BC%94%E7%AE%97%E7%AC%A6_v2/"},"headline":"量子力学中时间反演算符_v2","image":["https://yuchenxi2000.github.io/img/og_image.png"],"datePublished":"2024-07-24T13:04:51.000Z","dateModified":"2026-03-30T12:14:19.038Z","author":{"@type":"Person","name":"Chenxi Yu"},"publisher":{"@type":"Organization","name":"YCX's Blog","logo":{"@type":"ImageObject","url":"https://yuchenxi2000.github.io/2024/07/24/%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E4%B8%AD%E6%97%B6%E9%97%B4%E5%8F%8D%E6%BC%94%E7%AE%97%E7%AC%A6_v2/android-chrome-512x512.png"}},"description":"量子力学中时间反演算符无自旋粒子要求时间反演后坐标不变，动量反向。 我们取坐标表象，下面证 $\\mathcal{T}&#x3D;\\mathcal{K}$ 满足要求，其中 $\\mathcal{K}$ 为共轭算符。计算坐标平均值：  $$ \\int \\psi(x)x\\psi^*(x) \\mathrm{d}x &#x3D; \\int \\psi^*(x)x\\psi(x) \\mathrm{d}x $$   然后计算动"}</script><link rel="canonical" href="https://yuchenxi2000.github.io/2024/07/24/%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E4%B8%AD%E6%97%B6%E9%97%B4%E5%8F%8D%E6%BC%94%E7%AE%97%E7%AC%A6_v2/"><link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link data-pjax rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link data-pjax rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!--!--><!-- hexo injector head_end start --><script>
+  (function () {
+      function switchTab() {
+          if (!location.hash) {
+            return;
+          }
+
+          const id = '#' + CSS.escape(location.hash.substring(1));
+          const $tabMenu = document.querySelector(`.tabs a[href="${id}"]`);
+          if (!$tabMenu) {
+            return;
+          }
+
+          const $tabMenuContainer = $tabMenu.parentElement.parentElement;
+          Array.from($tabMenuContainer.children).forEach($menu => $menu.classList.remove('is-active'));
+          Array.from($tabMenuContainer.querySelectorAll('a'))
+              .map($menu => document.getElementById($menu.getAttribute("href").substring(1)))
+              .forEach($content => $content.classList.add('is-hidden'));
+
+          if ($tabMenu) {
+              $tabMenu.parentElement.classList.add('is-active');
+          }
+          const $activeTab = document.querySelector(id);
+          if ($activeTab) {
+              $activeTab.classList.remove('is-hidden');
+          }
+      }
+      switchTab();
+      window.addEventListener('hashchange', switchTab, false);
+  })();
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 8.1.1"></head><body class="is-1-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-12"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2024-07-24T13:04:51.000Z" title="2024/7/24 21:04:51">2024-07-24</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E7%89%A9%E7%90%86/">物理</a></span><span class="level-item">6 分钟读完 (大约939个字)</span></div></div><h1 class="title is-3 is-size-4-mobile">量子力学中时间反演算符_v2</h1><div class="content"><h1 id="量子力学中时间反演算符"><a href="#量子力学中时间反演算符" class="headerlink" title="量子力学中时间反演算符"></a>量子力学中时间反演算符</h1><h2 id="无自旋粒子"><a href="#无自旋粒子" class="headerlink" title="无自旋粒子"></a>无自旋粒子</h2><p>要求时间反演后坐标不变，动量反向。</p>
+<p>我们取坐标表象，下面证 $\mathcal{T}&#x3D;\mathcal{K}$ 满足要求，其中 $\mathcal{K}$ 为共轭算符。计算坐标平均值：</p>
+<div>
+$$
+\int \psi(x)x\psi^*(x) \mathrm{d}x = \int \psi^*(x)x\psi(x) \mathrm{d}x
+$$
+</div>
+
+<p>然后计算动量平均值</p>
+<div>
+$$
+\begin{gathered}
+\int \psi(x)\left(-\mathrm{i}\cfrac{\mathrm{d}}{\mathrm{d}x}\right)\psi^*(x) \mathrm{d}x
+=
+\int \left(+\mathrm{i}\cfrac{\mathrm{d}}{\mathrm{d}x}\right)\psi(x)\psi^*(x) \mathrm{d}x \\
+=
+\int \psi^*(x)\left(+\mathrm{i}\cfrac{\mathrm{d}}{\mathrm{d}x}\right)\psi(x) \mathrm{d}x \\
+\\\end{gathered}
+$$
+</div>
+
+<p>于是算符 $\mathcal{T}&#x3D;\mathcal{K}$ 满足上述要求，即为我们需要的时间反演算符。</p>
+<h2 id="自旋1-2粒子"><a href="#自旋1-2粒子" class="headerlink" title="自旋1&#x2F;2粒子"></a>自旋1&#x2F;2粒子</h2><p>为满足位置、动量在时间反演后的要求，假设时间反演算符为如下形式</p>
+<div>
+$$
+\mathcal{T}=U\mathcal{K}
+$$
+</div>
+
+<p>为满足时间反演后波函数归一化要求， $U$ 为幺正算符。再根据厄米算符与幺正算符的关系，以及任意二阶厄米算符能表示成单位矩阵和三个泡利算符的线性组合，因此假设</p>
+<div>
+$$
+U=e^{\mathrm{i}a_0+\mathrm{i}\sigma \cdot a}
+$$
+</div>
+
+<p>其中 $e^{\mathrm{i}a_0}$ 只是一个相因子，以下推导省略这个相因子。</p>
+<p>计算变换后沿 $b$ 方向的自旋 $S&#x3D;1&#x2F;2\hbar\sigma \cdot b$ </p>
+<div>
+$$
+\cfrac{\hbar}{2}\int \psi(x)e^{-\mathrm{i}\sigma\cdot a}(\sigma \cdot b)e^{+\mathrm{i}\sigma\cdot a}\psi^*(x) \mathrm{d}x
+$$
+</div>
+
+<p>如果我们知道四元数与泡利矩阵存在同构：</p>
+<div>
+$$
+\begin{cases}
+1 \rightarrow 1 \\
+i \rightarrow -\mathrm{i}\sigma_x \\
+j \rightarrow -\mathrm{i}\sigma_y \\
+k \rightarrow -\mathrm{i}\sigma_z \\
+\end{cases}
+$$
+</div>
+
+<p>再根据三维旋转可以用四元数乘积表示（参见<a href="/2020/07/03/%E4%B8%89%E7%BB%B4%E7%A9%BA%E9%97%B4%E6%97%8B%E8%BD%AC%E7%9A%84%E5%9B%9B%E5%85%83%E6%95%B0%E8%A1%A8%E7%A4%BA/" title="三维空间旋转的四元数表示">三维空间旋转的四元数表示</a>），加上泡利矩阵指数函数的值（参见<a href="/2026/01/22/SU(2)%E5%92%8CSO(3)%E7%9A%84%E6%8C%87%E6%95%B0%E6%98%A0%E5%B0%84%E8%AE%A1%E7%AE%97/" title="SU(2)和SO(3)的指数映射计算">SU(2)和SO(3)的指数映射计算</a>）</p>
+<div>
+$$
+e^{-\mathrm{i}\sigma\cdot a}=\cos\lvert a \rvert-\mathrm{i}\cfrac{\sigma \cdot a}{\lvert a \rvert}\sin\lvert a \rvert
+$$
+</div>
+
+<p>这正是<a href="/2020/07/03/%E4%B8%89%E7%BB%B4%E7%A9%BA%E9%97%B4%E6%97%8B%E8%BD%AC%E7%9A%84%E5%9B%9B%E5%85%83%E6%95%B0%E8%A1%A8%E7%A4%BA/" title="三维空间旋转的四元数表示">三维空间旋转的四元数表示</a>中的 $U(2\lvert a \rvert)$ 。</p>
+<p>于是 $e^{-\mathrm{i}\sigma\cdot a}(\sigma \cdot b)e^{+\mathrm{i}\sigma\cdot a}$ 的结果就是将矢量 $b$ 绕 $a$ 旋转 $2\lvert a \rvert$ 。设旋转后的矢量为 $c$ ，那么时间反演后自旋</p>
+<div>
+$$
+\cfrac{\hbar}{2}\int \psi(x)(\sigma \cdot c)\psi^*(x) \mathrm{d}x =\cfrac{\hbar}{2}\int \psi^*(x)(\sigma \cdot c)^T\psi(x) \mathrm{d}x
+$$
+</div>
+
+<p>因为转置后 $\sigma_y$ 变号，其余不变，所以转置算符的作用是 $xz$ 平面的镜像对称。因此时间反演后，自旋先绕 $a$ 旋转 $2\lvert a \rvert$ ，然后沿 $xz$ 平面镜像对称。为了得到空间反演，我们需要先绕 $y$ 轴旋转 $180^\circ$ 后再沿 $xz$ 平面做镜像对称，由此可以确定 $a&#x3D;(0,\pi&#x2F;2,0)$ ，因此自旋反演算符为</p>
+<div>
+$$
+\begin{gathered}
+\mathcal{T}
+= e^{\mathrm{i}a_0} e^{\mathrm{i}\sigma \cdot (0,\pi/2,0)}\mathcal{K} \\
+= e^{\mathrm{i}a_0} \mathrm{i}\sigma_y \mathcal{K} \\
+\\\end{gathered}
+$$
+</div>
+
+<p>相因子 $\exp(\mathrm{i}a_0)$ 可以任取，曾谨言的《量子力学 II》中选择相因子使得</p>
+<div>
+$$
+\begin{gathered}
+\mathcal{T} = -\mathrm{i}\sigma_y \mathcal{K} \\
+\\\end{gathered}
+$$
+</div>
+
+
+<h2 id="任意自旋粒子"><a href="#任意自旋粒子" class="headerlink" title="任意自旋粒子"></a>任意自旋粒子</h2><p>在上一小节中，我们知道共轭算符（对泡利矩阵相当于转置）的作用是 $xz$ 平面的镜像对称，为了得到空间反演，需要再沿 $y$ 轴旋转 $180^\circ$ 。而任意自旋粒子的旋转可以用自旋算符表示，因此时间反演算符为</p>
+<div>
+$$
+\mathcal{T}=e^{-\mathrm{i}\pi S_y/\hbar}\mathcal{K}
+$$
+</div>
+
+
+<p>计算 $\mathcal{T}^2$ ，</p>
+<div>
+$$
+\mathcal{T}^2=e^{-2\mathrm{i}\pi S_y/\hbar}
+$$
+</div>
+
+<p>对于自旋整数粒子， $\mathcal{T}^2&#x3D;1$ ；对于自旋半整数粒子， $\mathcal{T}^2&#x3D;-1$ </p>
+</div><div class="article-licensing box"><div class="licensing-title"><p>量子力学中时间反演算符_v2</p><p><a href="https://yuchenxi2000.github.io/2024/07/24/量子力学中时间反演算符_v2/">https://yuchenxi2000.github.io/2024/07/24/量子力学中时间反演算符_v2/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>Chenxi Yu</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2024-07-24</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2026-03-30</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/%E7%89%A9%E7%90%86/">物理</a><a class="link-muted mr-2" rel="tag" href="/tags/%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6/">量子力学</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2024/07/24/Kramers%E5%AE%9A%E7%90%86/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">Kramers定理</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2024/06/02/%E5%86%B2%E9%87%8F%E5%AE%9A%E7%90%86/"><span class="level-item">冲量定理</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><!--!--><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a><p class="is-size-7"><span>&copy; 2026 Chenxi Yu</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="fab fa-creative-commons-nc"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/yuchenxi2000"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script data-pjax src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script data-pjax src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "此网站使用Cookie来改善您的体验。",
+          dismiss: "知道了！",
+          allow: "允许使用Cookie",
+          deny: "拒绝",
+          link: "了解更多",
+          policy: "Cookie政策",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js"></script><script src="/js/pjax.js"></script><!--!--><script type="text/javascript" id="MathJax-script" async>MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      },
+      svg: {
+        fontCache: 'global'
+      },
+      chtml: {
+        matchFontHeight: false
+      }
+    };</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js"></script><!--!--><!--!--><script data-pjax src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script data-pjax src="/js/insight.js" defer></script><script data-pjax>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script></body></html>

@@ -1,0 +1,436 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>球面三角与柏拉图立体 - YCX&#039;s Blog</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="YCX&#039;s Blog"><meta name="msapplication-TileImage" content="favicon.ico"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="YCX&#039;s Blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="定义三维球面上，通过球心的平面切出的圆叫大圆，以大圆的圆弧为边，三条边构成球面三角。边长为圆弧对应的球心角，夹角为两个圆弧对应大圆所在平面的夹角。 记号若不加说明，下面假设所研究的球面三角三条边为 $a,b,c$ ，对应夹角为 $\alpha,\beta,\gamma$ ，顶点为 $A,B,C$ 。 对偶原理任意一点，和球面上的对称点连线作为法线，可以做出一个大圆，这样就建立了点和边的对应关系。根"><meta property="og:type" content="blog"><meta property="og:title" content="球面三角与柏拉图立体"><meta property="og:url" content="https://yuchenxi2000.github.io/2024/08/13/%E7%90%83%E9%9D%A2%E4%B8%89%E8%A7%92%E4%B8%8E%E6%9F%8F%E6%8B%89%E5%9B%BE%E7%AB%8B%E4%BD%93/"><meta property="og:site_name" content="YCX&#039;s Blog"><meta property="og:description" content="定义三维球面上，通过球心的平面切出的圆叫大圆，以大圆的圆弧为边，三条边构成球面三角。边长为圆弧对应的球心角，夹角为两个圆弧对应大圆所在平面的夹角。 记号若不加说明，下面假设所研究的球面三角三条边为 $a,b,c$ ，对应夹角为 $\alpha,\beta,\gamma$ ，顶点为 $A,B,C$ 。 对偶原理任意一点，和球面上的对称点连线作为法线，可以做出一个大圆，这样就建立了点和边的对应关系。根"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://yuchenxi2000.github.io/sine-theorem-1.svg"><meta property="og:image" content="https://yuchenxi2000.github.io/sine-theorem-2.svg"><meta property="og:image" content="https://yuchenxi2000.github.io/gauss-bonnet.svg"><meta property="og:image" content="https://yuchenxi2000.github.io/tetrahedron.svg"><meta property="article:published_time" content="2024-08-13T04:53:24.000Z"><meta property="article:modified_time" content="2026-03-30T12:14:19.252Z"><meta property="article:author" content="Chenxi Yu"><meta property="article:tag" content="数学"><meta property="article:tag" content="非欧几何"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://yuchenxi2000.github.io/sine-theorem-1.svg"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://yuchenxi2000.github.io/2024/08/13/%E7%90%83%E9%9D%A2%E4%B8%89%E8%A7%92%E4%B8%8E%E6%9F%8F%E6%8B%89%E5%9B%BE%E7%AB%8B%E4%BD%93/"},"headline":"球面三角与柏拉图立体","image":[],"datePublished":"2024-08-13T04:53:24.000Z","dateModified":"2026-03-30T12:14:19.252Z","author":{"@type":"Person","name":"Chenxi Yu"},"publisher":{"@type":"Organization","name":"YCX's Blog","logo":{"@type":"ImageObject","url":"https://yuchenxi2000.github.io/2024/08/13/%E7%90%83%E9%9D%A2%E4%B8%89%E8%A7%92%E4%B8%8E%E6%9F%8F%E6%8B%89%E5%9B%BE%E7%AB%8B%E4%BD%93/android-chrome-512x512.png"}},"description":"定义三维球面上，通过球心的平面切出的圆叫大圆，以大圆的圆弧为边，三条边构成球面三角。边长为圆弧对应的球心角，夹角为两个圆弧对应大圆所在平面的夹角。 记号若不加说明，下面假设所研究的球面三角三条边为 $a,b,c$ ，对应夹角为 $\\alpha,\\beta,\\gamma$ ，顶点为 $A,B,C$ 。 对偶原理任意一点，和球面上的对称点连线作为法线，可以做出一个大圆，这样就建立了点和边的对应关系。根"}</script><link rel="canonical" href="https://yuchenxi2000.github.io/2024/08/13/%E7%90%83%E9%9D%A2%E4%B8%89%E8%A7%92%E4%B8%8E%E6%9F%8F%E6%8B%89%E5%9B%BE%E7%AB%8B%E4%BD%93/"><link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link data-pjax rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link data-pjax rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!--!--><!-- hexo injector head_end start --><script>
+  (function () {
+      function switchTab() {
+          if (!location.hash) {
+            return;
+          }
+
+          const id = '#' + CSS.escape(location.hash.substring(1));
+          const $tabMenu = document.querySelector(`.tabs a[href="${id}"]`);
+          if (!$tabMenu) {
+            return;
+          }
+
+          const $tabMenuContainer = $tabMenu.parentElement.parentElement;
+          Array.from($tabMenuContainer.children).forEach($menu => $menu.classList.remove('is-active'));
+          Array.from($tabMenuContainer.querySelectorAll('a'))
+              .map($menu => document.getElementById($menu.getAttribute("href").substring(1)))
+              .forEach($content => $content.classList.add('is-hidden'));
+
+          if ($tabMenu) {
+              $tabMenu.parentElement.classList.add('is-active');
+          }
+          const $activeTab = document.querySelector(id);
+          if ($activeTab) {
+              $activeTab.classList.remove('is-hidden');
+          }
+      }
+      switchTab();
+      window.addEventListener('hashchange', switchTab, false);
+  })();
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 8.1.1"></head><body class="is-1-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-12"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2024-08-13T04:53:24.000Z" title="2024/8/13 12:53:24">2024-08-13</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E6%95%B0%E5%AD%A6/">数学</a></span><span class="level-item">14 分钟读完 (大约2144个字)</span></div></div><h1 class="title is-3 is-size-4-mobile">球面三角与柏拉图立体</h1><div class="content"><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>三维球面上，通过球心的平面切出的圆叫大圆，以大圆的圆弧为边，三条边构成球面三角。边长为圆弧对应的球心角，夹角为两个圆弧对应大圆所在平面的夹角。</p>
+<h2 id="记号"><a href="#记号" class="headerlink" title="记号"></a>记号</h2><p>若不加说明，下面假设所研究的球面三角三条边为 $a,b,c$ ，对应夹角为 $\alpha,\beta,\gamma$ ，顶点为 $A,B,C$ 。</p>
+<h2 id="对偶原理"><a href="#对偶原理" class="headerlink" title="对偶原理"></a>对偶原理</h2><p>任意一点，和球面上的对称点连线作为法线，可以做出一个大圆，这样就建立了点和边的对应关系。根据这个关系可以作出一个球面三角的极三角形，可以证明两者的边与角存在如下关系：</p>
+<div>
+$$
+\begin{cases}
+a^\prime = \pi - a \\
+b^\prime = \pi - b \\
+c^\prime = \pi - c \\
+\alpha^\prime = \pi - \alpha \\
+\beta^\prime = \pi - \beta \\
+\gamma^\prime = \pi - \gamma \\
+\end{cases}
+$$
+</div>
+
+<p>注意这个对应关系需要给定方向的约定，可以用右手法则，四根手指指向大圆逆时针方向，大拇指朝向就是法线方向。</p>
+<h2 id="正弦定理"><a href="#正弦定理" class="headerlink" title="正弦定理"></a>正弦定理</h2><h3 id="直角三角形情形"><a href="#直角三角形情形" class="headerlink" title="直角三角形情形"></a>直角三角形情形</h3><p><img src="/sine-theorem-1.svg"></p>
+<p>如图， $\gamma&#x3D;\pi&#x2F;2$ ，作出垂直的二面角 $\angle B^\prime-OH-A^\prime$ 。做辅助线使得 $HD \perp OA^\prime$ 。易得 $B^\prime D\perp OA^\prime$ （因为 $OA\perp HD$ 且 $BH \perp OA$ ，因此 $OA^\prime \perp B^\prime DH$ ）</p>
+<div>
+$$
+\begin{gathered}
+\sin c = \cfrac{B^\prime D}{O B^\prime} \\
+\sin \alpha = \cfrac{B^\prime H}{B^\prime D} \\
+\sin a = \cfrac{B^\prime H}{OB^\prime} \\
+\\\end{gathered}
+$$
+</div>
+
+
+<p>因此</p>
+<div>
+$$
+\sin \alpha = \cfrac{\sin a}{\sin c}
+$$
+</div>
+
+
+<h3 id="任意三角形情形"><a href="#任意三角形情形" class="headerlink" title="任意三角形情形"></a>任意三角形情形</h3><p><img src="/sine-theorem-2.svg"></p>
+<p>做垂线 $BH \perp AC$ （球面三角垂线）记 $BH&#x3D;h$ </p>
+<p>有</p>
+<div>
+$$
+\begin{gathered}
+\sin \alpha = \cfrac{\sin h}{\sin c} \\
+\sin \gamma = \cfrac{\sin h}{\sin a} \\
+\\\end{gathered}
+$$
+</div>
+
+<p>所以</p>
+<div>
+$$
+\cfrac{\sin a}{\sin \alpha}=\cfrac{\sin c}{\sin \gamma}
+$$
+</div>
+
+<p>一般地有</p>
+<div>
+$$
+\cfrac{\sin a}{\sin \alpha}=\cfrac{\sin b}{\sin \beta}=\cfrac{\sin c}{\sin \gamma}
+$$
+</div>
+
+
+<h3 id="另一种证明方法"><a href="#另一种证明方法" class="headerlink" title="另一种证明方法"></a>另一种证明方法</h3><p>运用下面将证明的余弦定理</p>
+<span id="more"></span>
+<div>
+$$
+\begin{gathered}
+\sin \gamma = \sqrt{1 - \left(\cfrac{\cos c - \cos a \cos b}{\sin a \sin b}\right)^2} \\
+= \cfrac{\sqrt{(\sin a \sin b)^2 - (\cos c - \cos a \cos b)^2}}{\sin a \sin b} \\
+= \cfrac{\sqrt{(\sin a \sin b - \cos c + \cos a \cos b) (\sin a \sin b + \cos c - \cos a \cos b)}}{\sin a \sin b} \\
+= \cfrac{\sqrt{\lbrack \cos (a - b) - \cos c\rbrack  \lbrack \cos c - \cos (a + b)\rbrack }}{\sin a \sin b} \\
+= \cfrac{\sqrt{(-2)\sin \cfrac{a-b+c}{2}\sin \cfrac{a-b-c}{2}(-2)\sin\cfrac{c+a+b}{2}\sin\cfrac{c-a-b}{2}}}{\sin a \sin b} \\
+= \cfrac{2\sqrt{\sin \cfrac{a-b+c}{2}\sin \cfrac{-a+b+c}{2}\sin\cfrac{a+b+c}{2}\sin\cfrac{a+b-c}{2}}}{\sin a \sin b} \\
+= \cfrac{2\sqrt{\sin s\sin(s-a)\sin(s-b)\sin(s-c)}}{\sin a \sin b} \\
+\\\end{gathered}
+$$
+</div>
+
+<p>其中 $s&#x3D;(a+b+c)&#x2F;2$ 。</p>
+<p>所以</p>
+<div>
+$$
+\begin{gathered}
+\cfrac{\sin c}{\sin \gamma} = \cfrac{\sin a \sin b \sin c}{2\sqrt{\sin s\sin(s-a)\sin(s-b)\sin(s-c)}} \\
+\\\end{gathered}
+$$
+</div>
+
+<p>因为该式对 $a,b,c$ 轮换对称，所以</p>
+<div>
+$$
+\cfrac{\sin a}{\sin \alpha}=\cfrac{\sin b}{\sin \beta}=\cfrac{\sin c}{\sin \gamma}
+$$
+</div>
+
+
+<h2 id="余弦定理"><a href="#余弦定理" class="headerlink" title="余弦定理"></a>余弦定理</h2><p>设 $OA,OB,OC$ 对应向量为 $n_a,n_b,n_c$ </p>
+<p>则边长为</p>
+<div>
+$$
+\begin{gathered}
+\cos a = n_b \cdot n_c \\
+\cos b = n_c \cdot n_a \\
+\cos c = n_a \cdot n_b \\
+\\\end{gathered}
+$$
+</div>
+
+<p>二面角 $\gamma$ 为 $n_a,n_c$ 张成平面与 $n_b,n_c$ 张成平面的法线夹角</p>
+<div>
+$$
+\cos \gamma = \cfrac{(n_a \times n_c) \cdot (n_b \times n_c)}{\lvert n_a \times n_c \rvert \lvert n_b \times n_c \rvert}
+$$
+</div>
+
+<p>其中</p>
+<div>
+$$
+\begin{gathered}
+(n_a \times n_c) \cdot (n_b \times n_c) \\
+= n_b \cdot \lbrack n_c \times (n_a \times n_c)\rbrack  \\
+= n_b \cdot \lbrack n_a - (n_c \cdot n_a)n_c\rbrack  \\
+= n_b \cdot n_a - (n_c \cdot n_a)(n_c \cdot n_b) \\
+= \cos c - \cos a \cos b
+\\\end{gathered}
+$$
+</div>
+
+<p>所以</p>
+<div>
+$$
+\cos \gamma = \cfrac{\cos c - \cos a \cos b}{\sin a \sin b}
+$$
+</div>
+
+<p>或者</p>
+<div>
+$$
+\cos c = \cos a \cos b + \sin a \sin b \cos \gamma
+$$
+</div>
+
+<p>根据对偶原理，作出极三角形然后在其上运用余弦定理得</p>
+<div>
+$$
+\cos \gamma = -\cos \alpha \cos \beta + \sin \alpha \sin \beta \cos c
+$$
+</div>
+
+
+<h2 id="面积"><a href="#面积" class="headerlink" title="面积"></a>面积</h2><p>Gauss-Bonnet定理：向量沿曲面上闭曲线平移一周后的角度差等于曲率在围成闭区域上的积分。</p>
+<p><img src="/gauss-bonnet.svg"></p>
+<p>如上图，球面三角ABC，取向量沿BA方向，按(1)(2)(3)路径平移，算出平移后与原向量夹角 $\alpha+\beta+\gamma-\pi$ ，根据Gauss-Bonnet定理，加上半径 $R$ 的球表面高斯曲率 $1&#x2F;R^2$ ，</p>
+<div>
+$$
+\begin{gathered}
+\alpha+\beta+\gamma-\pi=\cfrac{1}{R^2}S \\
+S=(\alpha+\beta+\gamma-\pi)R^2 \\
+\\\end{gathered}
+$$
+</div>
+
+<p>由此可知</p>
+<ul>
+<li><p>球面三角内角和大于 $180^\circ$ 。因为球面曲率为正，如果在一个曲率为负的曲面上则内角和小于 $180^\circ$ 。</p>
+</li>
+<li><p>取一个大圆，在上面任意取三点连成一个球面三角，可以求得半球面表面积，乘2得到球表面积 $4\pi R^2$</p>
+</li>
+</ul>
+<h2 id="四元素公式"><a href="#四元素公式" class="headerlink" title="四元素公式"></a>四元素公式</h2><div>
+$$
+\begin{gathered}
+\cos b \cos \gamma = \cot a \sin b - \cot \alpha \sin \gamma \\
+\cos b \cos \alpha = \cot c \sin b - \cot \gamma \sin \alpha \\
+\cos c \cos \alpha = \cot b \sin c - \cot \beta \sin \alpha \\
+\cos c \cos \beta = \cot a \sin c - \cot \alpha \sin \beta \\
+\cos a \cos \beta = \cot c \sin a - \cot \gamma \sin \beta \\
+\cos a \cos \gamma = \cot b \sin a - \cot \beta \sin \gamma \\
+\\\end{gathered}
+$$
+</div>
+
+
+<p>证明：以第一个公式为例，</p>
+<p>先用正弦定理</p>
+<div>
+$$
+\cfrac{\sin b}{\sin a} = \cfrac{\sin \beta}{\sin \alpha}
+$$
+</div>
+
+<p>然后用余弦定理，把 $\cos b,\cos a$ 用角度表示，</p>
+<div>
+$$
+\begin{gathered}
+\cos b \cos \gamma - \cot a \sin b + \cot \alpha \sin \gamma \\
+=\cos\gamma\cfrac{\cos \beta + \cos \alpha \cos \gamma}{\sin \alpha \sin \gamma} - \cfrac{\sin \beta}{\sin \alpha}\cfrac{\cos \alpha + \cos \beta \cos \gamma}{\sin \beta \sin \gamma} + \cot \alpha \sin \gamma \\
+= \cfrac{\cos\gamma\cos\beta + \cos \alpha \cos^2 \gamma - \cos \alpha - \cos \beta \cos \gamma + \cos \alpha \sin^2 \gamma}{\sin \alpha \sin \gamma} = 0
+\\\end{gathered}
+$$
+</div>
+
+
+<h2 id="球面三角与球心对应平行四面体体积"><a href="#球面三角与球心对应平行四面体体积" class="headerlink" title="球面三角与球心对应平行四面体体积"></a>球面三角与球心对应平行四面体体积</h2><p>见<a href="/2021/12/01/%E5%8E%9F%E8%83%9E%E4%BD%93%E7%A7%AF%E5%85%AC%E5%BC%8F/" title="原胞体积公式">原胞体积公式</a></p>
+<h2 id="柏拉图立体"><a href="#柏拉图立体" class="headerlink" title="柏拉图立体"></a>柏拉图立体</h2><p>根据柏拉图立体上某一点上的角之和不能超过 $360^\circ$ ，可知柏拉图立体只有5个，分别为正四面体、正六面体（即立方体）、正八面体、正十二面体、正二十面体。</p>
+<p>可以利用球面三角求解柏拉图立体各边长&#x2F;二面体角&#x2F;体积等。方法是球极投影，从各柏拉图立体的中心与柏拉图立体上各点做射线，与中心为球心的球相交。这个过程中，柏拉图立体“膨胀”到了球面上。可以想象在柏拉图立体中心放一盏灯，再在最外面放一个球。如下图，以正四面体为例：</p>
+<p><img src="/tetrahedron.svg"></p>
+<p>由于所有边长、角度相等，因此 $\angle BAC&#x3D;120^\circ$ ，根据余弦定理（对偶形式）可以求出 $AB$ 的球心角</p>
+<div>
+$$
+\begin{gathered}
+\angle AOB=\arccos \cfrac{\cos 120^\circ+\cos^2 120^\circ }{\sin^2 120^\circ} \\
+=\arccos \left(-\frac{1}{3}\right) \\
+\approx 109.5^\circ
+\\\end{gathered}
+$$
+</div>
+
+<p>如分子 $\mathrm{CH_3}$ 的键角就可以这样求出。</p>
+<p>作为例子，求其体积，运用<a href="/2021/12/01/%E5%8E%9F%E8%83%9E%E4%BD%93%E7%A7%AF%E5%85%AC%E5%BC%8F/" title="原胞体积公式">原胞体积公式</a>中得到的公式，假设边长 $a$ ，球的半径 $R$ </p>
+<p>首先， $a,R$ 之间关系用通常三角形的公式求出</p>
+<div>
+$$
+\cfrac{a}{2R}=\sin \cfrac{\angle AOB}{2}=\sqrt{\cfrac{1-\cos \angle AOB}{2}}=\sqrt{\frac{2}{3}}
+$$
+</div>
+
+<p>然后求 $OABC$ 体积</p>
+<div>
+$$
+\begin{gathered}
+V_{OABC}=\frac{1}{6}R^3\sqrt{2\cos^3\angle AOB-3\cos^2\angle AOB+1} \\
+=\frac{1}{6}R^3\sqrt{-\frac{2}{27}-\frac{3}{9}+1} \\
+=\frac{1}{6}R^3\sqrt{-\frac{2}{27}+\frac{2}{3}} \\
+=\frac{1}{6}R^3\sqrt{\frac{16}{27}} \\
+=\frac{2}{9\sqrt{3}}R^3 \\
+\\\end{gathered}
+$$
+</div>
+
+<p>所以正四面体体积</p>
+<div>
+$$
+\begin{gathered}
+V = 4V_{OABC}= \frac{8}{9\sqrt{3}}R^3\\
+=\frac{8}{9\sqrt{3}}\left(\frac{\sqrt{3}}{2\sqrt{2}}a\right)^3 
+=\frac{1}{6\sqrt{2}}a^3 \approx 0.118 a^3
+\\\end{gathered}
+$$
+</div>
+
+
+<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><h4 id="正六面体（即立方体）"><a href="#正六面体（即立方体）" class="headerlink" title="正六面体（即立方体）"></a>正六面体（即立方体）</h4><p>易得</p>
+<div>
+$$
+V = a^3
+$$
+</div>
+
+<h4 id="正八面体"><a href="#正八面体" class="headerlink" title="正八面体"></a>正八面体</h4><p>根据中心对称，将其切成八块，易得</p>
+<div>
+$$
+\begin{gathered}
+V = \frac{4}{3}R^3 \\
+= \frac{4}{3}\left(\frac{a}{\sqrt{2}}\right)^3 =\frac{\sqrt{2}}{3}a^3 \approx 0.471 a^3
+\\\end{gathered}
+$$
+</div>
+
+<h4 id="正十二面体"><a href="#正十二面体" class="headerlink" title="正十二面体"></a>正十二面体</h4><p>每个“球面正五边形”，其中心与其每条边的两个顶点构成五个相同的球面三角，内角分别为 $60^\circ,60^\circ,72^\circ$ 。</p>
+<p>由此可以求出球面三角的边，然后求 $a,R$ 关系，然后通过求正五边形为底的锥体的体积的方式求体积关于 $R$ 表达式，最后把 $R$ 代换成 $a$ 。</p>
+<div>
+$$
+\begin{gathered}
+\cos c =\cfrac{\cos 72^\circ+\cos^2 60^\circ}{\sin^2 60^\circ} \\
+\cos a = \cos b =\cfrac{\cos 60^\circ+\cos 60^\circ \cos 72^\circ}{\sin 60^\circ \sin 72^\circ} \\
+\\\end{gathered}
+$$
+</div>
+
+
+<div>
+$$
+\cfrac{a}{2R}=\sin \cfrac{c}{2}=\sqrt{\cfrac{1-\cos c}{2}}
+$$
+</div>
+
+
+<p>求高：</p>
+<div>
+$$
+\cfrac{h}{R}=\cos a
+$$
+</div>
+
+<p>正五边形面积：</p>
+<div>
+$$
+S=\frac{5}{2}\left(\cfrac{a}{2\sin 36^\circ}\right)^2\sin72^\circ
+$$
+</div>
+
+
+<div>
+$$
+V_{\text{part}}=\frac{1}{3}Sh
+$$
+</div>
+
+
+<div>
+$$
+V=12V_{\text{part}} \approx 7.66 a^3
+$$
+</div>
+
+
+<h4 id="正二十面体"><a href="#正二十面体" class="headerlink" title="正二十面体"></a>正二十面体</h4><p>每个正三角形对应球面三角内角 $72^\circ$ ，用求正四面体体积的思路即可。</p>
+<div>
+$$
+\cos \theta=\cfrac{\cos 72^\circ+\cos^2 72^\circ}{\sin^2 72^\circ}
+$$
+</div>
+
+
+<div>
+$$
+\cfrac{a}{2R}=\sin \cfrac{\theta}{2}=\sqrt{\cfrac{1-\cos \theta}{2}}
+$$
+</div>
+
+
+<div>
+$$
+V_{\text{part}}=\frac{1}{6}R^3\sqrt{2\cos^3\theta-3\cos^2\theta+1}
+$$
+</div>
+
+
+<div>
+$$
+V=20V_{\text{part}} \approx 2.18 a^3
+$$
+</div>
+
+
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>通过球极投影的方式，可以用球面三角的方法得到柏拉图立体的相关性质。</p>
+</div><div class="article-licensing box"><div class="licensing-title"><p>球面三角与柏拉图立体</p><p><a href="https://yuchenxi2000.github.io/2024/08/13/球面三角与柏拉图立体/">https://yuchenxi2000.github.io/2024/08/13/球面三角与柏拉图立体/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>Chenxi Yu</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2024-08-13</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2026-03-30</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/%E6%95%B0%E5%AD%A6/">数学</a><a class="link-muted mr-2" rel="tag" href="/tags/%E9%9D%9E%E6%AC%A7%E5%87%A0%E4%BD%95/">非欧几何</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2024/08/15/%E4%B8%89%E8%A7%92%E5%BD%A2SSS%E9%9D%A2%E7%A7%AF%E5%85%AC%E5%BC%8F/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">三角形SSS面积公式</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2024/08/09/%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E4%B8%AD%E8%B0%90%E6%8C%AF%E5%AD%90%E5%8F%8A%E5%8E%84%E7%B1%B3%E5%A4%9A%E9%A1%B9%E5%BC%8F/"><span class="level-item">量子力学中谐振子及厄米多项式</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><!--!--><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a><p class="is-size-7"><span>&copy; 2026 Chenxi Yu</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="fab fa-creative-commons-nc"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/yuchenxi2000"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script data-pjax src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script data-pjax src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "此网站使用Cookie来改善您的体验。",
+          dismiss: "知道了！",
+          allow: "允许使用Cookie",
+          deny: "拒绝",
+          link: "了解更多",
+          policy: "Cookie政策",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js"></script><script src="/js/pjax.js"></script><!--!--><script type="text/javascript" id="MathJax-script" async>MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      },
+      svg: {
+        fontCache: 'global'
+      },
+      chtml: {
+        matchFontHeight: false
+      }
+    };</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js"></script><!--!--><!--!--><script data-pjax src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script data-pjax src="/js/insight.js" defer></script><script data-pjax>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script></body></html>

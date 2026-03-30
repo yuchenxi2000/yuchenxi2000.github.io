@@ -1,0 +1,671 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>赝势方法 - YCX&#039;s Blog</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="YCX&#039;s Blog"><meta name="msapplication-TileImage" content="favicon.ico"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="YCX&#039;s Blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="Orthogonalized plane wave参考： http:&amp;#x2F;&amp;#x2F;fdjpkc.fudan.edu.cn&amp;#x2F;_upload&amp;#x2F;article&amp;#x2F;files&amp;#x2F;b2&amp;#x2F;20&amp;#x2F;f0e82943466dbfeefba03ad52497&amp;#x2F;b37cc14f-9e23-4fe5-b98d-025e4e532b87.pdf  $$ \ket{\chi_p} &amp;#x3D; \ket{p} - \sum_j \braket{u_"><meta property="og:type" content="blog"><meta property="og:title" content="赝势方法"><meta property="og:url" content="https://yuchenxi2000.github.io/2023/11/16/%E8%B5%9D%E5%8A%BF%E6%96%B9%E6%B3%95/"><meta property="og:site_name" content="YCX&#039;s Blog"><meta property="og:description" content="Orthogonalized plane wave参考： http:&amp;#x2F;&amp;#x2F;fdjpkc.fudan.edu.cn&amp;#x2F;_upload&amp;#x2F;article&amp;#x2F;files&amp;#x2F;b2&amp;#x2F;20&amp;#x2F;f0e82943466dbfeefba03ad52497&amp;#x2F;b37cc14f-9e23-4fe5-b98d-025e4e532b87.pdf  $$ \ket{\chi_p} &amp;#x3D; \ket{p} - \sum_j \braket{u_"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://yuchenxi2000.github.io/img/og_image.png"><meta property="article:published_time" content="2023-11-16T12:36:51.000Z"><meta property="article:modified_time" content="2026-03-30T12:14:20.017Z"><meta property="article:author" content="Chenxi Yu"><meta property="article:tag" content="物理"><meta property="article:tag" content="量子力学"><meta property="article:tag" content="密度泛函理论"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://yuchenxi2000.github.io/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://yuchenxi2000.github.io/2023/11/16/%E8%B5%9D%E5%8A%BF%E6%96%B9%E6%B3%95/"},"headline":"赝势方法","image":["https://yuchenxi2000.github.io/img/og_image.png"],"datePublished":"2023-11-16T12:36:51.000Z","dateModified":"2026-03-30T12:14:20.017Z","author":{"@type":"Person","name":"Chenxi Yu"},"publisher":{"@type":"Organization","name":"YCX's Blog","logo":{"@type":"ImageObject","url":"https://yuchenxi2000.github.io/2023/11/16/%E8%B5%9D%E5%8A%BF%E6%96%B9%E6%B3%95/android-chrome-512x512.png"}},"description":"Orthogonalized plane wave参考： http:&#x2F;&#x2F;fdjpkc.fudan.edu.cn&#x2F;_upload&#x2F;article&#x2F;files&#x2F;b2&#x2F;20&#x2F;f0e82943466dbfeefba03ad52497&#x2F;b37cc14f-9e23-4fe5-b98d-025e4e532b87.pdf  $$ \\ket{\\chi_p} &#x3D; \\ket{p} - \\sum_j \\braket{u_"}</script><link rel="canonical" href="https://yuchenxi2000.github.io/2023/11/16/%E8%B5%9D%E5%8A%BF%E6%96%B9%E6%B3%95/"><link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link data-pjax rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link data-pjax rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!--!--><!-- hexo injector head_end start --><script>
+  (function () {
+      function switchTab() {
+          if (!location.hash) {
+            return;
+          }
+
+          const id = '#' + CSS.escape(location.hash.substring(1));
+          const $tabMenu = document.querySelector(`.tabs a[href="${id}"]`);
+          if (!$tabMenu) {
+            return;
+          }
+
+          const $tabMenuContainer = $tabMenu.parentElement.parentElement;
+          Array.from($tabMenuContainer.children).forEach($menu => $menu.classList.remove('is-active'));
+          Array.from($tabMenuContainer.querySelectorAll('a'))
+              .map($menu => document.getElementById($menu.getAttribute("href").substring(1)))
+              .forEach($content => $content.classList.add('is-hidden'));
+
+          if ($tabMenu) {
+              $tabMenu.parentElement.classList.add('is-active');
+          }
+          const $activeTab = document.querySelector(id);
+          if ($activeTab) {
+              $activeTab.classList.remove('is-hidden');
+          }
+      }
+      switchTab();
+      window.addEventListener('hashchange', switchTab, false);
+  })();
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 8.1.1"></head><body class="is-1-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-12"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2023-11-16T12:36:51.000Z" title="2023/11/16 20:36:51">2023-11-16</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E7%89%A9%E7%90%86/">物理</a></span><span class="level-item">22 分钟读完 (大约3276个字)</span></div></div><h1 class="title is-3 is-size-4-mobile">赝势方法</h1><div class="content"><h2 id="Orthogonalized-plane-wave"><a href="#Orthogonalized-plane-wave" class="headerlink" title="Orthogonalized plane wave"></a>Orthogonalized plane wave</h2><p>参考：</p>
+<p><a target="_blank" rel="noopener" href="http://fdjpkc.fudan.edu.cn/_upload/article/files/b2/20/f0e82943466dbfeefba03ad52497/b37cc14f-9e23-4fe5-b98d-025e4e532b87.pdf">http://fdjpkc.fudan.edu.cn/_upload/article/files/b2/20/f0e82943466dbfeefba03ad52497/b37cc14f-9e23-4fe5-b98d-025e4e532b87.pdf</a></p>
+<div>
+$$
+\ket{\chi_p} = \ket{p} - \sum_j \braket{u_j \mid p} \ket{u_j}
+$$
+</div>
+
+
+<div>
+$$
+\begin{gathered}
+\braket{q \mid \chi_p} = \delta_{qp} - \sum_j \braket{q \mid u_j} \braket{u_j \mid p} \\
+\\\end{gathered}
+$$
+</div>
+
+
+<div>
+$$
+\begin{gathered}
+\braket{\chi_q \mid \chi_p} = \braket{\chi_q \mid p} - \sum_j \braket{\chi_q \mid u_j} \braket{u_j \mid p} \\
+= \braket{q \mid p} - \sum_j \braket{u_j \mid p} \braket{q \mid u_j} - \sum_j \braket{q \mid u_j} \braket{u_j \mid p} + \sum_i \braket{q \mid u_i} \bra{u_i} \sum_j \ket{u_j} \braket{u_j \mid p} \\
+= \braket{q \mid p} - \sum_j \braket{u_j \mid p} \braket{q \mid u_j}
+\\\end{gathered}
+$$
+</div>
+
+
+<p>记芯电子波函数为 $u_i$ ，假设波函数为平面波 $\ket{\tilde{\psi}}$ 和芯电子 $\ket{u_i}$ 的线性组合。</p>
+<div>
+$$
+\begin{gathered}
+\ket{\psi} = \ket{\tilde{\psi}} + \sum_i b_i \ket{u_i} \\
+= \sum_p c_p \ket{p} + \sum_i b_i \ket{u_i} \\
+\\\end{gathered}
+$$
+</div>
+
+
+<p>对 $i$ 求和要遍及所有被电子占据的原子壳层，例如Na要对1s,2s,2p壳层求和，系数 $b_i$ 的选择要使代表3s的 $\ket{\psi}$ 与芯函数 $\ket{u_i}$ 正交。对于价电子波函数，需要与芯电子正交，于是</p>
+<div>
+$$
+\begin{gathered}
+\ket{\chi_p} = \ket{p} + \sum_j a_j \ket{u_j} \\
+\braket{u_i \mid \chi_p} = \braket{u_i \mid p} + \sum_j a_j \braket{u_i \mid u_j} = 0 \\
+\braket{u_i \mid \chi_p} = \braket{u_i \mid p} + a_i = 0 \\
+\\\end{gathered}
+$$
+</div>
+
+
+<div>
+$$
+\begin{gathered}
+\ket{\psi} = \sum_p c_p \ket{\chi_p} \\
+= \sum_p c_p \ket{p} - \sum_p c_p \sum_j \braket{u_j \mid p} \ket{u_j} \\
+= \ket{\tilde{\psi}} - \sum_p c_p \sum_j \braket{u_j \mid p} \ket{u_j} \\
+= \ket{\tilde{\psi}} - \sum_j \braket{u_j \mid \tilde{\psi}} \ket{u_j} \\
+\\\end{gathered}
+$$
+</div>
+
+
+<p>平面波函数需要满足的方程为</p>
+<div>
+$$
+\begin{gathered}
+H\ket{\psi} = E\ket{\psi} \\
+H \ket{\tilde{\psi}} - H \sum_j \braket{u_j \mid \tilde{\psi}} \ket{u_j} = E \ket{\tilde{\psi}} - E\sum_j \braket{u_j \mid \tilde{\psi}} \ket{u_j} \\
+\\\end{gathered}
+$$
+</div>
+
+
+<div>
+$$
+H \ket{u_i} = E_i \ket{u_i}
+$$
+</div>
+
+
+<div>
+$$
+\begin{gathered}
+H \ket{\tilde{\psi}} - \sum_j E_j \braket{u_j \mid \tilde{\psi}} \ket{u_j} = E \ket{\tilde{\psi}} - E\sum_j \braket{u_j \mid \tilde{\psi}} \ket{u_j} \\
+\left\lbrack H + \sum_j (E - E_j) \ket{u_j}\bra{u_j} \right\rbrack  \ket{\tilde{\psi}}  = E \ket{\tilde{\psi}} \\
+\\\end{gathered}
+$$
+</div>
+
+
+<h2 id="Norm-conserving-pseudopotential"><a href="#Norm-conserving-pseudopotential" class="headerlink" title="Norm-conserving pseudopotential"></a>Norm-conserving pseudopotential</h2><p>参考：</p>
+<p><a target="_blank" rel="noopener" href="https://journals.aps.org/prb/pdf/10.1103/PhysRevB.41.7892">https://journals.aps.org/prb/pdf/10.1103/PhysRevB.41.7892</a></p>
+<p>在Orthogonalized plane wave最后，平面波函数满足的方程中哈密顿量后面新增了一项。因此可以引入一个赝势，使得解出的赝波函数能用平面波展开。</p>
+<p>我们设波函数为 $\psi_i$ ，对应的赝波函数为 $\phi_i$ 。</p>
+<p>波函数满足的方程为</p>
+<div>
+$$
+(T + V_{AE} - \varepsilon_i) \ket{\psi_i} = 0
+$$
+</div>
+
+<p>接下来是一些定义</p>
+<div>
+$$
+\ket{\chi_i} = (\varepsilon_i - T - V_{loc}) \ket{\phi_i}
+$$
+</div>
+
+<p>其中 $V_{loc}$ 是赝势的局域（local）部分</p>
+<div>
+$$
+B_{ij} = \braket{\phi_i \mid \chi_j}
+$$
+</div>
+
+
+<div>
+$$
+\ket{\beta_i} = \sum_j \ket{\chi_j} (B^{-1})_{ji}
+$$
+</div>
+
+
+<p>可以证明 $\ket{\beta_i}$ 和 $\ket{\phi_i}$ 互为对偶</p>
+<div>
+$$
+\sum_i \ket{\beta_i} B_{ik} = \sum_i B_{ik} \sum_j (B^{-1})_{ji} \ket{\chi_j} = \ket{\chi_k}
+$$
+</div>
+
+
+<div>
+$$
+\begin{gathered}
+\sum_i B_{ik}^* \braket{\beta_i\mid\phi_j} = \braket{\chi_k\mid\phi_j} \\
+\sum_i \braket{\chi_k\mid\phi_i} \braket{\beta_i\mid\phi_j} = \braket{\chi_k\mid\phi_j} \\
+\braket{\beta_i\mid\phi_j} = \delta_{ij}
+\\\end{gathered}
+$$
+</div>
+
+
+<p>定义赝势的非局域（nonlocal）部分</p>
+<div>
+$$
+V_{NL} = \sum_{ij} B_{ij} \ket{\beta_i}\bra{\beta_j}
+$$
+</div>
+
+<p>可以证明 $\ket{\phi_i}$ 为 $T + V_{loc} + V_{NL} - \varepsilon_i$ 的本征矢</p>
+<span id="more"></span>
+<div>
+$$
+\begin{gathered}
+(T+V_{loc}+V_{NL})\ket{\phi_k} \\
+= \left(T+V_{loc}\right)\ket{\phi_k} + \sum_{ij} B_{ij} \ket{\beta_i}\delta_{jk} \\
+= \left(T+V_{loc}\right)\ket{\phi_k} + \sum_{i} B_{ik} \ket{\beta_i} \\
+=(T+V_{loc})\ket{\phi_k}+\ket{\chi_k} \\
+=\varepsilon_k\ket{\phi_k} \\
+\\\end{gathered}
+$$
+</div>
+
+
+<h3 id="补上一个证明"><a href="#补上一个证明" class="headerlink" title="补上一个证明"></a>补上一个证明</h3><p>需要证明非局域赝势算子为厄米算符。但算子为厄米算符时，需要满足条件</p>
+<div>
+$$
+Q_{ij} = \braket{\psi_i \mid \psi_j} - \braket{\phi_i \mid \phi_j} = 0
+$$
+</div>
+
+
+<p>先证明 $V_{NL}$ 厄米算符等价于 $B_{ij}$ 为厄米矩阵。</p>
+<div>
+$$
+\begin{gathered}
+V_{NL} \ket{\phi_1} = \sum_{ij} B_{ij} \ket{\beta_i} \braket{\beta_j \mid \phi_1} \\
+V_{NL}^\dagger \ket{\phi_1} = \sum_{ij} A_{ij} \ket{\beta_i} \braket{\beta_j \mid \phi_1} \\
+\bra{V_{NL}^\dagger \phi_1} = \sum_{ij} A_{ij}^* \braket{\phi_1 \mid \beta_j} \bra{\beta_i}
+\\\end{gathered}
+$$
+</div>
+
+
+<div>
+$$
+\begin{gathered}
+\braket{\phi_1 \mid V_{NL} \phi_2} = \braket{V_{NL}^\dagger \phi_1 \mid \phi_2} \\
+\sum_{ij} B_{ij} \braket{\phi_1 \mid \beta_i} \braket{\beta_j \mid \phi_2} = \sum_{ij} A_{ij}^* \braket{\phi_1 \mid \beta_j} \braket{\beta_i \mid \phi_2} \\
+\sum_{ij} B_{ij} \braket{\phi_1 \mid \beta_i} \braket{\beta_j \mid \phi_2} = \sum_{ij} A_{ji}^* \braket{\phi_1 \mid \beta_i} \braket{\beta_j \mid \phi_2} \\
+B = A^\dagger
+\\\end{gathered}
+$$
+</div>
+
+
+<p>根据 $V_{NL} &#x3D; V_{NL}^\dagger$ 得 $B&#x3D;B^\dagger$ </p>
+<p>接下来证明 $B_{ij}$ 为厄米矩阵。</p>
+<div>
+$$
+\begin{gathered}
+\braket{\phi_i \mid \chi_j}
+-
+\braket{\chi_i \mid \phi_j}
+\\
+=
+\braket{\phi_i\mid(\varepsilon_j - T - V_{loc})\phi_j}
+-
+\braket{\phi_i(\varepsilon_i - T - V_{loc})\mid\phi_j}
+\\
+=
+(\varepsilon_j - \varepsilon_i)\braket{\phi_i \mid \phi_j}
+-
+\braket{\phi_i \mid T \phi_j}
++
+\braket{T \phi_i \mid \phi_j}
+\\\end{gathered}
+$$
+</div>
+
+
+<div>
+$$
+\begin{gathered}
+(T+V_{AE})\ket{\psi_i} = \varepsilon_i\ket{\psi_i} \\
+\braket{\psi_j\mid(T+V_{AE})\psi_i} = \varepsilon_i\braket{\psi_j\mid\psi_i} \\
+\braket{(T+V_{AE})\psi_j\mid\psi_i} = \varepsilon_j\braket{\psi_j\mid\psi_i} \\
+\\\end{gathered}
+$$
+</div>
+
+
+<div>
+$$
+\braket{\psi_j\mid T\psi_i} - \braket{T\psi_j\mid\psi_i} = (\varepsilon_i - \varepsilon_j)\braket{\psi_j\mid\psi_i}
+$$
+</div>
+
+
+<div>
+$$
+\braket{\phi_i \mid \chi_j}
+-
+\braket{\chi_i \mid \phi_j}
+=
+(\varepsilon_i - \varepsilon_j)(\braket{\psi_i\mid\psi_j} - \braket{\phi_i \mid \phi_j})
+$$
+</div>
+
+
+<div>
+$$
+B_{ij} - B^\dagger_{ij} = (\varepsilon_i - \varepsilon_j) Q_{ij}
+$$
+</div>
+
+
+<p>所以 $B_{ij}$ 为厄米矩阵等价于 $Q_{ij} &#x3D; 0$ ，即模守恒条件。</p>
+<blockquote>
+<p>注意波函数、赝波函数都是不可归一化的，所以 $\braket{\psi_i\mid\psi_j}, \braket{\phi_i \mid \phi_j}$ 都不是通常意义上的内积，而是限制在以原子为中心的球内的。因此它们可以看作原子为中心的球内的“电荷”，这也是模守恒名称的由来</p>
+</blockquote>
+<h2 id="Ultra-soft-pseudopotential"><a href="#Ultra-soft-pseudopotential" class="headerlink" title="Ultra-soft pseudopotential"></a>Ultra-soft pseudopotential</h2><p>参考：</p>
+<p><a target="_blank" rel="noopener" href="https://journals.aps.org/prb/pdf/10.1103/PhysRevB.41.7892">https://journals.aps.org/prb/pdf/10.1103/PhysRevB.41.7892</a> （同上节）</p>
+<p>模守恒赝势需要满足模守恒条件，导致对于某些电子赝势过于硬（hard），比如2p、3d</p>
+<p>超软赝势（Ultra-soft pseudopotential）解除了这个条件，但需要求解推广的本征值问题（其实计算复杂度不会大多少）。</p>
+<p>定义</p>
+<div>
+$$
+S = 1 + \sum_{ij} Q_{ij} \ket{\beta_i} \bra{\beta_j}
+$$
+</div>
+
+<div>
+$$
+D_{ij} = B_{ij} + \varepsilon_j Q_{ij}
+$$
+</div>
+
+
+<div>
+$$
+V_{NL} = \sum_{ij} D_{ij} \ket{\beta_i} \bra{\beta_j}
+$$
+</div>
+
+
+<p>其中 $Q_{ij},B_{ij},\ket{\beta_i},\ket{\chi_i}$ 的定义和上节相同。</p>
+<p>下面证明 $S,V_{NL}$ 都是厄米算符</p>
+<p> $Q_{ij}$ 厄米矩阵：</p>
+<div>
+$$
+Q_{ji}^* = \braket{\psi_i\mid\psi_j} - \braket{\phi_i \mid \phi_j} = Q_{ij}
+$$
+</div>
+
+<p> $D_{ij}$ 厄米矩阵：</p>
+<div>
+$$
+D_{ij} - D_{ji}^* = B_{ij} - B_{ji}^* + \varepsilon_j Q_{ij} - \varepsilon_i Q_{ji}^*
+$$
+</div>
+
+
+<p>根据上节结论</p>
+<div>
+$$
+B_{ij}
+-
+B_{ji}^*
+=
+(\varepsilon_i - \varepsilon_j)Q_{ij}
+$$
+</div>
+
+
+<p>于是</p>
+<div>
+$$
+D_{ij} = D_{ji}^*
+$$
+</div>
+
+
+<p>证明 $\ket{\phi_i}$ 是 $H-\varepsilon_i S$ 的本征矢</p>
+<div>
+$$
+\begin{gathered}
+V_{NL} \ket{\phi_k} = \sum_{ij} D_{ij} \ket{\beta_i} \braket{\beta_j \mid \phi_k} \\
+= \sum_{ij} D_{ij} \ket{\beta_i} \delta_{jk} \\
+= \sum_{i} \ket{\beta_i} D_{ik} \\
+= \sum_{i} \ket{\beta_i} (B_{ik} + \varepsilon_k Q_{ik}) \\
+= \ket{\chi_k} + \varepsilon_k \sum_{i} \ket{\beta_i} Q_{ik} \\
+\\\end{gathered}
+$$
+</div>
+
+
+<div>
+$$
+\begin{gathered}
+S \ket{\phi_k} = (1 + \sum_{ij} Q_{ij} \ket{\beta_i} \bra{\beta_j}) \ket{\phi_k} \\
+= \ket{\phi_k} + \sum_{ij} Q_{ij} \ket{\beta_i} \braket{\beta_j \mid \phi_k} \\
+= \ket{\phi_k} + \sum_{i} \ket{\beta_i} Q_{ik} \\
+\\\end{gathered}
+$$
+</div>
+
+
+<div>
+$$
+\begin{gathered}
+(H - \varepsilon_k S) \ket{\phi_k} = (T + V_{loc} - \varepsilon_k) \ket{\phi_k} + \ket{\chi_k} \\
+= (T + V_{loc} - \varepsilon_k) \ket{\phi_k} + \ket{\chi_k} = 0 \\
+\\\end{gathered}
+$$
+</div>
+
+
+<h2 id="Projector-augmented-wave"><a href="#Projector-augmented-wave" class="headerlink" title="Projector augmented-wave"></a>Projector augmented-wave</h2><p>参考：</p>
+<p><a target="_blank" rel="noopener" href="https://journals.aps.org/prb/pdf/10.1103/PhysRevB.50.17953">https://journals.aps.org/prb/pdf/10.1103/PhysRevB.50.17953</a></p>
+<p>思想是把波函数映射到赝波函数。假设变换 $T$ 把赝波函数 $\ket{\tilde{\Psi}}$ 映射到波函数 $\ket{\Psi}$ ，并且满足在缀加区域外赝波函数和波函数相等：</p>
+<div>
+$$
+\ket{\Psi} = T \ket{\tilde{\Psi}}
+$$
+</div>
+
+<p>假设变换 $T$ 为如下形式， $R$ 表示不同原子的缀加区域（augmentation region）</p>
+<div>
+$$
+T = 1 + \sum_R T_R
+$$
+</div>
+
+<p>为确定 $T_R$ ，选一组赝波函数和对应的波函数，称为分波（partial wave） $\ket{\tilde{\phi}_i},\ket{\phi_i}$ 使得在每个缀加区域 $R$ 中</p>
+<div>
+$$
+\ket{\phi_i} = (1 + T_R) \ket{\tilde{\phi}_i}
+$$
+</div>
+
+<p>注意每个缀加区域可以存在多个分波 $i$ 。</p>
+<p>分波应当垂直于芯波函数并且在缀加区域里完备，一个自然的选择是径向薛定谔方程的解。</p>
+<p>在缀加区域，假设赝波函数可以被赝分波展开：</p>
+<div>
+$$
+\ket{\tilde{\Psi}} = \sum_i c_i \ket{\tilde{\phi}_i}
+$$
+</div>
+
+<p>于是缀加区域内波函数：</p>
+<div>
+$$
+\ket{\Psi} = T\ket{\tilde{\Psi}} = \sum_i c_i \ket{\phi_i}
+$$
+</div>
+
+<p>因为在缀加区域外赝波函数和波函数相等，所以全区域里变换表达式：</p>
+<div>
+$$
+\ket{\Psi} = \ket{\tilde{\Psi}} - \sum_i c_i \ket{\tilde{\phi}_i} + \sum_i c_i \ket{\phi_i}
+$$
+</div>
+
+<p>我们还需要（在缀加区域）赝波函数被赝分波展开的展开系数才能确定变换 $T$ 。假设变换是线性的，那么定义投影算子 $\bra{\tilde{p}}$ 使得</p>
+<div>
+$$
+c_i = \braket{\tilde{p}_i \mid \tilde{\Psi}}
+$$
+</div>
+
+<p>得到变换 $T$ 表达式</p>
+<div>
+$$
+T = 1 + \sum_i (\ket{\phi_i} - \ket{\tilde{\phi}_i}) \bra{\tilde{p}_i}
+$$
+</div>
+
+<p>对于芯电子，根据frozen-core approximation</p>
+<div>
+$$
+\ket{\Psi^c} = \ket{\tilde{\Psi}^c} - \ket{\tilde{\phi}^c} + \ket{\phi^c}
+$$
+</div>
+
+<p>也就是说展开系数恒为 $1$ 。不需要投影算符。</p>
+<p>赝波函数空间里的赝算符可以通过变换得到。</p>
+<div>
+$$
+\tilde{A} = T^\dagger A T
+$$
+</div>
+
+
+<p>下面计算其期望值，假设算符 $A$ 为局域算符。为方便，我们把每个缀加区域 $R$ 的（赝）波函数记为</p>
+<div>
+$$
+\begin{gathered}
+\ket{\psi_R^1}=\sum_{i \in R}\ket{\phi_i}\braket{\tilde{p}_i \vert \tilde\psi} \\
+\ket{\tilde{\psi}_R^1}=\sum_{i \in R}\ket{\tilde{\phi}_i}\braket{\tilde{p}_i \vert \tilde\psi} \\
+\\\end{gathered}
+$$
+</div>
+
+
+<p>于是总波函数与赝波函数关系</p>
+<div>
+$$
+\ket{\psi} = T\ket{\tilde{\psi}} = \ket{\tilde{\psi}}+\sum_R \left(\ket{\psi_R^1}-\ket{\tilde{\psi}_R^1}\right)
+$$
+</div>
+
+
+<div>
+$$
+\begin{gathered}
+\bra{\psi}A\ket{\psi}
+=
+\left\lbrack \bra{\tilde{\psi}}+\sum_R \left(\bra{\psi_R^1}-\bra{\tilde{\psi}_R^1}\right)\right\rbrack 
+A
+\left\lbrack \ket{\tilde{\psi}}+\sum_R \left(\ket{\psi_R^1}-\ket{\tilde{\psi}_R^1}\right)\right\rbrack  \\
+=
+\bra{\tilde{\psi}} A \ket{\tilde{\psi}} 
++
+\sum_R \bra{\tilde{\psi}} A \left(\ket{\psi_R^1}-\ket{\tilde{\psi}_R^1}\right) 
++
+\sum_R \left(\bra{\psi_R^1}-\bra{\tilde{\psi}_R^1}\right) A \ket{\tilde{\psi}} \\
++
+\sum_{RQ}\left(\bra{\psi_R^1}-\bra{\tilde{\psi}_R^1}\right) A \left(\ket{\psi_Q^1}-\ket{\tilde{\psi}_Q^1}\right) \\
+=
+\bra{\tilde{\psi}} A \ket{\tilde{\psi}} 
++
+\sum_R \bra{\tilde{\psi}} A \left(\ket{\psi_R^1}-\ket{\tilde{\psi}_R^1}\right) 
++
+\sum_R \left(\bra{\psi_R^1}-\bra{\tilde{\psi}_R^1}\right) A \ket{\tilde{\psi}} \\
++
+\sum_R\left(\bra{\psi_R^1}-\bra{\tilde{\psi}_R^1}\right) A \left(\ket{\psi_R^1}-\ket{\tilde{\psi}_R^1}\right) \\
+=
+\bra{\tilde{\psi}} A \ket{\tilde{\psi}} 
++
+\sum_R \bra{\psi_R^1} A \left(\ket{\psi_R^1}-\ket{\tilde{\psi}_R^1}\right) 
++
+\sum_R \left(\bra{\psi_R^1}-\bra{\tilde{\psi}_R^1}\right) A \ket{\tilde{\psi}} \\
++
+\sum_R\left(\bra{\tilde{\psi}}-\bra{\tilde{\psi}_R^1}\right) A \left(\ket{\psi_R^1}-\ket{\tilde{\psi}_R^1}\right) \\
+=
+\bra{\tilde{\psi}} A \ket{\tilde{\psi}} 
++
+\sum_R \bra{\psi_R^1} A \ket{\psi_R^1}
+-
+\sum_R \bra{\tilde{\psi}_R^1} A \ket{\tilde{\psi}_R^1}
+-
+\sum_R \left(\bra{\psi_R^1}-\bra{\tilde{\psi}_R^1}\right) A \ket{\tilde{\psi}_R^1}
+\\
++
+\sum_R \left(\bra{\psi_R^1}-\bra{\tilde{\psi}_R^1}\right) A \ket{\tilde{\psi}}
++
+\sum_R\left(\bra{\tilde{\psi}}-\bra{\tilde{\psi}_R^1}\right) A \left(\ket{\psi_R^1}-\ket{\tilde{\psi}_R^1}\right) \\
+=
+\bra{\tilde{\psi}} A \ket{\tilde{\psi}} 
++
+\sum_R \bra{\psi_R^1} A \ket{\psi_R^1}
+-
+\sum_R \bra{\tilde{\psi}_R^1} A \ket{\tilde{\psi}_R^1}
+\\
++
+\sum_R \left(\bra{\psi_R^1}-\bra{\tilde{\psi}_R^1}\right) A \left(\ket{\tilde{\psi}}-\ket{\tilde{\psi}_R^1}\right)
++
+\sum_R\left(\bra{\tilde{\psi}}-\bra{\tilde{\psi}_R^1}\right) A \left(\ket{\psi_R^1}-\ket{\tilde{\psi}_R^1}\right) \\
+=
+\bra{\tilde{\psi}} A \ket{\tilde{\psi}} 
++
+\sum_R \bra{\psi_R^1} A \ket{\psi_R^1}
+-
+\sum_R \bra{\tilde{\psi}_R^1} A \ket{\tilde{\psi}_R^1}
+\\\end{gathered}
+$$
+</div>
+
+
+<p>上述推导，一些步骤的说明：</p>
+<ol>
+<li>首先，算子 $A$ 具有局域性。而某个缀加区域 $R$ ，在缀加区域外有 $\ket{\psi_R^1}&#x3D;\ket{\tilde{\psi}_R^1}$ 。对于不同的缀加区域 $R,Q$ ，全空间内任意一点必定存在 $\bra{\psi_R^1}&#x3D;\bra{\tilde{\psi}_R^1}$ 或者 $\ket{\psi_Q^1}&#x3D;\ket{\tilde{\psi}_Q^1}$ 。因此对于不同的 $R,Q$ ，</li>
+</ol>
+<div>
+$$
+\left(\bra{\psi_R^1}-\bra{\tilde{\psi}_R^1}\right) A \left(\ket{\psi_Q^1}-\ket{\tilde{\psi}_Q^1}\right)=0
+$$
+</div>
+
+
+<ol start="2">
+<li>对于任意缀加区域 $R$ ，区域内有 $\bra{\tilde{\psi}}&#x3D;\bra{\tilde{\psi}_R^1}$ ，区域外有 $\ket{\psi_R^1}&#x3D;\ket{\tilde{\psi}_R^1}$ ，因此</li>
+</ol>
+<div>
+$$
+\left(\bra{\tilde{\psi}}-\bra{\tilde{\psi}_R^1}\right) A \left(\ket{\psi_R^1}-\ket{\tilde{\psi}_R^1}\right) = 0
+$$
+</div>
+
+
+<ol start="3">
+<li>同理可得</li>
+</ol>
+<div>
+$$
+\left(\bra{\psi_R^1}-\bra{\tilde{\psi}_R^1}\right) A \left(\ket{\tilde{\psi}}-\ket{\tilde{\psi}_R^1}\right) = 0
+$$
+</div>
+
+
+<h3 id="关于赝势构造"><a href="#关于赝势构造" class="headerlink" title="关于赝势构造"></a>关于赝势构造</h3><ol>
+<li><p>先选定芯电子做frozen-core approximation，解径向薛定谔方程得到 $\ket{\phi_i}$ </p>
+</li>
+<li><p>然后根据缀加区域外 $\ket{\tilde{\phi}_i}&#x3D;\ket{\phi_i}$ ，且边界处二次连续可导构造足够平滑的 $\ket{\tilde{\phi}_i}$ </p>
+</li>
+<li><p>最后构造投影子，根据条件 $\braket{\tilde{p}_j \vert \tilde{\phi}<em>i} &#x3D; \delta</em>{ij}$ （在对应的缀加区域内）</p>
+</li>
+</ol>
+<h3 id="库伦势发散的处理"><a href="#库伦势发散的处理" class="headerlink" title="库伦势发散的处理"></a>库伦势发散的处理</h3><p>参考<a href="/2023/11/13/Hatree%E8%83%BD%E4%B8%8E%E4%BA%A4%E6%8D%A2%E8%83%BD/" title="Hatree能与交换能">Hatree能与交换能</a>，Hatree势可能包含发散项（由于原子核库伦势导致）。</p>
+<p>选取一个算子 $B$ ，使得其在缀加区域外为 $0$ ，在 $0$ 附近和库伦势的发散抵消。根据任意缀加区域 $R$ 内 $\ket{\tilde{\psi}}&#x3D;\ket{\tilde{\psi}_R^1}$ ，有</p>
+<div>
+$$
+\bra{\tilde{\psi}} B \ket{\tilde{\psi}} 
+=
+\sum_R \bra{\tilde{\psi}_R^1} B \ket{\tilde{\psi}_R^1}
+$$
+</div>
+
+<p>因此可以通过构造 $B$ 使得发散的平面波（赝波函数）的内积被抵消。</p>
+<p>一个可能的 $B$ ：</p>
+<div>
+$$
+B(r)
+=
+\begin{cases}
+\cfrac{\left(1-\cfrac{r}{r_c}\right)^3}{r},&0\lt r\lt  r_c \\
+0,&r\geq r_c \\
+\end{cases}
+$$
+</div>
+
+<p>该 $B$ 在 $r_c$ 处二次导数连续。</p>
+</div><div class="article-licensing box"><div class="licensing-title"><p>赝势方法</p><p><a href="https://yuchenxi2000.github.io/2023/11/16/赝势方法/">https://yuchenxi2000.github.io/2023/11/16/赝势方法/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>Chenxi Yu</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2023-11-16</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2026-03-30</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/%E7%89%A9%E7%90%86/">物理</a><a class="link-muted mr-2" rel="tag" href="/tags/%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6/">量子力学</a><a class="link-muted mr-2" rel="tag" href="/tags/%E5%AF%86%E5%BA%A6%E6%B3%9B%E5%87%BD%E7%90%86%E8%AE%BA/">密度泛函理论</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2024/02/22/%E5%85%B3%E4%BA%8E%E4%B8%89%E6%AC%A1%E6%96%B9%E7%A8%8B%E6%B1%82%E6%A0%B9%E5%85%AC%E5%BC%8F/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">关于三次方程求根公式</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2023/11/14/%E5%87%86%E7%B2%92%E5%AD%90%E8%BF%91%E4%BC%BC/"><span class="level-item">准粒子近似</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><!--!--><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a><p class="is-size-7"><span>&copy; 2026 Chenxi Yu</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="fab fa-creative-commons-nc"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/yuchenxi2000"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script data-pjax src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script data-pjax src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "此网站使用Cookie来改善您的体验。",
+          dismiss: "知道了！",
+          allow: "允许使用Cookie",
+          deny: "拒绝",
+          link: "了解更多",
+          policy: "Cookie政策",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js"></script><script src="/js/pjax.js"></script><!--!--><script type="text/javascript" id="MathJax-script" async>MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      },
+      svg: {
+        fontCache: 'global'
+      },
+      chtml: {
+        matchFontHeight: false
+      }
+    };</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js"></script><!--!--><!--!--><script data-pjax src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script data-pjax src="/js/insight.js" defer></script><script data-pjax>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script></body></html>

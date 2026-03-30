@@ -1,0 +1,540 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>任意维波动方程的解析解 - YCX&#039;s Blog</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="YCX&#039;s Blog"><meta name="msapplication-TileImage" content="favicon.ico"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="YCX&#039;s Blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="该笔记解决了原文章没有给出奇数维解的推导的问题。   $D$ 维空间中齐次波动方程：（ $u_{tt}$ 表示 $u$ 对 $t$ 二阶偏导，下同）  $$ \begin{gathered} u_{tt}(x,t)&amp;#x3D;\nabla^2u(x,t) \\ \\\end{gathered} $$   初值条件  $$ \begin{cases} u(x,0)&amp;#x3D;\psi(x) \\ u_t(x,0)&amp;#x3D;\"><meta property="og:type" content="blog"><meta property="og:title" content="任意维波动方程的解析解"><meta property="og:url" content="https://yuchenxi2000.github.io/2024/08/02/%E4%BB%BB%E6%84%8F%E7%BB%B4%E6%B3%A2%E5%8A%A8%E6%96%B9%E7%A8%8B%E7%9A%84%E8%A7%A3%E6%9E%90%E8%A7%A3/"><meta property="og:site_name" content="YCX&#039;s Blog"><meta property="og:description" content="该笔记解决了原文章没有给出奇数维解的推导的问题。   $D$ 维空间中齐次波动方程：（ $u_{tt}$ 表示 $u$ 对 $t$ 二阶偏导，下同）  $$ \begin{gathered} u_{tt}(x,t)&amp;#x3D;\nabla^2u(x,t) \\ \\\end{gathered} $$   初值条件  $$ \begin{cases} u(x,0)&amp;#x3D;\psi(x) \\ u_t(x,0)&amp;#x3D;\"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://yuchenxi2000.github.io/img/og_image.png"><meta property="article:published_time" content="2024-08-02T02:59:15.000Z"><meta property="article:modified_time" content="2026-03-30T12:14:19.463Z"><meta property="article:author" content="Chenxi Yu"><meta property="article:tag" content="数学"><meta property="article:tag" content="微分方程"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://yuchenxi2000.github.io/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://yuchenxi2000.github.io/2024/08/02/%E4%BB%BB%E6%84%8F%E7%BB%B4%E6%B3%A2%E5%8A%A8%E6%96%B9%E7%A8%8B%E7%9A%84%E8%A7%A3%E6%9E%90%E8%A7%A3/"},"headline":"任意维波动方程的解析解","image":["https://yuchenxi2000.github.io/img/og_image.png"],"datePublished":"2024-08-02T02:59:15.000Z","dateModified":"2026-03-30T12:14:19.463Z","author":{"@type":"Person","name":"Chenxi Yu"},"publisher":{"@type":"Organization","name":"YCX's Blog","logo":{"@type":"ImageObject","url":"https://yuchenxi2000.github.io/2024/08/02/%E4%BB%BB%E6%84%8F%E7%BB%B4%E6%B3%A2%E5%8A%A8%E6%96%B9%E7%A8%8B%E7%9A%84%E8%A7%A3%E6%9E%90%E8%A7%A3/android-chrome-512x512.png"}},"description":"该笔记解决了原文章没有给出奇数维解的推导的问题。   $D$ 维空间中齐次波动方程：（ $u_{tt}$ 表示 $u$ 对 $t$ 二阶偏导，下同）  $$ \\begin{gathered} u_{tt}(x,t)&#x3D;\\nabla^2u(x,t) \\\\ \\\\\\end{gathered} $$   初值条件  $$ \\begin{cases} u(x,0)&#x3D;\\psi(x) \\\\ u_t(x,0)&#x3D;\\"}</script><link rel="canonical" href="https://yuchenxi2000.github.io/2024/08/02/%E4%BB%BB%E6%84%8F%E7%BB%B4%E6%B3%A2%E5%8A%A8%E6%96%B9%E7%A8%8B%E7%9A%84%E8%A7%A3%E6%9E%90%E8%A7%A3/"><link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link data-pjax rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link data-pjax rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!--!--><!-- hexo injector head_end start --><script>
+  (function () {
+      function switchTab() {
+          if (!location.hash) {
+            return;
+          }
+
+          const id = '#' + CSS.escape(location.hash.substring(1));
+          const $tabMenu = document.querySelector(`.tabs a[href="${id}"]`);
+          if (!$tabMenu) {
+            return;
+          }
+
+          const $tabMenuContainer = $tabMenu.parentElement.parentElement;
+          Array.from($tabMenuContainer.children).forEach($menu => $menu.classList.remove('is-active'));
+          Array.from($tabMenuContainer.querySelectorAll('a'))
+              .map($menu => document.getElementById($menu.getAttribute("href").substring(1)))
+              .forEach($content => $content.classList.add('is-hidden'));
+
+          if ($tabMenu) {
+              $tabMenu.parentElement.classList.add('is-active');
+          }
+          const $activeTab = document.querySelector(id);
+          if ($activeTab) {
+              $activeTab.classList.remove('is-hidden');
+          }
+      }
+      switchTab();
+      window.addEventListener('hashchange', switchTab, false);
+  })();
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 8.1.1"></head><body class="is-1-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-12"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2024-08-02T02:59:15.000Z" title="2024/8/2 10:59:15">2024-08-02</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E6%95%B0%E5%AD%A6/">数学</a></span><span class="level-item">13 分钟读完 (大约1999个字)</span></div></div><h1 class="title is-3 is-size-4-mobile">任意维波动方程的解析解</h1><div class="content"><blockquote>
+<p>该笔记解决了原文章没有给出奇数维解的推导的问题。</p>
+</blockquote>
+<p> $D$ 维空间中齐次波动方程：（ $u_{tt}$ 表示 $u$ 对 $t$ 二阶偏导，下同）</p>
+<div>
+$$
+\begin{gathered}
+u_{tt}(x,t)=\nabla^2u(x,t) \\
+\\\end{gathered}
+$$
+</div>
+
+<p>初值条件</p>
+<div>
+$$
+\begin{cases}
+u(x,0)=\psi(x) \\
+u_t(x,0)=\phi(x) \\
+\end{cases}
+$$
+</div>
+
+<p>对于非齐次情形，<a href="/2024/06/02/%E5%86%B2%E9%87%8F%E5%AE%9A%E7%90%86/" title="冲量定理">冲量定理</a>中给出了解法。</p>
+<h2 id="一维"><a href="#一维" class="headerlink" title="一维"></a>一维</h2><p>换元</p>
+<div>
+$$
+\begin{cases}
+\xi=x-t \\
+\eta=x+t
+\end{cases}
+$$
+</div>
+
+<p>得</p>
+<div>
+$$
+\cfrac{\partial^2 u}{\partial \xi \partial \eta} = 0
+$$
+</div>
+
+<p>所以通解为</p>
+<div>
+$$
+u(x,t)=F(x-t)+G(x+t)
+$$
+</div>
+
+<p>接下来求解 $F,G$ ，使其满足初值条件</p>
+<div>
+$$
+\begin{cases}
+u(x,0)=\psi(x) \\
+u_t(x,0)=\phi(x) \\
+\end{cases}
+$$
+</div>
+
+
+<div>
+$$
+\begin{cases}
+G+F=\psi \\
+G^\prime-F^\prime=\phi \\
+\end{cases}
+$$
+</div>
+
+
+<div>
+$$
+\begin{cases}
+G+F=\psi \\
+G-F=\int_0^x \phi(s) \mathrm{d}s \\
+\end{cases}
+$$
+</div>
+
+
+<div>
+$$
+\begin{cases}
+G(x)=\frac{1}{2}\left(\psi(x)+\int_0^x \phi(s) \mathrm{d}s\right) \\
+F(x)=\frac{1}{2}\left(\psi(x)-\int_0^x \phi(s) \mathrm{d}s\right) \\
+\end{cases}
+$$
+</div>
+
+
+<p>所以方程的解为</p>
+<div>
+$$
+\begin{gathered}
+u(x,t)= F(x-t)+G(x+t) \\
+= \cfrac{\psi(x-t)+\psi(x+t)}{2}+\frac{1}{2}\int_{x-t}^{x+t} \phi(s) \mathrm{d}s
+\\\end{gathered}
+$$
+</div>
+
+
+<h2 id="奇数维（除去一维）"><a href="#奇数维（除去一维）" class="headerlink" title="奇数维（除去一维）"></a>奇数维（除去一维）</h2><h3 id="球平均函数"><a href="#球平均函数" class="headerlink" title="球平均函数"></a>球平均函数</h3><p>球平均函数（泛函）</p>
+<div>
+$$
+\begin{gathered}
+M\lbrack \phi(x)\rbrack (x, t)=\cfrac{1}{\Omega_{D}t^{D-1}}\int_{\lvert y-x \rvert=t}\phi(y){\rm d}S_y \\
+=\cfrac{1}{\Omega_{D}}\int_{\vert n\rvert=1}\phi(x+tn){\rm d}S_n \\
+\\\end{gathered}
+$$
+</div>
+
+<p>其中 $D$ 为空间维数， $\phi(x)$ 为函数 $\phi:{\mathbb{R}^{D}}\rightarrow \mathbb{R}$ ， $M$ 为作用在 $D$ 维函数上的算子， $\Omega_{D}$ 为 $D$ 维单位球的表面积， $\int_{\lvert y-x \rvert&#x3D;r},{\rm d}S_y$ 表示在以 $x$ 为球心， $r$ 为半径的球上积分。</p>
+<p>接下来我们简单地把 $M\lbrack \phi(x)\rbrack (x, t)$ 记为 $M(x, t)$ ，然后计算其满足的偏微分方程：</p>
+<div>
+$$
+\begin{gathered}
+\nabla_x^2 M\lbrack \phi(x)\rbrack (x, t)
+=\cfrac{1}{\Omega_{D}}\int_{\lvert n\rvert=1}\nabla_x^2\phi(x+tn){\rm d}S_n \\
+=\cfrac{1}{\Omega_{D}t^{D-1}}\int_{\lvert y-x\rvert=t}\nabla_y^2\phi(y){\rm d}S_y \\
+\\\end{gathered}
+$$
+</div>
+
+
+<div>
+$$
+\begin{gathered}
+t^{D-1}\nabla_x^2 M\lbrack \phi(x)\rbrack (x, t)
+=\cfrac{1}{\Omega_{D}}\int_{\lvert y-x\rvert=t}\nabla_y^2\phi(y){\rm d}S_y \\
+\\\end{gathered}
+$$
+</div>
+
+
+<div>
+$$
+\begin{gathered}
+\int_0^t s^{D-1}\nabla_x^2 M(x, s) \, \mathrm{d}s
+=\cfrac{1}{\Omega_{D}}\int_0^t \mathrm{d}s \int_{\lvert y-x\rvert=s}\nabla_y^2\phi(y){\rm d}S_y \\
+=\cfrac{1}{\Omega_{D}}\int_{\lvert y-x \rvert \leq t}\nabla_y^2\phi(y){\rm d}y \\
+=\cfrac{1}{\Omega_{D}}\int_{\lvert y-x \rvert = t}n_y \cdot \nabla_y\phi(y){\rm d}S_y \\
+=\cfrac{t^{D-1}}{\Omega_{D}}\int_{\lvert n \rvert = 1}n_n \cdot \nabla_x\phi(x+tn){\rm d}S_n \\
+\\\end{gathered}
+$$
+</div>
+
+
+<div>
+$$
+\begin{gathered}
+\partial_t M(x,t) = \cfrac{1}{\Omega_{D}}\int_{\lvert n \rvert=1}n_n \cdot \nabla_x \phi(x+tn){\rm d}S_n \\
+= \cfrac{1}{t^{D-1}} \int_0^t s^{D-1}\nabla_x^2 M(x, s) \, \mathrm{d}s
+\\\end{gathered}
+$$
+</div>
+
+
+<div>
+$$
+\begin{gathered}
+t^{D-1}\partial_t M(x,t) = \int_0^t s^{D-1}\nabla_x^2 M(x, s) \, \mathrm{d}s \\
+\partial_t \lbrack t^{D-1}\partial_t M(x,t)\rbrack  = t^{D-1}\nabla_x^2 M(x, t) \\
+t^{D-1}\partial_{tt} M(x,t)+(D-1)t^{D-2}\partial_t M(x,t) = t^{D-1}\nabla_x^2 M(x, t) \\
+\partial_{tt} M(x,t)+\cfrac{D-1}{t}\partial_t M(x,t) = \nabla_x^2 M(x, t) \\
+\\\end{gathered}
+$$
+</div>
+
+
+<p>由此得 $M$ 满足方程</p>
+<div>
+$$
+\begin{gathered}
+\partial_{tt} M+\cfrac{D-1}{t}\partial_t M = \nabla^2 M \\
+\\\end{gathered}
+$$
+</div>
+
+<p>该方程和波动方程相似，下面证明在奇数维度下（除去一维），对 $M$ 做变换后得到的泛函满足波动方程。</p>
+<span id="more"></span>
+
+<h3 id="方程求解"><a href="#方程求解" class="headerlink" title="方程求解"></a>方程求解</h3><p>设方程的解</p>
+<div>
+$$
+u=OM
+$$
+</div>
+
+<p>其中 $O$ 为只与 $t$ 有关的，作用在球平均泛函 $M$ 上的算子。则根据 $u,M$ 满足的方程， $O$ 需要满足</p>
+<div>
+$$
+\begin{gathered}
+\partial_t^2(OM)=O(\partial_{t}^2 M+\cfrac{D-1}{t}\partial_t M) \\
+\partial_t^2O = O\partial_{t}^2 +O\cfrac{D-1}{t}\partial_t \\
+\lbrack \partial_t^2,O\rbrack  = (D-1)O\cfrac{1}{t}\partial_t \\
+\\\end{gathered}
+$$
+</div>
+
+<p>为方便，记 $p&#x3D;\cfrac{1}{t}\partial_t$ ，计算 $\lbrack \partial_t^2,p^n\rbrack $ （用归纳法）</p>
+<div>
+$$
+\begin{gathered}
+\lbrack \partial_t^2,p\rbrack  = -2p^2 \\
+\lbrack \partial_t^2,p^2\rbrack  = \lbrack \partial_t^2,p\rbrack p+p\lbrack \partial_t^2,p\rbrack =-4p^3 \\
+\lbrack \partial_t^2,p^3\rbrack  = \lbrack \partial_t^2,p^2\rbrack p+p^2\lbrack \partial_t^2,p\rbrack =-6p^4 \\
+\lbrack \partial_t^2,p^n\rbrack  = -2np^{n+1} \\
+\\\end{gathered}
+$$
+</div>
+
+<p>再计算 $\lbrack \partial_t^2,p^nt^m\rbrack $ ：</p>
+<div>
+$$
+\begin{gathered}
+\lbrack \partial_t^2,p^nt^m\rbrack  = \lbrack \partial_t^2,p^n\rbrack t^m+p^n\lbrack \partial_t^2,t^m\rbrack  \\
+=-2np^{n+1}t^m+p^n\lbrack 2mt^{m-1}\partial_t+m(m-1)t^{m-2}\rbrack  \\
+=-2np^{n+1}t^m+2mp^nt^{m}p+m(m-1)p^nt^{m-2} \\
+=-2np^{n}(t^mp+mt^{m-2})+2mp^nt^{m}p+m(m-1)p^nt^{m-2} \\
+=(2m-2n)p^nt^{m}p+m(m-2n-1)p^nt^{m-2} \\
+\\\end{gathered}
+$$
+</div>
+
+<p>其中运用到了下面两个结论</p>
+<div>
+$$
+\begin{gathered}
+pt^m=t^mp+mt^{m-2} \\
+\\\end{gathered}
+$$
+</div>
+
+<div>
+$$
+\lbrack \partial_t^2,t^m\rbrack =2mt^{m-1}\partial_t+m(m-1)t^{m-2}
+$$
+</div>
+
+
+<p>为了得到</p>
+<div>
+$$
+\begin{gathered}
+\lbrack \partial_t^2,p^nt^m\rbrack 
+=(D-1)p^nt^{m}p \\
+\\\end{gathered}
+$$
+</div>
+
+<p> $m,n,D$ 的值需要满足</p>
+<div>
+$$
+\begin{gathered}
+m=2n+1 \\
+2m-2n=D-1 \\
+D=4n+2-2n+1=2n+3
+\\\end{gathered}
+$$
+</div>
+
+
+<p>所以 $D$ 是大于等于 $3$ 的奇数。此时</p>
+<div>
+$$
+O=C\left(\cfrac{1}{t}\partial_t\right)^nt^{2n+1}
+$$
+</div>
+
+<p>可以使得 $u&#x3D;OM$ 满足波动方程。我们还需要求常数 $C$ 。</p>
+<p>根据初值条件</p>
+<div>
+$$
+\begin{cases}
+u(x,0)=0 \\
+u_t(x,0)=\phi(x) \\
+\end{cases}
+$$
+</div>
+
+<p>以及球平均的性质</p>
+<div>
+$$
+\lim_{t \to 0+} M(x,t)= \phi(x)
+$$
+</div>
+
+<p>求得（注：只要知道 $1&#x2F;t\partial_t$ 对幂函数的作用是次数减 $2$ ，再多出一个常数）</p>
+<div>
+$$
+C=\cfrac{1}{(2n+1)!!}
+$$
+</div>
+
+
+<p>因此具有如下初值条件的 $D$ 维波动方程（其中 $D&#x3D;2m+3,m\in \mathbb{N}$ ）</p>
+<div>
+$$
+\begin{cases}
+u_{tt}=\nabla^2u \\
+u(x,0)=0 \\
+u_t(x,0)=\phi(x) \\
+\end{cases}
+$$
+</div>
+
+<p>的解为</p>
+<div>
+$$
+u(x,t)=\cfrac{1}{(2m+1)!!}\left(\cfrac{1}{t}\cfrac{\partial}{\partial t}\right)^m \left\lbrack t^{2m+1}M_{\phi}(x,t)\right\rbrack 
+$$
+</div>
+
+<p>其中</p>
+<div>
+$$
+M_{\phi}(x,t)=\cfrac{1}{\Omega_{D}t^{D-1}}\int_{\lvert y-x \rvert=t}\phi(y){\rm d}S_y
+$$
+</div>
+
+<p>为 $\phi(y)$ 在球面 $\lvert y-x \rvert&#x3D;t$ 上的平均值。</p>
+<h3 id="一般初值条件"><a href="#一般初值条件" class="headerlink" title="一般初值条件"></a>一般初值条件</h3><p>容易验证，若</p>
+<div>
+$$
+u=OM
+$$
+</div>
+
+<p>为波动方程的解，则</p>
+<div>
+$$
+u=\partial_t(OM)
+$$
+</div>
+
+<p>也为波动方程的解，并且满足初值条件</p>
+<div>
+$$
+\begin{cases}
+u(x,0)=M(x,0) \\
+u_t(x,0)=0 \\
+\end{cases}
+$$
+</div>
+
+<p>其中需要用到以下这些结论：</p>
+<p>结论1</p>
+<div>
+$$
+\partial_t (OM)\vert_{t=0}=M(x,0)
+$$
+</div>
+
+<p>这个结论由</p>
+<div>
+$$
+OM=tM+\text{higher order terms}
+$$
+</div>
+
+<p>得到。</p>
+<p>结论2</p>
+<div>
+$$
+\partial_t^2 (OM)\vert_{t=0}=0
+$$
+</div>
+
+<p>这个结论由</p>
+<div>
+$$
+\partial_t^2 (OM)=O\left(\partial_t^2+\cfrac{D-1}{t}\partial_t\right)M
+$$
+</div>
+
+<p>以及对于任意函数 $F$ 有 $OF\vert_{t&#x3D;0}&#x3D;0$ 得到。</p>
+<p>因此一般初值条件下方程</p>
+<div>
+$$
+\begin{cases}
+u_{tt}=\nabla^2u \\
+u(x,0)=\psi(x) \\
+u_t(x,0)=\phi(x) \\
+\end{cases}
+$$
+</div>
+
+<p>的解为</p>
+<div>
+$$
+\begin{gathered}
+u(x,t)=\cfrac{1}{(2m+1)!!}\cfrac{\partial}{\partial t}\left(\cfrac{1}{t}\cfrac{\partial}{\partial t}\right)^m \left\lbrack t^{2m+1}M_{\psi}(x,t)\right\rbrack \\
++\cfrac{1}{(2m+1)!!}\left(\cfrac{1}{t}\cfrac{\partial}{\partial t}\right)^m \left\lbrack t^{2m+1}M_{\phi}(x,t)\right\rbrack 
+\\\end{gathered}
+$$
+</div>
+
+
+<h2 id="偶数维"><a href="#偶数维" class="headerlink" title="偶数维"></a>偶数维</h2><p>我们用降维法，直接从 $D&#x3D;2m+3$ 的解得到 $D&#x3D;2m+2$ 的解。原理是假设解和最后一个维度无关。</p>
+<div>
+$$
+\begin{gathered}
+M=\cfrac{2t}{\Omega_{2m+3}t^{2m+2}} \int_{\lvert y-x \rvert\leq t}\cfrac{\phi(y)}{\sqrt{t^2-\lvert y-x\rvert^2}}{\rm d}y \\
+\\\end{gathered}
+$$
+</div>
+
+<p>（该式来源是第一类曲面积分和二重积分关系，在高维空间推广）</p>
+<p>我们记 $2m+2$ 维度单位球体积 $V_{2m+2}$ ，参考<a href="/2024/07/31/%E9%AB%98%E6%96%AF%E7%A7%AF%E5%88%86%EF%BC%8C%E4%BB%A5%E5%8F%8A%E5%8D%95%E4%BD%8D%E7%90%83%E9%9D%A2%E7%A7%AF/" title="高斯积分，以及单位球面积">高斯积分，以及单位球面积</a>，</p>
+<div>
+$$
+\begin{gathered}
+\Omega_{2m+3}= \cfrac{2^{m+2}\pi^{m+1}} {(2m+1)!!} \\
+\Omega_{2m+2}= \cfrac{2\pi^{m+1}} {m!} \\
+\\\end{gathered}
+$$
+</div>
+
+
+<div>
+$$
+\begin{gathered}
+\cfrac{\Omega_{2m+3}}{\Omega_{2m+2}}=\cfrac{2^{m+2}\pi^{m+1}} {(2m+1)!!}\cfrac{m!}{2\pi^{m+1}}\\
+=2\cfrac{(2m)!!} {(2m+1)!!} \\
+\cfrac{\Omega_{2m+3}}{V_{2m+2}}
+=2\cfrac{(2m+2)!!} {(2m+1)!!} \\
+\cfrac{2}{(2m+1)!!\Omega_{2m+3}}
+=\cfrac{1} {(2m+2)!!V_{2m+2}} \\
+\\\end{gathered}
+$$
+</div>
+
+
+<p>因此 $D$ 维波动方程（其中 $D&#x3D;2m+2,m\in \mathbb{N}$ ）的解为</p>
+<div>
+$$
+\begin{gathered}
+u(x,t)=\cfrac{1}{(2m+2)!!}\cfrac{\partial}{\partial t}\left(\cfrac{1}{t}\cfrac{\partial}{\partial t}\right)^m \left\lbrack t^{2m+2}B_{\psi}(x,t)\right\rbrack \\
++\cfrac{1}{(2m+2)!!}\left(\cfrac{1}{t}\cfrac{\partial}{\partial t}\right)^m \left\lbrack t^{2m+2}B_{\phi}(x,t)\right\rbrack 
+\\\end{gathered}
+$$
+</div>
+
+<p>其中 $2m+2$ 维球体内的“加权平均”</p>
+<div>
+$$
+\begin{gathered}
+B_\phi(x,t)=\cfrac{1}{V_{2m+2}t^{2m+2}} \int_{\lvert y-x \rvert\leq t}\cfrac{\phi(y)}{\sqrt{t^2-\lvert y-x\rvert^2}}{\rm d}y \\
+\\\end{gathered}
+$$
+</div>
+
+
+<p>我们可以看出奇数维和偶数维不同的解的结构。奇数维中解和在球面上的积分有关，而偶数维中和球体中的积分有关。因此奇数维空间中的波遵循惠更斯原理，而偶数维不遵循。</p>
+<h2 id="参见"><a href="#参见" class="headerlink" title="参见"></a>参见</h2><p>[1] <a target="_blank" rel="noopener" href="https://web.stanford.edu/class/math220a/handouts/waveequation3.pdf">https://web.stanford.edu/class/math220a/handouts/waveequation3.pdf</a></p>
+<p>[2] <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Wave_equation">https://en.wikipedia.org/wiki/Wave_equation</a></p>
+</div><div class="article-licensing box"><div class="licensing-title"><p>任意维波动方程的解析解</p><p><a href="https://yuchenxi2000.github.io/2024/08/02/任意维波动方程的解析解/">https://yuchenxi2000.github.io/2024/08/02/任意维波动方程的解析解/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>Chenxi Yu</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2024-08-02</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2026-03-30</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/%E6%95%B0%E5%AD%A6/">数学</a><a class="link-muted mr-2" rel="tag" href="/tags/%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B/">微分方程</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2024/08/09/%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E4%B8%AD%E8%B0%90%E6%8C%AF%E5%AD%90%E5%8F%8A%E5%8E%84%E7%B1%B3%E5%A4%9A%E9%A1%B9%E5%BC%8F/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">量子力学中谐振子及厄米多项式</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2024/07/31/%E9%AB%98%E6%96%AF%E7%A7%AF%E5%88%86%EF%BC%8C%E4%BB%A5%E5%8F%8A%E5%8D%95%E4%BD%8D%E7%90%83%E9%9D%A2%E7%A7%AF/"><span class="level-item">高斯积分，以及单位球面积</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><!--!--><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a><p class="is-size-7"><span>&copy; 2026 Chenxi Yu</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="fab fa-creative-commons-nc"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/yuchenxi2000"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script data-pjax src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script data-pjax src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "此网站使用Cookie来改善您的体验。",
+          dismiss: "知道了！",
+          allow: "允许使用Cookie",
+          deny: "拒绝",
+          link: "了解更多",
+          policy: "Cookie政策",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js"></script><script src="/js/pjax.js"></script><!--!--><script type="text/javascript" id="MathJax-script" async>MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      },
+      svg: {
+        fontCache: 'global'
+      },
+      chtml: {
+        matchFontHeight: false
+      }
+    };</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js"></script><!--!--><!--!--><script data-pjax src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script data-pjax src="/js/insight.js" defer></script><script data-pjax>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script></body></html>

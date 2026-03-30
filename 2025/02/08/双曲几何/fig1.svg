@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 165.3959 116.6641">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke-dasharray: 2.9195 2.9195;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7, .cls-8 {
+        stroke: #231815;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-6, .cls-7, .cls-8 {
+        fill: none;
+      }
+
+      .cls-9 {
+        letter-spacing: -.0552em;
+      }
+
+      .cls-9, .cls-10 {
+        font-family: ArialMT, Arial;
+      }
+
+      .cls-9, .cls-10, .cls-11, .cls-12 {
+        fill: #231815;
+        font-size: 12px;
+      }
+
+      .cls-3 {
+        stroke-dasharray: 3.0223 3.0223;
+      }
+
+      .cls-4 {
+        stroke-dasharray: 3.0668 3.0668;
+      }
+
+      .cls-5 {
+        fill: #fff;
+      }
+
+      .cls-11 {
+        letter-spacing: -.0371em;
+      }
+
+      .cls-11, .cls-12 {
+        font-family: Arial-ItalicMT, Arial;
+        font-style: italic;
+      }
+
+      .cls-6 {
+        stroke-dasharray: 2.9752 2.9752;
+      }
+
+      .cls-7 {
+        stroke-dasharray: 3.0316 3.0316;
+      }
+
+      .cls-8 {
+        stroke-dasharray: 2.934 2.934;
+      }
+    </style>
+  </defs>
+  <g id="_图层_1" data-name="图层 1">
+    <line class="cls-5" y1="100.8955" x2="165.3959" y2="100.8955"/>
+    <g>
+      <line class="cls-2" x1="28.7731" y1="30.4139" x2="28.7731" y2="31.9139"/>
+      <line class="cls-8" x1="28.7731" y1="34.8479" x2="28.7731" y2="97.9285"/>
+      <polyline class="cls-2" points="28.7731 99.3955 28.7731 100.8955 29.6285 99.6633"/>
+      <line class="cls-1" x1="31.2934" y1="97.2651" x2="67.0883" y2="45.7033"/>
+      <polyline class="cls-2" points="67.9208 44.5042 68.7762 43.2721 69.8597 44.3093"/>
+      <line class="cls-6" x1="72.009" y1="46.3667" x2="126.8147" y2="98.8296"/>
+      <polyline class="cls-2" points="127.8893 99.8582 128.9729 100.8955 129.2775 99.4267"/>
+      <line class="cls-7" x1="129.8931" y1="96.4583" x2="144.36" y2="26.6997"/>
+      <polyline class="cls-2" points="144.6678 25.2155 144.9724 23.7468 144.1566 25.0055"/>
+      <line class="cls-4" x1="142.4886" y1="27.579" x2="96.6185" y2="98.35"/>
+      <polyline class="cls-2" points="95.7845 99.6367 94.9686 100.8955 93.9417 99.8021"/>
+      <line class="cls-3" x1="91.8726" y1="97.599" x2="30.8346" y2="32.6088"/>
+      <line class="cls-2" x1="29.8" y1="31.5073" x2="28.7731" y2="30.4139"/>
+    </g>
+    <path class="cls-5" d="M28.7731,30.4139c3.9115-4.6007,23.022-26.0897,55.9162-29.5062,34.1169-3.5436,56.842,17.0786,61.285,20.6839"/>
+    <path class="cls-5" d="M28.7731,30.6766c2.8962-.94,11.6623-3.3808,22.0912-.0976,10.431,3.2838,16.114,10.2752,17.9118,12.6931"/>
+    <path class="cls-5" d="M68.7762,43.2721c4.4912-5.2605,18.4499-16.4682,34.9357-21.9186,19.6211-6.4869,36.1189-1.6645,42.2625.5012"/>
+  </g>
+  <g id="_图层_2" data-name="图层 2">
+    <text class="cls-12" transform="translate(17.5092 68.6738)"><tspan x="0" y="0">r</tspan></text>
+    <text class="cls-12" transform="translate(21.5053 70.6699) scale(.583)"><tspan x="0" y="0">B</tspan></text>
+    <text class="cls-12" transform="translate(97.778 68.9223)"><tspan x="0" y="0">r</tspan></text>
+    <text class="cls-12" transform="translate(101.7741 70.9184) scale(.583)"><tspan x="0" y="0">C</tspan></text>
+    <text class="cls-12" transform="translate(139.2941 68.0647)"><tspan x="0" y="0">r</tspan></text>
+    <text class="cls-11" transform="translate(143.2902 70.0608) scale(.583)"><tspan x="0" y="0">A</tspan></text>
+    <text class="cls-12" transform="translate(58.3108 110.7715)"><tspan x="0" y="0">s</tspan></text>
+    <text class="cls-11" transform="translate(64.3108 112.7676) scale(.583)"><tspan x="0" y="0">A</tspan></text>
+    <text class="cls-12" transform="translate(108.5101 110.5488)"><tspan x="0" y="0">s</tspan></text>
+    <text class="cls-12" transform="translate(114.5101 112.5449) scale(.583)"><tspan x="0" y="0">B</tspan></text>
+    <text class="cls-9" transform="translate(17.9174 31.785)"><tspan x="0" y="0">A</tspan></text>
+    <text class="cls-10" transform="translate(73.5891 46.7993)"><tspan x="0" y="0">C</tspan></text>
+    <text class="cls-10" transform="translate(147.6045 26.4546)"><tspan x="0" y="0">B</tspan></text>
+    <text class="cls-12" transform="translate(39.4696 26.106)"><tspan x="0" y="0">α</tspan></text>
+    <text class="cls-12" transform="translate(115.2698 15.4571)"><tspan x="0" y="0">β</tspan></text>
+    <text class="cls-12" transform="translate(65.9436 32.3464)"><tspan x="0" y="0">γ</tspan></text>
+    <text class="cls-12" transform="translate(30.687 49.508)"><tspan x="0" y="0">α</tspan></text>
+    <text class="cls-12" transform="translate(128.9285 57.3461)"><tspan x="0" y="0">β</tspan></text>
+    <text class="cls-12" transform="translate(61.9589 62.6341)"><tspan x="0" y="0">π-γ</tspan></text>
+    <text class="cls-12" transform="translate(72.6396 96.3143)"><tspan x="0" y="0">θ</tspan></text>
+    <text class="cls-12" transform="translate(79.1494 98.3103) scale(.583)"><tspan x="0" y="0">2</tspan></text>
+    <text class="cls-12" transform="translate(104.6054 96.6551)"><tspan x="0" y="0">θ</tspan></text>
+    <text class="cls-12" transform="translate(111.1152 98.6512) scale(.583)"><tspan x="0" y="0">1</tspan></text>
+  </g>
+  <g id="_图层_3" data-name="图层 3">
+    <path class="cls-2" d="M36.8937,22.1813c.2411.1281,1.644.9077,2.2421,2.9134.5685,1.9062-.0009,3.5416-.118,3.8602"/>
+    <path class="cls-2" d="M135.1387,13.4802c-.9066.0892-1.7114.8577-2.1026,2.0146-.5531,1.6357.0143,3.1787.0701,3.3241"/>
+    <path class="cls-5" d="M65.2329,39.0027c.3486-.4644,1.4091-1.7543,3.0507-2.0001,2.4567-.3678,4.1415,1.913,4.3582,2.2164"/>
+    <path class="cls-2" d="M36.439,38.5762c-.1052.229-.7754,1.6086-2.8819,2.2891-2.3499.7592-4.5222.0135-4.784-.0803"/>
+    <path class="cls-2" d="M136.9291,36.009c.1074.3516.5817,1.7886,1.8169,2.5737,1.4623.9294,2.8383.2124,3.0524.0953"/>
+    <path class="cls-2" d="M64.0758,49.9769c.6602.5778,2.9265,2.4044,6.0234,1.9975,2.5334-.3328,4.2476-1.9795,4.9104-2.6923"/>
+    <path class="cls-2" d="M87.0037,92.4148c-.6521.6606-1.6635,1.8582-2.2915,3.5965-.7694,2.1298-.5637,3.9653-.39,4.8842"/>
+    <path class="cls-2" d="M100.4654,92.4148c.6371.3562,2.2622,1.3754,3.2947,3.4274,1.14,2.2658.8406,4.366.7124,5.0533"/>
+  </g>
+</svg>

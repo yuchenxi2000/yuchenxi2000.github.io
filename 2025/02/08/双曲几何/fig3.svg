@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 86.6022 104.7661">
+  <defs>
+    <style>
+      .cls-1 {
+        letter-spacing: -.0552em;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4 {
+        fill: #231815;
+      }
+
+      .cls-1, .cls-3 {
+        font-size: 12px;
+      }
+
+      .cls-1, .cls-3, .cls-5 {
+        font-family: ArialMT, Arial;
+      }
+
+      .cls-2, .cls-6 {
+        font-family: Arial-ItalicMT, Arial;
+        font-style: italic;
+      }
+
+      .cls-2, .cls-4 {
+        font-size: 8px;
+      }
+
+      .cls-7 {
+        fill: none;
+        stroke: #231815;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-8 {
+        letter-spacing: -.0742em;
+      }
+
+      .cls-9 {
+        letter-spacing: -.0371em;
+      }
+    </style>
+  </defs>
+  <g id="_图层_1" data-name="图层 1">
+    <line class="cls-7" x1=".0076" y1="53.6805" x2="86.6022" y2="53.6805"/>
+    <polyline class="cls-7" points="65.1955 8.5771 46.5265 53.6805 11.5222 15.9114 65.1955 95.8516"/>
+    <line class="cls-7" x1="65.1955" y1="95.8516" x2="65.1955" y2="8.5771"/>
+    <line class="cls-7" x1="46.5265" y1="53.6805" x2="65.1955" y2="95.8516"/>
+    <line class="cls-7" x1="11.5222" y1="15.9114" x2="65.1955" y2="8.5771"/>
+    <text class="cls-4" transform="translate(.0076 60.9934)"><tspan class="cls-6" x="0" y="0">x</tspan><tspan class="cls-5" x="4" y="0" xml:space="preserve"> axis</tspan></text>
+  </g>
+  <g id="_图层_2" data-name="图层 2">
+    <text class="cls-3" transform="translate(1.0503 18.8896)"><tspan x="0" y="0">B</tspan></text>
+    <text class="cls-1" transform="translate(66.5533 10.2978)"><tspan x="0" y="0">A</tspan></text>
+    <text class="cls-3" transform="translate(66.5349 100.8695)"><tspan class="cls-8" x="0" y="0">A</tspan><tspan class="cls-9" x="7.1133" y="0">’</tspan></text>
+    <text class="cls-3" transform="translate(40.2951 47.8538)"><tspan x="0" y="0">O</tspan></text>
+    <text class="cls-2" transform="translate(51.4046 51.5556)"><tspan x="0" y="0">α</tspan></text>
+    <text class="cls-2" transform="translate(35.6304 52.7398)"><tspan x="0" y="0">β</tspan></text>
+  </g>
+  <g id="_图层_3" data-name="图层 3">
+    <path class="cls-7" d="M48.2445,49.4306c.4134.1814,1.5209.7214,2.1843,1.7944.6862,1.1099.4782,2.1123.3855,2.4555"/>
+    <path class="cls-7" d="M43.1061,49.99c-.3454.3786-.8181.9949-1.091,1.8231-.2534.769-.2384,1.4288-.1818,1.8675"/>
+    <polyline class="cls-7" points="62.2208 53.6805 62.2208 50.8341 65.1955 50.8341"/>
+  </g>
+</svg>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_图层_1" data-name="图层 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 115.3418 122.2524">
+  <defs>
+    <style>
+      .cls-1 {
+        letter-spacing: -.0552em;
+      }
+
+      .cls-1, .cls-2 {
+        fill: #231815;
+        font-family: ArialMT, Arial;
+        font-size: 12px;
+      }
+
+      .cls-3 {
+        fill: none;
+        stroke: #231815;
+        stroke-miterlimit: 10;
+      }
+    </style>
+  </defs>
+  <line class="cls-3" y1="106.5179" x2="115.3418" y2="106.5179"/>
+  <line class="cls-3" x1="77.918" y1="9.2206" x2="29.9744" y2="22.3816"/>
+  <line class="cls-3" x1="77.918" y1="106.5179" x2="77.918" y2="9.2206"/>
+  <line class="cls-3" x1="29.9744" y1="22.3816" x2="77.918" y2="106.5179"/>
+  <line class="cls-3" x1="29.9744" y1="106.5179" x2="29.9744" y2="22.3816"/>
+  <polyline class="cls-3" points="29.9744 101.2823 35.2858 101.2823 35.2858 106.5179"/>
+  <polyline class="cls-3" points="77.918 101.5136 73.2142 101.5136 73.2142 106.5179"/>
+  <text class="cls-1" transform="translate(18.779 24.8262)"><tspan x="0" y="0">A</tspan></text>
+  <text class="cls-2" transform="translate(80.5234 10.2977)"><tspan x="0" y="0">B</tspan></text>
+  <text class="cls-2" transform="translate(74.8627 118.3557)"><tspan x="0" y="0">D</tspan></text>
+  <text class="cls-2" transform="translate(25.0371 118.3559)"><tspan x="0" y="0">C</tspan></text>
+</svg>

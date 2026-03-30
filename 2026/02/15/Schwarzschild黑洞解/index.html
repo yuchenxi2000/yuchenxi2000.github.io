@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>Schwarzschild黑洞解 - YCX&#039;s Blog</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="YCX&#039;s Blog"><meta name="msapplication-TileImage" content="favicon.ico"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="YCX&#039;s Blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="闵可夫斯基度规符号约定：  $$ \eta_{\mu\nu} &amp;#x3D; (-1, +1, +1, +1) $$   矢量平移、平行移动与克里斯托弗符号：  $$ D_{k}A_j&amp;#x3D;\partial_kA_j-\Gamma^i_{jk}A_i $$     $$ D_k A^j &amp;#x3D; \partial_k A^j + \Gamma^j_{ik}A^i $$    克里斯托弗符号表达式：  $$ \Gamma"><meta property="og:type" content="blog"><meta property="og:title" content="Schwarzschild黑洞解"><meta property="og:url" content="https://yuchenxi2000.github.io/2026/02/15/Schwarzschild%E9%BB%91%E6%B4%9E%E8%A7%A3/"><meta property="og:site_name" content="YCX&#039;s Blog"><meta property="og:description" content="闵可夫斯基度规符号约定：  $$ \eta_{\mu\nu} &amp;#x3D; (-1, +1, +1, +1) $$   矢量平移、平行移动与克里斯托弗符号：  $$ D_{k}A_j&amp;#x3D;\partial_kA_j-\Gamma^i_{jk}A_i $$     $$ D_k A^j &amp;#x3D; \partial_k A^j + \Gamma^j_{ik}A^i $$    克里斯托弗符号表达式：  $$ \Gamma"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://yuchenxi2000.github.io/img/og_image.png"><meta property="article:published_time" content="2026-02-15T00:20:33.000Z"><meta property="article:modified_time" content="2026-03-30T12:14:17.684Z"><meta property="article:author" content="Chenxi Yu"><meta property="article:tag" content="物理"><meta property="article:tag" content="广义相对论"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://yuchenxi2000.github.io/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://yuchenxi2000.github.io/2026/02/15/Schwarzschild%E9%BB%91%E6%B4%9E%E8%A7%A3/"},"headline":"Schwarzschild黑洞解","image":["https://yuchenxi2000.github.io/img/og_image.png"],"datePublished":"2026-02-15T00:20:33.000Z","dateModified":"2026-03-30T12:14:17.684Z","author":{"@type":"Person","name":"Chenxi Yu"},"publisher":{"@type":"Organization","name":"YCX's Blog","logo":{"@type":"ImageObject","url":"https://yuchenxi2000.github.io/2026/02/15/Schwarzschild%E9%BB%91%E6%B4%9E%E8%A7%A3/android-chrome-512x512.png"}},"description":"闵可夫斯基度规符号约定：  $$ \\eta_{\\mu\\nu} &#x3D; (-1, +1, +1, +1) $$   矢量平移、平行移动与克里斯托弗符号：  $$ D_{k}A_j&#x3D;\\partial_kA_j-\\Gamma^i_{jk}A_i $$     $$ D_k A^j &#x3D; \\partial_k A^j + \\Gamma^j_{ik}A^i $$    克里斯托弗符号表达式：  $$ \\Gamma"}</script><link rel="canonical" href="https://yuchenxi2000.github.io/2026/02/15/Schwarzschild%E9%BB%91%E6%B4%9E%E8%A7%A3/"><link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link data-pjax rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link data-pjax rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!--!--><!-- hexo injector head_end start --><script>
+  (function () {
+      function switchTab() {
+          if (!location.hash) {
+            return;
+          }
+
+          const id = '#' + CSS.escape(location.hash.substring(1));
+          const $tabMenu = document.querySelector(`.tabs a[href="${id}"]`);
+          if (!$tabMenu) {
+            return;
+          }
+
+          const $tabMenuContainer = $tabMenu.parentElement.parentElement;
+          Array.from($tabMenuContainer.children).forEach($menu => $menu.classList.remove('is-active'));
+          Array.from($tabMenuContainer.querySelectorAll('a'))
+              .map($menu => document.getElementById($menu.getAttribute("href").substring(1)))
+              .forEach($content => $content.classList.add('is-hidden'));
+
+          if ($tabMenu) {
+              $tabMenu.parentElement.classList.add('is-active');
+          }
+          const $activeTab = document.querySelector(id);
+          if ($activeTab) {
+              $activeTab.classList.remove('is-hidden');
+          }
+      }
+      switchTab();
+      window.addEventListener('hashchange', switchTab, false);
+  })();
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 8.1.1"></head><body class="is-1-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-12"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2026-02-15T00:20:33.000Z" title="2026/2/15 08:20:33">2026-02-15</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E7%89%A9%E7%90%86/">物理</a></span><span class="level-item">6 分钟读完 (大约874个字)</span></div></div><h1 class="title is-3 is-size-4-mobile">Schwarzschild黑洞解</h1><div class="content"><p>闵可夫斯基度规符号约定：</p>
+<div>
+$$
+\eta_{\mu\nu} = (-1, +1, +1, +1)
+$$
+</div>
+
+<p>矢量平移、平行移动与克里斯托弗符号：</p>
+<div>
+$$
+D_{k}A_j=\partial_kA_j-\Gamma^i_{jk}A_i
+$$
+</div>
+
+
+<div>
+$$
+D_k A^j = \partial_k A^j + \Gamma^j_{ik}A^i
+$$
+</div>
+
+
+<p>克里斯托弗符号表达式：</p>
+<div>
+$$
+\Gamma^\alpha_{\lambda\mu}=\frac{1}{2}g^{\alpha\nu}(g_{\mu\nu,\lambda}+g_{\nu\lambda,\mu}-g_{\lambda\mu,\nu})
+$$
+</div>
+
+
+<p>曲率张量定义：</p>
+<div>
+$$
+R^\rho_{\lambda\mu\nu}=-\Gamma^\rho_{\lambda\mu,\nu}+\Gamma^\rho_{\lambda\nu,\mu}-\Gamma^\sigma_{\lambda\mu}\Gamma^\rho_{\sigma\nu}+\Gamma^\sigma_{\lambda\nu}\Gamma^\rho_{\sigma\mu}
+$$
+</div>
+
+
+<p>Ricci张量：</p>
+<div>
+$$
+R_{\mu\nu} = R_{\mu\nu\lambda}^\lambda
+$$
+</div>
+
+
+<p>选择球坐标 $(t, r, \theta, \phi)$ ，在球对称、静态时空条件下，度规有如下形式</p>
+<div>
+$$
+g_{\mu\nu} = 
+\begin{pmatrix}
+-f & 0 & 0 & 0 \\
+0 & g & 0 & 0 \\
+0 & 0 & r^2 & 0 \\
+0 & 0 & 0 & r^2\sin^2\theta \\
+\end{pmatrix}
+$$
+</div>
+
+
+<p>其中 $f,g$ 只与 $r$ 有关， $g_{\mu\nu}$ 为（只需求逆矩阵）</p>
+<div>
+$$
+g^{\mu\nu} = 
+\begin{pmatrix}
+-\cfrac{1}{f} & 0 & 0 & 0 \\
+0 & \cfrac{1}{g} & 0 & 0 \\
+0 & 0 & \cfrac{1}{r^2} & 0 \\
+0 & 0 & 0 & \cfrac{1}{r^2\sin^2\theta} \\
+\end{pmatrix}
+$$
+</div>
+
+
+<p>所有非0的度规导数：</p>
+<div>
+$$
+\begin{gathered}
+g_{00,1} = -f_r \quad g_{11,1} = g_r \\
+g_{22,1} = 2r \quad g_{33,1} = 2r\sin^2\theta \quad g_{33,2} = 2r^2\sin\theta \cos \theta
+\\\end{gathered}
+$$
+</div>
+
+<p>因为度规有对角形式，因此联络只有三个指标至少两个相等时不为0：（下式不使用Einstein求和）</p>
+<div>
+$$
+\begin{gathered}
+\Gamma_{\alpha\alpha}^\lambda = -\cfrac{1}{2} g^{\lambda\lambda} g_{\alpha\alpha,\lambda} \quad
+\Gamma_{\alpha\alpha}^\alpha = \cfrac{1}{2} g^{\alpha\alpha} g_{\alpha\alpha,\alpha} \quad
+\Gamma_{\alpha\lambda}^\lambda = \cfrac{1}{2} g^{\lambda\lambda} g_{\lambda\lambda,\alpha} \\
+\\\end{gathered}
+$$
+</div>
+
+<p>所有非0联络：</p>
+<div>
+$$
+\begin{gathered}
+\Gamma_{00}^1 = \cfrac{f_r}{2g} \quad \Gamma_{11}^1 = \cfrac{g_r}{2g} \quad \Gamma_{10}^0 = \cfrac{f_r}{2f} \\
+\Gamma_{22}^1 = -\cfrac{r}{g} \quad \Gamma_{12}^2 = \cfrac{1}{r} \\
+\Gamma_{33}^1 = -\cfrac{r\sin^2\theta}{g} \quad \Gamma_{13}^3 = \cfrac{1}{r} \\
+\Gamma_{33}^2 = \dots \quad \Gamma_{23}^3 = \dots \\
+\\\end{gathered}
+$$
+</div>
+
+<p>下面求Ricci张量。因为球对称，因此只求对角部分。我们只有两个关于 $r$ 的未知函数，因此只需求两个分量，我们选择 $R_{00},R_{11}$ 。为此先求曲率张量：</p>
+<span id="more"></span>
+<div>
+$$
+\begin{gathered}
+R_{001}^1 =
+-\Gamma^1_{00,1}
+-\Gamma^1_{00}\Gamma^1_{11}
++\Gamma^0_{01}\Gamma^1_{00} \\
+=
+-(\cfrac{f_r}{2g})_r
+-\cfrac{f_r}{2g}\cfrac{g_r}{2g} 
++\cfrac{f_r}{2g}\cfrac{f_r}{2f}
+\\\end{gathered}
+$$
+</div>
+
+
+<div>
+$$
+\begin{gathered}
+R_{002}^2 
+=-\Gamma^1_{00}\Gamma^2_{12} \\
+= -\cfrac{f_r}{2rg}
+\\\end{gathered}
+$$
+</div>
+
+
+<div>
+$$
+\begin{gathered}
+R_{003}^3 
+=-\Gamma^1_{00}\Gamma^3_{13} \\
+=-\cfrac{f_r}{2rg}
+\\\end{gathered}
+$$
+</div>
+
+
+<div>
+$$
+\begin{gathered}
+R_{110}^0 =
+\Gamma^0_{10,1}
+-\Gamma^1_{11}\Gamma^0_{10}
++\Gamma^0_{10}\Gamma^0_{01} \\
+= 
+(\cfrac{f_r}{2f})_r 
+-\cfrac{f_r}{2f} \cfrac{g_r}{2g}
++\cfrac{f_r}{2f} \cfrac{f_r}{2f}
+\\\end{gathered}
+$$
+</div>
+
+
+<div>
+$$
+\begin{gathered}
+R_{112}^2 =
+\Gamma^2_{12,1}
+-\Gamma^1_{11}\Gamma^2_{12}
++\Gamma^2_{12}\Gamma^2_{21} \\
+=-\cfrac{g_r}{2rg}
+\\\end{gathered}
+$$
+</div>
+
+
+<div>
+$$
+\begin{gathered}
+R_{113}^3 =
+\Gamma^3_{13,1}
+-\Gamma^1_{11}\Gamma^3_{13}
++\Gamma^3_{13}\Gamma^3_{31} \\
+=-\cfrac{g_r}{2rg}
+\\\end{gathered}
+$$
+</div>
+
+
+<p>根据真空无物质爱因斯坦方程</p>
+<div>
+$$
+R_{\mu\nu} = 0
+$$
+</div>
+
+<p>我们有</p>
+<div>
+$$
+\begin{cases}
+R_{00}=R_{001}^1+R_{002}^2+R_{003}^3=0 \\
+R_{11}=R_{110}^0+R_{112}^2+R_{113}^3=0 \\
+\end{cases}
+$$
+</div>
+
+
+<div>
+$$
+\begin{cases}
+-\left(\cfrac{f_r}{2g}\right)_r
+-\cfrac{f_r}{2g}\cfrac{g_r}{2g} 
++\cfrac{f_r}{2g}\cfrac{f_r}{2f}-\cfrac{f_r}{rg} = 0 \\
+\left(\cfrac{f_r}{2f}\right)_r 
+-\cfrac{f_r}{2f} \cfrac{g_r}{2g}
++\cfrac{f_r}{2f} \cfrac{f_r}{2f} -\cfrac{g_r}{rg} = 0
+\end{cases}
+$$
+</div>
+
+
+
+<div>
+$$
+\begin{cases}
+-2f(f_{rr}g-f_rg_r)
+-ff_rg_r
++gf_r^2-\cfrac{4gff_r}{r} = 0 \\
+2g(f_{rr}f-f_r^2)
+-ff_rg_r
++gf_r^2 -\cfrac{4f^2g_r}{r} = 0
+\end{cases}
+$$
+</div>
+
+
+<div>
+$$
+\begin{cases}
+-2fgf_{rr}+ff_rg_r
++gf_r^2-\cfrac{4gff_r}{r} = 0 \\
+2fgf_{rr}
+-ff_rg_r
+-gf_r^2 -\cfrac{4f^2g_r}{r} = 0
+\end{cases}
+$$
+</div>
+
+
+<p>两式相加得</p>
+<div>
+$$
+(fg)_r = 0
+$$
+</div>
+
+<p>所以</p>
+<div>
+$$
+fg=C_0
+$$
+</div>
+
+<p>选一个式子代入后解得</p>
+<div>
+$$
+\begin{cases}
+f=C_2\left(1 - \cfrac{C_1}{r}\right) \\
+g=\cfrac{C_3}{1 - \cfrac{C_1}{r}} \\
+\end{cases}
+$$
+</div>
+
+<p>在无穷远处，度规趋于闵可夫斯基度规；并且由爱因斯坦方程的牛顿近似 $f \approx 1-2GM&#x2F;r$ ，可以确定出其中的常数。由此得到Schwarzschild度规</p>
+<div>
+$$
+g_{\mu\nu} = 
+\begin{pmatrix}
+-\left(1-\cfrac{2GM}{r}\right) & 0 & 0 & 0 \\
+0 & \cfrac{1}{1-\cfrac{2GM}{r}} & 0 & 0 \\
+0 & 0 & r^2 & 0 \\
+0 & 0 & 0 & r^2\sin^2\theta \\
+\end{pmatrix}
+$$
+</div>
+
+<p>或者用不变距离表示</p>
+<div>
+$$
+\mathrm{d}s^2 = -\left(1-\cfrac{2GM}{r}\right)\mathrm{d}t^2+\cfrac{\mathrm{d}r^2}{1-\cfrac{2GM}{r}}+r^2\mathrm{d}\theta^2+r^2\sin^2\theta\mathrm{d}\phi^2
+$$
+</div>
+
+
+<p>其中 $M$ 为黑洞质量。</p>
+</div><div class="article-licensing box"><div class="licensing-title"><p>Schwarzschild黑洞解</p><p><a href="https://yuchenxi2000.github.io/2026/02/15/Schwarzschild黑洞解/">https://yuchenxi2000.github.io/2026/02/15/Schwarzschild黑洞解/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>Chenxi Yu</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2026-02-15</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2026-03-30</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/%E7%89%A9%E7%90%86/">物理</a><a class="link-muted mr-2" rel="tag" href="/tags/%E5%B9%BF%E4%B9%89%E7%9B%B8%E5%AF%B9%E8%AE%BA/">广义相对论</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2026/02/16/Reissner-Nordstr%C3%B6m%E9%BB%91%E6%B4%9E%E8%A7%A3/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">Reissner-Nordström黑洞解</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2026/02/14/%E7%83%AD%E4%BC%A0%E5%AF%BC%E6%96%B9%E7%A8%8B%E7%9A%84%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2%E8%A7%A3%E6%B3%95/"><span class="level-item">热传导方程的傅里叶变换解法</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><!--!--><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a><p class="is-size-7"><span>&copy; 2026 Chenxi Yu</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="fab fa-creative-commons-nc"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/yuchenxi2000"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script data-pjax src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script data-pjax src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "此网站使用Cookie来改善您的体验。",
+          dismiss: "知道了！",
+          allow: "允许使用Cookie",
+          deny: "拒绝",
+          link: "了解更多",
+          policy: "Cookie政策",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js"></script><script src="/js/pjax.js"></script><!--!--><script type="text/javascript" id="MathJax-script" async>MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      },
+      svg: {
+        fontCache: 'global'
+      },
+      chtml: {
+        matchFontHeight: false
+      }
+    };</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js"></script><!--!--><!--!--><script data-pjax src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script data-pjax src="/js/insight.js" defer></script><script data-pjax>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script></body></html>

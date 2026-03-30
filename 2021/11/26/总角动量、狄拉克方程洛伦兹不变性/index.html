@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>总角动量、狄拉克方程洛伦兹不变性 - YCX&#039;s Blog</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="YCX&#039;s Blog"><meta name="msapplication-TileImage" content="favicon.ico"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="YCX&#039;s Blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="量子场论的书中一些推导总会略去中间步骤。于是自己重新推一遍。加深印象。  洛伦兹变换洛伦兹变换为保持四维矢量内积不变的线性变换。 这里我们取度规  $$ g_{\mu\nu}&amp;#x3D; \begin{pmatrix} -1 &amp;amp; 0 &amp;amp; 0 &amp;amp; 0 \\ 0 &amp;amp; +1 &amp;amp; 0 &amp;amp; 0 \\ 0 &amp;amp; 0 &amp;amp; +1 &amp;amp; 0 \\ 0 &amp;amp; 0 &amp;amp; 0 &amp;amp; +1 \\ \end{pmatrix} $$   并且使"><meta property="og:type" content="blog"><meta property="og:title" content="总角动量、狄拉克方程洛伦兹不变性"><meta property="og:url" content="https://yuchenxi2000.github.io/2021/11/26/%E6%80%BB%E8%A7%92%E5%8A%A8%E9%87%8F%E3%80%81%E7%8B%84%E6%8B%89%E5%85%8B%E6%96%B9%E7%A8%8B%E6%B4%9B%E4%BC%A6%E5%85%B9%E4%B8%8D%E5%8F%98%E6%80%A7/"><meta property="og:site_name" content="YCX&#039;s Blog"><meta property="og:description" content="量子场论的书中一些推导总会略去中间步骤。于是自己重新推一遍。加深印象。  洛伦兹变换洛伦兹变换为保持四维矢量内积不变的线性变换。 这里我们取度规  $$ g_{\mu\nu}&amp;#x3D; \begin{pmatrix} -1 &amp;amp; 0 &amp;amp; 0 &amp;amp; 0 \\ 0 &amp;amp; +1 &amp;amp; 0 &amp;amp; 0 \\ 0 &amp;amp; 0 &amp;amp; +1 &amp;amp; 0 \\ 0 &amp;amp; 0 &amp;amp; 0 &amp;amp; +1 \\ \end{pmatrix} $$   并且使"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://yuchenxi2000.github.io/img/og_image.png"><meta property="article:published_time" content="2021-11-26T03:47:00.000Z"><meta property="article:modified_time" content="2026-03-30T12:14:20.352Z"><meta property="article:author" content="Chenxi Yu"><meta property="article:tag" content="物理"><meta property="article:tag" content="量子力学"><meta property="article:tag" content="量子场论"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://yuchenxi2000.github.io/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://yuchenxi2000.github.io/2021/11/26/%E6%80%BB%E8%A7%92%E5%8A%A8%E9%87%8F%E3%80%81%E7%8B%84%E6%8B%89%E5%85%8B%E6%96%B9%E7%A8%8B%E6%B4%9B%E4%BC%A6%E5%85%B9%E4%B8%8D%E5%8F%98%E6%80%A7/"},"headline":"总角动量、狄拉克方程洛伦兹不变性","image":["https://yuchenxi2000.github.io/img/og_image.png"],"datePublished":"2021-11-26T03:47:00.000Z","dateModified":"2026-03-30T12:14:20.352Z","author":{"@type":"Person","name":"Chenxi Yu"},"publisher":{"@type":"Organization","name":"YCX's Blog","logo":{"@type":"ImageObject","url":"https://yuchenxi2000.github.io/2021/11/26/%E6%80%BB%E8%A7%92%E5%8A%A8%E9%87%8F%E3%80%81%E7%8B%84%E6%8B%89%E5%85%8B%E6%96%B9%E7%A8%8B%E6%B4%9B%E4%BC%A6%E5%85%B9%E4%B8%8D%E5%8F%98%E6%80%A7/android-chrome-512x512.png"}},"description":"量子场论的书中一些推导总会略去中间步骤。于是自己重新推一遍。加深印象。  洛伦兹变换洛伦兹变换为保持四维矢量内积不变的线性变换。 这里我们取度规  $$ g_{\\mu\\nu}&#x3D; \\begin{pmatrix} -1 &amp; 0 &amp; 0 &amp; 0 \\\\ 0 &amp; +1 &amp; 0 &amp; 0 \\\\ 0 &amp; 0 &amp; +1 &amp; 0 \\\\ 0 &amp; 0 &amp; 0 &amp; +1 \\\\ \\end{pmatrix} $$   并且使"}</script><link rel="canonical" href="https://yuchenxi2000.github.io/2021/11/26/%E6%80%BB%E8%A7%92%E5%8A%A8%E9%87%8F%E3%80%81%E7%8B%84%E6%8B%89%E5%85%8B%E6%96%B9%E7%A8%8B%E6%B4%9B%E4%BC%A6%E5%85%B9%E4%B8%8D%E5%8F%98%E6%80%A7/"><link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link data-pjax rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link data-pjax rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!--!--><!-- hexo injector head_end start --><script>
+  (function () {
+      function switchTab() {
+          if (!location.hash) {
+            return;
+          }
+
+          const id = '#' + CSS.escape(location.hash.substring(1));
+          const $tabMenu = document.querySelector(`.tabs a[href="${id}"]`);
+          if (!$tabMenu) {
+            return;
+          }
+
+          const $tabMenuContainer = $tabMenu.parentElement.parentElement;
+          Array.from($tabMenuContainer.children).forEach($menu => $menu.classList.remove('is-active'));
+          Array.from($tabMenuContainer.querySelectorAll('a'))
+              .map($menu => document.getElementById($menu.getAttribute("href").substring(1)))
+              .forEach($content => $content.classList.add('is-hidden'));
+
+          if ($tabMenu) {
+              $tabMenu.parentElement.classList.add('is-active');
+          }
+          const $activeTab = document.querySelector(id);
+          if ($activeTab) {
+              $activeTab.classList.remove('is-hidden');
+          }
+      }
+      switchTab();
+      window.addEventListener('hashchange', switchTab, false);
+  })();
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 8.1.1"></head><body class="is-1-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-12"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-11-26T03:47:00.000Z" title="2021/11/26 11:47:00">2021-11-26</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E7%89%A9%E7%90%86/">物理</a></span><span class="level-item">13 分钟读完 (大约2017个字)</span></div></div><h1 class="title is-3 is-size-4-mobile">总角动量、狄拉克方程洛伦兹不变性</h1><div class="content"><blockquote>
+<p>量子场论的书中一些推导总会略去中间步骤。于是自己重新推一遍。加深印象。</p>
+</blockquote>
+<h2 id="洛伦兹变换"><a href="#洛伦兹变换" class="headerlink" title="洛伦兹变换"></a>洛伦兹变换</h2><p>洛伦兹变换为保持四维矢量内积不变的线性变换。</p>
+<p>这里我们取度规</p>
+<div>
+$$
+g_{\mu\nu}=
+\begin{pmatrix}
+-1 & 0 & 0 & 0 \\
+0 & +1 & 0 & 0 \\
+0 & 0 & +1 & 0 \\
+0 & 0 & 0 & +1 \\
+\end{pmatrix}
+$$
+</div>
+
+<p>并且使用爱因斯坦求和约定，取 $\hbar&#x3D;1$ </p>
+<p>由四维矢量内积不变</p>
+<div>
+$$
+g_{\mu\nu}x^\mu y^\nu=g_{\mu\nu}\bar{x}^\mu \bar{y}^\nu=g_{\mu\nu}\Lambda^\mu_{\ \sigma}x^\sigma\Lambda^\nu_{\ \rho}y^\rho
+$$
+</div>
+
+
+<div>
+$$
+(g_{\sigma\rho}\Lambda_\mu^{\ \sigma}\Lambda_\nu^{\ \rho} - g_{\mu\nu})x^\mu y^\nu = 0
+$$
+</div>
+
+
+<div>
+$$
+g_{\sigma\rho}\Lambda_\mu^{\ \sigma}\Lambda_\nu^{\ \rho} = g_{\mu\nu}
+$$
+</div>
+
+
+<p>考虑无穷小洛伦兹变换 $\Lambda_\mu^{\ \sigma}&#x3D;\delta_\mu^{\ \sigma}+\omega_\mu^{\ \sigma}$ </p>
+<div>
+$$
+g_{\sigma\rho}(\delta_\mu^{\ \sigma}+\omega_\mu^{\ \sigma})(\delta_\nu^{\ \rho}+\omega_\nu^{\ \rho}) = g_{\mu\nu}
+$$
+</div>
+
+
+<div>
+$$
+\omega_{\mu\nu}+\omega_{\nu\mu}=0
+$$
+</div>
+
+
+<p>即 $\omega_{\mu\nu}$ 为反对称矩阵（注意 $\omega_{\mu\nu}$ 和 $\omega_{\mu}^{\ \nu}$ 不相同）</p>
+<p> $\omega_{\mu\nu}$ 有6个相互独立的分量，它们构成洛伦兹群的李代数。（我们讨论的洛伦兹群其实是四个连通分支中的一个，单位元所在分支）接下来我们构造它的生成元 $M^{\sigma\rho}\ _{\mu\nu}$ （注意指标 $\sigma\rho$ 只表示存在6个独立的生成元。 $\mu\nu$ 才是矩阵指标。我们要求 $M^{\sigma\rho}\ <em>{\mu\nu}$ 关于 $\sigma\rho$ 反对称， $\Omega</em>{\sigma\rho}$ 为无穷小量且关于指标 $\sigma\rho$ 反对称）</p>
+<div>
+$$
+\begin{align}
+\Lambda_{\mu\nu} 
+&= g_{\mu\nu}+\omega_{\mu\nu} \\
+&= g_{\mu\nu}+\frac{1}{2}\Omega_{\sigma\rho}(\delta^{\sigma}_{\ \mu}\delta^{\rho}_{\ \nu}-\delta^{\sigma}_{\ \nu}\delta^{\rho}_{\ \mu}) \\
+&= g_{\mu\nu}+\frac{1}{2}{\rm i}\Omega_{\sigma\rho}\frac{1}{\rm i}(\delta^{\sigma}_{\ \mu}\delta^{\rho}_{\ \nu}-\delta^{\sigma}_{\ \nu}\delta^{\rho}_{\ \mu}) \\
+&= g_{\mu\nu}+\frac{1}{2}{\rm i}\Omega_{\sigma\rho}M^{\sigma\rho}\ _{\mu\nu} \\
+\end{align}
+$$
+</div>
+
+<p> $M^{\sigma\rho}\ <em>{\mu\nu}&#x3D;\frac{1}{\rm i}(\delta^{\sigma}</em>{\ \mu}\delta^{\rho}<em>{\ \nu}-\delta^{\sigma}</em>{\ \nu}\delta^{\rho}_{\ \mu})$ 即为洛伦兹群6个生成元，前面的 $\frac{1}{\rm i}$ 是convention</p>
+<p>上式中如果注意到 $\delta^{\sigma}<em>{\ \mu}\delta^{\rho}</em>{\ \nu}$ 是只有一个非0元素的矩阵，并且考虑到反对称性，那么推导就是显然的。或者可以写出矩阵形式然后验证。</p>
+<h2 id="群作用"><a href="#群作用" class="headerlink" title="群作用"></a>群作用</h2><p>群在态空间上的作用应当表示为作用在态空间上的算符。</p>
+<p>我们考虑具有多个分量的态矢 $\phi_a(x)$ （分量 $a$ 的个数可以是任意个）</p>
+<p>记洛伦兹变换算符 $O$ ，则</p>
+<div>
+$$
+O\phi_a(x)=S(\Lambda)_a^{\ b}\phi_b(\Lambda^{-1}x)
+\label{lorentz-group-action:EtkTYQn5IQ4qmn0y}
+$$
+</div>
+
+<p> $S(\Lambda)$ 是依赖于 $\Lambda$ 的矩阵。可以证明 $S(\Lambda)$ 构成洛伦兹群的表示：</p>
+<div>
+$$
+\begin{align}
+O_2O_1\phi_a(x)
+&=O_2S(\Lambda_1)_a^{\ b}\phi_b(\Lambda_1^{-1}x)\\
+&=S(\Lambda_2)_a^{\ c}S(\Lambda_1)_c^{\ b}\phi_b(\Lambda_1^{-1}\Lambda_2^{-1}x)
+\end{align}
+$$
+</div>
+
+<p>（下式省略矩阵指标）</p>
+<div>
+$$
+O_2O_1\phi(x)=S_2S_1\phi((\Lambda_2\Lambda_1)^{-1}x)
+$$
+</div>
+
+<p>所以 $S(\Lambda_1)S(\Lambda_2)&#x3D;S(\Lambda_1\Lambda_2)$ ，即 $S(\Lambda)$ 构成洛伦兹群的表示</p>
+<p>接下来考察洛伦兹变换在态矢上的作用。对于无穷小洛伦兹变换，有 $O&#x3D;1+\frac{1}{2}{\rm i}\Omega_{\mu\nu}J^{\mu\nu}$ ，其中 $J$ 为总角动量算符， $J^{23},J^{31},J^{12}$ 对应rotation， $J^{01},J^{02},J^{03}$ 对应boost。 $\Omega$ 为无穷小量， $J$ 关于指标反对称。</p>
+<span id="more"></span>
+
+<p>对于表示 $S(\Lambda)$ ，我们也有6个生成元 $S(\Lambda)<em>a^{\ b}&#x3D;\delta_a^{\ b}+\frac{1}{2}{\rm i}\Omega</em>{\mu\nu}S^{\mu\nu}\ _a^{\ b}$ </p>
+<p>洛伦兹群6个生成元 $\Lambda_{\mu\nu} &#x3D; g_{\mu\nu}+\frac{1}{2}{\rm i}\Omega_{\sigma\rho}\frac{1}{\rm i}(\delta^{\sigma}<em>{\ \mu}\delta^{\rho}</em>{\ \nu}-\delta^{\sigma}<em>{\ \nu}\delta^{\rho}</em>{\ \mu})$ </p>
+<p>代入 $\eqref{lorentz-group-action:EtkTYQn5IQ4qmn0y}$ ，</p>
+<div>
+$$
+(\delta_a^{\ b}+\frac{1}{2}{\rm i}\Omega_{\mu\nu}J^{\mu\nu}\ _a^{\ b})\phi_b(x) = (\delta_a^{\ b}+\frac{1}{2}{\rm i}\Omega_{\mu\nu}S^{\mu\nu}\ _a^{\ b})\phi_b(\bar{x})
+$$
+</div>
+
+
+<p>接下来计算 $\phi_b(\bar{x})$ 。由于不同的分量不会混合，所以推导省略指标 $b$ 。</p>
+<div>
+$$
+\begin{align}
+\phi(\bar{x}^\mu)
+&=\phi((\Lambda^{-1})^\mu_{\ \nu}x^\nu)\\
+&=\phi((g^\mu_{\ \nu}-\frac{1}{2}\Omega_{\sigma\rho}(g^{\sigma\mu}\delta^{\rho}_{\ \nu}-\delta^{\sigma}_{\ \nu}g^{\rho\mu}))x^\nu) \\
+&=\phi(x^\mu-\frac{1}{2}\Omega_{\sigma\rho}(g^{\sigma\mu}\delta^{\rho}_{\ \nu}-\delta^{\sigma}_{\ \nu}g^{\rho\mu})x^\nu)\\
+&=\phi(x)-\frac{1}{2}\Omega_{\sigma\rho}(g^{\sigma\mu}\delta^{\rho}_{\ \nu}-\delta^{\sigma}_{\ \nu}g^{\rho\mu})x^\nu \partial_\mu\phi(x)\\
+&=\phi(x)-\frac{1}{2}\Omega_{\sigma\rho}(x^{\rho}\partial^{\sigma}-x^{\sigma}\partial^{\rho})\phi(x)\\
+&=\phi(x)+\frac{1}{2}{\rm i}\Omega_{\sigma\rho}\frac{1}{\rm i}(x^{\sigma}\partial^{\rho}-x^{\rho}\partial^{\sigma})\phi(x)\\
+&=(1+\frac{1}{2}{\rm i}\Omega_{\sigma\rho}L^{\sigma\rho})\phi(x)
+\end{align}
+$$
+</div>
+
+<p>其中 $L^{\sigma\rho}&#x3D;\frac{1}{\rm i}(x^{\sigma}\partial^{\rho}-x^{\rho}\partial^{\sigma})$ 为角动量算符</p>
+<p>于是</p>
+<div>
+$$
+(\delta_a^{\ b}+\frac{1}{2}{\rm i}\Omega_{\mu\nu}J^{\mu\nu}\ _a^{\ b})\phi_b(x) = (\delta_a^{\ b}+\frac{1}{2}{\rm i}\Omega_{\mu\nu}S^{\mu\nu}\ _a^{\ b})(1+\frac{1}{2}{\rm i}\Omega_{\sigma\rho}L^{\sigma\rho})\phi_b(x)
+$$
+</div>
+
+
+<div>
+$$
+J^{\mu\nu}\ _a^{\ b}=L^{\mu\nu}+S^{\mu\nu}\ _a^{\ b}
+\label{angular-momentum-spin:EtkTYQn5IQ4qmn0y}
+$$
+</div>
+
+
+<p>注意 $L$ 不会混合不同的指标（可以看作正比于单位矩阵）。对应地 $S^{\mu\nu}\ _a^{\ b}$ 即为自旋算符。 $L$ 来自于坐标系的转动，而 $S$ 是自身的转动。可以想象一个矢量（自旋1）在坐标转动下的行为。</p>
+<p>上面讨论的是相对论量子力学， $\phi$ 理解为态矢。对于量子场论， $\phi$ 为场算符的情形， $\eqref{lorentz-group-action:EtkTYQn5IQ4qmn0y}$ 成为</p>
+<div>
+$$
+O^{-1}\phi_a(x)O=S(\Lambda)_a^{\ b}\phi_b(\Lambda^{-1}x)
+$$
+</div>
+
+<p>类似可证 $S(\Lambda)$ 仍为洛伦兹群的表示。 $\eqref{angular-momentum-spin:EtkTYQn5IQ4qmn0y}$ 成为（Sredniki中用 $M^{\mu\nu}$ 而不是 $J^{\mu\nu}$ ）</p>
+<div>
+$$
+\lbrack \phi,J^{\mu\nu}\rbrack =(L^{\mu\nu}+S^{\mu\nu})\phi
+$$
+</div>
+
+
+<h2 id="狄拉克方程洛伦兹不变性"><a href="#狄拉克方程洛伦兹不变性" class="headerlink" title="狄拉克方程洛伦兹不变性"></a>狄拉克方程洛伦兹不变性</h2><p>我们讨论一般情形， $\gamma^\mu$ 是4个任意维矩阵（ $\mu$ 指标标记4个不同矩阵），任意个分量的态矢 $\phi_a(x)$ 。</p>
+<div>
+$$
+-{\rm i}\gamma^\mu\ _a^{\ b} \partial_\mu\phi_b(x)+m\phi_a(x) = 0
+\label{dirac-equation:EtkTYQn5IQ4qmn0y}
+$$
+</div>
+
+<p>如果上式在洛伦兹变换下保持不变， $\gamma^\mu$ 应满足的条件。</p>
+<div>
+$$
+-{\rm i}O^{-1}\gamma^\mu \partial_\mu O \phi(x)+m\phi(x) = 0
+$$
+</div>
+
+
+<div>
+$$
+\begin{align}
+O^{-1}\gamma^\mu\partial_\mu O - \gamma^\mu\partial_\mu
+&=(1-\frac{1}{2}{\rm i}\Omega_{\mu\nu}J^{\mu\nu})\gamma^\rho\partial_\rho (1+\frac{1}{2}{\rm i}\Omega_{\mu\nu}J^{\mu\nu}) - \gamma^\rho\partial_\rho\\
+&=\frac{1}{2}{\rm i}\Omega_{\mu\nu}\lbrack \gamma^\rho\partial_\rho, J^{\mu\nu}\rbrack =0
+\end{align}
+$$
+</div>
+
+
+<p>下面推导自己看吧</p>
+<div>
+$$
+\begin{align}
+\lbrack \gamma^\rho\partial_\rho, J^{\mu\nu}\rbrack 
+&=\lbrack \gamma^\rho\partial_\rho, L^{\mu\nu}\rbrack +\lbrack \gamma^\rho\partial_\rho, S^{\mu\nu}\rbrack  \\
+&=\lbrack \partial_\rho, L^{\mu\nu}\rbrack \gamma^\rho+\lbrack \gamma^\rho, S^{\mu\nu}\rbrack \partial_\rho \\
+\end{align}
+$$
+</div>
+
+
+<div>
+$$
+\lbrack \partial_\rho, L^{\mu\nu}\rbrack =\lbrack \partial_\rho, x^\mu\partial^\nu\rbrack -\lbrack \partial_\rho, x^\nu\partial^\mu\rbrack 
+$$
+</div>
+
+
+<div>
+$$
+\lbrack \partial_\rho, x^\mu\partial_\nu\rbrack 
+=\partial_\rho (x^\mu\partial_\nu)-x^\mu\partial_\nu\partial_\rho =\delta_\rho^{\ \mu}\partial_\nu
+$$
+</div>
+
+
+<div>
+$$
+\lbrack \partial_\rho, L^{\mu}_{\ \nu}\rbrack =\delta_\rho^{\ \mu}\partial_\nu-\delta_\rho^{\ \nu}\partial_\mu
+$$
+</div>
+
+
+<div>
+$$
+\begin{align}
+\lbrack \gamma^\rho\partial_\rho, J^{\mu\nu}\rbrack 
+&=(\delta_\rho^{\ \mu}\partial^\nu-\delta_\rho^{\ \nu}\partial^\mu)\gamma^\rho+\lbrack \gamma^\rho, S^{\mu\nu}\rbrack \partial_\rho \\
+&=\gamma^{\mu}\partial^\nu-\gamma^{\nu}\partial^\mu+\lbrack \gamma^\rho, S^{\mu\nu}\rbrack \partial_\rho
+\end{align}
+$$
+</div>
+
+
+<div>
+$$
+\lbrack \gamma^\rho\partial_\rho, J^{\mu\nu}\rbrack 
+=\gamma^{\mu}\partial^\nu-\gamma^{\nu}\partial^\mu+\lbrack \gamma^\rho, S^{\mu\nu}\rbrack \partial_\rho = 0
+$$
+</div>
+
+
+<p>上式中，令算符恒等式作用于 $x^\alpha$ </p>
+<div>
+$$
+\gamma^{\mu}g^{\nu\alpha}-\gamma^{\nu}g^{\mu\alpha}+\lbrack \gamma^\alpha, S^{\mu\nu}\rbrack  = 0
+$$
+</div>
+
+
+<div>
+$$
+\lbrack S^{\mu\nu}, \gamma^\alpha\rbrack  = \gamma^{\mu}g^{\nu\alpha}-\gamma^{\nu}g^{\mu\alpha}
+$$
+</div>
+
+
+<p>上式是 $\eqref{dirac-equation:EtkTYQn5IQ4qmn0y}$ 洛伦兹不变的条件，只要选取合适的 $\gamma^{\alpha}, S^{\mu\nu}$ 即可满足，注意 $S^{\mu\nu}$ 需要满足反对称。</p>
+<p>我们可以构造一系列 $\gamma^\mu,S^{\mu\nu}$ 满足上式。构造的 $\gamma^\mu$ 满足Clifford algebra。</p>
+<p>Clifford algebra： ${\gamma^\mu, \gamma^\nu}&#x3D;2g^{\mu\nu}1$ </p>
+<p>再构造 $S^{\mu\nu}$ ：</p>
+<div>
+$$
+S^{\mu\nu}=\frac{1}{4}\lbrack \gamma^\mu, \gamma^\nu\rbrack =\frac{1}{2}\gamma^\mu\gamma^\nu-\frac{1}{2}g^{\mu\nu}
+$$
+</div>
+
+
+<p>计算可知洛伦兹不变的条件得到满足。</p>
+<div>
+$$
+\begin{align}
+\lbrack S^{\mu\nu}, \gamma^\alpha\rbrack 
+&=\frac{1}{2}(\gamma^\mu\gamma^\nu\gamma^\alpha-\gamma^\alpha\gamma^\mu\gamma^\nu) \\
+&=\frac{1}{2}(\gamma^\mu\{\gamma^\nu,\gamma^\alpha\}-\{\gamma^\alpha,\gamma^\mu\}\gamma^\nu) \\
+&=\gamma^{\mu}g^{\nu\alpha}-\gamma^{\nu}g^{\mu\alpha}
+\end{align}
+$$
+</div>
+
+
+<p>所以上面构造的 $\gamma^{\alpha}, S^{\mu\nu}$ 使得方程 $\eqref{dirac-equation:EtkTYQn5IQ4qmn0y}$ 满足洛伦兹不变。</p>
+<p>对于量子场论， $\phi$ 为场算符的情形，推导类似、结论相同。</p>
+</div><div class="article-licensing box"><div class="licensing-title"><p>总角动量、狄拉克方程洛伦兹不变性</p><p><a href="https://yuchenxi2000.github.io/2021/11/26/总角动量、狄拉克方程洛伦兹不变性/">https://yuchenxi2000.github.io/2021/11/26/总角动量、狄拉克方程洛伦兹不变性/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>Chenxi Yu</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2021-11-26</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2026-03-30</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/%E7%89%A9%E7%90%86/">物理</a><a class="link-muted mr-2" rel="tag" href="/tags/%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6/">量子力学</a><a class="link-muted mr-2" rel="tag" href="/tags/%E9%87%8F%E5%AD%90%E5%9C%BA%E8%AE%BA/">量子场论</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2021/11/28/%E6%B4%9B%E4%BC%A6%E5%85%B9%E7%BE%A4%E7%9A%84%E8%A1%A8%E7%A4%BA/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">洛伦兹群的表示</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2021/09/08/%E6%97%A0%E7%9B%B8%E4%BA%92%E4%BD%9C%E7%94%A8%E8%B4%B9%E7%B1%B3%E6%B0%94%E4%BD%93%E7%9A%84%E6%A0%BC%E6%9E%97%E5%87%BD%E6%95%B0/"><span class="level-item">无相互作用费米气体的格林函数</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><!--!--><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a><p class="is-size-7"><span>&copy; 2026 Chenxi Yu</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="fab fa-creative-commons-nc"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/yuchenxi2000"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script data-pjax src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script data-pjax src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "此网站使用Cookie来改善您的体验。",
+          dismiss: "知道了！",
+          allow: "允许使用Cookie",
+          deny: "拒绝",
+          link: "了解更多",
+          policy: "Cookie政策",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js"></script><script src="/js/pjax.js"></script><!--!--><script type="text/javascript" id="MathJax-script" async>MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      },
+      svg: {
+        fontCache: 'global'
+      },
+      chtml: {
+        matchFontHeight: false
+      }
+    };</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js"></script><!--!--><!--!--><script data-pjax src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script data-pjax src="/js/insight.js" defer></script><script data-pjax>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script></body></html>
