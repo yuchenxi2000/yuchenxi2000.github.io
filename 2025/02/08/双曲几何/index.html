@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>双曲几何 - YCX&#039;s Blog</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="YCX&#039;s Blog"><meta name="msapplication-TileImage" content="favicon.ico"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="YCX&#039;s Blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="参考常数高斯曲率曲面，里面给出的双曲空间定义（常数负曲率曲面）、测地线、双曲距离定义。以下我们为简单起见采用半平面表示。 此外，还可对比球面三角与柏拉图立体中球面三角的正弦余弦定理。直观上，可以将球面距离乘虚数单位 $\mathrm{i}$ 得到双曲距离，从而证明双曲正弦余弦定理，但为严格起见，下面双曲正弦余弦定理做了严格证明。 设双曲三角三条边和对应的三个内角分别为 $a,b,c,\alpha,"><meta property="og:type" content="blog"><meta property="og:title" content="双曲几何"><meta property="og:url" content="https://yuchenxi2000.github.io/2025/02/08/%E5%8F%8C%E6%9B%B2%E5%87%A0%E4%BD%95/"><meta property="og:site_name" content="YCX&#039;s Blog"><meta property="og:description" content="参考常数高斯曲率曲面，里面给出的双曲空间定义（常数负曲率曲面）、测地线、双曲距离定义。以下我们为简单起见采用半平面表示。 此外，还可对比球面三角与柏拉图立体中球面三角的正弦余弦定理。直观上，可以将球面距离乘虚数单位 $\mathrm{i}$ 得到双曲距离，从而证明双曲正弦余弦定理，但为严格起见，下面双曲正弦余弦定理做了严格证明。 设双曲三角三条边和对应的三个内角分别为 $a,b,c,\alpha,"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://yuchenxi2000.github.io/2025/02/08/%E5%8F%8C%E6%9B%B2%E5%87%A0%E4%BD%95/fig1.svg"><meta property="og:image" content="https://yuchenxi2000.github.io/2025/02/08/%E5%8F%8C%E6%9B%B2%E5%87%A0%E4%BD%95/fig2.svg"><meta property="og:image" content="https://yuchenxi2000.github.io/2025/02/08/%E5%8F%8C%E6%9B%B2%E5%87%A0%E4%BD%95/fig3.svg"><meta property="article:published_time" content="2025-02-08T09:37:28.000Z"><meta property="article:modified_time" content="2026-03-30T12:14:19.647Z"><meta property="article:author" content="Chenxi Yu"><meta property="article:tag" content="数学"><meta property="article:tag" content="微分几何"><meta property="article:tag" content="非欧几何"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://yuchenxi2000.github.io/2025/02/08/%E5%8F%8C%E6%9B%B2%E5%87%A0%E4%BD%95/fig1.svg"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://yuchenxi2000.github.io/2025/02/08/%E5%8F%8C%E6%9B%B2%E5%87%A0%E4%BD%95/"},"headline":"双曲几何","image":[],"datePublished":"2025-02-08T09:37:28.000Z","dateModified":"2026-03-30T12:14:19.647Z","author":{"@type":"Person","name":"Chenxi Yu"},"publisher":{"@type":"Organization","name":"YCX's Blog","logo":{"@type":"ImageObject","url":"https://yuchenxi2000.github.io/2025/02/08/%E5%8F%8C%E6%9B%B2%E5%87%A0%E4%BD%95/android-chrome-512x512.png"}},"description":"参考常数高斯曲率曲面，里面给出的双曲空间定义（常数负曲率曲面）、测地线、双曲距离定义。以下我们为简单起见采用半平面表示。 此外，还可对比球面三角与柏拉图立体中球面三角的正弦余弦定理。直观上，可以将球面距离乘虚数单位 $\\mathrm{i}$ 得到双曲距离，从而证明双曲正弦余弦定理，但为严格起见，下面双曲正弦余弦定理做了严格证明。 设双曲三角三条边和对应的三个内角分别为 $a,b,c,\\alpha,"}</script><link rel="canonical" href="https://yuchenxi2000.github.io/2025/02/08/%E5%8F%8C%E6%9B%B2%E5%87%A0%E4%BD%95/"><link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link data-pjax rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link data-pjax rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!--!--><!-- hexo injector head_end start --><script>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>双曲几何 - YCX&#039;s Blog</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="YCX&#039;s Blog"><meta name="msapplication-TileImage" content="favicon.ico"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="YCX&#039;s Blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="参考常数高斯曲率曲面，里面给出的双曲空间定义（常数负曲率曲面）、测地线、双曲距离定义。以下我们为简单起见采用半平面表示。 此外，还可对比球面三角与柏拉图立体中球面三角的正弦余弦定理。直观上，可以将球面距离乘虚数单位 $\mathrm{i}$ 得到双曲距离，从而证明双曲正弦余弦定理，但为严格起见，下面双曲正弦余弦定理做了严格证明。 设双曲三角三条边和对应的三个内角分别为 $a,b,c,\alpha,"><meta property="og:type" content="blog"><meta property="og:title" content="双曲几何"><meta property="og:url" content="https://yuchenxi2000.github.io/2025/02/08/%E5%8F%8C%E6%9B%B2%E5%87%A0%E4%BD%95/"><meta property="og:site_name" content="YCX&#039;s Blog"><meta property="og:description" content="参考常数高斯曲率曲面，里面给出的双曲空间定义（常数负曲率曲面）、测地线、双曲距离定义。以下我们为简单起见采用半平面表示。 此外，还可对比球面三角与柏拉图立体中球面三角的正弦余弦定理。直观上，可以将球面距离乘虚数单位 $\mathrm{i}$ 得到双曲距离，从而证明双曲正弦余弦定理，但为严格起见，下面双曲正弦余弦定理做了严格证明。 设双曲三角三条边和对应的三个内角分别为 $a,b,c,\alpha,"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://yuchenxi2000.github.io/2025/02/08/%E5%8F%8C%E6%9B%B2%E5%87%A0%E4%BD%95/fig1.svg"><meta property="og:image" content="https://yuchenxi2000.github.io/2025/02/08/%E5%8F%8C%E6%9B%B2%E5%87%A0%E4%BD%95/fig2.svg"><meta property="og:image" content="https://yuchenxi2000.github.io/2025/02/08/%E5%8F%8C%E6%9B%B2%E5%87%A0%E4%BD%95/fig3.svg"><meta property="article:published_time" content="2025-02-08T09:37:28.000Z"><meta property="article:modified_time" content="2026-04-03T14:21:10.191Z"><meta property="article:author" content="Chenxi Yu"><meta property="article:tag" content="数学"><meta property="article:tag" content="微分几何"><meta property="article:tag" content="非欧几何"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://yuchenxi2000.github.io/2025/02/08/%E5%8F%8C%E6%9B%B2%E5%87%A0%E4%BD%95/fig1.svg"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://yuchenxi2000.github.io/2025/02/08/%E5%8F%8C%E6%9B%B2%E5%87%A0%E4%BD%95/"},"headline":"双曲几何","image":[],"datePublished":"2025-02-08T09:37:28.000Z","dateModified":"2026-04-03T14:21:10.191Z","author":{"@type":"Person","name":"Chenxi Yu"},"publisher":{"@type":"Organization","name":"YCX's Blog","logo":{"@type":"ImageObject","url":"https://yuchenxi2000.github.io/2025/02/08/%E5%8F%8C%E6%9B%B2%E5%87%A0%E4%BD%95/android-chrome-512x512.png"}},"description":"参考常数高斯曲率曲面，里面给出的双曲空间定义（常数负曲率曲面）、测地线、双曲距离定义。以下我们为简单起见采用半平面表示。 此外，还可对比球面三角与柏拉图立体中球面三角的正弦余弦定理。直观上，可以将球面距离乘虚数单位 $\\mathrm{i}$ 得到双曲距离，从而证明双曲正弦余弦定理，但为严格起见，下面双曲正弦余弦定理做了严格证明。 设双曲三角三条边和对应的三个内角分别为 $a,b,c,\\alpha,"}</script><link rel="canonical" href="https://yuchenxi2000.github.io/2025/02/08/%E5%8F%8C%E6%9B%B2%E5%87%A0%E4%BD%95/"><link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link data-pjax rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link data-pjax rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!--!--><!-- hexo injector head_end start --><script>
   (function () {
       function switchTab() {
           if (!location.hash) {
@@ -29,29 +29,29 @@
       switchTab();
       window.addEventListener('hashchange', switchTab, false);
   })();
-  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 8.1.1"></head><body class="is-1-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-12"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2025-02-08T09:37:28.000Z" title="2025/2/8 17:37:28">2025-02-08</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E6%95%B0%E5%AD%A6/">数学</a></span><span class="level-item">21 分钟读完 (大约3120个字)</span></div></div><h1 class="title is-3 is-size-4-mobile">双曲几何</h1><div class="content"><p>参考<a href="/2025/02/01/%E5%B8%B8%E6%95%B0%E9%AB%98%E6%96%AF%E6%9B%B2%E7%8E%87%E6%9B%B2%E9%9D%A2/" title="常数高斯曲率曲面">常数高斯曲率曲面</a>，里面给出的双曲空间定义（常数负曲率曲面）、测地线、双曲距离定义。以下我们为简单起见采用半平面表示。</p>
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 8.1.1"></head><body class="is-1-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-12"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2025-02-08T09:37:28.000Z" title="2025/2/8 17:37:28">2025-02-08</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E6%95%B0%E5%AD%A6/">数学</a></span><span class="level-item">21 分钟读完 (大约3166个字)</span></div></div><h1 class="title is-3 is-size-4-mobile">双曲几何</h1><div class="content"><p>参考<a href="/2025/02/01/%E5%B8%B8%E6%95%B0%E9%AB%98%E6%96%AF%E6%9B%B2%E7%8E%87%E6%9B%B2%E9%9D%A2/" title="常数高斯曲率曲面">常数高斯曲率曲面</a>，里面给出的双曲空间定义（常数负曲率曲面）、测地线、双曲距离定义。以下我们为简单起见采用半平面表示。</p>
 <p>此外，还可对比<a href="/2024/08/13/%E7%90%83%E9%9D%A2%E4%B8%89%E8%A7%92%E4%B8%8E%E6%9F%8F%E6%8B%89%E5%9B%BE%E7%AB%8B%E4%BD%93/" title="球面三角与柏拉图立体">球面三角与柏拉图立体</a>中球面三角的正弦余弦定理。直观上，可以将球面距离乘虚数单位 $\mathrm{i}$ 得到双曲距离，从而证明双曲正弦余弦定理，但为严格起见，下面双曲正弦余弦定理做了严格证明。</p>
 <p>设双曲三角三条边和对应的三个内角分别为 $a,b,c,\alpha,\beta,\gamma$ ，则有</p>
 <p>双曲正弦定理：</p>
 <div>
 $$
 \cfrac{\sinh a}{\sin \alpha} = \cfrac{\sinh b}{\sin \beta} = \cfrac{\sinh c}{\sin \gamma}
-$$
-</div>
+\tag{1}
+$$</div>
 
 <p>双曲余弦定理1：</p>
 <div>
 $$
 \cosh c = \cosh a \cosh b - \cos \gamma \sinh a \sinh b
-$$
-</div>
+\tag{2}
+$$</div>
 
 <p>双曲余弦定理2：</p>
 <div>
 $$
 \cos \gamma = -\cos \alpha \cos \beta + \cosh c \sin \alpha \sin \beta
-$$
-</div>
+\tag{3}
+$$</div>
 
 <h2 id="三定理相互关系"><a href="#三定理相互关系" class="headerlink" title="三定理相互关系"></a>三定理相互关系</h2><p>双曲正弦定理可以由余弦定理1推出：</p>
 <div>
@@ -62,8 +62,8 @@ $$
 =\cfrac{\sqrt{\sinh^2 a \sinh^2 b - (\cosh a \cosh b - \cosh c)^2}}{\sinh a \sinh b} \\
 =\cfrac{\sqrt{2\cosh a \cosh b \cosh c - \cosh^2 a - \cosh^2 b - \cosh^2 c + 1}}{\sinh a \sinh b} \\
 \\\end{gathered}
-$$
-</div>
+\tag{4}
+$$</div>
 
 <p>所以</p>
 <div>
@@ -71,8 +71,8 @@ $$
 \begin{gathered}
 \cfrac{\sin \gamma}{\sinh c} = \cfrac{\sqrt{2\cosh a \cosh b \cosh c - \cosh^2 a - \cosh^2 b - \cosh^2 c + 1}}{\sinh a \sinh b \sinh c} \\
 \\\end{gathered}
-$$
-</div>
+\tag{5}
+$$</div>
 
 <p>该式关于 $a,b,c$ 轮换对称，所以得证。</p>
 <p>双曲余弦定理2可以由双曲余弦定理1推出：</p>
@@ -84,15 +84,16 @@ $$
 \cfrac{\sinh c}{\sin \gamma}
 = \cfrac{\sqrt{2\cos\alpha\cos\beta\cos\gamma+\cos^2\alpha+\cos^2\beta+\cos^2\gamma-1}}{\sin\alpha\sin\beta\sin\gamma} \\
 \\\end{gathered}
-$$
-</div>
+\tag{6}
+$$</div>
 
 <p>根据上式关于 $\alpha,\beta,\gamma$ 轮换对称得到正弦定理；</p>
 <p>然后将 $\cosh a,\cosh b,\cosh c,\sinh a,\sinh b$ 用 $\alpha,\beta,\gamma$ 代换，即得余弦定理1。</p>
 <p>因此两个余弦定理只需要证明其一，就可推出正弦定理和剩下一个余弦定理。</p>
 <h2 id="双曲余弦定理2的证明"><a href="#双曲余弦定理2的证明" class="headerlink" title="双曲余弦定理2的证明"></a>双曲余弦定理2的证明</h2><p>由上节讨论，我们知道只需证明其中一个余弦定理就可以得到三个定理的证明。</p>
 <p>我们选择双曲余弦定理2，因为双曲距离表达式相对复杂，双曲余弦定理2包含更少的双曲距离。而且，更多的三角函数使得我们可以用平面几何知识解决问题。</p>
-<p><img src="/2025/02/08/%E5%8F%8C%E6%9B%B2%E5%87%A0%E4%BD%95/fig1.svg"></p>
+<img src="/2025/02/08/%E5%8F%8C%E6%9B%B2%E5%87%A0%E4%BD%95/fig1.svg" class="">
+
 <p>如图，双曲三角 $ABC$ ，我们设三条边和三个内角分别为 $a,b,c,\alpha,\beta,\gamma$ ，设边 $BC,CA,AB$ 在平面上对应的圆的半径为 $r_A,r_B,r_C$ 。（参见<a href="/2025/02/01/%E5%B8%B8%E6%95%B0%E9%AB%98%E6%96%AF%E6%9B%B2%E7%8E%87%E6%9B%B2%E9%9D%A2/" title="常数高斯曲率曲面">常数高斯曲率曲面</a>，双曲空间半平面表示中，测地线为圆心在 $x$ 轴上的上半圆或者垂直 $x$ 轴的上半直线）</p>
 <p>由平面三角余弦定理，可以得到 $s_A,s_B$ </p>
 <div>
@@ -102,8 +103,8 @@ s_A=\sqrt{r_B^2+r_C^2-2r_Br_C \cos\alpha} \\
 s_B=\sqrt{r_A^2+r_C^2-2r_Ar_C \cos\beta} \\
 s_A+s_B=\sqrt{r_A^2+r_B^2+2r_Ar_B \cos\gamma} \\
 \\\end{gathered}
-$$
-</div>
+\tag{7}
+$$</div>
 
 <p>由此可以得到 $s_As_B$ </p>
 <div>
@@ -112,8 +113,8 @@ $$
 s_As_B=\cfrac{(s_A+s_B)^2-s_A^2-s_B^2}{2} \\
 =r_Br_C\cos\alpha+r_Cr_A\cos\beta+r_Ar_B\cos\gamma-r_C^2
 \\\end{gathered}
-$$
-</div>
+\tag{8}
+$$</div>
 
 <p>根据正弦定理和余弦定理，给出 $\theta_1,\theta_2$ 的正弦、余弦：</p>
 <div>
@@ -124,22 +125,22 @@ $$
 \sin\theta_1=\cfrac{r_A\sin\beta}{s_B} \\
 \sin\theta_2=\cfrac{r_B\sin\alpha}{s_A} \\
 \end{cases}
-$$
-</div>
+\tag{9}
+$$</div>
 
 <p>我们要求的双曲距离 $c$ ：</p>
 <div>
 $$
 c=-\ln \left(\tan\cfrac{\theta_1}{2}\tan\cfrac{\theta_2}{2}\right)
-$$
-</div>
+\tag{10}
+$$</div>
 
 <p>根据正切的半角公式：</p>
 <div>
 $$
 \tan\cfrac{\theta}{2}=\cfrac{1-\cos\theta}{\sin\theta}=\cfrac{\sin\theta}{1+\cos\theta}
-$$
-</div>
+\tag{11}
+$$</div>
 
 <p>计算 $\cosh c$ ：</p>
 <div>
@@ -150,22 +151,22 @@ $$
 =\cfrac{1+\cos\theta_1\cos\theta_2}{\sin\theta_1\sin\theta_2} \\
 =\cfrac{s_As_B+(r_C-r_A\cos\beta)(r_C-r_B\cos\alpha)}{r_Ar_B\sin\alpha\sin\beta}
 \\\end{gathered}
-$$
-</div>
+\tag{12}
+$$</div>
 
 <p>代入前面计算的 $s_As_B$ ，即得</p>
 <div>
 $$
 \cosh c = \cfrac{\cos\gamma+\cos\alpha\cos\beta}{\sin\alpha\sin\beta}
-$$
-</div>
+\tag{13}
+$$</div>
 
 <p>此即双曲余弦定理2</p>
 <div>
 $$
 \cos\gamma = -\cos\alpha\cos\beta+\cosh c\sin\alpha\sin\beta
-$$
-</div>
+\tag{14}
+$$</div>
 
 
 <p>对于角 $\alpha,\beta$ 的情形，以及其中一条边为垂直 $x$ 轴上半直线的情形，用类似方法可证结论仍成立，这里略去证明。</p>
@@ -180,23 +181,23 @@ $$
 = 1+\cfrac{1}{2}a^2+\cfrac{1}{2}b^2+\cfrac{1}{4}a^2b^2 - ab\cos \gamma \\
 \approx 1+\cfrac{1}{2}a^2+\cfrac{1}{2}b^2 - ab\cos \gamma \\
 \\\end{gathered}
-$$
-</div>
+\tag{15}
+$$</div>
 
 <p>所以</p>
 <div>
 $$
 c^2 \approx a^2+b^2-2ab\cos\gamma
-$$
-</div>
+\tag{16}
+$$</div>
 
 
 <h2 id="三角形面积"><a href="#三角形面积" class="headerlink" title="三角形面积"></a>三角形面积</h2><p>由高斯-博内定理（Gauss-Bonnet），向量沿曲面上闭曲线平移一周后的角度差等于曲率在围成闭区域上的积分。设曲率为 $K&#x3D;-R^2$ ，则</p>
 <div>
 $$
 S=(\pi-\alpha-\beta-\gamma)R^2
-$$
-</div>
+\tag{17}
+$$</div>
 
 <p>由此可知</p>
 <ul>
@@ -215,8 +216,8 @@ $$
 \cos\beta \cosh c = \sinh c \coth a - \sin \beta \cot \alpha \\
 \cos\gamma \cosh b = \sinh b \coth a - \sin \gamma \cot \alpha \\
 \\\end{gathered}
-$$
-</div>
+\tag{18}
+$$</div>
 
 
 <p>证明：以第一个公式为例，</p>
@@ -224,8 +225,8 @@ $$
 <div>
 $$
 \cfrac{\sinh a}{\sinh b} = \cfrac{\sin \alpha}{\sin \beta}
-$$
-</div>
+\tag{19}
+$$</div>
 
 <p>然后用余弦定理把 $\cosh a,\cosh b$ 用角度表示，</p>
 <div>
@@ -235,16 +236,16 @@ $$
 =\cos\gamma\cfrac{\cos \alpha + \cos \beta \cos \gamma}{\sin\beta \sin\gamma}-\cfrac{\sin\alpha}{\sin\beta}\cfrac{\cos\beta+\cos\alpha\cos\gamma}{\sin\alpha\sin\gamma}+\sin\gamma\cot\beta \\
 = \cfrac{\cos\gamma\cos\alpha+\cos\beta\cos^2\gamma-\cos\beta-\cos\alpha\cos\gamma+\sin^2\gamma\cos\beta}{\sin\beta\sin\gamma} =0
 \\\end{gathered}
-$$
-</div>
+\tag{20}
+$$</div>
 
 
 <h2 id="其他表示中的三角定理"><a href="#其他表示中的三角定理" class="headerlink" title="其他表示中的三角定理"></a>其他表示中的三角定理</h2><p>比如彭加莱圆盘，参考<a href="/2025/02/01/%E5%B8%B8%E6%95%B0%E9%AB%98%E6%96%AF%E6%9B%B2%E7%8E%87%E6%9B%B2%E9%9D%A2/" title="常数高斯曲率曲面">常数高斯曲率曲面</a>，其中给出上半平面到彭加莱圆盘的映射</p>
 <div>
 $$
 w=\cfrac{z-\mathrm{i}}{z+\mathrm{i}}
-$$
-</div>
+\tag{21}
+$$</div>
 
 <p>该映射为等距映射，因此定理仍成立。</p>
 <h2 id="坐标系"><a href="#坐标系" class="headerlink" title="坐标系"></a>坐标系</h2><p>类比直角坐标系，选定一条测地线作为 $x$ 轴，再在上面选定一点作为原点。对于曲面上任意一点做 $x$ 轴的垂线，垂足到原点的有向距离为 $x$ 坐标，垂线有向长度为 $y$ 坐标。</p>
@@ -252,7 +253,8 @@ $$
 <blockquote>
 <p>超平行。双曲几何的平行公设为：过直线外一点，至少能做两条平行线。事实上，过直线外一点能做无数条平行线，其中存在两条特殊的平行线，它们和该直线不相交，但在无穷远处相交，而且其他平行线都在它们之间，称作超平行线。</p>
 </blockquote>
-<p><img src="/2025/02/08/%E5%8F%8C%E6%9B%B2%E5%87%A0%E4%BD%95/fig2.svg"></p>
+<img src="/2025/02/08/%E5%8F%8C%E6%9B%B2%E5%87%A0%E4%BD%95/fig2.svg" class="">
+
 <p>下面求两点 $AB$ 间距离。设 $A,B$ 坐标分别为 $(x_1,y_1),(x_2,y_2)$ ，如上图，则 $AC&#x3D;y_1,CD&#x3D;x_2-x_1,BD&#x3D;y_2$ 。设 $AB$ 间距离 $s$ 。</p>
 <blockquote>
 <p>因为双曲三角形内角和小于 $\pi$ ，所以 $AC,BD$ 不会相交，所以能画出上图。</p>
@@ -265,8 +267,8 @@ $$
 \cosh AD = \cosh y_1 \cosh (x_2-x_1) \\
 \cos\theta=\cfrac{\sinh y_1}{\sinh AD} \\
 \\\end{gathered}
-$$
-</div>
+\tag{22}
+$$</div>
 
 
 <div>
@@ -275,8 +277,8 @@ $$
 s = \mathrm{arccosh}\, (\cosh AD \cosh y_2-\cos \theta \sinh AD \sinh y_2) \\
 = \mathrm{arccosh}\, (\cosh y_1 \cosh y_2 \cosh (x_2-x_1)-\sinh y_1 \sinh y_2) \\
 \\\end{gathered}
-$$
-</div>
+\tag{23}
+$$</div>
 
 
 <p>下面求度规。设 $\Delta x &#x3D; x_2-x_1,\Delta y &#x3D; y_2-y_1,x&#x3D;x_1,y&#x3D;y_1$ </p>
@@ -289,34 +291,35 @@ $$
 = \cosh (y_2-y_1) + \cfrac{1}{2} \cosh y_1 \cosh y_2 \Delta x^2 \\
 \approx 1+\cfrac{1}{2}\Delta y^2 + \cfrac{1}{2}\cosh^2 y \Delta x^2
 \\\end{gathered}
-$$
-</div>
+\tag{24}
+$$</div>
 
 <p>所以</p>
 <div>
 $$
 \mathrm{d}s^2=\cosh^2y \,\mathrm{d}x^2 + \mathrm{d}y^2
-$$
-</div>
+\tag{25}
+$$</div>
 
 <p>回忆球坐标的度规，</p>
 <div>
 $$
 \mathrm{d}s^2=\mathrm{d}\theta^2 + \sin^2\theta\,\mathrm{d}\phi^2
-$$
-</div>
+\tag{26}
+$$</div>
 
 <p>如果我们定义赤道为 $x$ 轴，对任意一点做垂线，然后把垂线有向长度定义为 $y$ ，可以建立一个坐标系。其中 $x,y$ 和 $\theta,\phi$ 的关系为 $y&#x3D;\pi&#x2F;2-\theta,x&#x3D;\phi$ ，该坐标系的度规为</p>
 <div>
 $$
 \mathrm{d}s^2=\cos^2y\,\mathrm{d}x^2+\mathrm{d}y^2
-$$
-</div>
+\tag{27}
+$$</div>
 
 <p>形式上，做代换 $y \to \mathrm{i}y$ 可以从球面的度规得到双曲几何度规。</p>
 <h2 id="短程圆"><a href="#短程圆" class="headerlink" title="短程圆"></a>短程圆</h2><p>短程圆定义为与一定点的双曲距离为常数的所有点组成的图形。</p>
 <p>下面证明双曲空间上半平面表示的短程圆为欧几里得圆。为此，我们先给出<a href="/2025/02/01/%E5%B8%B8%E6%95%B0%E9%AB%98%E6%96%AF%E6%9B%B2%E7%8E%87%E6%9B%B2%E9%9D%A2/" title="常数高斯曲率曲面">常数高斯曲率曲面</a>中双曲距离的另一个表达式。</p>
-<p><img src="/2025/02/08/%E5%8F%8C%E6%9B%B2%E5%87%A0%E4%BD%95/fig3.svg"></p>
+<img src="/2025/02/08/%E5%8F%8C%E6%9B%B2%E5%87%A0%E4%BD%95/fig3.svg" class="">
+
 <p>如图，我们求 $AB$ 间双曲距离。 $A’$ 为 $A$ 关于 $x$ 轴的对称点。设 $OA,OB$ 与 $x$ 轴夹角 $\alpha,\beta$ ，设测地线对应圆的半径 $r$ ，于是 $AB$ 双曲距离 $d$ ：</p>
 <div>
 $$
@@ -324,8 +327,8 @@ $$
 d = \ln \cfrac{\tan \cfrac{\pi-\beta}{2}}{\tan \cfrac{\alpha}{2}} \\
 = -\ln \left(\tan\cfrac{\alpha}{2}\tan\cfrac{\beta}{2}\right)
 \\\end{gathered}
-$$
-</div>
+\tag{28}
+$$</div>
 
 <p>我们可以求出 $AB,A’B$ 间欧几里得距离：</p>
 <div>
@@ -340,8 +343,8 @@ A'B/r
 = 2\sin\cfrac{\pi-\alpha+\beta}{2}
 = 2\cos\cfrac{\alpha-\beta}{2} \\
 \\\end{gathered}
-$$
-</div>
+\tag{29}
+$$</div>
 
 <p>所以</p>
 <div>
@@ -354,27 +357,27 @@ $$
 = \cfrac{1+\exp(-d)}{1-\exp(-d)} \\
 = \cfrac{\exp d+1}{\exp d-1} \\
 \\\end{gathered}
-$$
-</div>
+\tag{30}
+$$</div>
 
 <p>所以</p>
 <div>
 $$
 d= \ln \cfrac{A'B+AB}{A'B-AB}
-$$
-</div>
+\tag{31}
+$$</div>
 
 <p>如果我们记 $A,B$ 对应的复数 $z_1,z_2$ ，则</p>
 <div>
 $$
-d=\ln\cfrac{|\overline{z}_1-z_2|+|z_1-z_2|}{|\overline{z}_1-z_2|-|z_1-z_2|}
-$$
-</div>
+d=\ln\cfrac{\vert \overline{z}_1-z_2\vert +\vert z_1-z_2\vert }{\vert \overline{z}_1-z_2\vert -\vert z_1-z_2\vert }
+\tag{32}
+$$</div>
 
 <p>几个特殊情形。如果 $O$ 在平面三角形 $A’AB$ 外面，会影响到 $\angle A’OB&#x3D;\pi+\alpha-\beta$ ，最后表达式不变结论不变。如果 $AB$ 垂直 $x$ 轴，此时 $d&#x3D;\ln(y_B&#x2F;y_A)$ （假设 $y_B\gt y_A$ ），容易说明最终结果不变。</p>
 <p>下面回到短程圆。根据定义，我们设定点为 $A$ ，如上图做出 $x$ 轴对称点 $A’$ 以及到 $A$ 双曲距离为定值的任意一点 $B$ 。根据上面推导， $A’B,AB$ （欧几里得距离）之比为定值（该定值和 $AB$ 双曲距离有关）。因为到两定点（欧几里得）距离之比为定值的点组成的图形为（欧几里得）圆，所以上半平面表示中，短程圆为欧几里得圆。章节“其他表示中的三角定理”中，我们建立了庞加莱平面和庞加莱圆盘的等距映射，所以庞加莱圆盘中短程圆也是欧几里得圆。</p>
 <p>取一条过短程圆双曲圆心，且垂直 $x$ 轴的直径。根据半径常数，如果设直径两端点 $y$ 坐标 $y_1\lt y_2$ ，则短程圆的双曲圆心 $y$ 坐标 $\sqrt{y_1y_2}$ 。易得欧几里得圆心为 $(y_1+y_2)&#x2F;2\gt \sqrt{y_1y_2}$ ，所以短程圆的双曲圆心低于欧几里得圆心，两者不重合。</p>
-</div><div class="article-licensing box"><div class="licensing-title"><p>双曲几何</p><p><a href="https://yuchenxi2000.github.io/2025/02/08/双曲几何/">https://yuchenxi2000.github.io/2025/02/08/双曲几何/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>Chenxi Yu</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2025-02-08</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2026-03-30</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/%E6%95%B0%E5%AD%A6/">数学</a><a class="link-muted mr-2" rel="tag" href="/tags/%E5%BE%AE%E5%88%86%E5%87%A0%E4%BD%95/">微分几何</a><a class="link-muted mr-2" rel="tag" href="/tags/%E9%9D%9E%E6%AC%A7%E5%87%A0%E4%BD%95/">非欧几何</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2025/03/30/%E7%90%83%E8%B0%90%E5%87%BD%E6%95%B0%E5%9C%A8%E7%9B%B4%E8%A7%92%E5%9D%90%E6%A0%87%E4%B8%AD%E7%9A%84%E8%A1%A8%E8%BE%BE%E5%BC%8F/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">球谐函数在直角坐标中的表达式</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2025/02/01/%E5%B8%B8%E6%95%B0%E9%AB%98%E6%96%AF%E6%9B%B2%E7%8E%87%E6%9B%B2%E9%9D%A2/"><span class="level-item">常数高斯曲率曲面</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><!--!--><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a><p class="is-size-7"><span>&copy; 2026 Chenxi Yu</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="fab fa-creative-commons-nc"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/yuchenxi2000"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
+</div><div class="article-licensing box"><div class="licensing-title"><p>双曲几何</p><p><a href="https://yuchenxi2000.github.io/2025/02/08/双曲几何/">https://yuchenxi2000.github.io/2025/02/08/双曲几何/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>Chenxi Yu</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2025-02-08</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2026-04-03</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/%E6%95%B0%E5%AD%A6/">数学</a><a class="link-muted mr-2" rel="tag" href="/tags/%E5%BE%AE%E5%88%86%E5%87%A0%E4%BD%95/">微分几何</a><a class="link-muted mr-2" rel="tag" href="/tags/%E9%9D%9E%E6%AC%A7%E5%87%A0%E4%BD%95/">非欧几何</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2025/03/30/%E7%90%83%E8%B0%90%E5%87%BD%E6%95%B0%E5%9C%A8%E7%9B%B4%E8%A7%92%E5%9D%90%E6%A0%87%E4%B8%AD%E7%9A%84%E8%A1%A8%E8%BE%BE%E5%BC%8F/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">球谐函数在直角坐标中的表达式</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2025/02/01/%E5%B8%B8%E6%95%B0%E9%AB%98%E6%96%AF%E6%9B%B2%E7%8E%87%E6%9B%B2%E9%9D%A2/"><span class="level-item">常数高斯曲率曲面</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><!--!--><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a><p class="is-size-7"><span>&copy; 2026 Chenxi Yu</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="fab fa-creative-commons-nc"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/yuchenxi2000"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
             article: {
                 highlight: {
                     clipboard: true,

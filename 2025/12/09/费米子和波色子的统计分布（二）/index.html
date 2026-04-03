@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>费米子和波色子的统计分布（二） - YCX&#039;s Blog</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="YCX&#039;s Blog"><meta name="msapplication-TileImage" content="favicon.ico"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="YCX&#039;s Blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="$$ \newcommand{\Tr}{\operatorname{Tr}} $$    在费米子和波色子的统计分布中，我们从最大化微观态数目的角度计算了费米子和玻色子的分布，分别遵循费米-狄拉克分布和玻色-爱因斯坦分布。本文将从量子统计力学角度重新计算费米子和玻色子的分布。 用二次量子化图像，记第 $i$ 个态的产生&amp;#x2F;湮灭算符为 $c_i^\dagger,c_i$ ，对应能量 $E_"><meta property="og:type" content="blog"><meta property="og:title" content="费米子和波色子的统计分布（二）"><meta property="og:url" content="https://yuchenxi2000.github.io/2025/12/09/%E8%B4%B9%E7%B1%B3%E5%AD%90%E5%92%8C%E6%B3%A2%E8%89%B2%E5%AD%90%E7%9A%84%E7%BB%9F%E8%AE%A1%E5%88%86%E5%B8%83%EF%BC%88%E4%BA%8C%EF%BC%89/"><meta property="og:site_name" content="YCX&#039;s Blog"><meta property="og:description" content="$$ \newcommand{\Tr}{\operatorname{Tr}} $$    在费米子和波色子的统计分布中，我们从最大化微观态数目的角度计算了费米子和玻色子的分布，分别遵循费米-狄拉克分布和玻色-爱因斯坦分布。本文将从量子统计力学角度重新计算费米子和玻色子的分布。 用二次量子化图像，记第 $i$ 个态的产生&amp;#x2F;湮灭算符为 $c_i^\dagger,c_i$ ，对应能量 $E_"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://yuchenxi2000.github.io/img/og_image.png"><meta property="article:published_time" content="2025-12-08T16:12:28.000Z"><meta property="article:modified_time" content="2026-03-30T12:14:18.426Z"><meta property="article:author" content="Chenxi Yu"><meta property="article:tag" content="物理"><meta property="article:tag" content="量子力学"><meta property="article:tag" content="统计力学"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://yuchenxi2000.github.io/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://yuchenxi2000.github.io/2025/12/09/%E8%B4%B9%E7%B1%B3%E5%AD%90%E5%92%8C%E6%B3%A2%E8%89%B2%E5%AD%90%E7%9A%84%E7%BB%9F%E8%AE%A1%E5%88%86%E5%B8%83%EF%BC%88%E4%BA%8C%EF%BC%89/"},"headline":"费米子和波色子的统计分布（二）","image":["https://yuchenxi2000.github.io/img/og_image.png"],"datePublished":"2025-12-08T16:12:28.000Z","dateModified":"2026-03-30T12:14:18.426Z","author":{"@type":"Person","name":"Chenxi Yu"},"publisher":{"@type":"Organization","name":"YCX's Blog","logo":{"@type":"ImageObject","url":"https://yuchenxi2000.github.io/2025/12/09/%E8%B4%B9%E7%B1%B3%E5%AD%90%E5%92%8C%E6%B3%A2%E8%89%B2%E5%AD%90%E7%9A%84%E7%BB%9F%E8%AE%A1%E5%88%86%E5%B8%83%EF%BC%88%E4%BA%8C%EF%BC%89/android-chrome-512x512.png"}},"description":"$$ \\newcommand{\\Tr}{\\operatorname{Tr}} $$    在费米子和波色子的统计分布中，我们从最大化微观态数目的角度计算了费米子和玻色子的分布，分别遵循费米-狄拉克分布和玻色-爱因斯坦分布。本文将从量子统计力学角度重新计算费米子和玻色子的分布。 用二次量子化图像，记第 $i$ 个态的产生&#x2F;湮灭算符为 $c_i^\\dagger,c_i$ ，对应能量 $E_"}</script><link rel="canonical" href="https://yuchenxi2000.github.io/2025/12/09/%E8%B4%B9%E7%B1%B3%E5%AD%90%E5%92%8C%E6%B3%A2%E8%89%B2%E5%AD%90%E7%9A%84%E7%BB%9F%E8%AE%A1%E5%88%86%E5%B8%83%EF%BC%88%E4%BA%8C%EF%BC%89/"><link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link data-pjax rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link data-pjax rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!--!--><!-- hexo injector head_end start --><script>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>费米子和波色子的统计分布（二） - YCX&#039;s Blog</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="YCX&#039;s Blog"><meta name="msapplication-TileImage" content="favicon.ico"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="YCX&#039;s Blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="在费米子和波色子的统计分布中，我们从最大化微观态数目的角度计算了费米子和玻色子的分布，分别遵循费米-狄拉克分布和玻色-爱因斯坦分布。本文将从量子统计力学角度重新计算费米子和玻色子的分布。 用二次量子化图像，记第 $i$ 个态的产生&amp;#x2F;湮灭算符为 $c_i^\dagger,c_i$ ，对应能量 $E_i$  体系哈密顿量  $$ H &amp;#x3D; \sum_i E_i c_i^\dagger c_i"><meta property="og:type" content="blog"><meta property="og:title" content="费米子和波色子的统计分布（二）"><meta property="og:url" content="https://yuchenxi2000.github.io/2025/12/09/%E8%B4%B9%E7%B1%B3%E5%AD%90%E5%92%8C%E6%B3%A2%E8%89%B2%E5%AD%90%E7%9A%84%E7%BB%9F%E8%AE%A1%E5%88%86%E5%B8%83%EF%BC%88%E4%BA%8C%EF%BC%89/"><meta property="og:site_name" content="YCX&#039;s Blog"><meta property="og:description" content="在费米子和波色子的统计分布中，我们从最大化微观态数目的角度计算了费米子和玻色子的分布，分别遵循费米-狄拉克分布和玻色-爱因斯坦分布。本文将从量子统计力学角度重新计算费米子和玻色子的分布。 用二次量子化图像，记第 $i$ 个态的产生&amp;#x2F;湮灭算符为 $c_i^\dagger,c_i$ ，对应能量 $E_i$  体系哈密顿量  $$ H &amp;#x3D; \sum_i E_i c_i^\dagger c_i"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://yuchenxi2000.github.io/img/og_image.png"><meta property="article:published_time" content="2025-12-08T16:12:28.000Z"><meta property="article:modified_time" content="2026-04-03T14:05:07.700Z"><meta property="article:author" content="Chenxi Yu"><meta property="article:tag" content="物理"><meta property="article:tag" content="量子力学"><meta property="article:tag" content="统计力学"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://yuchenxi2000.github.io/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://yuchenxi2000.github.io/2025/12/09/%E8%B4%B9%E7%B1%B3%E5%AD%90%E5%92%8C%E6%B3%A2%E8%89%B2%E5%AD%90%E7%9A%84%E7%BB%9F%E8%AE%A1%E5%88%86%E5%B8%83%EF%BC%88%E4%BA%8C%EF%BC%89/"},"headline":"费米子和波色子的统计分布（二）","image":["https://yuchenxi2000.github.io/img/og_image.png"],"datePublished":"2025-12-08T16:12:28.000Z","dateModified":"2026-04-03T14:05:07.700Z","author":{"@type":"Person","name":"Chenxi Yu"},"publisher":{"@type":"Organization","name":"YCX's Blog","logo":{"@type":"ImageObject","url":"https://yuchenxi2000.github.io/2025/12/09/%E8%B4%B9%E7%B1%B3%E5%AD%90%E5%92%8C%E6%B3%A2%E8%89%B2%E5%AD%90%E7%9A%84%E7%BB%9F%E8%AE%A1%E5%88%86%E5%B8%83%EF%BC%88%E4%BA%8C%EF%BC%89/android-chrome-512x512.png"}},"description":"在费米子和波色子的统计分布中，我们从最大化微观态数目的角度计算了费米子和玻色子的分布，分别遵循费米-狄拉克分布和玻色-爱因斯坦分布。本文将从量子统计力学角度重新计算费米子和玻色子的分布。 用二次量子化图像，记第 $i$ 个态的产生&#x2F;湮灭算符为 $c_i^\\dagger,c_i$ ，对应能量 $E_i$  体系哈密顿量  $$ H &#x3D; \\sum_i E_i c_i^\\dagger c_i"}</script><link rel="canonical" href="https://yuchenxi2000.github.io/2025/12/09/%E8%B4%B9%E7%B1%B3%E5%AD%90%E5%92%8C%E6%B3%A2%E8%89%B2%E5%AD%90%E7%9A%84%E7%BB%9F%E8%AE%A1%E5%88%86%E5%B8%83%EF%BC%88%E4%BA%8C%EF%BC%89/"><link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link data-pjax rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link data-pjax rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!--!--><!-- hexo injector head_end start --><script>
   (function () {
       function switchTab() {
           if (!location.hash) {
@@ -29,55 +29,48 @@
       switchTab();
       window.addEventListener('hashchange', switchTab, false);
   })();
-  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 8.1.1"></head><body class="is-1-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-12"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2025-12-08T16:12:28.000Z" title="2025/12/9 00:12:28">2025-12-09</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E7%89%A9%E7%90%86/">物理</a></span><span class="level-item">6 分钟读完 (大约864个字)</span></div></div><h1 class="title is-3 is-size-4-mobile">费米子和波色子的统计分布（二）</h1><div class="content"><div>
-$$
-\newcommand{\Tr}{\operatorname{Tr}}
-$$
-</div>
-
-
-<p>在<a href="/2024/08/25/%E8%B4%B9%E7%B1%B3%E5%AD%90%E5%92%8C%E6%B3%A2%E8%89%B2%E5%AD%90%E7%9A%84%E7%BB%9F%E8%AE%A1%E5%88%86%E5%B8%83/" title="费米子和波色子的统计分布">费米子和波色子的统计分布</a>中，我们从最大化微观态数目的角度计算了费米子和玻色子的分布，分别遵循费米-狄拉克分布和玻色-爱因斯坦分布。本文将从量子统计力学角度重新计算费米子和玻色子的分布。</p>
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 8.1.1"></head><body class="is-1-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-12"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2025-12-08T16:12:28.000Z" title="2025/12/9 00:12:28">2025-12-09</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E7%89%A9%E7%90%86/">物理</a></span><span class="level-item">6 分钟读完 (大约842个字)</span></div></div><h1 class="title is-3 is-size-4-mobile">费米子和波色子的统计分布（二）</h1><div class="content"><p>在<a href="/2024/08/25/%E8%B4%B9%E7%B1%B3%E5%AD%90%E5%92%8C%E6%B3%A2%E8%89%B2%E5%AD%90%E7%9A%84%E7%BB%9F%E8%AE%A1%E5%88%86%E5%B8%83/" title="费米子和波色子的统计分布">费米子和波色子的统计分布</a>中，我们从最大化微观态数目的角度计算了费米子和玻色子的分布，分别遵循费米-狄拉克分布和玻色-爱因斯坦分布。本文将从量子统计力学角度重新计算费米子和玻色子的分布。</p>
 <p>用二次量子化图像，记第 $i$ 个态的产生&#x2F;湮灭算符为 $c_i^\dagger,c_i$ ，对应能量 $E_i$ </p>
 <p>体系哈密顿量</p>
 <div>
 $$
 H = \sum_i E_i c_i^\dagger c_i
-$$
-</div>
+\tag{1}
+$$</div>
 
 
 <p>某个态 $i$ 的占据数算符</p>
 <div>
 $$
 N_i = c_i^\dagger c_i
-$$
-</div>
+\tag{2}
+$$</div>
 
 <p>总粒子数算符</p>
 <div>
 $$
 N=\sum_i c_i^\dagger c_i
-$$
-</div>
+\tag{3}
+$$</div>
 
 <p>占据数算符在巨正则系综下的统计平均</p>
 <div>
 $$
 \begin{gathered}
-\braket{N_i} = \cfrac{\operatorname{Tr} \left\lbrack c_i^\dagger c_i e^{-\beta (H - \mu N)}\right\rbrack }{\operatorname{Tr} \left\lbrack e^{-\beta (H - \mu N)}\right\rbrack } \\
-= - \cfrac{1}{\beta \operatorname{Tr} \left\lbrack e^{-\beta (H - \mu N)}\right\rbrack } \cfrac{\partial \operatorname{Tr} \left\lbrack e^{-\beta (H - \mu N)}\right\rbrack }{\partial E_i} \\
-= -\cfrac{1}{\beta} \cfrac{\partial}{\partial E_i} \ln \operatorname{Tr} \left\lbrack e^{-\beta (H - \mu N)}\right\rbrack 
+\braket{N_i} = \cfrac{\operatorname{Tr} \left[c_i^\dagger c_i e^{-\beta (H - \mu N)}\right]}{\operatorname{Tr} \left[e^{-\beta (H - \mu N)}\right]} \\
+= - \cfrac{1}{\beta \operatorname{Tr} \left[e^{-\beta (H - \mu N)}\right]} \cfrac{\partial \operatorname{Tr} \left[e^{-\beta (H - \mu N)}\right]}{\partial E_i} \\
+= -\cfrac{1}{\beta} \cfrac{\partial}{\partial E_i} \ln \operatorname{Tr} \left[e^{-\beta (H - \mu N)}\right]
 \\\end{gathered}
-$$
-</div>
+\tag{4}
+$$</div>
 
 <p>其中 $\braket{N_i}$ 表示在平衡态下的平均值。我们选择巨正则系综，因为在该系综下计算最为简便。下面将看到，在巨正则系综下迹能分解成两项之积，其中较复杂的一项与 $E_i$ 无关，因此简化了计算。</p>
 <h2 id="费米子"><a href="#费米子" class="headerlink" title="费米子"></a>费米子</h2><p>由费米子的泡利不相容原理，将迹的每一项分成第 $i$ 个态占据和不占据两类，于是有下式</p>
 <div>
 $$
-\operatorname{Tr} \left\lbrack e^{-\beta(H - \mu N)}\right\rbrack  = \left\lbrack 1 + e^{-\beta(E_i - \mu)}\right\rbrack  \operatorname{Tr}\left\{e^{-\beta\lbrack H-E_i c_i^\dagger c_i - \mu (N-c_i^\dagger c_i)\rbrack }\right\}
-$$
-</div>
+\operatorname{Tr} \left[e^{-\beta(H - \mu N)}\right] = \left[1 + e^{-\beta(E_i - \mu)}\right] \operatorname{Tr}\left\{e^{-\beta[H-E_i c_i^\dagger c_i - \mu (N-c_i^\dagger c_i)]}\right\}
+\tag{5}
+$$</div>
 
 
 <p>其中右边乘积的第二项意义为除去第 $i$ 个能级的体系的配分函数，取对数后它对 $E_i$ 的导数为 $0$ 。</p>
@@ -85,30 +78,30 @@ $$
 <div>
 $$
 \begin{gathered}
-\cfrac{\partial}{\partial E_i}\ln\left\lbrack 1 + e^{-\beta(E_i-\mu)}\right\rbrack  \\
+\cfrac{\partial}{\partial E_i}\ln\left[1 + e^{-\beta(E_i-\mu)}\right] \\
 = \cfrac{-\beta e^{-\beta(E_i-\mu)}}{1 + e^{-\beta(E_i-\mu)}} \\
 = \cfrac{-\beta}{e^{\beta(E_i-\mu)} + 1}
 \\\end{gathered}
-$$
-</div>
+\tag{6}
+$$</div>
 
 <p>所以有</p>
 <div>
 $$
 \braket{N_i} = \cfrac{1}{e^{\beta(E_i-\mu)} + 1}
-$$
-</div>
+\tag{7}
+$$</div>
 
 <p>此即费米-狄拉克分布。</p>
 <h2 id="玻色子"><a href="#玻色子" class="headerlink" title="玻色子"></a>玻色子</h2><p>与费米子不同，玻色子在一个能级上能有任意数目的占据，因此我们将迹的每一项分成第 $i$ 个态占据数为 $j$ 的项之和，再利用等差数列级数求和，于是有下式</p>
 <div>
 $$
 \begin{gathered}
-\operatorname{Tr} \left\lbrack e^{-\beta(H - \mu N)}\right\rbrack  = \left\lbrack  \sum_j e^{-j\beta(E_i - \mu)} \right\rbrack  \operatorname{Tr}\left\{e^{-\beta\lbrack H-E_i c_i^\dagger c_i - \mu (N-c_i^\dagger c_i)\rbrack }\right\} \\
-= \cfrac{1}{1 - e^{-\beta(E_i - \mu)}} \operatorname{Tr}\left\{e^{-\beta\lbrack H-E_i c_i^\dagger c_i - \mu (N-c_i^\dagger c_i)\rbrack }\right\}
+\operatorname{Tr} \left[e^{-\beta(H - \mu N)}\right] = \left[ \sum_j e^{-j\beta(E_i - \mu)} \right] \operatorname{Tr}\left\{e^{-\beta[H-E_i c_i^\dagger c_i - \mu (N-c_i^\dagger c_i)]}\right\} \\
+= \cfrac{1}{1 - e^{-\beta(E_i - \mu)}} \operatorname{Tr}\left\{e^{-\beta[H-E_i c_i^\dagger c_i - \mu (N-c_i^\dagger c_i)]}\right\}
 \\\end{gathered}
-$$
-</div>
+\tag{8}
+$$</div>
 
 <p>第二项意义仍为除去第 $i$ 个能级的体系的配分函数。</p>
 <span id="more"></span>
@@ -117,23 +110,23 @@ $$
 <div>
 $$
 \begin{gathered}
--\cfrac{\partial}{\partial E_i}\ln\left\lbrack 1 - e^{-\beta(E_i-\mu)}\right\rbrack  \\
+-\cfrac{\partial}{\partial E_i}\ln\left[1 - e^{-\beta(E_i-\mu)}\right] \\
 =-\cfrac{\beta e^{-\beta(E_i-\mu)}}{1 - e^{-\beta(E_i-\mu)}} \\
 = -\cfrac{\beta}{e^{\beta(E_i-\mu)} - 1}
 \\\end{gathered}
-$$
-</div>
+\tag{9}
+$$</div>
 
 <p>所以有</p>
 <div>
 $$
 \braket{N_i} = \cfrac{1}{e^{\beta(E_i-\mu)} - 1}
-$$
-</div>
+\tag{10}
+$$</div>
 
 <p>此即玻色-爱因斯坦分布。</p>
 <h2 id="经典粒子"><a href="#经典粒子" class="headerlink" title="经典粒子"></a>经典粒子</h2><p>当每个态上平均占据数很少时，费米-狄拉克分布与玻色-爱因斯坦分布的分母很大，可以把指数函数后面的 $1$ 略去，得到经典极限下的麦克斯韦分布 $e^{-\beta(E_i-\mu)}$ 。</p>
-</div><div class="article-licensing box"><div class="licensing-title"><p>费米子和波色子的统计分布（二）</p><p><a href="https://yuchenxi2000.github.io/2025/12/09/费米子和波色子的统计分布（二）/">https://yuchenxi2000.github.io/2025/12/09/费米子和波色子的统计分布（二）/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>Chenxi Yu</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2025-12-09</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2026-03-30</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/%E7%89%A9%E7%90%86/">物理</a><a class="link-muted mr-2" rel="tag" href="/tags/%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6/">量子力学</a><a class="link-muted mr-2" rel="tag" href="/tags/%E7%BB%9F%E8%AE%A1%E5%8A%9B%E5%AD%A6/">统计力学</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2025/12/09/%E6%9C%89%E9%99%90%E6%B8%A9%E5%BA%A6%E4%B8%8BWick%E5%AE%9A%E7%90%86/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">有限温度下Wick定理</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2025/11/25/Hatree%E3%80%81Fock%E3%80%81BCS%E5%B9%B3%E5%9D%87%E5%9C%BA%E8%BF%91%E4%BC%BC/"><span class="level-item">Hatree、Fock、BCS平均场近似</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><!--!--><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a><p class="is-size-7"><span>&copy; 2026 Chenxi Yu</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="fab fa-creative-commons-nc"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/yuchenxi2000"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
+</div><div class="article-licensing box"><div class="licensing-title"><p>费米子和波色子的统计分布（二）</p><p><a href="https://yuchenxi2000.github.io/2025/12/09/费米子和波色子的统计分布（二）/">https://yuchenxi2000.github.io/2025/12/09/费米子和波色子的统计分布（二）/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>Chenxi Yu</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2025-12-09</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2026-04-03</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/%E7%89%A9%E7%90%86/">物理</a><a class="link-muted mr-2" rel="tag" href="/tags/%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6/">量子力学</a><a class="link-muted mr-2" rel="tag" href="/tags/%E7%BB%9F%E8%AE%A1%E5%8A%9B%E5%AD%A6/">统计力学</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2025/12/09/%E6%9C%89%E9%99%90%E6%B8%A9%E5%BA%A6%E4%B8%8BWick%E5%AE%9A%E7%90%86/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">有限温度下Wick定理</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2025/11/25/Hatree%E3%80%81Fock%E3%80%81BCS%E5%B9%B3%E5%9D%87%E5%9C%BA%E8%BF%91%E4%BC%BC/"><span class="level-item">Hatree、Fock、BCS平均场近似</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><!--!--><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a><p class="is-size-7"><span>&copy; 2026 Chenxi Yu</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="fab fa-creative-commons-nc"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/yuchenxi2000"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
             article: {
                 highlight: {
                     clipboard: true,

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>Hatree、Fock、BCS平均场近似 - YCX&#039;s Blog</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="YCX&#039;s Blog"><meta name="msapplication-TileImage" content="favicon.ico"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="YCX&#039;s Blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="$$ \newcommand{\Tr}{\operatorname{Tr}} $$    该笔记主要内容是对 https:&amp;#x2F;&amp;#x2F;zhuanlan.zhihu.com&amp;#x2F;p&amp;#x2F;613087754 中相关推导的注解。 费米子产生、湮灭算符 $c_i^\dagger, c_i$ ，体系哈密顿量：  $$ H &amp;#x3D; \sum_{i} E_{i} c_i^\dagger c_i + \frac{1}{2} \su"><meta property="og:type" content="blog"><meta property="og:title" content="Hatree、Fock、BCS平均场近似"><meta property="og:url" content="https://yuchenxi2000.github.io/2025/11/25/Hatree%E3%80%81Fock%E3%80%81BCS%E5%B9%B3%E5%9D%87%E5%9C%BA%E8%BF%91%E4%BC%BC/"><meta property="og:site_name" content="YCX&#039;s Blog"><meta property="og:description" content="$$ \newcommand{\Tr}{\operatorname{Tr}} $$    该笔记主要内容是对 https:&amp;#x2F;&amp;#x2F;zhuanlan.zhihu.com&amp;#x2F;p&amp;#x2F;613087754 中相关推导的注解。 费米子产生、湮灭算符 $c_i^\dagger, c_i$ ，体系哈密顿量：  $$ H &amp;#x3D; \sum_{i} E_{i} c_i^\dagger c_i + \frac{1}{2} \su"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://yuchenxi2000.github.io/img/og_image.png"><meta property="article:published_time" content="2025-11-25T05:10:26.000Z"><meta property="article:modified_time" content="2026-03-30T12:14:17.232Z"><meta property="article:author" content="Chenxi Yu"><meta property="article:tag" content="物理"><meta property="article:tag" content="量子力学"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://yuchenxi2000.github.io/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://yuchenxi2000.github.io/2025/11/25/Hatree%E3%80%81Fock%E3%80%81BCS%E5%B9%B3%E5%9D%87%E5%9C%BA%E8%BF%91%E4%BC%BC/"},"headline":"Hatree、Fock、BCS平均场近似","image":["https://yuchenxi2000.github.io/img/og_image.png"],"datePublished":"2025-11-25T05:10:26.000Z","dateModified":"2026-03-30T12:14:17.232Z","author":{"@type":"Person","name":"Chenxi Yu"},"publisher":{"@type":"Organization","name":"YCX's Blog","logo":{"@type":"ImageObject","url":"https://yuchenxi2000.github.io/2025/11/25/Hatree%E3%80%81Fock%E3%80%81BCS%E5%B9%B3%E5%9D%87%E5%9C%BA%E8%BF%91%E4%BC%BC/android-chrome-512x512.png"}},"description":"$$ \\newcommand{\\Tr}{\\operatorname{Tr}} $$    该笔记主要内容是对 https:&#x2F;&#x2F;zhuanlan.zhihu.com&#x2F;p&#x2F;613087754 中相关推导的注解。 费米子产生、湮灭算符 $c_i^\\dagger, c_i$ ，体系哈密顿量：  $$ H &#x3D; \\sum_{i} E_{i} c_i^\\dagger c_i + \\frac{1}{2} \\su"}</script><link rel="canonical" href="https://yuchenxi2000.github.io/2025/11/25/Hatree%E3%80%81Fock%E3%80%81BCS%E5%B9%B3%E5%9D%87%E5%9C%BA%E8%BF%91%E4%BC%BC/"><link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link data-pjax rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link data-pjax rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!--!--><!-- hexo injector head_end start --><script>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>Hatree、Fock、BCS平均场近似 - YCX&#039;s Blog</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="YCX&#039;s Blog"><meta name="msapplication-TileImage" content="favicon.ico"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="YCX&#039;s Blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="该笔记主要内容是对 https:&amp;#x2F;&amp;#x2F;zhuanlan.zhihu.com&amp;#x2F;p&amp;#x2F;613087754 中相关推导的注解。 费米子产生、湮灭算符 $c_i^\dagger, c_i$ ，体系哈密顿量：  $$ H &amp;#x3D; \sum_{i} E_{i} c_i^\dagger c_i + \frac{1}{2} \sum_{ij} V_{ij} c_i^\dagger c_j^\dagger c_j c_i"><meta property="og:type" content="blog"><meta property="og:title" content="Hatree、Fock、BCS平均场近似"><meta property="og:url" content="https://yuchenxi2000.github.io/2025/11/25/Hatree%E3%80%81Fock%E3%80%81BCS%E5%B9%B3%E5%9D%87%E5%9C%BA%E8%BF%91%E4%BC%BC/"><meta property="og:site_name" content="YCX&#039;s Blog"><meta property="og:description" content="该笔记主要内容是对 https:&amp;#x2F;&amp;#x2F;zhuanlan.zhihu.com&amp;#x2F;p&amp;#x2F;613087754 中相关推导的注解。 费米子产生、湮灭算符 $c_i^\dagger, c_i$ ，体系哈密顿量：  $$ H &amp;#x3D; \sum_{i} E_{i} c_i^\dagger c_i + \frac{1}{2} \sum_{ij} V_{ij} c_i^\dagger c_j^\dagger c_j c_i"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://yuchenxi2000.github.io/img/og_image.png"><meta property="article:published_time" content="2025-11-25T05:10:26.000Z"><meta property="article:modified_time" content="2026-04-03T14:05:06.383Z"><meta property="article:author" content="Chenxi Yu"><meta property="article:tag" content="物理"><meta property="article:tag" content="量子力学"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://yuchenxi2000.github.io/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://yuchenxi2000.github.io/2025/11/25/Hatree%E3%80%81Fock%E3%80%81BCS%E5%B9%B3%E5%9D%87%E5%9C%BA%E8%BF%91%E4%BC%BC/"},"headline":"Hatree、Fock、BCS平均场近似","image":["https://yuchenxi2000.github.io/img/og_image.png"],"datePublished":"2025-11-25T05:10:26.000Z","dateModified":"2026-04-03T14:05:06.383Z","author":{"@type":"Person","name":"Chenxi Yu"},"publisher":{"@type":"Organization","name":"YCX's Blog","logo":{"@type":"ImageObject","url":"https://yuchenxi2000.github.io/2025/11/25/Hatree%E3%80%81Fock%E3%80%81BCS%E5%B9%B3%E5%9D%87%E5%9C%BA%E8%BF%91%E4%BC%BC/android-chrome-512x512.png"}},"description":"该笔记主要内容是对 https:&#x2F;&#x2F;zhuanlan.zhihu.com&#x2F;p&#x2F;613087754 中相关推导的注解。 费米子产生、湮灭算符 $c_i^\\dagger, c_i$ ，体系哈密顿量：  $$ H &#x3D; \\sum_{i} E_{i} c_i^\\dagger c_i + \\frac{1}{2} \\sum_{ij} V_{ij} c_i^\\dagger c_j^\\dagger c_j c_i"}</script><link rel="canonical" href="https://yuchenxi2000.github.io/2025/11/25/Hatree%E3%80%81Fock%E3%80%81BCS%E5%B9%B3%E5%9D%87%E5%9C%BA%E8%BF%91%E4%BC%BC/"><link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link data-pjax rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link data-pjax rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!--!--><!-- hexo injector head_end start --><script>
   (function () {
       function switchTab() {
           if (!location.hash) {
@@ -29,20 +29,13 @@
       switchTab();
       window.addEventListener('hashchange', switchTab, false);
   })();
-  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 8.1.1"></head><body class="is-1-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-12"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2025-11-25T05:10:26.000Z" title="2025/11/25 13:10:26">2025-11-25</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E7%89%A9%E7%90%86/">物理</a></span><span class="level-item">9 分钟读完 (大约1333个字)</span></div></div><h1 class="title is-3 is-size-4-mobile">Hatree、Fock、BCS平均场近似</h1><div class="content"><div>
-$$
-\newcommand{\Tr}{\operatorname{Tr}}
-$$
-</div>
-
-
-<p>该笔记主要内容是对 <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/613087754">https://zhuanlan.zhihu.com/p/613087754</a> 中相关推导的注解。</p>
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 8.1.1"></head><body class="is-1-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-12"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2025-11-25T05:10:26.000Z" title="2025/11/25 13:10:26">2025-11-25</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E7%89%A9%E7%90%86/">物理</a></span><span class="level-item">9 分钟读完 (大约1322个字)</span></div></div><h1 class="title is-3 is-size-4-mobile">Hatree、Fock、BCS平均场近似</h1><div class="content"><p>该笔记主要内容是对 <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/613087754">https://zhuanlan.zhihu.com/p/613087754</a> 中相关推导的注解。</p>
 <p>费米子产生、湮灭算符 $c_i^\dagger, c_i$ ，体系哈密顿量：</p>
 <div>
 $$
 H = \sum_{i} E_{i} c_i^\dagger c_i + \frac{1}{2} \sum_{ij} V_{ij} c_i^\dagger c_j^\dagger c_j c_i
-$$
-</div>
+\tag{1}
+$$</div>
 
 
 <p>其中 $V_{ii}&#x3D;0,V_{ij}&#x3D;V_{ji}$ 。</p>
@@ -57,8 +50,8 @@ A_i^\dagger A_j \\
 \approx (A_i^\dagger - \braket{A_i^\dagger}) \braket{A_j} + \braket{A_i^\dagger} (A_j - \braket{A_j}) + \braket{A_i^\dagger} \braket{A_j} \\
 = \braket{A_j} A_i^\dagger + \braket{A_i^\dagger} A_j - \braket{A_i^\dagger} \braket{A_j}
 \\\end{gathered}
-$$
-</div>
+\tag{2}
+$$</div>
 
 
 <p>对于相互作用项 $\frac{1}{2} V_{ij} c_i^\dagger c_j^\dagger c_j c_i$ ，有三种方法选择 $A$ ：</p>
@@ -73,8 +66,8 @@ $$
 <div>
 $$
 \rho = \cfrac{e^{-\beta H}}{\operatorname{Tr}(e^{-\beta H})}
-$$
-</div>
+\tag{3}
+$$</div>
 
 
 <p>自由能：</p>
@@ -82,12 +75,12 @@ $$
 $$
 \begin{gathered}
 F = E - TS\\
-=\operatorname{Tr}(\rho H) + kT \operatorname{Tr} \lbrack \rho \ln \rho\rbrack  \\
-= \cfrac{\operatorname{Tr}(He^{-\beta H})}{\operatorname{Tr} e^{-\beta H}} + kT \cfrac{\operatorname{Tr}\lbrack e^{-\beta H}(-\beta H-\ln \operatorname{Tr}(e^{-\beta H}))\rbrack }{\operatorname{Tr} e^{-\beta H}} \\
+=\operatorname{Tr}(\rho H) + kT \operatorname{Tr} [\rho \ln \rho] \\
+= \cfrac{\operatorname{Tr}(He^{-\beta H})}{\operatorname{Tr} e^{-\beta H}} + kT \cfrac{\operatorname{Tr}[e^{-\beta H}(-\beta H-\ln \operatorname{Tr}(e^{-\beta H}))]}{\operatorname{Tr} e^{-\beta H}} \\
 = -kT\ln \operatorname{Tr}(e^{-\beta H})
 \\\end{gathered}
-$$
-</div>
+\tag{4}
+$$</div>
 
 
 <p>推导中我们用到了矩阵的对数的如下性质</p>
@@ -95,12 +88,12 @@ $$
 $$
 \begin{gathered}
 e^A=\sum_{n=0}^\infty \cfrac{1}{n!}A^n \\
-e^{A+B}=e^Ae^B \quad \text{if } \lbrack A,B\rbrack =0 \\
+e^{A+B}=e^Ae^B \quad \text{if } [A,B]=0 \\
 e^{\ln A + I \ln c} = e^{\ln A} e^{I \ln c} = cA \\
 \ln A+cI=\ln (cA) \\
 \\\end{gathered}
-$$
-</div>
+\tag{5}
+$$</div>
 
 
 <p>我们采用平均场近似，设相应的序参量为 $X$ ，平均场哈密顿量为 $H_{MF}&#x3D;H_0+\lambda X$ </p>
@@ -108,12 +101,12 @@ $$
 $$
 \begin{gathered}
 \cfrac{\partial F_{MF}}{\partial \lambda} \\
-= -\cfrac{1}{\beta\operatorname{Tr}\lbrack e^{-\beta (H_0+\lambda X)}\rbrack }\cfrac{\partial}{\partial \lambda} \operatorname{Tr}\lbrack e^{-\beta (H_0+\lambda X)}\rbrack  \\
-= \cfrac{\operatorname{Tr}\lbrack Xe^{-\beta (H_0+\lambda X)}\rbrack }{\operatorname{Tr}\lbrack e^{-\beta (H_0+\lambda X)}\rbrack } \\
+= -\cfrac{1}{\beta\operatorname{Tr}[e^{-\beta (H_0+\lambda X)}]}\cfrac{\partial}{\partial \lambda} \operatorname{Tr}[e^{-\beta (H_0+\lambda X)}] \\
+= \cfrac{\operatorname{Tr}[Xe^{-\beta (H_0+\lambda X)}]}{\operatorname{Tr}[e^{-\beta (H_0+\lambda X)}]} \\
 = \braket{X}_{MF}
 \\\end{gathered}
-$$
-</div>
+\tag{6}
+$$</div>
 
 
 <p>下式的推导中，注意我们始终在平均场的基态下计算，因此不论对于真实哈密顿量还是平均场哈密顿量，它们的熵都是相等的（因为熵只与基态相关），因此自由能之差的期望值就是能量之差的期望。</p>
@@ -123,28 +116,28 @@ $$
 \cfrac{\partial}{\partial \lambda} (F-F_{MF}) \\
 = \cfrac{\partial}{\partial \lambda} \braket{V_{int}}_{MF} - \cfrac{\partial}{\partial \lambda} \braket{\lambda X}_{MF} \\
 \\\end{gathered}
-$$
-</div>
+\tag{7}
+$$</div>
 
 
 <div>
 $$
 \begin{gathered}
 \cfrac{\partial}{\partial \lambda} \braket{\lambda X}_{MF} \\
-= \cfrac{\partial}{\partial \lambda} \operatorname{Tr}\lbrack \lambda X \rho\rbrack  \\
-= \operatorname{Tr}\lbrack X \rho\rbrack  + \lambda \cfrac{\partial}{\partial \lambda} \operatorname{Tr}\lbrack X \rho\rbrack  \\
+= \cfrac{\partial}{\partial \lambda} \operatorname{Tr}[\lambda X \rho] \\
+= \operatorname{Tr}[X \rho] + \lambda \cfrac{\partial}{\partial \lambda} \operatorname{Tr}[X \rho] \\
 = \braket{X}_{MF} + \lambda \cfrac{\partial}{\partial \lambda} \braket{X}_{MF}
 \\\end{gathered}
-$$
-</div>
+\tag{8}
+$$</div>
 
 
 <p>我们要求自由能对参数的变分为零：</p>
 <div>
 $$
 \cfrac{\partial F}{\partial \lambda} = 0
-$$
-</div>
+\tag{9}
+$$</div>
 
 
 <p>得到使得自由能最小化的 $\lambda$ ：</p>
@@ -154,23 +147,23 @@ $$
 \cfrac{\partial}{\partial \lambda} \braket{V_{int}}_{MF} = \lambda \cfrac{\partial}{\partial \lambda} \braket{X}_{MF} \\
 \lambda = \cfrac{\partial \braket{V_{int}}_{MF}}{\partial \braket{X}_{MF}} \\
 \\\end{gathered}
-$$
-</div>
+\tag{10}
+$$</div>
 
 
 <p>对于多个序参量情形，上述推导需要做如下修改：</p>
 <div>
 $$
 H = H_0 + \lambda_k X_k
-$$
-</div>
+\tag{11}
+$$</div>
 
 
 <div>
 $$
 \cfrac{\partial F_{MF}}{\partial \lambda_k} = \braket{X_k}_{MF}
-$$
-</div>
+\tag{12}
+$$</div>
 
 
 <div>
@@ -178,27 +171,27 @@ $$
 \begin{gathered}
 \cfrac{\partial}{\partial \lambda_k} (F-F_{MF}) = \cfrac{\partial}{\partial \lambda_k} \braket{V_{int}}_{MF} - \cfrac{\partial}{\partial \lambda_k} \braket{\lambda_l X_l}_{MF} \\
 \\\end{gathered}
-$$
-</div>
+\tag{13}
+$$</div>
 
 
 <div>
 $$
 \begin{gathered}
 \cfrac{\partial}{\partial \lambda_k} \braket{\lambda_l X_l}_{MF} \\
-= \cfrac{\partial}{\partial \lambda_k} \operatorname{Tr}\lbrack \lambda_l X_l \rho\rbrack  \\
-= \operatorname{Tr}\lbrack X_k \rho\rbrack  + \lambda_l \cfrac{\partial}{\partial \lambda_k} \operatorname{Tr}\lbrack X_l \rho\rbrack  \\
+= \cfrac{\partial}{\partial \lambda_k} \operatorname{Tr}[\lambda_l X_l \rho] \\
+= \operatorname{Tr}[X_k \rho] + \lambda_l \cfrac{\partial}{\partial \lambda_k} \operatorname{Tr}[X_l \rho] \\
 = \braket{X_k}_{MF} + \lambda_l \cfrac{\partial}{\partial \lambda_k} \braket{X_l}_{MF}
 \\\end{gathered}
-$$
-</div>
+\tag{14}
+$$</div>
 
 
 <div>
 $$
 -\braket{X_k}_{MF} = \cfrac{\partial}{\partial \lambda_k} \braket{V_{int}}_{MF} - \braket{X_k}_{MF} - \lambda_l \cfrac{\partial}{\partial \lambda_k} \braket{X_l}_{MF}
-$$
-</div>
+\tag{15}
+$$</div>
 
 
 
@@ -208,8 +201,8 @@ $$
 \cfrac{\partial}{\partial \lambda_k} \braket{V_{int}}_{MF} = \lambda_l \cfrac{\partial}{\partial \lambda_k} \braket{X_l}_{MF} \\
 \lambda_l = \cfrac{\partial \braket{V_{int}}_{MF}}{\partial \braket{X_l}_{MF}} \\
 \\\end{gathered}
-$$
-</div>
+\tag{16}
+$$</div>
 
 
 
@@ -220,8 +213,8 @@ $$
 \braket{c_i^\dagger c_j^\dagger c_j c_i}_{MF} \\
 = \braket{c_i^\dagger c_j^\dagger}_{MF} \braket{c_j c_i}_{MF} - \braket{c_i^\dagger c_j}_{MF} \braket{c_j^\dagger c_i}_{MF} + \braket{c_i^\dagger c_i}_{MF} \braket{c_j^\dagger c_j}_{MF}
 \\\end{gathered}
-$$
-</div>
+\tag{17}
+$$</div>
 
 
 <p>由此可求出平均场的各系数，得到平均场近似哈密顿量</p>
@@ -231,8 +224,8 @@ $$
 H_{MF} = H_0 + H_{H} + H_{F} + H_{BCS} \\
 = H_0 + \sum_{j} \lambda_{j}^H c_j^\dagger c_j + \sum_{ij} \lambda_{ij}^F c_i^\dagger c_j + \sum_{ij} \left( \lambda_{ij}^{BCS} c_i^\dagger c_j^\dagger + \overline{\lambda}_{ij}^{BCS} c_j c_i \right)
 \\\end{gathered}
-$$
-</div>
+\tag{18}
+$$</div>
 
 <p>其中</p>
 <div>
@@ -243,11 +236,11 @@ $$
 \lambda_{ij}^{BCS} = \frac{1}{2} V_{ij} \braket{c_j c_i}_{MF} \\
 \overline{\lambda}_{ij}^{BCS} = \frac{1}{2} V_{ij} \braket{c_i^\dagger c_j^\dagger}_{MF} \\
 \\\end{gathered}
-$$
-</div>
+\tag{19}
+$$</div>
 
 
-</div><div class="article-licensing box"><div class="licensing-title"><p>Hatree、Fock、BCS平均场近似</p><p><a href="https://yuchenxi2000.github.io/2025/11/25/Hatree、Fock、BCS平均场近似/">https://yuchenxi2000.github.io/2025/11/25/Hatree、Fock、BCS平均场近似/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>Chenxi Yu</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2025-11-25</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2026-03-30</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/%E7%89%A9%E7%90%86/">物理</a><a class="link-muted mr-2" rel="tag" href="/tags/%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6/">量子力学</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2025/12/09/%E8%B4%B9%E7%B1%B3%E5%AD%90%E5%92%8C%E6%B3%A2%E8%89%B2%E5%AD%90%E7%9A%84%E7%BB%9F%E8%AE%A1%E5%88%86%E5%B8%83%EF%BC%88%E4%BA%8C%EF%BC%89/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">费米子和波色子的统计分布（二）</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2025/11/18/%E4%BA%A8%E5%BE%B7%E5%B0%94%E7%9A%84%E9%94%AE%E7%9B%98%E4%B9%90%E6%9B%B2%EF%BC%9A%E8%A2%AB%E5%BF%BD%E8%A7%86%E7%9A%84%E8%89%BA%E6%9C%AF%E5%AE%9D%E5%BA%93/"><span class="level-item">亨德尔的键盘乐曲：被忽视的艺术宝库</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><!--!--><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a><p class="is-size-7"><span>&copy; 2026 Chenxi Yu</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="fab fa-creative-commons-nc"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/yuchenxi2000"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
+</div><div class="article-licensing box"><div class="licensing-title"><p>Hatree、Fock、BCS平均场近似</p><p><a href="https://yuchenxi2000.github.io/2025/11/25/Hatree、Fock、BCS平均场近似/">https://yuchenxi2000.github.io/2025/11/25/Hatree、Fock、BCS平均场近似/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>Chenxi Yu</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2025-11-25</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2026-04-03</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/%E7%89%A9%E7%90%86/">物理</a><a class="link-muted mr-2" rel="tag" href="/tags/%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6/">量子力学</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2025/12/09/%E8%B4%B9%E7%B1%B3%E5%AD%90%E5%92%8C%E6%B3%A2%E8%89%B2%E5%AD%90%E7%9A%84%E7%BB%9F%E8%AE%A1%E5%88%86%E5%B8%83%EF%BC%88%E4%BA%8C%EF%BC%89/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">费米子和波色子的统计分布（二）</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2025/11/18/%E4%BA%A8%E5%BE%B7%E5%B0%94%E7%9A%84%E9%94%AE%E7%9B%98%E4%B9%90%E6%9B%B2%EF%BC%9A%E8%A2%AB%E5%BF%BD%E8%A7%86%E7%9A%84%E8%89%BA%E6%9C%AF%E5%AE%9D%E5%BA%93/"><span class="level-item">亨德尔的键盘乐曲：被忽视的艺术宝库</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><!--!--><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a><p class="is-size-7"><span>&copy; 2026 Chenxi Yu</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="fab fa-creative-commons-nc"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/yuchenxi2000"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
             article: {
                 highlight: {
                     clipboard: true,

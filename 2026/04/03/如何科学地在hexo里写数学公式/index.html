@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>如何科学地在hexo里写数学公式 - YCX&#039;s Blog</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="YCX&#039;s Blog"><meta name="msapplication-TileImage" content="favicon.ico"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="YCX&#039;s Blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="本站使用hexo构建，主题是icarus，文章格式是markdown，生成网页时会转成html。 但坑爹的在于markdown没有一个统一的数学公式标准，导致不同markdown渲染器实现不一致，出现在一个编辑器里合法的写法在另一个编辑器无法正确渲染。包括hexo将markdown渲染成html过程，也会出奇奇怪怪的bug。 那么如何优雅地解决这个问题呢？我采用的是本地只保留一份原稿，hexo所需"><meta property="og:type" content="blog"><meta property="og:title" content="如何科学地在hexo里写数学公式"><meta property="og:url" content="https://yuchenxi2000.github.io/2026/04/03/%E5%A6%82%E4%BD%95%E7%A7%91%E5%AD%A6%E5%9C%B0%E5%9C%A8hexo%E9%87%8C%E5%86%99%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F/"><meta property="og:site_name" content="YCX&#039;s Blog"><meta property="og:description" content="本站使用hexo构建，主题是icarus，文章格式是markdown，生成网页时会转成html。 但坑爹的在于markdown没有一个统一的数学公式标准，导致不同markdown渲染器实现不一致，出现在一个编辑器里合法的写法在另一个编辑器无法正确渲染。包括hexo将markdown渲染成html过程，也会出奇奇怪怪的bug。 那么如何优雅地解决这个问题呢？我采用的是本地只保留一份原稿，hexo所需"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://yuchenxi2000.github.io/img/og_image.png"><meta property="article:published_time" content="2026-04-03T13:08:18.000Z"><meta property="article:modified_time" content="2026-04-03T14:13:24.190Z"><meta property="article:author" content="Chenxi Yu"><meta property="article:tag" content="其他"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://yuchenxi2000.github.io/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://yuchenxi2000.github.io/2026/04/03/%E5%A6%82%E4%BD%95%E7%A7%91%E5%AD%A6%E5%9C%B0%E5%9C%A8hexo%E9%87%8C%E5%86%99%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F/"},"headline":"如何科学地在hexo里写数学公式","image":["https://yuchenxi2000.github.io/img/og_image.png"],"datePublished":"2026-04-03T13:08:18.000Z","dateModified":"2026-04-03T14:13:24.190Z","author":{"@type":"Person","name":"Chenxi Yu"},"publisher":{"@type":"Organization","name":"YCX's Blog","logo":{"@type":"ImageObject","url":"https://yuchenxi2000.github.io/2026/04/03/%E5%A6%82%E4%BD%95%E7%A7%91%E5%AD%A6%E5%9C%B0%E5%9C%A8hexo%E9%87%8C%E5%86%99%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F/android-chrome-512x512.png"}},"description":"本站使用hexo构建，主题是icarus，文章格式是markdown，生成网页时会转成html。 但坑爹的在于markdown没有一个统一的数学公式标准，导致不同markdown渲染器实现不一致，出现在一个编辑器里合法的写法在另一个编辑器无法正确渲染。包括hexo将markdown渲染成html过程，也会出奇奇怪怪的bug。 那么如何优雅地解决这个问题呢？我采用的是本地只保留一份原稿，hexo所需"}</script><link rel="canonical" href="https://yuchenxi2000.github.io/2026/04/03/%E5%A6%82%E4%BD%95%E7%A7%91%E5%AD%A6%E5%9C%B0%E5%9C%A8hexo%E9%87%8C%E5%86%99%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F/"><link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link data-pjax rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link data-pjax rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!--!--><!-- hexo injector head_end start --><script>
+  (function () {
+      function switchTab() {
+          if (!location.hash) {
+            return;
+          }
+
+          const id = '#' + CSS.escape(location.hash.substring(1));
+          const $tabMenu = document.querySelector(`.tabs a[href="${id}"]`);
+          if (!$tabMenu) {
+            return;
+          }
+
+          const $tabMenuContainer = $tabMenu.parentElement.parentElement;
+          Array.from($tabMenuContainer.children).forEach($menu => $menu.classList.remove('is-active'));
+          Array.from($tabMenuContainer.querySelectorAll('a'))
+              .map($menu => document.getElementById($menu.getAttribute("href").substring(1)))
+              .forEach($content => $content.classList.add('is-hidden'));
+
+          if ($tabMenu) {
+              $tabMenu.parentElement.classList.add('is-active');
+          }
+          const $activeTab = document.querySelector(id);
+          if ($activeTab) {
+              $activeTab.classList.remove('is-hidden');
+          }
+      }
+      switchTab();
+      window.addEventListener('hashchange', switchTab, false);
+  })();
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 8.1.1"></head><body class="is-1-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-12"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2026-04-03T13:08:18.000Z" title="2026/4/3 21:08:18">2026-04-03</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E5%85%B6%E4%BB%96/">其他</a></span><span class="level-item">10 分钟读完 (大约1516个字)</span></div></div><h1 class="title is-3 is-size-4-mobile">如何科学地在hexo里写数学公式</h1><div class="content"><p>本站使用hexo构建，主题是icarus，文章格式是markdown，生成网页时会转成html。</p>
+<p>但坑爹的在于markdown没有一个统一的数学公式标准，导致不同markdown渲染器实现不一致，出现在一个编辑器里合法的写法在另一个编辑器无法正确渲染。包括hexo将markdown渲染成html过程，也会出奇奇怪怪的bug。</p>
+<p>那么如何优雅地解决这个问题呢？我采用的是本地只保留一份原稿，hexo所需markdown、发布到知乎所用的文章全部由原稿生成。生成的方式是针对每一个发布平台写一个转换脚本，处理每个平台的渲染错误。脚本就不在这里发了，因为每个平台都不一样。这里主要列举我曾遇到的渲染错误，供大家参考，因为一些问题是通用的。</p>
+<p>还有，我本地使用的Typora软件进行写作，而Typora的语法应该是我接触过的markdown软件里最宽松的，所以如果大家使用比较严格的方式写数学公式，可能不会遇到所有我遇到过的问题。</p>
+<blockquote>
+<p>太难弄了，现在说不定还有bug……</p>
+</blockquote>
+<h2 id="数学公式提取算法"><a href="#数学公式提取算法" class="headerlink" title="数学公式提取算法"></a>数学公式提取算法</h2><p>首先，我们处理数学公式就需要把输入文件里的数学公式全部提取出来。我这里只考虑\$和\$\$包裹的公式，分别对应inline math和display math两种类型。使用的算法如下：</p>
+<ol>
+<li>将文件全部读取进来，存在一个字符串里。新建一个变量表示数学模式，初始设置为文本（非数学模式）</li>
+<li>从头遍历字符串每一个字符</li>
+<li>如果遇到\，说明后面一个字符被转义，我们跳过这个字符，回到第2步。如果遇到\$，通过判断后一个字符得知数学公式类型，然后根据现在的数学模式来决定应该如何处理。如果目前数学模式是文本，说明前面的字符全部是文本，直接拷贝即可。如果目前数学模式是inline math或者display math，说明前面的字符（直到上一个\$）都是数学公式环境，处理这个公式，根据是inline还是display采用不同处理方法。处理完毕后，重新设置数学模式变量，如果当前是文本那么设置成数学，反之如果当前是数学那么设置成文本。</li>
+<li>判断是否处理完所有字符，如果处理完跳出循环，结束程序；否则回到第2步。</li>
+</ol>
+<h2 id="命令替换"><a href="#命令替换" class="headerlink" title="命令替换"></a>命令替换</h2><p>因为markdown没有统一的数学公式标准，所以一些命令会解析出错。下面列举一些需要转换的命令。</p>
+<p>首先是单个字符的替换。一些字符会被误认为是markdown语法，因此需要替换，如下表：</p>
+<table>
+<thead>
+<tr>
+<th>需要替换的字符</th>
+<th>替换后</th>
+<th>替换原因</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>_</td>
+<td>\_</td>
+<td>markdown语法冲突</td>
+</tr>
+<tr>
+<td>&lt;</td>
+<td>\lt</td>
+<td>html标签语法冲突</td>
+</tr>
+<tr>
+<td>&gt;</td>
+<td>\gt</td>
+<td>html标签语法冲突</td>
+</tr>
+<tr>
+<td>*</td>
+<td>\ast</td>
+<td>markdown语法冲突</td>
+</tr>
+<tr>
+<td>|</td>
+<td>\vert</td>
+<td>markdown表格语法冲突</td>
+</tr>
+<tr>
+<td>[</td>
+<td>\lbrack</td>
+<td>部分 $\LaTeX$ 渲染器的问题</td>
+</tr>
+<tr>
+<td>]</td>
+<td>\rbrack</td>
+<td>部分 $\LaTeX$ 渲染器的问题</td>
+</tr>
+</tbody></table>
+<p>下面详细解释一下为什么中括号需要替换，我们看下面这个 $\LaTeX$ 代码</p>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;aligned&#125;</span><br><span class="line">	[a] = 1 <span class="keyword">\\</span></span><br><span class="line">	[b] = 2</span><br><span class="line"><span class="keyword">\end</span>&#123;aligned&#125;</span><br></pre></td></tr></table></figure>
+
+<p>如果你使用的是Typora，或者任意使用MathJax渲染数学公式的软件，你会发现第一个[a]消失不见了。</p>
+<p>这不是一个bug，只能说是feature。中括号在 $\LaTeX$ 里是某些命令的参数，取决于渲染器，一些渲染器会将上面代码里的第一个中括号认为是aligned环境的参数，但一些不会。<del>由于很少用到中括号参数，因此我直接一股脑儿全替换了</del>。出问题了，有个常用的 $n$ 次根号\sqrt[n]{a}……还是简单判断一下吧……</p>
+<p>还有markdown表格语法冲突，如果你在表格内写公式，公式里有|，那么一些渲染器会将其误认为是表格边界。</p>
+<h2 id="多行公式处理"><a href="#多行公式处理" class="headerlink" title="多行公式处理"></a>多行公式处理</h2><p>Typora中，公式可以直接用\\换行，不需要包裹在多行环境里。但是对于我这个博客而言（hexo+icarus），必须多行环境才能正确换行，解决方案也很简单，发现没有放置在多行环境里的公式，直接用gathered环境包裹即可，gathered环境是最接近Typora里多行公式外观的。</p>
+<h2 id="公式编号、引用"><a href="#公式编号、引用" class="headerlink" title="公式编号、引用"></a>公式编号、引用</h2><p>如果我们用\eqref对有\label的公式进行引用，那么必须加上\tag，否则引用就是问号(???)。Typora里面有个功能是自动编号，平常写公式习惯了，但遇到hexo没自动编号就歇菜了，于是转换脚本里加了自动编号的功能。</p>
+<blockquote>
+<p>看来被Typora惯坏了</p>
+</blockquote>
+<h2 id="公式前后空格或换行"><a href="#公式前后空格或换行" class="headerlink" title="公式前后空格或换行"></a>公式前后空格或换行</h2><p>如果公式的$前后有中文，一些渲染器不能正确识别数学公式，办法是在前后加空格（对于inline math），或者加换行（对于display math）。</p>
+<h2 id="图片、链接处理"><a href="#图片、链接处理" class="headerlink" title="图片、链接处理"></a>图片、链接处理</h2><p>hexo里推荐的图片、（指向自己文章的）链接的写法如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#123;% asset_img fig.png %&#125;</span><br><span class="line">&#123;% post_link 自己的另一篇文章 %&#125;</span><br></pre></td></tr></table></figure>
+
+<p>markdown有自己的图片、链接语法，但是这里不推荐使用，因为可能出错。我采用的方法是全部转换成hexo的格式，大家可以根据自己情况进行选择。</p>
+</div><div class="article-licensing box"><div class="licensing-title"><p>如何科学地在hexo里写数学公式</p><p><a href="https://yuchenxi2000.github.io/2026/04/03/如何科学地在hexo里写数学公式/">https://yuchenxi2000.github.io/2026/04/03/如何科学地在hexo里写数学公式/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>Chenxi Yu</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2026-04-03</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2026-04-03</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/%E5%85%B6%E4%BB%96/">其他</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2026/04/03/%E8%A7%84%E8%8C%83%E5%9C%BA%E8%AE%BA%E4%B8%8E%E5%BE%AE%E5%88%86%E5%87%A0%E4%BD%95/"><span class="level-item">规范场论与微分几何</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><!--!--><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a><p class="is-size-7"><span>&copy; 2026 Chenxi Yu</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="fab fa-creative-commons-nc"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/yuchenxi2000"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script data-pjax src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script data-pjax src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "此网站使用Cookie来改善您的体验。",
+          dismiss: "知道了！",
+          allow: "允许使用Cookie",
+          deny: "拒绝",
+          link: "了解更多",
+          policy: "Cookie政策",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js"></script><script src="/js/pjax.js"></script><!--!--><script type="text/javascript" id="MathJax-script" async>MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      },
+      svg: {
+        fontCache: 'global'
+      },
+      chtml: {
+        matchFontHeight: false
+      }
+    };</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js"></script><!--!--><!--!--><script data-pjax src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script data-pjax src="/js/insight.js" defer></script><script data-pjax>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script></body></html>

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>拉普拉斯方程的复变函数解法 - YCX&#039;s Blog</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="YCX&#039;s Blog"><meta name="msapplication-TileImage" content="favicon.ico"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="YCX&#039;s Blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="根据柯西黎曼条件，解析函数的实部和虚部都满足拉普拉斯方程。所以对于二维拉普拉斯方程，我们只需找到满足边界条件的复变函数，然后取实部或者虚部就可以直接写出解。 正方形上拉普拉斯方程求解下面用一个例子进行说明。求解二维拉普拉斯方程在 $\lbrack 0,1\rbrack \times\lbrack 0,1\rbrack $ 正方形上满足如下边界条件的解：  $$ \begin{cases} u(x,"><meta property="og:type" content="blog"><meta property="og:title" content="拉普拉斯方程的复变函数解法"><meta property="og:url" content="https://yuchenxi2000.github.io/2025/01/15/%E6%8B%89%E6%99%AE%E6%8B%89%E6%96%AF%E6%96%B9%E7%A8%8B%E7%9A%84%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0%E8%A7%A3%E6%B3%95/"><meta property="og:site_name" content="YCX&#039;s Blog"><meta property="og:description" content="根据柯西黎曼条件，解析函数的实部和虚部都满足拉普拉斯方程。所以对于二维拉普拉斯方程，我们只需找到满足边界条件的复变函数，然后取实部或者虚部就可以直接写出解。 正方形上拉普拉斯方程求解下面用一个例子进行说明。求解二维拉普拉斯方程在 $\lbrack 0,1\rbrack \times\lbrack 0,1\rbrack $ 正方形上满足如下边界条件的解：  $$ \begin{cases} u(x,"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://yuchenxi2000.github.io/img/og_image.png"><meta property="article:published_time" content="2025-01-15T05:21:29.000Z"><meta property="article:modified_time" content="2026-03-30T12:14:18.916Z"><meta property="article:author" content="Chenxi Yu"><meta property="article:tag" content="数学"><meta property="article:tag" content="微分方程"><meta property="article:tag" content="复变函数"><meta property="article:tag" content="特殊函数"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://yuchenxi2000.github.io/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://yuchenxi2000.github.io/2025/01/15/%E6%8B%89%E6%99%AE%E6%8B%89%E6%96%AF%E6%96%B9%E7%A8%8B%E7%9A%84%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0%E8%A7%A3%E6%B3%95/"},"headline":"拉普拉斯方程的复变函数解法","image":["https://yuchenxi2000.github.io/img/og_image.png"],"datePublished":"2025-01-15T05:21:29.000Z","dateModified":"2026-03-30T12:14:18.916Z","author":{"@type":"Person","name":"Chenxi Yu"},"publisher":{"@type":"Organization","name":"YCX's Blog","logo":{"@type":"ImageObject","url":"https://yuchenxi2000.github.io/2025/01/15/%E6%8B%89%E6%99%AE%E6%8B%89%E6%96%AF%E6%96%B9%E7%A8%8B%E7%9A%84%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0%E8%A7%A3%E6%B3%95/android-chrome-512x512.png"}},"description":"根据柯西黎曼条件，解析函数的实部和虚部都满足拉普拉斯方程。所以对于二维拉普拉斯方程，我们只需找到满足边界条件的复变函数，然后取实部或者虚部就可以直接写出解。 正方形上拉普拉斯方程求解下面用一个例子进行说明。求解二维拉普拉斯方程在 $\\lbrack 0,1\\rbrack \\times\\lbrack 0,1\\rbrack $ 正方形上满足如下边界条件的解：  $$ \\begin{cases} u(x,"}</script><link rel="canonical" href="https://yuchenxi2000.github.io/2025/01/15/%E6%8B%89%E6%99%AE%E6%8B%89%E6%96%AF%E6%96%B9%E7%A8%8B%E7%9A%84%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0%E8%A7%A3%E6%B3%95/"><link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link data-pjax rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link data-pjax rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!--!--><!-- hexo injector head_end start --><script>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>拉普拉斯方程的复变函数解法 - YCX&#039;s Blog</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="YCX&#039;s Blog"><meta name="msapplication-TileImage" content="favicon.ico"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="YCX&#039;s Blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="根据柯西黎曼条件，解析函数的实部和虚部都满足拉普拉斯方程。所以对于二维拉普拉斯方程，我们只需找到满足边界条件的复变函数，然后取实部或者虚部就可以直接写出解。 正方形上拉普拉斯方程求解下面用一个例子进行说明。求解二维拉普拉斯方程在 $[0,1]\times[0,1]$ 正方形上满足如下边界条件的解：  $$ \begin{cases} u(x,0)&amp;#x3D;0 \\ u(x,1)&amp;#x3D;0 \\ u(0,y)&amp;#x3D;1"><meta property="og:type" content="blog"><meta property="og:title" content="拉普拉斯方程的复变函数解法"><meta property="og:url" content="https://yuchenxi2000.github.io/2025/01/15/%E6%8B%89%E6%99%AE%E6%8B%89%E6%96%AF%E6%96%B9%E7%A8%8B%E7%9A%84%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0%E8%A7%A3%E6%B3%95/"><meta property="og:site_name" content="YCX&#039;s Blog"><meta property="og:description" content="根据柯西黎曼条件，解析函数的实部和虚部都满足拉普拉斯方程。所以对于二维拉普拉斯方程，我们只需找到满足边界条件的复变函数，然后取实部或者虚部就可以直接写出解。 正方形上拉普拉斯方程求解下面用一个例子进行说明。求解二维拉普拉斯方程在 $[0,1]\times[0,1]$ 正方形上满足如下边界条件的解：  $$ \begin{cases} u(x,0)&amp;#x3D;0 \\ u(x,1)&amp;#x3D;0 \\ u(0,y)&amp;#x3D;1"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://yuchenxi2000.github.io/img/og_image.png"><meta property="article:published_time" content="2025-01-15T05:21:29.000Z"><meta property="article:modified_time" content="2026-04-03T14:05:08.286Z"><meta property="article:author" content="Chenxi Yu"><meta property="article:tag" content="数学"><meta property="article:tag" content="微分方程"><meta property="article:tag" content="复变函数"><meta property="article:tag" content="特殊函数"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://yuchenxi2000.github.io/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://yuchenxi2000.github.io/2025/01/15/%E6%8B%89%E6%99%AE%E6%8B%89%E6%96%AF%E6%96%B9%E7%A8%8B%E7%9A%84%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0%E8%A7%A3%E6%B3%95/"},"headline":"拉普拉斯方程的复变函数解法","image":["https://yuchenxi2000.github.io/img/og_image.png"],"datePublished":"2025-01-15T05:21:29.000Z","dateModified":"2026-04-03T14:05:08.286Z","author":{"@type":"Person","name":"Chenxi Yu"},"publisher":{"@type":"Organization","name":"YCX's Blog","logo":{"@type":"ImageObject","url":"https://yuchenxi2000.github.io/2025/01/15/%E6%8B%89%E6%99%AE%E6%8B%89%E6%96%AF%E6%96%B9%E7%A8%8B%E7%9A%84%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0%E8%A7%A3%E6%B3%95/android-chrome-512x512.png"}},"description":"根据柯西黎曼条件，解析函数的实部和虚部都满足拉普拉斯方程。所以对于二维拉普拉斯方程，我们只需找到满足边界条件的复变函数，然后取实部或者虚部就可以直接写出解。 正方形上拉普拉斯方程求解下面用一个例子进行说明。求解二维拉普拉斯方程在 $[0,1]\\times[0,1]$ 正方形上满足如下边界条件的解：  $$ \\begin{cases} u(x,0)&#x3D;0 \\\\ u(x,1)&#x3D;0 \\\\ u(0,y)&#x3D;1"}</script><link rel="canonical" href="https://yuchenxi2000.github.io/2025/01/15/%E6%8B%89%E6%99%AE%E6%8B%89%E6%96%AF%E6%96%B9%E7%A8%8B%E7%9A%84%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0%E8%A7%A3%E6%B3%95/"><link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link data-pjax rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link data-pjax rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!--!--><!-- hexo injector head_end start --><script>
   (function () {
       function switchTab() {
           if (!location.hash) {
@@ -30,7 +30,7 @@
       window.addEventListener('hashchange', switchTab, false);
   })();
   </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 8.1.1"></head><body class="is-1-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-12"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2025-01-15T05:21:29.000Z" title="2025/1/15 13:21:29">2025-01-15</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E6%95%B0%E5%AD%A6/">数学</a></span><span class="level-item">7 分钟读完 (大约1043个字)</span></div></div><h1 class="title is-3 is-size-4-mobile">拉普拉斯方程的复变函数解法</h1><div class="content"><p>根据<a href="/2025/01/14/%E6%9F%AF%E8%A5%BF%E9%BB%8E%E6%9B%BC%E6%9D%A1%E4%BB%B6/" title="柯西黎曼条件">柯西黎曼条件</a>，解析函数的实部和虚部都满足拉普拉斯方程。所以对于二维拉普拉斯方程，我们只需找到满足边界条件的复变函数，然后取实部或者虚部就可以直接写出解。</p>
-<h2 id="正方形上拉普拉斯方程求解"><a href="#正方形上拉普拉斯方程求解" class="headerlink" title="正方形上拉普拉斯方程求解"></a>正方形上拉普拉斯方程求解</h2><p>下面用一个例子进行说明。求解二维拉普拉斯方程在 $\lbrack 0,1\rbrack \times\lbrack 0,1\rbrack $ 正方形上满足如下边界条件的解：</p>
+<h2 id="正方形上拉普拉斯方程求解"><a href="#正方形上拉普拉斯方程求解" class="headerlink" title="正方形上拉普拉斯方程求解"></a>正方形上拉普拉斯方程求解</h2><p>下面用一个例子进行说明。求解二维拉普拉斯方程在 $[0,1]\times[0,1]$ 正方形上满足如下边界条件的解：</p>
 <div>
 $$
 \begin{cases}
@@ -39,8 +39,8 @@ u(x,1)=0 \\
 u(0,y)=1 \\
 u(1,y)=0 \\
 \end{cases}
-$$
-</div>
+\tag{1}
+$$</div>
 
 <p>即三条边上的值为 $0$ ，剩下一条边上的值为 $1$ 。这个方程，粗略一看只能通过数值求解，写不出解析表达式。</p>
 <p>但这个正方形能让人联想到雅可比椭圆函数，这些函数是复平面上的周期函数，最小周期是矩形区域。</p>
@@ -51,8 +51,8 @@ $$
 x = \int_0^{\phi} \cfrac{\mathrm{d}\theta}{\sqrt{1-k^2\sin^2\theta}} \\
 \phi = \mathrm{am}(x,k)
 \\\end{gathered}
-$$
-</div>
+\tag{2}
+$$</div>
 
 
 <p>椭圆正弦函数和余弦函数：</p>
@@ -62,16 +62,16 @@ $$
 \mathrm{sn}(x, k)=\sin \phi = \sin \mathrm{am}(x,k) \\
 \mathrm{cn}(x, k)=\cos \phi = \cos \mathrm{am}(x,k) \\
 \\\end{gathered}
-$$
-</div>
+\tag{3}
+$$</div>
 
 
 <p>然后是一个没有三角函数类比的函数</p>
 <div>
 $$
 \mathrm{dn}(x, k) = \sqrt{1-k^2 \mathrm{sn}^2(x, k)}
-$$
-</div>
+\tag{4}
+$$</div>
 
 <p>剩下的椭圆函数定义：</p>
 <div>
@@ -84,15 +84,15 @@ $$
 \mathrm{cd}=\cfrac{1}{\mathrm{dc}} = \cfrac{\mathrm{cn}}{\mathrm{dn}} \\
 \mathrm{ds}=\cfrac{1}{\mathrm{sd}} = \cfrac{\mathrm{dn}}{\mathrm{sn}} \\
 \\\end{gathered}
-$$
-</div>
+\tag{5}
+$$</div>
 
 <p>引入 $k$ 的共轭：</p>
 <div>
 $$
 k'^2+k^2=1
-$$
-</div>
+\tag{6}
+$$</div>
 
 
 <p>对于复变椭圆正弦函数，其有两个周期，一个实周期 $4K$ ，一个复周期 $2\mathrm{i}K’$ ，其中</p>
@@ -103,8 +103,8 @@ K(k) = \int_0^{\pi/2} \cfrac{\mathrm{d}\theta}{\sqrt{1-k^2\sin^2\theta}} \\
 K=K(k) \\
 K'=K(k') \\
 \\\end{gathered}
-$$
-</div>
+\tag{7}
+$$</div>
 
 <p>复变量雅可比椭圆函数用实变量函数展开[2]：</p>
 <div>
@@ -113,16 +113,16 @@ $$
 = \cfrac
 {\mathrm{ds}(y,k')\mathrm{nc}(y,k')+\mathrm{i}\,\mathrm{ds}(x,k)\mathrm{cn}(x,k)}
 {\mathrm{ns}(x,k)\mathrm{cs}(y,k')+k^2\mathrm{sn}(x,k)\mathrm{sc}(y,k')}
-$$
-</div>
+\tag{8}
+$$</div>
 
 
-<p>通过它我们可以计算在矩形 $\lbrack 0,K\rbrack \times\lbrack 0,K’\rbrack $ 边上的函数值：（函数在该矩形内部无极点）</p>
+<p>通过它我们可以计算在矩形 $[0,K]\times[0,K’]$ 边上的函数值：（函数在该矩形内部无极点）</p>
 <div>
 $$
 \mathrm{sn}(x+\mathrm{i}K',k)=\cfrac{1}{k\mathrm{sn}(x,k)}
-$$
-</div>
+\tag{9}
+$$</div>
 
 
 <div>
@@ -131,25 +131,25 @@ $$
 = \cfrac
 {\mathrm{ds}(y,k')\mathrm{nc}(y,k')}
 {\mathrm{cs}(y,k')+k^2\mathrm{sc}(y,k')}
-$$
-</div>
+\tag{10}
+$$</div>
 
 
 <div>
 $$
 \mathrm{sn}(\mathrm{i}y,k)
 = \mathrm{i}\,\mathrm{sc}(y,k')
-$$
-</div>
+\tag{11}
+$$</div>
 
 
-<p>所以在 $y&#x3D;0,x \in \lbrack 0,K\rbrack $ ， $y&#x3D;K’,x\in(0,K\rbrack $ ， $x&#x3D;K,y\in\lbrack 0,K’\rbrack $ 上， $\mathrm{sn}(z,k)$ 为实数；在 $x&#x3D;0,y\in(0,K’)$ 上， $\mathrm{sn}(z,k)$ 为虚数。<del>为了凑我们的边界条件，</del>我们可以对其取辐角，正实数的辐角为 $0$ ，正虚数的辐角为 $\pi&#x2F;2$ （注意我们选取多值分支使得其连续），然后在乘 $2&#x2F;\pi$ 就满足我们的边界条件。</p>
+<p>所以在 $y&#x3D;0,x \in [0,K]$ ， $y&#x3D;K’,x\in(0,K]$ ， $x&#x3D;K,y\in[0,K’]$ 上， $\mathrm{sn}(z,k)$ 为实数；在 $x&#x3D;0,y\in(0,K’)$ 上， $\mathrm{sn}(z,k)$ 为虚数。<del>为了凑我们的边界条件，</del>我们可以对其取辐角，正实数的辐角为 $0$ ，正虚数的辐角为 $\pi&#x2F;2$ （注意我们选取多值分支使得其连续），然后在乘 $2&#x2F;\pi$ 就满足我们的边界条件。</p>
 <p>对数函数可以实现取辐角的操作。再根据解析函数的实部和虚部都满足拉普拉斯方程，我们可以直接写出拉普拉斯方程满足该边界条件的解</p>
 <div>
 $$
 u(x,y)=\cfrac{2}{\pi}\Im \ln \mathrm{sn}(x+\mathrm{i}y,\sqrt{0.5})
-$$
-</div>
+\tag{12}
+$$</div>
 
 <p>其中 $\Im$ 表示取复数虚部。因为是正方形区域，所以要求 $K&#x3D;K’$ ，即 $k&#x3D;k’&#x3D;\sqrt{0.5}$ 。</p>
 <p>用上面给出的复变量雅可比椭圆函数用实变量函数展开的表达式，可以将解用实变函数表示</p>
@@ -157,8 +157,8 @@ $$
 $$
 u(x,y)
 =\cfrac{2}{\pi} \arctan \cfrac{\mathrm{ds}(x,\sqrt{0.5})\mathrm{cn}(x,\sqrt{0.5})}{\mathrm{ds}(y,\sqrt{0.5})\mathrm{nc}(y,\sqrt{0.5})}
-$$
-</div>
+\tag{13}
+$$</div>
 
 
 <h2 id="解析解-数值解对比"><a href="#解析解-数值解对比" class="headerlink" title="解析解&amp;数值解对比"></a>解析解&amp;数值解对比</h2><p>该边界条件问题的数值解法见<a href="/2020/06/08/%E6%AD%A3%E6%96%B9%E5%BD%A2%E4%B8%8A%E7%9A%84%E6%B3%8A%E6%9D%BE%E6%96%B9%E7%A8%8B/" title="正方形上的泊松方程">正方形上的泊松方程</a>。</p>
@@ -167,7 +167,7 @@ $$
 <p>先运行前两个计算，再运行最后一个画图。</p>
 <h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><p>[1] <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Jacobi_elliptic_functions">https://en.wikipedia.org/wiki/Jacobi_elliptic_functions</a></p>
 <p>[2] Chapter “The Jacobian Elliptic Functions”, An Atlas of Functions, <a target="_blank" rel="noopener" href="https://link.springer.com/book/10.1007/978-0-387-48807-3">https://link.springer.com/book/10.1007/978-0-387-48807-3</a></p>
-</div><div class="article-licensing box"><div class="licensing-title"><p>拉普拉斯方程的复变函数解法</p><p><a href="https://yuchenxi2000.github.io/2025/01/15/拉普拉斯方程的复变函数解法/">https://yuchenxi2000.github.io/2025/01/15/拉普拉斯方程的复变函数解法/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>Chenxi Yu</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2025-01-15</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2026-03-30</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/%E6%95%B0%E5%AD%A6/">数学</a><a class="link-muted mr-2" rel="tag" href="/tags/%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B/">微分方程</a><a class="link-muted mr-2" rel="tag" href="/tags/%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0/">复变函数</a><a class="link-muted mr-2" rel="tag" href="/tags/%E7%89%B9%E6%AE%8A%E5%87%BD%E6%95%B0/">特殊函数</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2025/01/16/%E4%BA%8C%E9%98%B6%E7%BA%BF%E6%80%A7%E5%B8%B8%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B%EF%BC%8C%E7%94%B1%E4%B8%80%E4%B8%AA%E9%80%9A%E8%A7%A3%E5%BE%97%E5%88%B0%E7%AC%AC%E4%BA%8C%E4%B8%AA%E9%80%9A%E8%A7%A3/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">二阶线性常微分方程，由一个通解得到第二个通解</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2025/01/14/%E6%9F%AF%E8%A5%BF%E9%BB%8E%E6%9B%BC%E6%9D%A1%E4%BB%B6/"><span class="level-item">柯西黎曼条件</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><!--!--><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a><p class="is-size-7"><span>&copy; 2026 Chenxi Yu</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="fab fa-creative-commons-nc"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/yuchenxi2000"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
+</div><div class="article-licensing box"><div class="licensing-title"><p>拉普拉斯方程的复变函数解法</p><p><a href="https://yuchenxi2000.github.io/2025/01/15/拉普拉斯方程的复变函数解法/">https://yuchenxi2000.github.io/2025/01/15/拉普拉斯方程的复变函数解法/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>Chenxi Yu</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2025-01-15</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2026-04-03</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/%E6%95%B0%E5%AD%A6/">数学</a><a class="link-muted mr-2" rel="tag" href="/tags/%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B/">微分方程</a><a class="link-muted mr-2" rel="tag" href="/tags/%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0/">复变函数</a><a class="link-muted mr-2" rel="tag" href="/tags/%E7%89%B9%E6%AE%8A%E5%87%BD%E6%95%B0/">特殊函数</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2025/01/16/%E4%BA%8C%E9%98%B6%E7%BA%BF%E6%80%A7%E5%B8%B8%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B%EF%BC%8C%E7%94%B1%E4%B8%80%E4%B8%AA%E9%80%9A%E8%A7%A3%E5%BE%97%E5%88%B0%E7%AC%AC%E4%BA%8C%E4%B8%AA%E9%80%9A%E8%A7%A3/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">二阶线性常微分方程，由一个通解得到第二个通解</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2025/01/14/%E6%9F%AF%E8%A5%BF%E9%BB%8E%E6%9B%BC%E6%9D%A1%E4%BB%B6/"><span class="level-item">柯西黎曼条件</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><!--!--><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a><p class="is-size-7"><span>&copy; 2026 Chenxi Yu</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="fab fa-creative-commons-nc"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/yuchenxi2000"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
             article: {
                 highlight: {
                     clipboard: true,

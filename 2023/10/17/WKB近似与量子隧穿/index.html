@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>WKB近似与量子隧穿 - YCX&#039;s Blog</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="YCX&#039;s Blog"><meta name="msapplication-TileImage" content="favicon.ico"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="YCX&#039;s Blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="WKB近似[2] $$ \newcommand{\d}{\mathrm{d}} \newcommand{\i}{\mathrm{i}} $$    薛定谔方程  $$ E\psi(x) &amp;#x3D; -\cfrac{\hbar^2}{2m} \cfrac{\mathrm{d}^2}{\mathrm{d} x^2} \psi(x) + V(x) \psi(x) $$     $$ \cfrac{\mathrm"><meta property="og:type" content="blog"><meta property="og:title" content="WKB近似与量子隧穿"><meta property="og:url" content="https://yuchenxi2000.github.io/2023/10/17/WKB%E8%BF%91%E4%BC%BC%E4%B8%8E%E9%87%8F%E5%AD%90%E9%9A%A7%E7%A9%BF/"><meta property="og:site_name" content="YCX&#039;s Blog"><meta property="og:description" content="WKB近似[2] $$ \newcommand{\d}{\mathrm{d}} \newcommand{\i}{\mathrm{i}} $$    薛定谔方程  $$ E\psi(x) &amp;#x3D; -\cfrac{\hbar^2}{2m} \cfrac{\mathrm{d}^2}{\mathrm{d} x^2} \psi(x) + V(x) \psi(x) $$     $$ \cfrac{\mathrm"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://yuchenxi2000.github.io/img/og_image.png"><meta property="article:published_time" content="2023-10-17T08:44:05.000Z"><meta property="article:modified_time" content="2026-03-30T12:14:17.838Z"><meta property="article:author" content="Chenxi Yu"><meta property="article:tag" content="物理"><meta property="article:tag" content="量子力学"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://yuchenxi2000.github.io/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://yuchenxi2000.github.io/2023/10/17/WKB%E8%BF%91%E4%BC%BC%E4%B8%8E%E9%87%8F%E5%AD%90%E9%9A%A7%E7%A9%BF/"},"headline":"WKB近似与量子隧穿","image":["https://yuchenxi2000.github.io/img/og_image.png"],"datePublished":"2023-10-17T08:44:05.000Z","dateModified":"2026-03-30T12:14:17.838Z","author":{"@type":"Person","name":"Chenxi Yu"},"publisher":{"@type":"Organization","name":"YCX's Blog","logo":{"@type":"ImageObject","url":"https://yuchenxi2000.github.io/2023/10/17/WKB%E8%BF%91%E4%BC%BC%E4%B8%8E%E9%87%8F%E5%AD%90%E9%9A%A7%E7%A9%BF/android-chrome-512x512.png"}},"description":"WKB近似[2] $$ \\newcommand{\\d}{\\mathrm{d}} \\newcommand{\\i}{\\mathrm{i}} $$    薛定谔方程  $$ E\\psi(x) &#x3D; -\\cfrac{\\hbar^2}{2m} \\cfrac{\\mathrm{d}^2}{\\mathrm{d} x^2} \\psi(x) + V(x) \\psi(x) $$     $$ \\cfrac{\\mathrm"}</script><link rel="canonical" href="https://yuchenxi2000.github.io/2023/10/17/WKB%E8%BF%91%E4%BC%BC%E4%B8%8E%E9%87%8F%E5%AD%90%E9%9A%A7%E7%A9%BF/"><link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link data-pjax rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link data-pjax rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!--!--><!-- hexo injector head_end start --><script>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>WKB近似与量子隧穿 - YCX&#039;s Blog</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="YCX&#039;s Blog"><meta name="msapplication-TileImage" content="favicon.ico"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="YCX&#039;s Blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="WKB近似[2]薛定谔方程  $$ E\psi(x) &amp;#x3D; -\cfrac{\hbar^2}{2m} \cfrac{\mathrm{d}^2}{\mathrm{d} x^2} \psi(x) + V(x) \psi(x) \tag{1} $$    $$ \cfrac{\mathrm{d}^2}{\mathrm{d} x^2} \psi(x) &amp;#x3D; \cfrac{2m}{\hbar^2} \left["><meta property="og:type" content="blog"><meta property="og:title" content="WKB近似与量子隧穿"><meta property="og:url" content="https://yuchenxi2000.github.io/2023/10/17/WKB%E8%BF%91%E4%BC%BC%E4%B8%8E%E9%87%8F%E5%AD%90%E9%9A%A7%E7%A9%BF/"><meta property="og:site_name" content="YCX&#039;s Blog"><meta property="og:description" content="WKB近似[2]薛定谔方程  $$ E\psi(x) &amp;#x3D; -\cfrac{\hbar^2}{2m} \cfrac{\mathrm{d}^2}{\mathrm{d} x^2} \psi(x) + V(x) \psi(x) \tag{1} $$    $$ \cfrac{\mathrm{d}^2}{\mathrm{d} x^2} \psi(x) &amp;#x3D; \cfrac{2m}{\hbar^2} \left["><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://yuchenxi2000.github.io/img/og_image.png"><meta property="article:published_time" content="2023-10-17T08:44:05.000Z"><meta property="article:modified_time" content="2026-04-03T14:05:07.003Z"><meta property="article:author" content="Chenxi Yu"><meta property="article:tag" content="物理"><meta property="article:tag" content="量子力学"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://yuchenxi2000.github.io/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://yuchenxi2000.github.io/2023/10/17/WKB%E8%BF%91%E4%BC%BC%E4%B8%8E%E9%87%8F%E5%AD%90%E9%9A%A7%E7%A9%BF/"},"headline":"WKB近似与量子隧穿","image":["https://yuchenxi2000.github.io/img/og_image.png"],"datePublished":"2023-10-17T08:44:05.000Z","dateModified":"2026-04-03T14:05:07.003Z","author":{"@type":"Person","name":"Chenxi Yu"},"publisher":{"@type":"Organization","name":"YCX's Blog","logo":{"@type":"ImageObject","url":"https://yuchenxi2000.github.io/2023/10/17/WKB%E8%BF%91%E4%BC%BC%E4%B8%8E%E9%87%8F%E5%AD%90%E9%9A%A7%E7%A9%BF/android-chrome-512x512.png"}},"description":"WKB近似[2]薛定谔方程  $$ E\\psi(x) &#x3D; -\\cfrac{\\hbar^2}{2m} \\cfrac{\\mathrm{d}^2}{\\mathrm{d} x^2} \\psi(x) + V(x) \\psi(x) \\tag{1} $$    $$ \\cfrac{\\mathrm{d}^2}{\\mathrm{d} x^2} \\psi(x) &#x3D; \\cfrac{2m}{\\hbar^2} \\left["}</script><link rel="canonical" href="https://yuchenxi2000.github.io/2023/10/17/WKB%E8%BF%91%E4%BC%BC%E4%B8%8E%E9%87%8F%E5%AD%90%E9%9A%A7%E7%A9%BF/"><link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link data-pjax rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link data-pjax rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!--!--><!-- hexo injector head_end start --><script>
   (function () {
       function switchTab() {
           if (!location.hash) {
@@ -29,119 +29,111 @@
       switchTab();
       window.addEventListener('hashchange', switchTab, false);
   })();
-  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 8.1.1"></head><body class="is-1-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-12"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2023-10-17T08:44:05.000Z" title="2023/10/17 16:44:05">2023-10-17</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E7%89%A9%E7%90%86/">物理</a></span><span class="level-item">13 分钟读完 (大约1896个字)</span></div></div><h1 class="title is-3 is-size-4-mobile">WKB近似与量子隧穿</h1><div class="content"><h1 id="WKB近似-2"><a href="#WKB近似-2" class="headerlink" title="WKB近似[2]"></a>WKB近似[2]</h1><div>
-$$
-\newcommand{\d}{\mathrm{d}}
-\newcommand{\i}{\mathrm{i}}
-$$
-</div>
-
-
-<p>薛定谔方程</p>
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 8.1.1"></head><body class="is-1-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-12"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2023-10-17T08:44:05.000Z" title="2023/10/17 16:44:05">2023-10-17</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E7%89%A9%E7%90%86/">物理</a></span><span class="level-item">12 分钟读完 (大约1842个字)</span></div></div><h1 class="title is-3 is-size-4-mobile">WKB近似与量子隧穿</h1><div class="content"><h1 id="WKB近似-2"><a href="#WKB近似-2" class="headerlink" title="WKB近似[2]"></a>WKB近似[2]</h1><p>薛定谔方程</p>
 <div>
 $$
 E\psi(x) = -\cfrac{\hbar^2}{2m} \cfrac{\mathrm{d}^2}{\mathrm{d} x^2} \psi(x) + V(x) \psi(x)
-$$
-</div>
+\tag{1}
+$$</div>
 
 
 <div>
 $$
-\cfrac{\mathrm{d}^2}{\mathrm{d} x^2} \psi(x) = \cfrac{2m}{\hbar^2} \left\lbrack V(x) - E\right\rbrack  \psi(x)
-$$
-</div>
+\cfrac{\mathrm{d}^2}{\mathrm{d} x^2} \psi(x) = \cfrac{2m}{\hbar^2} \left[V(x) - E\right] \psi(x)
+\tag{2}
+$$</div>
 
 
 <h2 id="非经典区域"><a href="#非经典区域" class="headerlink" title="非经典区域"></a>非经典区域</h2><p>此时 $V(x)\gt E$ </p>
 <p>设波函数形式为</p>
 <div>
 $$
-\psi(x) = \exp \left\lbrack S(x)/\hbar\right\rbrack 
-$$
-</div>
+\psi(x) = \exp \left[S(x)/\hbar\right]
+\tag{3}
+$$</div>
 
 
 <div>
 $$
-\psi^\prime(x) = 1/\hbar S^\prime(x) \exp \left\lbrack S(x)/\hbar\right\rbrack 
-$$
-</div>
+\psi^\prime(x) = 1/\hbar S^\prime(x) \exp \left[S(x)/\hbar\right]
+\tag{4}
+$$</div>
 
 
 <div>
 $$
-\psi^{\prime\prime}(x) = 1/\hbar S^{\prime\prime}(x) \exp \left\lbrack S(x)/\hbar\right\rbrack  +1/\hbar^2 \left\lbrack S^\prime(x)\right\rbrack ^2 \exp \left\lbrack S(x)/\hbar\right\rbrack 
-$$
-</div>
+\psi^{\prime\prime}(x) = 1/\hbar S^{\prime\prime}(x) \exp \left[S(x)/\hbar\right] +1/\hbar^2 \left[S^\prime(x)\right]^2 \exp \left[S(x)/\hbar\right]
+\tag{5}
+$$</div>
 
 
 <p>代入薛定谔方程中</p>
 <div>
 $$
-\hbar S^{\prime\prime}(x) + \left\lbrack S^\prime(x)\right\rbrack ^2 = 2m \left\lbrack V(x) - E\right\rbrack 
-$$
-</div>
+\hbar S^{\prime\prime}(x) + \left[S^\prime(x)\right]^2 = 2m \left[V(x) - E\right]
+\tag{6}
+$$</div>
 
 
 <p>接下来把 $S(x)$ 按 $\hbar$ 的阶展开</p>
 <div>
 $$
 S(x) = S_0(x) + \hbar S_1(x) + ...
-$$
-</div>
+\tag{7}
+$$</div>
 
 
 <p>代入得</p>
 <div>
 $$
-\hbar S_0^{\prime\prime}(x) + \hbar^2 S_1^{\prime\prime}(x) + \left\lbrack S_0^\prime(x) + \hbar S_1^\prime(x)\right\rbrack ^2 = 2m \left\lbrack V(x) - E\right\rbrack 
-$$
-</div>
+\hbar S_0^{\prime\prime}(x) + \hbar^2 S_1^{\prime\prime}(x) + \left[S_0^\prime(x) + \hbar S_1^\prime(x)\right]^2 = 2m \left[V(x) - E\right]
+\tag{8}
+$$</div>
 
 
 <div>
 $$
-\hbar S_0^{\prime\prime}(x) + \hbar^2 S_1^{\prime\prime}(x) + \left\lbrack S_0^\prime(x)\right\rbrack ^2 + \hbar^2 \left\lbrack S_1^\prime(x)\right\rbrack ^2 + 2 \hbar S_0^\prime(x) S_1^\prime(x) = 2m \left\lbrack V(x) - E\right\rbrack 
-$$
-</div>
+\hbar S_0^{\prime\prime}(x) + \hbar^2 S_1^{\prime\prime}(x) + \left[S_0^\prime(x)\right]^2 + \hbar^2 \left[S_1^\prime(x)\right]^2 + 2 \hbar S_0^\prime(x) S_1^\prime(x) = 2m \left[V(x) - E\right]
+\tag{9}
+$$</div>
 
 
 <p>忽略二阶项，令零阶项和一阶项分别为 $0$ ，</p>
 <div>
 $$
 \begin{cases}
-\left\lbrack S_0^\prime(x)\right\rbrack ^2 = 2m \left\lbrack V(x) - E\right\rbrack  \\
+\left[S_0^\prime(x)\right]^2 = 2m \left[V(x) - E\right] \\
 S_0^{\prime\prime}(x) = -2S_0^\prime(x) S_1^\prime(x) \\
 \end{cases}
-$$
-</div>
+\tag{10}
+$$</div>
 
 
 <p>解得</p>
 <div>
 $$
 \begin{cases}
-S_0(x) = \pm\int_{x_0}^x \sqrt{2m \left\lbrack V(x) - E\right\rbrack } \,\mathrm{d} x \\
+S_0(x) = \pm\int_{x_0}^x \sqrt{2m \left[V(x) - E\right]} \,\mathrm{d} x \\
 S_1(x) = \int -\cfrac{S_0^{\prime\prime}(x)}{2S_0^\prime(x)} \,\mathrm{d} x = -\frac{1}{2}\ln \lvert S_0^{\prime}(x)\rvert + \ln C
 \end{cases}
-$$
-</div>
+\tag{11}
+$$</div>
 
 
 <p>其中 $x_0,C$ 和初始条件和波函数归一化有关</p>
 <p>定义“动量”</p>
 <div>
 $$
-q(x) = \sqrt{2m \left\lbrack V(x) - E\right\rbrack }
-$$
-</div>
+q(x) = \sqrt{2m \left[V(x) - E\right]}
+\tag{12}
+$$</div>
 
 <p> $S_0(x)$ 分别取正负号给出两组解，线性组合后给出通解</p>
 <div>
 $$
-\psi(x) = \cfrac{C_1}{\sqrt{q(x)}} \exp \left\lbrack  +\frac{1}{\hbar} \int_{x_0}^x q(x) \,\mathrm{d} x \right\rbrack  + \cfrac{C_2}{\sqrt{q(x)}} \exp \left\lbrack  -\frac{1}{\hbar} \int_{x_0}^x q(x) \,\mathrm{d} x \right\rbrack 
-$$
-</div>
+\psi(x) = \cfrac{C_1}{\sqrt{q(x)}} \exp \left[ +\frac{1}{\hbar} \int_{x_0}^x q(x) \,\mathrm{d} x \right] + \cfrac{C_2}{\sqrt{q(x)}} \exp \left[ -\frac{1}{\hbar} \int_{x_0}^x q(x) \,\mathrm{d} x \right]
+\tag{13}
+$$</div>
 
 
 <h2 id="经典区域"><a href="#经典区域" class="headerlink" title="经典区域"></a>经典区域</h2><p>此时 $V(x)\lt E$ </p>
@@ -149,41 +141,41 @@ $$
 <p>设波函数形式为</p>
 <div>
 $$
-\psi(x) = \exp \left\lbrack \mathrm{i} S(x)/\hbar\right\rbrack 
-$$
-</div>
+\psi(x) = \exp \left[\mathrm{i} S(x)/\hbar\right]
+\tag{14}
+$$</div>
 
 <p>代入薛定谔方程中</p>
 <span id="more"></span>
 <div>
 $$
-\mathrm{i} \hbar S^{\prime\prime}(x) - \left\lbrack S^\prime(x)\right\rbrack ^2 = 2m \left\lbrack V(x) - E\right\rbrack 
-$$
-</div>
+\mathrm{i} \hbar S^{\prime\prime}(x) - \left[S^\prime(x)\right]^2 = 2m \left[V(x) - E\right]
+\tag{15}
+$$</div>
 
 <p>把 $S(x)$ 按 $\hbar$ 的阶展开</p>
 <div>
 $$
 S(x) = S_0(x) + \hbar S_1(x) + ...
-$$
-</div>
+\tag{16}
+$$</div>
 
 <p>代入得</p>
 <div>
 $$
 \begin{cases}
-\left\lbrack S_0^\prime(x)\right\rbrack ^2 = 2m \left\lbrack E - V(x)\right\rbrack  \\
+\left[S_0^\prime(x)\right]^2 = 2m \left[E - V(x)\right] \\
 \mathrm{i} S_0^{\prime\prime}(x) = 2S_0^\prime(x) S_1^\prime(x) \\
 \end{cases}
-$$
-</div>
+\tag{17}
+$$</div>
 
 <p>定义“动量”</p>
 <div>
 $$
-p(x) = \sqrt{2m \left\lbrack E - V(x)\right\rbrack }
-$$
-</div>
+p(x) = \sqrt{2m \left[E - V(x)\right]}
+\tag{18}
+$$</div>
 
 
 <div>
@@ -192,16 +184,16 @@ $$
 S_0(x) = \pm \int_{x_0}^x p(x) \,\mathrm{d} x \\
 S_1(x) = \int \mathrm{i}\cfrac{S_0^{\prime\prime}(x)}{2S_0^\prime(x)} \,\mathrm{d} x = \frac{\mathrm{i}}{2}\ln \lvert S_0^{\prime}(x)\rvert - \mathrm{i} \ln C
 \end{cases}
-$$
-</div>
+\tag{19}
+$$</div>
 
 
 <p>得到通解</p>
 <div>
 $$
-\psi(x) = \cfrac{C_1}{\sqrt{p(x)}} \exp \left\lbrack  +\frac{\mathrm{i}}{\hbar} \int_{x_0}^x p(x) \,\mathrm{d} x \right\rbrack  + \cfrac{C_2}{\sqrt{p(x)}} \exp \left\lbrack  -\frac{\mathrm{i}}{\hbar} \int_{x_0}^x p(x) \,\mathrm{d} x \right\rbrack 
-$$
-</div>
+\psi(x) = \cfrac{C_1}{\sqrt{p(x)}} \exp \left[ +\frac{\mathrm{i}}{\hbar} \int_{x_0}^x p(x) \,\mathrm{d} x \right] + \cfrac{C_2}{\sqrt{p(x)}} \exp \left[ -\frac{\mathrm{i}}{\hbar} \int_{x_0}^x p(x) \,\mathrm{d} x \right]
+\tag{20}
+$$</div>
 
 
 <h2 id="Turning-point"><a href="#Turning-point" class="headerlink" title="Turning point"></a>Turning point</h2><p>经典区域和非经典区域的连接区域，此时 $p(x),q(x) \rightarrow 0$ ，两边的近似表达式都不成立。</p>
@@ -209,36 +201,36 @@ $$
 <div>
 $$
 V(x) - E = F_1 (x - a)
-$$
-</div>
+\tag{21}
+$$</div>
 
 <p>薛定谔方程成为</p>
 <div>
 $$
 \cfrac{\mathrm{d}^2}{\mathrm{d} x^2} \psi(x) = \cfrac{2mF_1}{\hbar^2} (x - a) \psi(x)
-$$
-</div>
+\tag{22}
+$$</div>
 
 <p>令</p>
 <div>
 $$
-u = \sqrt\lbrack 3\rbrack {\cfrac{2mF_1}{\hbar^2}}(x-a)
-$$
-</div>
+u = \sqrt[3]{\cfrac{2mF_1}{\hbar^2}}(x-a)
+\tag{23}
+$$</div>
 
 <p>则</p>
 <div>
 $$
 \cfrac{\mathrm{d}^2 \psi}{\mathrm{d} u^2} = u \psi
-$$
-</div>
+\tag{24}
+$$</div>
 
 <p>此即Airy方程，通解为</p>
 <div>
 $$
 \psi = C_1 \mathrm{Ai}(u) + C_2 \mathrm{Bi}(u)
-$$
-</div>
+\tag{25}
+$$</div>
 
 <h2 id="Turning-point附近波函数系数之间的关系"><a href="#Turning-point附近波函数系数之间的关系" class="headerlink" title="Turning point附近波函数系数之间的关系"></a>Turning point附近波函数系数之间的关系</h2><p>Airy函数在 $u \to -\infty, u \to +\infty$ 的渐进表达式为[1]</p>
 <div>
@@ -249,81 +241,81 @@ $$
 \mathrm{Bi}(u) \approx \cfrac{1}{\sqrt{\pi}u^{1/4}}\exp\left(\frac{2}{3}u^{3/2}\right) & u \to +\infty \\
 \mathrm{Bi}(u) \approx \cfrac{1}{\sqrt{\pi}\lvert u \rvert^{1/4}}\cos\left(\frac{2}{3}\lvert u \rvert^{3/2} + \frac{\pi}{4}\right) & u \to -\infty \\
 \\\end{gathered}
-$$
-</div>
+\tag{26}
+$$</div>
 
 <h3 id="左边经典区"><a href="#左边经典区" class="headerlink" title="左边经典区"></a>左边经典区</h3><div>
 $$
-\psi(x) = \cfrac{A_1}{\sqrt{p(x)}} \exp \left\lbrack  +\frac{\mathrm{i}}{\hbar} \int_{x}^a p(x) \,\mathrm{d} x \right\rbrack  + \cfrac{A_2}{\sqrt{p(x)}} \exp \left\lbrack  -\frac{\mathrm{i}}{\hbar} \int_{x}^a p(x) \,\mathrm{d} x \right\rbrack 
-$$
-</div>
+\psi(x) = \cfrac{A_1}{\sqrt{p(x)}} \exp \left[ +\frac{\mathrm{i}}{\hbar} \int_{x}^a p(x) \,\mathrm{d} x \right] + \cfrac{A_2}{\sqrt{p(x)}} \exp \left[ -\frac{\mathrm{i}}{\hbar} \int_{x}^a p(x) \,\mathrm{d} x \right]
+\tag{27}
+$$</div>
 
 <p>其中</p>
 <div>
 $$
 \begin{gathered}
-p(x) \approx \sqrt{2m \left\lbrack F_1 (a - x)\right\rbrack } \\
-= \sqrt{2mF_1\sqrt\lbrack 3\rbrack {\cfrac{\hbar^2}{2mF_1}} \lvert u \rvert} \\
+p(x) \approx \sqrt{2m \left[F_1 (a - x)\right]} \\
+= \sqrt{2mF_1\sqrt[3]{\cfrac{\hbar^2}{2mF_1}} \lvert u \rvert} \\
 = (2mF_1\hbar)^{1/3} \lvert u \rvert^{1/2}
 \\\end{gathered}
-$$
-</div>
+\tag{28}
+$$</div>
 
 <p>再计算指数里的积分</p>
 <div>
 $$
 \begin{gathered}
-\cfrac{1}{\hbar} \int_{x}^a p(x) \,\mathrm{d} x \approx \cfrac{1}{\hbar} \int_{x}^a \sqrt{2m \left\lbrack F_1 (a - x)\right\rbrack } \,\mathrm{d} x \\
+\cfrac{1}{\hbar} \int_{x}^a p(x) \,\mathrm{d} x \approx \cfrac{1}{\hbar} \int_{x}^a \sqrt{2m \left[F_1 (a - x)\right]} \,\mathrm{d} x \\
 = \cfrac{\sqrt{2mF_1}}{\hbar} \int_{x}^a \sqrt{a - x} \,\mathrm{d} x \\
 = \cfrac{2\sqrt{2mF_1}}{3\hbar} (a - x)^{3/2} \\
 = \frac{2}{3} \lvert u \rvert^{3/2}
 \\\end{gathered}
-$$
-</div>
+\tag{29}
+$$</div>
 
 
 <p>于是左边经典区：</p>
 <div>
 $$
 \psi(x) \approx \cfrac{A_1}{(2mF_1\hbar)^{1/6}\lvert u \rvert^{1/4}} \exp \left( \mathrm{i} \frac{2}{3} \lvert u \rvert^{3/2} \right) + \cfrac{A_2}{(2mF_1\hbar)^{1/6} \lvert u \rvert^{1/4}} \exp \left( -\mathrm{i} \frac{2}{3} \lvert u \rvert^{3/2} \right)
-$$
-</div>
+\tag{30}
+$$</div>
 
 <p>根据</p>
 <div>
 $$
 \exp(\mathrm{i} x) = \frac{\sqrt{2}}{2}(1 + \mathrm{i}) \cos(x - \pi/4) + \frac{\sqrt{2}}{2} (1 - \mathrm{i}) \cos(x + \pi/4)
-$$
-</div>
+\tag{31}
+$$</div>
 
 <p>得</p>
 <div>
 $$
-\psi(x) \approx \cfrac{\sqrt{\pi}}{\sqrt{2}(2mF_1\hbar)^{1/6}} \left\{ \left\lbrack A_1(1+\mathrm{i})+A_2(1-\mathrm{i})\right\rbrack  \mathrm{Ai}(u) + \left\lbrack A_1(1-\mathrm{i})+A_2(1+\mathrm{i})\right\rbrack  \mathrm{Bi}(u) \right\}
-$$
-</div>
+\psi(x) \approx \cfrac{\sqrt{\pi}}{\sqrt{2}(2mF_1\hbar)^{1/6}} \left\{ \left[A_1(1+\mathrm{i})+A_2(1-\mathrm{i})\right] \mathrm{Ai}(u) + \left[A_1(1-\mathrm{i})+A_2(1+\mathrm{i})\right] \mathrm{Bi}(u) \right\}
+\tag{32}
+$$</div>
 
 
 <h3 id="右边非经典区"><a href="#右边非经典区" class="headerlink" title="右边非经典区"></a>右边非经典区</h3><div>
 $$
-\psi(x) = \cfrac{B_1}{\sqrt{q(x)}} \exp \left\lbrack  +\frac{1}{\hbar} \int_{a}^x q(x) \,\mathrm{d} x \right\rbrack  + \cfrac{B_2}{\sqrt{q(x)}} \exp \left\lbrack  -\frac{1}{\hbar} \int_{a}^x q(x) \,\mathrm{d} x \right\rbrack 
-$$
-</div>
+\psi(x) = \cfrac{B_1}{\sqrt{q(x)}} \exp \left[ +\frac{1}{\hbar} \int_{a}^x q(x) \,\mathrm{d} x \right] + \cfrac{B_2}{\sqrt{q(x)}} \exp \left[ -\frac{1}{\hbar} \int_{a}^x q(x) \,\mathrm{d} x \right]
+\tag{33}
+$$</div>
 
 
 <p>同理</p>
 <div>
 $$
 q(x) \approx (2mF_1\hbar)^{1/3} u^{1/2}
-$$
-</div>
+\tag{34}
+$$</div>
 
 
 <div>
 $$
 \cfrac{1}{\hbar} \int_{a}^x q(x) \,\mathrm{d} x \approx \frac{2}{3} u^{3/2}
-$$
-</div>
+\tag{35}
+$$</div>
 
 
 <div>
@@ -332,8 +324,8 @@ $$
 \psi(x) \approx \cfrac{B_1}{(2mF_1\hbar)^{1/6} u^{1/4}} \exp \left( \frac{2}{3} u^{3/2} \right) + \cfrac{B_2}{(2mF_1\hbar)^{1/6} u^{1/4}} \exp \left( -\frac{2}{3} u^{3/2} \right) \\
 \approx \cfrac{\sqrt{\pi}B_1}{(2mF_1\hbar)^{1/6}} \mathrm{Bi}(u) + \cfrac{2\sqrt{\pi}B_2}{(2mF_1\hbar)^{1/6}} \mathrm{Ai}(u) \\
 \\\end{gathered}
-$$
-</div>
+\tag{36}
+$$</div>
 
 
 <h3 id="波函数系数之间的关系"><a href="#波函数系数之间的关系" class="headerlink" title="波函数系数之间的关系"></a>波函数系数之间的关系</h3><p>综合上述计算</p>
@@ -343,8 +335,8 @@ $$
 A_1(1+\mathrm{i})+A_2(1-\mathrm{i}) = 2\sqrt{2}B_2 \\
 A_1(1-\mathrm{i})+A_2(1+\mathrm{i}) = \sqrt{2}B_1 \\
 \end{cases}
-$$
-</div>
+\tag{37}
+$$</div>
 
 <p>上式的系数关系是左边经典区&amp;右边非经典区的条件下，如果左边是非经典区&amp;右边是经典区，则</p>
 <div>
@@ -353,8 +345,8 @@ $$
 A_2(1+\mathrm{i})+A_1(1-\mathrm{i}) = 2\sqrt{2}B_1 \\
 A_2(1-\mathrm{i})+A_1(1+\mathrm{i}) = \sqrt{2}B_2 \\
 \end{cases}
-$$
-</div>
+\tag{38}
+$$</div>
 
 
 <h2 id="任意势垒量子隧穿计算"><a href="#任意势垒量子隧穿计算" class="headerlink" title="任意势垒量子隧穿计算"></a>任意势垒量子隧穿计算</h2><p>设同种材料（粒子质量不随坐标变化）</p>
@@ -362,33 +354,33 @@ $$
 <p>经典区I波函数</p>
 <div>
 $$
-\psi(x) = \cfrac{A_1}{\sqrt{p(x)}} \exp \left\lbrack  +\frac{\mathrm{i}}{\hbar} \int_{x}^a p(x) \,\mathrm{d} x \right\rbrack  + \cfrac{A_2}{\sqrt{p(x)}} \exp \left\lbrack  -\frac{\mathrm{i}}{\hbar} \int_{x}^a p(x) \,\mathrm{d} x \right\rbrack 
-$$
-</div>
+\psi(x) = \cfrac{A_1}{\sqrt{p(x)}} \exp \left[ +\frac{\mathrm{i}}{\hbar} \int_{x}^a p(x) \,\mathrm{d} x \right] + \cfrac{A_2}{\sqrt{p(x)}} \exp \left[ -\frac{\mathrm{i}}{\hbar} \int_{x}^a p(x) \,\mathrm{d} x \right]
+\tag{39}
+$$</div>
 
 <p>非经典区II波函数</p>
 <div>
 $$
 \begin{gathered}
-\psi(x) = \cfrac{B_1}{\sqrt{q(x)}} \exp \left\lbrack  +\frac{1}{\hbar} \int_{a}^x q(x) \,\mathrm{d} x \right\rbrack  + \cfrac{B_2}{\sqrt{q(x)}} \exp \left\lbrack  -\frac{1}{\hbar} \int_{a}^x q(x) \,\mathrm{d} x \right\rbrack  \\
-= \cfrac{B_1\exp(D)}{\sqrt{q(x)}} \exp \left\lbrack  -\frac{1}{\hbar} \int_{x}^b q(x) \,\mathrm{d} x \right\rbrack  + \cfrac{B_2\exp(-D)}{\sqrt{q(x)}} \exp \left\lbrack  \frac{1}{\hbar} \int_{x}^b q(x) \,\mathrm{d} x \right\rbrack  \\
+\psi(x) = \cfrac{B_1}{\sqrt{q(x)}} \exp \left[ +\frac{1}{\hbar} \int_{a}^x q(x) \,\mathrm{d} x \right] + \cfrac{B_2}{\sqrt{q(x)}} \exp \left[ -\frac{1}{\hbar} \int_{a}^x q(x) \,\mathrm{d} x \right] \\
+= \cfrac{B_1\exp(D)}{\sqrt{q(x)}} \exp \left[ -\frac{1}{\hbar} \int_{x}^b q(x) \,\mathrm{d} x \right] + \cfrac{B_2\exp(-D)}{\sqrt{q(x)}} \exp \left[ \frac{1}{\hbar} \int_{x}^b q(x) \,\mathrm{d} x \right] \\
 \\\end{gathered}
-$$
-</div>
+\tag{40}
+$$</div>
 
 <p>其中</p>
 <div>
 $$
 D = \cfrac{1}{\hbar} \int_a^b q(x) \,\mathrm{d} x
-$$
-</div>
+\tag{41}
+$$</div>
 
 <p>经典区III波函数</p>
 <div>
 $$
-\psi(x) = \cfrac{C_1}{\sqrt{p(x)}} \exp \left\lbrack  +\frac{\mathrm{i}}{\hbar} \int_{a}^x p(x) \,\mathrm{d} x \right\rbrack  + \cfrac{C_2}{\sqrt{p(x)}} \exp \left\lbrack  -\frac{\mathrm{i}}{\hbar} \int_{a}^x p(x) \,\mathrm{d} x \right\rbrack 
-$$
-</div>
+\psi(x) = \cfrac{C_1}{\sqrt{p(x)}} \exp \left[ +\frac{\mathrm{i}}{\hbar} \int_{a}^x p(x) \,\mathrm{d} x \right] + \cfrac{C_2}{\sqrt{p(x)}} \exp \left[ -\frac{\mathrm{i}}{\hbar} \int_{a}^x p(x) \,\mathrm{d} x \right]
+\tag{42}
+$$</div>
 
 <p>利用上节结论，</p>
 <div>
@@ -399,8 +391,8 @@ A_1(1-\mathrm{i})+A_2(1+\mathrm{i}) = \sqrt{2}B_1 \\
 C_2(1+\mathrm{i})+C_1(1-\mathrm{i}) = 2\sqrt{2}B_1\exp(D) \\
 C_2(1-\mathrm{i})+C_1(1+\mathrm{i}) = \sqrt{2}B_2\exp(-D) \\
 \end{cases}
-$$
-</div>
+\tag{43}
+$$</div>
 
 <p>不存在从右侧入射波， $C_2&#x3D;0$ </p>
 <div>
@@ -409,15 +401,15 @@ $$
 A_1(1+\mathrm{i})+A_2(1-\mathrm{i}) = 2(1+\mathrm{i})\exp(D)C_1 \\
 A_1(1-\mathrm{i})+A_2(1+\mathrm{i}) = \cfrac{1-\mathrm{i}}{2}\exp(-D)C_1 \\
 \end{cases}
-$$
-</div>
+\tag{44}
+$$</div>
 
 <p>解得</p>
 <div>
 $$
 \cfrac{C_1}{A_1} = \cfrac{4}{4\exp(D) - \exp(-D)} \approx \exp(-D)
-$$
-</div>
+\tag{45}
+$$</div>
 
 <p>于是传输系数</p>
 <blockquote>
@@ -425,15 +417,15 @@ $$
 </blockquote>
 <div>
 $$
-T(E) = \cfrac{\lvert C_1 \rvert^2}{\lvert A_1 \rvert^2} \approx \exp \left( -\cfrac{2}{\hbar} \int_a^b \sqrt{2m \left\lbrack V(x) - E\right\rbrack } \,\mathrm{d} x \right)
-$$
-</div>
+T(E) = \cfrac{\lvert C_1 \rvert^2}{\lvert A_1 \rvert^2} \approx \exp \left( -\cfrac{2}{\hbar} \int_a^b \sqrt{2m \left[V(x) - E\right]} \,\mathrm{d} x \right)
+\tag{46}
+$$</div>
 
 
 <h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><p>[1] <a target="_blank" rel="noopener" href="https://theory.physics.manchester.ac.uk/~judith/AQMI/PHYS30201se31.xhtml">https://theory.physics.manchester.ac.uk/~judith/AQMI/PHYS30201se31.xhtml</a> Airy函数渐进展开</p>
 <p>[2] <a target="_blank" rel="noopener" href="https://link.springer.com/book/10.1007/978-1-4614-7116-5?page=1">https://link.springer.com/book/10.1007/978-1-4614-7116-5?page=1</a> WKB近似</p>
 <p>[3] <a target="_blank" rel="noopener" href="https://doi.org/10.1007/s12045-021-1179-z">https://doi.org/10.1007/s12045-021-1179-z</a> Airy函数渐进展开</p>
-</div><div class="article-licensing box"><div class="licensing-title"><p>WKB近似与量子隧穿</p><p><a href="https://yuchenxi2000.github.io/2023/10/17/WKB近似与量子隧穿/">https://yuchenxi2000.github.io/2023/10/17/WKB近似与量子隧穿/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>Chenxi Yu</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2023-10-17</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2026-03-30</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/%E7%89%A9%E7%90%86/">物理</a><a class="link-muted mr-2" rel="tag" href="/tags/%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6/">量子力学</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2023/10/28/%E9%92%B1%E5%BE%B7%E6%8B%89%E5%A1%9E%E5%8D%A1%E6%9E%81%E9%99%90/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">钱德拉塞卡极限</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2023/10/16/%E5%90%84%E5%90%91%E5%BC%82%E6%80%A7%E7%A3%81%E9%98%BB%E5%92%8C%E5%B9%B3%E9%9D%A2%E9%9C%8D%E5%B0%94%E6%95%88%E5%BA%94/"><span class="level-item">各向异性磁阻和平面霍尔效应</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><!--!--><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a><p class="is-size-7"><span>&copy; 2026 Chenxi Yu</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="fab fa-creative-commons-nc"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/yuchenxi2000"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
+</div><div class="article-licensing box"><div class="licensing-title"><p>WKB近似与量子隧穿</p><p><a href="https://yuchenxi2000.github.io/2023/10/17/WKB近似与量子隧穿/">https://yuchenxi2000.github.io/2023/10/17/WKB近似与量子隧穿/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>Chenxi Yu</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2023-10-17</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2026-04-03</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/%E7%89%A9%E7%90%86/">物理</a><a class="link-muted mr-2" rel="tag" href="/tags/%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6/">量子力学</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2023/10/28/%E9%92%B1%E5%BE%B7%E6%8B%89%E5%A1%9E%E5%8D%A1%E6%9E%81%E9%99%90/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">钱德拉塞卡极限</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2023/10/16/%E5%90%84%E5%90%91%E5%BC%82%E6%80%A7%E7%A3%81%E9%98%BB%E5%92%8C%E5%B9%B3%E9%9D%A2%E9%9C%8D%E5%B0%94%E6%95%88%E5%BA%94/"><span class="level-item">各向异性磁阻和平面霍尔效应</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><!--!--><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a><p class="is-size-7"><span>&copy; 2026 Chenxi Yu</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="fab fa-creative-commons-nc"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/yuchenxi2000"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
             article: {
                 highlight: {
                     clipboard: true,

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>各向同性材料本构关系 - YCX&#039;s Blog</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="YCX&#039;s Blog"><meta name="msapplication-TileImage" content="favicon.ico"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="YCX&#039;s Blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="在小形变近似下，应力张量、弹性张量、应变张量有如下线性关系  $$ \sigma&amp;#x3D;C:\varepsilon $$     $$ \sigma_{ij}&amp;#x3D;C_{ijkt}\varepsilon_{kt} $$     $\sigma_{ij},\varepsilon_{kt}$ 为对称张量，所以可以用Voigt记号  $$ \varepsilon&amp;#x3D;\begin{pmatrix} \varepsil"><meta property="og:type" content="blog"><meta property="og:title" content="各向同性材料本构关系"><meta property="og:url" content="https://yuchenxi2000.github.io/2025/07/20/%E5%90%84%E5%90%91%E5%90%8C%E6%80%A7%E6%9D%90%E6%96%99%E6%9C%AC%E6%9E%84%E5%85%B3%E7%B3%BB/"><meta property="og:site_name" content="YCX&#039;s Blog"><meta property="og:description" content="在小形变近似下，应力张量、弹性张量、应变张量有如下线性关系  $$ \sigma&amp;#x3D;C:\varepsilon $$     $$ \sigma_{ij}&amp;#x3D;C_{ijkt}\varepsilon_{kt} $$     $\sigma_{ij},\varepsilon_{kt}$ 为对称张量，所以可以用Voigt记号  $$ \varepsilon&amp;#x3D;\begin{pmatrix} \varepsil"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://yuchenxi2000.github.io/img/og_image.png"><meta property="article:published_time" content="2025-07-20T06:30:44.000Z"><meta property="article:modified_time" content="2026-03-30T12:14:18.517Z"><meta property="article:author" content="Chenxi Yu"><meta property="article:tag" content="物理"><meta property="article:tag" content="弹性力学"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://yuchenxi2000.github.io/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://yuchenxi2000.github.io/2025/07/20/%E5%90%84%E5%90%91%E5%90%8C%E6%80%A7%E6%9D%90%E6%96%99%E6%9C%AC%E6%9E%84%E5%85%B3%E7%B3%BB/"},"headline":"各向同性材料本构关系","image":["https://yuchenxi2000.github.io/img/og_image.png"],"datePublished":"2025-07-20T06:30:44.000Z","dateModified":"2026-03-30T12:14:18.517Z","author":{"@type":"Person","name":"Chenxi Yu"},"publisher":{"@type":"Organization","name":"YCX's Blog","logo":{"@type":"ImageObject","url":"https://yuchenxi2000.github.io/2025/07/20/%E5%90%84%E5%90%91%E5%90%8C%E6%80%A7%E6%9D%90%E6%96%99%E6%9C%AC%E6%9E%84%E5%85%B3%E7%B3%BB/android-chrome-512x512.png"}},"description":"在小形变近似下，应力张量、弹性张量、应变张量有如下线性关系  $$ \\sigma&#x3D;C:\\varepsilon $$     $$ \\sigma_{ij}&#x3D;C_{ijkt}\\varepsilon_{kt} $$     $\\sigma_{ij},\\varepsilon_{kt}$ 为对称张量，所以可以用Voigt记号  $$ \\varepsilon&#x3D;\\begin{pmatrix} \\varepsil"}</script><link rel="canonical" href="https://yuchenxi2000.github.io/2025/07/20/%E5%90%84%E5%90%91%E5%90%8C%E6%80%A7%E6%9D%90%E6%96%99%E6%9C%AC%E6%9E%84%E5%85%B3%E7%B3%BB/"><link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link data-pjax rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link data-pjax rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!--!--><!-- hexo injector head_end start --><script>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>各向同性材料本构关系 - YCX&#039;s Blog</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="YCX&#039;s Blog"><meta name="msapplication-TileImage" content="favicon.ico"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="YCX&#039;s Blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="在小形变近似下，应力张量、弹性张量、应变张量有如下线性关系  $$ \sigma&amp;#x3D;C:\varepsilon \tag{1} $$    $$ \sigma_{ij}&amp;#x3D;C_{ijkt}\varepsilon_{kt} \tag{2} $$    $\sigma_{ij},\varepsilon_{kt}$ 为对称张量，所以可以用Voigt记号  $$ \varepsilon&amp;#x3D;\begin{pmat"><meta property="og:type" content="blog"><meta property="og:title" content="各向同性材料本构关系"><meta property="og:url" content="https://yuchenxi2000.github.io/2025/07/20/%E5%90%84%E5%90%91%E5%90%8C%E6%80%A7%E6%9D%90%E6%96%99%E6%9C%AC%E6%9E%84%E5%85%B3%E7%B3%BB/"><meta property="og:site_name" content="YCX&#039;s Blog"><meta property="og:description" content="在小形变近似下，应力张量、弹性张量、应变张量有如下线性关系  $$ \sigma&amp;#x3D;C:\varepsilon \tag{1} $$    $$ \sigma_{ij}&amp;#x3D;C_{ijkt}\varepsilon_{kt} \tag{2} $$    $\sigma_{ij},\varepsilon_{kt}$ 为对称张量，所以可以用Voigt记号  $$ \varepsilon&amp;#x3D;\begin{pmat"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://yuchenxi2000.github.io/img/og_image.png"><meta property="article:published_time" content="2025-07-20T06:30:44.000Z"><meta property="article:modified_time" content="2026-04-03T14:05:07.803Z"><meta property="article:author" content="Chenxi Yu"><meta property="article:tag" content="物理"><meta property="article:tag" content="弹性力学"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://yuchenxi2000.github.io/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://yuchenxi2000.github.io/2025/07/20/%E5%90%84%E5%90%91%E5%90%8C%E6%80%A7%E6%9D%90%E6%96%99%E6%9C%AC%E6%9E%84%E5%85%B3%E7%B3%BB/"},"headline":"各向同性材料本构关系","image":["https://yuchenxi2000.github.io/img/og_image.png"],"datePublished":"2025-07-20T06:30:44.000Z","dateModified":"2026-04-03T14:05:07.803Z","author":{"@type":"Person","name":"Chenxi Yu"},"publisher":{"@type":"Organization","name":"YCX's Blog","logo":{"@type":"ImageObject","url":"https://yuchenxi2000.github.io/2025/07/20/%E5%90%84%E5%90%91%E5%90%8C%E6%80%A7%E6%9D%90%E6%96%99%E6%9C%AC%E6%9E%84%E5%85%B3%E7%B3%BB/android-chrome-512x512.png"}},"description":"在小形变近似下，应力张量、弹性张量、应变张量有如下线性关系  $$ \\sigma&#x3D;C:\\varepsilon \\tag{1} $$    $$ \\sigma_{ij}&#x3D;C_{ijkt}\\varepsilon_{kt} \\tag{2} $$    $\\sigma_{ij},\\varepsilon_{kt}$ 为对称张量，所以可以用Voigt记号  $$ \\varepsilon&#x3D;\\begin{pmat"}</script><link rel="canonical" href="https://yuchenxi2000.github.io/2025/07/20/%E5%90%84%E5%90%91%E5%90%8C%E6%80%A7%E6%9D%90%E6%96%99%E6%9C%AC%E6%9E%84%E5%85%B3%E7%B3%BB/"><link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link data-pjax rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link data-pjax rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!--!--><!-- hexo injector head_end start --><script>
   (function () {
       function switchTab() {
           if (!location.hash) {
@@ -29,19 +29,19 @@
       switchTab();
       window.addEventListener('hashchange', switchTab, false);
   })();
-  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 8.1.1"></head><body class="is-1-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-12"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2025-07-20T06:30:44.000Z" title="2025/7/20 14:30:44">2025-07-20</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E7%89%A9%E7%90%86/">物理</a></span><span class="level-item">10 分钟读完 (大约1493个字)</span></div></div><h1 class="title is-3 is-size-4-mobile">各向同性材料本构关系</h1><div class="content"><p>在小形变近似下，应力张量、弹性张量、应变张量有如下线性关系</p>
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 8.1.1"></head><body class="is-1-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-12"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2025-07-20T06:30:44.000Z" title="2025/7/20 14:30:44">2025-07-20</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E7%89%A9%E7%90%86/">物理</a></span><span class="level-item">10 分钟读完 (大约1525个字)</span></div></div><h1 class="title is-3 is-size-4-mobile">各向同性材料本构关系</h1><div class="content"><p>在小形变近似下，应力张量、弹性张量、应变张量有如下线性关系</p>
 <div>
 $$
 \sigma=C:\varepsilon
-$$
-</div>
+\tag{1}
+$$</div>
 
 
 <div>
 $$
 \sigma_{ij}=C_{ijkt}\varepsilon_{kt}
-$$
-</div>
+\tag{2}
+$$</div>
 
 
 <p> $\sigma_{ij},\varepsilon_{kt}$ 为对称张量，所以可以用Voigt记号</p>
@@ -55,8 +55,8 @@ $$
 \varepsilon_{zx} \\
 \varepsilon_{xy} \\
 \end{pmatrix}
-$$
-</div>
+\tag{3}
+$$</div>
 
 <p> $\sigma$ 类似， $C$ 的独立分量数从81降到36。</p>
 <p>假设材料各向同性，我们求弹性张量的独立分量数目。方法是取特定的正交变换，对比变换前后的弹性张量中的系数。</p>
@@ -88,8 +88,8 @@ $$
 \varepsilon_{zx} \\
 \varepsilon_{xy} \\
 \end{pmatrix}
-$$
-</div>
+\tag{4}
+$$</div>
 
 <p>假设变换矩阵为 $T$ ，变换下 $C’\rightarrow T^{-1}CT$ ：</p>
 <div>
@@ -111,8 +111,8 @@ C_{30} & C_{31} & C_{32} & C_{33} & -C_{34} & -C_{35} \\
 -C_{40} & -C_{41} & -C_{42} & -C_{43} & C_{44} & C_{45} \\
 -C_{50} & -C_{51} & -C_{52} & -C_{53} & C_{54} & C_{55} \\
 \end{pmatrix}
-$$
-</div>
+\tag{5}
+$$</div>
 
 <p>所以弹性张量一些分量为 $0$ ，有如下形式</p>
 <div>
@@ -125,8 +125,8 @@ C_{20} & C_{21} & C_{22} & 0 & 0 & 0 \\
 0 & 0 & 0 & 0 & C_{44} & 0 \\
 0 & 0 & 0 & 0 & 0 & C_{55} \\
 \end{pmatrix}
-$$
-</div>
+\tag{6}
+$$</div>
 
 <p>交换坐标轴变换：</p>
 <div>
@@ -156,8 +156,8 @@ $$
 \varepsilon_{zx} \\
 \varepsilon_{xy} \\
 \end{pmatrix}
-$$
-</div>
+\tag{7}
+$$</div>
 
 <p>变换下</p>
 <div>
@@ -179,8 +179,8 @@ C_{21} & C_{20} & C_{22} & 0 & 0 & 0 \\
 0 & 0 & 0 & 0 & C_{33} & 0 \\
 0 & 0 & 0 & 0 & 0 & C_{55} \\
 \end{pmatrix}
-$$
-</div>
+\tag{8}
+$$</div>
 
 <p>所以弹性张量一些分量相等，有如下形式</p>
 <div>
@@ -193,8 +193,8 @@ b & b & a & 0 & 0 & 0 \\
 0 & 0 & 0 & 0 & c & 0 \\
 0 & 0 & 0 & 0 & 0 & c \\
 \end{pmatrix}
-$$
-</div>
+\tag{9}
+$$</div>
 
 <p>旋转45度变换</p>
 <p>因为</p>
@@ -207,8 +207,8 @@ y^2 \rightarrow (y-x)^2/2=x^2/2-xy+y^2/2 \\
 yz \rightarrow (y-x)z/\sqrt{2}=-zx/\sqrt{2}+yz/\sqrt{2} \\
 xy \rightarrow (x+y)(y-x)/2=-x^2/2+y^2/2 \\
 \\\end{gathered}
-$$
-</div>
+\tag{10}
+$$</div>
 
 <p>所以变换矩阵为</p>
 <div>
@@ -221,8 +221,8 @@ $$
 0 & 0 & 0 & \frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}} & 0 \\
 -\frac{1}{2} & \frac{1}{2} & 0 & 0 & 0 & 0 \\
 \end{pmatrix}
-$$
-</div>
+\tag{11}
+$$</div>
 
 <p>变换后</p>
 <div>
@@ -244,8 +244,8 @@ b & b & a & 0 & 0 & 0 \\
 0 & 0 & 0 & 0 & c & 0 \\
 0 & 0 & 0 & 0 & 0 & a-b \\
 \end{pmatrix}
-$$
-</div>
+\tag{12}
+$$</div>
 
 <p>所以 $a-b&#x3D;c$ ，弹性张量只有两个独立分量</p>
 <div>
@@ -258,38 +258,38 @@ b & b & a & 0 & 0 & 0 \\
 0 & 0 & 0 & 0 & a-b & 0 \\
 0 & 0 & 0 & 0 & 0 & a-b \\
 \end{pmatrix}
-$$
-</div>
+\tag{13}
+$$</div>
 
 <p>得到本构方程</p>
 <div>
 $$
 \sigma = (a-b) \varepsilon + b\operatorname{Tr} (\varepsilon) I
-$$
-</div>
+\tag{14}
+$$</div>
 
 <p>其中 $I$ 表示单位矩阵。</p>
 <p>本构方程中的常数用第一、第二拉梅常数 $\lambda,G$ 表示，对应的方程为</p>
 <div>
 $$
 \sigma = 2G \varepsilon + \lambda\operatorname{Tr} (\varepsilon) I
-$$
-</div>
+\tag{15}
+$$</div>
 
 <p>逆公式推导（应变用应力表示）：</p>
 <p>先求出应力、应变的迹的关系</p>
 <div>
 $$
 \operatorname{Tr}\sigma=2G\operatorname{Tr}\varepsilon+3\lambda\operatorname{Tr}\varepsilon
-$$
-</div>
+\tag{16}
+$$</div>
 
 
 <div>
 $$
 \operatorname{Tr}\varepsilon=\cfrac{1}{2G+3\lambda}\operatorname{Tr}\sigma
-$$
-</div>
+\tag{17}
+$$</div>
 
 
 <p>然后用应力的迹代换应变的迹，得到</p>
@@ -299,8 +299,8 @@ $$
 2G \varepsilon = \sigma - \lambda\operatorname{Tr} (\varepsilon) I \\
 = \sigma - \cfrac{\lambda}{2G+3\lambda}\operatorname{Tr}(\sigma) I \\
 \\\end{gathered}
-$$
-</div>
+\tag{18}
+$$</div>
 
 
 <div>
@@ -308,8 +308,8 @@ $$
 \begin{gathered}
 \varepsilon = \cfrac{1}{2G}\sigma - \cfrac{\lambda}{2G(2G+3\lambda)}\operatorname{Tr}(\sigma) I \\
 \\\end{gathered}
-$$
-</div>
+\tag{19}
+$$</div>
 
 
 <h2 id="各弹性常数"><a href="#各弹性常数" class="headerlink" title="各弹性常数"></a>各弹性常数</h2><p>弹性模量 $E$ ：正应力比上同一方向正应变</p>
@@ -325,22 +325,22 @@ $$
 \varepsilon_{xx}=\cfrac{G+\lambda}{G(2G+3\lambda)}\sigma_{xx} \\
 \varepsilon_{yy}=-\cfrac{\lambda}{2G(2G+3\lambda)}\sigma_{xx} \\
 \\\end{gathered}
-$$
-</div>
+\tag{20}
+$$</div>
 
 <p>所以</p>
 <div>
 $$
 \cfrac{1}{E}=\cfrac{G+\lambda}{G(2G+3\lambda)}
-$$
-</div>
+\tag{21}
+$$</div>
 
 
 <div>
 $$
 \nu=\cfrac{\lambda}{2(G+\lambda)}
-$$
-</div>
+\tag{22}
+$$</div>
 
 
 <p>由上式知泊松比的取值范围为 $(0,1&#x2F;2)$ 。</p>
@@ -348,46 +348,46 @@ $$
 <div>
 $$
 K=\cfrac{\operatorname{Tr}\sigma}{3\operatorname{Tr}\varepsilon}=\cfrac{2G+3\lambda}{3}
-$$
-</div>
+\tag{23}
+$$</div>
 
 
 <p>因为弹性张量只有2个独立分量，所以这五个常数中任意两个可以确定全部常数。</p>
 <h2 id="波动方程"><a href="#波动方程" class="headerlink" title="波动方程"></a>波动方程</h2><div>
 $$
 f+\nabla \cdot \sigma = \rho \cfrac{\partial^2 u}{\partial t^2}
-$$
-</div>
+\tag{24}
+$$</div>
 
 
 <p>其中位移场和应变关系</p>
 <div>
 $$
 \varepsilon_{ij} = \cfrac{1}{2}\left(\cfrac{\partial u_i}{\partial x_j} + \cfrac{\partial u_j}{\partial x_i}\right)
-$$
-</div>
+\tag{25}
+$$</div>
 
 <p>代入本构方程</p>
 <div>
 $$
 2G \partial_i\varepsilon_{ij} + \lambda\partial_j\operatorname{Tr} (\varepsilon) = \rho \partial_{tt}u_j
-$$
-</div>
+\tag{26}
+$$</div>
 
 
 <div>
 $$
 G\partial_i(\partial_ju_i+\partial_iu_j)+\lambda \partial_j\partial_iu_i=\rho\partial_{tt}u_j
-$$
-</div>
+\tag{27}
+$$</div>
 
 
 <div>
 $$
 G\nabla^2u+(G+\lambda)\nabla(\nabla \cdot u)=\rho\partial_{tt}u
 \label{eq:disp-wave-eq}
-$$
-</div>
+\tag{28}
+$$</div>
 
 
 <p>此即位移场满足的方程。</p>
@@ -398,8 +398,8 @@ $$
 \partial_{tt}(\nabla \cdot u)=\cfrac{2G+\lambda}{\rho}\nabla^2(\nabla \cdot u) \\
 \partial_{tt}(\nabla \times u)=\cfrac{G}{\rho}\nabla^2(\nabla \times u) \\
 \end{cases}
-$$
-</div>
+\tag{29}
+$$</div>
 
 
 <p>证明方法是将 $u$ 分解成无旋和无散两部分 $u_1,u_2$ ，对方程 $\eqref{eq:disp-wave-eq}$ 两边分别求散度、旋度。特征解为</p>
@@ -409,8 +409,8 @@ $$
 u_1=c_1 k_1 e^{\mathrm{i}k_1\cdot x-\mathrm{i}\omega_1 t} \\
 u_2=k_2 \times c_2 e^{\mathrm{i}k_2\cdot x-\mathrm{i}\omega_2 t} \\
 \end{cases}
-$$
-</div>
+\tag{30}
+$$</div>
 
 <p>其中 $c_1,c_2$ 分别为常数和常矢量， $k_1,k_2$ 为波矢， $\omega_1,\omega_2$ 为圆频率。</p>
 <p>由此可知， $u_1$ 和波矢 $k_1$ 平行，为纵波； $u_2$ 与 $k_2$ 垂直，为横波。且两者速度分别为</p>
@@ -420,8 +420,8 @@ $$
 v_1=\sqrt{\cfrac{2G+\lambda}{\rho}} \\
 v_2=\sqrt{\cfrac{G}{\rho}} \\
 \\\end{gathered}
-$$
-</div>
+\tag{31}
+$$</div>
 
 <p>所以纵波速度大于横波。</p>
 <p>地震波的纵波与横波：将地震波近似看做各向同性材料中的弹性波。上面分析告诉我们纵波速度大于横波。地震时破坏最大区域在震源下方，波矢垂直地面向上，所以纵波表现为上下振动，横波表现为左右晃动，且纵波比横波先到达。同时，因为液体气体不能承受剪切应力，所以横波不能在液体或者气体中传播。</p>
@@ -433,12 +433,12 @@ $$
 =\sqrt{2+\cfrac{2\nu}{1-2\nu}} \\
 =\sqrt{\cfrac{2-2\nu}{1-2\nu}}
 \\\end{gathered}
-$$
-</div>
+\tag{32}
+$$</div>
 
 
 <h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><p>[1] <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/645196166">https://zhuanlan.zhihu.com/p/645196166</a></p>
-</div><div class="article-licensing box"><div class="licensing-title"><p>各向同性材料本构关系</p><p><a href="https://yuchenxi2000.github.io/2025/07/20/各向同性材料本构关系/">https://yuchenxi2000.github.io/2025/07/20/各向同性材料本构关系/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>Chenxi Yu</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2025-07-20</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2026-03-30</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/%E7%89%A9%E7%90%86/">物理</a><a class="link-muted mr-2" rel="tag" href="/tags/%E5%BC%B9%E6%80%A7%E5%8A%9B%E5%AD%A6/">弹性力学</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2025/07/25/%E4%B8%AD%E5%9B%BD%E5%89%A9%E4%BD%99%E3%80%81%E6%AC%A7%E6%8B%89%E5%87%BD%E6%95%B0%E5%8F%8A%E4%B8%80%E4%BA%9B%E6%95%B0%E8%AE%BA%E5%92%8C%E7%BE%A4%E8%AE%BA/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">中国剩余、欧拉函数及一些数论和群论</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2025/04/24/%E5%9B%9B%E7%BB%B4%E6%97%8B%E8%BD%AC%E7%9A%84%E5%9B%9B%E5%85%83%E6%95%B0%E8%A1%A8%E7%A4%BA/"><span class="level-item">四维旋转的四元数表示</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><!--!--><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a><p class="is-size-7"><span>&copy; 2026 Chenxi Yu</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="fab fa-creative-commons-nc"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/yuchenxi2000"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
+</div><div class="article-licensing box"><div class="licensing-title"><p>各向同性材料本构关系</p><p><a href="https://yuchenxi2000.github.io/2025/07/20/各向同性材料本构关系/">https://yuchenxi2000.github.io/2025/07/20/各向同性材料本构关系/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>Chenxi Yu</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2025-07-20</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2026-04-03</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/%E7%89%A9%E7%90%86/">物理</a><a class="link-muted mr-2" rel="tag" href="/tags/%E5%BC%B9%E6%80%A7%E5%8A%9B%E5%AD%A6/">弹性力学</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2025/07/25/%E4%B8%AD%E5%9B%BD%E5%89%A9%E4%BD%99%E3%80%81%E6%AC%A7%E6%8B%89%E5%87%BD%E6%95%B0%E5%8F%8A%E4%B8%80%E4%BA%9B%E6%95%B0%E8%AE%BA%E5%92%8C%E7%BE%A4%E8%AE%BA/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">中国剩余、欧拉函数及一些数论和群论</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2025/04/24/%E5%9B%9B%E7%BB%B4%E6%97%8B%E8%BD%AC%E7%9A%84%E5%9B%9B%E5%85%83%E6%95%B0%E8%A1%A8%E7%A4%BA/"><span class="level-item">四维旋转的四元数表示</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><!--!--><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a><p class="is-size-7"><span>&copy; 2026 Chenxi Yu</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="fab fa-creative-commons-nc"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/yuchenxi2000"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
             article: {
                 highlight: {
                     clipboard: true,

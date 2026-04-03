@@ -29,118 +29,279 @@
       switchTab();
       window.addEventListener('hashchange', switchTab, false);
   })();
-  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 8.1.1"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item is-active" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2026-03-28T09:12:57.000Z" title="2026/3/28 17:12:57">2026-03-28</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E5%85%B6%E4%BB%96/">其他</a></span><span class="level-item">1 小时读完 (大约8960个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2026/03/28/PvZ%E9%AB%98%E7%B2%BE%E5%BA%A6%E9%94%AE%E6%8E%A7%E6%A1%86%E6%9E%B6AvZ/">PvZ高精度键控框架AvZ</a></p><div class="content"><h1 id="AvZ键控框架的诞生历史——写在6周年之际"><a href="#AvZ键控框架的诞生历史——写在6周年之际" class="headerlink" title="AvZ键控框架的诞生历史——写在6周年之际"></a>AvZ键控框架的诞生历史——写在6周年之际</h1><p>AvZ，全称Asm vs. Zombies（或Assembly vs. Zombies）是一个PvZ（Plants vs. Zombies，植物大战僵尸）的高精度键控框架。从2020.01.04最初版本发布，2020.03.28第一个正式版发布以来，AvZ逐渐成为事实上的“行业标准”，B站使用键控打生存无尽的视频使用的代码框架大多采用AvZ。在AvZ发布6周年之际，作为AvZ最初的开发者之一，我通过这篇文章回顾开发AvZ的背景以及过程。我不会写得十分详尽，写得详细也没有太多的意义，但会将整个开发历程、思考过程写出来，也包括当时时代背景，时代背景对AvZ诞生具有不可替代的作用。希望AvZ的开发历程能够促进生存无尽理论及相关工具的进一步发展，同时起到记录历史的作用。</p>
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 8.1.1"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item is-active" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2026-04-03T13:08:18.000Z" title="2026/4/3 21:08:18">2026-04-03</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E5%85%B6%E4%BB%96/">其他</a></span><span class="level-item">10 分钟读完 (大约1516个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2026/04/03/%E5%A6%82%E4%BD%95%E7%A7%91%E5%AD%A6%E5%9C%B0%E5%9C%A8hexo%E9%87%8C%E5%86%99%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F/">如何科学地在hexo里写数学公式</a></p><div class="content"><p>本站使用hexo构建，主题是icarus，文章格式是markdown，生成网页时会转成html。</p>
+<p>但坑爹的在于markdown没有一个统一的数学公式标准，导致不同markdown渲染器实现不一致，出现在一个编辑器里合法的写法在另一个编辑器无法正确渲染。包括hexo将markdown渲染成html过程，也会出奇奇怪怪的bug。</p>
+<p>那么如何优雅地解决这个问题呢？我采用的是本地只保留一份原稿，hexo所需markdown、发布到知乎所用的文章全部由原稿生成。生成的方式是针对每一个发布平台写一个转换脚本，处理每个平台的渲染错误。脚本就不在这里发了，因为每个平台都不一样。这里主要列举我曾遇到的渲染错误，供大家参考，因为一些问题是通用的。</p>
+<p>还有，我本地使用的Typora软件进行写作，而Typora的语法应该是我接触过的markdown软件里最宽松的，所以如果大家使用比较严格的方式写数学公式，可能不会遇到所有我遇到过的问题。</p>
+<blockquote>
+<p>太难弄了，现在说不定还有bug……</p>
+</blockquote>
+<h2 id="数学公式提取算法"><a href="#数学公式提取算法" class="headerlink" title="数学公式提取算法"></a>数学公式提取算法</h2><p>首先，我们处理数学公式就需要把输入文件里的数学公式全部提取出来。我这里只考虑\$和\$\$包裹的公式，分别对应inline math和display math两种类型。使用的算法如下：</p>
+<ol>
+<li>将文件全部读取进来，存在一个字符串里。新建一个变量表示数学模式，初始设置为文本（非数学模式）</li>
+<li>从头遍历字符串每一个字符</li>
+<li>如果遇到\，说明后面一个字符被转义，我们跳过这个字符，回到第2步。如果遇到\$，通过判断后一个字符得知数学公式类型，然后根据现在的数学模式来决定应该如何处理。如果目前数学模式是文本，说明前面的字符全部是文本，直接拷贝即可。如果目前数学模式是inline math或者display math，说明前面的字符（直到上一个\$）都是数学公式环境，处理这个公式，根据是inline还是display采用不同处理方法。处理完毕后，重新设置数学模式变量，如果当前是文本那么设置成数学，反之如果当前是数学那么设置成文本。</li>
+<li>判断是否处理完所有字符，如果处理完跳出循环，结束程序；否则回到第2步。</li>
+</ol>
+<h2 id="命令替换"><a href="#命令替换" class="headerlink" title="命令替换"></a>命令替换</h2><p>因为markdown没有统一的数学公式标准，所以一些命令会解析出错。下面列举一些需要转换的命令。</p>
+<p>首先是单个字符的替换。一些字符会被误认为是markdown语法，因此需要替换，如下表：</p>
+<table>
+<thead>
+<tr>
+<th>需要替换的字符</th>
+<th>替换后</th>
+<th>替换原因</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>_</td>
+<td>\_</td>
+<td>markdown语法冲突</td>
+</tr>
+<tr>
+<td>&lt;</td>
+<td>\lt</td>
+<td>html标签语法冲突</td>
+</tr>
+<tr>
+<td>&gt;</td>
+<td>\gt</td>
+<td>html标签语法冲突</td>
+</tr>
+<tr>
+<td>*</td>
+<td>\ast</td>
+<td>markdown语法冲突</td>
+</tr>
+<tr>
+<td>|</td>
+<td>\vert</td>
+<td>markdown表格语法冲突</td>
+</tr>
+<tr>
+<td>[</td>
+<td>\lbrack</td>
+<td>部分 $\LaTeX$ 渲染器的问题</td>
+</tr>
+<tr>
+<td>]</td>
+<td>\rbrack</td>
+<td>部分 $\LaTeX$ 渲染器的问题</td>
+</tr>
+</tbody></table>
+<p>下面详细解释一下为什么中括号需要替换，我们看下面这个 $\LaTeX$ 代码</p>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;aligned&#125;</span><br><span class="line">	[a] = 1 <span class="keyword">\\</span></span><br><span class="line">	[b] = 2</span><br><span class="line"><span class="keyword">\end</span>&#123;aligned&#125;</span><br></pre></td></tr></table></figure>
+
+<p>如果你使用的是Typora，或者任意使用MathJax渲染数学公式的软件，你会发现第一个[a]消失不见了。</p>
+<p>这不是一个bug，只能说是feature。中括号在 $\LaTeX$ 里是某些命令的参数，取决于渲染器，一些渲染器会将上面代码里的第一个中括号认为是aligned环境的参数，但一些不会。<del>由于很少用到中括号参数，因此我直接一股脑儿全替换了</del>。出问题了，有个常用的 $n$ 次根号\sqrt[n]{a}……还是简单判断一下吧……</p>
+<p>还有markdown表格语法冲突，如果你在表格内写公式，公式里有|，那么一些渲染器会将其误认为是表格边界。</p>
+<h2 id="多行公式处理"><a href="#多行公式处理" class="headerlink" title="多行公式处理"></a>多行公式处理</h2><p>Typora中，公式可以直接用\\换行，不需要包裹在多行环境里。但是对于我这个博客而言（hexo+icarus），必须多行环境才能正确换行，解决方案也很简单，发现没有放置在多行环境里的公式，直接用gathered环境包裹即可，gathered环境是最接近Typora里多行公式外观的。</p>
+<h2 id="公式编号、引用"><a href="#公式编号、引用" class="headerlink" title="公式编号、引用"></a>公式编号、引用</h2><p>如果我们用\eqref对有\label的公式进行引用，那么必须加上\tag，否则引用就是问号(???)。Typora里面有个功能是自动编号，平常写公式习惯了，但遇到hexo没自动编号就歇菜了，于是转换脚本里加了自动编号的功能。</p>
+<blockquote>
+<p>看来被Typora惯坏了</p>
+</blockquote>
+<h2 id="公式前后空格或换行"><a href="#公式前后空格或换行" class="headerlink" title="公式前后空格或换行"></a>公式前后空格或换行</h2><p>如果公式的$前后有中文，一些渲染器不能正确识别数学公式，办法是在前后加空格（对于inline math），或者加换行（对于display math）。</p>
+<h2 id="图片、链接处理"><a href="#图片、链接处理" class="headerlink" title="图片、链接处理"></a>图片、链接处理</h2><p>hexo里推荐的图片、（指向自己文章的）链接的写法如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#123;% asset_img fig.png %&#125;</span><br><span class="line">&#123;% post_link 自己的另一篇文章 %&#125;</span><br></pre></td></tr></table></figure>
+
+<p>markdown有自己的图片、链接语法，但是这里不推荐使用，因为可能出错。我采用的方法是全部转换成hexo的格式，大家可以根据自己情况进行选择。</p>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2026-04-03T09:08:02.000Z" title="2026/4/3 17:08:02">2026-04-03</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E7%89%A9%E7%90%86/">物理</a></span><span class="level-item">7 分钟读完 (大约999个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2026/04/03/%E8%A7%84%E8%8C%83%E5%9C%BA%E8%AE%BA%E4%B8%8E%E5%BE%AE%E5%88%86%E5%87%A0%E4%BD%95/">规范场论与微分几何</a></p><div class="content"><blockquote>
+<p>本文使用人工智能大模型（LLM）辅助写作</p>
+<p>本人最近看微分几何相关书籍，发现规范场论一些概念在微分几何中有对应关系，于是便写此文，供自己以后参考</p>
+</blockquote>
+<p>在量子力学中有最小耦合原理，如果我们需要在薛定谔方程中引入电磁场，只需将导数替换为协变导数：</p>
+<div>
+$$
+\mathrm{i}\hbar D_\mu = \mathrm{i}\hbar \partial_\mu -qA_\mu
+\tag{1}
+$$</div>
+
+
+<p>为何这样就能引入电磁场作用呢？因为电磁场是规范场，来源于作用量满足局域规范不变性。</p>
+<p>物理观测结果只和波函数的振幅有关，因此波函数在整体相位变换 $U(1)$ 下，应当描述相同的物理。表现在拉格朗日量的整体相位不变性：</p>
+<p>波函数变换下：</p>
+<div>
+$$
+\psi' = \exp(\mathrm{i}\alpha) \psi
+\tag{2}
+$$</div>
+
+<p>作用量不变：</p>
+<div>
+$$
+\mathcal{L}'=\overline{\psi}(x) (\mathrm{i}\gamma^\mu \partial_\mu - m) \psi(x)
+\tag{3}
+$$</div>
+
+<p>然而，带电粒子（如电子）满足更强的对称性。电子波函数满足局域相位变换 $U(1)$ 不变性</p>
+<div>
+$$
+\psi'(x)=\exp[\mathrm{i}\lambda(x)] \psi(x)
+\tag{4}
+$$</div>
+
+<p>为保证拉格朗日量不变，我们必须引入联络 $A_\mu$ ，将导数替换为协变导数：</p>
+<div>
+$$
+D_\mu = \partial_\mu - \mathrm{i}eA_\mu
+\tag{5}
+$$</div>
+
+
+<p>该式与最小耦合得出的协变导数相同，只不过我们带入了电子电荷 $q&#x3D;-e$ 。</p>
+<p>我们计算变换后的波函数的协变导数：</p>
+<div>
+$$
+D_\mu \psi'(x) = \exp[\mathrm{i}\lambda(x)] \partial_\mu \psi(x) - \mathrm{i}e A_\mu \exp[\mathrm{i}\lambda(x)] \psi(x) + \mathrm{i} \partial_\mu \lambda(x) \exp[\mathrm{i}\lambda(x)] \psi(x)
+\tag{6}
+$$</div>
+
+<p>为使其满足和波函数同样的变换规律（从而使得拉格朗日量不变），联络必须满足规范不变性：</p>
+<div>
+$$
+A_\mu'(x) = A_\mu(x) - \cfrac{1}{e}\partial_\mu \lambda(x)
+\tag{7}
+$$</div>
+
+<p>在 $U(1)$ 规范场（电磁场）中，联络即电磁势，可参考我的另一篇文章<a href="/2026/02/16/Reissner-Nordstr%C3%B6m%E9%BB%91%E6%B4%9E%E8%A7%A3/" title="Reissner-Nordström黑洞解">Reissner-Nordström黑洞解</a>，其中的第一节关于四维时空里电磁场理论部分。</p>
+<p>类比黎曼几何，我们可以通过协变导数的对易子求得曲率张量。但黎曼几何中张量是切丛上黎曼联络的曲率，是一个 $(1,3)$ 张量；规范场的曲率是主丛联络的曲率，纤维是李群，因此对应的曲率是一个 $(0,2)$ 反对称二阶张量。下面我们求规范场的曲率</p>
+<div>
+$$
+\begin{aligned}
+D_\mu D_\nu \phi 
+&=(\partial_\mu - \mathrm{i}eA_\mu)(\partial_\nu - \mathrm{i}eA_\nu)\phi \\
+&= \partial_\mu \partial_\nu \phi 
+- \mathrm{i}eA_\mu \partial_\nu \phi 
+- \mathrm{i}e A_\nu \partial_\mu \phi
+- e^2 A_\mu A_\nu \phi
+- \mathrm{i}e (\partial_\mu A_\nu) \phi 
+\end{aligned}
+\tag{8}
+$$</div>
+
+
+<p>其中前三项关于指标 $\mu,\nu$ 对称；第四项在阿贝尔群情形对称，在非阿贝尔群时不对称；最后一项关于指标不对称。由此求得曲率</p>
+<div>
+$$
+(D_\mu D_\nu - D_\nu D_\mu) \phi
+= -\mathrm{i} e (\partial_\mu A_\nu - \partial_\nu A_\mu)\phi
+\tag{9}
+$$</div>
+
+
+<p>由曲率可以定义场强</p>
+<div>
+$$
+\begin{aligned}
+F_{\mu\nu} &= \cfrac{1}{-\mathrm{i}e} (D_\mu D_\nu - D_\nu D_\mu) \\
+&= \partial_\mu A_\nu - \partial_\nu A_\mu
+\end{aligned}
+\tag{10}
+$$</div>
+
+<p>因为曲率是规范不变量，因此可以用曲率来构造电磁场的拉格朗日量。总拉格朗日量为（包含物质与电磁场）</p>
+<div>
+$$
+\mathcal{L} = \overline{\psi} (\mathrm{i}\gamma^\mu \partial_\mu - m) \psi - \cfrac{1}{4} F_{\mu\nu} F^{\mu\nu}
+\tag{11}
+$$</div>
+
+
+<h2 id="非阿贝尔情形"><a href="#非阿贝尔情形" class="headerlink" title="非阿贝尔情形"></a>非阿贝尔情形</h2><p>如果规范场的李群是非阿贝尔群，上节的推导类似，只不过场强的表达式有变化。</p>
+<p>协变导数为：</p>
+<div>
+$$
+D_\mu = \partial_\mu + \mathrm{i} g A_\mu
+\tag{12}
+$$</div>
+
+<p>由此得出的场强：</p>
+<div>
+$$
+F_{\mu\nu} 
+= \partial_\mu A_\nu - \partial_\nu A_\mu + \mathrm{i} g [A_\mu,A_\nu]
+\tag{13}
+$$</div>
+
+<p>最后一项就是李群不可交换的表现。</p>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2026-04-03T05:30:58.000Z" title="2026/4/3 13:30:58">2026-04-03</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E6%95%B0%E5%AD%A6/">数学</a></span><span class="level-item">5 分钟读完 (大约737个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2026/04/03/%E8%B4%9D%E7%89%B9%E6%9C%97%E6%82%96%E8%AE%BA%E4%B8%8E%E7%90%83%E9%9D%A2%E5%9D%87%E5%8C%80%E5%88%86%E5%B8%83/">贝特朗悖论与球面均匀分布</a></p><div class="content"><h2 id="贝特朗悖论"><a href="#贝特朗悖论" class="headerlink" title="贝特朗悖论"></a>贝特朗悖论</h2><p>B站上看到一个<a target="_blank" rel="noopener" href="https://bilibili.com/video/BV1KiXaBYEv1">视频</a>，讲贝特朗悖论。贝特朗悖论描述如下：在圆内任意画一条弦，求弦长超过内接正三角形边长的概率。然而这个问题能求出多种概率，至少有三种：</p>
+<ol>
+<li>假设第一个点固定不动，我们在圆周上随机画出第二个点，那么弦长超过内接正三角形边长的概率就是 $1&#x2F;3$ 。</li>
+<li>先选择一条固定的直径，随机在其上取一点，过该点画直径的垂线与圆相交得到一条弦，由此求出概率为 $1&#x2F;2$ 。</li>
+<li>先画一个半径只有给定圆一半的小圆，我们发现弦的中点位于小圆内部时，满足弦长超过内接正三角形边长的要求。再根据小圆面积是大圆的 $1&#x2F;4$ ，我们得到需要求的概率。</li>
+</ol>
+<p>悖论发生的原因是几何概型要求样本空间均匀分布，但贝特朗悖论描述不清晰，未明确说明如何随机画这条弦。比如我们认为第一个方式画弦是随机画弦，那么第二种方式画出的弦的分布就不是均匀分布。</p>
+<h2 id="球面均匀分布"><a href="#球面均匀分布" class="headerlink" title="球面均匀分布"></a>球面均匀分布</h2><p>如何写一个程序实现球面上随机取一点？这个问题有很多应用场景，比如实现一个随机方向的单位矢量，随机方向自旋等。根据上面的思想，我们定义的“球面上随机”应该指所取的点在球面上均匀分布。</p>
+<p>首先，我们不能通过随机取其中两个坐标，然后算第三个坐标的方法，因为不能保证均匀分布。如何得到均匀分布呢？我们利用球面的面积元：</p>
+<div>
+$$
+\begin{gathered}
+\mathrm{d} S = \sin \theta \mathrm{d}\theta \mathrm{d} \phi \\
+= \mathrm{d}(1 - \cos\theta) \mathrm{d} \phi \\
+\\\end{gathered}
+\tag{1}
+$$</div>
+
+<p>如果面积元有 $\mathrm{d}\theta \mathrm{d} \phi$ 的形式，那么我们直接在长方形 $(\theta,\phi)\in [-\pi,\pi) \times [0,2\pi)$ 上随机取点即可，其中长方形上随机取点的方法是对两个坐标分别随机取点。但是前面有一个 $\sin\theta$ 因子，应该如何处理？</p>
+<p>方法是使用坐标变换：</p>
+<div>
+$$
+\begin{cases}
+u = 1 - \cos \theta \\
+v = \phi
+\end{cases}
+\tag{2}
+$$</div>
+
+<p>变换后，面积元化为</p>
+<div>
+$$
+\mathrm{d}S = \mathrm{d}u \mathrm{d}v
+\tag{3}
+$$</div>
+
+<p>于是我们在长方形 $(u,v)\in [0,2) \times [0,2\pi)$ 上随机取点，然后变换回 $(\theta,\phi)$ ，最后根据下式</p>
+<div>
+$$
+\begin{cases}
+x = \sin\theta \cos\phi \\
+y = \sin\theta \sin\phi \\
+z = \cos\theta \\
+\end{cases}
+\tag{4}
+$$</div>
+
+<p>得到球面上随机的点。</p>
+<blockquote>
+<p>我们从变换后的面积元也可以直接看出单位球面的面积为 $4\pi$ 。</p>
+</blockquote>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2026-03-28T09:12:57.000Z" title="2026/3/28 17:12:57">2026-03-28</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E5%85%B6%E4%BB%96/">其他</a></span><span class="level-item">1 小时读完 (大约8960个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2026/03/28/PvZ%E9%AB%98%E7%B2%BE%E5%BA%A6%E9%94%AE%E6%8E%A7%E6%A1%86%E6%9E%B6AvZ/">PvZ高精度键控框架AvZ</a></p><div class="content"><h1 id="AvZ键控框架的诞生历史——写在6周年之际"><a href="#AvZ键控框架的诞生历史——写在6周年之际" class="headerlink" title="AvZ键控框架的诞生历史——写在6周年之际"></a>AvZ键控框架的诞生历史——写在6周年之际</h1><p>AvZ，全称Asm vs. Zombies（或Assembly vs. Zombies）是一个PvZ（Plants vs. Zombies，植物大战僵尸）的高精度键控框架。从2020.01.04最初版本发布，2020.03.28第一个正式版发布以来，AvZ逐渐成为事实上的“行业标准”，B站使用键控打生存无尽的视频使用的代码框架大多采用AvZ。在AvZ发布6周年之际，作为AvZ最初的开发者之一，我通过这篇文章回顾开发AvZ的背景以及过程。我不会写得十分详尽，写得详细也没有太多的意义，但会将整个开发历程、思考过程写出来，也包括当时时代背景，时代背景对AvZ诞生具有不可替代的作用。希望AvZ的开发历程能够促进生存无尽理论及相关工具的进一步发展，同时起到记录历史的作用。</p>
 <h2 id="传统键控框架"><a href="#传统键控框架" class="headerlink" title="传统键控框架"></a>传统键控框架</h2><p>“键控”这个专有名词因历史原因被保留下来，原本指使用按键精灵模拟游戏内操作，实现高于手动操作精度的操作 <a target="_blank" rel="noopener" href="https://pvz.tools/scripts/" title="lmintlcx的PvZ站">^1</a> 。这个名词的含义更接近工具辅助游戏，指不改变游戏内容情况下，用代码工具模拟手动操作，以较高精度完成游戏。英文里接近这个含义的名词是TAS（tool-assisted speedrun），但PvZ里键控更强调的是操作精度而不是以最快速度完成游戏，因为键控主要运用在PvZ的生存无尽模式，目的是实现高精度操作玉米加农炮、自动放置寒冰菇&#x2F;毁灭菇等需要精确时机的操作。</p>
 <p>从2009年游戏发售到2018年，键控操作主要由按键精灵实现，因此被称作“键控” <a target="_blank" rel="noopener" href="https://pvz.tools/scripts/" title="lmintlcx的PvZ站">^1</a> 。然而按键精灵脚本语言是Q语言，使得高级功能的实现较为困难，比如通过读取游戏内存预测下一波僵尸刷新时机，而且按键精灵的商业软件属性不利于键控社区的长久发展。</p>
 <p>PvZ作为一款休闲游戏，生存无尽模式是最难关卡之一。“生存”，指该关卡由多个子关卡构成，子关卡之间可以重新选择植物。“无尽”，顾名思义指关卡数量无限，在不考虑计算机整数上限的情况下可以永远玩下去。每一个子关卡都有20波僵尸进攻，每波之间的时间并不固定，由该波总血量、目前剩余僵尸血量决定，具体可参考任一无尽教学。由于僵尸血量是游戏内部变量，难以通过游戏画面直接看出，因此键控框架亟需读取游戏进程内存的能力来精确控制不同波的操作时机，除了一些阵型，其运阵方式使得每波之间的时间固定，比如泳池无尽的经典十二炮阵型。此外，若要实现自动修补南瓜头等操作，也需要读取其他内部变量。而读取游戏内部变量需要先知道游戏的各种数据以什么方式存储在内存中，或者游戏数据的数据结构，以及它们在内存中的位置。想知道这些信息最直接的方法是逆向。PvZ的逆向并不困难，事实上游戏修改器（外挂）在发售之后很快就被开发出来。本质上，修改器就是在游戏进程内存指定位置写入数据，或者注入代码，实现对游戏内容的修改。因此，修改器和键控框架都需要先对游戏进行逆向，知道游戏数据存储位置。知道了游戏数据存储位置后，就可以通过调用系统API对游戏内存进行读操作，达到预测僵尸刷新时间、读坚果类植物生命值、读玉米加农炮装弹冷却时间等目的。当然，读写其他进程内存需要相应权限，需要先进行提权。</p>
-<p>第一个比较系统性的、出名的键控框架大概是pyvz，由lmintlcx开发 <a target="_blank" rel="noopener" href="https://pvz.tools/scripts/" title="lmintlcx的PvZ站">^1</a> 。关于是否第一个这点我不是很确定，如有错欢迎指出。蟒蛇大战僵尸，Python vs. Zombies，或者简称pyvz，是一个用 Python 语言写成的用于植物大战僵尸的 TAS 框架，它实现了大多数键控需要的功能。相比起传统按键精灵键控方法，它最重要的改进是一整套标准的API，使得使用者只需列出每一波需要的操作，不用关心底层各种细节。此外，通过读内存数据实现刷新预判，自动收集等功能。Python语言的使用也进一步降低了门槛。pyvz脚本是基于时间顺序的脚本，每一条命令按顺序执行，比如 <a target="_blank" rel="noopener" href="https://pvz.tools/scripts/" title="lmintlcx的PvZ站">^1</a> 中给出的例子：</p></div><a class="article-more button is-small is-size-7" href="/2026/03/28/PvZ%E9%AB%98%E7%B2%BE%E5%BA%A6%E9%94%AE%E6%8E%A7%E6%A1%86%E6%9E%B6AvZ/#more">阅读更多</a></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2026-03-23T07:44:37.000Z" title="2026/3/23 15:44:37">2026-03-23</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E6%95%B0%E5%AD%A6/">数学</a></span><span class="level-item">2 分钟读完 (大约264个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2026/03/23/%E7%94%9F%E6%97%A5%E9%97%AE%E9%A2%98/">生日问题</a></p><div class="content"><p>一个很经典的数学问题：一个班上共n个人，存在两个生日相同的人的概率是多少</p>
+<p>第一个比较系统性的、出名的键控框架大概是pyvz，由lmintlcx开发 <a target="_blank" rel="noopener" href="https://pvz.tools/scripts/" title="lmintlcx的PvZ站">^1</a> 。关于是否第一个这点我不是很确定，如有错欢迎指出。蟒蛇大战僵尸，Python vs. Zombies，或者简称pyvz，是一个用 Python 语言写成的用于植物大战僵尸的 TAS 框架，它实现了大多数键控需要的功能。相比起传统按键精灵键控方法，它最重要的改进是一整套标准的API，使得使用者只需列出每一波需要的操作，不用关心底层各种细节。此外，通过读内存数据实现刷新预判，自动收集等功能。Python语言的使用也进一步降低了门槛。pyvz脚本是基于时间顺序的脚本，每一条命令按顺序执行，比如 <a target="_blank" rel="noopener" href="https://pvz.tools/scripts/" title="lmintlcx的PvZ站">^1</a> 中给出的例子：</p></div><a class="article-more button is-small is-size-7" href="/2026/03/28/PvZ%E9%AB%98%E7%B2%BE%E5%BA%A6%E9%94%AE%E6%8E%A7%E6%A1%86%E6%9E%B6AvZ/#more">阅读更多</a></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2026-03-23T07:44:37.000Z" title="2026/3/23 15:44:37">2026-03-23</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E6%95%B0%E5%AD%A6/">数学</a></span><span class="level-item">2 分钟读完 (大约268个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2026/03/23/%E7%94%9F%E6%97%A5%E9%97%AE%E9%A2%98/">生日问题</a></p><div class="content"><p>一个很经典的数学问题：一个班上共n个人，存在两个生日相同的人的概率是多少</p>
 <p>我们求简化版本，不考虑闰年情形，假设一年365天。我们先求反面的概率，所有人生日都不同的概率。每个人生日任选的情形有 $365^n$ 种，所有人生日都不同的情况有 $A_{365}^n&#x3D;\cfrac{365!}{(365-n)!}<br>$ </p>
 <div>
 $$
 P'=\cfrac{365!}{(365-n)!365^n}
-$$
-</div>
+\tag{1}
+$$</div>
 
 <p>所以存在两个生日相同的人的概率是</p>
 <div>
 $$
 P=1-P'=1 - \cfrac{365!}{(365-n)!365^n}
-$$
-</div>
+\tag{2}
+$$</div>
 
 <p>当至少23个人时，这个概率就已经大于0.5；至少41人时，大于0.9。</p>
 <p>下面是代码</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">生日问题，班上n个人，求存在两人生日相同概率</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"></span><br><span class="line">days = <span class="number">365</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">prod</span>(<span class="params">m, n</span>):</span><br><span class="line">    <span class="comment"># m x (m-1) x ... x (n+1)</span></span><br><span class="line">    p = <span class="number">1</span></span><br><span class="line">    x = m</span><br><span class="line">    <span class="keyword">while</span> x &gt; n:</span><br><span class="line">        p *= x</span><br><span class="line">        x -= <span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> p</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">prob</span>(<span class="params">n</span>):</span><br><span class="line">    <span class="keyword">return</span> <span class="number">1.0</span> - prod(days, days - n) / <span class="built_in">pow</span>(days, n)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">persons = []</span><br><span class="line">probs = []</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, days + <span class="number">1</span>):</span><br><span class="line">    persons.append(i)</span><br><span class="line">    probs.append(prob(i))</span><br><span class="line"></span><br><span class="line">plt.plot(persons, probs)</span><br><span class="line">plt.axhline(<span class="number">1</span>, c=<span class="string">&#x27;r&#x27;</span>)</span><br><span class="line">plt.xlabel(<span class="string">&#x27;Number of students&#x27;</span>)</span><br><span class="line">plt.ylabel(<span class="string">&#x27;Probability&#x27;</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
 
 <p>以及绘图</p>
-<p><img src="/2026/03/23/%E7%94%9F%E6%97%A5%E9%97%AE%E9%A2%98/fig.png"></p>
-</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2026-03-19T06:04:32.000Z" title="2026/3/19 14:04:32">2026-03-19</time>发表</span><span class="level-item">26 分钟读完 (大约3911个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/about/">关于我</a></p><div class="content"><p>本站的大多数文章是个人学习过程中的数学物理相关笔记，也会同步更新一下知乎，毕竟看的人多一些，不过太水的在那里不会更。</p>
-<p>专业物理相关，本人平时也喜欢研究数学物理，包括和学业关系不大的领域。因此从我的笔记并不容易判断我到底是哪个专业的（答案最后揭晓！）对数学物理的热爱是从初中开始的，当时有位很好的数学老师奠定了我的数学基础。我学到初二时，觉得课堂上的数学太过简单无聊。一次在书店看到同济大学的高等数学，绿色封面的那本，然后就买了下来，课程学完了就啃这本书。得感谢我父母的开明，他们看我在看高数也不问我会不会，我要买就给买了。后来啃着啃着竟也懂了大半。初三时候好奇相对论，学校图书馆也新添了不少书。现在仍记得初三时在图书馆看爱因斯坦奇迹年这本书（具体书名忘了…），讲1905年爱因斯坦发的5篇跨时代的论文。一篇论分子大小，一篇讲布朗运动（记得这两篇有一堆偏微分方程，看不懂），两篇狭义相对论（一篇讲时空变换，一篇质能关系），一篇光电效应。“越级”学了大学课程以后，看初高中数学物理就有种“降维打击”的感觉。一是或多或少能带着基础一块儿提升，二是出题老师经常喜欢把大学的知识点改编一下当初高中题目来出…比如说，高中入学分班考，最后一个填空竟然是偏导数改编而来；高考物理选考的一道光学题是大学物理教材里改编而来…然后是物理竞赛，高中不能教微积分，因此搞了个不伦不类的“微元法”，说白了就是微积分。然后告诉大家一个秘密，物理竞赛几乎所有的力学题都能用分析力学暴力求解！至于我怎么发现的，我的高中其实不是很重视竞赛，准备竞赛也只是竞赛前几周学校让几个水平高的集中到一个教室“自学”（是不是有些无语），所以没系统学过就去了。然后恰好之前看过分析力学，考试的时候不就用上了，发现这些题基本都能用拉格朗日力学列微分方程硬算。所以说，学这么些不伦不类的“微元法”有什么意义吗？反正最后也是抛开不用，学正儿八经的微积分。最后结果，省二，据物理老师说差几分进省一，能进集训队。可能大家会疑惑你这样学了大学学什么？一方面在学编程，因为初高中没这个基础，电脑只拿来玩Minecraft（那时还是1.11版本）。另一方面，在学更高级的玩意儿，具体什么很难说，因为啥都有，这儿学一点那儿学一点。甚至大四去听物院的量子场论，不过听不懂（现在也不太懂，只知道理论框架是啥，不过问啥啥不懂）。发现我可能对广义相对论更熟悉一点。其余的主要量子力学相关，以及延伸出的固体物理、半导体物理、铁电铁磁等等。</p>
-<p>其他爱好是弹钢琴，本人从小学三年级开始练琴，学了两年半（真·两年半练习生），考了业余十级，然后就因为上初中不再跟钢琴老师学琴，但还是坚持自我练习直到今天。业余十级是跳级考出来的，先考六级然后第二年考十级，当时允许跳级，现在不知道什么情况。喜欢的作曲家是巴赫、亨德尔（这位也有键盘作品！）、莫扎特、肖邦。初中的时候喜欢肖邦，可能因为初中是民办，军事化管理，加住校，只有双休日回家练琴，那时被军事化管理着比较压抑，需要释放情绪，而肖邦的作品大多情感变化丰富，比如第二、第三奏鸣曲，四首谐谑曲，四首叙事曲。高三下快高考的时候突然迷上巴赫，估计因为学得有些茫然了，这种比较佛系适合自闭时听的正合我意？大学时候练哥德堡变奏曲，愣是把aria加30个变奏练完了，还有6首法国组曲。现在在练partita和英国组曲。还有亨德尔，也是最近才发现他的八大组曲，加上零散的一些组曲。亨德尔的风格更自由，不像巴赫这么严谨，听起来别有一番风味。现在的梦想也加了一条，希望有一天能买一台羽管键琴。</p>
-<p>最后揭晓答案：本人是微电子专业，或者可以认为是集成电路相关。不过实际做的和材料、凝聚态物理更接近。不过什么专业已经不重要了，毕竟理科的底层或多或少互通，特别是数学物理相关的，谁知道现在种下的种子，会在未来的何时生根发芽呢。</p>
-<h1 id="个人项目"><a href="#个人项目" class="headerlink" title="个人项目"></a>个人项目</h1><p>接下来介绍一下个人项目，其中大多开源至GitHub账号。</p></div><a class="article-more button is-small is-size-7" href="/about/#more">阅读更多</a></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2026-03-06T03:20:33.000Z" title="2026/3/6 11:20:33">2026-03-06</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E7%89%A9%E7%90%86/">物理</a></span><span class="level-item">7 分钟读完 (大约1118个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2026/03/06/%E8%87%AA%E6%97%8B%E8%A7%92%E5%8A%A8%E9%87%8F%E8%80%A6%E5%90%88/">自旋角动量耦合</a></p><div class="content"><p>曾谨言《量子力学I》中给出总角动量本征矢用角动量、自旋本征矢表示，使用球谐函数的性质。本文直接从角动量算符性质出发，不借助角动量本征矢具体表示（比如坐标表象下的球谐函数表示），从另一个角度给出了相同的结果。</p>
-<p>非相对论量子力学的中心势场问题中，可以证明 $L^2,L_z$ 与哈密顿量对易，因此本征态可以选择为角动量 $l$ 、角动量z分量 $m$ 的共同本征态，并且关于自旋 $s$ 对易。我们记本征波函数为 $\ket{l,m,s}$ 。</p>
-<p>然而当我们考虑相对论效应时，自旋轨道耦合项使得 $L^2,L_z$ 不再与哈密顿量对易。但是可以证明总角动量及其z分量 $J^2,J_z$ 与哈密顿量对易。以下讨论为表达式简洁，我们设 $\hbar&#x3D;1$ 。</p>
-<p>自旋轨道耦合项：</p>
-<div>
-$$
-H=\xi(r)S \cdot L
-$$
-</div>
+<img src="/2026/03/23/%E7%94%9F%E6%97%A5%E9%97%AE%E9%A2%98/fig.png" class="">
 
-<p>计算对易子 $\lbrack H,J_z\rbrack $ ：</p>
-<div>
-$$
-\begin{gathered}
-\lbrack H,L_z\rbrack  = \xi(r) (S \cdot L) L_z - \xi(r) L_z(S \cdot L) \\
-=\mathrm{i}\hbar \xi(r) (S_yL_x - S_xL_y) \\
-\lbrack H,S_z\rbrack  = \mathrm{i}\hbar\xi(r)(S_xL_y-S_yL_x) \\
-\lbrack H,J_z\rbrack =0
-\\\end{gathered}
-$$
-</div>
-
-<p>计算对易子 $\lbrack H,J^2\rbrack $ 。根据</p>
-<div>
-$$
-\lbrack H,J_z^2\rbrack =\lbrack H,J_z\rbrack J_z+J_z\lbrack H,J_z\rbrack =0
-$$
-</div>
-
-<p>由对称性，x，y方向也成立，因此 $\lbrack H,J^2\rbrack &#x3D;0$ 。</p>
-<p>计算对易子 $\lbrack H,L^2\rbrack $ 。这个可以由自旋轨道耦合项与 $L^2$ 对易得出，因为 $L^2$ 与三个角动量分量对易，并且角动量与自旋属于不同自由度，彼此对易。</p>
-<p>然后根据总角动量 $J$ 也属于角动量，得到 $\lbrack J^2,J_z\rbrack &#x3D;0$ 。易证 $\lbrack L^2,J^2\rbrack &#x3D;0,\lbrack L^2,J_z\rbrack &#x3D;0$ ，因此我们可以选取 $L^2,J^2,J_z$ 的共同本征态 $\ket{l,j,m_j}$ 。</p>
-<p>总角动量与角动量、自旋存在代数关系， $\ket{l,j,m_j}$ 与 $\ket{l,m,s}$ 可以互相表示。下面我们将 $\ket{l,j,m_j}$ 用 $\ket{l,m,s}$ 表示。为简洁，我们省略相同的量子数 $l$ 。</p>
-<p>设转换系数 $c_{m,s}$ ，</p></div><a class="article-more button is-small is-size-7" href="/2026/03/06/%E8%87%AA%E6%97%8B%E8%A7%92%E5%8A%A8%E9%87%8F%E8%80%A6%E5%90%88/#more">阅读更多</a></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2026-02-26T02:48:02.000Z" title="2026/2/26 10:48:02">2026-02-26</time>发表</span><span class="level-item">1 分钟读完 (大约180个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2026/02/26/Land%C3%A9%20g-factor/">Landé g-factor</a></p><div class="content"><div>
-$$
-\begin{gathered}
-\hat{J}=\hat{L}+\hat{S} \\
-\hat{\mu} = -\cfrac{\mu_B}{\hbar}(\hat{L}+2\hat{S})
-\\\end{gathered}
-$$
-</div>
-
-
-
-<div>
-$$
-\cfrac{\hat{\mu}\cdot\hat{J}}{\hat{J}^2}=
--\cfrac{\mu_B}{\hbar}\cfrac{L(L+1)+2S(S+1)+3\hat{L}\cdot\hat{S}}{J(J+1)}
-$$
-</div>
-
-
-<div>
-$$
-\begin{gathered}
-J(J+1)=L(L+1)+S(S+1)+2\hat{L}\cdot\hat{S} \\
-\hat{L}\cdot\hat{S} = \cfrac{J(J+1)-L(L+1)-S(S+1)}{2}
-\\\end{gathered}
-$$
-</div>
-
-
-<div>
-$$
-\begin{gathered}
-\cfrac{\hat{\mu}\cdot\hat{J}}{\hat{J}^2}=
--\cfrac{\mu_B}{\hbar}\cfrac{2L(L+1)+4S(S+1)+3J(J+1)-3L(L+1)-3S(S+1)}{2J(J+1)} \\
-= -\cfrac{\mu_B}{\hbar}\cfrac{S(S+1)+3J(J+1)-L(L+1)}{2J(J+1)} \\
-= -\cfrac{\mu_B}{\hbar}\left(1+\cfrac{S(S+1)+J(J+1)-L(L+1)}{2J(J+1)}\right) \\
-\\\end{gathered}
-$$
-</div>
-
-
-<div>
-$$
-g = 1+\cfrac{S(S+1)+J(J+1)-L(L+1)}{2J(J+1)}
-$$
-</div>
-
-
-<p>之所以求磁矩到角动量的投影（ $\hat{\mu}\cdot\hat{J}&#x2F;\hat{J}^2$ ），因为垂直分量绕总角动量进动，平均值为0。</p>
-</div></article></div><nav class="pagination" role="navigation" aria-label="pagination"><div class="pagination-previous is-invisible is-hidden-mobile"><a href="/page/0/">上一页</a></div><div class="pagination-next"><a href="/page/2/">下一页</a></div><ul class="pagination-list is-hidden-mobile"><li><a class="pagination-link is-current" href="/">1</a></li><li><a class="pagination-link" href="/page/2/">2</a></li><li><span class="pagination-ellipsis">&hellip;</span></li><li><a class="pagination-link" href="/page/22/">22</a></li></ul></nav></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar is-rounded" src="/android-chrome-512x512.png" alt="Chenxi Yu"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">Chenxi Yu</p><p class="is-size-6 is-block">PhD in PKU</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>Beijing, China</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives/"><p class="title">108</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories/"><p class="title">4</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags/"><p class="title">31</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/yuchenxi2000" target="_blank" rel="me noopener">关注我</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="me noopener" title="Github" href="https://github.com/yuchenxi2000"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="me noopener" title="Bilibili" href="https://space.bilibili.com/244355869"><i class="fab fa-bilibili"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="me noopener" title="Zhihu" href="https://www.zhihu.com/people/cha-xi-74-16"><i class="fab fa-zhihu"></i></a></div></div></div><!--!--><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">分类</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/%E5%85%B6%E4%BB%96/"><span class="level-start"><span class="level-item">其他</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E6%95%B0%E5%AD%A6/"><span class="level-start"><span class="level-item">数学</span></span><span class="level-end"><span class="level-item tag">43</span></span></a></li><li><a class="level is-mobile" href="/categories/%E7%89%A9%E7%90%86/"><span class="level-start"><span class="level-item">物理</span></span><span class="level-end"><span class="level-item tag">50</span></span></a></li><li><a class="level is-mobile" href="/categories/%E9%9F%B3%E4%B9%90/"><span class="level-start"><span class="level-item">音乐</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></div></div></div><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2026-03-28T09:12:57.000Z">2026-03-28</time></p><p class="title"><a href="/2026/03/28/PvZ%E9%AB%98%E7%B2%BE%E5%BA%A6%E9%94%AE%E6%8E%A7%E6%A1%86%E6%9E%B6AvZ/">PvZ高精度键控框架AvZ</a></p><p class="categories"><a href="/categories/%E5%85%B6%E4%BB%96/">其他</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2026-03-23T07:44:37.000Z">2026-03-23</time></p><p class="title"><a href="/2026/03/23/%E7%94%9F%E6%97%A5%E9%97%AE%E9%A2%98/">生日问题</a></p><p class="categories"><a href="/categories/%E6%95%B0%E5%AD%A6/">数学</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2026-03-19T06:04:32.000Z">2026-03-19</time></p><p class="title"><a href="/about/">关于我</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2026-03-06T03:20:33.000Z">2026-03-06</time></p><p class="title"><a href="/2026/03/06/%E8%87%AA%E6%97%8B%E8%A7%92%E5%8A%A8%E9%87%8F%E8%80%A6%E5%90%88/">自旋角动量耦合</a></p><p class="categories"><a href="/categories/%E7%89%A9%E7%90%86/">物理</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2026-02-26T02:48:02.000Z">2026-02-26</time></p><p class="title"><a href="/2026/02/26/Land%C3%A9%20g-factor/">Landé g-factor</a></p></div></article></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/NEGF/"><span class="tag">NEGF</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E4%BB%A3%E6%95%B0/"><span class="tag">代数</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%85%89%E5%AD%A6/"><span class="tag">光学</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%85%B6%E4%BB%96/"><span class="tag">其他</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%87%A0%E4%BD%95%E4%BB%A3%E6%95%B0/"><span class="tag">几何代数</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%9B%BA%E4%BD%93%E7%89%A9%E7%90%86/"><span class="tag">固体物理</span><span class="tag">13</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0/"><span class="tag">复变函数</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%A4%A9%E4%BD%93%E7%89%A9%E7%90%86/"><span class="tag">天体物理</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%AF%86%E5%BA%A6%E6%B3%9B%E5%87%BD%E7%90%86%E8%AE%BA/"><span class="tag">密度泛函理论</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%B7%B4%E6%B4%9B%E5%85%8B%E9%9F%B3%E4%B9%90/"><span class="tag">巴洛克音乐</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%B9%B3%E9%9D%A2%E5%87%A0%E4%BD%95/"><span class="tag">平面几何</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%B9%BF%E4%B9%89%E7%9B%B8%E5%AF%B9%E8%AE%BA/"><span class="tag">广义相对论</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%BC%B9%E6%80%A7%E5%8A%9B%E5%AD%A6/"><span class="tag">弹性力学</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%BE%AE%E5%88%86%E5%87%A0%E4%BD%95/"><span class="tag">微分几何</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B/"><span class="tag">微分方程</span><span class="tag">9</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%95%B0%E5%80%BC%E6%96%B9%E6%B3%95/"><span class="tag">数值方法</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%95%B0%E5%AD%A6/"><span class="tag">数学</span><span class="tag">43</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/"><span class="tag">数学分析</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%95%B0%E8%AE%BA/"><span class="tag">数论</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%A6%82%E7%8E%87%E7%BB%9F%E8%AE%A1/"><span class="tag">概率统计</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/"><span class="tag">泛函分析</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%89%A9%E7%90%86/"><span class="tag">物理</span><span class="tag">55</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%89%B9%E6%AE%8A%E5%87%BD%E6%95%B0/"><span class="tag">特殊函数</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%94%B5%E5%8A%A8%E5%8A%9B%E5%AD%A6/"><span class="tag">电动力学</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%9B%B8%E5%AF%B9%E8%AE%BA/"><span class="tag">相对论</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%BB%9F%E8%AE%A1%E5%8A%9B%E5%AD%A6/"><span class="tag">统计力学</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%BE%A4%E8%AE%BA/"><span class="tag">群论</span><span class="tag">12</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6/"><span class="tag">量子力学</span><span class="tag">30</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E9%87%8F%E5%AD%90%E5%9C%BA%E8%AE%BA/"><span class="tag">量子场论</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E9%9D%9E%E6%AC%A7%E5%87%A0%E4%BD%95/"><span class="tag">非欧几何</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E9%9F%B3%E4%B9%90/"><span class="tag">音乐</span><span class="tag">1</span></a></div></div></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a><p class="is-size-7"><span>&copy; 2026 Chenxi Yu</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="fab fa-creative-commons-nc"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/yuchenxi2000"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
+</div></article></div><nav class="pagination" role="navigation" aria-label="pagination"><div class="pagination-previous is-invisible is-hidden-mobile"><a href="/page/0/">上一页</a></div><div class="pagination-next"><a href="/page/2/">下一页</a></div><ul class="pagination-list is-hidden-mobile"><li><a class="pagination-link is-current" href="/">1</a></li><li><a class="pagination-link" href="/page/2/">2</a></li><li><span class="pagination-ellipsis">&hellip;</span></li><li><a class="pagination-link" href="/page/23/">23</a></li></ul></nav></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar is-rounded" src="/android-chrome-512x512.png" alt="Chenxi Yu"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">Chenxi Yu</p><p class="is-size-6 is-block">PhD in PKU</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>Beijing, China</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives/"><p class="title">111</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories/"><p class="title">4</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags/"><p class="title">31</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/yuchenxi2000" target="_blank" rel="me noopener">关注我</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="me noopener" title="Github" href="https://github.com/yuchenxi2000"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="me noopener" title="Bilibili" href="https://space.bilibili.com/244355869"><i class="fab fa-bilibili"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="me noopener" title="Zhihu" href="https://www.zhihu.com/people/cha-xi-74-16"><i class="fab fa-zhihu"></i></a></div></div></div><!--!--><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">分类</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/%E5%85%B6%E4%BB%96/"><span class="level-start"><span class="level-item">其他</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/%E6%95%B0%E5%AD%A6/"><span class="level-start"><span class="level-item">数学</span></span><span class="level-end"><span class="level-item tag">44</span></span></a></li><li><a class="level is-mobile" href="/categories/%E7%89%A9%E7%90%86/"><span class="level-start"><span class="level-item">物理</span></span><span class="level-end"><span class="level-item tag">51</span></span></a></li><li><a class="level is-mobile" href="/categories/%E9%9F%B3%E4%B9%90/"><span class="level-start"><span class="level-item">音乐</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></div></div></div><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2026-04-03T13:08:18.000Z">2026-04-03</time></p><p class="title"><a href="/2026/04/03/%E5%A6%82%E4%BD%95%E7%A7%91%E5%AD%A6%E5%9C%B0%E5%9C%A8hexo%E9%87%8C%E5%86%99%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F/">如何科学地在hexo里写数学公式</a></p><p class="categories"><a href="/categories/%E5%85%B6%E4%BB%96/">其他</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2026-04-03T09:08:02.000Z">2026-04-03</time></p><p class="title"><a href="/2026/04/03/%E8%A7%84%E8%8C%83%E5%9C%BA%E8%AE%BA%E4%B8%8E%E5%BE%AE%E5%88%86%E5%87%A0%E4%BD%95/">规范场论与微分几何</a></p><p class="categories"><a href="/categories/%E7%89%A9%E7%90%86/">物理</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2026-04-03T05:30:58.000Z">2026-04-03</time></p><p class="title"><a href="/2026/04/03/%E8%B4%9D%E7%89%B9%E6%9C%97%E6%82%96%E8%AE%BA%E4%B8%8E%E7%90%83%E9%9D%A2%E5%9D%87%E5%8C%80%E5%88%86%E5%B8%83/">贝特朗悖论与球面均匀分布</a></p><p class="categories"><a href="/categories/%E6%95%B0%E5%AD%A6/">数学</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2026-03-28T09:12:57.000Z">2026-03-28</time></p><p class="title"><a href="/2026/03/28/PvZ%E9%AB%98%E7%B2%BE%E5%BA%A6%E9%94%AE%E6%8E%A7%E6%A1%86%E6%9E%B6AvZ/">PvZ高精度键控框架AvZ</a></p><p class="categories"><a href="/categories/%E5%85%B6%E4%BB%96/">其他</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2026-03-23T07:44:37.000Z">2026-03-23</time></p><p class="title"><a href="/2026/03/23/%E7%94%9F%E6%97%A5%E9%97%AE%E9%A2%98/">生日问题</a></p><p class="categories"><a href="/categories/%E6%95%B0%E5%AD%A6/">数学</a></p></div></article></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/NEGF/"><span class="tag">NEGF</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E4%BB%A3%E6%95%B0/"><span class="tag">代数</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%85%89%E5%AD%A6/"><span class="tag">光学</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%85%B6%E4%BB%96/"><span class="tag">其他</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%87%A0%E4%BD%95%E4%BB%A3%E6%95%B0/"><span class="tag">几何代数</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%9B%BA%E4%BD%93%E7%89%A9%E7%90%86/"><span class="tag">固体物理</span><span class="tag">13</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0/"><span class="tag">复变函数</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%A4%A9%E4%BD%93%E7%89%A9%E7%90%86/"><span class="tag">天体物理</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%AF%86%E5%BA%A6%E6%B3%9B%E5%87%BD%E7%90%86%E8%AE%BA/"><span class="tag">密度泛函理论</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%B7%B4%E6%B4%9B%E5%85%8B%E9%9F%B3%E4%B9%90/"><span class="tag">巴洛克音乐</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%B9%B3%E9%9D%A2%E5%87%A0%E4%BD%95/"><span class="tag">平面几何</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%B9%BF%E4%B9%89%E7%9B%B8%E5%AF%B9%E8%AE%BA/"><span class="tag">广义相对论</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%BC%B9%E6%80%A7%E5%8A%9B%E5%AD%A6/"><span class="tag">弹性力学</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%BE%AE%E5%88%86%E5%87%A0%E4%BD%95/"><span class="tag">微分几何</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B/"><span class="tag">微分方程</span><span class="tag">9</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%95%B0%E5%80%BC%E6%96%B9%E6%B3%95/"><span class="tag">数值方法</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%95%B0%E5%AD%A6/"><span class="tag">数学</span><span class="tag">44</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/"><span class="tag">数学分析</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%95%B0%E8%AE%BA/"><span class="tag">数论</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%A6%82%E7%8E%87%E7%BB%9F%E8%AE%A1/"><span class="tag">概率统计</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/"><span class="tag">泛函分析</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%89%A9%E7%90%86/"><span class="tag">物理</span><span class="tag">56</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%89%B9%E6%AE%8A%E5%87%BD%E6%95%B0/"><span class="tag">特殊函数</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%94%B5%E5%8A%A8%E5%8A%9B%E5%AD%A6/"><span class="tag">电动力学</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%9B%B8%E5%AF%B9%E8%AE%BA/"><span class="tag">相对论</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%BB%9F%E8%AE%A1%E5%8A%9B%E5%AD%A6/"><span class="tag">统计力学</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%BE%A4%E8%AE%BA/"><span class="tag">群论</span><span class="tag">12</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6/"><span class="tag">量子力学</span><span class="tag">30</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E9%87%8F%E5%AD%90%E5%9C%BA%E8%AE%BA/"><span class="tag">量子场论</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E9%9D%9E%E6%AC%A7%E5%87%A0%E4%BD%95/"><span class="tag">非欧几何</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E9%9F%B3%E4%B9%90/"><span class="tag">音乐</span><span class="tag">1</span></a></div></div></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a><p class="is-size-7"><span>&copy; 2026 Chenxi Yu</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="fab fa-creative-commons-nc"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/yuchenxi2000"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
             article: {
                 highlight: {
                     clipboard: true,

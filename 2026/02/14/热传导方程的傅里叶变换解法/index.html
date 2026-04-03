@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>热传导方程的傅里叶变换解法 - YCX&#039;s Blog</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="YCX&#039;s Blog"><meta name="msapplication-TileImage" content="favicon.ico"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="YCX&#039;s Blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="一维无限长热传导方程  $$ \begin{cases} \cfrac{\partial u}{\partial t} &amp;#x3D; \cfrac{\partial^2 u}{\partial x^2} \\ u(x, 0) &amp;#x3D; f(x) \end{cases} $$   不失一般性地，我们令其中的常数因子为1，否则可以改变 $t,x$ 的尺度使得其为1。 然后我们使用分离变量法，设 $u(x,t)&amp;amp;#x3"><meta property="og:type" content="blog"><meta property="og:title" content="热传导方程的傅里叶变换解法"><meta property="og:url" content="https://yuchenxi2000.github.io/2026/02/14/%E7%83%AD%E4%BC%A0%E5%AF%BC%E6%96%B9%E7%A8%8B%E7%9A%84%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2%E8%A7%A3%E6%B3%95/"><meta property="og:site_name" content="YCX&#039;s Blog"><meta property="og:description" content="一维无限长热传导方程  $$ \begin{cases} \cfrac{\partial u}{\partial t} &amp;#x3D; \cfrac{\partial^2 u}{\partial x^2} \\ u(x, 0) &amp;#x3D; f(x) \end{cases} $$   不失一般性地，我们令其中的常数因子为1，否则可以改变 $t,x$ 的尺度使得其为1。 然后我们使用分离变量法，设 $u(x,t)&amp;amp;#x3"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://yuchenxi2000.github.io/img/og_image.png"><meta property="article:published_time" content="2026-02-14T05:04:45.000Z"><meta property="article:modified_time" content="2026-03-30T12:14:19.433Z"><meta property="article:author" content="Chenxi Yu"><meta property="article:tag" content="数学"><meta property="article:tag" content="微分方程"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://yuchenxi2000.github.io/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://yuchenxi2000.github.io/2026/02/14/%E7%83%AD%E4%BC%A0%E5%AF%BC%E6%96%B9%E7%A8%8B%E7%9A%84%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2%E8%A7%A3%E6%B3%95/"},"headline":"热传导方程的傅里叶变换解法","image":["https://yuchenxi2000.github.io/img/og_image.png"],"datePublished":"2026-02-14T05:04:45.000Z","dateModified":"2026-03-30T12:14:19.433Z","author":{"@type":"Person","name":"Chenxi Yu"},"publisher":{"@type":"Organization","name":"YCX's Blog","logo":{"@type":"ImageObject","url":"https://yuchenxi2000.github.io/2026/02/14/%E7%83%AD%E4%BC%A0%E5%AF%BC%E6%96%B9%E7%A8%8B%E7%9A%84%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2%E8%A7%A3%E6%B3%95/android-chrome-512x512.png"}},"description":"一维无限长热传导方程  $$ \\begin{cases} \\cfrac{\\partial u}{\\partial t} &#x3D; \\cfrac{\\partial^2 u}{\\partial x^2} \\\\ u(x, 0) &#x3D; f(x) \\end{cases} $$   不失一般性地，我们令其中的常数因子为1，否则可以改变 $t,x$ 的尺度使得其为1。 然后我们使用分离变量法，设 $u(x,t)&amp;#x3"}</script><link rel="canonical" href="https://yuchenxi2000.github.io/2026/02/14/%E7%83%AD%E4%BC%A0%E5%AF%BC%E6%96%B9%E7%A8%8B%E7%9A%84%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2%E8%A7%A3%E6%B3%95/"><link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link data-pjax rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link data-pjax rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!--!--><!-- hexo injector head_end start --><script>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>热传导方程的傅里叶变换解法 - YCX&#039;s Blog</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="YCX&#039;s Blog"><meta name="msapplication-TileImage" content="favicon.ico"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="YCX&#039;s Blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="一维无限长热传导方程  $$ \begin{cases} \cfrac{\partial u}{\partial t} &amp;#x3D; \cfrac{\partial^2 u}{\partial x^2} \\ u(x, 0) &amp;#x3D; f(x) \end{cases} \tag{1} $$  不失一般性地，我们令其中的常数因子为1，否则可以改变 $t,x$ 的尺度使得其为1。 然后我们使用分离变量法，设 $u(x"><meta property="og:type" content="blog"><meta property="og:title" content="热传导方程的傅里叶变换解法"><meta property="og:url" content="https://yuchenxi2000.github.io/2026/02/14/%E7%83%AD%E4%BC%A0%E5%AF%BC%E6%96%B9%E7%A8%8B%E7%9A%84%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2%E8%A7%A3%E6%B3%95/"><meta property="og:site_name" content="YCX&#039;s Blog"><meta property="og:description" content="一维无限长热传导方程  $$ \begin{cases} \cfrac{\partial u}{\partial t} &amp;#x3D; \cfrac{\partial^2 u}{\partial x^2} \\ u(x, 0) &amp;#x3D; f(x) \end{cases} \tag{1} $$  不失一般性地，我们令其中的常数因子为1，否则可以改变 $t,x$ 的尺度使得其为1。 然后我们使用分离变量法，设 $u(x"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://yuchenxi2000.github.io/img/og_image.png"><meta property="article:published_time" content="2026-02-14T05:04:45.000Z"><meta property="article:modified_time" content="2026-04-03T14:05:08.871Z"><meta property="article:author" content="Chenxi Yu"><meta property="article:tag" content="数学"><meta property="article:tag" content="微分方程"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://yuchenxi2000.github.io/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://yuchenxi2000.github.io/2026/02/14/%E7%83%AD%E4%BC%A0%E5%AF%BC%E6%96%B9%E7%A8%8B%E7%9A%84%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2%E8%A7%A3%E6%B3%95/"},"headline":"热传导方程的傅里叶变换解法","image":["https://yuchenxi2000.github.io/img/og_image.png"],"datePublished":"2026-02-14T05:04:45.000Z","dateModified":"2026-04-03T14:05:08.871Z","author":{"@type":"Person","name":"Chenxi Yu"},"publisher":{"@type":"Organization","name":"YCX's Blog","logo":{"@type":"ImageObject","url":"https://yuchenxi2000.github.io/2026/02/14/%E7%83%AD%E4%BC%A0%E5%AF%BC%E6%96%B9%E7%A8%8B%E7%9A%84%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2%E8%A7%A3%E6%B3%95/android-chrome-512x512.png"}},"description":"一维无限长热传导方程  $$ \\begin{cases} \\cfrac{\\partial u}{\\partial t} &#x3D; \\cfrac{\\partial^2 u}{\\partial x^2} \\\\ u(x, 0) &#x3D; f(x) \\end{cases} \\tag{1} $$  不失一般性地，我们令其中的常数因子为1，否则可以改变 $t,x$ 的尺度使得其为1。 然后我们使用分离变量法，设 $u(x"}</script><link rel="canonical" href="https://yuchenxi2000.github.io/2026/02/14/%E7%83%AD%E4%BC%A0%E5%AF%BC%E6%96%B9%E7%A8%8B%E7%9A%84%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2%E8%A7%A3%E6%B3%95/"><link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link data-pjax rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link data-pjax rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!--!--><!-- hexo injector head_end start --><script>
   (function () {
       function switchTab() {
           if (!location.hash) {
@@ -36,16 +36,16 @@ $$
 \cfrac{\partial u}{\partial t} = \cfrac{\partial^2 u}{\partial x^2} \\
 u(x, 0) = f(x)
 \end{cases}
-$$
-</div>
+\tag{1}
+$$</div>
 
 <p>不失一般性地，我们令其中的常数因子为1，否则可以改变 $t,x$ 的尺度使得其为1。</p>
 <p>然后我们使用分离变量法，设 $u(x,t)&#x3D;X(x)T(t)$ 。因为要求解有边界，所以分离变量法中的常数必定为负数。</p>
 <div>
 $$
 T_t/T = X_{xx}/X = -k^2
-$$
-</div>
+\tag{2}
+$$</div>
 
 <p>我们解得</p>
 <div>
@@ -54,15 +54,15 @@ $$
 T_k(t) = \exp(-k^2t) \\
 X_k(x) = \exp (\pm\mathrm{i}kx)
 \\\end{gathered}
-$$
-</div>
+\tag{3}
+$$</div>
 
 <p>对于任意的 $f(x)$ ，我们将其用 $\exp (\pm\mathrm{i}kx)$ 展开（傅里叶变换定义详见附录），</p>
 <div>
 $$
 f(x) = \cfrac{1}{2\pi} \int_{-\infty}^{+\infty} F(\omega) e^{\mathrm{i}\omega x} \mathrm{d}\omega
-$$
-</div>
+\tag{4}
+$$</div>
 
 <p>根据分离变量的结果，边界条件为 $u(x,0)&#x3D;X_k(x)$ 的解为 $u(x,t)&#x3D;X_k(x)T_k(t)$ 。我们现在已经把任意函数 $f(x)$ 用 $X_k(x)$ 展开，由此可以写出任意边界条件的解为</p>
 <div>
@@ -70,30 +70,30 @@ $$
 \begin{aligned}
 u(x, t) &= \cfrac{1}{2\pi} \int_{-\infty}^{+\infty} F(\omega) e^{\mathrm{i}\omega x - \omega^2 t} \mathrm{d}\omega \\
 &= \cfrac{1}{2\pi} \int_{-\infty}^{+\infty} F(\omega) e^{- \omega^2 t} e^{\mathrm{i}\omega x} \mathrm{d}\omega \\
-&= \mathcal{F}^{-1}\lbrack F(\omega)\rbrack  \ast \mathcal{F}^{-1}\lbrack e^{-\omega^2 t}\rbrack  \\
+&= \mathcal{F}^{-1}[F(\omega)] \ast \mathcal{F}^{-1}[e^{-\omega^2 t}] \\
 &= f(x) \ast \cfrac{1}{\sqrt{4\pi t}}e^{-x^2/(4t)} \\
 &= \cfrac{1}{\sqrt{4\pi t}} \int_{-\infty}^{+\infty} f(y) e^{-(x-y)^2/(4t)} \mathrm{d}y
 \end{aligned}
-$$
-</div>
+\tag{5}
+$$</div>
 
 <p>可以验证该函数满足方程以及边界条件。为计算简便，可以直接验证积分核</p>
 <div>
 $$
 K(x,t) = \cfrac{1}{\sqrt{4\pi t}}e^{-x^2/(4t)}
-$$
-</div>
+\tag{6}
+$$</div>
 
 <p>满足方程且 $t \to 0$ 的极限为 $\delta(x)$ ，再根据 $u(x,t)$ 为积分核与 $f(x)$ 的卷积得出 $u(x,t)$ 满足方程以及边界条件。</p>
 <h2 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h2><p>傅里叶变换定义</p>
 <div>
 $$
 \begin{gathered}
-\mathcal{F}\lbrack f(x)\rbrack  = F(\omega) = \int_{-\infty}^{+\infty} f(x) e^{-\mathrm{i}\omega x} \mathrm{d}x \\
-\mathcal{F}^{-1}\lbrack F(\omega)\rbrack  = f(x) = \cfrac{1}{2\pi} \int_{-\infty}^{+\infty} F(\omega) e^{\mathrm{i}\omega x} \mathrm{d}\omega
+\mathcal{F}[f(x)] = F(\omega) = \int_{-\infty}^{+\infty} f(x) e^{-\mathrm{i}\omega x} \mathrm{d}x \\
+\mathcal{F}^{-1}[F(\omega)] = f(x) = \cfrac{1}{2\pi} \int_{-\infty}^{+\infty} F(\omega) e^{\mathrm{i}\omega x} \mathrm{d}\omega
 \\\end{gathered}
-$$
-</div>
+\tag{7}
+$$</div>
 
 <p>高斯函数的傅里叶变换</p>
 <div>
@@ -103,11 +103,11 @@ $$
 =& \int_{-\infty}^{+\infty} e^{-\omega^2/(4a)} e^{- a (x+\mathrm{i}\omega/(2a))^2} \mathrm{d}x \\
 =& \sqrt{\cfrac{\pi}{a}}e^{-\omega^2/(4a)}
 \end{aligned}
-$$
-</div>
+\tag{8}
+$$</div>
 
 
-</div><div class="article-licensing box"><div class="licensing-title"><p>热传导方程的傅里叶变换解法</p><p><a href="https://yuchenxi2000.github.io/2026/02/14/热传导方程的傅里叶变换解法/">https://yuchenxi2000.github.io/2026/02/14/热传导方程的傅里叶变换解法/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>Chenxi Yu</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2026-02-14</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2026-03-30</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/%E6%95%B0%E5%AD%A6/">数学</a><a class="link-muted mr-2" rel="tag" href="/tags/%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B/">微分方程</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2026/02/15/Schwarzschild%E9%BB%91%E6%B4%9E%E8%A7%A3/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">Schwarzschild黑洞解</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2026/01/22/SU(2)%E5%92%8CSO(3)%E7%9A%84%E6%8C%87%E6%95%B0%E6%98%A0%E5%B0%84%E8%AE%A1%E7%AE%97/"><span class="level-item">SU(2)和SO(3)的指数映射计算</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><!--!--><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a><p class="is-size-7"><span>&copy; 2026 Chenxi Yu</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="fab fa-creative-commons-nc"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/yuchenxi2000"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
+</div><div class="article-licensing box"><div class="licensing-title"><p>热传导方程的傅里叶变换解法</p><p><a href="https://yuchenxi2000.github.io/2026/02/14/热传导方程的傅里叶变换解法/">https://yuchenxi2000.github.io/2026/02/14/热传导方程的傅里叶变换解法/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>Chenxi Yu</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2026-02-14</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2026-04-03</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/%E6%95%B0%E5%AD%A6/">数学</a><a class="link-muted mr-2" rel="tag" href="/tags/%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B/">微分方程</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2026/02/15/Schwarzschild%E9%BB%91%E6%B4%9E%E8%A7%A3/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">Schwarzschild黑洞解</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2026/01/22/SU(2)%E5%92%8CSO(3)%E7%9A%84%E6%8C%87%E6%95%B0%E6%98%A0%E5%B0%84%E8%AE%A1%E7%AE%97/"><span class="level-item">SU(2)和SO(3)的指数映射计算</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><!--!--><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a><p class="is-size-7"><span>&copy; 2026 Chenxi Yu</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="fab fa-creative-commons-nc"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/yuchenxi2000"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
             article: {
                 highlight: {
                     clipboard: true,

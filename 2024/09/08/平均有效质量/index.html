@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>平均有效质量 - YCX&#039;s Blog</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="YCX&#039;s Blog"><meta name="msapplication-TileImage" content="favicon.ico"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="YCX&#039;s Blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="我在半导体物理相关文献中经常看到载流子有效质量和态密度有效质量的概念和表达式，一直疑惑为什么它们的形式不一样。我根据自己理解给出了它们的推导，如有错误欢迎指出。 载流子有效质量Carrier effective mass能带抛物线近似下，倒有效质量张量的定义  $$ \cfrac{\partial^2 \varepsilon}{\partial k_i \partial k_j} &amp;#x3D; \hbar^"><meta property="og:type" content="blog"><meta property="og:title" content="平均有效质量"><meta property="og:url" content="https://yuchenxi2000.github.io/2024/09/08/%E5%B9%B3%E5%9D%87%E6%9C%89%E6%95%88%E8%B4%A8%E9%87%8F/"><meta property="og:site_name" content="YCX&#039;s Blog"><meta property="og:description" content="我在半导体物理相关文献中经常看到载流子有效质量和态密度有效质量的概念和表达式，一直疑惑为什么它们的形式不一样。我根据自己理解给出了它们的推导，如有错误欢迎指出。 载流子有效质量Carrier effective mass能带抛物线近似下，倒有效质量张量的定义  $$ \cfrac{\partial^2 \varepsilon}{\partial k_i \partial k_j} &amp;#x3D; \hbar^"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://yuchenxi2000.github.io/img/og_image.png"><meta property="article:published_time" content="2024-09-08T07:11:12.000Z"><meta property="article:modified_time" content="2026-03-30T12:14:19.190Z"><meta property="article:author" content="Chenxi Yu"><meta property="article:tag" content="物理"><meta property="article:tag" content="固体物理"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://yuchenxi2000.github.io/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://yuchenxi2000.github.io/2024/09/08/%E5%B9%B3%E5%9D%87%E6%9C%89%E6%95%88%E8%B4%A8%E9%87%8F/"},"headline":"平均有效质量","image":["https://yuchenxi2000.github.io/img/og_image.png"],"datePublished":"2024-09-08T07:11:12.000Z","dateModified":"2026-03-30T12:14:19.190Z","author":{"@type":"Person","name":"Chenxi Yu"},"publisher":{"@type":"Organization","name":"YCX's Blog","logo":{"@type":"ImageObject","url":"https://yuchenxi2000.github.io/2024/09/08/%E5%B9%B3%E5%9D%87%E6%9C%89%E6%95%88%E8%B4%A8%E9%87%8F/android-chrome-512x512.png"}},"description":"我在半导体物理相关文献中经常看到载流子有效质量和态密度有效质量的概念和表达式，一直疑惑为什么它们的形式不一样。我根据自己理解给出了它们的推导，如有错误欢迎指出。 载流子有效质量Carrier effective mass能带抛物线近似下，倒有效质量张量的定义  $$ \\cfrac{\\partial^2 \\varepsilon}{\\partial k_i \\partial k_j} &#x3D; \\hbar^"}</script><link rel="canonical" href="https://yuchenxi2000.github.io/2024/09/08/%E5%B9%B3%E5%9D%87%E6%9C%89%E6%95%88%E8%B4%A8%E9%87%8F/"><link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link data-pjax rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link data-pjax rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!--!--><!-- hexo injector head_end start --><script>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>平均有效质量 - YCX&#039;s Blog</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="YCX&#039;s Blog"><meta name="msapplication-TileImage" content="favicon.ico"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="YCX&#039;s Blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="我在半导体物理相关文献中经常看到载流子有效质量和态密度有效质量的概念和表达式，一直疑惑为什么它们的形式不一样。我根据自己理解给出了它们的推导，如有错误欢迎指出。 载流子有效质量Carrier effective mass能带抛物线近似下，倒有效质量张量的定义  $$ \cfrac{\partial^2 \varepsilon}{\partial k_i \partial k_j} &amp;#x3D; \hbar^"><meta property="og:type" content="blog"><meta property="og:title" content="平均有效质量"><meta property="og:url" content="https://yuchenxi2000.github.io/2024/09/08/%E5%B9%B3%E5%9D%87%E6%9C%89%E6%95%88%E8%B4%A8%E9%87%8F/"><meta property="og:site_name" content="YCX&#039;s Blog"><meta property="og:description" content="我在半导体物理相关文献中经常看到载流子有效质量和态密度有效质量的概念和表达式，一直疑惑为什么它们的形式不一样。我根据自己理解给出了它们的推导，如有错误欢迎指出。 载流子有效质量Carrier effective mass能带抛物线近似下，倒有效质量张量的定义  $$ \cfrac{\partial^2 \varepsilon}{\partial k_i \partial k_j} &amp;#x3D; \hbar^"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://yuchenxi2000.github.io/img/og_image.png"><meta property="article:published_time" content="2024-09-08T07:11:12.000Z"><meta property="article:modified_time" content="2026-04-03T14:05:08.593Z"><meta property="article:author" content="Chenxi Yu"><meta property="article:tag" content="物理"><meta property="article:tag" content="固体物理"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://yuchenxi2000.github.io/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://yuchenxi2000.github.io/2024/09/08/%E5%B9%B3%E5%9D%87%E6%9C%89%E6%95%88%E8%B4%A8%E9%87%8F/"},"headline":"平均有效质量","image":["https://yuchenxi2000.github.io/img/og_image.png"],"datePublished":"2024-09-08T07:11:12.000Z","dateModified":"2026-04-03T14:05:08.593Z","author":{"@type":"Person","name":"Chenxi Yu"},"publisher":{"@type":"Organization","name":"YCX's Blog","logo":{"@type":"ImageObject","url":"https://yuchenxi2000.github.io/2024/09/08/%E5%B9%B3%E5%9D%87%E6%9C%89%E6%95%88%E8%B4%A8%E9%87%8F/android-chrome-512x512.png"}},"description":"我在半导体物理相关文献中经常看到载流子有效质量和态密度有效质量的概念和表达式，一直疑惑为什么它们的形式不一样。我根据自己理解给出了它们的推导，如有错误欢迎指出。 载流子有效质量Carrier effective mass能带抛物线近似下，倒有效质量张量的定义  $$ \\cfrac{\\partial^2 \\varepsilon}{\\partial k_i \\partial k_j} &#x3D; \\hbar^"}</script><link rel="canonical" href="https://yuchenxi2000.github.io/2024/09/08/%E5%B9%B3%E5%9D%87%E6%9C%89%E6%95%88%E8%B4%A8%E9%87%8F/"><link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link data-pjax rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link data-pjax rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!--!--><!-- hexo injector head_end start --><script>
   (function () {
       function switchTab() {
           if (!location.hash) {
@@ -29,29 +29,29 @@
       switchTab();
       window.addEventListener('hashchange', switchTab, false);
   })();
-  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 8.1.1"></head><body class="is-1-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-12"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2024-09-08T07:11:12.000Z" title="2024/9/8 15:11:12">2024-09-08</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E7%89%A9%E7%90%86/">物理</a></span><span class="level-item">11 分钟读完 (大约1575个字)</span></div></div><h1 class="title is-3 is-size-4-mobile">平均有效质量</h1><div class="content"><p>我在半导体物理相关文献中经常看到载流子有效质量和态密度有效质量的概念和表达式，一直疑惑为什么它们的形式不一样。我根据自己理解给出了它们的推导，如有错误欢迎指出。</p>
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 8.1.1"></head><body class="is-1-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-12"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2024-09-08T07:11:12.000Z" title="2024/9/8 15:11:12">2024-09-08</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E7%89%A9%E7%90%86/">物理</a></span><span class="level-item">11 分钟读完 (大约1589个字)</span></div></div><h1 class="title is-3 is-size-4-mobile">平均有效质量</h1><div class="content"><p>我在半导体物理相关文献中经常看到载流子有效质量和态密度有效质量的概念和表达式，一直疑惑为什么它们的形式不一样。我根据自己理解给出了它们的推导，如有错误欢迎指出。</p>
 <h2 id="载流子有效质量Carrier-effective-mass"><a href="#载流子有效质量Carrier-effective-mass" class="headerlink" title="载流子有效质量Carrier effective mass"></a>载流子有效质量Carrier effective mass</h2><p>能带抛物线近似下，倒有效质量张量的定义</p>
 <div>
 $$
 \cfrac{\partial^2 \varepsilon}{\partial k_i \partial k_j} = \hbar^2\left(\cfrac{1}{m}\right)_{ij}
-$$
-</div>
+\tag{1}
+$$</div>
 
 
 <p>载流子遵循的运动方程</p>
 <div>
 $$
 F=\hbar \cfrac{\mathrm{d} k}{\mathrm{d} t} = qE
-$$
-</div>
+\tag{2}
+$$</div>
 
 
 <p>在两次碰撞间，动量变化量（其中 $\tau$ 为弛豫时间）</p>
 <div>
 $$
 \delta k = qE \tau / \hbar
-$$
-</div>
+\tag{3}
+$$</div>
 
 
 <p>载流子的群速度</p>
@@ -61,16 +61,16 @@ $$
 v_g = \cfrac{1}{\hbar} \cfrac{\partial \varepsilon}{\partial k} \\
 = \hbar\left(\cfrac{1}{m}\right)_{ij} k_j
 \\\end{gathered}
-$$
-</div>
+\tag{4}
+$$</div>
 
 
 <p>在两次碰撞间，群速度变化量</p>
 <div>
 $$
 (\delta v_g)_i = q\left(\cfrac{1}{m}\right)_{ij} E_j \tau
-$$
-</div>
+\tag{5}
+$$</div>
 
 
 <p>考虑多晶样品，假设各晶向的晶粒均匀分布。我们求所有可能晶向的迁移率的平均值。</p>
@@ -79,8 +79,8 @@ $$
 <div>
 $$
 n=(\sin\theta\cos\phi,\sin\theta\sin\phi,\cos\theta)
-$$
-</div>
+\tag{6}
+$$</div>
 
 
 <div>
@@ -92,8 +92,8 @@ $$
 = \cfrac{1}{3}\left(\cfrac{1}{m_{xx}}+\cfrac{1}{m_{yy}}+\cfrac{1}{m_{zz}}\right) \int \sin \theta \mathrm{d} \theta \mathrm{d} \phi \\
 = \cfrac{1}{3}\left(\cfrac{1}{m_{xx}}+\cfrac{1}{m_{yy}}+\cfrac{1}{m_{zz}}\right) \int \mathrm{d} n
 \\\end{gathered}
-$$
-</div>
+\tag{7}
+$$</div>
 
 
 <p>所以平均有效质量（载流子有效质量）即为</p>
@@ -103,8 +103,8 @@ $$
 \cfrac{3}{m_{\text{eff}}} = \cfrac{1}{m_{xx}}+\cfrac{1}{m_{yy}}+\cfrac{1}{m_{zz}} \\
 \cfrac{3}{m_{\text{eff}}} = \mathrm{Tr} \cfrac{1}{m}
 \\\end{gathered}
-$$
-</div>
+\tag{8}
+$$</div>
 
 
 
@@ -118,8 +118,8 @@ $$
 = (n-1)\int_0^{\pi/2} \cos^2 x \sin^{n-2} x \mathrm{d} x \\
 = (n-1)\left(\int_0^{\pi/2} \sin^{n-2} x \mathrm{d} x - \int_0^{\pi/2} \sin^{n} x \mathrm{d} x\right) \\
 \\\end{gathered}
-$$
-</div>
+\tag{9}
+$$</div>
 
 
 <div>
@@ -127,8 +127,8 @@ $$
 \begin{gathered}
 \int_0^{\pi/2} \sin^n x \mathrm{d}x = \cfrac{n-1}{n}\int_0^{\pi/2} \sin^{n-2} x \mathrm{d} x \\
 \\\end{gathered}
-$$
-</div>
+\tag{10}
+$$</div>
 
 
 <div>
@@ -138,50 +138,50 @@ $$
 \cfrac{(n-1)!!}{n!!} & n \text{ is odd} \\
 \cfrac{(n-1)!!}{n!!}\cfrac{\pi}{2} & n \text{ is even} \\
 \end{cases}
-$$
-</div>
+\tag{11}
+$$</div>
 
 
 <p>矩阵的迹在正交变换下不变，假设旋转矩阵 $U$ </p>
 <div>
 $$
 \mathrm{Tr}(UAU^\dagger) = \mathrm{Tr}(U^\dagger UA)=\mathrm{Tr} A
-$$
-</div>
+\tag{12}
+$$</div>
 
 
 <p>故载流子有效质量及其定义式也在正交变换下不变。</p>
 <h2 id="态密度有效质量DOS-effective-mass"><a href="#态密度有效质量DOS-effective-mass" class="headerlink" title="态密度有效质量DOS effective mass"></a>态密度有效质量DOS effective mass</h2><div>
 $$
 a_i \cdot b_j = 2\pi\delta_{ij}
-$$
-</div>
+\tag{13}
+$$</div>
 
 
 <div>
 $$
 k=\cfrac{n_i}{N_i}b_i
-$$
-</div>
+\tag{14}
+$$</div>
 
 
 <div>
 $$
 \begin{gathered}
-\mathrm{d}^3 k = \cfrac{\lbrack b_x,b_y,b_z\rbrack }{N_xN_yN_z} \mathrm{d}^3n \\
+\mathrm{d}^3 k = \cfrac{[b_x,b_y,b_z]}{N_xN_yN_z} \mathrm{d}^3n \\
 = \cfrac{(2\pi)^3}{V} \mathrm{d}^3n \\
 \\\end{gathered}
-$$
-</div>
+\tag{15}
+$$</div>
 
 
-<p>其中 $\lbrack b_x,b_y,b_z\rbrack &#x3D;(b_x\times b_y)\cdot b_z$ 。根据晶格矢量 $a$ 与倒格矢 $b$ 的正交关系可以得到 $\lbrack a_x,a_y,a_z\rbrack \lbrack b_x,b_y,b_z\rbrack &#x3D;(2\pi)^3$ （两矩阵互为逆矩阵，然后式子两端求行列式），其中原胞体积 $V&#x3D;\lbrack a_x,a_y,a_z\rbrack $ 。</p>
+<p>其中 $[b_x,b_y,b_z]&#x3D;(b_x\times b_y)\cdot b_z$ 。根据晶格矢量 $a$ 与倒格矢 $b$ 的正交关系可以得到 $[a_x,a_y,a_z][b_x,b_y,b_z]&#x3D;(2\pi)^3$ （两矩阵互为逆矩阵，然后式子两端求行列式），其中原胞体积 $V&#x3D;[a_x,a_y,a_z]$ 。</p>
 <p>注意上面没有考虑自旋简并。下面计算DOS时会加入自旋简并。</p>
 <div>
 $$
 \varepsilon = \cfrac{\hbar^2}{2} \left(\cfrac{1}{m}\right)_{ij}k_ik_j
-$$
-</div>
+\tag{16}
+$$</div>
 
 <p>我们计算能量 $0\sim\varepsilon$ 包裹的椭球的体积（假设 $1&#x2F;m$ 对称正定。要求对称因为偏导数的交换性质，要求正定因为需要能带的抛物线近似成立，因此曲面为一椭球而不是其他体积无穷的二次曲面）</p>
 <p>对 $1&#x2F;m$ 做Cholesky分解 $1&#x2F;m&#x3D;L^TL$ ，</p>
@@ -191,8 +191,8 @@ $$
 \varepsilon=\hbar^2/2k^TL^TLk \\
 2\varepsilon/\hbar^2=\lvert Lk \rvert^2 \\
 \\\end{gathered}
-$$
-</div>
+\tag{17}
+$$</div>
 
 <p>求该椭球体积的方法：用体积积分的换元法。设 $u&#x3D;Lk$ ，则 $\lvert u \rvert^2 &#x3D; 2\varepsilon&#x2F;\hbar^2$ 。这是一个球，它的体积可以用球体积公式求出。再考虑到换元后体积微元为 $\mathrm{d}^3u&#x3D;\lvert \det L \rvert \mathrm{d}^3 k$ ，由此知将球体积除以 $\lvert \det L \rvert$ 就可以求得方程对应曲面在 $k$ 空间中围成的椭球的体积。</p>
 <p>所以</p>
@@ -203,8 +203,8 @@ $$
 = \cfrac{4\pi}{3}(2\varepsilon/\hbar^2)^{3/2} \cfrac{1}{\lvert \det L \rvert} \\
 = \cfrac{4\pi(2\varepsilon)^{3/2}}{3\hbar^3\sqrt{\det (1/m)}} \\
 \\\end{gathered}
-$$
-</div>
+\tag{18}
+$$</div>
 
 
 <div>
@@ -213,8 +213,8 @@ $$
 \mathrm{d}^3 k
 = \cfrac{4\pi \sqrt{2}}{\hbar^3\sqrt{\det (1/m)}} \sqrt{\varepsilon} \mathrm{d}\varepsilon \\
 \\\end{gathered}
-$$
-</div>
+\tag{19}
+$$</div>
 
 
 <div>
@@ -224,16 +224,16 @@ D(\varepsilon) = \cfrac{2\mathrm{d}n^3}{V\mathrm{d}\varepsilon} \\
 = \cfrac{2}{(2\pi)^3} \cfrac{\mathrm{d}^3k}{\mathrm{d}\varepsilon} \\
 = \cfrac{\sqrt{2\varepsilon}}{\pi^2\hbar^3\sqrt{\det (1/m)}}
 \\\end{gathered}
-$$
-</div>
+\tag{20}
+$$</div>
 
 
 <p>其中用到一个结论</p>
 <div>
 $$
 \det(1/m)=\det(L^TL)=\det(L^T)\det L=(\det L)^2
-$$
-</div>
+\tag{21}
+$$</div>
 
 <blockquote>
 <p>注：这里的态密度表达式看着和其他参考文献不一样，只是因为其他文献中的是普朗克常数 $h$ ，而这里的是约化普朗克常数 $\hbar&#x3D;h&#x2F;(2\pi)$ </p>
@@ -246,22 +246,22 @@ $$
 0 & 1/m & 0 \\
 0 & 0 & 1/m \\
 \end{pmatrix}
-$$
-</div>
+\tag{22}
+$$</div>
 
 <p>则态密度</p>
 <div>
 $$
 D(\varepsilon) = \cfrac{m^{3/2}\sqrt{2\varepsilon}}{\pi^2\hbar^3}
-$$
-</div>
+\tag{23}
+$$</div>
 
 <p>对于一般情形，我们将其等效到各向同性的情形，定义一个 $m_{\text{eff}}$ 。则</p>
 <div>
 $$
 \cfrac{1}{m_{\text{eff}}^3}=\det{\cfrac{1}{m}}
-$$
-</div>
+\tag{24}
+$$</div>
 
 <p>行列式在正交变换下不变</p>
 <div>
@@ -272,8 +272,8 @@ $$
 =\det (U U^\dagger) \det A \\
 = \det A
 \\\end{gathered}
-$$
-</div>
+\tag{25}
+$$</div>
 
 
 <p>，所以态密度有效质量也在正交变换下不变。</p>
@@ -285,15 +285,15 @@ $$
 0 & 1/m_y & 0 \\
 0 & 0 & 1/m_z \\
 \end{pmatrix}
-$$
-</div>
+\tag{26}
+$$</div>
 
 <p>则态密度有效质量</p>
 <div>
 $$
-m_{\text{eff}}=\sqrt\lbrack 3\rbrack {m_xm_ym_z}
-$$
-</div>
+m_{\text{eff}}=\sqrt[3]{m_xm_ym_z}
+\tag{27}
+$$</div>
 
 
 <p>此即很多书籍中的公式。</p>
@@ -301,12 +301,12 @@ $$
 <p>于是导带态密度的表达式应该乘一个 $6$ 。而导带态密度有效质量变为</p>
 <div>
 $$
-m_{\text{eff}}=6^{2/3}\sqrt\lbrack 3\rbrack {m_lm_t^2}
-$$
-</div>
+m_{\text{eff}}=6^{2/3}\sqrt[3]{m_lm_t^2}
+\tag{28}
+$$</div>
 
 <p> $m_l$ 为纵向有效质量， $m_t$ 为横向有效质量。</p>
-</div><div class="article-licensing box"><div class="licensing-title"><p>平均有效质量</p><p><a href="https://yuchenxi2000.github.io/2024/09/08/平均有效质量/">https://yuchenxi2000.github.io/2024/09/08/平均有效质量/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>Chenxi Yu</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2024-09-08</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2026-03-30</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/%E7%89%A9%E7%90%86/">物理</a><a class="link-muted mr-2" rel="tag" href="/tags/%E5%9B%BA%E4%BD%93%E7%89%A9%E7%90%86/">固体物理</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2024/10/05/%E6%8A%95%E5%BD%B1%E7%BC%80%E5%8A%A0%E6%B3%A2%E6%B3%95%EF%BC%88PAW%EF%BC%89%E4%B8%80%E4%BA%9B%E8%AF%81%E6%98%8E/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">投影缀加波法（PAW）一些证明</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2024/09/04/%E7%A2%B3%E7%BA%B3%E7%B1%B3%E5%B8%A6%E8%83%BD%E5%B8%A6/"><span class="level-item">碳纳米带能带</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><!--!--><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a><p class="is-size-7"><span>&copy; 2026 Chenxi Yu</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="fab fa-creative-commons-nc"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/yuchenxi2000"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
+</div><div class="article-licensing box"><div class="licensing-title"><p>平均有效质量</p><p><a href="https://yuchenxi2000.github.io/2024/09/08/平均有效质量/">https://yuchenxi2000.github.io/2024/09/08/平均有效质量/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>Chenxi Yu</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2024-09-08</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2026-04-03</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/%E7%89%A9%E7%90%86/">物理</a><a class="link-muted mr-2" rel="tag" href="/tags/%E5%9B%BA%E4%BD%93%E7%89%A9%E7%90%86/">固体物理</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2024/10/05/%E6%8A%95%E5%BD%B1%E7%BC%80%E5%8A%A0%E6%B3%A2%E6%B3%95%EF%BC%88PAW%EF%BC%89%E4%B8%80%E4%BA%9B%E8%AF%81%E6%98%8E/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">投影缀加波法（PAW）一些证明</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2024/09/04/%E7%A2%B3%E7%BA%B3%E7%B1%B3%E5%B8%A6%E8%83%BD%E5%B8%A6/"><span class="level-item">碳纳米带能带</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><!--!--><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a><p class="is-size-7"><span>&copy; 2026 Chenxi Yu</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="fab fa-creative-commons-nc"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/yuchenxi2000"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
             article: {
                 highlight: {
                     clipboard: true,

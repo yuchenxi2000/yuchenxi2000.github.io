@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>冲量定理 - YCX&#039;s Blog</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="YCX&#039;s Blog"><meta name="msapplication-TileImage" content="favicon.ico"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="YCX&#039;s Blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="冲量定理给出了将非齐次微分方程化为齐次方程的求解方法，广泛运用于常微分方程、偏微分方程的求解中。 该定理的证明需要用到变上下限的定积分的求导，我记得同济大学出版社的高等数学里有，其他版本的高数里应该也有。下面给一个不那么严格的推导（严格的需要对这些函数的性质做假设），已有相关的知识可以跳过这一部分。  $$ F(x) &amp;#x3D; \int_{\alpha(x)}^{\beta(x)} f(x,y)\mat"><meta property="og:type" content="blog"><meta property="og:title" content="冲量定理"><meta property="og:url" content="https://yuchenxi2000.github.io/2024/06/02/%E5%86%B2%E9%87%8F%E5%AE%9A%E7%90%86/"><meta property="og:site_name" content="YCX&#039;s Blog"><meta property="og:description" content="冲量定理给出了将非齐次微分方程化为齐次方程的求解方法，广泛运用于常微分方程、偏微分方程的求解中。 该定理的证明需要用到变上下限的定积分的求导，我记得同济大学出版社的高等数学里有，其他版本的高数里应该也有。下面给一个不那么严格的推导（严格的需要对这些函数的性质做假设），已有相关的知识可以跳过这一部分。  $$ F(x) &amp;#x3D; \int_{\alpha(x)}^{\beta(x)} f(x,y)\mat"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://yuchenxi2000.github.io/img/og_image.png"><meta property="article:published_time" content="2024-06-02T05:57:03.000Z"><meta property="article:modified_time" content="2026-03-30T12:14:18.023Z"><meta property="article:author" content="Chenxi Yu"><meta property="article:tag" content="物理"><meta property="article:tag" content="数学"><meta property="article:tag" content="微分方程"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://yuchenxi2000.github.io/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://yuchenxi2000.github.io/2024/06/02/%E5%86%B2%E9%87%8F%E5%AE%9A%E7%90%86/"},"headline":"冲量定理","image":["https://yuchenxi2000.github.io/img/og_image.png"],"datePublished":"2024-06-02T05:57:03.000Z","dateModified":"2026-03-30T12:14:18.023Z","author":{"@type":"Person","name":"Chenxi Yu"},"publisher":{"@type":"Organization","name":"YCX's Blog","logo":{"@type":"ImageObject","url":"https://yuchenxi2000.github.io/2024/06/02/%E5%86%B2%E9%87%8F%E5%AE%9A%E7%90%86/android-chrome-512x512.png"}},"description":"冲量定理给出了将非齐次微分方程化为齐次方程的求解方法，广泛运用于常微分方程、偏微分方程的求解中。 该定理的证明需要用到变上下限的定积分的求导，我记得同济大学出版社的高等数学里有，其他版本的高数里应该也有。下面给一个不那么严格的推导（严格的需要对这些函数的性质做假设），已有相关的知识可以跳过这一部分。  $$ F(x) &#x3D; \\int_{\\alpha(x)}^{\\beta(x)} f(x,y)\\mat"}</script><link rel="canonical" href="https://yuchenxi2000.github.io/2024/06/02/%E5%86%B2%E9%87%8F%E5%AE%9A%E7%90%86/"><link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link data-pjax rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link data-pjax rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!--!--><!-- hexo injector head_end start --><script>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>冲量定理 - YCX&#039;s Blog</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="YCX&#039;s Blog"><meta name="msapplication-TileImage" content="favicon.ico"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="YCX&#039;s Blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="冲量定理给出了将非齐次微分方程化为齐次方程的求解方法，广泛运用于常微分方程、偏微分方程的求解中。 该定理的证明需要用到变上下限的定积分的求导，我记得同济大学出版社的高等数学里有，其他版本的高数里应该也有。下面给一个不那么严格的推导（严格的需要对这些函数的性质做假设），已有相关的知识可以跳过这一部分。  $$ F(x) &amp;#x3D; \int_{\alpha(x)}^{\beta(x)} f(x,y)\mat"><meta property="og:type" content="blog"><meta property="og:title" content="冲量定理"><meta property="og:url" content="https://yuchenxi2000.github.io/2024/06/02/%E5%86%B2%E9%87%8F%E5%AE%9A%E7%90%86/"><meta property="og:site_name" content="YCX&#039;s Blog"><meta property="og:description" content="冲量定理给出了将非齐次微分方程化为齐次方程的求解方法，广泛运用于常微分方程、偏微分方程的求解中。 该定理的证明需要用到变上下限的定积分的求导，我记得同济大学出版社的高等数学里有，其他版本的高数里应该也有。下面给一个不那么严格的推导（严格的需要对这些函数的性质做假设），已有相关的知识可以跳过这一部分。  $$ F(x) &amp;#x3D; \int_{\alpha(x)}^{\beta(x)} f(x,y)\mat"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://yuchenxi2000.github.io/img/og_image.png"><meta property="article:published_time" content="2024-06-02T05:57:03.000Z"><meta property="article:modified_time" content="2026-04-03T14:05:07.243Z"><meta property="article:author" content="Chenxi Yu"><meta property="article:tag" content="物理"><meta property="article:tag" content="数学"><meta property="article:tag" content="微分方程"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://yuchenxi2000.github.io/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://yuchenxi2000.github.io/2024/06/02/%E5%86%B2%E9%87%8F%E5%AE%9A%E7%90%86/"},"headline":"冲量定理","image":["https://yuchenxi2000.github.io/img/og_image.png"],"datePublished":"2024-06-02T05:57:03.000Z","dateModified":"2026-04-03T14:05:07.243Z","author":{"@type":"Person","name":"Chenxi Yu"},"publisher":{"@type":"Organization","name":"YCX's Blog","logo":{"@type":"ImageObject","url":"https://yuchenxi2000.github.io/2024/06/02/%E5%86%B2%E9%87%8F%E5%AE%9A%E7%90%86/android-chrome-512x512.png"}},"description":"冲量定理给出了将非齐次微分方程化为齐次方程的求解方法，广泛运用于常微分方程、偏微分方程的求解中。 该定理的证明需要用到变上下限的定积分的求导，我记得同济大学出版社的高等数学里有，其他版本的高数里应该也有。下面给一个不那么严格的推导（严格的需要对这些函数的性质做假设），已有相关的知识可以跳过这一部分。  $$ F(x) &#x3D; \\int_{\\alpha(x)}^{\\beta(x)} f(x,y)\\mat"}</script><link rel="canonical" href="https://yuchenxi2000.github.io/2024/06/02/%E5%86%B2%E9%87%8F%E5%AE%9A%E7%90%86/"><link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link data-pjax rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link data-pjax rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!--!--><!-- hexo injector head_end start --><script>
   (function () {
       function switchTab() {
           if (!location.hash) {
@@ -29,13 +29,13 @@
       switchTab();
       window.addEventListener('hashchange', switchTab, false);
   })();
-  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 8.1.1"></head><body class="is-1-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-12"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2024-06-02T05:57:03.000Z" title="2024/6/2 13:57:03">2024-06-02</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E6%95%B0%E5%AD%A6/">数学</a></span><span class="level-item">5 分钟读完 (大约766个字)</span></div></div><h1 class="title is-3 is-size-4-mobile">冲量定理</h1><div class="content"><p>冲量定理给出了将非齐次微分方程化为齐次方程的求解方法，广泛运用于常微分方程、偏微分方程的求解中。</p>
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 8.1.1"></head><body class="is-1-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-12"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2024-06-02T05:57:03.000Z" title="2024/6/2 13:57:03">2024-06-02</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E6%95%B0%E5%AD%A6/">数学</a></span><span class="level-item">5 分钟读完 (大约775个字)</span></div></div><h1 class="title is-3 is-size-4-mobile">冲量定理</h1><div class="content"><p>冲量定理给出了将非齐次微分方程化为齐次方程的求解方法，广泛运用于常微分方程、偏微分方程的求解中。</p>
 <p>该定理的证明需要用到变上下限的定积分的求导，我记得同济大学出版社的高等数学里有，其他版本的高数里应该也有。下面给一个不那么严格的推导（严格的需要对这些函数的性质做假设），已有相关的知识可以跳过这一部分。</p>
 <div>
 $$
 F(x) = \int_{\alpha(x)}^{\beta(x)} f(x,y)\mathrm{d}y
-$$
-</div>
+\tag{1}
+$$</div>
 
 
 <p>直接用导数的定义</p>
@@ -46,16 +46,16 @@ F(x+\Delta x)-F(x) = \int_{\alpha(x+\Delta x)}^{\beta(x+\Delta x)} f(x+\Delta x,
 = \int_{\alpha(x+\Delta x)}^{\beta(x+\Delta x)} f(x+\Delta x,y) - f(x,y)\mathrm{d}y + \int_{\alpha(x+\Delta x)}^{\beta(x+\Delta x)} f(x,y)\mathrm{d}y - \int_{\alpha(x)}^{\beta(x)} f(x,y)\mathrm{d}y \\
 = \int_{\alpha(x+\Delta x)}^{\beta(x+\Delta x)} f(x+\Delta x,y) - f(x,y)\mathrm{d}y + \int_{\beta(x)}^{\beta(x+\Delta x)} f(x,y)\mathrm{d}y - \int_{\alpha(x)}^{\alpha(x+\Delta x)} f(x,y)\mathrm{d}y \\
 \\\end{gathered}
-$$
-</div>
+\tag{2}
+$$</div>
 
 
 <p>不追求严格证明，第一项在除 $\Delta x$ 、求极限后，上下限就是 $\beta(x),\alpha(x)$ ，积分里面变成 $\partial f &#x2F; \partial x$ ；第二、三项运用积分中值定理（以第二项为例）</p>
 <div>
 $$
 \cfrac{1}{\Delta x}\int_{\beta(x)}^{\beta(x+\Delta x)} f(x,y)\mathrm{d}y =\cfrac{\beta(x+\Delta x) - \beta(x)}{\Delta x} f(x,\varepsilon)
-$$
-</div>
+\tag{3}
+$$</div>
 
 <p>其中 $\beta(x) \leq \varepsilon \leq \beta(x+\Delta x)$ </p>
 <p>所以导数为</p>
@@ -65,8 +65,8 @@ $$
 \cfrac{\mathrm{d}F(x)}{\mathrm{d}x}=\lim_{\Delta x \to 0} \cfrac{F(x+\Delta x)-F(x)}{\Delta x} \\
 = \int_{\alpha(x)}^{\beta(x)} \cfrac{\partial f(x,y)}{\partial x} \mathrm{d}y + \cfrac{\mathrm{d}\beta(x)}{\mathrm{d}x}f(x,\beta(x)) - \cfrac{\mathrm{d}\alpha(x)}{\mathrm{d}x}f(x, \alpha(x)) \\
 \\\end{gathered}
-$$
-</div>
+\tag{4}
+$$</div>
 
 
 <h2 id="冲量定理的证明"><a href="#冲量定理的证明" class="headerlink" title="冲量定理的证明"></a>冲量定理的证明</h2><p>求解非齐次方程</p>
@@ -77,8 +77,8 @@ $$
 x(0)=0 \\
 \cfrac{\mathrm{d}}{\mathrm{d}t}x(0)=0 \\
 \end{cases}
-$$
-</div>
+\tag{5}
+$$</div>
 
 
 <p>构造 $X(t,\tau)$ 为下齐次方程的解</p>
@@ -89,16 +89,16 @@ $$
 X(\tau,\tau)=0 \\
 \cfrac{\mathrm{d}}{\mathrm{d}t}X(\tau,\tau)=f(\tau) \\
 \end{cases}
-$$
-</div>
+\tag{6}
+$$</div>
 
 
 <p>下证明下面这个就是对应非齐次方程的解，对该函数求导时用到了我们先前推导的结论</p>
 <div>
 $$
 x(t)=\int_0^t X(t,\tau) \mathrm{d}\tau
-$$
-</div>
+\tag{7}
+$$</div>
 
 
 <div>
@@ -107,8 +107,8 @@ $$
 \cfrac{\mathrm{d}}{\mathrm{d}t}x(t) = \int_0^t \cfrac{\partial X(t,\tau)}{\partial t} \mathrm{d}\tau + X(t,t) \\
 =\int_0^t \cfrac{\partial X(t,\tau)}{\partial t} \mathrm{d}\tau
 \\\end{gathered}
-$$
-</div>
+\tag{8}
+$$</div>
 
 
 <div>
@@ -117,12 +117,12 @@ $$
 \cfrac{\mathrm{d}^2}{\mathrm{d}t^2}x(t)=\int_0^t \cfrac{\partial^2 X(t,\tau)}{\partial t^2} \mathrm{d}\tau + \cfrac{\partial X(t,t)}{\partial t} \\
 =\int_0^t \cfrac{\partial^2 X(t,\tau)}{\partial t^2} \mathrm{d}\tau + f(t)
 \\\end{gathered}
-$$
-</div>
+\tag{9}
+$$</div>
 
 
 <p>直接代入非齐次方程，根据 $X(t,\tau)$ 满足的齐次方程可知 $x(t)$ 满足非齐次方程，在上面这些式子里代入初值 $t&#x3D;0$ 就可见 $x(t)$ 也满足初值条件。</p>
-</div><div class="article-licensing box"><div class="licensing-title"><p>冲量定理</p><p><a href="https://yuchenxi2000.github.io/2024/06/02/冲量定理/">https://yuchenxi2000.github.io/2024/06/02/冲量定理/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>Chenxi Yu</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2024-06-02</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2026-03-30</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/%E7%89%A9%E7%90%86/">物理</a><a class="link-muted mr-2" rel="tag" href="/tags/%E6%95%B0%E5%AD%A6/">数学</a><a class="link-muted mr-2" rel="tag" href="/tags/%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B/">微分方程</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2024/07/24/%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E4%B8%AD%E6%97%B6%E9%97%B4%E5%8F%8D%E6%BC%94%E7%AE%97%E7%AC%A6_v2/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">量子力学中时间反演算符_v2</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2024/05/30/Sobel%E7%AE%97%E5%AD%90/"><span class="level-item">Sobel算子</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><!--!--><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a><p class="is-size-7"><span>&copy; 2026 Chenxi Yu</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="fab fa-creative-commons-nc"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/yuchenxi2000"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
+</div><div class="article-licensing box"><div class="licensing-title"><p>冲量定理</p><p><a href="https://yuchenxi2000.github.io/2024/06/02/冲量定理/">https://yuchenxi2000.github.io/2024/06/02/冲量定理/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>Chenxi Yu</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2024-06-02</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2026-04-03</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/%E7%89%A9%E7%90%86/">物理</a><a class="link-muted mr-2" rel="tag" href="/tags/%E6%95%B0%E5%AD%A6/">数学</a><a class="link-muted mr-2" rel="tag" href="/tags/%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B/">微分方程</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2024/07/24/%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E4%B8%AD%E6%97%B6%E9%97%B4%E5%8F%8D%E6%BC%94%E7%AE%97%E7%AC%A6_v2/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">量子力学中时间反演算符_v2</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2024/05/30/Sobel%E7%AE%97%E5%AD%90/"><span class="level-item">Sobel算子</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><!--!--><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a><p class="is-size-7"><span>&copy; 2026 Chenxi Yu</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="fab fa-creative-commons-nc"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/yuchenxi2000"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
             article: {
                 highlight: {
                     clipboard: true,

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>有限温度下Wick定理 - YCX&#039;s Blog</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="YCX&#039;s Blog"><meta name="msapplication-TileImage" content="favicon.ico"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="YCX&#039;s Blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="$$ \newcommand{\Tr}{\operatorname{Tr}} $$    该推导主要参考了[1]，补充了一些细节 体系哈密顿量  $$ H &amp;#x3D; \sum_i E_i c_i^\dagger c_i $$   我们计算偶数个费米子算符的乘积的统计平均（奇数个算符情形为 $0$ ，因为此时必定存在未配对的产生&amp;#x2F;湮灭算符）。  $$ \braket{A_1 A_2 \dots"><meta property="og:type" content="blog"><meta property="og:title" content="有限温度下Wick定理"><meta property="og:url" content="https://yuchenxi2000.github.io/2025/12/09/%E6%9C%89%E9%99%90%E6%B8%A9%E5%BA%A6%E4%B8%8BWick%E5%AE%9A%E7%90%86/"><meta property="og:site_name" content="YCX&#039;s Blog"><meta property="og:description" content="$$ \newcommand{\Tr}{\operatorname{Tr}} $$    该推导主要参考了[1]，补充了一些细节 体系哈密顿量  $$ H &amp;#x3D; \sum_i E_i c_i^\dagger c_i $$   我们计算偶数个费米子算符的乘积的统计平均（奇数个算符情形为 $0$ ，因为此时必定存在未配对的产生&amp;#x2F;湮灭算符）。  $$ \braket{A_1 A_2 \dots"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://yuchenxi2000.github.io/img/og_image.png"><meta property="article:published_time" content="2025-12-08T16:43:22.000Z"><meta property="article:modified_time" content="2026-03-30T12:14:20.108Z"><meta property="article:author" content="Chenxi Yu"><meta property="article:tag" content="物理"><meta property="article:tag" content="量子力学"><meta property="article:tag" content="统计力学"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://yuchenxi2000.github.io/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://yuchenxi2000.github.io/2025/12/09/%E6%9C%89%E9%99%90%E6%B8%A9%E5%BA%A6%E4%B8%8BWick%E5%AE%9A%E7%90%86/"},"headline":"有限温度下Wick定理","image":["https://yuchenxi2000.github.io/img/og_image.png"],"datePublished":"2025-12-08T16:43:22.000Z","dateModified":"2026-03-30T12:14:20.108Z","author":{"@type":"Person","name":"Chenxi Yu"},"publisher":{"@type":"Organization","name":"YCX's Blog","logo":{"@type":"ImageObject","url":"https://yuchenxi2000.github.io/2025/12/09/%E6%9C%89%E9%99%90%E6%B8%A9%E5%BA%A6%E4%B8%8BWick%E5%AE%9A%E7%90%86/android-chrome-512x512.png"}},"description":"$$ \\newcommand{\\Tr}{\\operatorname{Tr}} $$    该推导主要参考了[1]，补充了一些细节 体系哈密顿量  $$ H &#x3D; \\sum_i E_i c_i^\\dagger c_i $$   我们计算偶数个费米子算符的乘积的统计平均（奇数个算符情形为 $0$ ，因为此时必定存在未配对的产生&#x2F;湮灭算符）。  $$ \\braket{A_1 A_2 \\dots"}</script><link rel="canonical" href="https://yuchenxi2000.github.io/2025/12/09/%E6%9C%89%E9%99%90%E6%B8%A9%E5%BA%A6%E4%B8%8BWick%E5%AE%9A%E7%90%86/"><link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link data-pjax rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link data-pjax rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!--!--><!-- hexo injector head_end start --><script>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>有限温度下Wick定理 - YCX&#039;s Blog</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="YCX&#039;s Blog"><meta name="msapplication-TileImage" content="favicon.ico"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="YCX&#039;s Blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="该推导主要参考了[1]，补充了一些细节 体系哈密顿量  $$ H &amp;#x3D; \sum_i E_i c_i^\dagger c_i \tag{1} $$  我们计算偶数个费米子算符的乘积的统计平均（奇数个算符情形为 $0$ ，因为此时必定存在未配对的产生&amp;#x2F;湮灭算符）。  $$ \braket{A_1 A_2 \dots A_n} &amp;#x3D; \cfrac{\operatorname{Tr} \left["><meta property="og:type" content="blog"><meta property="og:title" content="有限温度下Wick定理"><meta property="og:url" content="https://yuchenxi2000.github.io/2025/12/09/%E6%9C%89%E9%99%90%E6%B8%A9%E5%BA%A6%E4%B8%8BWick%E5%AE%9A%E7%90%86/"><meta property="og:site_name" content="YCX&#039;s Blog"><meta property="og:description" content="该推导主要参考了[1]，补充了一些细节 体系哈密顿量  $$ H &amp;#x3D; \sum_i E_i c_i^\dagger c_i \tag{1} $$  我们计算偶数个费米子算符的乘积的统计平均（奇数个算符情形为 $0$ ，因为此时必定存在未配对的产生&amp;#x2F;湮灭算符）。  $$ \braket{A_1 A_2 \dots A_n} &amp;#x3D; \cfrac{\operatorname{Tr} \left["><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://yuchenxi2000.github.io/img/og_image.png"><meta property="article:published_time" content="2025-12-08T16:43:22.000Z"><meta property="article:modified_time" content="2026-04-03T14:05:09.654Z"><meta property="article:author" content="Chenxi Yu"><meta property="article:tag" content="物理"><meta property="article:tag" content="量子力学"><meta property="article:tag" content="统计力学"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://yuchenxi2000.github.io/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://yuchenxi2000.github.io/2025/12/09/%E6%9C%89%E9%99%90%E6%B8%A9%E5%BA%A6%E4%B8%8BWick%E5%AE%9A%E7%90%86/"},"headline":"有限温度下Wick定理","image":["https://yuchenxi2000.github.io/img/og_image.png"],"datePublished":"2025-12-08T16:43:22.000Z","dateModified":"2026-04-03T14:05:09.654Z","author":{"@type":"Person","name":"Chenxi Yu"},"publisher":{"@type":"Organization","name":"YCX's Blog","logo":{"@type":"ImageObject","url":"https://yuchenxi2000.github.io/2025/12/09/%E6%9C%89%E9%99%90%E6%B8%A9%E5%BA%A6%E4%B8%8BWick%E5%AE%9A%E7%90%86/android-chrome-512x512.png"}},"description":"该推导主要参考了[1]，补充了一些细节 体系哈密顿量  $$ H &#x3D; \\sum_i E_i c_i^\\dagger c_i \\tag{1} $$  我们计算偶数个费米子算符的乘积的统计平均（奇数个算符情形为 $0$ ，因为此时必定存在未配对的产生&#x2F;湮灭算符）。  $$ \\braket{A_1 A_2 \\dots A_n} &#x3D; \\cfrac{\\operatorname{Tr} \\left["}</script><link rel="canonical" href="https://yuchenxi2000.github.io/2025/12/09/%E6%9C%89%E9%99%90%E6%B8%A9%E5%BA%A6%E4%B8%8BWick%E5%AE%9A%E7%90%86/"><link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link data-pjax rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link data-pjax rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!--!--><!-- hexo injector head_end start --><script>
   (function () {
       function switchTab() {
           if (!location.hash) {
@@ -29,27 +29,20 @@
       switchTab();
       window.addEventListener('hashchange', switchTab, false);
   })();
-  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 8.1.1"></head><body class="is-1-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-12"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2025-12-08T16:43:22.000Z" title="2025/12/9 00:43:22">2025-12-09</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E7%89%A9%E7%90%86/">物理</a></span><span class="level-item">9 分钟读完 (大约1288个字)</span></div></div><h1 class="title is-3 is-size-4-mobile">有限温度下Wick定理</h1><div class="content"><div>
-$$
-\newcommand{\Tr}{\operatorname{Tr}}
-$$
-</div>
-
-
-<p>该推导主要参考了[1]，补充了一些细节</p>
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 8.1.1"></head><body class="is-1-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-12"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2025-12-08T16:43:22.000Z" title="2025/12/9 00:43:22">2025-12-09</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E7%89%A9%E7%90%86/">物理</a></span><span class="level-item">8 分钟读完 (大约1263个字)</span></div></div><h1 class="title is-3 is-size-4-mobile">有限温度下Wick定理</h1><div class="content"><p>该推导主要参考了[1]，补充了一些细节</p>
 <p>体系哈密顿量</p>
 <div>
 $$
 H = \sum_i E_i c_i^\dagger c_i
-$$
-</div>
+\tag{1}
+$$</div>
 
 <p>我们计算偶数个费米子算符的乘积的统计平均（奇数个算符情形为 $0$ ，因为此时必定存在未配对的产生&#x2F;湮灭算符）。</p>
 <div>
 $$
-\braket{A_1 A_2 \dots A_n} = \cfrac{\operatorname{Tr} \left\lbrack e^{-\beta (H - \mu N)}A_1 A_2 \dots A_n\right\rbrack }{\operatorname{Tr} e^{-\beta (H - \mu N)}}
-$$
-</div>
+\braket{A_1 A_2 \dots A_n} = \cfrac{\operatorname{Tr} \left[e^{-\beta (H - \mu N)}A_1 A_2 \dots A_n\right]}{\operatorname{Tr} e^{-\beta (H - \mu N)}}
+\tag{2}
+$$</div>
 
 
 <p>其中算符 $A_i,i&#x3D;1,2,\dots n$ 为任意产生或者湮灭算符， $\braket{A}$ 表示算子 $A$ 的统计平均。我们采用巨正则系综，为了计算简便。</p>
@@ -57,39 +50,39 @@ $$
 <div>
 $$
 \begin{gathered}
-\operatorname{Tr} \left\lbrack e^{-\beta (H - \mu N)}A_1 A_2 \dots A_n\right\rbrack  \\
-= \operatorname{Tr} \left\lbrack e^{-\beta (H - \mu N)} \{A_1 A_2\} A_3 \dots A_n\right\rbrack  - \operatorname{Tr} \left\lbrack e^{-\beta (H - \mu N)} A_2 \{A_1 A_3\} \dots A_n\right\rbrack  \\
-+ \dots + \operatorname{Tr} \left\lbrack e^{-\beta (H - \mu N)} A_2 \dots \{A_n, A_1\}\right\rbrack  - \operatorname{Tr} \left\lbrack e^{-\beta (H - \mu N)} A_2 \dots A_n A_1\right\rbrack 
+\operatorname{Tr} \left[e^{-\beta (H - \mu N)}A_1 A_2 \dots A_n\right] \\
+= \operatorname{Tr} \left[e^{-\beta (H - \mu N)} \{A_1 A_2\} A_3 \dots A_n\right] - \operatorname{Tr} \left[e^{-\beta (H - \mu N)} A_2 \{A_1 A_3\} \dots A_n\right] \\
++ \dots + \operatorname{Tr} \left[e^{-\beta (H - \mu N)} A_2 \dots \{A_n, A_1\}\right] - \operatorname{Tr} \left[e^{-\beta (H - \mu N)} A_2 \dots A_n A_1\right]
 \\\end{gathered}
-$$
-</div>
+\tag{3}
+$$</div>
 
 <p>对于最后一个算符 $A_1$ ，利用矩阵的迹的循环性质可以直接提到最前面。然后我们将其与 $e^{-\beta (H - \mu N)}$ 交换：</p>
 <div>
 $$
 A_1 e^{-\beta (H - \mu N)} = e^{s_1 \beta (E_1-\mu)} e^{-\beta (H - \mu N)} A_1
 \label{eq1}
-$$
-</div>
+\tag{4}
+$$</div>
 
 <p>其中 $E_1$ 为算符 $A_1$ 对应能级的能量，对于产生算符 $s_1&#x3D;+1$ ，对于湮灭算符 $s_1&#x3D;-1$ 。</p>
 <p>这个式子的证明我们留到最后。运用这个式子后：</p>
 <div>
 $$
 \begin{gathered}
-\left\lbrack e^{s_1\beta(E_1 - \mu)} + 1\right\rbrack \operatorname{Tr} \left\lbrack e^{-\beta (H - \mu N)}A_1 A_2 \dots A_n\right\rbrack  \\
-= \operatorname{Tr} \left\lbrack e^{-\beta (H - \mu N)} \{A_1 A_2\} A_3 \dots A_n\right\rbrack  - \operatorname{Tr} \left\lbrack e^{-\beta (H - \mu N)} A_2 \{A_1 A_3\} \dots A_n\right\rbrack  + \dots \\
-+ \operatorname{Tr} \left\lbrack e^{-\beta (H - \mu N)} A_2 \dots \{A_n, A_1\}\right\rbrack 
+\left[e^{s_1\beta(E_1 - \mu)} + 1\right]\operatorname{Tr} \left[e^{-\beta (H - \mu N)}A_1 A_2 \dots A_n\right] \\
+= \operatorname{Tr} \left[e^{-\beta (H - \mu N)} \{A_1 A_2\} A_3 \dots A_n\right] - \operatorname{Tr} \left[e^{-\beta (H - \mu N)} A_2 \{A_1 A_3\} \dots A_n\right] + \dots \\
++ \operatorname{Tr} \left[e^{-\beta (H - \mu N)} A_2 \dots \{A_n, A_1\}\right]
 \\\end{gathered}
-$$
-</div>
+\tag{5}
+$$</div>
 
 <p> ${A_i, A_j}$ 是c-number，可以提到外面。再运用下式：</p>
 <div>
 $$
-\{A_i,A_j\} = \left\lbrack e^{s_i\beta(E_i - \mu)} + 1\right\rbrack  \braket{A_iA_j}
-$$
-</div>
+\{A_i,A_j\} = \left[e^{s_i\beta(E_i - \mu)} + 1\right] \braket{A_iA_j}
+\tag{6}
+$$</div>
 
 <p>该式即占据数的费米-狄拉克分布（参见<a href="/2025/12/09/%E8%B4%B9%E7%B1%B3%E5%AD%90%E5%92%8C%E6%B3%A2%E8%89%B2%E5%AD%90%E7%9A%84%E7%BB%9F%E8%AE%A1%E5%88%86%E5%B8%83%EF%BC%88%E4%BA%8C%EF%BC%89/" title="费米子和波色子的统计分布（二）">费米子和波色子的统计分布（二）</a>），它的证明只需要分情况考虑。俩算符同时是产生&#x2F;湮灭算符，或者下标不同（对应不同能级）时左右都为 $0$ ， $A_i&#x3D;c_k^\dagger,A_j&#x3D;c_k$ 时回到占据数的费米-狄拉克分布表达式， $A_i&#x3D;c_k,A_j&#x3D;c_k^\dagger$ 的情形：</p>
 <div>
@@ -100,19 +93,19 @@ $$
 = \cfrac{1}{e^{-\beta (E_k - \mu)} + 1} \\
 = \cfrac{\{c_k c_k^\dagger\}}{e^{-\beta (E_k - \mu)} + 1} \\
 \\\end{gathered}
-$$
-</div>
+\tag{7}
+$$</div>
 
 <p>我们将 ${A_i, A_j}$ 提到外面，然后替换成 $\braket{A_i A_j}$ ，</p>
 <div>
 $$
 \begin{gathered}
-\operatorname{Tr} \left\lbrack e^{-\beta (H - \mu N)}A_1 A_2 \dots A_n\right\rbrack  \\
-= \braket{A_1 A_2} \operatorname{Tr} \left\lbrack e^{-\beta (H - \mu N)} A_3 \dots A_n\right\rbrack  - \braket{A_1 A_3} \operatorname{Tr} \left\lbrack e^{-\beta (H - \mu N)} A_2 A_4 \dots A_n\right\rbrack  + \dots \\
-+ \braket{A_1 A_n} \operatorname{Tr} \left\lbrack e^{-\beta (H - \mu N)} A_2 \dots A_{n-1}\right\rbrack 
+\operatorname{Tr} \left[e^{-\beta (H - \mu N)}A_1 A_2 \dots A_n\right] \\
+= \braket{A_1 A_2} \operatorname{Tr} \left[e^{-\beta (H - \mu N)} A_3 \dots A_n\right] - \braket{A_1 A_3} \operatorname{Tr} \left[e^{-\beta (H - \mu N)} A_2 A_4 \dots A_n\right] + \dots \\
++ \braket{A_1 A_n} \operatorname{Tr} \left[e^{-\beta (H - \mu N)} A_2 \dots A_{n-1}\right]
 \\\end{gathered}
-$$
-</div>
+\tag{8}
+$$</div>
 
 <p>等式两边除 $\operatorname{Tr} e^{-\beta (H - \mu N)}$ ，</p>
 <div>
@@ -121,16 +114,16 @@ $$
 \braket{A_1 A_2 \dots A_n} \\
 = \braket{A_1 A_2} \braket{A_3 \dots A_n} - \braket{A_1 A_3} \braket{A_2 A_4 \dots A_n} + \dots + \braket{A_1 A_n} \braket{A_2 \dots A_{n-1}}
 \\\end{gathered}
-$$
-</div>
+\tag{9}
+$$</div>
 
 <p>最后用数学归纳法即可证明Wick’s theorem。</p>
-<h2 id="式-eqref-eq1-的证明"><a href="#式-eqref-eq1-的证明" class="headerlink" title="式 $\eqref{eq1}$ 的证明"></a>式 $\eqref{eq1}$ 的证明</h2><p>只需要证明等式两边算子作用在所有的波函数上后相等。对于某个能量与粒子数的共同本征态 $\ket{\phi}$ ，能量本征值为 $E$ ，粒子数本征值为 $N_\phi$ ，考虑等式右边，计算右边算符在 $\ket{\phi}$ 上的作用。注意 $\ket{\phi}$ 为哈密顿算子 $H$ 与粒子数算符 $N$ 的本征态，同时也是 $e^{-\beta (H - \mu N)}$ 的本征态，这个结论根据 $\lbrack H,N\rbrack &#x3D;0$ ，以及算子的指数函数展开式可以得出。</p>
+<h2 id="式-eqref-eq1-的证明"><a href="#式-eqref-eq1-的证明" class="headerlink" title="式 $\eqref{eq1}$ 的证明"></a>式 $\eqref{eq1}$ 的证明</h2><p>只需要证明等式两边算子作用在所有的波函数上后相等。对于某个能量与粒子数的共同本征态 $\ket{\phi}$ ，能量本征值为 $E$ ，粒子数本征值为 $N_\phi$ ，考虑等式右边，计算右边算符在 $\ket{\phi}$ 上的作用。注意 $\ket{\phi}$ 为哈密顿算子 $H$ 与粒子数算符 $N$ 的本征态，同时也是 $e^{-\beta (H - \mu N)}$ 的本征态，这个结论根据 $[H,N]&#x3D;0$ ，以及算子的指数函数展开式可以得出。</p>
 <p>假设 $A_1$ 为产生算符，且 $\ket{\phi}$ 中 $A_1$ 对应的能级 $1$ 未占据（否则两边都为 $0$ ），那么 $A_1\ket{\phi}$ 中能级 $1$ 已占据。因此</p>
 <div>
-$$A_1\ket{\phi}$$
-</div>
-为能量 $H=E+E_1$ ，粒子数 $N=N_\phi+1$ 的共同本征态，于是有
+$$A_1\ket{\phi}\tag{10}
+$$</div>
+为能量 $H=E+E\_1$ ，粒子数 $N=N\_\phi+1$ 的共同本征态，于是有
 <div>
 $$
 \begin{gathered}
@@ -140,15 +133,15 @@ e^{\beta (E_1-\mu)} e^{-\beta (H - \mu N)} A_1 \ket{\phi} \\
 = A_1 e^{-\beta (E - \mu N_\phi)} \ket{\phi} \\
 = A_1 e^{-\beta (H - \mu N)} \ket{\phi} \\
 \\\end{gathered}
-$$
-</div>
+\tag{11}
+$$</div>
 
 
 <p>假设 $A_1$ 为湮灭算符，且 $\ket{\phi}$ 中 $A_1$ 对应的能级 $1$ 已占据（否则两边都为 $0$ ），那么 $A_1\ket{\phi}$ 中能级 $1$ 未占据。因此</p>
 <div>
-$$A_1\ket{\phi}$$
-</div>
-为能量 $H=E-E_1$ ，粒子数 $N=N_\phi-1$ 的共同本征态，于是有
+$$A_1\ket{\phi}\tag{12}
+$$</div>
+为能量 $H=E-E\_1$ ，粒子数 $N=N\_\phi-1$ 的共同本征态，于是有
 <div>
 $$
 \begin{gathered}
@@ -158,12 +151,12 @@ e^{-\beta (E_1-\mu)} e^{-\beta (H - \mu N)} A_1 \ket{\phi} \\
 = A_1 e^{-\beta (E - \mu N_\phi)} \ket{\phi} \\
 = A_1 e^{-\beta (H - \mu N)} \ket{\phi} \\
 \\\end{gathered}
-$$
-</div>
+\tag{13}
+$$</div>
 
 <p>等式两边算子作用在任意波函数上相等，因此该算符等式成立。</p>
 <h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><p>[1] Gabriele Giuliani and Giovanni Vignale, Quantum Theory of the Electron Liquid</p>
-</div><div class="article-licensing box"><div class="licensing-title"><p>有限温度下Wick定理</p><p><a href="https://yuchenxi2000.github.io/2025/12/09/有限温度下Wick定理/">https://yuchenxi2000.github.io/2025/12/09/有限温度下Wick定理/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>Chenxi Yu</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2025-12-09</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2026-03-30</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/%E7%89%A9%E7%90%86/">物理</a><a class="link-muted mr-2" rel="tag" href="/tags/%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6/">量子力学</a><a class="link-muted mr-2" rel="tag" href="/tags/%E7%BB%9F%E8%AE%A1%E5%8A%9B%E5%AD%A6/">统计力学</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2025/12/19/%E9%9D%9E%E5%B9%B3%E8%A1%A1%E6%A0%BC%E6%9E%97%E5%87%BD%E6%95%B0%EF%BC%88%E4%B8%89%EF%BC%89%EF%BC%9A%E7%94%B5%E6%B5%81%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%8E%A8%E5%AF%BC/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">非平衡格林函数（三）：电流表达式推导</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2025/12/09/%E8%B4%B9%E7%B1%B3%E5%AD%90%E5%92%8C%E6%B3%A2%E8%89%B2%E5%AD%90%E7%9A%84%E7%BB%9F%E8%AE%A1%E5%88%86%E5%B8%83%EF%BC%88%E4%BA%8C%EF%BC%89/"><span class="level-item">费米子和波色子的统计分布（二）</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><!--!--><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a><p class="is-size-7"><span>&copy; 2026 Chenxi Yu</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="fab fa-creative-commons-nc"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/yuchenxi2000"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
+</div><div class="article-licensing box"><div class="licensing-title"><p>有限温度下Wick定理</p><p><a href="https://yuchenxi2000.github.io/2025/12/09/有限温度下Wick定理/">https://yuchenxi2000.github.io/2025/12/09/有限温度下Wick定理/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>Chenxi Yu</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2025-12-09</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2026-04-03</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/%E7%89%A9%E7%90%86/">物理</a><a class="link-muted mr-2" rel="tag" href="/tags/%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6/">量子力学</a><a class="link-muted mr-2" rel="tag" href="/tags/%E7%BB%9F%E8%AE%A1%E5%8A%9B%E5%AD%A6/">统计力学</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2025/12/19/%E9%9D%9E%E5%B9%B3%E8%A1%A1%E6%A0%BC%E6%9E%97%E5%87%BD%E6%95%B0%EF%BC%88%E4%B8%89%EF%BC%89%EF%BC%9A%E7%94%B5%E6%B5%81%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%8E%A8%E5%AF%BC/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">非平衡格林函数（三）：电流表达式推导</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2025/12/09/%E8%B4%B9%E7%B1%B3%E5%AD%90%E5%92%8C%E6%B3%A2%E8%89%B2%E5%AD%90%E7%9A%84%E7%BB%9F%E8%AE%A1%E5%88%86%E5%B8%83%EF%BC%88%E4%BA%8C%EF%BC%89/"><span class="level-item">费米子和波色子的统计分布（二）</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><!--!--><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a><p class="is-size-7"><span>&copy; 2026 Chenxi Yu</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="fab fa-creative-commons-nc"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/yuchenxi2000"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
             article: {
                 highlight: {
                     clipboard: true,

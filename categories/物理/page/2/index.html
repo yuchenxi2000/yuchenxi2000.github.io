@@ -29,50 +29,218 @@
       switchTab();
       window.addEventListener('hashchange', switchTab, false);
   })();
-  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 8.1.1"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><div class="card-content"><nav class="breadcrumb" aria-label="breadcrumbs"><ul><li><a href="/categories/">分类</a></li><li class="is-active"><a href="#" aria-current="page">物理</a></li></ul></nav></div></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2025-01-20T07:17:41.000Z" title="2025/1/20 15:17:41">2025-01-20</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E7%89%A9%E7%90%86/">物理</a></span><span class="level-item">16 分钟读完 (大约2410个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2025/01/20/%E6%A4%AD%E7%90%83%E9%9D%99%E7%94%B5%E5%9C%BA%E9%97%AE%E9%A2%98/">椭球静电场问题</a></p><div class="content"><h2 id="真空中金属椭球"><a href="#真空中金属椭球" class="headerlink" title="真空中金属椭球"></a>真空中金属椭球</h2><p>建立椭球坐标系（参见<a href="/2025/01/19/%E6%A4%AD%E7%90%83%E5%9D%90%E6%A0%87%E7%B3%BB/" title="椭球坐标系">椭球坐标系</a>）。设椭球方程 $\xi&#x3D;0$ 。</p>
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 8.1.1"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><div class="card-content"><nav class="breadcrumb" aria-label="breadcrumbs"><ul><li><a href="/categories/">分类</a></li><li class="is-active"><a href="#" aria-current="page">物理</a></li></ul></nav></div></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2025-07-20T06:30:44.000Z" title="2025/7/20 14:30:44">2025-07-20</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E7%89%A9%E7%90%86/">物理</a></span><span class="level-item">10 分钟读完 (大约1525个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2025/07/20/%E5%90%84%E5%90%91%E5%90%8C%E6%80%A7%E6%9D%90%E6%96%99%E6%9C%AC%E6%9E%84%E5%85%B3%E7%B3%BB/">各向同性材料本构关系</a></p><div class="content"><p>在小形变近似下，应力张量、弹性张量、应变张量有如下线性关系</p>
+<div>
+$$
+\sigma=C:\varepsilon
+\tag{1}
+$$</div>
+
+
+<div>
+$$
+\sigma_{ij}=C_{ijkt}\varepsilon_{kt}
+\tag{2}
+$$</div>
+
+
+<p> $\sigma_{ij},\varepsilon_{kt}$ 为对称张量，所以可以用Voigt记号</p>
+<div>
+$$
+\varepsilon=\begin{pmatrix}
+\varepsilon_{xx} \\
+\varepsilon_{yy} \\
+\varepsilon_{zz} \\
+\varepsilon_{yz} \\
+\varepsilon_{zx} \\
+\varepsilon_{xy} \\
+\end{pmatrix}
+\tag{3}
+$$</div>
+
+<p> $\sigma$ 类似， $C$ 的独立分量数从81降到36。</p>
+<p>假设材料各向同性，我们求弹性张量的独立分量数目。方法是取特定的正交变换，对比变换前后的弹性张量中的系数。</p>
+<p> $x$ 轴反射变换：</p>
+<div>
+$$
+\begin{pmatrix}
+\varepsilon_{xx}' \\
+\varepsilon_{yy}' \\
+\varepsilon_{zz}' \\
+\varepsilon_{yz}' \\
+\varepsilon_{zx}' \\
+\varepsilon_{xy}' \\
+\end{pmatrix}
+=
+\begin{pmatrix}
+1 & 0 & 0 & 0 & 0 & 0 \\
+0 & 1 & 0 & 0 & 0 & 0 \\
+0 & 0 & 1 & 0 & 0 & 0 \\
+0 & 0 & 0 & 1 & 0 & 0 \\
+0 & 0 & 0 & 0 & -1 & 0 \\
+0 & 0 & 0 & 0 & 0 & -1 \\
+\end{pmatrix}
+\begin{pmatrix}
+\varepsilon_{xx} \\
+\varepsilon_{yy} \\
+\varepsilon_{zz} \\
+\varepsilon_{yz} \\
+\varepsilon_{zx} \\
+\varepsilon_{xy} \\
+\end{pmatrix}
+\tag{4}
+$$</div>
+
+<p>假设变换矩阵为 $T$ ，变换下 $C’\rightarrow T^{-1}CT$ ：</p>
+<div>
+$$
+\begin{pmatrix}
+C_{00} & C_{01} & C_{02} & C_{03} & C_{04} & C_{05} \\
+C_{10} & C_{11} & C_{12} & C_{13} & C_{14} & C_{15} \\
+C_{20} & C_{21} & C_{22} & C_{23} & C_{24} & C_{25} \\
+C_{30} & C_{31} & C_{32} & C_{33} & C_{34} & C_{35} \\
+C_{40} & C_{41} & C_{42} & C_{43} & C_{44} & C_{45} \\
+C_{50} & C_{51} & C_{52} & C_{53} & C_{54} & C_{55} \\
+\end{pmatrix}
+\rightarrow
+\begin{pmatrix}
+C_{00} & C_{01} & C_{02} & C_{03} & -C_{04} & -C_{05} \\
+C_{10} & C_{11} & C_{12} & C_{13} & -C_{14} & -C_{15} \\
+C_{20} & C_{21} & C_{22} & C_{23} & -C_{24} & -C_{25} \\
+C_{30} & C_{31} & C_{32} & C_{33} & -C_{34} & -C_{35} \\
+-C_{40} & -C_{41} & -C_{42} & -C_{43} & C_{44} & C_{45} \\
+-C_{50} & -C_{51} & -C_{52} & -C_{53} & C_{54} & C_{55} \\
+\end{pmatrix}
+\tag{5}
+$$</div>
+
+<p>所以弹性张量一些分量为 $0$ ，有如下形式</p>
+<div>
+$$
+\begin{pmatrix}
+C_{00} & C_{01} & C_{02} & 0 & 0 & 0 \\
+C_{10} & C_{11} & C_{12} & 0 & 0 & 0 \\
+C_{20} & C_{21} & C_{22} & 0 & 0 & 0 \\
+0 & 0 & 0 & C_{33} & 0 & 0 \\
+0 & 0 & 0 & 0 & C_{44} & 0 \\
+0 & 0 & 0 & 0 & 0 & C_{55} \\
+\end{pmatrix}
+\tag{6}
+$$</div>
+
+<p>交换坐标轴变换：</p>
+<div>
+$$
+\begin{pmatrix}
+\varepsilon_{xx}' \\
+\varepsilon_{yy}' \\
+\varepsilon_{zz}' \\
+\varepsilon_{yz}' \\
+\varepsilon_{zx}' \\
+\varepsilon_{xy}' \\
+\end{pmatrix}
+=
+\begin{pmatrix}
+0 & 1 & 0 & 0 & 0 & 0 \\
+1 & 0 & 0 & 0 & 0 & 0 \\
+0 & 0 & 1 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 & 1 & 0 \\
+0 & 0 & 0 & 1 & 0 & 0 \\
+0 & 0 & 0 & 0 & 0 & 1 \\
+\end{pmatrix}
+\begin{pmatrix}
+\varepsilon_{xx} \\
+\varepsilon_{yy} \\
+\varepsilon_{zz} \\
+\varepsilon_{yz} \\
+\varepsilon_{zx} \\
+\varepsilon_{xy} \\
+\end{pmatrix}
+\tag{7}
+$$</div>
+
+<p>变换下</p>
+<div>
+$$
+\begin{pmatrix}
+C_{00} & C_{01} & C_{02} & 0 & 0 & 0 \\
+C_{10} & C_{11} & C_{12} & 0 & 0 & 0 \\
+C_{20} & C_{21} & C_{22} & 0 & 0 & 0 \\
+0 & 0 & 0 & C_{33} & 0 & 0 \\
+0 & 0 & 0 & 0 & C_{44} & 0 \\
+0 & 0 & 0 & 0 & 0 & C_{55} \\
+\end{pmatrix}
+\rightarrow
+\begin{pmatrix}
+C_{11} & C_{10} & C_{12} & 0 & 0 & 0 \\
+C_{01} & C_{00} & C_{02} & 0 & 0 & 0 \\
+C_{21} & C_{20} & C_{22} & 0 & 0 & 0 \\
+0 & 0 & 0 & C_{44} & 0 & 0 \\
+0 & 0 & 0 & 0 & C_{33} & 0 \\
+0 & 0 & 0 & 0 & 0 & C_{55} \\
+\end{pmatrix}
+\tag{8}
+$$</div>
+
+<p>所以弹性张量一些分量相等，有如下形式</p>
+<div>
+$$
+\begin{pmatrix}
+a & b & b & 0 & 0 & 0 \\
+b & a & b & 0 & 0 & 0 \\
+b & b & a & 0 & 0 & 0 \\
+0 & 0 & 0 & c & 0 & 0 \\
+0 & 0 & 0 & 0 & c & 0 \\
+0 & 0 & 0 & 0 & 0 & c \\
+\end{pmatrix}
+\tag{9}
+$$</div>
+
+<p>旋转45度变换</p>
+<p>因为</p></div><a class="article-more button is-small is-size-7" href="/2025/07/20/%E5%90%84%E5%90%91%E5%90%8C%E6%80%A7%E6%9D%90%E6%96%99%E6%9C%AC%E6%9E%84%E5%85%B3%E7%B3%BB/#more">阅读更多</a></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2025-01-20T07:17:41.000Z" title="2025/1/20 15:17:41">2025-01-20</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E7%89%A9%E7%90%86/">物理</a></span><span class="level-item">16 分钟读完 (大约2450个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2025/01/20/%E6%A4%AD%E7%90%83%E9%9D%99%E7%94%B5%E5%9C%BA%E9%97%AE%E9%A2%98/">椭球静电场问题</a></p><div class="content"><h2 id="真空中金属椭球"><a href="#真空中金属椭球" class="headerlink" title="真空中金属椭球"></a>真空中金属椭球</h2><p>建立椭球坐标系（参见<a href="/2025/01/19/%E6%A4%AD%E7%90%83%E5%9D%90%E6%A0%87%E7%B3%BB/" title="椭球坐标系">椭球坐标系</a>）。设椭球方程 $\xi&#x3D;0$ 。</p>
 <p>因为椭球上电势为常数，所以假设电势与 $\eta,\zeta$ 无关。拉普拉斯方程（参见<a href="/2025/01/19/%E6%A4%AD%E7%90%83%E5%9D%90%E6%A0%87%E7%B3%BB/" title="椭球坐标系">椭球坐标系</a>）变为</p>
 <div>
 $$
 \cfrac{\partial}{\partial \xi}\left(R_\xi\cfrac{\partial u}{\partial \xi}\right)=0
-$$
-</div>
+\tag{1}
+$$</div>
 
 <p>所以</p>
 <div>
 $$
 u = C\int_{\xi}^{+\infty} \cfrac{\mathrm{d}\xi}{R_\xi}
-$$
-</div>
+\tag{2}
+$$</div>
 
 
 <p>下面求该解在无穷远处的渐进展开式。</p>
 <div>
 $$
 R_\xi \to \xi^{3/2}
-$$
-</div>
+\tag{3}
+$$</div>
 
 
 <div>
 $$
 \int _{\xi}^{+\infty} \cfrac{\mathrm{d}\xi}{R_\xi} \to \int _{\xi}^{+\infty} \cfrac{\mathrm{d}\xi}{\xi^{3/2}}=\cfrac{2}{\xi^{1/2}}
-$$
-</div>
+\tag{4}
+$$</div>
 
 
 <div>
 $$
 \cfrac{x^2}{a^2+\xi}+\cfrac{y^2}{b^2+\xi}+\cfrac{z^2}{c^2+\xi}=1 \to \xi=r^2
-$$
-</div>
+\tag{5}
+$$</div>
 
 
 <p>所以电势在无穷远处的渐进行为</p>
 <div>
 $$
 u \to \cfrac{2C}{r}
-$$
-</div>
+\tag{6}
+$$</div>
 
 <p>我们记椭球上总电荷量为 $Q$ 。用高斯定理，取一个原点为球心，足够大的球，用电势的渐进展开式</p>
 <div>
@@ -82,23 +250,23 @@ $$
 = -\int \nabla u \cdot \mathrm{d}\vec{S} \\
 = \cfrac{2C}{r^2} \cdot 4\pi r^2 =8\pi C
 \\\end{gathered}
-$$
-</div>
+\tag{7}
+$$</div>
 
 
 <div>
 $$
 C=\cfrac{Q}{8\pi \varepsilon_0}
-$$
-</div>
+\tag{8}
+$$</div>
 
 
 <p>所以</p>
 <div>
 $$
 u = \cfrac{Q}{8\pi \varepsilon_0} \int_{\xi}^{+\infty} \cfrac{\mathrm{d}\xi}{R_\xi}
-$$
-</div>
+\tag{9}
+$$</div>
 
 <p>下面算椭球上的电荷密度分布。为此先计算椭球上法线方向导数（注意把 $\xi&#x3D;0$ 代入）</p>
 <div>
@@ -108,29 +276,29 @@ $$
 =\cfrac{2abc}{\sqrt{\eta\zeta}} \cdot \left(-\cfrac{Q}{8\pi \varepsilon_0 abc} \right) \\
 =-\cfrac{Q}{4\pi \varepsilon_0\sqrt{\eta\zeta}}
 \\\end{gathered}
-$$
-</div>
+\tag{10}
+$$</div>
 
 <p>所以电荷密度</p>
 <div>
 $$
 \sigma = -\varepsilon_0 \cfrac{\partial u}{\partial n} =\cfrac{Q}{4\pi \sqrt{\eta\zeta}}
-$$
-</div>
+\tag{11}
+$$</div>
 
 <p> $\xi&#x3D;0$ 时， $\eta\zeta$ 可以用直角坐标表示：（推导见附录1）</p>
 <div>
 $$
 \cfrac{\eta\zeta}{a^2b^2c^2}=\cfrac{x^2}{a^4}+\cfrac{y^2}{b^4}+\cfrac{z^2}{c^4}
-$$
-</div>
+\tag{12}
+$$</div>
 
 <p>所以电荷密度用直角坐标表示为</p>
 <div>
 $$
 \sigma = \cfrac{Q}{4\pi abc} \cfrac{1}{\sqrt{\cfrac{x^2}{a^4}+\cfrac{y^2}{b^4}+\cfrac{z^2}{c^4}}}
-$$
-</div>
+\tag{13}
+$$</div>
 
 
 <h2 id="平行场中的金属椭球"><a href="#平行场中的金属椭球" class="headerlink" title="平行场中的金属椭球"></a>平行场中的金属椭球</h2><p>不存在金属椭球时，假设电场方向朝 $x$ 轴，则拉普拉斯方程的解为</p>
@@ -140,47 +308,47 @@ $$
 u_0=-E_0 x \\
 =-E_0 \sqrt{\cfrac{(a^2+\xi)(a^2+\eta)(a^2+\zeta)}{(a^2-b^2)(a^2-c^2)}}
 \\\end{gathered}
-$$
-</div>
+\tag{14}
+$$</div>
 
 <p>该解可以写成分离变量的形式。存在金属椭球时，假设诱导电荷导致的电势为 $u_1$ ，则无穷远处有 $u_1 \to 0$ ，而且椭球上的电势为常数，因此我们假设 $u_1$ 的形式为</p>
 <div>
 $$
 u_1=G(\xi)\sqrt{(a^2+\eta)(a^2+\zeta)}
-$$
-</div>
+\tag{15}
+$$</div>
 
 <p>代入椭球坐标系的拉普拉斯方程（参见<a href="/2025/01/19/%E6%A4%AD%E7%90%83%E5%9D%90%E6%A0%87%E7%B3%BB/" title="椭球坐标系">椭球坐标系</a>）</p>
 <div>
 $$
 R_\xi\cfrac{\mathrm{d}}{\mathrm{d} \xi}\left(R_\xi\cfrac{\mathrm{d}G}{\mathrm{d}\xi}\right)-\left(\cfrac{\xi}{2}+\cfrac{b^2+c^2}{4}\right)G = 0
-$$
-</div>
+\tag{16}
+$$</div>
 
 <p>根据 $u_0$ 的形式，我们知道 $G&#x3D;\sqrt{a^2+\xi}$ 是这个方程的一个解。为找到第二个，用<a href="/2025/01/16/%E4%BA%8C%E9%98%B6%E7%BA%BF%E6%80%A7%E5%B8%B8%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B%EF%BC%8C%E7%94%B1%E4%B8%80%E4%B8%AA%E9%80%9A%E8%A7%A3%E5%BE%97%E5%88%B0%E7%AC%AC%E4%BA%8C%E4%B8%AA%E9%80%9A%E8%A7%A3/" title="二阶线性常微分方程，由一个通解得到第二个通解">二阶线性常微分方程，由一个通解得到第二个通解</a>中的结论，</p>
 <div>
 $$
 \begin{gathered}
 G
-=C\sqrt{a^2+\xi} \int \cfrac{\exp\left\lbrack -\int (\ln R_\xi)' \mathrm{d}\xi\right\rbrack }{a^2+\xi} \mathrm{d}\xi \\
+=C\sqrt{a^2+\xi} \int \cfrac{\exp\left[-\int (\ln R_\xi)' \mathrm{d}\xi\right]}{a^2+\xi} \mathrm{d}\xi \\
 =C\sqrt{a^2+\xi} \int \cfrac{\mathrm{d}\xi}{R_\xi(a^2+\xi)} \\
 \\\end{gathered}
-$$
-</div>
+\tag{17}
+$$</div>
 
 <p>为了使得 $r\to+\infty，\xi\to+\infty$ 时 $u_1\to 0$ ，我们取积分上下限为</p>
 <div>
 $$
 G=C\sqrt{a^2+\xi} \int_{\xi}^{+\infty} \cfrac{\mathrm{d}\xi}{R_\xi(a^2+\xi)}
-$$
-</div>
+\tag{18}
+$$</div>
 
 <p>于是</p>
 <div>
 $$
 u_1=Cx \int_{\xi}^{+\infty} \cfrac{\mathrm{d}\xi}{R_\xi(a^2+\xi)}
-$$
-</div>
+\tag{19}
+$$</div>
 
 <p>我们记椭球上的电势为 $\phi_s$ ，则总电势为（<em>怀疑文献[1]中给出的推导和解有问题，我参考文献[1]中给出的球体情形进行了修正。我给出的修正正确与否，还需进一步验证</em>）</p>
 <div>
@@ -188,18 +356,18 @@ $$
 u=-E_0x
 +\cfrac{E_0x}{\int_{0}^{+\infty} \cfrac{\mathrm{d}\xi}{R_\xi(a^2+\xi)}}\int_{\xi}^{+\infty} \cfrac{\mathrm{d}\xi}{R_\xi(a^2+\xi)}
 +\cfrac{\phi_s}{\int_{0}^{+\infty} \cfrac{\mathrm{d}\xi}{R_\xi}}\int_{\xi}^{+\infty} \cfrac{\mathrm{d}\xi}{R_\xi}
-$$
-</div>
+\tag{20}
+$$</div>
 
-<p>解释一下解的形式。该解为 $u_0$ ， $u_1$ ，以及上一节中真空金属椭球的解（记为 $u_2$ ）的线性组合。我们要求无限远处趋于 $-E_0x$ ，且椭球上为常数 $\phi_s$ 。对于这三个解分别有</p></div><a class="article-more button is-small is-size-7" href="/2025/01/20/%E6%A4%AD%E7%90%83%E9%9D%99%E7%94%B5%E5%9C%BA%E9%97%AE%E9%A2%98/#more">阅读更多</a></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2025-01-05T13:07:18.000Z" title="2025/1/5 21:07:18">2025-01-05</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E7%89%A9%E7%90%86/">物理</a></span><span class="level-item">8 分钟读完 (大约1186个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2025/01/05/%E8%8F%B2%E6%B6%85%E5%B0%94%E6%96%B9%E7%A8%8B/">菲涅尔方程</a></p><div class="content"><h2 id="电场平行平面（s偏振光）"><a href="#电场平行平面（s偏振光）" class="headerlink" title="电场平行平面（s偏振光）"></a>电场平行平面（s偏振光）</h2><p>根据界面处 $D,B$ 垂直界面的分量连续， $E,H$ 平行界面的分量连续：</p>
+<p>解释一下解的形式。该解为 $u_0$ ， $u_1$ ，以及上一节中真空金属椭球的解（记为 $u_2$ ）的线性组合。我们要求无限远处趋于 $-E_0x$ ，且椭球上为常数 $\phi_s$ 。对于这三个解分别有</p></div><a class="article-more button is-small is-size-7" href="/2025/01/20/%E6%A4%AD%E7%90%83%E9%9D%99%E7%94%B5%E5%9C%BA%E9%97%AE%E9%A2%98/#more">阅读更多</a></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2025-01-05T13:07:18.000Z" title="2025/1/5 21:07:18">2025-01-05</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E7%89%A9%E7%90%86/">物理</a></span><span class="level-item">8 分钟读完 (大约1223个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2025/01/05/%E8%8F%B2%E6%B6%85%E5%B0%94%E6%96%B9%E7%A8%8B/">菲涅尔方程</a></p><div class="content"><h2 id="电场平行平面（s偏振光）"><a href="#电场平行平面（s偏振光）" class="headerlink" title="电场平行平面（s偏振光）"></a>电场平行平面（s偏振光）</h2><p>根据界面处 $D,B$ 垂直界面的分量连续， $E,H$ 平行界面的分量连续：</p>
 <div>
 $$
 \begin{cases}
 E_1+E_2=E_3 \\
 H_1\cos\theta_1-H_2\cos\theta_1=H_3\cos\theta_2 \\
 \end{cases}
-$$
-</div>
+\tag{1}
+$$</div>
 
 
 <p>参考<a href="/2024/12/30/%E4%BB%8E%E9%BA%A6%E5%85%8B%E6%96%AF%E9%9F%A6%E6%96%B9%E7%A8%8B%E5%88%B0%E7%94%B5%E7%A3%81%E6%B3%A2/" title="从麦克斯韦方程到电磁波">从麦克斯韦方程到电磁波</a>，用 $H&#x3D;YE$ ，</p>
@@ -209,8 +377,8 @@ $$
 E_1+E_2=E_3 \\
 Y_1E_1\cos\theta_1-Y_1E_2\cos\theta_1=Y_2E_3\cos\theta_2 \\
 \end{cases}
-$$
-</div>
+\tag{2}
+$$</div>
 
 <p>解得</p>
 <div>
@@ -219,8 +387,8 @@ $$
 \cfrac{E_2}{E_1} = \cfrac{Y_1\cos\theta_1-Y_2\cos\theta_2}{Y_1\cos\theta_1+Y_2\cos\theta_2} \\
 \cfrac{E_3}{E_1} = \cfrac{2Y_1\cos\theta_1}{Y_1\cos\theta_1+Y_2\cos\theta_2} \\
 \end{cases}
-$$
-</div>
+\tag{3}
+$$</div>
 
 <p>电磁波能量（可见电场、磁场能量各占一半）</p>
 <div>
@@ -230,28 +398,28 @@ $$
 = \cfrac{1}{2}(\varepsilon + \mu Y^2) E^2 \\
 =\varepsilon E^2
 \\\end{gathered}
-$$
-</div>
+\tag{4}
+$$</div>
 
 <p>反射率</p>
 <div>
 $$
 \begin{gathered}
-R=\cfrac{\left|E_2\right|^2}{\left|E_1\right|^2} \\
-= \left|\cfrac{Y_1\cos\theta_1-Y_2\cos\theta_2}{Y_1\cos\theta_1+Y_2\cos\theta_2}\right|^2
+R=\cfrac{\left\vert E_2\right\vert ^2}{\left\vert E_1\right\vert ^2} \\
+= \left\vert \cfrac{Y_1\cos\theta_1-Y_2\cos\theta_2}{Y_1\cos\theta_1+Y_2\cos\theta_2}\right\vert ^2
 \\\end{gathered}
-$$
-</div>
+\tag{5}
+$$</div>
 
 <p>透射率</p>
 <div>
 $$
 \begin{gathered}
 T = 1-R \\
-= \cfrac{4\Re(Y_1Y_2\cos \theta_1\cos\theta_2)}{\left|Y_1\cos\theta_1+Y_2\cos\theta_2\right|^2}
+= \cfrac{4\Re(Y_1Y_2\cos \theta_1\cos\theta_2)}{\left\vert Y_1\cos\theta_1+Y_2\cos\theta_2\right\vert ^2}
 \\\end{gathered}
-$$
-</div>
+\tag{6}
+$$</div>
 
 
 <h2 id="磁场平行平面（p偏振光）"><a href="#磁场平行平面（p偏振光）" class="headerlink" title="磁场平行平面（p偏振光）"></a>磁场平行平面（p偏振光）</h2><div>
@@ -260,8 +428,8 @@ $$
 E_1 \cos \theta_1 - E_2 \cos \theta_1 = E_3 \cos \theta_2 \\
 H_1+H_2=H_3 \\
 \end{cases}
-$$
-</div>
+\tag{7}
+$$</div>
 
 
 <p>同理，</p>
@@ -271,8 +439,8 @@ $$
 E_1 \cos \theta_1 - E_2 \cos \theta_1 = E_3 \cos \theta_2 \\
 Y_1E_1+Y_1E_2=Y_2E_3 \\
 \end{cases}
-$$
-</div>
+\tag{8}
+$$</div>
 
 <p>解得</p>
 <div>
@@ -281,32 +449,32 @@ $$
 \cfrac{E_2}{E_1} = \cfrac{Y_2 \cos \theta_1 - Y_1 \cos \theta_2}{Y_2\cos \theta_1 + Y_1 \cos \theta_2} \\
 \cfrac{E_3}{E_1} = \cfrac{2 Y_1 \cos \theta_1}{Y_2\cos \theta_1 + Y_1 \cos \theta_2} \\
 \end{cases}
-$$
-</div>
+\tag{9}
+$$</div>
 
 <p>反射率</p>
 <div>
 $$
 \begin{gathered}
-R=\cfrac{\left|E_2\right|^2}{\left|E_1\right|^2} \\
-= \left|\cfrac{Y_2 \cos \theta_1 - Y_1 \cos \theta_2}{Y_2\cos \theta_1 + Y_1 \cos \theta_2}\right|^2
+R=\cfrac{\left\vert E_2\right\vert ^2}{\left\vert E_1\right\vert ^2} \\
+= \left\vert \cfrac{Y_2 \cos \theta_1 - Y_1 \cos \theta_2}{Y_2\cos \theta_1 + Y_1 \cos \theta_2}\right\vert ^2
 \\\end{gathered}
-$$
-</div>
+\tag{10}
+$$</div>
 
 <p>透射率</p>
 <div>
 $$
 \begin{gathered}
 T = 1-R \\
-= \cfrac{4\Re(Y_1Y_2\cos\theta_1\cos\theta_2)}{\left|Y_2\cos \theta_1 + Y_1 \cos \theta_2\right|^2}
+= \cfrac{4\Re(Y_1Y_2\cos\theta_1\cos\theta_2)}{\left\vert Y_2\cos \theta_1 + Y_1 \cos \theta_2\right\vert ^2}
 \\\end{gathered}
-$$
-</div>
+\tag{11}
+$$</div>
 
 
 <h2 id="非磁性材料"><a href="#非磁性材料" class="headerlink" title="非磁性材料"></a>非磁性材料</h2><p>此时 $\mu_r&#x3D;1,Y&#x3D;n\sqrt{\varepsilon_0&#x2F;\mu_0}$ </p>
-<p>折射定律： $n_1\sin\theta_1&#x3D;n_2\sin\theta_2$ </p></div><a class="article-more button is-small is-size-7" href="/2025/01/05/%E8%8F%B2%E6%B6%85%E5%B0%94%E6%96%B9%E7%A8%8B/#more">阅读更多</a></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2025-01-04T07:36:53.000Z" title="2025/1/4 15:36:53">2025-01-04</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E7%89%A9%E7%90%86/">物理</a></span><span class="level-item">5 分钟读完 (大约731个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2025/01/04/Clausius%E2%80%93Mossotti%E6%96%B9%E7%A8%8Bv2/">Clausius–Mossotti方程v2</a></p><div class="content"><h2 id="球的退极化因子-2-3"><a href="#球的退极化因子-2-3" class="headerlink" title="球的退极化因子[2,3]"></a>球的退极化因子[2,3]</h2><p>假设半径 $a$ 的球介电常数 $\varepsilon_2$ ，处于介电常数 $\varepsilon_1$ 的介质中。介电常数 $\varepsilon_1$ 的介质中存在 $z$ 轴方向 $E_0$ 的均匀电场。</p>
+<p>折射定律： $n_1\sin\theta_1&#x3D;n_2\sin\theta_2$ </p></div><a class="article-more button is-small is-size-7" href="/2025/01/05/%E8%8F%B2%E6%B6%85%E5%B0%94%E6%96%B9%E7%A8%8B/#more">阅读更多</a></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2025-01-04T07:36:53.000Z" title="2025/1/4 15:36:53">2025-01-04</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E7%89%A9%E7%90%86/">物理</a></span><span class="level-item">5 分钟读完 (大约752个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2025/01/04/Clausius%E2%80%93Mossotti%E6%96%B9%E7%A8%8Bv2/">Clausius–Mossotti方程v2</a></p><div class="content"><h2 id="球的退极化因子-2-3"><a href="#球的退极化因子-2-3" class="headerlink" title="球的退极化因子[2,3]"></a>球的退极化因子[2,3]</h2><p>假设半径 $a$ 的球介电常数 $\varepsilon_2$ ，处于介电常数 $\varepsilon_1$ 的介质中。介电常数 $\varepsilon_1$ 的介质中存在 $z$ 轴方向 $E_0$ 的均匀电场。</p>
 <p>假设都是线性电介质，因此两种材料里的电势方程都化为拉普拉斯方程。</p>
 <p>球坐标拉普拉斯方程的通解在<a href="/2025/01/04/%E7%90%83%E5%9D%90%E6%A0%87%E6%8B%89%E6%99%AE%E6%8B%89%E6%96%AF%E6%96%B9%E7%A8%8B%E6%B1%82%E8%A7%A3/" title="球坐标拉普拉斯方程求解">球坐标拉普拉斯方程求解</a>中给出。根据无穷远处电势 $V \to -E_0r\cos \theta$ ，我们猜测解的形式为：</p>
 <div>
@@ -316,8 +484,8 @@ V =
 -Ar\cos \theta, & r \lt  a \\
 -E_0r\cos \theta-\cfrac{B\cos \theta}{r^2}, & r \gt  a \\
 \end{cases}
-$$
-</div>
+\tag{1}
+$$</div>
 
 <p>计算知电场各分量</p>
 <div>
@@ -327,8 +495,8 @@ E_r =
 A \cos \theta, & r \lt  a \\
 E_0\cos \theta-\cfrac{2B\cos \theta}{r^3}, & r \gt  a \\
 \end{cases}
-$$
-</div>
+\tag{2}
+$$</div>
 
 
 <div>
@@ -338,8 +506,8 @@ E_{\theta}=
 -A\sin\theta, & r \lt  a \\
 -E_0\sin\theta-\cfrac{B\sin \theta}{r^3}, & r \gt  a \\
 \end{cases}
-$$
-</div>
+\tag{3}
+$$</div>
 
 
 <p>根据电位移矢量垂直界面分量连续，电场矢量平行界面分量连续，</p>
@@ -349,8 +517,8 @@ $$
 \varepsilon_0 \varepsilon_1 E_r(a+0) = \varepsilon_0 \varepsilon_2 E_r(a-0) \\
 E_{\theta}(a+0)=E_{\theta}(a-0) \\
 \end{cases}
-$$
-</div>
+\tag{4}
+$$</div>
 
 
 <div>
@@ -359,8 +527,8 @@ $$
 \varepsilon_1\left(E_0-\cfrac{2B}{a^3}\right)=\varepsilon_2 A \\
 -E_0-\cfrac{B}{a^3}=-A \\
 \end{cases}
-$$
-</div>
+\tag{5}
+$$</div>
 
 
 <div>
@@ -369,8 +537,8 @@ $$
 A = \cfrac{3\varepsilon_1}{\varepsilon_2+2\varepsilon_1}E_0 \\
 B = -\cfrac{\varepsilon_2 - \varepsilon_1}{\varepsilon_2+2\varepsilon_1}a^3E_0 \\
 \end{cases}
-$$
-</div>
+\tag{6}
+$$</div>
 
 
 <p>我们计算界面处总极化：</p>
@@ -380,8 +548,8 @@ $$
 P_r=\varepsilon_0(\varepsilon_1-1)E_r(a+0)-\varepsilon_0(\varepsilon_2-1)E_r(a-0) \\
 =-\cfrac{3(\varepsilon_2-\varepsilon_1)}{\varepsilon_2+2\varepsilon_1}\varepsilon_0E_0\cos\theta \\
 \\\end{gathered}
-$$
-</div>
+\tag{7}
+$$</div>
 
 
 <div>
@@ -389,37 +557,37 @@ $$
 \begin{gathered}
 P=-\cfrac{3(\varepsilon_2-\varepsilon_1)}{\varepsilon_2+2\varepsilon_1}\varepsilon_0E_0 \\
 \\\end{gathered}
-$$
-</div>
+\tag{8}
+$$</div>
 
 
 <p>球内电场 $E_2$ ：</p>
 <div>
 $$
 E_2=E(a-0)=A=\cfrac{3\varepsilon_1}{\varepsilon_2+2\varepsilon_1}E_0
-$$
-</div>
+\tag{9}
+$$</div>
 
 <p>退极化场 $E_d$ ：</p>
 <div>
 $$
 E_d=E_0-E_2=\cfrac{\varepsilon_2-\varepsilon_1}{\varepsilon_2+2\varepsilon_1}E_0
-$$
-</div>
+\tag{10}
+$$</div>
 
 <p>得到退极化场和极化关系：</p>
 <div>
 $$
 E_d=-\cfrac{P}{3\varepsilon_0}
-$$
-</div>
+\tag{11}
+$$</div>
 
 <p>对于任意形状的电介质，退极化场和极化存在如下关系：</p>
 <div>
 $$
 E_d=-\beta\cfrac{P}{\varepsilon_0}
-$$
-</div>
+\tag{12}
+$$</div>
 
 <p>其中 $\beta$ 为退极化因子（张量），对于球体 $\beta&#x3D;1&#x2F;3$ 。</p>
 <p>再根据电势连续，</p>
@@ -430,16 +598,16 @@ V =
 -\cfrac{3\varepsilon_1}{\varepsilon_2+2\varepsilon_1}E_0r\cos \theta, & r \lt  a \\
 -E_0r\cos \theta+\cfrac{\varepsilon_2 - \varepsilon_1}{\varepsilon_2+2\varepsilon_1}\cfrac{a^3}{r^2}E_0\cos \theta, & r \gt  a \\
 \end{cases}
-$$
-</div>
+\tag{13}
+$$</div>
 
 
 <p>若考虑内部极化强度</p>
 <div>
 $$
 P_2=-\cfrac{3\varepsilon_1(\varepsilon_2-1)}{\varepsilon_2+2\varepsilon_1}\varepsilon_0E_0
-$$
-</div>
+\tag{14}
+$$</div>
 
 <p>则</p>
 <div>
@@ -448,107 +616,107 @@ $$
 \beta=-\cfrac{\varepsilon_0 E_d}{P_2} \\
 = \cfrac{\varepsilon_2-\varepsilon_1}{3\varepsilon_1(\varepsilon_2-1)} \\
 \\\end{gathered}
-$$
-</div>
+\tag{15}
+$$</div>
 
 <p>只有在 $\varepsilon_1&#x3D;1$ 时， $\beta&#x3D;1&#x2F;3$ 。</p>
 <h2 id="Clausius–Mossotti方程-1"><a href="#Clausius–Mossotti方程-1" class="headerlink" title="Clausius–Mossotti方程[1]"></a>Clausius–Mossotti方程[1]</h2><p>可参考[1]中章节3.2.2 Microscopic Fields。作用在微观偶极子上的电场不是宏观电场，微观电场等于宏观电场和其他偶极子作用之和。对于各项同性材料，假设偶极子是个球体，可以求出微观电场</p>
 <div>
 $$
 E_{micro}=E+\cfrac{P}{3\varepsilon_0}
-$$
-</div>
+\tag{16}
+$$</div>
 
 <p>定义微观极化性（polarizability） $\beta$ ：</p>
 <div>
 $$
 p=\varepsilon_0 \beta E_{micro}
-$$
-</div>
+\tag{17}
+$$</div>
 
 <p>则</p>
 <div>
 $$
 P=Np=N\varepsilon_0 \beta E + \cfrac{N\beta}{3}P
-$$
-</div>
+\tag{18}
+$$</div>
 
 
 <div>
 $$
 \chi = \cfrac{P}{E}=\cfrac{N\beta}{1-\cfrac{N\beta}{3}}
-$$
-</div>
+\tag{19}
+$$</div>
 
 
 <p>因为</p>
 <div>
 $$
 \varepsilon = 1+\chi
-$$
-</div>
+\tag{20}
+$$</div>
 
 <p>于是</p>
 <div>
 $$
 \cfrac{\varepsilon-1}{\varepsilon+2}=\cfrac{N\beta}{3}
-$$
-</div>
+\tag{21}
+$$</div>
 
 <p>此即Clausius–Mossotti方程。</p>
 <h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><p>[1] Olaf Stenzel, The Physics of Thin Film Optical Spectra, ISBN 978-3-031-65030-7</p>
 <p>[2] 林敬与.介质球在均匀电场中的极化[J].大学物理,1993,12(7):9-1013</p>
 <p>[3] 桑芝芳 李振亚. 退极化因子与形状因子[J]. 大学物理, 2014, 33(1): 12-12.</p>
-</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2024-12-30T06:52:07.000Z" title="2024/12/30 14:52:07">2024-12-30</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E7%89%A9%E7%90%86/">物理</a></span><span class="level-item">2 分钟读完 (大约260个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2024/12/30/%E7%9B%B8%E9%80%9F%E5%BA%A6%E4%B8%8E%E7%BE%A4%E9%80%9F%E5%BA%A6/">相速度与群速度</a></p><div class="content"><p>设一波包是一系列圆频率 $\omega$ ，波矢 $k$ ，振幅 $F&#x3D;F(\omega)$ 的波叠加而成，具有色散关系 $k&#x3D;k(\omega)$ 。</p>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2024-12-30T06:52:07.000Z" title="2024/12/30 14:52:07">2024-12-30</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E7%89%A9%E7%90%86/">物理</a></span><span class="level-item">2 分钟读完 (大约263个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2024/12/30/%E7%9B%B8%E9%80%9F%E5%BA%A6%E4%B8%8E%E7%BE%A4%E9%80%9F%E5%BA%A6/">相速度与群速度</a></p><div class="content"><p>设一波包是一系列圆频率 $\omega$ ，波矢 $k$ ，振幅 $F&#x3D;F(\omega)$ 的波叠加而成，具有色散关系 $k&#x3D;k(\omega)$ 。</p>
 <div>
 $$
 E =	\int_{-\infty}^{+\infty} F(\omega) e^{-\mathrm{i}(\omega t - kz)} \mathrm{d}\omega
-$$
-</div>
+\tag{1}
+$$</div>
 
 <p>我们设该波包的中心频率为 $\omega_0$ ，将色散关系展开，采用一阶近似：</p>
 <div>
 $$
-k(\omega)=k(\omega_0)+\cfrac{\mathrm{d}k}{\mathrm{d}\omega}\Bigg|_{\omega_0}(\omega-\omega_0)
-$$
-</div>
+k(\omega)=k(\omega_0)+\cfrac{\mathrm{d}k}{\mathrm{d}\omega}\Bigg\vert _{\omega_0}(\omega-\omega_0)
+\tag{2}
+$$</div>
 
 
 <div>
 $$
 \begin{gathered}
 \omega t - k z \\
-= \omega_0 t - k(\omega_0)z + (\omega-\omega_0) \left( t - \cfrac{\mathrm{d}k}{\mathrm{d}\omega}\Bigg|_{\omega_0} z \right) \\
+= \omega_0 t - k(\omega_0)z + (\omega-\omega_0) \left( t - \cfrac{\mathrm{d}k}{\mathrm{d}\omega}\Bigg\vert _{\omega_0} z \right) \\
 \\\end{gathered}
-$$
-</div>
+\tag{3}
+$$</div>
 
 
 <div>
 $$
 \begin{gathered}
-E =	\int_{-\infty}^{+\infty} F(\omega) \exp \left\lbrack -\mathrm{i}(\omega-\omega_0) \left( t - \cfrac{\mathrm{d}k}{\mathrm{d}\omega}\Bigg|_{\omega_0} z \right)\right\rbrack  \mathrm{d}\omega \cdot e^{-\mathrm{i}\lbrack \omega_0 t - k(\omega_0)z\rbrack } \\
-= A\left( t - \cfrac{\mathrm{d}k}{\mathrm{d}\omega}\Bigg|_{\omega_0} z \right) e^{-\mathrm{i}\lbrack \omega_0 t - k(\omega_0)z\rbrack } \\
+E =	\int_{-\infty}^{+\infty} F(\omega) \exp \left[-\mathrm{i}(\omega-\omega_0) \left( t - \cfrac{\mathrm{d}k}{\mathrm{d}\omega}\Bigg\vert _{\omega_0} z \right)\right] \mathrm{d}\omega \cdot e^{-\mathrm{i}[\omega_0 t - k(\omega_0)z]} \\
+= A\left( t - \cfrac{\mathrm{d}k}{\mathrm{d}\omega}\Bigg\vert _{\omega_0} z \right) e^{-\mathrm{i}[\omega_0 t - k(\omega_0)z]} \\
 \\\end{gathered}
-$$
-</div>
+\tag{4}
+$$</div>
 
 
-<p>因此，我们知道该波包相位的传播速度为 $\cfrac{\omega_0}{k(\omega_0)}$ ，称相速度；而振幅 $A$ 的传播速度为 $\cfrac{\mathrm{d}\omega}{\mathrm{d}k}\bigg|_{\omega_0}$ ，称群速度。</p>
+<p>因此，我们知道该波包相位的传播速度为 $\cfrac{\omega_0}{k(\omega_0)}$ ，称相速度；而振幅 $A$ 的传播速度为 $\cfrac{\mathrm{d}\omega}{\mathrm{d}k}\bigg\vert _{\omega_0}$ ，称群速度。</p>
 <h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><p>[1] Olaf Stenzel, The Physics of Thin Film Optical Spectra, ISBN 978-3-031-65030-7</p>
-</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2024-12-29T12:43:19.000Z" title="2024/12/29 20:43:19">2024-12-29</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E7%89%A9%E7%90%86/">物理</a></span><span class="level-item">3 分钟读完 (大约462个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2024/12/29/Kramers-Kronig%E5%85%B3%E7%B3%BB/">Kramers-Kronig关系</a></p><div class="content"><p>对于响应函数，有时间小于零时函数为零的性质，即满足因果律。因此可以证明Kramers-Kronig关系，下面给出证明及表达式。</p>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2024-12-29T12:43:19.000Z" title="2024/12/29 20:43:19">2024-12-29</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E7%89%A9%E7%90%86/">物理</a></span><span class="level-item">3 分钟读完 (大约451个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2024/12/29/Kramers-Kronig%E5%85%B3%E7%B3%BB/">Kramers-Kronig关系</a></p><div class="content"><p>对于响应函数，有时间小于零时函数为零的性质，即满足因果律。因此可以证明Kramers-Kronig关系，下面给出证明及表达式。</p>
 <div>
 $$
 \chi(t)=\theta(t)\chi(t)
-$$
-</div>
+\tag{1}
+$$</div>
 
 
 <div>
 $$
 \chi(\omega)=\cfrac{1}{2\pi}\int_{-\infty}^{+\infty} \Theta(\omega-\omega') \chi(\omega') \mathrm{d}\omega'
-$$
-</div>
+\tag{2}
+$$</div>
 
 
 <p>上面这个式子的由来：卷积的傅立叶变换等于变换后的函数相乘，反过来就是乘积的傅立叶变换等于变换后函数的卷积（需要除 $2\pi$ ）。这个结论的证明：设 $f(t),g(t)$ 的傅立叶变换为 $F(\omega),G(\omega)$ ，</p>
@@ -556,34 +724,34 @@ $$
 $$
 \begin{gathered}
 \int_{-\infty}^{+\infty} (f \star g)(t) e^{-\mathrm{i}\omega t} \mathrm{d}t \\
-=\int_{-\infty}^{+\infty} \left\lbrack  \int_{-\infty}^{+\infty} f(t-\tau)g(\tau) \mathrm{d}\tau \right\rbrack  e^{-\mathrm{i}\omega t} \mathrm{d}t \\
-= \int_{-\infty}^{+\infty} \left\lbrack  \int_{-\infty}^{+\infty} f(t-\tau) e^{-\mathrm{i}\omega (t-\tau)} \mathrm{d}t \right\rbrack  g(\tau) e^{-\mathrm{i}\omega \tau} \mathrm{d}\tau \\
+=\int_{-\infty}^{+\infty} \left[ \int_{-\infty}^{+\infty} f(t-\tau)g(\tau) \mathrm{d}\tau \right] e^{-\mathrm{i}\omega t} \mathrm{d}t \\
+= \int_{-\infty}^{+\infty} \left[ \int_{-\infty}^{+\infty} f(t-\tau) e^{-\mathrm{i}\omega (t-\tau)} \mathrm{d}t \right] g(\tau) e^{-\mathrm{i}\omega \tau} \mathrm{d}\tau \\
 = F(\omega) G(\omega)
 \\\end{gathered}
-$$
-</div>
+\tag{3}
+$$</div>
 
 <p>证毕。</p>
 <p>阶越函数的傅立叶变换为（参见Green’s function.md）</p>
 <div>
 $$
 \begin{gathered}
-\mathcal{F}\lbrack \theta(t)\rbrack  = \lim_{\eta \to 0^+} \cfrac{-\mathrm{i}}{\omega - \mathrm{i} \eta} \\
-= -\mathrm{i}\left\lbrack \mathcal{P} \cfrac{1}{\omega}+\mathrm{i}\pi \delta(\omega)\right\rbrack 
+\mathcal{F}[\theta(t)] = \lim_{\eta \to 0^+} \cfrac{-\mathrm{i}}{\omega - \mathrm{i} \eta} \\
+= -\mathrm{i}\left[\mathcal{P} \cfrac{1}{\omega}+\mathrm{i}\pi \delta(\omega)\right]
 \\\end{gathered}
-$$
-</div>
+\tag{4}
+$$</div>
 
 <p>其中 $\mathcal{P}$ 表示柯西主值。</p>
 <p>于是</p>
 <div>
 $$
 \begin{gathered}
-\chi(\omega)=\cfrac{-\mathrm{i}}{2\pi}\int_{-\infty}^{+\infty} \left\lbrack \mathcal{P} \cfrac{1}{\omega-\omega'}+\mathrm{i}\pi \delta(\omega-\omega')\right\rbrack  \chi(\omega') \mathrm{d}\omega' \\
+\chi(\omega)=\cfrac{-\mathrm{i}}{2\pi}\int_{-\infty}^{+\infty} \left[\mathcal{P} \cfrac{1}{\omega-\omega'}+\mathrm{i}\pi \delta(\omega-\omega')\right] \chi(\omega') \mathrm{d}\omega' \\
 =\cfrac{1}{2}\chi(\omega)+\cfrac{-\mathrm{i}}{2\pi}\int_{-\infty}^{+\infty} \mathcal{P} \cfrac{\chi(\omega')}{\omega-\omega'} \mathrm{d}\omega' \\
 \\\end{gathered}
-$$
-</div>
+\tag{5}
+$$</div>
 
 
 <div>
@@ -592,31 +760,31 @@ $$
 \chi(\omega)
 =\cfrac{-\mathrm{i}}{\pi}\int_{-\infty}^{+\infty} \mathcal{P} \cfrac{\chi(\omega')}{\omega-\omega'} \mathrm{d}\omega' \\
 \\\end{gathered}
-$$
-</div>
+\tag{6}
+$$</div>
 
 
 <p>分开实部和虚部，</p>
 <div>
 $$
 \begin{gathered}
-\Re\lbrack \chi(\omega)\rbrack 
-=\cfrac{1}{\pi}\int_{-\infty}^{+\infty} \mathcal{P} \cfrac{\Im\lbrack \chi(\omega')\rbrack }{\omega-\omega'} \mathrm{d}\omega' \\
-\Im\lbrack \chi(\omega)\rbrack 
-=-\cfrac{1}{\pi}\int_{-\infty}^{+\infty} \mathcal{P} \cfrac{\Re\lbrack \chi(\omega')\rbrack }{\omega-\omega'} \mathrm{d}\omega' \\
+\Re[\chi(\omega)]
+=\cfrac{1}{\pi}\int_{-\infty}^{+\infty} \mathcal{P} \cfrac{\Im[\chi(\omega')]}{\omega-\omega'} \mathrm{d}\omega' \\
+\Im[\chi(\omega)]
+=-\cfrac{1}{\pi}\int_{-\infty}^{+\infty} \mathcal{P} \cfrac{\Re[\chi(\omega')]}{\omega-\omega'} \mathrm{d}\omega' \\
 \\\end{gathered}
-$$
-</div>
+\tag{7}
+$$</div>
 
 <p>此即Kramers-Kronig关系，其中 $\Re,\Im$ 分别表示实部和虚部。</p>
-</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2024-12-24T11:38:29.000Z" title="2024/12/24 19:38:29">2024-12-24</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E7%89%A9%E7%90%86/">物理</a></span><span class="level-item">3 分钟读完 (大约439个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2024/12/24/%E9%87%91%E5%B1%9E%E7%94%B5%E6%9E%81%E9%80%80%E6%9E%81%E5%8C%96%E5%9C%BA%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%8E%A8%E5%AF%BC/">金属电极退极化场表达式推导</a></p><div class="content"><p>铁电电容器中，铁电层中退极化场的来源是金属电极对极化电荷的不完全屏蔽。</p>
-<p>器件结构：金属1，铁电层，金属2。为计算方便，假设金属电极半无限厚。各层的范围 $(-\infty,0),\lbrack 0,t_{FE}\rbrack ,(t_{FE},+\infty)$ </p>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2024-12-24T11:38:29.000Z" title="2024/12/24 19:38:29">2024-12-24</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E7%89%A9%E7%90%86/">物理</a></span><span class="level-item">3 分钟读完 (大约437个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2024/12/24/%E9%87%91%E5%B1%9E%E7%94%B5%E6%9E%81%E9%80%80%E6%9E%81%E5%8C%96%E5%9C%BA%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%8E%A8%E5%AF%BC/">金属电极退极化场表达式推导</a></p><div class="content"><p>铁电电容器中，铁电层中退极化场的来源是金属电极对极化电荷的不完全屏蔽。</p>
+<p>器件结构：金属1，铁电层，金属2。为计算方便，假设金属电极半无限厚。各层的范围 $(-\infty,0),[0,t_{FE}],(t_{FE},+\infty)$ </p>
 <p>对于金属， $\rho \propto \phi-\phi_F$ ，金属一侧泊松方程</p>
 <div>
 $$
 -\cfrac{\mathrm{d}^2\phi}{\mathrm{d}x^2}=-\cfrac{1}{\lambda_1^2}\phi
-$$
-</div>
+\tag{1}
+$$</div>
 
 <p>可参考Thomas-Fermi屏蔽。 $\lambda_1$ 为金属1的屏蔽长度。</p>
 <p>然后我们依次写出各层的电势（把 $x&#x3D;-\infty$ 处定义为电势零点）</p>
@@ -626,28 +794,28 @@ $$
 \begin{cases}
 \phi_0 \exp(x/\lambda_1), & x \lt  0 \\
 \phi_0-Ex, & 0 \leq x \leq t_{FE} \\
-(\phi_0 - E t_{FE})\exp\lbrack (t_{FE}-x)/\lambda_2\rbrack +V\{1-\exp\lbrack (t_{FE}-x)/\lambda_2\rbrack \}, & x \gt  t_{FE}
+(\phi_0 - E t_{FE})\exp[(t_{FE}-x)/\lambda_2]+V\{1-\exp[(t_{FE}-x)/\lambda_2]\}, & x \gt  t_{FE}
 \end{cases}
-$$
-</div>
+\tag{2}
+$$</div>
 
 <p> $\phi_0$ 表示 $x&#x3D;0$ 处电势。 $V$ 为器件两端电势差。</p>
 <p>然后用电位移垂直界面分量连续的条件，</p>
 <div>
 $$
--k_1/\lambda_1\phi_0=kE+P=k_2/\lambda_2\lbrack \phi_0-Et_{FE}\rbrack -k_2/\lambda_2V
-$$
-</div>
+-k_1/\lambda_1\phi_0=kE+P=k_2/\lambda_2[\phi_0-Et_{FE}]-k_2/\lambda_2V
+\tag{3}
+$$</div>
 
 <p>其中我们记各层的介电常数 $k_1,k,k_2$ 。</p>
 <p>解出 $\phi_0$ ：</p>
 <div>
 $$
 \begin{gathered}
-\left\lbrack t_{FE}+k\left(\cfrac{\lambda_1}{k_1}+\cfrac{\lambda_1}{k_2}\right)\right\rbrack \phi_0=\cfrac{\lambda_1}{k_1}(kV-t_{FE}P) \\
+\left[t_{FE}+k\left(\cfrac{\lambda_1}{k_1}+\cfrac{\lambda_1}{k_2}\right)\right]\phi_0=\cfrac{\lambda_1}{k_1}(kV-t_{FE}P) \\
 \\\end{gathered}
-$$
-</div>
+\tag{4}
+$$</div>
 
 <p>和 $E$ ：</p>
 <div>
@@ -655,8 +823,8 @@ $$
 \begin{gathered}
 E=-\cfrac{V+P\left(\cfrac{\lambda_1}{k_1}+\cfrac{\lambda_1}{k_2}\right)}{t_{FE}+k\left(\cfrac{\lambda_1}{k_1}+\cfrac{\lambda_2}{k_2}\right)} \\
 \\\end{gathered}
-$$
-</div>
+\tag{5}
+$$</div>
 
 <p>退极化场：</p>
 <div>
@@ -666,32 +834,32 @@ E_d
 = -\cfrac{P\left(\cfrac{\lambda_1}{k_1}+\cfrac{\lambda_1}{k_2}\right)}{t_{FE}+k\left(\cfrac{\lambda_1}{k_1}+\cfrac{\lambda_2}{k_2}\right)} \\
 = -\cfrac{P}{k}\cfrac{C_{FE}}{C_{FE}+C_{M}} \\
 \\\end{gathered}
-$$
-</div>
+\tag{6}
+$$</div>
 
 <p>其中铁电电容</p>
 <div>
 $$
 C_{FE} = \cfrac{k}{t_{FE}}
-$$
-</div>
+\tag{7}
+$$</div>
 
 <p>两个金属电极的电容（用串联电容公式）</p>
 <div>
 $$
 \cfrac{1}{C_{M}} = \cfrac{\lambda_1}{k_1} + \cfrac{\lambda_2}{k_2}
-$$
-</div>
+\tag{8}
+$$</div>
 
 <p>如果是理想金属 $\lambda_1&#x3D;\lambda_2&#x3D;0,k_1&#x3D;k_2&#x3D;+\infty$ ，那么无退极化场。</p>
 <h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><p><a target="_blank" rel="noopener" href="https://pubs.aip.org/aip/jap/article/44/8/3379/6486/Depolarization-fields-in-thin-ferroelectric-films">https://pubs.aip.org/aip/jap/article/44/8/3379/6486/Depolarization-fields-in-thin-ferroelectric-films</a></p>
-</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2024-11-27T06:35:21.000Z" title="2024/11/27 14:35:21">2024-11-27</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E7%89%A9%E7%90%86/">物理</a></span><span class="level-item">8 分钟读完 (大约1141个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2024/11/27/Gummel%E8%BF%AD%E4%BB%A3%E6%B3%95/">Gummel迭代法</a></p><div class="content"><p><a target="_blank" rel="noopener" href="https://github.com/yuchenxi2000/diode-sim">PN结仿真程序</a>的原理推导</p>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2024-11-27T06:35:21.000Z" title="2024/11/27 14:35:21">2024-11-27</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E7%89%A9%E7%90%86/">物理</a></span><span class="level-item">8 分钟读完 (大约1131个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2024/11/27/Gummel%E8%BF%AD%E4%BB%A3%E6%B3%95/">Gummel迭代法</a></p><div class="content"><p><a target="_blank" rel="noopener" href="https://github.com/yuchenxi2000/diode-sim">PN结仿真程序</a>的原理推导</p>
 <h2 id="平衡状态"><a href="#平衡状态" class="headerlink" title="平衡状态"></a>平衡状态</h2><p>设半导体n型掺杂 $N_D$ ，p型掺杂 $N_A$ ，泊松方程为</p>
 <div>
 $$
--\cfrac{\mathrm{d}^2\phi}{\mathrm{d}x^2} = -\cfrac{q}{\varepsilon}\lbrack n-p-N_D+N_A\rbrack 
-$$
-</div>
+-\cfrac{\mathrm{d}^2\phi}{\mathrm{d}x^2} = -\cfrac{q}{\varepsilon}[n-p-N_D+N_A]
+\tag{1}
+$$</div>
 
 <p>其中</p>
 <div>
@@ -700,77 +868,77 @@ $$
 n=n_i\exp(\cfrac{q}{kT}\phi) \\
 p=n_i\exp(-\cfrac{q}{kT}\phi) \\
 \\\end{gathered}
-$$
-</div>
+\tag{2}
+$$</div>
 
 <p>牛顿迭代法：假设方程的解为</p>
 <div>
 $$
 F(x_0)=0
-$$
-</div>
+\tag{3}
+$$</div>
 
 <p>那么将方程线性化，根据解的条件，</p>
 <div>
 $$
 F(x)+F'(x)(x_0-x)=0
-$$
-</div>
+\tag{4}
+$$</div>
 
 <p>我们让下一次迭代的变量逼近解，所以 $x_0$ 就是下一次迭代的变量</p>
 <div>
 $$
 x_0=x-\cfrac{F(x)}{F'(x)}
-$$
-</div>
+\tag{5}
+$$</div>
 
 <p>此即非线性方程的牛顿迭代法。</p>
 <p>运用到泊松方程里，设</p>
 <div>
 $$
-F\lbrack \phi\rbrack  = \cfrac{\mathrm{d}^2\phi}{\mathrm{d}x^2} - \cfrac{q}{\varepsilon}\lbrack n-p-N_D+N_A\rbrack 
-$$
-</div>
+F[\phi] = \cfrac{\mathrm{d}^2\phi}{\mathrm{d}x^2} - \cfrac{q}{\varepsilon}[n-p-N_D+N_A]
+\tag{6}
+$$</div>
 
 <p>有“导数”</p>
 <div>
 $$
-F'\lbrack \phi\rbrack  = \cfrac{\mathrm{d}^2}{\mathrm{d}x^2} - \cfrac{q}{\varepsilon}\cfrac{q}{kT}(n+p)
-$$
-</div>
+F'[\phi] = \cfrac{\mathrm{d}^2}{\mathrm{d}x^2} - \cfrac{q}{\varepsilon}\cfrac{q}{kT}(n+p)
+\tag{7}
+$$</div>
 
 <p>根据牛顿迭代方程，</p>
 <div>
 $$
-F\lbrack \phi\rbrack +F'\lbrack \phi\rbrack (\phi'-\phi) = 0
-$$
-</div>
+F[\phi]+F'[\phi](\phi'-\phi) = 0
+\tag{8}
+$$</div>
 
 <p>所以</p>
 <div>
 $$
 \begin{gathered}
-\cfrac{\mathrm{d}^2\phi}{\mathrm{d}x^2} - \cfrac{q}{\varepsilon}\lbrack n-p-N_D+N_A\rbrack  \\
+\cfrac{\mathrm{d}^2\phi}{\mathrm{d}x^2} - \cfrac{q}{\varepsilon}[n-p-N_D+N_A] \\
 +\cfrac{\mathrm{d}^2\phi'}{\mathrm{d}x^2}-\cfrac{\mathrm{d}^2\phi}{\mathrm{d}x^2} - \cfrac{q}{\varepsilon}\cfrac{q}{kT}(n+p)(\phi'-\phi)=0
 \\\end{gathered}
-$$
-</div>
+\tag{9}
+$$</div>
 
 
 <div>
 $$
-\cfrac{\mathrm{d}^2\phi'}{\mathrm{d}x^2} - \cfrac{q^2}{kT\varepsilon}(n+p)\phi' = \cfrac{q}{\varepsilon}\lbrack n-p-N_D+N_A - \cfrac{q}{kT}(n+p)\phi\rbrack 
-$$
-</div>
+\cfrac{\mathrm{d}^2\phi'}{\mathrm{d}x^2} - \cfrac{q^2}{kT\varepsilon}(n+p)\phi' = \cfrac{q}{\varepsilon}[n-p-N_D+N_A - \cfrac{q}{kT}(n+p)\phi]
+\tag{10}
+$$</div>
 
 
 <p>此即Gummel迭代法。</p>
 <p>归一化：设 $n,p,N_D,N_A$ 相对于 $n_0$ ， $\phi$ 相对于 $V_t&#x3D;kT&#x2F;q$ </p>
 <div>
 $$
-\cfrac{\mathrm{d}^2\phi'}{\mathrm{d}x^2} - \cfrac{qn_0}{\varepsilon V_t}(n+p)\phi' = \cfrac{qn_0}{\varepsilon V_t}\lbrack n-p-N_D+N_A - (n+p)\phi\rbrack 
-$$
-</div>
+\cfrac{\mathrm{d}^2\phi'}{\mathrm{d}x^2} - \cfrac{qn_0}{\varepsilon V_t}(n+p)\phi' = \cfrac{qn_0}{\varepsilon V_t}[n-p-N_D+N_A - (n+p)\phi]
+\tag{11}
+$$</div>
 
 
 <div>
@@ -779,8 +947,8 @@ $$
 n=\exp(\phi) \\
 p=\exp(-\phi) \\
 \\\end{gathered}
-$$
-</div>
+\tag{12}
+$$</div>
 
 
 <p>平衡状态下自洽求解上面三个方程即可。</p>
@@ -791,8 +959,8 @@ $$
 -q\cfrac{\partial n}{\partial t} + \nabla J_n = -qU \\
 q\cfrac{\partial p}{\partial t} + \nabla J_p = qU \\
 \\\end{gathered}
-$$
-</div>
+\tag{13}
+$$</div>
 
 
 <p>电流表达式</p>
@@ -802,15 +970,15 @@ $$
 J_n=qn\mu_n \varepsilon + qD_n \nabla n \\
 J_p=qp\mu_p \varepsilon - qD_p \nabla p \\
 \\\end{gathered}
-$$
-</div>
+\tag{14}
+$$</div>
 
 <p>根据</p>
 <div>
 $$
 \varepsilon=-\nabla \phi
-$$
-</div>
+\tag{15}
+$$</div>
 
 <p>以及爱因斯坦关系</p>
 <div>
@@ -819,8 +987,8 @@ $$
 qD_n = kT\mu_n \\
 qD_p = kT\mu_p \\
 \\\end{gathered}
-$$
-</div>
+\tag{16}
+$$</div>
 
 
 <div>
@@ -829,102 +997,102 @@ $$
 J_n
 = -qn\cfrac{q}{kT}D_n \nabla\phi + qD_n \nabla n \\
 = qD_n\left(-\cfrac{q}{kT} n\nabla\phi + \nabla n\right) \\
-= qD_n\exp\left(\cfrac{q}{kT}\phi\right)\nabla \left\lbrack n\exp\left(-\cfrac{q}{kT}\phi\right)\right\rbrack  \\
+= qD_n\exp\left(\cfrac{q}{kT}\phi\right)\nabla \left[n\exp\left(-\cfrac{q}{kT}\phi\right)\right] \\
 \\\end{gathered}
-$$
-</div>
+\tag{17}
+$$</div>
 
 
-<p>最后一步相当于引入了积分因子 $\exp\lbrack -q\phi&#x2F;(kT)\rbrack $ </p>
+<p>最后一步相当于引入了积分因子 $\exp[-q\phi&#x2F;(kT)]$ </p>
 <p>同理，对于 $J_p$ 有</p>
 <div>
 $$
 \begin{gathered}
 J_p
-= -qD_p\exp\left(-\cfrac{q}{kT}\phi\right)\nabla \left\lbrack p\exp\left(\cfrac{q}{kT}\phi\right)\right\rbrack  \\
+= -qD_p\exp\left(-\cfrac{q}{kT}\phi\right)\nabla \left[p\exp\left(\cfrac{q}{kT}\phi\right)\right] \\
 \\\end{gathered}
-$$
-</div>
+\tag{18}
+$$</div>
 
 <p>稳态下</p>
 <div>
 $$
 \cfrac{\partial n}{\partial t}=\cfrac{\partial p}{\partial t}=0
-$$
-</div>
+\tag{19}
+$$</div>
 
 <p>电流连续性方程化为（ $n$ 的方程）</p>
 <div>
 $$
 \nabla J_n = -qU
-$$
-</div>
+\tag{20}
+$$</div>
 
 <p>下面给出一维情形下的离散化形式，假设等间距网格，步长 $h$ </p>
 <div>
 $$
 \begin{gathered}
 \int_{x_i}^{x_{i+1}} J_n\exp\left(-\cfrac{q}{kT}\phi\right) \mathrm{d}x
-= \int_{x_i}^{x_{i+1}} qD_n\nabla \left\lbrack n\exp\left(-\cfrac{q}{kT}\phi\right)\right\rbrack  \mathrm{d}x \\
+= \int_{x_i}^{x_{i+1}} qD_n\nabla \left[n\exp\left(-\cfrac{q}{kT}\phi\right)\right] \mathrm{d}x \\
 \\\end{gathered}
-$$
-</div>
+\tag{21}
+$$</div>
 
 
 <div>
 $$
 \begin{gathered}
-J_{n,i+1/2}\cfrac{kT}{q}\cfrac{h}{\phi_{i}-\phi_{i+1}}\left\lbrack \exp\left(-\cfrac{q}{kT}\phi_{i+1}\right)-\exp\left(-\cfrac{q}{kT}\phi_i\right)\right\rbrack 
+J_{n,i+1/2}\cfrac{kT}{q}\cfrac{h}{\phi_{i}-\phi_{i+1}}\left[\exp\left(-\cfrac{q}{kT}\phi_{i+1}\right)-\exp\left(-\cfrac{q}{kT}\phi_i\right)\right]
 = \\
-qD_{i+1/2} \left\lbrack n_{i+1}\exp\left(-\cfrac{q}{kT}\phi_{i+1}\right)-n_i\exp\left(-\cfrac{q}{kT}\phi_i\right)\right\rbrack 
+qD_{i+1/2} \left[n_{i+1}\exp\left(-\cfrac{q}{kT}\phi_{i+1}\right)-n_i\exp\left(-\cfrac{q}{kT}\phi_i\right)\right]
 \\\end{gathered}
-$$
-</div>
+\tag{22}
+$$</div>
 
 
 <p>记</p>
 <div>
 $$
 B(x)=\cfrac{x}{\exp(x)-1}
-$$
-</div>
+\tag{23}
+$$</div>
 
 <p>同时用归一化</p>
 <div>
 $$
-J_{n,i+1/2}=\cfrac{qn_0D_{i+1/2}}{h}\left\lbrack B(\phi_{i+1}-\phi_i)n_{i+1}-B(\phi_{i}-\phi_{i+1})n_i\right\rbrack 
-$$
-</div>
+J_{n,i+1/2}=\cfrac{qn_0D_{i+1/2}}{h}\left[B(\phi_{i+1}-\phi_i)n_{i+1}-B(\phi_{i}-\phi_{i+1})n_i\right]
+\tag{24}
+$$</div>
 
 <p>用一阶导数近似公式</p>
 <div>
 $$
 J_{n,i+1/2}-J_{n,i-1/2}=-hqU_i
-$$
-</div>
+\tag{25}
+$$</div>
 
 <p>即得电流连续性方程离散化形式：</p>
 <div>
 $$
 \begin{gathered}
-D_{i+1/2}\left\lbrack B(\phi_{i+1}-\phi_i)n_{i+1}-B(\phi_{i}-\phi_{i+1})n_i\right\rbrack 
--D_{i-1/2}\left\lbrack B(\phi_{i}-\phi_{i-1})n_{i}-B(\phi_{i-1}-\phi_{i})n_{i-1}\right\rbrack  \\
+D_{i+1/2}\left[B(\phi_{i+1}-\phi_i)n_{i+1}-B(\phi_{i}-\phi_{i+1})n_i\right]
+-D_{i-1/2}\left[B(\phi_{i}-\phi_{i-1})n_{i}-B(\phi_{i-1}-\phi_{i})n_{i-1}\right] \\
 =-\cfrac{h^2}{n_0}U_i
 \\\end{gathered}
-$$
-</div>
+\tag{26}
+$$</div>
 
 
 <div>
 $$
 \begin{gathered}
 D_{i+1/2}B(\phi_{i+1}-\phi_i)n_{i+1} \\
--\left\lbrack D_{i+1/2}B(\phi_{i}-\phi_{i+1})+D_{i-1/2}B(\phi_{i}-\phi_{i-1})\right\rbrack n_{i} \\
+-\left[D_{i+1/2}B(\phi_{i}-\phi_{i+1})+D_{i-1/2}B(\phi_{i}-\phi_{i-1})\right]n_{i} \\
 +D_{i-1/2}B(\phi_{i-1}-\phi_{i})n_{i-1} 
 =-\cfrac{h^2}{n_0}U_i
 \\\end{gathered}
-$$
-</div>
+\tag{27}
+$$</div>
 
 
 <p>非平衡状态下，需要自洽求解泊松方程和两个电流连续性方程。</p>
@@ -935,31 +1103,31 @@ $$
 <div>
 $$
 J_n
-= qD_n\exp\left(\cfrac{q}{kT}\phi\right)\nabla \left\lbrack n\exp\left(-\cfrac{q}{kT}\phi\right)\right\rbrack 
-$$
-</div>
+= qD_n\exp\left(\cfrac{q}{kT}\phi\right)\nabla \left[n\exp\left(-\cfrac{q}{kT}\phi\right)\right]
+\tag{28}
+$$</div>
 
 <p>平衡状态 $J_n&#x3D;0$ （下面为简单进行归一化）</p>
 <div>
 $$
 n\exp(-\phi)=\text{const.}
-$$
-</div>
+\tag{29}
+$$</div>
 
 <p>考虑 $np&#x3D;1$ ，再定义合适的电势零点，有</p>
 <div>
 $$
 n=\exp(\phi),p=\exp(-\phi)
-$$
-</div>
+\tag{30}
+$$</div>
 
 
-</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2024-10-26T02:45:41.000Z" title="2024/10/26 10:45:41">2024-10-26</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E7%89%A9%E7%90%86/">物理</a></span><span class="level-item">1 小时读完 (大约7528个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2024/10/26/%E5%8D%95%E5%8E%9F%E5%AD%90%E7%9A%84%E5%AF%86%E5%BA%A6%E6%B3%9B%E5%87%BD%E7%90%86%E8%AE%BA%E6%B1%82%E8%A7%A3_v2/">单原子的密度泛函理论求解_v2</a></p><div class="content"><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>在量子力学中，求解孤立原子的问题归结到对其波函数的求解。假设某原子包含 $N$ 个电子，那么波函数就是这 $N$ 个电子的坐标的函数：</p>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2024-10-26T02:45:41.000Z" title="2024/10/26 10:45:41">2024-10-26</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E7%89%A9%E7%90%86/">物理</a></span><span class="level-item">1 小时读完 (大约7561个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2024/10/26/%E5%8D%95%E5%8E%9F%E5%AD%90%E7%9A%84%E5%AF%86%E5%BA%A6%E6%B3%9B%E5%87%BD%E7%90%86%E8%AE%BA%E6%B1%82%E8%A7%A3_v2/">单原子的密度泛函理论求解_v2</a></p><div class="content"><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>在量子力学中，求解孤立原子的问题归结到对其波函数的求解。假设某原子包含 $N$ 个电子，那么波函数就是这 $N$ 个电子的坐标的函数：</p>
 <div>
 $$
 \Psi = \Psi(r_1,r_2, \cdots,r_N)
-$$
-</div>
+\tag{1}
+$$</div>
 
 <p>该函数的维度是 $3N$ ，并且需要满足交换反对称性。除非需要计算的是原子序数小的轻原子，否则计算量是巨大的。假设对空间坐标 $r_i$ 进行离散化，每个坐标的网格格点数为 $M$ ，那么计算复杂度至少是 $O(M^{3N})$ 。</p>
 <p>幸运地是Kohn-Sham定理解决了这个计算复杂度问题。根据Kohn-Sham定理，基态能量完全由电子密度决定，电子密度包含了所有我们关心的物理信息，实现了目标求解量的降维，从 $3N$ 维降至 $3$ 维。</p>
@@ -974,53 +1142,53 @@ $$
 <h1 id="孤立原子的密度泛函理论"><a href="#孤立原子的密度泛函理论" class="headerlink" title="孤立原子的密度泛函理论"></a>孤立原子的密度泛函理论</h1><h2 id="密度泛函理论"><a href="#密度泛函理论" class="headerlink" title="密度泛函理论"></a>密度泛函理论</h2><p>由密度泛函理论，存在一个关于电子密度的能量泛函，根据基态能量最小的原理就可以求出基态电子密度：</p>
 <div>
 $$
-E = E\lbrack n(r)\rbrack 
-$$
-</div>
+E = E[n(r)]
+\tag{2}
+$$</div>
 
 <p>然而，这个能量泛函是未知的。解决方法是将其拆分成熟悉的部分和剩下的部分之和，然后对剩下部分做近似：动能，电子与原子核的库伦作用，电子间库伦作用*，以及未知的交换关联作用。</p>
 <div>
 $$
 E = T + E_{ext} + E_H + E_{xc}
-$$
-</div>
+\tag{3}
+$$</div>
 
 
 <blockquote>
 <p>*注：又叫Hatree能。严格来说不能叫电子间库伦作用，因为其中包含了非物理的自相互作用</p>
-</blockquote></div><a class="article-more button is-small is-size-7" href="/2024/10/26/%E5%8D%95%E5%8E%9F%E5%AD%90%E7%9A%84%E5%AF%86%E5%BA%A6%E6%B3%9B%E5%87%BD%E7%90%86%E8%AE%BA%E6%B1%82%E8%A7%A3_v2/#more">阅读更多</a></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2024-10-05T13:18:57.000Z" title="2024/10/5 21:18:57">2024-10-05</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E7%89%A9%E7%90%86/">物理</a></span><span class="level-item">15 分钟读完 (大约2220个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2024/10/05/%E6%8A%95%E5%BD%B1%E7%BC%80%E5%8A%A0%E6%B3%A2%E6%B3%95%EF%BC%88PAW%EF%BC%89%E4%B8%80%E4%BA%9B%E8%AF%81%E6%98%8E/">投影缀加波法（PAW）一些证明</a></p><div class="content"><p>除非特殊说明，下面的 $kr$ 都表示 $k,r$ 的点乘，即 $k \cdot r$ </p>
+</blockquote></div><a class="article-more button is-small is-size-7" href="/2024/10/26/%E5%8D%95%E5%8E%9F%E5%AD%90%E7%9A%84%E5%AF%86%E5%BA%A6%E6%B3%9B%E5%87%BD%E7%90%86%E8%AE%BA%E6%B1%82%E8%A7%A3_v2/#more">阅读更多</a></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2024-10-05T13:18:57.000Z" title="2024/10/5 21:18:57">2024-10-05</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E7%89%A9%E7%90%86/">物理</a></span><span class="level-item">15 分钟读完 (大约2190个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2024/10/05/%E6%8A%95%E5%BD%B1%E7%BC%80%E5%8A%A0%E6%B3%A2%E6%B3%95%EF%BC%88PAW%EF%BC%89%E4%B8%80%E4%BA%9B%E8%AF%81%E6%98%8E/">投影缀加波法（PAW）一些证明</a></p><div class="content"><p>除非特殊说明，下面的 $kr$ 都表示 $k,r$ 的点乘，即 $k \cdot r$ </p>
 <h2 id="1"><a href="#1" class="headerlink" title="1"></a>1</h2><p>不同 $k$ 对应的波函数正交：</p>
 <div>
 $$
 \psi_{km}(r)=\exp(\mathrm{i}kr) u_{km}(r)
-$$
-</div>
+\tag{1}
+$$</div>
 
 
 <div>
 $$
 \begin{gathered}
-\int_{\mathbb{R}^3} \psi^*_{k'n}(r)\psi_{km}(r) \, \mathrm{d}r \\
-= \int_{\mathbb{R}^3} \exp\lbrack \mathrm{i}(k-k')r\rbrack  u^*_{k'n}(r)u_{km}(r) \, \mathrm{d}r \\
-= \sum_R\int_{\Omega} \exp\lbrack \mathrm{i}(k-k')(r+R)\rbrack  u^*_{k'n}(r+R)u_{km}(r+R) \, \mathrm{d}r \\
-= \left(\sum_R \exp\lbrack \mathrm{i}(k-k')R\rbrack \right) \cdot \int_{\Omega} \exp\lbrack \mathrm{i}(k-k')r\rbrack  u^*_{k'n}(r)u_{km}(r) \, \mathrm{d}r \\
+\int_{\mathbb{R}^3} \psi^\ast _{k'n}(r)\psi_{km}(r) \, \mathrm{d}r \\
+= \int_{\mathbb{R}^3} \exp[\mathrm{i}(k-k')r] u^\ast _{k'n}(r)u_{km}(r) \, \mathrm{d}r \\
+= \sum_R\int_{\Omega} \exp[\mathrm{i}(k-k')(r+R)] u^\ast _{k'n}(r+R)u_{km}(r+R) \, \mathrm{d}r \\
+= \left(\sum_R \exp[\mathrm{i}(k-k')R]\right) \cdot \int_{\Omega} \exp[\mathrm{i}(k-k')r] u^\ast _{k'n}(r)u_{km}(r) \, \mathrm{d}r \\
 \\\end{gathered}
-$$
-</div>
+\tag{2}
+$$</div>
 
 
 <div>
 $$
-\sum_R \exp\lbrack \mathrm{i}(k-k')R\rbrack  \propto \delta(k-k')
-$$
-</div>
+\sum_R \exp[\mathrm{i}(k-k')R] \propto \delta(k-k')
+\tag{3}
+$$</div>
 
 
 <div>
 $$
-\braket{\psi_{k'n}\vert\psi_{km}}\propto \delta(k-k') \int_{\Omega} u^*_{k'n}(r) u_{km}(r) \, \mathrm{d}r
-$$
-</div>
+\braket{\psi_{k'n}\vert\psi_{km}}\propto \delta(k-k') \int_{\Omega} u^\ast _{k'n}(r) u_{km}(r) \, \mathrm{d}r
+\tag{4}
+$$</div>
 
 
 <p>因此不同 $k$ 对应的波函数正交。我们省略了发散的乘子，因为它是无穷大的体系造成的。省略后，在 $\mathbb{R}^3$ 上的积分化为在原胞 $\Omega$ 上的积分。虽然波函数定义在 $\mathbb{R}^3$ 上，但是计算时只计算原胞内。这个问题我们在下一章节也会讨论。</p>
@@ -1030,49 +1198,49 @@ $$
 <div>
 $$
 H=-\cfrac{1}{2}\nabla^2 + V_H + V_{xc}
-$$
-</div>
+\tag{5}
+$$</div>
 
 <p>参考<a href="/2023/11/16/%E8%B5%9D%E5%8A%BF%E6%96%B9%E6%B3%95/" title="赝势方法">赝势方法</a>，运用PAW</p>
 <div>
 $$
 \psi = T\tilde{\psi}
-$$
-</div>
+\tag{6}
+$$</div>
 
 <p>其中波函数 $\psi$ 和赝波函数 $\tilde{\psi}$ 的变换为</p>
 <div>
 $$
 T=1+\sum_i (\ket{\phi_i}-\ket{\tilde{\phi}_i})\bra{p_i}
-$$
-</div>
+\tag{7}
+$$</div>
 
 <p>我们举的例子为哈密顿量。</p>
 <div>
 $$
 \bra{\psi}H\ket{\psi}=\bra{\tilde{\psi}}T^\dagger H T\ket{\tilde{\psi}}
-$$
-</div>
+\tag{8}
+$$</div>
 
 <p>定义 $k$ 相关的投影算子</p>
 <div>
 $$
 \ket{p_k}=\exp(-\mathrm{i}kr)\ket{p}
-$$
-</div>
+\tag{9}
+$$</div>
 
 
 <div>
 $$
 \begin{gathered}
 T^\dagger H T \\
-= \lbrack 1+\sum_i \ket{p_i}(\bra{\phi_i}-\bra{\tilde{\phi}_i})\rbrack H\lbrack 1+\sum_i (\ket{\phi_i}-\ket{\tilde{\phi}_i})\bra{p_i}\rbrack  \\
-= \lbrack 1+\sum_i \ket{p_i}(\bra{\phi_i}-\bra{\tilde{\phi}_i})\rbrack \lbrack H+\sum_i H(\ket{\phi_i}-\ket{\tilde{\phi}_i})\bra{p_i}\rbrack  \\
+= [1+\sum_i \ket{p_i}(\bra{\phi_i}-\bra{\tilde{\phi}_i})]H[1+\sum_i (\ket{\phi_i}-\ket{\tilde{\phi}_i})\bra{p_i}] \\
+= [1+\sum_i \ket{p_i}(\bra{\phi_i}-\bra{\tilde{\phi}_i})][H+\sum_i H(\ket{\phi_i}-\ket{\tilde{\phi}_i})\bra{p_i}] \\
 = H+\sum_i H(\ket{\phi_i}-\ket{\tilde{\phi}_i})\bra{p_i}+\sum_i \ket{p_i}(\bra{\phi_i}-\bra{\tilde{\phi}_i})H \\
 + \sum_{ij} \ket{p_i}(\bra{\phi_i}-\bra{\tilde{\phi}_i})H(\ket{\phi_j}-\ket{\tilde{\phi}_j})\bra{p_j} \\
 \\\end{gathered}
-$$
-</div>
+\tag{10}
+$$</div>
 
 
 <p>下面开始计算。我们只计算其中一项 $H\sum_i (\ket{\phi_i}-\ket{\tilde{\phi}_i})\bra{p_i}$ 的矩阵元。 $H$ 这一项可以由章节1得到。</p>
@@ -1080,43 +1248,43 @@ $$
 $$
 \begin{gathered}
 \sum_i (\ket{\phi_i}-\ket{\tilde{\phi}_i})\braket{p_i \vert \tilde{\psi}_k} \\
-= \int_{\mathbb{R}^3} \sum_{i\alpha} \lbrack \phi_i(r'-\tau_i-R_\alpha)-\tilde{\phi}_i(r'-\tau_i-R_\alpha)\rbrack  p_i^*(r-\tau_i-R_\alpha) \tilde{\psi}_k(r) \, \mathrm{d}r \\
-= \sum_{\beta}\int_{\Omega} \sum_{i\alpha} \lbrack \phi_i(r'-\tau_i-R_\alpha)-\tilde{\phi}_i(r'-\tau_i-R_\alpha)\rbrack  p_i^*(r+R_\beta-\tau_i-R_\alpha) \tilde{\psi}_k(r+R_\beta) \, \mathrm{d}r \\
-= \sum_{i\alpha\beta}\int_{\Omega} \lbrack \phi_i(r'-\tau_i-R_\alpha)-\tilde{\phi}_i(r'-\tau_i-R_\alpha)\rbrack  p_i^*(r+R_\beta-\tau_i-R_\alpha) \exp\lbrack \mathrm{i}k(r+R_\beta)\rbrack  \tilde{u}_k(r) \, \mathrm{d}r \\
-= \sum_{i\alpha}\int_{\Omega} \lbrack \phi_i(r'-\tau_i-R_\alpha)-\tilde{\phi}_i(r'-\tau_i-R_\alpha)\rbrack  p_i^*(r-\tau_i) \exp\lbrack \mathrm{i}k(r+R_\alpha)\rbrack  \tilde{u}_k(r) \, \mathrm{d}r \\
-= \sum_{i\alpha}\exp\lbrack \mathrm{i}k(\tau_i+R_\alpha)\rbrack  \lbrack \phi_i(r'-\tau_i-R_\alpha)-\tilde{\phi}_i(r'-\tau_i-R_\alpha)\rbrack  \int_{\Omega} p_{ik}^*(r-\tau_i) \tilde{u}_k(r) \, \mathrm{d}r \\
-= \sum_{i\alpha}\exp\lbrack \mathrm{i}k(\tau_i+R_\alpha)\rbrack  \lbrack \phi_i(r'-\tau_i-R_\alpha)-\tilde{\phi}_i(r'-\tau_i-R_\alpha)\rbrack  \beta_{ik} \\
+= \int_{\mathbb{R}^3} \sum_{i\alpha} [\phi_i(r'-\tau_i-R_\alpha)-\tilde{\phi}_i(r'-\tau_i-R_\alpha)] p_i^\ast (r-\tau_i-R_\alpha) \tilde{\psi}_k(r) \, \mathrm{d}r \\
+= \sum_{\beta}\int_{\Omega} \sum_{i\alpha} [\phi_i(r'-\tau_i-R_\alpha)-\tilde{\phi}_i(r'-\tau_i-R_\alpha)] p_i^\ast (r+R_\beta-\tau_i-R_\alpha) \tilde{\psi}_k(r+R_\beta) \, \mathrm{d}r \\
+= \sum_{i\alpha\beta}\int_{\Omega} [\phi_i(r'-\tau_i-R_\alpha)-\tilde{\phi}_i(r'-\tau_i-R_\alpha)] p_i^\ast (r+R_\beta-\tau_i-R_\alpha) \exp[\mathrm{i}k(r+R_\beta)] \tilde{u}_k(r) \, \mathrm{d}r \\
+= \sum_{i\alpha}\int_{\Omega} [\phi_i(r'-\tau_i-R_\alpha)-\tilde{\phi}_i(r'-\tau_i-R_\alpha)] p_i^\ast (r-\tau_i) \exp[\mathrm{i}k(r+R_\alpha)] \tilde{u}_k(r) \, \mathrm{d}r \\
+= \sum_{i\alpha}\exp[\mathrm{i}k(\tau_i+R_\alpha)] [\phi_i(r'-\tau_i-R_\alpha)-\tilde{\phi}_i(r'-\tau_i-R_\alpha)] \int_{\Omega} p_{ik}^\ast (r-\tau_i) \tilde{u}_k(r) \, \mathrm{d}r \\
+= \sum_{i\alpha}\exp[\mathrm{i}k(\tau_i+R_\alpha)] [\phi_i(r'-\tau_i-R_\alpha)-\tilde{\phi}_i(r'-\tau_i-R_\alpha)] \beta_{ik} \\
 \\\end{gathered}
-$$
-</div>
+\tag{11}
+$$</div>
 
 <p>其中</p>
 <div>
 $$
-\beta_{ik} = \int_{\Omega} p_{ik}^*(r-\tau_i) \tilde{u}_k(r) \, \mathrm{d}r
-$$
-</div>
+\beta_{ik} = \int_{\Omega} p_{ik}^\ast (r-\tau_i) \tilde{u}_k(r) \, \mathrm{d}r
+\tag{12}
+$$</div>
 
-<p>上面这一项有个相因子 $\exp\lbrack \mathrm{i}k(\tau_i+R_\alpha)\rbrack $ ，但下面可以看到如果写出整个表达式，该项会抵消。</p>
+<p>上面这一项有个相因子 $\exp[\mathrm{i}k(\tau_i+R_\alpha)]$ ，但下面可以看到如果写出整个表达式，该项会抵消。</p>
 <div>
 $$
 \begin{gathered}
 \bra{\tilde{\psi}_{k'n}}H\sum_i (\ket{\phi_i}-\ket{\tilde{\phi}_i})\braket{p_i \vert \tilde{\psi}_{km}} \\
-= \int_{\mathbb{R}^3} \tilde{u}^*_{k'n}(r)\exp\lbrack -\mathrm{i}k'r\rbrack  \sum_{i\alpha}\exp\lbrack \mathrm{i}k(\tau_i+R_\alpha)\rbrack  \lbrack H\phi_i(r-\tau_i-R_\alpha)-H\tilde{\phi}_i(r-\tau_i-R_\alpha)\rbrack  \beta_{ikm} \, \mathrm{d}r \\
-= \sum_{i\alpha}\exp\lbrack \mathrm{i}k(\tau_i+R_\alpha)\rbrack  \beta_{ikm} \int_{\mathbb{R}^3} \tilde{u}^*_{k'n}(r)\exp\lbrack -\mathrm{i}k'r\rbrack  \lbrack H\phi_i(r-\tau_i-R_\alpha)-H\tilde{\phi}_i(r-\tau_i-R_\alpha)\rbrack  \, \mathrm{d}r \\
-= \sum_{i\alpha}\exp\lbrack \mathrm{i}k(\tau_i+R_\alpha)\rbrack  \beta_{ikm} \int_{\Omega} \tilde{u}^*_{k'n}(r)\exp\lbrack -\mathrm{i}k'(r+R_\alpha)\rbrack  \lbrack H\phi_i(r-\tau_i)-H\tilde{\phi}_i(r-\tau_i)\rbrack  \, \mathrm{d}r \\
-\propto \delta(k-k') \sum_{i} \beta_{ikm} \int_{\Omega} \tilde{u}^*_{k'n}(r)\exp\lbrack -\mathrm{i}k'(r-\tau_i)\rbrack  \lbrack H\phi_i(r-\tau_i)-H\tilde{\phi}_i(r-\tau_i)\rbrack  \, \mathrm{d}r \\
+= \int_{\mathbb{R}^3} \tilde{u}^\ast _{k'n}(r)\exp[-\mathrm{i}k'r] \sum_{i\alpha}\exp[\mathrm{i}k(\tau_i+R_\alpha)] [H\phi_i(r-\tau_i-R_\alpha)-H\tilde{\phi}_i(r-\tau_i-R_\alpha)] \beta_{ikm} \, \mathrm{d}r \\
+= \sum_{i\alpha}\exp[\mathrm{i}k(\tau_i+R_\alpha)] \beta_{ikm} \int_{\mathbb{R}^3} \tilde{u}^\ast _{k'n}(r)\exp[-\mathrm{i}k'r] [H\phi_i(r-\tau_i-R_\alpha)-H\tilde{\phi}_i(r-\tau_i-R_\alpha)] \, \mathrm{d}r \\
+= \sum_{i\alpha}\exp[\mathrm{i}k(\tau_i+R_\alpha)] \beta_{ikm} \int_{\Omega} \tilde{u}^\ast _{k'n}(r)\exp[-\mathrm{i}k'(r+R_\alpha)] [H\phi_i(r-\tau_i)-H\tilde{\phi}_i(r-\tau_i)] \, \mathrm{d}r \\
+\propto \delta(k-k') \sum_{i} \beta_{ikm} \int_{\Omega} \tilde{u}^\ast _{k'n}(r)\exp[-\mathrm{i}k'(r-\tau_i)] [H\phi_i(r-\tau_i)-H\tilde{\phi}_i(r-\tau_i)] \, \mathrm{d}r \\
 = \delta(k-k') \sum_{i} \beta_{ikm} \gamma_{ikn}
 \\\end{gathered}
-$$
-</div>
+\tag{13}
+$$</div>
 
 <p>其中</p>
 <div>
 $$
-\gamma_{ikn} = \int_{\Omega} \tilde{u}^*_{k'n}(r)\exp\lbrack -\mathrm{i}k'(r-\tau_i)\rbrack  \lbrack H\phi_i(r-\tau_i)-H\tilde{\phi}_i(r-\tau_i)\rbrack  \, \mathrm{d}r
-$$
-</div>
+\gamma_{ikn} = \int_{\Omega} \tilde{u}^\ast _{k'n}(r)\exp[-\mathrm{i}k'(r-\tau_i)] [H\phi_i(r-\tau_i)-H\tilde{\phi}_i(r-\tau_i)] \, \mathrm{d}r
+\tag{14}
+$$</div>
 
 
 <p>同样，我们省略了无穷大的乘子，把在 $\mathbb{R}^3$ 上的积分化为在原胞 $\Omega$ 上的积分。</p>
@@ -1126,15 +1294,15 @@ $$
 <div>
 $$
 \beta_{ikm}=\braket{p_{ik} \vert \tilde{u}_{km}}
-$$
-</div>
+\tag{15}
+$$</div>
 
 <p> $\tilde{u}$ 是周期函数，可以傅立叶展开（而 $p$ 不是）</p>
 <div>
 $$
 \ket{\tilde{u}_{km}}=\sum_G \ket{G}\braket{G \vert \tilde{u}_{km}}
-$$
-</div>
+\tag{16}
+$$</div>
 
 <p>所以</p>
 <div>
@@ -1142,20 +1310,20 @@ $$
 \begin{gathered}
 \beta_{ikm} = \braket{p_{ik}(r-\tau_i) \vert \tilde{u}_{km}(r)} \\
 = \sum_G \braket{p_{ik}(r-\tau_i) \vert G}\braket{G \vert \tilde{u}_{km}(r)} \\
-= \sum_G \bra{p_{i}(r-\tau_i)} \exp\lbrack \mathrm{i}k(r-\tau_i)\rbrack  \ket{G}\braket{G \vert \tilde{u}_{km}(r)} \\
+= \sum_G \bra{p_{i}(r-\tau_i)} \exp[\mathrm{i}k(r-\tau_i)] \ket{G}\braket{G \vert \tilde{u}_{km}(r)} \\
 = \exp(-\mathrm{i}k\tau_i) \sum_G \braket{p_{i}(r-\tau_i) \vert G+k} \braket{G \vert \tilde{u}_{km}(r)} \\
 = \sum_G \exp(\mathrm{i}G\tau_i) \braket{p_{i}(r) \vert G+k} \braket{G \vert \tilde{u}_{km}(r)} \\
 \\\end{gathered}
-$$
-</div>
+\tag{17}
+$$</div>
 
 <p>注意 $\braket{p_i \vert G+k}$ 不能理解为傅立叶展开系数，因为 $p$ 不是周期函数不能展开。</p>
 <h2 id="4"><a href="#4" class="headerlink" title="4"></a>4</h2><p>对2，3章节的内容给出一个简单的总结，这些式子归结为如下形式：</p>
 <div>
 $$
 \sum_{ij} \braket{\tilde{\psi}_2 \vert q_i}D_{ij}\braket{p_j \vert \tilde{\psi}_1}
-$$
-</div>
+\tag{18}
+$$</div>
 
 <p>其中 $q_i,p_j$ 为在PAW球上具有紧支集的任意函数。比如哈密顿量矩阵（假设局域算子）</p>
 <div>
@@ -1171,317 +1339,40 @@ $$
 + \sum_{i} \braket{\tilde{\psi}_2 \vert p_i}(\bra{\phi_i}-\bra{\tilde{\phi}_i})H(\ket{\phi_i}-\ket{\tilde{\phi}_i})\braket{p_i \vert \tilde{\psi}_1} \\
 =
 \\\end{gathered}
-$$
-</div>
+\tag{19}
+$$</div>
 
 <p>可以写成 $\bra{\tilde{\psi}_2}H\ket{\tilde{\psi}_1}$ 和上面给出的形式之和。</p>
 <p>对在PAW球上具有紧支集的任意函数 $p_i$ ，定义 $k$ 相关的函数</p>
 <div>
 $$
 p_{ik}(r)=\exp(-\mathrm{i}kr)p_{i}(r)
-$$
-</div>
+\tag{20}
+$$</div>
 
 <p> $i,j$ 应该是所有原胞内的原子编号，这里我们分开原胞内原子编号 $j$ 和原胞编号 $\beta$ 。</p>
 <div>
 $$
 \begin{gathered}
 \braket{p_j \vert \tilde{\psi}_1} 
-= \int_{\mathbb{R}^3} p^*_j(r-\tau_j-R_\beta) \exp(\mathrm{i}kr){\tilde{u}_1}_k(r) \, \mathrm{d}r \\
-= \exp\lbrack \mathrm{i}k(\tau_j+R_\beta)\rbrack  \int_{\Omega} p^*_{jk}(r-\tau_j) {\tilde{u}_1}_k(r) \, \mathrm{d}r \\
+= \int_{\mathbb{R}^3} p^\ast _j(r-\tau_j-R_\beta) \exp(\mathrm{i}kr){\tilde{u}_1}_k(r) \, \mathrm{d}r \\
+= \exp[\mathrm{i}k(\tau_j+R_\beta)] \int_{\Omega} p^\ast _{jk}(r-\tau_j) {\tilde{u}_1}_k(r) \, \mathrm{d}r \\
 \\\end{gathered}
-$$
-</div>
+\tag{21}
+$$</div>
 
 
 <div>
 $$
 \begin{gathered}
 \sum_{i\alpha,j\beta} \braket{\tilde{\psi}_2(r) \vert q_i(r-\tau_i-R_\alpha)}D_{ij}\braket{p_j(r-\tau_j-R_\beta) \vert \tilde{\psi}_1(r)} \\
-= \sum_{i\alpha,j\beta}\exp\lbrack \mathrm{i}k(\tau_j+R_\beta)-\mathrm{i}k'(\tau_i+R_\alpha)\rbrack   D_{ij} \int_{\Omega} {\tilde{u}^*_2}_k(r) q_{jk'}(r-\tau_i) \, \mathrm{d}r \int_{\Omega} p^*_{jk}(r-\tau_j) {\tilde{u}_1}_k(r) \, \mathrm{d}r
+= \sum_{i\alpha,j\beta}\exp[\mathrm{i}k(\tau_j+R_\beta)-\mathrm{i}k'(\tau_i+R_\alpha)]  D_{ij} \int_{\Omega} {\tilde{u}^\ast _2}_k(r) q_{jk'}(r-\tau_i) \, \mathrm{d}r \int_{\Omega} p^\ast _{jk}(r-\tau_j) {\tilde{u}_1}_k(r) \, \mathrm{d}r
 \\\end{gathered}
-$$
-</div>
+\tag{22}
+$$</div>
 
 
-</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2024-09-08T07:11:12.000Z" title="2024/9/8 15:11:12">2024-09-08</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E7%89%A9%E7%90%86/">物理</a></span><span class="level-item">11 分钟读完 (大约1575个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2024/09/08/%E5%B9%B3%E5%9D%87%E6%9C%89%E6%95%88%E8%B4%A8%E9%87%8F/">平均有效质量</a></p><div class="content"><p>我在半导体物理相关文献中经常看到载流子有效质量和态密度有效质量的概念和表达式，一直疑惑为什么它们的形式不一样。我根据自己理解给出了它们的推导，如有错误欢迎指出。</p>
-<h2 id="载流子有效质量Carrier-effective-mass"><a href="#载流子有效质量Carrier-effective-mass" class="headerlink" title="载流子有效质量Carrier effective mass"></a>载流子有效质量Carrier effective mass</h2><p>能带抛物线近似下，倒有效质量张量的定义</p>
-<div>
-$$
-\cfrac{\partial^2 \varepsilon}{\partial k_i \partial k_j} = \hbar^2\left(\cfrac{1}{m}\right)_{ij}
-$$
-</div>
-
-
-<p>载流子遵循的运动方程</p>
-<div>
-$$
-F=\hbar \cfrac{\mathrm{d} k}{\mathrm{d} t} = qE
-$$
-</div>
-
-
-<p>在两次碰撞间，动量变化量（其中 $\tau$ 为弛豫时间）</p>
-<div>
-$$
-\delta k = qE \tau / \hbar
-$$
-</div>
-
-
-<p>载流子的群速度</p>
-<div>
-$$
-\begin{gathered}
-v_g = \cfrac{1}{\hbar} \cfrac{\partial \varepsilon}{\partial k} \\
-= \hbar\left(\cfrac{1}{m}\right)_{ij} k_j
-\\\end{gathered}
-$$
-</div>
-
-
-<p>在两次碰撞间，群速度变化量</p>
-<div>
-$$
-(\delta v_g)_i = q\left(\cfrac{1}{m}\right)_{ij} E_j \tau
-$$
-</div>
-
-
-<p>考虑多晶样品，假设各晶向的晶粒均匀分布。我们求所有可能晶向的迁移率的平均值。</p>
-<p>在电场方向，考虑到坐标轴可以以电场为轴任意旋转，再将结果加和，因此虽然 $\delta v_g$ 可能方向和 $E_j$ 不同，但是平均后和 $E$ 同向。将 $\delta v_g$ 向电场方向投影，或者 $\delta v_g$ 和 $E$ 方向单位矢量点乘就可以得到平均后迁移率</p>
-<p>因为已经考虑绕 $E$ 旋转情形，接下来只需考虑 $E$ 指向任意方向情形，做球面平均</p>
-<div>
-$$
-n=(\sin\theta\cos\phi,\sin\theta\sin\phi,\cos\theta)
-$$
-</div>
-
-
-<div>
-$$
-\begin{gathered}
-\cfrac{1}{m_\text{eff}}\int \mathrm{d}n=\int n_i\left(\cfrac{1}{m}\right)_{ij}n_j \mathrm{d} n \\
-= \int n_i\left(\cfrac{1}{m}\right)_{ij}n_j \sin \theta \mathrm{d} \theta \mathrm{d} \phi \\
-= \cfrac{4\pi}{3}\left(\cfrac{1}{m_{xx}}+\cfrac{1}{m_{yy}}+\cfrac{1}{m_{zz}}\right) \\
-= \cfrac{1}{3}\left(\cfrac{1}{m_{xx}}+\cfrac{1}{m_{yy}}+\cfrac{1}{m_{zz}}\right) \int \sin \theta \mathrm{d} \theta \mathrm{d} \phi \\
-= \cfrac{1}{3}\left(\cfrac{1}{m_{xx}}+\cfrac{1}{m_{yy}}+\cfrac{1}{m_{zz}}\right) \int \mathrm{d} n
-\\\end{gathered}
-$$
-</div>
-
-
-<p>所以平均有效质量（载流子有效质量）即为</p>
-<div>
-$$
-\begin{gathered}
-\cfrac{3}{m_{\text{eff}}} = \cfrac{1}{m_{xx}}+\cfrac{1}{m_{yy}}+\cfrac{1}{m_{zz}} \\
-\cfrac{3}{m_{\text{eff}}} = \mathrm{Tr} \cfrac{1}{m}
-\\\end{gathered}
-$$
-</div>
-
-
-
-<p>其中我们计算球面平均时用到如下结论</p>
-<div>
-$$
-\begin{gathered}
-\int_0^{\pi/2} \sin^n x \mathrm{d}x \\
-= -\int_0^{\pi/2} \sin^{n-1} x \mathrm{d}\cos x \\
-= \int_0^{\pi/2} \cos x \mathrm{d} \sin^{n-1} x \\
-= (n-1)\int_0^{\pi/2} \cos^2 x \sin^{n-2} x \mathrm{d} x \\
-= (n-1)\left(\int_0^{\pi/2} \sin^{n-2} x \mathrm{d} x - \int_0^{\pi/2} \sin^{n} x \mathrm{d} x\right) \\
-\\\end{gathered}
-$$
-</div>
-
-
-<div>
-$$
-\begin{gathered}
-\int_0^{\pi/2} \sin^n x \mathrm{d}x = \cfrac{n-1}{n}\int_0^{\pi/2} \sin^{n-2} x \mathrm{d} x \\
-\\\end{gathered}
-$$
-</div>
-
-
-<div>
-$$
-\int_0^{\pi/2} \sin^n x \mathrm{d}x =
-\begin{cases}
-\cfrac{(n-1)!!}{n!!} & n \text{ is odd} \\
-\cfrac{(n-1)!!}{n!!}\cfrac{\pi}{2} & n \text{ is even} \\
-\end{cases}
-$$
-</div>
-
-
-<p>矩阵的迹在正交变换下不变，假设旋转矩阵 $U$ </p>
-<div>
-$$
-\mathrm{Tr}(UAU^\dagger) = \mathrm{Tr}(U^\dagger UA)=\mathrm{Tr} A
-$$
-</div>
-
-
-<p>故载流子有效质量及其定义式也在正交变换下不变。</p>
-<h2 id="态密度有效质量DOS-effective-mass"><a href="#态密度有效质量DOS-effective-mass" class="headerlink" title="态密度有效质量DOS effective mass"></a>态密度有效质量DOS effective mass</h2><div>
-$$
-a_i \cdot b_j = 2\pi\delta_{ij}
-$$
-</div>
-
-
-<div>
-$$
-k=\cfrac{n_i}{N_i}b_i
-$$
-</div>
-
-
-<div>
-$$
-\begin{gathered}
-\mathrm{d}^3 k = \cfrac{\lbrack b_x,b_y,b_z\rbrack }{N_xN_yN_z} \mathrm{d}^3n \\
-= \cfrac{(2\pi)^3}{V} \mathrm{d}^3n \\
-\\\end{gathered}
-$$
-</div>
-
-
-<p>其中 $\lbrack b_x,b_y,b_z\rbrack &#x3D;(b_x\times b_y)\cdot b_z$ 。根据晶格矢量 $a$ 与倒格矢 $b$ 的正交关系可以得到 $\lbrack a_x,a_y,a_z\rbrack \lbrack b_x,b_y,b_z\rbrack &#x3D;(2\pi)^3$ （两矩阵互为逆矩阵，然后式子两端求行列式），其中原胞体积 $V&#x3D;\lbrack a_x,a_y,a_z\rbrack $ 。</p>
-<p>注意上面没有考虑自旋简并。下面计算DOS时会加入自旋简并。</p>
-<div>
-$$
-\varepsilon = \cfrac{\hbar^2}{2} \left(\cfrac{1}{m}\right)_{ij}k_ik_j
-$$
-</div>
-
-<p>我们计算能量 $0\sim\varepsilon$ 包裹的椭球的体积（假设 $1&#x2F;m$ 对称正定。要求对称因为偏导数的交换性质，要求正定因为需要能带的抛物线近似成立，因此曲面为一椭球而不是其他体积无穷的二次曲面）</p>
-<p>对 $1&#x2F;m$ 做Cholesky分解 $1&#x2F;m&#x3D;L^TL$ ，</p>
-<div>
-$$
-\begin{gathered}
-\varepsilon=\hbar^2/2k^TL^TLk \\
-2\varepsilon/\hbar^2=\lvert Lk \rvert^2 \\
-\\\end{gathered}
-$$
-</div>
-
-<p>求该椭球体积的方法：用体积积分的换元法。设 $u&#x3D;Lk$ ，则 $\lvert u \rvert^2 &#x3D; 2\varepsilon&#x2F;\hbar^2$ 。这是一个球，它的体积可以用球体积公式求出。再考虑到换元后体积微元为 $\mathrm{d}^3u&#x3D;\lvert \det L \rvert \mathrm{d}^3 k$ ，由此知将球体积除以 $\lvert \det L \rvert$ 就可以求得方程对应曲面在 $k$ 空间中围成的椭球的体积。</p>
-<p>所以</p>
-<div>
-$$
-\begin{gathered}
-\int \mathrm{d}^3 k = \int \cfrac{1}{\lvert \det L \rvert} \mathrm{d}^3 u \\
-= \cfrac{4\pi}{3}(2\varepsilon/\hbar^2)^{3/2} \cfrac{1}{\lvert \det L \rvert} \\
-= \cfrac{4\pi(2\varepsilon)^{3/2}}{3\hbar^3\sqrt{\det (1/m)}} \\
-\\\end{gathered}
-$$
-</div>
-
-
-<div>
-$$
-\begin{gathered}
-\mathrm{d}^3 k
-= \cfrac{4\pi \sqrt{2}}{\hbar^3\sqrt{\det (1/m)}} \sqrt{\varepsilon} \mathrm{d}\varepsilon \\
-\\\end{gathered}
-$$
-</div>
-
-
-<div>
-$$
-\begin{gathered}
-D(\varepsilon) = \cfrac{2\mathrm{d}n^3}{V\mathrm{d}\varepsilon} \\
-= \cfrac{2}{(2\pi)^3} \cfrac{\mathrm{d}^3k}{\mathrm{d}\varepsilon} \\
-= \cfrac{\sqrt{2\varepsilon}}{\pi^2\hbar^3\sqrt{\det (1/m)}}
-\\\end{gathered}
-$$
-</div>
-
-
-<p>其中用到一个结论</p>
-<div>
-$$
-\det(1/m)=\det(L^TL)=\det(L^T)\det L=(\det L)^2
-$$
-</div>
-
-<blockquote>
-<p>注：这里的态密度表达式看着和其他参考文献不一样，只是因为其他文献中的是普朗克常数 $h$ ，而这里的是约化普朗克常数 $\hbar&#x3D;h&#x2F;(2\pi)$ </p>
-</blockquote>
-<p>若倒有效质量张量有如下各向同性的形式：</p>
-<div>
-$$
-\begin{pmatrix}
-1/m & 0 & 0 \\
-0 & 1/m & 0 \\
-0 & 0 & 1/m \\
-\end{pmatrix}
-$$
-</div>
-
-<p>则态密度</p>
-<div>
-$$
-D(\varepsilon) = \cfrac{m^{3/2}\sqrt{2\varepsilon}}{\pi^2\hbar^3}
-$$
-</div>
-
-<p>对于一般情形，我们将其等效到各向同性的情形，定义一个 $m_{\text{eff}}$ 。则</p>
-<div>
-$$
-\cfrac{1}{m_{\text{eff}}^3}=\det{\cfrac{1}{m}}
-$$
-</div>
-
-<p>行列式在正交变换下不变</p>
-<div>
-$$
-\begin{gathered}
-\det(U A U^\dagger)=\det U \det A \det(U^\dagger) \\
-=\det U \det(U^\dagger) \det A \\
-=\det (U U^\dagger) \det A \\
-= \det A
-\\\end{gathered}
-$$
-</div>
-
-
-<p>，所以态密度有效质量也在正交变换下不变。</p>
-<p>若倒有效质量张量有如下形式：</p>
-<div>
-$$
-\begin{pmatrix}
-1/m_x & 0 & 0 \\
-0 & 1/m_y & 0 \\
-0 & 0 & 1/m_z \\
-\end{pmatrix}
-$$
-</div>
-
-<p>则态密度有效质量</p>
-<div>
-$$
-m_{\text{eff}}=\sqrt\lbrack 3\rbrack {m_xm_ym_z}
-$$
-</div>
-
-
-<p>此即很多书籍中的公式。</p>
-<h3 id="多能谷情形"><a href="#多能谷情形" class="headerlink" title="多能谷情形"></a>多能谷情形</h3><p>比如硅是间接带隙半导体，导带底不在 $\Gamma$ 点，对应能谷有 $6$ 个。</p>
-<p>于是导带态密度的表达式应该乘一个 $6$ 。而导带态密度有效质量变为</p>
-<div>
-$$
-m_{\text{eff}}=6^{2/3}\sqrt\lbrack 3\rbrack {m_lm_t^2}
-$$
-</div>
-
-<p> $m_l$ 为纵向有效质量， $m_t$ 为横向有效质量。</p>
-</div></article></div><nav class="pagination" role="navigation" aria-label="pagination"><div class="pagination-previous"><a href="/categories/%E7%89%A9%E7%90%86/">上一页</a></div><div class="pagination-next"><a href="/categories/%E7%89%A9%E7%90%86/page/3/">下一页</a></div><ul class="pagination-list is-hidden-mobile"><li><a class="pagination-link" href="/categories/%E7%89%A9%E7%90%86/">1</a></li><li><a class="pagination-link is-current" href="/categories/%E7%89%A9%E7%90%86/page/2/">2</a></li><li><a class="pagination-link" href="/categories/%E7%89%A9%E7%90%86/page/3/">3</a></li><li><a class="pagination-link" href="/categories/%E7%89%A9%E7%90%86/page/4/">4</a></li><li><a class="pagination-link" href="/categories/%E7%89%A9%E7%90%86/page/5/">5</a></li></ul></nav></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar is-rounded" src="/android-chrome-512x512.png" alt="Chenxi Yu"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">Chenxi Yu</p><p class="is-size-6 is-block">PhD in PKU</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>Beijing, China</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives/"><p class="title">108</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories/"><p class="title">4</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags/"><p class="title">31</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/yuchenxi2000" target="_blank" rel="me noopener">关注我</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="me noopener" title="Github" href="https://github.com/yuchenxi2000"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="me noopener" title="Bilibili" href="https://space.bilibili.com/244355869"><i class="fab fa-bilibili"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="me noopener" title="Zhihu" href="https://www.zhihu.com/people/cha-xi-74-16"><i class="fab fa-zhihu"></i></a></div></div></div><!--!--><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">分类</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/%E5%85%B6%E4%BB%96/"><span class="level-start"><span class="level-item">其他</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E6%95%B0%E5%AD%A6/"><span class="level-start"><span class="level-item">数学</span></span><span class="level-end"><span class="level-item tag">43</span></span></a></li><li><a class="level is-mobile" href="/categories/%E7%89%A9%E7%90%86/"><span class="level-start"><span class="level-item">物理</span></span><span class="level-end"><span class="level-item tag">50</span></span></a></li><li><a class="level is-mobile" href="/categories/%E9%9F%B3%E4%B9%90/"><span class="level-start"><span class="level-item">音乐</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></div></div></div><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2026-03-28T09:12:57.000Z">2026-03-28</time></p><p class="title"><a href="/2026/03/28/PvZ%E9%AB%98%E7%B2%BE%E5%BA%A6%E9%94%AE%E6%8E%A7%E6%A1%86%E6%9E%B6AvZ/">PvZ高精度键控框架AvZ</a></p><p class="categories"><a href="/categories/%E5%85%B6%E4%BB%96/">其他</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2026-03-23T07:44:37.000Z">2026-03-23</time></p><p class="title"><a href="/2026/03/23/%E7%94%9F%E6%97%A5%E9%97%AE%E9%A2%98/">生日问题</a></p><p class="categories"><a href="/categories/%E6%95%B0%E5%AD%A6/">数学</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2026-03-19T06:04:32.000Z">2026-03-19</time></p><p class="title"><a href="/about/">关于我</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2026-03-06T03:20:33.000Z">2026-03-06</time></p><p class="title"><a href="/2026/03/06/%E8%87%AA%E6%97%8B%E8%A7%92%E5%8A%A8%E9%87%8F%E8%80%A6%E5%90%88/">自旋角动量耦合</a></p><p class="categories"><a href="/categories/%E7%89%A9%E7%90%86/">物理</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2026-02-26T02:48:02.000Z">2026-02-26</time></p><p class="title"><a href="/2026/02/26/Land%C3%A9%20g-factor/">Landé g-factor</a></p></div></article></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/NEGF/"><span class="tag">NEGF</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E4%BB%A3%E6%95%B0/"><span class="tag">代数</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%85%89%E5%AD%A6/"><span class="tag">光学</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%85%B6%E4%BB%96/"><span class="tag">其他</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%87%A0%E4%BD%95%E4%BB%A3%E6%95%B0/"><span class="tag">几何代数</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%9B%BA%E4%BD%93%E7%89%A9%E7%90%86/"><span class="tag">固体物理</span><span class="tag">13</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0/"><span class="tag">复变函数</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%A4%A9%E4%BD%93%E7%89%A9%E7%90%86/"><span class="tag">天体物理</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%AF%86%E5%BA%A6%E6%B3%9B%E5%87%BD%E7%90%86%E8%AE%BA/"><span class="tag">密度泛函理论</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%B7%B4%E6%B4%9B%E5%85%8B%E9%9F%B3%E4%B9%90/"><span class="tag">巴洛克音乐</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%B9%B3%E9%9D%A2%E5%87%A0%E4%BD%95/"><span class="tag">平面几何</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%B9%BF%E4%B9%89%E7%9B%B8%E5%AF%B9%E8%AE%BA/"><span class="tag">广义相对论</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%BC%B9%E6%80%A7%E5%8A%9B%E5%AD%A6/"><span class="tag">弹性力学</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%BE%AE%E5%88%86%E5%87%A0%E4%BD%95/"><span class="tag">微分几何</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B/"><span class="tag">微分方程</span><span class="tag">9</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%95%B0%E5%80%BC%E6%96%B9%E6%B3%95/"><span class="tag">数值方法</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%95%B0%E5%AD%A6/"><span class="tag">数学</span><span class="tag">43</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/"><span class="tag">数学分析</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%95%B0%E8%AE%BA/"><span class="tag">数论</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%A6%82%E7%8E%87%E7%BB%9F%E8%AE%A1/"><span class="tag">概率统计</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/"><span class="tag">泛函分析</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%89%A9%E7%90%86/"><span class="tag">物理</span><span class="tag">55</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%89%B9%E6%AE%8A%E5%87%BD%E6%95%B0/"><span class="tag">特殊函数</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%94%B5%E5%8A%A8%E5%8A%9B%E5%AD%A6/"><span class="tag">电动力学</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%9B%B8%E5%AF%B9%E8%AE%BA/"><span class="tag">相对论</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%BB%9F%E8%AE%A1%E5%8A%9B%E5%AD%A6/"><span class="tag">统计力学</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%BE%A4%E8%AE%BA/"><span class="tag">群论</span><span class="tag">12</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6/"><span class="tag">量子力学</span><span class="tag">30</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E9%87%8F%E5%AD%90%E5%9C%BA%E8%AE%BA/"><span class="tag">量子场论</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E9%9D%9E%E6%AC%A7%E5%87%A0%E4%BD%95/"><span class="tag">非欧几何</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E9%9F%B3%E4%B9%90/"><span class="tag">音乐</span><span class="tag">1</span></a></div></div></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a><p class="is-size-7"><span>&copy; 2026 Chenxi Yu</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="fab fa-creative-commons-nc"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/yuchenxi2000"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
+</div></article></div><nav class="pagination" role="navigation" aria-label="pagination"><div class="pagination-previous"><a href="/categories/%E7%89%A9%E7%90%86/">上一页</a></div><div class="pagination-next"><a href="/categories/%E7%89%A9%E7%90%86/page/3/">下一页</a></div><ul class="pagination-list is-hidden-mobile"><li><a class="pagination-link" href="/categories/%E7%89%A9%E7%90%86/">1</a></li><li><a class="pagination-link is-current" href="/categories/%E7%89%A9%E7%90%86/page/2/">2</a></li><li><a class="pagination-link" href="/categories/%E7%89%A9%E7%90%86/page/3/">3</a></li><li><span class="pagination-ellipsis">&hellip;</span></li><li><a class="pagination-link" href="/categories/%E7%89%A9%E7%90%86/page/6/">6</a></li></ul></nav></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar is-rounded" src="/android-chrome-512x512.png" alt="Chenxi Yu"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">Chenxi Yu</p><p class="is-size-6 is-block">PhD in PKU</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>Beijing, China</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives/"><p class="title">111</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories/"><p class="title">4</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags/"><p class="title">31</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/yuchenxi2000" target="_blank" rel="me noopener">关注我</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="me noopener" title="Github" href="https://github.com/yuchenxi2000"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="me noopener" title="Bilibili" href="https://space.bilibili.com/244355869"><i class="fab fa-bilibili"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="me noopener" title="Zhihu" href="https://www.zhihu.com/people/cha-xi-74-16"><i class="fab fa-zhihu"></i></a></div></div></div><!--!--><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">分类</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/%E5%85%B6%E4%BB%96/"><span class="level-start"><span class="level-item">其他</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/%E6%95%B0%E5%AD%A6/"><span class="level-start"><span class="level-item">数学</span></span><span class="level-end"><span class="level-item tag">44</span></span></a></li><li><a class="level is-mobile" href="/categories/%E7%89%A9%E7%90%86/"><span class="level-start"><span class="level-item">物理</span></span><span class="level-end"><span class="level-item tag">51</span></span></a></li><li><a class="level is-mobile" href="/categories/%E9%9F%B3%E4%B9%90/"><span class="level-start"><span class="level-item">音乐</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></div></div></div><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2026-04-03T13:08:18.000Z">2026-04-03</time></p><p class="title"><a href="/2026/04/03/%E5%A6%82%E4%BD%95%E7%A7%91%E5%AD%A6%E5%9C%B0%E5%9C%A8hexo%E9%87%8C%E5%86%99%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F/">如何科学地在hexo里写数学公式</a></p><p class="categories"><a href="/categories/%E5%85%B6%E4%BB%96/">其他</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2026-04-03T09:08:02.000Z">2026-04-03</time></p><p class="title"><a href="/2026/04/03/%E8%A7%84%E8%8C%83%E5%9C%BA%E8%AE%BA%E4%B8%8E%E5%BE%AE%E5%88%86%E5%87%A0%E4%BD%95/">规范场论与微分几何</a></p><p class="categories"><a href="/categories/%E7%89%A9%E7%90%86/">物理</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2026-04-03T05:30:58.000Z">2026-04-03</time></p><p class="title"><a href="/2026/04/03/%E8%B4%9D%E7%89%B9%E6%9C%97%E6%82%96%E8%AE%BA%E4%B8%8E%E7%90%83%E9%9D%A2%E5%9D%87%E5%8C%80%E5%88%86%E5%B8%83/">贝特朗悖论与球面均匀分布</a></p><p class="categories"><a href="/categories/%E6%95%B0%E5%AD%A6/">数学</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2026-03-28T09:12:57.000Z">2026-03-28</time></p><p class="title"><a href="/2026/03/28/PvZ%E9%AB%98%E7%B2%BE%E5%BA%A6%E9%94%AE%E6%8E%A7%E6%A1%86%E6%9E%B6AvZ/">PvZ高精度键控框架AvZ</a></p><p class="categories"><a href="/categories/%E5%85%B6%E4%BB%96/">其他</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2026-03-23T07:44:37.000Z">2026-03-23</time></p><p class="title"><a href="/2026/03/23/%E7%94%9F%E6%97%A5%E9%97%AE%E9%A2%98/">生日问题</a></p><p class="categories"><a href="/categories/%E6%95%B0%E5%AD%A6/">数学</a></p></div></article></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/NEGF/"><span class="tag">NEGF</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E4%BB%A3%E6%95%B0/"><span class="tag">代数</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%85%89%E5%AD%A6/"><span class="tag">光学</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%85%B6%E4%BB%96/"><span class="tag">其他</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%87%A0%E4%BD%95%E4%BB%A3%E6%95%B0/"><span class="tag">几何代数</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%9B%BA%E4%BD%93%E7%89%A9%E7%90%86/"><span class="tag">固体物理</span><span class="tag">13</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0/"><span class="tag">复变函数</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%A4%A9%E4%BD%93%E7%89%A9%E7%90%86/"><span class="tag">天体物理</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%AF%86%E5%BA%A6%E6%B3%9B%E5%87%BD%E7%90%86%E8%AE%BA/"><span class="tag">密度泛函理论</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%B7%B4%E6%B4%9B%E5%85%8B%E9%9F%B3%E4%B9%90/"><span class="tag">巴洛克音乐</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%B9%B3%E9%9D%A2%E5%87%A0%E4%BD%95/"><span class="tag">平面几何</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%B9%BF%E4%B9%89%E7%9B%B8%E5%AF%B9%E8%AE%BA/"><span class="tag">广义相对论</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%BC%B9%E6%80%A7%E5%8A%9B%E5%AD%A6/"><span class="tag">弹性力学</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%BE%AE%E5%88%86%E5%87%A0%E4%BD%95/"><span class="tag">微分几何</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B/"><span class="tag">微分方程</span><span class="tag">9</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%95%B0%E5%80%BC%E6%96%B9%E6%B3%95/"><span class="tag">数值方法</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%95%B0%E5%AD%A6/"><span class="tag">数学</span><span class="tag">44</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/"><span class="tag">数学分析</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%95%B0%E8%AE%BA/"><span class="tag">数论</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%A6%82%E7%8E%87%E7%BB%9F%E8%AE%A1/"><span class="tag">概率统计</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/"><span class="tag">泛函分析</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%89%A9%E7%90%86/"><span class="tag">物理</span><span class="tag">56</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%89%B9%E6%AE%8A%E5%87%BD%E6%95%B0/"><span class="tag">特殊函数</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%94%B5%E5%8A%A8%E5%8A%9B%E5%AD%A6/"><span class="tag">电动力学</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%9B%B8%E5%AF%B9%E8%AE%BA/"><span class="tag">相对论</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%BB%9F%E8%AE%A1%E5%8A%9B%E5%AD%A6/"><span class="tag">统计力学</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%BE%A4%E8%AE%BA/"><span class="tag">群论</span><span class="tag">12</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6/"><span class="tag">量子力学</span><span class="tag">30</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E9%87%8F%E5%AD%90%E5%9C%BA%E8%AE%BA/"><span class="tag">量子场论</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E9%9D%9E%E6%AC%A7%E5%87%A0%E4%BD%95/"><span class="tag">非欧几何</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E9%9F%B3%E4%B9%90/"><span class="tag">音乐</span><span class="tag">1</span></a></div></div></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a><p class="is-size-7"><span>&copy; 2026 Chenxi Yu</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="fab fa-creative-commons-nc"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/yuchenxi2000"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
             article: {
                 highlight: {
                     clipboard: true,

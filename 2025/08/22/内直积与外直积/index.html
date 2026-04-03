@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>内直积与外直积 - YCX&#039;s Blog</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="YCX&#039;s Blog"><meta name="msapplication-TileImage" content="favicon.ico"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="YCX&#039;s Blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="外直积两群 $H,K$ ，定义外直积为 $G&amp;#x3D;H \times K$ ，其中群元为 $H,K$ 中元素组成的二元组，其运算定义为  $$ (h_1, k_1) \circ (h_2, k_2) &amp;#x3D; (h_1h_2, k_1k_2) $$   可验证其满足群的定义，单位元 $(e_1, e_2)$ （其中 $H,K$ 单位元分别为 $e_1,e_2$ ），逆元 $(h, k)^{-1}&amp;amp;#"><meta property="og:type" content="blog"><meta property="og:title" content="内直积与外直积"><meta property="og:url" content="https://yuchenxi2000.github.io/2025/08/22/%E5%86%85%E7%9B%B4%E7%A7%AF%E4%B8%8E%E5%A4%96%E7%9B%B4%E7%A7%AF/"><meta property="og:site_name" content="YCX&#039;s Blog"><meta property="og:description" content="外直积两群 $H,K$ ，定义外直积为 $G&amp;#x3D;H \times K$ ，其中群元为 $H,K$ 中元素组成的二元组，其运算定义为  $$ (h_1, k_1) \circ (h_2, k_2) &amp;#x3D; (h_1h_2, k_1k_2) $$   可验证其满足群的定义，单位元 $(e_1, e_2)$ （其中 $H,K$ 单位元分别为 $e_1,e_2$ ），逆元 $(h, k)^{-1}&amp;amp;#"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://yuchenxi2000.github.io/img/og_image.png"><meta property="article:published_time" content="2025-08-22T10:22:07.000Z"><meta property="article:modified_time" content="2026-03-30T12:14:19.160Z"><meta property="article:author" content="Chenxi Yu"><meta property="article:tag" content="数学"><meta property="article:tag" content="群论"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://yuchenxi2000.github.io/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://yuchenxi2000.github.io/2025/08/22/%E5%86%85%E7%9B%B4%E7%A7%AF%E4%B8%8E%E5%A4%96%E7%9B%B4%E7%A7%AF/"},"headline":"内直积与外直积","image":["https://yuchenxi2000.github.io/img/og_image.png"],"datePublished":"2025-08-22T10:22:07.000Z","dateModified":"2026-03-30T12:14:19.160Z","author":{"@type":"Person","name":"Chenxi Yu"},"publisher":{"@type":"Organization","name":"YCX's Blog","logo":{"@type":"ImageObject","url":"https://yuchenxi2000.github.io/2025/08/22/%E5%86%85%E7%9B%B4%E7%A7%AF%E4%B8%8E%E5%A4%96%E7%9B%B4%E7%A7%AF/android-chrome-512x512.png"}},"description":"外直积两群 $H,K$ ，定义外直积为 $G&#x3D;H \\times K$ ，其中群元为 $H,K$ 中元素组成的二元组，其运算定义为  $$ (h_1, k_1) \\circ (h_2, k_2) &#x3D; (h_1h_2, k_1k_2) $$   可验证其满足群的定义，单位元 $(e_1, e_2)$ （其中 $H,K$ 单位元分别为 $e_1,e_2$ ），逆元 $(h, k)^{-1}&amp;#"}</script><link rel="canonical" href="https://yuchenxi2000.github.io/2025/08/22/%E5%86%85%E7%9B%B4%E7%A7%AF%E4%B8%8E%E5%A4%96%E7%9B%B4%E7%A7%AF/"><link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link data-pjax rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link data-pjax rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!--!--><!-- hexo injector head_end start --><script>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>内直积与外直积 - YCX&#039;s Blog</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="YCX&#039;s Blog"><meta name="msapplication-TileImage" content="favicon.ico"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="YCX&#039;s Blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="外直积两群 $H,K$ ，定义外直积为 $G&amp;#x3D;H \times K$ ，其中群元为 $H,K$ 中元素组成的二元组，其运算定义为  $$ (h_1, k_1) \circ (h_2, k_2) &amp;#x3D; (h_1h_2, k_1k_2) \tag{1} $$  可验证其满足群的定义，单位元 $(e_1, e_2)$ （其中 $H,K$ 单位元分别为 $e_1,e_2$ ），逆元 $(h, k)"><meta property="og:type" content="blog"><meta property="og:title" content="内直积与外直积"><meta property="og:url" content="https://yuchenxi2000.github.io/2025/08/22/%E5%86%85%E7%9B%B4%E7%A7%AF%E4%B8%8E%E5%A4%96%E7%9B%B4%E7%A7%AF/"><meta property="og:site_name" content="YCX&#039;s Blog"><meta property="og:description" content="外直积两群 $H,K$ ，定义外直积为 $G&amp;#x3D;H \times K$ ，其中群元为 $H,K$ 中元素组成的二元组，其运算定义为  $$ (h_1, k_1) \circ (h_2, k_2) &amp;#x3D; (h_1h_2, k_1k_2) \tag{1} $$  可验证其满足群的定义，单位元 $(e_1, e_2)$ （其中 $H,K$ 单位元分别为 $e_1,e_2$ ），逆元 $(h, k)"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://yuchenxi2000.github.io/img/og_image.png"><meta property="article:published_time" content="2025-08-22T10:22:07.000Z"><meta property="article:modified_time" content="2026-04-03T14:05:08.560Z"><meta property="article:author" content="Chenxi Yu"><meta property="article:tag" content="数学"><meta property="article:tag" content="群论"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://yuchenxi2000.github.io/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://yuchenxi2000.github.io/2025/08/22/%E5%86%85%E7%9B%B4%E7%A7%AF%E4%B8%8E%E5%A4%96%E7%9B%B4%E7%A7%AF/"},"headline":"内直积与外直积","image":["https://yuchenxi2000.github.io/img/og_image.png"],"datePublished":"2025-08-22T10:22:07.000Z","dateModified":"2026-04-03T14:05:08.560Z","author":{"@type":"Person","name":"Chenxi Yu"},"publisher":{"@type":"Organization","name":"YCX's Blog","logo":{"@type":"ImageObject","url":"https://yuchenxi2000.github.io/2025/08/22/%E5%86%85%E7%9B%B4%E7%A7%AF%E4%B8%8E%E5%A4%96%E7%9B%B4%E7%A7%AF/android-chrome-512x512.png"}},"description":"外直积两群 $H,K$ ，定义外直积为 $G&#x3D;H \\times K$ ，其中群元为 $H,K$ 中元素组成的二元组，其运算定义为  $$ (h_1, k_1) \\circ (h_2, k_2) &#x3D; (h_1h_2, k_1k_2) \\tag{1} $$  可验证其满足群的定义，单位元 $(e_1, e_2)$ （其中 $H,K$ 单位元分别为 $e_1,e_2$ ），逆元 $(h, k)"}</script><link rel="canonical" href="https://yuchenxi2000.github.io/2025/08/22/%E5%86%85%E7%9B%B4%E7%A7%AF%E4%B8%8E%E5%A4%96%E7%9B%B4%E7%A7%AF/"><link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link data-pjax rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link data-pjax rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!--!--><!-- hexo injector head_end start --><script>
   (function () {
       function switchTab() {
           if (!location.hash) {
@@ -29,12 +29,12 @@
       switchTab();
       window.addEventListener('hashchange', switchTab, false);
   })();
-  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 8.1.1"></head><body class="is-1-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-12"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2025-08-22T10:22:07.000Z" title="2025/8/22 18:22:07">2025-08-22</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E6%95%B0%E5%AD%A6/">数学</a></span><span class="level-item">7 分钟读完 (大约988个字)</span></div></div><h1 class="title is-3 is-size-4-mobile">内直积与外直积</h1><div class="content"><h2 id="外直积"><a href="#外直积" class="headerlink" title="外直积"></a>外直积</h2><p>两群 $H,K$ ，定义外直积为 $G&#x3D;H \times K$ ，其中群元为 $H,K$ 中元素组成的二元组，其运算定义为</p>
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 8.1.1"></head><body class="is-1-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-12"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2025-08-22T10:22:07.000Z" title="2025/8/22 18:22:07">2025-08-22</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E6%95%B0%E5%AD%A6/">数学</a></span><span class="level-item">7 分钟读完 (大约993个字)</span></div></div><h1 class="title is-3 is-size-4-mobile">内直积与外直积</h1><div class="content"><h2 id="外直积"><a href="#外直积" class="headerlink" title="外直积"></a>外直积</h2><p>两群 $H,K$ ，定义外直积为 $G&#x3D;H \times K$ ，其中群元为 $H,K$ 中元素组成的二元组，其运算定义为</p>
 <div>
 $$
 (h_1, k_1) \circ (h_2, k_2) = (h_1h_2, k_1k_2)
-$$
-</div>
+\tag{1}
+$$</div>
 
 <p>可验证其满足群的定义，单位元 $(e_1, e_2)$ （其中 $H,K$ 单位元分别为 $e_1,e_2$ ），逆元 $(h, k)^{-1}&#x3D;(h^{-1}, k^{-1})$ ，此外容易验证满足结合律。</p>
 <h2 id="内直积"><a href="#内直积" class="headerlink" title="内直积"></a>内直积</h2><p>如果群 $G$ 的两子群 $H,K$ 满足</p>
@@ -45,8 +45,8 @@ G=HK \\
 H \cap K = \{e\} \\
 H \triangleleft G, K \triangleleft G \\
 \end{cases}
-$$
-</div>
+\tag{2}
+$$</div>
 
 <p>则称 $G$ 等于 $H,K$ 的内直积， $G&#x3D;H \times K$ </p>
 <p>上面定义中第一条为集合的乘积， $HK &#x3D; {hk: h \in H, k \in K}$ </p>
@@ -57,15 +57,15 @@ $$
 </ol>
 <p>可以证明，上面两条性质与内直积定义等价。</p>
 <h3 id="1"><a href="#1" class="headerlink" title="1"></a>1</h3><p>证明定义能推出两条性质。假设分解不唯一， $g&#x3D;hk&#x3D;h’k’$ ，那么有 $h’^{-1}h&#x3D;k’k^{-1}$ 。因为 $H \cap K &#x3D; {e}$ ，所以 $h’^{-1}h&#x3D;k’k^{-1}&#x3D;e,h&#x3D;h’,k&#x3D;k’$ ，矛盾。</p>
-<p>根据 $H \triangleleft G, K \triangleleft G, \forall h \in H, \forall k \in K, \exist h’ \in H,  \exist k’ \in K, \mathrm{s.t.}, $ </p>
+<p>根据 $H \triangleleft G, K \triangleleft G, \forall h \in H, \forall k \in K, \exists h’ \in H,  \exists k’ \in K, \mathrm{s.t.}, $ </p>
 <div>
 $$
 \begin{gathered}
 khk^{-1}=h' \\
 h^{-1}kh=k' \\
 \\\end{gathered}
-$$
-</div>
+\tag{3}
+$$</div>
 
 <p>由此得</p>
 <div>
@@ -74,8 +74,8 @@ $$
 kh=h'k \\
 kh=hk' \\
 \\\end{gathered}
-$$
-</div>
+\tag{4}
+$$</div>
 
 <p>于是 $kh$ 存在两种分解 $h’k,hk’$ ，用上面证明的分解唯一性得到 $h’&#x3D;h,k’&#x3D;k$ ，所以 $kh&#x3D;hk$ 。</p>
 <h3 id="2"><a href="#2" class="headerlink" title="2"></a>2</h3><p>证明两条性质能推出定义。</p>
@@ -85,8 +85,8 @@ $$
 <div>
 $$
 ghg^{-1}=h'k'hk'^{-1}h'^{-1}=h'hh'^{-1} \in H
-$$
-</div>
+\tag{5}
+$$</div>
 
 <p>所以 $H \triangleleft G$ 。</p>
 <hr>
@@ -98,24 +98,24 @@ $$
 H \cap K = \{e\} \\
 H \triangleleft G, K \triangleleft G \\
 \end{cases}
-$$
-</div>
+\tag{6}
+$$</div>
 
 <p>我们证明从 $\lvert G \rvert&#x3D;\lvert H \rvert \lvert K \rvert,H \cap K &#x3D; {e}$ 可以推出 $G&#x3D;HK$ 。</p>
 <p>根据群的封闭性有 $HK \subseteq G$ ，下面证明不可能有 $HK \subsetneqq G$ ，于是就有 $HK&#x3D;G$ 。</p>
 <p>首先有 $\lvert HK \rvert &#x3D; \lvert H \rvert \lvert K \rvert$ 。这个结论可以通过 $HK$ 中不存在重复元素证明，设</p>
 <div>
 $$
-H=\{h_i:i \in \lbrack 0,\lvert H \rvert)\},K=\{k_j:j \in \lbrack 0,\lvert K \rvert)\}
-$$
-</div>
+H=\{h_i:i \in [0,\lvert H \rvert)\},K=\{k_j:j \in [0,\lvert K \rvert)\}
+\tag{7}
+$$</div>
 
 <p>那么</p>
 <div>
 $$
-HK=\{h_ik_j:i \in \lbrack 0,\lvert H \rvert),j \in \lbrack 0,\lvert K \rvert)\}
-$$
-</div>
+HK=\{h_ik_j:i \in [0,\lvert H \rvert),j \in [0,\lvert K \rvert)\}
+\tag{8}
+$$</div>
 
 <p>假设 $h_ik_j&#x3D;h_mk_n$ ，根据 $H \cap K &#x3D; {e}$ 有 $h_m^{-1}h_i&#x3D;k_nk_j^{-1}&#x3D;e$ ，从而 $h_i&#x3D;h_m,k_j&#x3D;k_n$ ，所以 $HK$ 中无重复元素， $\lvert HK \rvert &#x3D; \lvert H \rvert \lvert K \rvert$ 。</p>
 <p>那么有 $\lvert HK \rvert &#x3D; \lvert G \rvert$ ，从而不可能有 $HK \subsetneqq G$ ，否则 $\lvert HK \rvert \lt  \lvert G \rvert$ ，所以 $HK&#x3D;G$ 。</p>
@@ -125,14 +125,14 @@ $$
 <div>
 $$
 \phi((h_1,k_1))\phi((h_2,k_2))=h_1k_1h_2k_2=h_1h_2k_1k_2=\phi((h_1h_2,k_1k_2))
-$$
-</div>
+\tag{9}
+$$</div>
 
 <p>所以内直积与外直积同构。</p>
 <h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><p>[1] <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/620893105">https://zhuanlan.zhihu.com/p/620893105</a></p>
 <p>[2] <a target="_blank" rel="noopener" href="https://www.cnblogs.com/qixingzhi/p/18149707">https://www.cnblogs.com/qixingzhi/p/18149707</a></p>
 <p>[3] <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/1969705067">https://zhuanlan.zhihu.com/p/1969705067</a></p>
-</div><div class="article-licensing box"><div class="licensing-title"><p>内直积与外直积</p><p><a href="https://yuchenxi2000.github.io/2025/08/22/内直积与外直积/">https://yuchenxi2000.github.io/2025/08/22/内直积与外直积/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>Chenxi Yu</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2025-08-22</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2026-03-30</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/%E6%95%B0%E5%AD%A6/">数学</a><a class="link-muted mr-2" rel="tag" href="/tags/%E7%BE%A4%E8%AE%BA/">群论</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2025/08/23/%E6%9C%89%E9%99%90%E9%98%BF%E8%B4%9D%E5%B0%94%E7%BE%A4%E5%9F%BA%E6%9C%AC%E5%AE%9A%E7%90%86/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">有限阿贝尔群基本定理</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2025/08/21/p%5E3%E9%98%B6%E7%BE%A4%E5%90%8C%E6%9E%84%E7%B1%BB%E4%B8%AA%E6%95%B0/"><span class="level-item">p^3阶群同构类个数</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><!--!--><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a><p class="is-size-7"><span>&copy; 2026 Chenxi Yu</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="fab fa-creative-commons-nc"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/yuchenxi2000"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
+</div><div class="article-licensing box"><div class="licensing-title"><p>内直积与外直积</p><p><a href="https://yuchenxi2000.github.io/2025/08/22/内直积与外直积/">https://yuchenxi2000.github.io/2025/08/22/内直积与外直积/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>Chenxi Yu</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2025-08-22</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2026-04-03</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/%E6%95%B0%E5%AD%A6/">数学</a><a class="link-muted mr-2" rel="tag" href="/tags/%E7%BE%A4%E8%AE%BA/">群论</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2025/08/23/%E6%9C%89%E9%99%90%E9%98%BF%E8%B4%9D%E5%B0%94%E7%BE%A4%E5%9F%BA%E6%9C%AC%E5%AE%9A%E7%90%86/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">有限阿贝尔群基本定理</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2025/08/21/p%5E3%E9%98%B6%E7%BE%A4%E5%90%8C%E6%9E%84%E7%B1%BB%E4%B8%AA%E6%95%B0/"><span class="level-item">p^3阶群同构类个数</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><!--!--><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a><p class="is-size-7"><span>&copy; 2026 Chenxi Yu</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="fab fa-creative-commons-nc"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/yuchenxi2000"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
             article: {
                 highlight: {
                     clipboard: true,

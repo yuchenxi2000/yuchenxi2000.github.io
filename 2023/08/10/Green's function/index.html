@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>Green&#039;s function - YCX&#039;s Blog</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="YCX&#039;s Blog"><meta name="msapplication-TileImage" content="favicon.ico"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="YCX&#039;s Blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="1先证一个结论  $$ \newcommand{\i}{\mathrm{i}} \newcommand{\d}{\mathrm{d}} \lim_{R \to +\infty}\int_C f(z) \exp (\i z t) \, \d z &amp;#x3D; 0,\quad t\gt 0 $$   其中 $C$ 的路径为半径 $R$ ，绕上半复平面的半圆：  $$ z&amp;#x3D;R \exp(\mathrm{i} \t"><meta property="og:type" content="blog"><meta property="og:title" content="Green&#039;s function"><meta property="og:url" content="https://yuchenxi2000.github.io/2023/08/10/Green&#039;s%20function/"><meta property="og:site_name" content="YCX&#039;s Blog"><meta property="og:description" content="1先证一个结论  $$ \newcommand{\i}{\mathrm{i}} \newcommand{\d}{\mathrm{d}} \lim_{R \to +\infty}\int_C f(z) \exp (\i z t) \, \d z &amp;#x3D; 0,\quad t\gt 0 $$   其中 $C$ 的路径为半径 $R$ ，绕上半复平面的半圆：  $$ z&amp;#x3D;R \exp(\mathrm{i} \t"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://yuchenxi2000.github.io/img/og_image.png"><meta property="article:published_time" content="2023-08-10T00:40:11.000Z"><meta property="article:modified_time" content="2026-03-30T12:14:17.171Z"><meta property="article:author" content="Chenxi Yu"><meta property="article:tag" content="物理"><meta property="article:tag" content="量子力学"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://yuchenxi2000.github.io/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://yuchenxi2000.github.io/2023/08/10/Green's%20function/"},"headline":"Green's function","image":["https://yuchenxi2000.github.io/img/og_image.png"],"datePublished":"2023-08-10T00:40:11.000Z","dateModified":"2026-03-30T12:14:17.171Z","author":{"@type":"Person","name":"Chenxi Yu"},"publisher":{"@type":"Organization","name":"YCX's Blog","logo":{"@type":"ImageObject","url":"https://yuchenxi2000.github.io/2023/08/10/Green%27s%20function/android-chrome-512x512.png"}},"description":"1先证一个结论  $$ \\newcommand{\\i}{\\mathrm{i}} \\newcommand{\\d}{\\mathrm{d}} \\lim_{R \\to +\\infty}\\int_C f(z) \\exp (\\i z t) \\, \\d z &#x3D; 0,\\quad t\\gt 0 $$   其中 $C$ 的路径为半径 $R$ ，绕上半复平面的半圆：  $$ z&#x3D;R \\exp(\\mathrm{i} \\t"}</script><link rel="canonical" href="https://yuchenxi2000.github.io/2023/08/10/Green&#039;s%20function/"><link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link data-pjax rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link data-pjax rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!--!--><!-- hexo injector head_end start --><script>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>Green&#039;s function - YCX&#039;s Blog</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="YCX&#039;s Blog"><meta name="msapplication-TileImage" content="favicon.ico"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="YCX&#039;s Blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="1先证一个结论 其中 $C$ 的路径为半径 $R$ ，绕上半复平面的半圆：  $$ z&amp;#x3D;R \exp(\mathrm{i} \theta),\quad \theta \in [0,\pi] \tag{1} $$  证明简单，把上式代入即可  $$ \begin{gathered} \int_C f(z) \exp (\mathrm{i} z t) \, \mathrm{d} z \\ &amp;#x3D; \int"><meta property="og:type" content="blog"><meta property="og:title" content="Green&#039;s function"><meta property="og:url" content="https://yuchenxi2000.github.io/2023/08/10/Green&#039;s%20function/"><meta property="og:site_name" content="YCX&#039;s Blog"><meta property="og:description" content="1先证一个结论 其中 $C$ 的路径为半径 $R$ ，绕上半复平面的半圆：  $$ z&amp;#x3D;R \exp(\mathrm{i} \theta),\quad \theta \in [0,\pi] \tag{1} $$  证明简单，把上式代入即可  $$ \begin{gathered} \int_C f(z) \exp (\mathrm{i} z t) \, \mathrm{d} z \\ &amp;#x3D; \int"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://yuchenxi2000.github.io/img/og_image.png"><meta property="article:published_time" content="2023-08-10T00:40:11.000Z"><meta property="article:modified_time" content="2026-04-03T14:05:06.317Z"><meta property="article:author" content="Chenxi Yu"><meta property="article:tag" content="物理"><meta property="article:tag" content="量子力学"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://yuchenxi2000.github.io/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://yuchenxi2000.github.io/2023/08/10/Green's%20function/"},"headline":"Green's function","image":["https://yuchenxi2000.github.io/img/og_image.png"],"datePublished":"2023-08-10T00:40:11.000Z","dateModified":"2026-04-03T14:05:06.317Z","author":{"@type":"Person","name":"Chenxi Yu"},"publisher":{"@type":"Organization","name":"YCX's Blog","logo":{"@type":"ImageObject","url":"https://yuchenxi2000.github.io/2023/08/10/Green%27s%20function/android-chrome-512x512.png"}},"description":"1先证一个结论 其中 $C$ 的路径为半径 $R$ ，绕上半复平面的半圆：  $$ z&#x3D;R \\exp(\\mathrm{i} \\theta),\\quad \\theta \\in [0,\\pi] \\tag{1} $$  证明简单，把上式代入即可  $$ \\begin{gathered} \\int_C f(z) \\exp (\\mathrm{i} z t) \\, \\mathrm{d} z \\\\ &#x3D; \\int"}</script><link rel="canonical" href="https://yuchenxi2000.github.io/2023/08/10/Green&#039;s%20function/"><link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link data-pjax rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link data-pjax rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!--!--><!-- hexo injector head_end start --><script>
   (function () {
       function switchTab() {
           if (!location.hash) {
@@ -29,89 +29,81 @@
       switchTab();
       window.addEventListener('hashchange', switchTab, false);
   })();
-  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 8.1.1"></head><body class="is-1-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-12"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2023-08-10T00:40:11.000Z" title="2023/8/10 08:40:11">2023-08-10</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E7%89%A9%E7%90%86/">物理</a></span><span class="level-item">15 分钟读完 (大约2242个字)</span></div></div><h1 class="title is-3 is-size-4-mobile">Green&#039;s function</h1><div class="content"><h2 id="1"><a href="#1" class="headerlink" title="1"></a>1</h2><p>先证一个结论</p>
-<div>
-$$
-\newcommand{\i}{\mathrm{i}}
-\newcommand{\d}{\mathrm{d}}
-\lim_{R \to +\infty}\int_C f(z) \exp (\i z t) \, \d z = 0,\quad t\gt 0
-$$
-</div>
-
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 8.1.1"></head><body class="is-1-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-12"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2023-08-10T00:40:11.000Z" title="2023/8/10 08:40:11">2023-08-10</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E7%89%A9%E7%90%86/">物理</a></span><span class="level-item">15 分钟读完 (大约2210个字)</span></div></div><h1 class="title is-3 is-size-4-mobile">Green&#039;s function</h1><div class="content"><h2 id="1"><a href="#1" class="headerlink" title="1"></a>1</h2><p>先证一个结论</p>
 <p>其中 $C$ 的路径为半径 $R$ ，绕上半复平面的半圆：</p>
 <div>
 $$
-z=R \exp(\mathrm{i} \theta),\quad \theta \in \lbrack 0,\pi\rbrack 
-$$
-</div>
+z=R \exp(\mathrm{i} \theta),\quad \theta \in [0,\pi]
+\tag{1}
+$$</div>
 
 <p>证明简单，把上式代入即可</p>
 <div>
 $$
 \begin{gathered}
 \int_C f(z) \exp (\mathrm{i} z t) \, \mathrm{d} z \\
-= \int_0^\pi f\lbrack R \exp(\mathrm{i} \theta)\rbrack  \exp \lbrack \mathrm{i} R \exp(\mathrm{i} \theta) t\rbrack  R \mathrm{i} \exp(\mathrm{i} \theta) \, \mathrm{d} \theta \\
-= \int_0^\pi \mathrm{i} R f\lbrack R \exp(\mathrm{i} \theta)\rbrack  \exp(\mathrm{i} \theta) \exp \lbrack \mathrm{i} R \cos(\theta) t\rbrack  \exp \lbrack - R \sin(\theta) t\rbrack    \, \mathrm{d} \theta \\
+= \int_0^\pi f[R \exp(\mathrm{i} \theta)] \exp [\mathrm{i} R \exp(\mathrm{i} \theta) t] R \mathrm{i} \exp(\mathrm{i} \theta) \, \mathrm{d} \theta \\
+= \int_0^\pi \mathrm{i} R f[R \exp(\mathrm{i} \theta)] \exp(\mathrm{i} \theta) \exp [\mathrm{i} R \cos(\theta) t] \exp [- R \sin(\theta) t]   \, \mathrm{d} \theta \\
 \\\end{gathered}
-$$
-</div>
+\tag{2}
+$$</div>
 
 <p>注意</p>
 <div>
 $$
-\lim_{R \to +\infty} \exp \lbrack - R \sin(\theta) t\rbrack  = 0
-$$
-</div>
+\lim_{R \to +\infty} \exp [- R \sin(\theta) t] = 0
+\tag{3}
+$$</div>
 
 <p>故</p>
 <div>
 $$
 \lim_{R \to +\infty}\int_C f(z) \exp (\mathrm{i} z t) \, \mathrm{d} z = 0
-$$
-</div>
+\tag{4}
+$$</div>
 
 <p>上述证明不是很严格，但大体思路就是这样。而且还需对 $f(z)$ 的极限行为做出限制，但这里不讨论了。</p>
 <p>同理，若 $t\lt 0$ ，则</p>
 <div>
 $$
 \lim_{R \to +\infty}\int_{C^\prime} f(z) \exp (\mathrm{i} z t) \, \mathrm{d} z = 0,\quad t\lt 0
-$$
-</div>
+\tag{5}
+$$</div>
 
 <p>其中路径 $C^\prime$ 应为半径 $R$ ，绕下半复平面的半圆（ $\theta$ 取值从 $0$ 到 $-\pi$ ）：</p>
 <div>
 $$
-z=R \exp(\mathrm{i} \theta),\quad \theta \in \lbrack -\pi,0\rbrack 
-$$
-</div>
+z=R \exp(\mathrm{i} \theta),\quad \theta \in [-\pi,0]
+\tag{6}
+$$</div>
 
 
 <h2 id="2"><a href="#2" class="headerlink" title="2"></a>2</h2><p>下面证一个等式，若 $f(x)$ 在实轴上无极点，且 $t\gt 0$ ，则</p>
 <div>
 $$
-\int_{-\infty}^{+\infty} f(x) \exp (\mathrm{i} x t) \, \mathrm{d} x = 2\pi\mathrm{i} \sum_{z_0} \mathrm{Res} \lbrack f(z) \exp (\mathrm{i} z t), z_0\rbrack 
-$$
-</div>
+\int_{-\infty}^{+\infty} f(x) \exp (\mathrm{i} x t) \, \mathrm{d} x = 2\pi\mathrm{i} \sum_{z_0} \mathrm{Res} [f(z) \exp (\mathrm{i} z t), z_0]
+\tag{7}
+$$</div>
 
-<p>其中 $\sum_{z_0}$ 取遍上半平面的极点。 $\mathrm{Res}\lbrack g(z),z_0\rbrack $ 表示 $g(z)$ 在 $z_0$ 处的留数。</p>
+<p>其中 $\sum_{z_0}$ 取遍上半平面的极点。 $\mathrm{Res}[g(z),z_0]$ 表示 $g(z)$ 在 $z_0$ 处的留数。</p>
 <p>把 $f(x)$ 解析延拓到复平面，记路径 $C$ 为沿实轴从 $-R$ 到 $+R$ 的路径，记路径 $C_1$ 为半径 $R$ 、逆时针绕上半复平面的半圆。用留数定理，</p>
 <div>
 $$
 \begin{gathered}
 \int_C f(z) \exp(\mathrm{i} z t) \, \mathrm{d} z + \int_{C_1} f(z) \exp(\mathrm{i} z t) \, \mathrm{d} z \\
 = \int_{C+C_1} f(z) \exp(\mathrm{i} z t) \, \mathrm{d} z \\
-= 2\pi\mathrm{i} \sum_{z_0} \mathrm{Res} \lbrack f(z) \exp (\mathrm{i} z t), z_0\rbrack 
+= 2\pi\mathrm{i} \sum_{z_0} \mathrm{Res} [f(z) \exp (\mathrm{i} z t), z_0]
 \\\end{gathered}
-$$
-</div>
+\tag{8}
+$$</div>
 
 <p>其中求和遍历路径 $C+C_1$ 内的极点。对上式取极限 $R \to +\infty$ ，用上节给出的结论即可。</p>
 <p>同理有若 $f(x)$ 在实轴上无极点，且 $t\lt 0$ ，则</p>
 <div>
 $$
-\int_{-\infty}^{+\infty} f(x) \exp (\mathrm{i} x t) \, \mathrm{d} x = -2\pi\mathrm{i} \sum_{z_0} \mathrm{Res} \lbrack f(z) \exp (\mathrm{i} z t), z_0\rbrack 
-$$
-</div>
+\int_{-\infty}^{+\infty} f(x) \exp (\mathrm{i} x t) \, \mathrm{d} x = -2\pi\mathrm{i} \sum_{z_0} \mathrm{Res} [f(z) \exp (\mathrm{i} z t), z_0]
+\tag{9}
+$$</div>
 
 <p>其中 $\sum_{z_0}$ 取遍下半平面的极点。</p>
 <h2 id="3"><a href="#3" class="headerlink" title="3"></a>3</h2><p>阶跃函数 $\theta(t)$ 的傅立叶变换</p>
@@ -120,11 +112,11 @@ $$
 \begin{gathered}
 \int_{-\infty}^{+\infty} \theta(t) \exp(-\mathrm{i} \omega t) \, \mathrm{d} t \\
 = \int_{0}^{+\infty} \exp(-\mathrm{i} \omega t) \, \mathrm{d} t \\
-= \lim_{\eta \to 0^+} \int_{0}^{+\infty} \exp\lbrack -\mathrm{i} (\omega - \mathrm{i} \eta) t\rbrack  \, \mathrm{d} t \\
+= \lim_{\eta \to 0^+} \int_{0}^{+\infty} \exp[-\mathrm{i} (\omega - \mathrm{i} \eta) t] \, \mathrm{d} t \\
 = \lim_{\eta \to 0^+} \cfrac{-\mathrm{i}}{\omega - \mathrm{i} \eta}
 \\\end{gathered}
-$$
-</div>
+\tag{10}
+$$</div>
 
 <p>上式不可取极限写为 $-\mathrm{i}&#x2F;\omega$ ，因为涉及复平面上积分路径问题。</p>
 <p>计算逆变换，用上节的结论，当 $t\gt 0$ 时取上半平面的围道，当 $t\lt 0$ 时取下半平面的围道：</p>
@@ -133,7 +125,7 @@ $$
 \cfrac{1}{2\pi}\int_{-\infty}^{+\infty} \cfrac{-\mathrm{i}}{\omega - \mathrm{i} \eta} \exp(\mathrm{i} \omega t) \, \mathrm{d} \omega \\
 =
 \begin{cases}
-\mathrm{i} \mathrm{Res}\left\lbrack \cfrac{-\mathrm{i}}{\omega - \mathrm{i} \eta} \exp(\mathrm{i} \omega t), \mathrm{i}\eta\right\rbrack ,\quad t\gt 0 \\
+\mathrm{i} \mathrm{Res}\left[\cfrac{-\mathrm{i}}{\omega - \mathrm{i} \eta} \exp(\mathrm{i} \omega t), \mathrm{i}\eta\right],\quad t\gt 0 \\
 0,\quad t\lt 0 \\
 \end{cases} \\
 = 
@@ -141,8 +133,8 @@ $$
 \exp(- \eta t),\quad t\gt 0 \\
 0,\quad t\lt 0 \\
 \end{cases} \\
-$$
-</div>
+\tag{11}
+$$</div>
 
 <p>令 $\eta \to 0^+$ 就得到了阶跃函数。</p>
 <span id="more"></span>
@@ -151,16 +143,16 @@ $$
 <div>
 $$
 \cfrac{1}{x\mp\mathrm{i} \eta}=\mathcal{P} \cfrac{1}{x}\pm\mathrm{i}\pi \delta(x)
-$$
-</div>
+\tag{12}
+$$</div>
 
 <p> $\eta$ 为无穷小， $\mathcal{P}$ 表示柯西主值。</p>
 <p>这里证</p>
 <div>
 $$
 \cfrac{1}{x-\mathrm{i} \eta}=\mathcal{P} \cfrac{1}{x}+\mathrm{i}\pi \delta(x)
-$$
-</div>
+\tag{13}
+$$</div>
 
 <p>，另一种情况同理。</p>
 <p>通过上节可知阶跃函数 $\theta(t)$ 的傅立叶变换为 $-\mathrm{i}&#x2F;(\omega - \mathrm{i} \eta)$ 。</p>
@@ -168,20 +160,20 @@ $$
 <div>
 $$
 \begin{gathered}
-\cfrac{1}{2\pi}\int_{-\infty}^{+\infty} \left\lbrack \mathcal{P}\cfrac{1}{\omega}+\mathrm{i} \pi \delta(\omega)\right\rbrack  \exp(\mathrm{i} \omega t) \, \mathrm{d} \omega \\
+\cfrac{1}{2\pi}\int_{-\infty}^{+\infty} \left[\mathcal{P}\cfrac{1}{\omega}+\mathrm{i} \pi \delta(\omega)\right] \exp(\mathrm{i} \omega t) \, \mathrm{d} \omega \\
 = \cfrac{1}{2\pi} \mathcal{P} \int_{-\infty}^{+\infty} \cfrac{\exp(\mathrm{i} \omega t)}{\omega} \, \mathrm{d} \omega + \cfrac{1}{2\pi}\int_{-\infty}^{+\infty} \mathrm{i} \pi \delta(\omega) \exp(\mathrm{i} \omega t) \, \mathrm{d} \omega \\
 = \cfrac{\mathrm{i}}{2\pi} \int_{-\infty}^{+\infty} \cfrac{\sin(\omega t)}{\omega} \, \mathrm{d} \omega + \cfrac{\mathrm{i}}{2} \\
 = \mathrm{i} \theta(t)
 \\\end{gathered}
-$$
-</div>
+\tag{14}
+$$</div>
 
 <p>于是有</p>
 <div>
 $$
 \cfrac{1}{\omega - \mathrm{i} \eta} = \mathcal{P} \cfrac{1}{\omega} + \mathrm{i} \pi \delta(\omega)
-$$
-</div>
+\tag{15}
+$$</div>
 
 
 <h3 id="另一种不严格证明"><a href="#另一种不严格证明" class="headerlink" title="另一种不严格证明"></a>另一种不严格证明</h3><div>
@@ -192,8 +184,8 @@ $$
 = \lim_{\eta \to 0^+} \cfrac{x}{x^2+\eta^2} + \mathrm{i} \lim_{\eta \to 0^+} \cfrac{\eta}{x^2+\eta^2} \\
 = \mathcal{P}\cfrac{1}{x} + \mathrm{i} \pi \delta(x)
 \\\end{gathered}
-$$
-</div>
+\tag{16}
+$$</div>
 
 
 <p>最后这个等式的（不严格）证明：</p>
@@ -205,16 +197,16 @@ $$
 + \int_{+\delta}^{+\infty} \cfrac{f(\sqrt{x^2-\delta^2})}{x} \mathrm{d}x \\
 \to \mathcal{P}\int_{-\infty}^{+\infty} \cfrac{f(x)}{x}\mathrm{d}x
 \\\end{gathered}
-$$
-</div>
+\tag{17}
+$$</div>
 
 
 <p>所以</p>
 <div>
 $$
 \lim_{\eta \to 0^+} \cfrac{x}{x^2+\eta^2} = \mathcal{P}\cfrac{1}{x}
-$$
-</div>
+\tag{18}
+$$</div>
 
 
 <div>
@@ -224,24 +216,24 @@ $$
 = \int_{-\infty}^{+\infty} f(x) \mathrm{d}\arctan \cfrac{x}{\eta} \\
 = \int_{-\pi/2}^{+\pi/2} f(\eta \tan \theta) \mathrm{d}\theta \to \pi f(0) \\
 \\\end{gathered}
-$$
-</div>
+\tag{19}
+$$</div>
 
 
 <p>因此</p>
 <div>
 $$
 \lim_{\eta \to 0^+} \cfrac{\eta}{x^2+\eta^2} = \pi \delta(x)
-$$
-</div>
+\tag{20}
+$$</div>
 
 
 <h2 id="5"><a href="#5" class="headerlink" title="5"></a>5</h2><p>无相互作用体系（费米子为例）</p>
 <div>
 $$
 H = \sum_k \varepsilon_k a^\dagger_k a_k
-$$
-</div>
+\tag{21}
+$$</div>
 
 <p>格林函数（greater，lesser，retarded，advanced，time-ordered）</p>
 <div>
@@ -249,12 +241,12 @@ $$
 \begin{gathered}
 G^\gt _{mn}(t,t^\prime) = -\mathrm{i}/\hbar \bra{} a_m(t) a^\dagger_n(t^\prime) \ket{} \\
 G^\lt _{mn}(t,t^\prime) = +\mathrm{i}/\hbar \bra{} a^\dagger_n(t^\prime) a_m(t) \ket{} \\
-G^r_{mn}(t,t^\prime) = -\mathrm{i}/\hbar \theta(t-t^\prime) \bra{} \lbrack a_m(t) a^\dagger_n(t^\prime)\rbrack _+ \ket{} \\
-G^a_{mn}(t,t^\prime) = +\mathrm{i}/\hbar \theta(t^\prime-t) \bra{} \lbrack a_m(t) a^\dagger_n(t^\prime)\rbrack _+ \ket{} \\
+G^r_{mn}(t,t^\prime) = -\mathrm{i}/\hbar \theta(t-t^\prime) \bra{} [a_m(t) a^\dagger_n(t^\prime)]_+ \ket{} \\
+G^a_{mn}(t,t^\prime) = +\mathrm{i}/\hbar \theta(t^\prime-t) \bra{} [a_m(t) a^\dagger_n(t^\prime)]_+ \ket{} \\
 G^t_{mn}(t,t^\prime) = -\mathrm{i}/\hbar \theta(t-t^\prime) \bra{} a_m(t) a^\dagger_n(t^\prime) \ket{} +\mathrm{i}/\hbar \theta(t^\prime - t) \bra{} a^\dagger_n(t^\prime) a_m(t) \ket{} \\
 \\\end{gathered}
-$$
-</div>
+\tag{22}
+$$</div>
 
 <p>相互作用绘景下</p>
 <div>
@@ -263,8 +255,8 @@ $$
 a_n(t)=a_n \exp(-\mathrm{i} \varepsilon_n t / \hbar) \\
 a_n^\dagger(t)=a_n^\dagger \exp(+\mathrm{i} \varepsilon_n t / \hbar) \\
 \\\end{gathered}
-$$
-</div>
+\tag{23}
+$$</div>
 
 <p>系统时间平移不变时格林函数只和时间差有关 $G(t,t^\prime)&#x3D;G(t-t^\prime)$ </p>
 <p>若基态下第 $m$ 个能级占据数 $\bra{}a^\dagger_ma_m\ket{}&#x3D;n_m$ ，则各格林函数在时间域表示</p>
@@ -277,8 +269,8 @@ G^r_{mn}(t)=-\mathrm{i}/\hbar \theta(t) \delta_{mn} \exp(-\mathrm{i} \varepsilon
 G^a_{mn}(t)=+\mathrm{i}/\hbar \theta(-t) \delta_{mn} \exp(-\mathrm{i} \varepsilon_m t/\hbar) \\
 G^t_{mn}(t)= \theta(t) G^\gt _{mn}(t) + \theta(-t) G^\lt _{mn}(t) \\
 \\\end{gathered}
-$$
-</div>
+\tag{24}
+$$</div>
 
 <p>时间域表示和能量域表示之间是傅立叶变换关系</p>
 <div>
@@ -287,8 +279,8 @@ $$
 G(E) = \int_{-\infty}^{+\infty} G(t) \exp(\mathrm{i} E t/\hbar) \, \mathrm{d} t \\
 G(t) = \cfrac{1}{2\pi\hbar} \int_{-\infty}^{+\infty} G(E) \exp(-\mathrm{i} E t/\hbar) \, \mathrm{d} E \\
 \\\end{gathered}
-$$
-</div>
+\tag{25}
+$$</div>
 
 <p>能量域表示</p>
 <div>
@@ -300,28 +292,28 @@ G^r_{mn}(E) = \cfrac{\delta_{mn}}{E-\varepsilon_m+\mathrm{i} \eta} \\
 G^a_{mn}(E) = \cfrac{\delta_{mn}}{E-\varepsilon_m-\mathrm{i} \eta} \\
 G^t_{mn}(E) = \delta_{mn} \left( \cfrac{1-n_m}{E-\varepsilon_m+\mathrm{i} \eta} + \cfrac{n_m}{E-\varepsilon_m-\mathrm{i} \eta} \right) \\
 \\\end{gathered}
-$$
-</div>
+\tag{26}
+$$</div>
 
 <p>其中 $G^r$ 推导如下</p>
 <div>
 $$
 \begin{gathered}
 G^r_{mn}(E)
-=\int_0^{+\infty} -\mathrm{i}/\hbar \delta_{mn} \exp\lbrack \mathrm{i} (E -\varepsilon_m+\mathrm{i} \eta) t/\hbar\rbrack  \, \mathrm{d} t \\
+=\int_0^{+\infty} -\mathrm{i}/\hbar \delta_{mn} \exp[\mathrm{i} (E -\varepsilon_m+\mathrm{i} \eta) t/\hbar] \, \mathrm{d} t \\
 =-\mathrm{i}/\hbar \delta_{mn} \cfrac{-1}{\mathrm{i}(E-\varepsilon_m+\mathrm{i} \eta)/\hbar} \\
 =\cfrac{\delta_{mn}}{E-\varepsilon_m+\mathrm{i} \eta} \\
 \\\end{gathered}
-$$
-</div>
+\tag{27}
+$$</div>
 
 <p> $G^a, G^t$ 同理。</p>
 <p>谱函数</p>
 <div>
 $$
-A_{mn}(E) = \mathrm{i} \left\lbrack G^r_{mn}(E) - G^a_{mn}(E)\right\rbrack  = 2\pi \delta_{mn} \delta(E-\varepsilon_m)
-$$
-</div>
+A_{mn}(E) = \mathrm{i} \left[G^r_{mn}(E) - G^a_{mn}(E)\right] = 2\pi \delta_{mn} \delta(E-\varepsilon_m)
+\tag{28}
+$$</div>
 
 
 <h2 id="6"><a href="#6" class="headerlink" title="6"></a>6</h2><p>自能的虚部和粒子寿命</p>
@@ -329,29 +321,29 @@ $$
 <div>
 $$
 G^r = G^r_0 + G^r_0 \Sigma^r G^r
-$$
-</div>
+\tag{29}
+$$</div>
 
 <p>写成微分方程形式</p>
 <div>
 $$
-\left\lbrack \mathrm{i}\hbar \cfrac{\partial}{\partial t} - H(t)\right\rbrack  G^r(t,t^\prime) = \delta(t-t^\prime) + \int \Sigma^r(t,\tau) G^r(\tau,t^\prime) \, \mathrm{d} \tau
-$$
-</div>
+\left[\mathrm{i}\hbar \cfrac{\partial}{\partial t} - H(t)\right] G^r(t,t^\prime) = \delta(t-t^\prime) + \int \Sigma^r(t,\tau) G^r(\tau,t^\prime) \, \mathrm{d} \tau
+\tag{30}
+$$</div>
 
 <p>假设体系具有时间平移对称性，上式转换到能量域</p>
 <div>
 $$
 (E - H)G^r = 1 + \Sigma^r G^r
-$$
-</div>
+\tag{31}
+$$</div>
 
 <p>于是</p>
 <div>
 $$
 G^r = \cfrac{1}{E - H - \Sigma^r + \mathrm{i}\eta}
-$$
-</div>
+\tag{32}
+$$</div>
 
 <p>傅立叶反变换求时间域中表示，假设该矩阵已经对角化。假设 $\mathrm{Im}, \Sigma^r\lt 0$ ，那么 $G^r$ 只在下半平面存在一个一阶极点</p>
 <div>
@@ -360,16 +352,16 @@ G^r(t) = \cfrac{1}{2\pi\hbar} \int_{-\infty}^{+\infty} \cfrac{\exp(-\mathrm{i} E
 = \cfrac{1}{2\pi\hbar} \int_{-\infty}^{+\infty} \cfrac{\exp(-\mathrm{i} E t/\hbar)}{E - \left(H + \mathrm{Re}\, \Sigma^r + \mathrm{i} \,\mathrm{Im}\, \Sigma^r \right)} \, \mathrm{d} E \\
 =
 \begin{cases}
--\mathrm{i}/\hbar\, \mathrm{Res} \left\lbrack  \cfrac{\exp(-\mathrm{i} E t/\hbar)}{E - \left(H + \mathrm{Re}\, \Sigma^r + \mathrm{i} \,\mathrm{Im}\, \Sigma^r \right)}, H + \mathrm{Re}\, \Sigma^r + \mathrm{i} \,\mathrm{Im}\, \Sigma^r \right\rbrack \,\quad t\gt 0 \\
+-\mathrm{i}/\hbar\, \mathrm{Res} \left[ \cfrac{\exp(-\mathrm{i} E t/\hbar)}{E - \left(H + \mathrm{Re}\, \Sigma^r + \mathrm{i} \,\mathrm{Im}\, \Sigma^r \right)}, H + \mathrm{Re}\, \Sigma^r + \mathrm{i} \,\mathrm{Im}\, \Sigma^r \right]\,\quad t\gt 0 \\
 0,\quad t\lt 0
 \end{cases} \\
 =
 \begin{cases}
--\mathrm{i}/\hbar\, \exp\lbrack -\mathrm{i} (H + \mathrm{Re}\, \Sigma^r ) t/\hbar\rbrack  \exp(\mathrm{Im}\, \Sigma^r\, t/\hbar) \,\quad t\gt 0 \\
+-\mathrm{i}/\hbar\, \exp[-\mathrm{i} (H + \mathrm{Re}\, \Sigma^r ) t/\hbar] \exp(\mathrm{Im}\, \Sigma^r\, t/\hbar) \,\quad t\gt 0 \\
 0,\quad t\lt 0
 \end{cases} \\
-$$
-</div>
+\tag{33}
+$$</div>
 
 <p>令</p>
 <div>
@@ -378,32 +370,32 @@ $$
 \omega = (H + \mathrm{Re}\, \Sigma^r ) /\hbar \\
 \Gamma = \mathrm{i} (\Sigma^r - \Sigma^a)/\hbar = -2\,\mathrm{Im}\,\Sigma^r/\hbar
 \\\end{gathered}
-$$
-</div>
+\tag{34}
+$$</div>
 
 <p>则</p>
 <div>
 $$
 G^r(t) = -\mathrm{i}/\hbar\,\theta(t) \exp (-\mathrm{i}\omega t) \exp (-\Gamma t / 2)
-$$
-</div>
+\tag{35}
+$$</div>
 
 <p>可见，对于激励 $S(t) &#x3D; \delta(t)$ ，系统的响应为 $\psi(t)&#x3D;\int G^r(t-\tau)\delta(\tau),\mathrm{d} t&#x3D;G^r(t)$ ，该相应强度随时间衰减</p>
 <div>
 $$
 \lvert G^r(t) \rvert^2 \propto \exp(-\Gamma t)
-$$
-</div>
+\tag{36}
+$$</div>
 
 <p>因此我们说自能的虚部反映粒子寿命：</p>
 <div>
 $$
 \tau = \cfrac{1}{\Gamma}
-$$
-</div>
+\tag{37}
+$$</div>
 
 
-</div><div class="article-licensing box"><div class="licensing-title"><p>Green&#039;s function</p><p><a href="https://yuchenxi2000.github.io/2023/08/10/Green&#039;s function/">https://yuchenxi2000.github.io/2023/08/10/Green&#039;s function/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>Chenxi Yu</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2023-08-10</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2026-03-30</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/%E7%89%A9%E7%90%86/">物理</a><a class="link-muted mr-2" rel="tag" href="/tags/%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6/">量子力学</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2023/09/18/32%E4%B8%AA%E7%82%B9%E7%BE%A4%E4%B8%ADDM%E7%9B%B8%E4%BA%92%E4%BD%9C%E7%94%A8/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">32个点群中DM相互作用</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2023/08/09/%E6%96%AF%E6%A0%BC%E6%98%8E%E5%AD%90/"><span class="level-item">斯格明子</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><!--!--><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a><p class="is-size-7"><span>&copy; 2026 Chenxi Yu</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="fab fa-creative-commons-nc"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/yuchenxi2000"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
+</div><div class="article-licensing box"><div class="licensing-title"><p>Green&#039;s function</p><p><a href="https://yuchenxi2000.github.io/2023/08/10/Green&#039;s function/">https://yuchenxi2000.github.io/2023/08/10/Green&#039;s function/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>Chenxi Yu</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2023-08-10</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2026-04-03</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/%E7%89%A9%E7%90%86/">物理</a><a class="link-muted mr-2" rel="tag" href="/tags/%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6/">量子力学</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2023/09/18/32%E4%B8%AA%E7%82%B9%E7%BE%A4%E4%B8%ADDM%E7%9B%B8%E4%BA%92%E4%BD%9C%E7%94%A8/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">32个点群中DM相互作用</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2023/08/09/%E6%96%AF%E6%A0%BC%E6%98%8E%E5%AD%90/"><span class="level-item">斯格明子</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><!--!--><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a><p class="is-size-7"><span>&copy; 2026 Chenxi Yu</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="fab fa-creative-commons-nc"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/yuchenxi2000"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
             article: {
                 highlight: {
                     clipboard: true,

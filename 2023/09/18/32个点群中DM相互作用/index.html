@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>32个点群中DM相互作用 - YCX&#039;s Blog</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="YCX&#039;s Blog"><meta name="msapplication-TileImage" content="favicon.ico"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="YCX&#039;s Blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="该版本列举了所有点群的DMI形式  DM相互作用全称Dzyaloshinskii-Moriya interaction。对于交换作用exchange interaction，两个磁矩的相互作用形式为 $S_i \cdot S_j$ ，而DM interaction的形式为 $S_i \times S_j$ 。本文先给出了连续极限下DM相互作用的表达式，然后列举了32个点群中可能存在DM相互作用的"><meta property="og:type" content="blog"><meta property="og:title" content="32个点群中DM相互作用"><meta property="og:url" content="https://yuchenxi2000.github.io/2023/09/18/32%E4%B8%AA%E7%82%B9%E7%BE%A4%E4%B8%ADDM%E7%9B%B8%E4%BA%92%E4%BD%9C%E7%94%A8/"><meta property="og:site_name" content="YCX&#039;s Blog"><meta property="og:description" content="该版本列举了所有点群的DMI形式  DM相互作用全称Dzyaloshinskii-Moriya interaction。对于交换作用exchange interaction，两个磁矩的相互作用形式为 $S_i \cdot S_j$ ，而DM interaction的形式为 $S_i \times S_j$ 。本文先给出了连续极限下DM相互作用的表达式，然后列举了32个点群中可能存在DM相互作用的"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://yuchenxi2000.github.io/img/og_image.png"><meta property="article:published_time" content="2023-09-18T01:41:47.000Z"><meta property="article:modified_time" content="2026-03-30T12:14:17.075Z"><meta property="article:author" content="Chenxi Yu"><meta property="article:tag" content="物理"><meta property="article:tag" content="固体物理"><meta property="article:tag" content="群论"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://yuchenxi2000.github.io/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://yuchenxi2000.github.io/2023/09/18/32%E4%B8%AA%E7%82%B9%E7%BE%A4%E4%B8%ADDM%E7%9B%B8%E4%BA%92%E4%BD%9C%E7%94%A8/"},"headline":"32个点群中DM相互作用","image":["https://yuchenxi2000.github.io/img/og_image.png"],"datePublished":"2023-09-18T01:41:47.000Z","dateModified":"2026-03-30T12:14:17.075Z","author":{"@type":"Person","name":"Chenxi Yu"},"publisher":{"@type":"Organization","name":"YCX's Blog","logo":{"@type":"ImageObject","url":"https://yuchenxi2000.github.io/2023/09/18/32%E4%B8%AA%E7%82%B9%E7%BE%A4%E4%B8%ADDM%E7%9B%B8%E4%BA%92%E4%BD%9C%E7%94%A8/android-chrome-512x512.png"}},"description":"该版本列举了所有点群的DMI形式  DM相互作用全称Dzyaloshinskii-Moriya interaction。对于交换作用exchange interaction，两个磁矩的相互作用形式为 $S_i \\cdot S_j$ ，而DM interaction的形式为 $S_i \\times S_j$ 。本文先给出了连续极限下DM相互作用的表达式，然后列举了32个点群中可能存在DM相互作用的"}</script><link rel="canonical" href="https://yuchenxi2000.github.io/2023/09/18/32%E4%B8%AA%E7%82%B9%E7%BE%A4%E4%B8%ADDM%E7%9B%B8%E4%BA%92%E4%BD%9C%E7%94%A8/"><link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link data-pjax rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link data-pjax rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!--!--><!-- hexo injector head_end start --><script>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>32个点群中DM相互作用 - YCX&#039;s Blog</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="YCX&#039;s Blog"><meta name="msapplication-TileImage" content="favicon.ico"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="YCX&#039;s Blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="该版本列举了所有点群的DMI形式  DM相互作用全称Dzyaloshinskii-Moriya interaction。对于交换作用exchange interaction，两个磁矩的相互作用形式为 $S_i \cdot S_j$ ，而DM interaction的形式为 $S_i \times S_j$ 。本文先给出了连续极限下DM相互作用的表达式，然后列举了32个点群中可能存在DM相互作用的"><meta property="og:type" content="blog"><meta property="og:title" content="32个点群中DM相互作用"><meta property="og:url" content="https://yuchenxi2000.github.io/2023/09/18/32%E4%B8%AA%E7%82%B9%E7%BE%A4%E4%B8%ADDM%E7%9B%B8%E4%BA%92%E4%BD%9C%E7%94%A8/"><meta property="og:site_name" content="YCX&#039;s Blog"><meta property="og:description" content="该版本列举了所有点群的DMI形式  DM相互作用全称Dzyaloshinskii-Moriya interaction。对于交换作用exchange interaction，两个磁矩的相互作用形式为 $S_i \cdot S_j$ ，而DM interaction的形式为 $S_i \times S_j$ 。本文先给出了连续极限下DM相互作用的表达式，然后列举了32个点群中可能存在DM相互作用的"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://yuchenxi2000.github.io/img/og_image.png"><meta property="article:published_time" content="2023-09-18T01:41:47.000Z"><meta property="article:modified_time" content="2026-04-03T14:05:06.214Z"><meta property="article:author" content="Chenxi Yu"><meta property="article:tag" content="物理"><meta property="article:tag" content="固体物理"><meta property="article:tag" content="群论"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://yuchenxi2000.github.io/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://yuchenxi2000.github.io/2023/09/18/32%E4%B8%AA%E7%82%B9%E7%BE%A4%E4%B8%ADDM%E7%9B%B8%E4%BA%92%E4%BD%9C%E7%94%A8/"},"headline":"32个点群中DM相互作用","image":["https://yuchenxi2000.github.io/img/og_image.png"],"datePublished":"2023-09-18T01:41:47.000Z","dateModified":"2026-04-03T14:05:06.214Z","author":{"@type":"Person","name":"Chenxi Yu"},"publisher":{"@type":"Organization","name":"YCX's Blog","logo":{"@type":"ImageObject","url":"https://yuchenxi2000.github.io/2023/09/18/32%E4%B8%AA%E7%82%B9%E7%BE%A4%E4%B8%ADDM%E7%9B%B8%E4%BA%92%E4%BD%9C%E7%94%A8/android-chrome-512x512.png"}},"description":"该版本列举了所有点群的DMI形式  DM相互作用全称Dzyaloshinskii-Moriya interaction。对于交换作用exchange interaction，两个磁矩的相互作用形式为 $S_i \\cdot S_j$ ，而DM interaction的形式为 $S_i \\times S_j$ 。本文先给出了连续极限下DM相互作用的表达式，然后列举了32个点群中可能存在DM相互作用的"}</script><link rel="canonical" href="https://yuchenxi2000.github.io/2023/09/18/32%E4%B8%AA%E7%82%B9%E7%BE%A4%E4%B8%ADDM%E7%9B%B8%E4%BA%92%E4%BD%9C%E7%94%A8/"><link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link data-pjax rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link data-pjax rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!--!--><!-- hexo injector head_end start --><script>
   (function () {
       function switchTab() {
           if (!location.hash) {
@@ -29,7 +29,7 @@
       switchTab();
       window.addEventListener('hashchange', switchTab, false);
   })();
-  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 8.1.1"></head><body class="is-1-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-12"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2023-09-18T01:41:47.000Z" title="2023/9/18 09:41:47">2023-09-18</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E7%89%A9%E7%90%86/">物理</a></span><span class="level-item">8 分钟读完 (大约1266个字)</span></div></div><h1 class="title is-3 is-size-4-mobile">32个点群中DM相互作用</h1><div class="content"><blockquote>
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 8.1.1"></head><body class="is-1-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-12"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2023-09-18T01:41:47.000Z" title="2023/9/18 09:41:47">2023-09-18</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E7%89%A9%E7%90%86/">物理</a></span><span class="level-item">9 分钟读完 (大约1283个字)</span></div></div><h1 class="title is-3 is-size-4-mobile">32个点群中DM相互作用</h1><div class="content"><blockquote>
 <p>该版本列举了所有点群的DMI形式</p>
 </blockquote>
 <p>DM相互作用全称Dzyaloshinskii-Moriya interaction。对于交换作用exchange interaction，两个磁矩的相互作用形式为 $S_i \cdot S_j$ ，而DM interaction的形式为 $S_i \times S_j$ 。本文先给出了连续极限下DM相互作用的表达式，然后列举了32个点群中可能存在DM相互作用的点群，并计算了相互作用形式。</p>
@@ -41,23 +41,23 @@ $$
 = \sum_i S_i \times (S_i + h\partial_x S_i) + (S_i - h\partial_x S_i) \times S_i \\
 = 2h\sum_i S_i \times \partial_x S_i
 \\\end{gathered}
-$$
-</div>
+\tag{1}
+$$</div>
 
 
 <p>该项需要点乘一个常向量使其成为标量，三维情形下，还需要考虑 $y,z$ 方向上的偏导数。于是DM相互作用有如下形式</p>
 <div>
 $$
 \sum_j\sum_i D_j \cdot (S_i \times \partial_j S_i)
-$$
-</div>
+\tag{2}
+$$</div>
 
 <p>在连续极限下，DM相互作用用磁化场 $m$ 表示为：（后面为简化表达式，省略积分符号）</p>
 <div>
 $$
 E_{DMI} = \iiint D \cdot (m \times \nabla m) \,\mathrm{d}x \mathrm{d}y \mathrm{d}z
-$$
-</div>
+\tag{3}
+$$</div>
 
 <p>其中 $D$ 为张量，</p>
 <div>
@@ -66,16 +66,16 @@ $$
 E_{DMI} = \sum_i D_i \cdot (m \times \partial_i m) \\
 = \sum_{ij} D_{ij} (m \times \partial_i m)_j \\
 \\\end{gathered}
-$$
-</div>
+\tag{4}
+$$</div>
 
 <p>DMI可以写成Lifshitz invariant（Lifshitz不变量）的线性组合</p>
 <p>Lifshitz invariant定义为</p>
 <div>
 $$
 L_{ij}^k = m_i \partial_k m_j - m_j \partial_k m_i
-$$
-</div>
+\tag{5}
+$$</div>
 
 
 <p>由于其关于下标反对称，因此只有9个独立的Lifshitz invariant：</p>
@@ -84,8 +84,8 @@ $$
 \begin{gathered}
 L_{yz}^x, L_{yz}^y, L_{yz}^z, L_{zx}^x, L_{zx}^y, L_{zx}^z, L_{xy}^x, L_{xy}^y, L_{xy}^z \\
 \\\end{gathered}
-$$
-</div>
+\tag{6}
+$$</div>
 
 
 <p>DMI写作Lifshitz invariant的线性组合：</p>
@@ -96,8 +96,8 @@ E_{DMI} = \sum_{ij\alpha\beta} D_{ij} \varepsilon_{j \alpha \beta}m_{\alpha} \pa
 = \sum_{ij\alpha\beta} \frac{1}{2}D_{ij} \varepsilon_{j \alpha \beta} (m_{\alpha} \partial_i m_{\beta} - m_{\beta} \partial_i m_{\alpha}) \\
 = \sum_{ij\alpha\beta} \frac{1}{2}D_{ij} \varepsilon_{j \alpha \beta} L_{\alpha\beta}^i \\
 \\\end{gathered}
-$$
-</div>
+\tag{7}
+$$</div>
 
 <p>体系的特定对称性会对DMI系数有约束，对称性的存在会减少独立的DMI系数。</p>
 <p>为研究满足特定对称群的DMI作用形式，我们研究Lifshitz invariant在对称操作下的变换。在正交变换 $U$ 下，Lifshitz invariant的变换为</p>
@@ -105,15 +105,15 @@ $$
 <div>
 $$
 {L'}_{ij}^k = \sum_{\alpha\beta\gamma} U_{i\alpha} U_{j\beta} U_{k\gamma} L_{\alpha\beta}^\gamma
-$$
-</div>
+\tag{8}
+$$</div>
 
-<p>对于无限阶的群，我们求出一般群元作用后的DMI作用，和作用前对比，得出独立的DMI系数；对于有限阶群，利用群表示论的结论，记群元 $g \in G$ 对 $L_{ij}^k$ 的作用为 ${L’}<em>{ij}^k&#x3D;g(L</em>{ij}^k)$ ，那么在对称群下不变的相互作用项，或者说“对称化”后的相互作用项如下式：</p>
+<p>对于无限阶的群，我们求出一般群元作用后的DMI作用，和作用前对比，得出独立的DMI系数；对于有限阶群，利用群表示论的结论，记群元 $g \in G$ 对 $L_{ij}^k$ 的作用为 ${L’}_{ij}^k&#x3D;g(L_{ij}^k)$ ，那么在对称群下不变的相互作用项，或者说“对称化”后的相互作用项如下式：</p>
 <div>
 $$
 \sum_{g \in G} g(L_{ij}^k)
-$$
-</div>
+\tag{9}
+$$</div>
 
 <p>该式子就是对每个Lifshitz invariant，用所有群元作用一遍，然后相加。为了得到所有在对称群下不变的相互作用项，我们需要对每个 $i,j,k$ 都进行一遍。本文计算了所有32个点群中的对称不变项，发现其中的18个点群存在对称不变的DMI相互作用项，也就是这些点群可能存在DMI。由于计算复杂性（而且比较无趣），本文不同于本专栏的其他文章，使用符号计算软件包进行求解。符号计算使用Sympy，代码附在最后。</p>
 <h2 id="C-1-点群"><a href="#C-1-点群" class="headerlink" title="$C_1$ 点群"></a>$C_1$ 点群</h2><p>该群不具有任何对称性，因此有9个独立的DMI系数。DMI相互作用形式已在上文给出。</p>
@@ -121,64 +121,64 @@ $$
 <div>
 $$
 D_1 L_{xy}^z + D_2 L_{yz}^x + D_3 L_{yz}^y + D_4 L_{zx}^x + D_5 L_{zx}^y
-$$
-</div>
+\tag{10}
+$$</div>
 
 
 <h2 id="C-n-点群（-n-3-4-6-）"><a href="#C-n-点群（-n-3-4-6-）" class="headerlink" title="$C_n$ 点群（ $n&#x3D;3,4,6$ ）"></a>$C_n$ 点群（ $n&#x3D;3,4,6$ ）</h2><p>3个独立系数</p>
 <div>
 $$
 D L_{xy}^z + D' (L_{yz}^x + L_{zx}^y) + D'' (L_{yz}^y - L_{zx}^x)
-$$
-</div>
+\tag{11}
+$$</div>
 
 
 <h2 id="C-2v-点群"><a href="#C-2v-点群" class="headerlink" title="$C_{2v}$ 点群"></a>$C_{2v}$ 点群</h2><p>2个独立系数</p>
 <div>
 $$
 D L_{yz}^y + D' L_{zx}^x
-$$
-</div>
+\tag{12}
+$$</div>
 
 
 <h2 id="C-nv-点群（-n-3-4-6-）"><a href="#C-nv-点群（-n-3-4-6-）" class="headerlink" title="$C_{nv}$ 点群（ $n&#x3D;3,4,6$ ）"></a>$C_{nv}$ 点群（ $n&#x3D;3,4,6$ ）</h2><p>1个独立系数</p>
 <div>
 $$
-D (L_{zx}^x - L_{yz}^y) = D \left\lbrack m_z (\nabla \cdot m) - (m \cdot \nabla) m_z\right\rbrack 
-$$
-</div>
+D (L_{zx}^x - L_{yz}^y) = D \left[m_z (\nabla \cdot m) - (m \cdot \nabla) m_z\right]
+\tag{13}
+$$</div>
 
 
 <h2 id="C-s-C-1h-点群"><a href="#C-s-C-1h-点群" class="headerlink" title="$C_s(&#x3D;C_{1h})$ 点群"></a>$C_s(&#x3D;C_{1h})$ 点群</h2><p>4个独立系数</p>
 <div>
 $$
 D_1 L_{xy}^x + D_2 L_{xy}^y + D_3 L_{yz}^z + D_4 L_{zx}^z
-$$
-</div>
+\tag{14}
+$$</div>
 
 
 <h2 id="S-4-点群"><a href="#S-4-点群" class="headerlink" title="$S_4$ 点群"></a>$S_4$ 点群</h2><p>2个独立系数</p>
 <div>
 $$
 D (L_{yz}^x - L_{zx}^y) + D' (L_{yz}^y + L_{zx}^x)
-$$
-</div>
+\tag{15}
+$$</div>
 
 
 <h2 id="D-2-点群"><a href="#D-2-点群" class="headerlink" title="$D_2$ 点群"></a>$D_2$ 点群</h2><p>3个独立系数</p>
 <div>
 $$
 D L_{xy}^z + D' L_{yz}^x + D'' L_{zx}^y
-$$
-</div>
+\tag{16}
+$$</div>
 
 
 <h2 id="D-n-点群（-n-3-4-6-）"><a href="#D-n-点群（-n-3-4-6-）" class="headerlink" title="$D_n$ 点群（ $n&#x3D;3,4,6$ ）"></a>$D_n$ 点群（ $n&#x3D;3,4,6$ ）</h2><p>2个独立系数</p>
 <div>
 $$
 D L_{xy}^z + D' (L_{yz}^x + L_{zx}^y)
-$$
-</div>
+\tag{17}
+$$</div>
 
 
 <h2 id="D-2d-点群"><a href="#D-2d-点群" class="headerlink" title="$D_{2d}$ 点群"></a>$D_{2d}$ 点群</h2><p>1个独立系数</p>
@@ -188,8 +188,8 @@ D (L_{yz}^x - L_{zx}^y) =
 D \mathbf{m} \cdot \left( \frac{\partial
 \mathbf{m}}{\partial x} \times \hat{x} - \frac{\partial
 \mathbf{m}}{\partial y} \times \hat{y} \right)
-$$
-</div>
+\tag{18}
+$$</div>
 
 
 <p>其中 $\hat{x},\hat{y}$ 分别表示沿 $x,y$ 的单位矢量。</p>
@@ -197,14 +197,14 @@ $$
 <div>
 $$
 -D(L_{xy}^z + L_{yz}^x + L_{zx}^y) = D m \cdot (\nabla \times m)
-$$
-</div>
+\tag{19}
+$$</div>
 
 
 <h2 id="符号计算"><a href="#符号计算" class="headerlink" title="符号计算"></a>符号计算</h2><p>代码见<a href="/2023/09/18/32%E4%B8%AA%E7%82%B9%E7%BE%A4%E4%B8%ADDM%E7%9B%B8%E4%BA%92%E4%BD%9C%E7%94%A8/dmi_v2.py" title="dmi_v2.py">dmi_v2.py</a>。需要安装SymPy包</p>
 <h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><p>[1] <a target="_blank" rel="noopener" href="https://www.nature.com/articles/s42254-022-00529-0">https://www.nature.com/articles/s42254-022-00529-0</a></p>
 <p>[2] <a target="_blank" rel="noopener" href="https://doi.org/10.1007/s12598-021-01746-9">https://doi.org/10.1007/s12598-021-01746-9</a></p>
-</div><div class="article-licensing box"><div class="licensing-title"><p>32个点群中DM相互作用</p><p><a href="https://yuchenxi2000.github.io/2023/09/18/32个点群中DM相互作用/">https://yuchenxi2000.github.io/2023/09/18/32个点群中DM相互作用/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>Chenxi Yu</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2023-09-18</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2026-03-30</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/%E7%89%A9%E7%90%86/">物理</a><a class="link-muted mr-2" rel="tag" href="/tags/%E5%9B%BA%E4%BD%93%E7%89%A9%E7%90%86/">固体物理</a><a class="link-muted mr-2" rel="tag" href="/tags/%E7%BE%A4%E8%AE%BA/">群论</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2023/09/19/STT/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">STT</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2023/08/10/Green&#039;s%20function/"><span class="level-item">Green&#039;s function</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><!--!--><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a><p class="is-size-7"><span>&copy; 2026 Chenxi Yu</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="fab fa-creative-commons-nc"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/yuchenxi2000"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
+</div><div class="article-licensing box"><div class="licensing-title"><p>32个点群中DM相互作用</p><p><a href="https://yuchenxi2000.github.io/2023/09/18/32个点群中DM相互作用/">https://yuchenxi2000.github.io/2023/09/18/32个点群中DM相互作用/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>Chenxi Yu</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2023-09-18</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2026-04-03</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/%E7%89%A9%E7%90%86/">物理</a><a class="link-muted mr-2" rel="tag" href="/tags/%E5%9B%BA%E4%BD%93%E7%89%A9%E7%90%86/">固体物理</a><a class="link-muted mr-2" rel="tag" href="/tags/%E7%BE%A4%E8%AE%BA/">群论</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2023/09/19/STT/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">STT</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2023/08/10/Green&#039;s%20function/"><span class="level-item">Green&#039;s function</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><!--!--><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a><p class="is-size-7"><span>&copy; 2026 Chenxi Yu</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="fab fa-creative-commons-nc"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/yuchenxi2000"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
             article: {
                 highlight: {
                     clipboard: true,

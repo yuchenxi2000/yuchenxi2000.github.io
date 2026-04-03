@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>关于量子力学中角动量（一） - YCX&#039;s Blog</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="YCX&#039;s Blog"><meta name="msapplication-TileImage" content="favicon.ico"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="YCX&#039;s Blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="$$ \newcommand{\i}{\mathrm{i}} $$    旋转矩阵，在旋转角 $\alpha$ 很小时  $$ R(\alpha)&amp;#x3D; \begin{pmatrix} 1 &amp;amp; 0 &amp;amp; 0 \\ 0 &amp;amp; \cos \alpha &amp;amp; \sin \alpha \\ 0 &amp;amp; -\sin \alpha &amp;amp; \cos \alpha \\ \end{pmatrix} \approx 1 + \b"><meta property="og:type" content="blog"><meta property="og:title" content="关于量子力学中角动量（一）"><meta property="og:url" content="https://yuchenxi2000.github.io/2023/11/04/%E5%85%B3%E4%BA%8E%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E4%B8%AD%E8%A7%92%E5%8A%A8%E9%87%8F%EF%BC%88%E4%B8%80%EF%BC%89/"><meta property="og:site_name" content="YCX&#039;s Blog"><meta property="og:description" content="$$ \newcommand{\i}{\mathrm{i}} $$    旋转矩阵，在旋转角 $\alpha$ 很小时  $$ R(\alpha)&amp;#x3D; \begin{pmatrix} 1 &amp;amp; 0 &amp;amp; 0 \\ 0 &amp;amp; \cos \alpha &amp;amp; \sin \alpha \\ 0 &amp;amp; -\sin \alpha &amp;amp; \cos \alpha \\ \end{pmatrix} \approx 1 + \b"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://yuchenxi2000.github.io/img/og_image.png"><meta property="article:published_time" content="2023-11-03T16:47:33.000Z"><meta property="article:modified_time" content="2026-03-30T12:14:18.608Z"><meta property="article:author" content="Chenxi Yu"><meta property="article:tag" content="物理"><meta property="article:tag" content="量子力学"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://yuchenxi2000.github.io/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://yuchenxi2000.github.io/2023/11/04/%E5%85%B3%E4%BA%8E%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E4%B8%AD%E8%A7%92%E5%8A%A8%E9%87%8F%EF%BC%88%E4%B8%80%EF%BC%89/"},"headline":"关于量子力学中角动量（一）","image":["https://yuchenxi2000.github.io/img/og_image.png"],"datePublished":"2023-11-03T16:47:33.000Z","dateModified":"2026-03-30T12:14:18.608Z","author":{"@type":"Person","name":"Chenxi Yu"},"publisher":{"@type":"Organization","name":"YCX's Blog","logo":{"@type":"ImageObject","url":"https://yuchenxi2000.github.io/2023/11/04/%E5%85%B3%E4%BA%8E%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E4%B8%AD%E8%A7%92%E5%8A%A8%E9%87%8F%EF%BC%88%E4%B8%80%EF%BC%89/android-chrome-512x512.png"}},"description":"$$ \\newcommand{\\i}{\\mathrm{i}} $$    旋转矩阵，在旋转角 $\\alpha$ 很小时  $$ R(\\alpha)&#x3D; \\begin{pmatrix} 1 &amp; 0 &amp; 0 \\\\ 0 &amp; \\cos \\alpha &amp; \\sin \\alpha \\\\ 0 &amp; -\\sin \\alpha &amp; \\cos \\alpha \\\\ \\end{pmatrix} \\approx 1 + \\b"}</script><link rel="canonical" href="https://yuchenxi2000.github.io/2023/11/04/%E5%85%B3%E4%BA%8E%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E4%B8%AD%E8%A7%92%E5%8A%A8%E9%87%8F%EF%BC%88%E4%B8%80%EF%BC%89/"><link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link data-pjax rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link data-pjax rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!--!--><!-- hexo injector head_end start --><script>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>关于量子力学中角动量（一） - YCX&#039;s Blog</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="YCX&#039;s Blog"><meta name="msapplication-TileImage" content="favicon.ico"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="YCX&#039;s Blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="旋转矩阵，在旋转角 $\alpha$ 很小时  $$ R(\alpha)&amp;#x3D; \begin{pmatrix} 1 &amp;amp; 0 &amp;amp; 0 \\ 0 &amp;amp; \cos \alpha &amp;amp; \sin \alpha \\ 0 &amp;amp; -\sin \alpha &amp;amp; \cos \alpha \\ \end{pmatrix} \approx 1 + \begin{pmatrix} 0 &amp;amp; 0 &amp;amp; 0 \\ 0 &amp;amp; 0 &amp;amp; 1 \"><meta property="og:type" content="blog"><meta property="og:title" content="关于量子力学中角动量（一）"><meta property="og:url" content="https://yuchenxi2000.github.io/2023/11/04/%E5%85%B3%E4%BA%8E%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E4%B8%AD%E8%A7%92%E5%8A%A8%E9%87%8F%EF%BC%88%E4%B8%80%EF%BC%89/"><meta property="og:site_name" content="YCX&#039;s Blog"><meta property="og:description" content="旋转矩阵，在旋转角 $\alpha$ 很小时  $$ R(\alpha)&amp;#x3D; \begin{pmatrix} 1 &amp;amp; 0 &amp;amp; 0 \\ 0 &amp;amp; \cos \alpha &amp;amp; \sin \alpha \\ 0 &amp;amp; -\sin \alpha &amp;amp; \cos \alpha \\ \end{pmatrix} \approx 1 + \begin{pmatrix} 0 &amp;amp; 0 &amp;amp; 0 \\ 0 &amp;amp; 0 &amp;amp; 1 \"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://yuchenxi2000.github.io/img/og_image.png"><meta property="article:published_time" content="2023-11-03T16:47:33.000Z"><meta property="article:modified_time" content="2026-04-03T14:05:07.907Z"><meta property="article:author" content="Chenxi Yu"><meta property="article:tag" content="物理"><meta property="article:tag" content="量子力学"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://yuchenxi2000.github.io/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://yuchenxi2000.github.io/2023/11/04/%E5%85%B3%E4%BA%8E%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E4%B8%AD%E8%A7%92%E5%8A%A8%E9%87%8F%EF%BC%88%E4%B8%80%EF%BC%89/"},"headline":"关于量子力学中角动量（一）","image":["https://yuchenxi2000.github.io/img/og_image.png"],"datePublished":"2023-11-03T16:47:33.000Z","dateModified":"2026-04-03T14:05:07.907Z","author":{"@type":"Person","name":"Chenxi Yu"},"publisher":{"@type":"Organization","name":"YCX's Blog","logo":{"@type":"ImageObject","url":"https://yuchenxi2000.github.io/2023/11/04/%E5%85%B3%E4%BA%8E%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E4%B8%AD%E8%A7%92%E5%8A%A8%E9%87%8F%EF%BC%88%E4%B8%80%EF%BC%89/android-chrome-512x512.png"}},"description":"旋转矩阵，在旋转角 $\\alpha$ 很小时  $$ R(\\alpha)&#x3D; \\begin{pmatrix} 1 &amp; 0 &amp; 0 \\\\ 0 &amp; \\cos \\alpha &amp; \\sin \\alpha \\\\ 0 &amp; -\\sin \\alpha &amp; \\cos \\alpha \\\\ \\end{pmatrix} \\approx 1 + \\begin{pmatrix} 0 &amp; 0 &amp; 0 \\\\ 0 &amp; 0 &amp; 1 \\"}</script><link rel="canonical" href="https://yuchenxi2000.github.io/2023/11/04/%E5%85%B3%E4%BA%8E%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E4%B8%AD%E8%A7%92%E5%8A%A8%E9%87%8F%EF%BC%88%E4%B8%80%EF%BC%89/"><link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link data-pjax rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link data-pjax rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!--!--><!-- hexo injector head_end start --><script>
   (function () {
       function switchTab() {
           if (!location.hash) {
@@ -29,14 +29,7 @@
       switchTab();
       window.addEventListener('hashchange', switchTab, false);
   })();
-  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 8.1.1"></head><body class="is-1-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-12"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2023-11-03T16:47:33.000Z" title="2023/11/4 00:47:33">2023-11-04</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E7%89%A9%E7%90%86/">物理</a></span><span class="level-item">1 分钟读完 (大约211个字)</span></div></div><h1 class="title is-3 is-size-4-mobile">关于量子力学中角动量（一）</h1><div class="content"><div>
-$$
-\newcommand{\i}{\mathrm{i}}
-$$
-</div>
-
-
-<p>旋转矩阵，在旋转角 $\alpha$ 很小时</p>
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 8.1.1"></head><body class="is-1-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-12"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2023-11-03T16:47:33.000Z" title="2023/11/4 00:47:33">2023-11-04</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E7%89%A9%E7%90%86/">物理</a></span><span class="level-item">1 分钟读完 (大约216个字)</span></div></div><h1 class="title is-3 is-size-4-mobile">关于量子力学中角动量（一）</h1><div class="content"><p>旋转矩阵，在旋转角 $\alpha$ 很小时</p>
 <div>
 $$
 R(\alpha)=
@@ -51,8 +44,8 @@ R(\alpha)=
 0 & 0 & 1 \\
 0 & -1 & 0 \\
 \end{pmatrix} \alpha
-$$
-</div>
+\tag{1}
+$$</div>
 
 
 <p>定义角动量算符</p>
@@ -64,15 +57,15 @@ $$
 0 & 0 & 1 \\
 0 & -1 & 0 \\
 \end{pmatrix}
-$$
-</div>
+\tag{2}
+$$</div>
 
 <p>于是</p>
 <div>
 $$
 R(\alpha) \approx 1 + \mathrm{i} J_x / \hbar \alpha
-$$
-</div>
+\tag{3}
+$$</div>
 
 
 <p>在 $\alpha$ 不是无穷小时，设 $\alpha_n$ 为无穷小， $\sum \alpha_n&#x3D;\alpha$ </p>
@@ -84,15 +77,15 @@ R(\alpha) = R(\alpha_n)...R(\alpha_1) \\
 \approx \exp (\mathrm{i} J_x / \hbar \alpha_n)...\exp (\mathrm{i} J_x / \hbar \alpha_1) \\
 = \exp (\mathrm{i} J_x / \hbar \alpha)
 \\\end{gathered}
-$$
-</div>
+\tag{4}
+$$</div>
 
 <p>即</p>
 <div>
 $$
 R(\alpha) = \exp (\mathrm{i} J_x / \hbar \alpha)
-$$
-</div>
+\tag{5}
+$$</div>
 
 <p>三个角动量算符定义为</p>
 <div>
@@ -103,8 +96,8 @@ $$
 0 & 0 & 1 \\
 0 & -1 & 0 \\
 \end{pmatrix}
-$$
-</div>
+\tag{6}
+$$</div>
 
 
 <div>
@@ -115,8 +108,8 @@ $$
 0 & 0 & 0 \\
 1 & 0 & 0 \\
 \end{pmatrix}
-$$
-</div>
+\tag{7}
+$$</div>
 
 
 <div>
@@ -127,8 +120,8 @@ $$
 -1 & 0 & 0 \\
 0 & 0 & 0 \\
 \end{pmatrix}
-$$
-</div>
+\tag{8}
+$$</div>
 
 
 <p>计算可知</p>
@@ -137,11 +130,11 @@ $$
 \begin{gathered}
 \lbrack J_x, J_y\rbrack  = \mathrm{i} \hbar J_z \\
 \\\end{gathered}
-$$
-</div>
+\tag{9}
+$$</div>
 
 <p>即角动量对易关系。</p>
-</div><div class="article-licensing box"><div class="licensing-title"><p>关于量子力学中角动量（一）</p><p><a href="https://yuchenxi2000.github.io/2023/11/04/关于量子力学中角动量（一）/">https://yuchenxi2000.github.io/2023/11/04/关于量子力学中角动量（一）/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>Chenxi Yu</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2023-11-04</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2026-03-30</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/%E7%89%A9%E7%90%86/">物理</a><a class="link-muted mr-2" rel="tag" href="/tags/%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6/">量子力学</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2023/11/13/Hatree%E8%83%BD%E4%B8%8E%E4%BA%A4%E6%8D%A2%E8%83%BD/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">Hatree能与交换能</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2023/10/28/%E9%92%B1%E5%BE%B7%E6%8B%89%E5%A1%9E%E5%8D%A1%E6%9E%81%E9%99%90/"><span class="level-item">钱德拉塞卡极限</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><!--!--><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a><p class="is-size-7"><span>&copy; 2026 Chenxi Yu</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="fab fa-creative-commons-nc"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/yuchenxi2000"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
+</div><div class="article-licensing box"><div class="licensing-title"><p>关于量子力学中角动量（一）</p><p><a href="https://yuchenxi2000.github.io/2023/11/04/关于量子力学中角动量（一）/">https://yuchenxi2000.github.io/2023/11/04/关于量子力学中角动量（一）/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>Chenxi Yu</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2023-11-04</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2026-04-03</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/%E7%89%A9%E7%90%86/">物理</a><a class="link-muted mr-2" rel="tag" href="/tags/%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6/">量子力学</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2023/11/13/Hatree%E8%83%BD%E4%B8%8E%E4%BA%A4%E6%8D%A2%E8%83%BD/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">Hatree能与交换能</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2023/10/28/%E9%92%B1%E5%BE%B7%E6%8B%89%E5%A1%9E%E5%8D%A1%E6%9E%81%E9%99%90/"><span class="level-item">钱德拉塞卡极限</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><!--!--><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a><p class="is-size-7"><span>&copy; 2026 Chenxi Yu</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="fab fa-creative-commons-nc"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/yuchenxi2000"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
             article: {
                 highlight: {
                     clipboard: true,

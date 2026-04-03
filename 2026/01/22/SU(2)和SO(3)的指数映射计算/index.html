@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>SU(2)和SO(3)的指数映射计算 - YCX&#039;s Blog</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="YCX&#039;s Blog"><meta name="msapplication-TileImage" content="favicon.ico"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="YCX&#039;s Blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="$\mathrm{SU}(2)$ 和 $\mathrm{SO}(3)$ 的指数映射计算暴力计算两个李群的指数映射，方法就是算矩阵的指数函数，通过幂级数展开式计算。 计算结果可以给出旋量、向量绕某个轴旋转任意角度后的结果（罗德里格斯公式） 本文默认采用爱因斯坦求和约定。 $\mathrm{SU}(2)$ $\mathrm{SU}(2)$ 是行列式为1的二阶酉矩阵构成的群。先求其李群生成元，设二阶酉矩"><meta property="og:type" content="blog"><meta property="og:title" content="SU(2)和SO(3)的指数映射计算"><meta property="og:url" content="https://yuchenxi2000.github.io/2026/01/22/SU(2)%E5%92%8CSO(3)%E7%9A%84%E6%8C%87%E6%95%B0%E6%98%A0%E5%B0%84%E8%AE%A1%E7%AE%97/"><meta property="og:site_name" content="YCX&#039;s Blog"><meta property="og:description" content="$\mathrm{SU}(2)$ 和 $\mathrm{SO}(3)$ 的指数映射计算暴力计算两个李群的指数映射，方法就是算矩阵的指数函数，通过幂级数展开式计算。 计算结果可以给出旋量、向量绕某个轴旋转任意角度后的结果（罗德里格斯公式） 本文默认采用爱因斯坦求和约定。 $\mathrm{SU}(2)$ $\mathrm{SU}(2)$ 是行列式为1的二阶酉矩阵构成的群。先求其李群生成元，设二阶酉矩"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://yuchenxi2000.github.io/img/og_image.png"><meta property="article:published_time" content="2026-01-22T10:54:07.000Z"><meta property="article:modified_time" content="2026-03-30T12:14:17.777Z"><meta property="article:author" content="Chenxi Yu"><meta property="article:tag" content="数学"><meta property="article:tag" content="群论"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://yuchenxi2000.github.io/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://yuchenxi2000.github.io/2026/01/22/SU(2)%E5%92%8CSO(3)%E7%9A%84%E6%8C%87%E6%95%B0%E6%98%A0%E5%B0%84%E8%AE%A1%E7%AE%97/"},"headline":"SU(2)和SO(3)的指数映射计算","image":["https://yuchenxi2000.github.io/img/og_image.png"],"datePublished":"2026-01-22T10:54:07.000Z","dateModified":"2026-03-30T12:14:17.777Z","author":{"@type":"Person","name":"Chenxi Yu"},"publisher":{"@type":"Organization","name":"YCX's Blog","logo":{"@type":"ImageObject","url":"https://yuchenxi2000.github.io/2026/01/22/SU(2)%E5%92%8CSO(3)%E7%9A%84%E6%8C%87%E6%95%B0%E6%98%A0%E5%B0%84%E8%AE%A1%E7%AE%97/android-chrome-512x512.png"}},"description":"$\\mathrm{SU}(2)$ 和 $\\mathrm{SO}(3)$ 的指数映射计算暴力计算两个李群的指数映射，方法就是算矩阵的指数函数，通过幂级数展开式计算。 计算结果可以给出旋量、向量绕某个轴旋转任意角度后的结果（罗德里格斯公式） 本文默认采用爱因斯坦求和约定。 $\\mathrm{SU}(2)$ $\\mathrm{SU}(2)$ 是行列式为1的二阶酉矩阵构成的群。先求其李群生成元，设二阶酉矩"}</script><link rel="canonical" href="https://yuchenxi2000.github.io/2026/01/22/SU(2)%E5%92%8CSO(3)%E7%9A%84%E6%8C%87%E6%95%B0%E6%98%A0%E5%B0%84%E8%AE%A1%E7%AE%97/"><link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link data-pjax rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link data-pjax rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!--!--><!-- hexo injector head_end start --><script>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>SU(2)和SO(3)的指数映射计算 - YCX&#039;s Blog</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="YCX&#039;s Blog"><meta name="msapplication-TileImage" content="favicon.ico"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="YCX&#039;s Blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="$\mathrm{SU}(2)$ 和 $\mathrm{SO}(3)$ 的指数映射计算暴力计算两个李群的指数映射，方法就是算矩阵的指数函数，通过幂级数展开式计算。 计算结果可以给出旋量、向量绕某个轴旋转任意角度后的结果（罗德里格斯公式） 本文默认采用爱因斯坦求和约定。 $\mathrm{SU}(2)$ $\mathrm{SU}(2)$ 是行列式为1的二阶酉矩阵构成的群。先求其李群生成元，设二阶酉矩"><meta property="og:type" content="blog"><meta property="og:title" content="SU(2)和SO(3)的指数映射计算"><meta property="og:url" content="https://yuchenxi2000.github.io/2026/01/22/SU(2)%E5%92%8CSO(3)%E7%9A%84%E6%8C%87%E6%95%B0%E6%98%A0%E5%B0%84%E8%AE%A1%E7%AE%97/"><meta property="og:site_name" content="YCX&#039;s Blog"><meta property="og:description" content="$\mathrm{SU}(2)$ 和 $\mathrm{SO}(3)$ 的指数映射计算暴力计算两个李群的指数映射，方法就是算矩阵的指数函数，通过幂级数展开式计算。 计算结果可以给出旋量、向量绕某个轴旋转任意角度后的结果（罗德里格斯公式） 本文默认采用爱因斯坦求和约定。 $\mathrm{SU}(2)$ $\mathrm{SU}(2)$ 是行列式为1的二阶酉矩阵构成的群。先求其李群生成元，设二阶酉矩"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://yuchenxi2000.github.io/img/og_image.png"><meta property="article:published_time" content="2026-01-22T10:54:07.000Z"><meta property="article:modified_time" content="2026-04-03T14:05:06.935Z"><meta property="article:author" content="Chenxi Yu"><meta property="article:tag" content="数学"><meta property="article:tag" content="群论"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://yuchenxi2000.github.io/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://yuchenxi2000.github.io/2026/01/22/SU(2)%E5%92%8CSO(3)%E7%9A%84%E6%8C%87%E6%95%B0%E6%98%A0%E5%B0%84%E8%AE%A1%E7%AE%97/"},"headline":"SU(2)和SO(3)的指数映射计算","image":["https://yuchenxi2000.github.io/img/og_image.png"],"datePublished":"2026-01-22T10:54:07.000Z","dateModified":"2026-04-03T14:05:06.935Z","author":{"@type":"Person","name":"Chenxi Yu"},"publisher":{"@type":"Organization","name":"YCX's Blog","logo":{"@type":"ImageObject","url":"https://yuchenxi2000.github.io/2026/01/22/SU(2)%E5%92%8CSO(3)%E7%9A%84%E6%8C%87%E6%95%B0%E6%98%A0%E5%B0%84%E8%AE%A1%E7%AE%97/android-chrome-512x512.png"}},"description":"$\\mathrm{SU}(2)$ 和 $\\mathrm{SO}(3)$ 的指数映射计算暴力计算两个李群的指数映射，方法就是算矩阵的指数函数，通过幂级数展开式计算。 计算结果可以给出旋量、向量绕某个轴旋转任意角度后的结果（罗德里格斯公式） 本文默认采用爱因斯坦求和约定。 $\\mathrm{SU}(2)$ $\\mathrm{SU}(2)$ 是行列式为1的二阶酉矩阵构成的群。先求其李群生成元，设二阶酉矩"}</script><link rel="canonical" href="https://yuchenxi2000.github.io/2026/01/22/SU(2)%E5%92%8CSO(3)%E7%9A%84%E6%8C%87%E6%95%B0%E6%98%A0%E5%B0%84%E8%AE%A1%E7%AE%97/"><link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link data-pjax rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link data-pjax rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!--!--><!-- hexo injector head_end start --><script>
   (function () {
       function switchTab() {
           if (!location.hash) {
@@ -29,51 +29,51 @@
       switchTab();
       window.addEventListener('hashchange', switchTab, false);
   })();
-  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 8.1.1"></head><body class="is-1-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-12"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2026-01-22T10:54:07.000Z" title="2026/1/22 18:54:07">2026-01-22</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E6%95%B0%E5%AD%A6/">数学</a></span><span class="level-item">12 分钟读完 (大约1794个字)</span></div></div><h1 class="title is-3 is-size-4-mobile">SU(2)和SO(3)的指数映射计算</h1><div class="content"><h1 id="mathrm-SU-2-和-mathrm-SO-3-的指数映射计算"><a href="#mathrm-SU-2-和-mathrm-SO-3-的指数映射计算" class="headerlink" title="$\mathrm{SU}(2)$ 和 $\mathrm{SO}(3)$ 的指数映射计算"></a>$\mathrm{SU}(2)$ 和 $\mathrm{SO}(3)$ 的指数映射计算</h1><p>暴力计算两个李群的指数映射，方法就是算矩阵的指数函数，通过幂级数展开式计算。</p>
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 8.1.1"></head><body class="is-1-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-12"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2026-01-22T10:54:07.000Z" title="2026/1/22 18:54:07">2026-01-22</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E6%95%B0%E5%AD%A6/">数学</a></span><span class="level-item">12 分钟读完 (大约1815个字)</span></div></div><h1 class="title is-3 is-size-4-mobile">SU(2)和SO(3)的指数映射计算</h1><div class="content"><h1 id="mathrm-SU-2-和-mathrm-SO-3-的指数映射计算"><a href="#mathrm-SU-2-和-mathrm-SO-3-的指数映射计算" class="headerlink" title="$\mathrm{SU}(2)$ 和 $\mathrm{SO}(3)$ 的指数映射计算"></a>$\mathrm{SU}(2)$ 和 $\mathrm{SO}(3)$ 的指数映射计算</h1><p>暴力计算两个李群的指数映射，方法就是算矩阵的指数函数，通过幂级数展开式计算。</p>
 <p>计算结果可以给出旋量、向量绕某个轴旋转任意角度后的结果（罗德里格斯公式）</p>
 <p>本文默认采用爱因斯坦求和约定。</p>
 <h2 id="mathrm-SU-2"><a href="#mathrm-SU-2" class="headerlink" title="$\mathrm{SU}(2)$"></a>$\mathrm{SU}(2)$</h2><p> $\mathrm{SU}(2)$ 是行列式为1的二阶酉矩阵构成的群。先求其李群生成元，设二阶酉矩阵为</p>
 <div>
 $$
 U_{ij} = \delta_{ij} + w_{ij}
-$$
-</div>
+\tag{1}
+$$</div>
 
 <p>其中 $w_{ij}$ 中的元素为小量。利用其为二阶酉矩阵，</p>
 <div>
 $$
-(U^\dagger U)_{ij}=U^*_{ki}U_{kj}=\delta_{ij}
-$$
-</div>
+(U^\dagger U)_{ij}=U^\ast _{ki}U_{kj}=\delta_{ij}
+\tag{2}
+$$</div>
 
 
 <div>
 $$
-(\delta_{ki} + w_{ki}^*)(\delta_{kj} + w_{kj})=\delta_{ij}
-$$
-</div>
+(\delta_{ki} + w_{ki}^\ast )(\delta_{kj} + w_{kj})=\delta_{ij}
+\tag{3}
+$$</div>
 
 
 <div>
 $$
-w_{ji}^* + w_{ij}=0
-$$
-</div>
+w_{ji}^\ast  + w_{ij}=0
+\tag{4}
+$$</div>
 
 
 <p>再根据行列式为1，</p>
 <div>
 $$
 \det U \approx 1 + \operatorname{Tr} w = 1
-$$
-</div>
+\tag{5}
+$$</div>
 
 
 <div>
 $$
 w_{ii}=0
-$$
-</div>
+\tag{6}
+$$</div>
 
 
 <p>由此得出矩阵 $w$ 的形式为</p>
@@ -97,8 +97,8 @@ w_3
 -\mathrm{i} & 0 \\
 0 & \mathrm{i}
 \end{pmatrix}
-$$
-</div>
+\tag{7}
+$$</div>
 
 <p>由此得到三个生成元，用泡利矩阵表示为 $-\mathrm{i}\sigma_x,-\mathrm{i}\sigma_y,-\mathrm{i}\sigma_z$ 。它们的李括号为（下标 $1,2,3$ 分别对应三个坐标 $x,y,z$ ）</p>
 <div>
@@ -106,26 +106,26 @@ $$
 \begin{gathered}
 \lbrack -\mathrm{i}\sigma_i, -\mathrm{i}\sigma_j\rbrack =-2\mathrm{i}\varepsilon_{ijk}\sigma_k \\
 \\\end{gathered}
-$$
-</div>
+\tag{8}
+$$</div>
 
 
 <blockquote>
-<p>如果设 $S_i&#x3D;1&#x2F;2\hbar\sigma_i$ ，那么得到量子力学中1&#x2F;2自旋角动量的对易关系 $\lbrack S_i,S_j\rbrack &#x3D;\mathrm{i}\hbar \varepsilon_{ijk}S_k$ 。</p>
+<p>如果设 $S_i&#x3D;1&#x2F;2\hbar\sigma_i$ ，那么得到量子力学中1&#x2F;2自旋角动量的对易关系 $[S_i,S_j]&#x3D;\mathrm{i}\hbar \varepsilon_{ijk}S_k$ 。</p>
 </blockquote>
 <p>接下来计算指数映射，设一个任意向量 $a$ ，</p>
 <div>
 $$
 \exp(-\mathrm{i}a \cdot \sigma) = \sum_{k=0}^\infty \cfrac{(-\mathrm{i}a \cdot \sigma)^k}{k!}
-$$
-</div>
+\tag{9}
+$$</div>
 
 <p>计算上式的重点是计算 $a \cdot \sigma$ 的任意次幂。为此我们先证一个等式：</p>
 <div>
 $$
 (\sigma \cdot a)(\sigma \cdot b)=a \cdot b + \mathrm{i} \sigma \cdot (a \times b)
-$$
-</div>
+\tag{10}
+$$</div>
 
 <p>证明方法是利用泡利矩阵的性质</p>
 <div>
@@ -134,8 +134,8 @@ $$
 \sigma_i^2=1 \\
 \sigma_i \sigma_j = \mathrm{i} \varepsilon_{ijk}\sigma_k & (i \ne j)
 \end{cases}
-$$
-</div>
+\tag{11}
+$$</div>
 
 
 <div>
@@ -145,16 +145,16 @@ $$
 &= \sum_{ij} (\delta_{ij} + \sum_k \mathrm{i} \varepsilon_{ijk} \sigma_k) a_ib_j \\
 &= a \cdot b + \mathrm{i}\sigma \cdot (a \times b)
 \end{aligned}
-$$
-</div>
+\tag{12}
+$$</div>
 
 
 <p>根据这个恒等式有</p>
 <div>
 $$
 (a \cdot \sigma)^2=\lvert a \rvert^2
-$$
-</div>
+\tag{13}
+$$</div>
 
 
 <p>我们将偶数次幂的和与奇数次幂的和分开，</p>
@@ -166,16 +166,16 @@ $$
 = \sum_{k=0} \cfrac{(-1)^k \lvert a \rvert^{2k}}{(2k)!} -\mathrm{i} \cfrac{a \cdot \sigma}{\lvert a \rvert} \sum_{k=0} \cfrac{(-1)^k \lvert a \rvert^{2k+1}}{(2k+1)!} \\
 = \cos \lvert a \rvert -\mathrm{i} \cfrac{a \cdot \sigma}{\lvert a \rvert} \sin\lvert a \rvert
 \\\end{gathered}
-$$
-</div>
+\tag{14}
+$$</div>
 
 <p>上式出现 $a$ 的模长，为方便设 $a&#x3D;\alpha n$ ，其中 $\lvert n \rvert &#x3D; 1$ 。</p>
 <div>
 $$
 \exp(-\mathrm{i} a \cdot \sigma)
 = \cos \alpha -\mathrm{i} n \cdot \sigma \sin \alpha
-$$
-</div>
+\tag{15}
+$$</div>
 
 <p>我们设</p>
 <div>
@@ -186,24 +186,24 @@ x = n_1\sin \alpha \\
 y = n_2\sin \alpha \\
 z = n_3\sin \alpha
 \end{cases}
-$$
-</div>
+\tag{16}
+$$</div>
 
 <p>那么 $t^2+x^2+y^2+z^2&#x3D;1$ ，且</p>
 <div>
 $$
 \exp(-\mathrm{i} a \cdot \sigma)
 = t - \mathrm{i} (x\sigma_1 + y\sigma_2 + z\sigma_3)
-$$
-</div>
+\tag{17}
+$$</div>
 
 <p>于是 $SU(2)$ 群同胚于球面 $S^3$ 。</p>
 <h2 id="mathrm-SO-3"><a href="#mathrm-SO-3" class="headerlink" title="$\mathrm{SO}(3)$"></a>$\mathrm{SO}(3)$</h2><p>用类似的方法求李群生成元，设旋转矩阵 $R$ ，在单位矩阵附近展开：</p>
 <div>
 $$
 R_{ij}=\delta_{ij}+w_{ij}
-$$
-</div>
+\tag{18}
+$$</div>
 
 <span id="more"></span>
 
@@ -216,15 +216,15 @@ $$
 \approx \delta_{ij} + w_{ji} + w_{ij} 
 = \delta_{ij}
 \\\end{gathered}
-$$
-</div>
+\tag{19}
+$$</div>
 
 <p>于是</p>
 <div>
 $$
 w_{ji} + w_{ij} = 0
-$$
-</div>
+\tag{20}
+$$</div>
 
 <p> $w$ 为反对称矩阵，因此存在三个生成元：</p>
 <div>
@@ -247,23 +247,23 @@ j_3 =
 1 & 0 & 0 \\
 0 & 0 & 0 \\
 \end{pmatrix}
-$$
-</div>
+\tag{21}
+$$</div>
 
 <p>它们之间的对易关系：</p>
 <div>
 $$
 \begin{gathered}
 \lbrack j_1,j_2\rbrack =j_3 \\
-\lbrack j_2,j_3\rbrack =j_1 \\
-\lbrack j_3,j_1\rbrack =j_2 \\
+[j_2,j_3]=j_1 \\
+[j_3,j_1]=j_2 \\
 \\\end{gathered}
-$$
-</div>
+\tag{22}
+$$</div>
 
 
 <blockquote>
-<p>如果我们设 $J_k&#x3D;\mathrm{i}\hbar j_k$ ，那么得到 $J_k$ 之间的对易关系 $\lbrack J_i,J_k\rbrack &#x3D;\mathrm{i}\hbar\varepsilon_{ijk}J_k$ ，</p>
+<p>如果我们设 $J_k&#x3D;\mathrm{i}\hbar j_k$ ，那么得到 $J_k$ 之间的对易关系 $[J_i,J_k]&#x3D;\mathrm{i}\hbar\varepsilon_{ijk}J_k$ ，</p>
 <p>此即量子力学中角动量对易关系（自旋1）</p>
 </blockquote>
 <p>设任意向量 $a$ ，计算 $a \cdot j$ 的指数映射 $\exp(a \cdot j)$ 。受 $SU(2)$ 情形求解方法的启发，我们计算 $a \cdot j$ 的平方，设 $A&#x3D;(a \cdot j)^2$ ：</p>
@@ -281,8 +281,8 @@ a_1a_3 & a_2a_3 & a_3^2 \\
 \end{pmatrix}
 -
 (a_1^2+a_2^2+a_3^2)
-$$
-</div>
+\tag{23}
+$$</div>
 
 
 <p>上式第一项是 $a$ 和自己的张量积，第二项是模方，用分量表示为：</p>
@@ -291,8 +291,8 @@ $$
 \begin{gathered}
 A_{ij} = a_i a_j - \lvert a \rvert^2 \delta_{ij} \\
 \\\end{gathered}
-$$
-</div>
+\tag{24}
+$$</div>
 
 <p>然后计算 $A^2$ ：</p>
 <div>
@@ -303,16 +303,16 @@ A^2 = (a \cdot j)^4 = A_{ik} A_{kj} = (a_i a_k - \lvert a \rvert^2 \delta_{ik}) 
 = \lvert a \rvert^4 \delta_{ij} - \lvert a \rvert^2 a_i a_j \\
 = -\lvert a \rvert^2 A_{ij}
 \\\end{gathered}
-$$
-</div>
+\tag{25}
+$$</div>
 
 
 <p>经过归纳，可知 $a \cdot j$ 的偶数次方为</p>
 <div>
 $$
 (a \cdot j)^{2k} = (-1)^{k-1} \lvert a \rvert^{2k-2} A
-$$
-</div>
+\tag{26}
+$$</div>
 
 
 <p>由此可以开始计算指数映射，用计算 $SU(2)$ 时类似的方法，将幂级数分成偶数次幂的和与奇数次幂的和：</p>
@@ -325,24 +325,24 @@ $$
 = 1 - \cfrac{A}{\lvert a \rvert^2} (\cos \lvert a \rvert - 1)
 + a \cdot j - \cfrac{A(a \cdot j)}{\lvert a \rvert^2} (\sin \lvert a \rvert - 1)
 \\\end{gathered}
-$$
-</div>
+\tag{27}
+$$</div>
 
 
 <p>到这里，我们发现式子出现了向量模长，为方便设一个实数 $\alpha$ 和一个单位向量 $n$ ：</p>
 <div>
 $$
 a = \alpha n
-$$
-</div>
+\tag{28}
+$$</div>
 
 
 <p>代入得（分量表示）</p>
 <div>
 $$
-\lbrack \exp(a \cdot j)\rbrack _{ij}= \cos\alpha - \varepsilon_{ijk}n_k \sin \alpha + n_in_j (1 - \cos \alpha)
-$$
-</div>
+[\exp(a \cdot j)]_{ij}= \cos\alpha - \varepsilon_{ijk}n_k \sin \alpha + n_in_j (1 - \cos \alpha)
+\tag{29}
+$$</div>
 
 
 <p>用矩阵表示：</p>
@@ -362,35 +362,35 @@ n_2n_1 & n_2^2 & n_2n_3 \\
 n_3n_1 & n_3n_2 & n_3^2
 \end{pmatrix}
 (1 - \cos \alpha)
-$$
-</div>
+\tag{30}
+$$</div>
 
 
-<p>我们发现，当 $a$ 位于半径 $\pi$ 的球 $B_\pi^3$ 内，且球面上对径点等同，此时 $\exp(a \cdot j)$ 能与 $a$ 一一对应。也就是 $\alpha,n$ 的取值范围 $\alpha \in \lbrack 0,\pi\rbrack , \lvert n \rvert &#x3D; 1$ ，并且 $\alpha&#x3D;0$ 时， $\lvert n \rvert &#x3D; 1$ 上的所有点应被视为同一个点； $\alpha&#x3D;\pi$ 时， $n,-n$ 应被视为同一个点。</p>
+<p>我们发现，当 $a$ 位于半径 $\pi$ 的球 $B_\pi^3$ 内，且球面上对径点等同，此时 $\exp(a \cdot j)$ 能与 $a$ 一一对应。也就是 $\alpha,n$ 的取值范围 $\alpha \in [0,\pi], \lvert n \rvert &#x3D; 1$ ，并且 $\alpha&#x3D;0$ 时， $\lvert n \rvert &#x3D; 1$ 上的所有点应被视为同一个点； $\alpha&#x3D;\pi$ 时， $n,-n$ 应被视为同一个点。</p>
 <p>证明方法是给定 $\exp(a \cdot j)$ ，先求迹：</p>
 <div>
 $$
 \operatorname{Tr} \exp(a \cdot j) = 1 + 2 \cos\alpha
-$$
-</div>
+\tag{31}
+$$</div>
 
 <p>这样可以唯一确定 $\alpha$ 。如果 $0\lt \alpha\lt \pi$ ，计算其反对称部分，</p>
 <div>
 $$
-\exp(a \cdot j) - \lbrack \exp(a \cdot j)\rbrack ^T = 2\sin\alpha
+\exp(a \cdot j) - [\exp(a \cdot j)]^T = 2\sin\alpha
 \begin{pmatrix}
 0 & -n_3 & n_2 \\
 n_3 & 0 & -n_1 \\
 -n_2 & n_1 & 0
 \end{pmatrix}
-$$
-</div>
+\tag{32}
+$$</div>
 
 <p>由此可以唯一确定 $n_1,n_2,n_3$ 。</p>
 <p>如果 $\alpha&#x3D;0$ ，那么 $n$ 任取。如果 $\alpha&#x3D;\pi$ ，那么先根据对角线元素确定 $n$ 各分量绝对值，然后非对角元素确定相对符号（注意此时不能确定 $n$ 的整体符号）</p>
 <p>因此指数映射将球面上对径点等同的球 $B_\pi^3$ 映射到群流形，并且是双射。而这个球面上对径点等同的球同胚于 $\mathbb{RP}^3$ ，因此群流形是 $\mathbb{RP}^3$ 。</p>
 <p>从另一个角度，当我们谈论绕单位向量 $n$ 旋转 $\alpha$ 角度时，对于向量而言，这个操作等同于绕 $-n$ 旋转 $-\alpha$ 角度。如果用四元数表示旋转，那么意味着 $\pm q$ 表示同一个三维旋转。四元数群同胚于 $S^3$ ，因此 $SO(3)$ 同胚于对径点等同的 $S^3$ ，即 $\mathbb{RP}^3$ 。</p>
-</div><div class="article-licensing box"><div class="licensing-title"><p>SU(2)和SO(3)的指数映射计算</p><p><a href="https://yuchenxi2000.github.io/2026/01/22/SU(2)和SO(3)的指数映射计算/">https://yuchenxi2000.github.io/2026/01/22/SU(2)和SO(3)的指数映射计算/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>Chenxi Yu</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2026-01-22</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2026-03-30</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/%E6%95%B0%E5%AD%A6/">数学</a><a class="link-muted mr-2" rel="tag" href="/tags/%E7%BE%A4%E8%AE%BA/">群论</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2026/02/14/%E7%83%AD%E4%BC%A0%E5%AF%BC%E6%96%B9%E7%A8%8B%E7%9A%84%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2%E8%A7%A3%E6%B3%95/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">热传导方程的傅里叶变换解法</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2026/01/18/%E5%87%A0%E4%BD%95%E4%BB%A3%E6%95%B0%E8%A7%86%E8%A7%92%E4%B8%8B%E7%9A%84%E7%94%B5%E7%A3%81%E5%9C%BA%E7%90%86%E8%AE%BA/"><span class="level-item">几何代数视角下的电磁场理论</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><!--!--><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a><p class="is-size-7"><span>&copy; 2026 Chenxi Yu</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="fab fa-creative-commons-nc"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/yuchenxi2000"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
+</div><div class="article-licensing box"><div class="licensing-title"><p>SU(2)和SO(3)的指数映射计算</p><p><a href="https://yuchenxi2000.github.io/2026/01/22/SU(2)和SO(3)的指数映射计算/">https://yuchenxi2000.github.io/2026/01/22/SU(2)和SO(3)的指数映射计算/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>Chenxi Yu</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2026-01-22</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2026-04-03</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/%E6%95%B0%E5%AD%A6/">数学</a><a class="link-muted mr-2" rel="tag" href="/tags/%E7%BE%A4%E8%AE%BA/">群论</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2026/02/14/%E7%83%AD%E4%BC%A0%E5%AF%BC%E6%96%B9%E7%A8%8B%E7%9A%84%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2%E8%A7%A3%E6%B3%95/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">热传导方程的傅里叶变换解法</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2026/01/18/%E5%87%A0%E4%BD%95%E4%BB%A3%E6%95%B0%E8%A7%86%E8%A7%92%E4%B8%8B%E7%9A%84%E7%94%B5%E7%A3%81%E5%9C%BA%E7%90%86%E8%AE%BA/"><span class="level-item">几何代数视角下的电磁场理论</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><!--!--><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a><p class="is-size-7"><span>&copy; 2026 Chenxi Yu</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="fab fa-creative-commons-nc"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/yuchenxi2000"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
             article: {
                 highlight: {
                     clipboard: true,
