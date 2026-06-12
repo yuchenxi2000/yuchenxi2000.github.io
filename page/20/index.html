@@ -37,8 +37,8 @@ $$
 \mathrm{i}\hbar \psi^\dagger\cfrac{\partial \psi}{\partial t} = -\cfrac{\hbar^2}{2m}\psi^\dagger\nabla^2\psi+U\psi^\dagger\psi \\
 \\\end{gathered}
 \tag{1}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
@@ -47,8 +47,8 @@ $$
 -\mathrm{i}\hbar \cfrac{\partial \psi^\dagger}{\partial t}\psi = -\cfrac{\hbar^2}{2m}(\nabla^2\psi^\dagger)\psi+U\psi^\dagger\psi \\
 \\\end{gathered}
 \tag{2}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
@@ -58,23 +58,24 @@ $$
 \cfrac{\partial \psi^\dagger\psi}{\partial t} + \nabla \cdot \cfrac{1}{2} [\psi^\dagger v\psi-(v\psi^\dagger)\psi] = 0 \\
 \\\end{gathered}
 \tag{3}
-$$</div>
-
+$$
+</div>
 
 <p>其中速度算符</p>
 <div>
 $$
 v=\cfrac{p}{m}=\cfrac{-\mathrm{i}\hbar }{m}\nabla
 \tag{4}
-$$</div>
+$$
+</div>
 
 <p>电荷密度</p>
 <div>
 $$
 \rho=\psi^\dagger\psi
 \tag{5}
-$$</div>
-
+$$
+</div>
 
 
 <p>粒子流</p>
@@ -82,21 +83,23 @@ $$</div>
 $$
 j=\cfrac{1}{2} [\psi^\dagger v\psi-(v\psi^\dagger)\psi]
 \tag{6}
-$$</div>
+$$
+</div>
 
 <p>电荷守恒</p>
 <div>
 $$
 \cfrac{\partial \rho}{\partial t}+\nabla \cdot j=0
 \tag{7}
-$$</div>
+$$
+</div>
 
 <h2 id="以一维自由粒子为例"><a href="#以一维自由粒子为例" class="headerlink" title="以一维自由粒子为例"></a>以一维自由粒子为例</h2><div>
 $$
 \psi=A\exp (\mathrm{i}kx)
 \tag{8}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
@@ -106,8 +109,8 @@ v\psi=A\hbar k/m\exp (\mathrm{i}kx) \\
 \psi^\dagger v\psi=A^\ast A\hbar k/m \\
 \\\end{gathered}
 \tag{9}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
@@ -117,16 +120,16 @@ v\psi^\dagger=-A^\ast \hbar k/m\exp (-\mathrm{i}kx) \\
 (v \psi^\dagger)\psi=-A^\ast A\hbar k/m \\
 \\\end{gathered}
 \tag{10}
-$$</div>
-
+$$
+</div>
 
 <p>于是流密度</p>
 <div>
 $$
 j=\cfrac{1}{2}[\psi^\dagger v\psi-(v \psi^\dagger)\psi]=A^\ast A\hbar k/m
 \tag{11}
-$$</div>
-
+$$
+</div>
 
 </div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2023-07-10T12:03:17.000Z" title="2023/7/10 20:03:17">2023-07-10</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E7%89%A9%E7%90%86/">物理</a></span><span class="level-item">5 分钟读完 (大约723个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2023/07/10/%E5%91%A8%E6%9C%9F%E6%80%A7%E5%8A%BF%E5%9C%BA%E7%9A%84%E5%93%88%E5%AF%86%E9%A1%BF%E9%87%8F/">周期性势场的哈密顿量</a></p><div class="content"><p>假设某一维周期势场 $V(x)$ ，周期为 $a$ </p>
 <p>那么薛定谔方程写做</p>
@@ -134,22 +137,24 @@ $$</div>
 $$
 \left[-\cfrac{\hbar^2}{2m}\nabla^2+V(x)\right]\psi(x)=E\psi(x)
 \tag{1}
-$$</div>
+$$
+</div>
 
 <p>转换到k空间，即求解哈密顿量在k空间中的矩阵元</p>
 <div>
 $$
 \bra{k^\prime}H\ket{k}=\cfrac{1}{2\pi}\int_{\Bbb{R}}\exp(-\mathrm{i}k^\prime x)H(x)\exp(+\mathrm{i}k x)\,\mathrm{d}x
 \tag{2}
-$$</div>
+$$
+</div>
 
 <p>其中</p>
 <div>
 $$
 \ket{k}=\cfrac{1}{\sqrt{2\pi}}\exp(+\mathrm{i}kx)
 \tag{3}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
@@ -162,8 +167,8 @@ $$
 + \cfrac{1}{2\pi}\int_{\Bbb{R}}V(x)\exp\left[+\mathrm{i}(k-k^\prime) x\right]\,\mathrm{d}x \\
 \\\end{gathered}
 \tag{4}
-$$</div>
-
+$$
+</div>
 
 <p>接下来求第二项。将第二项平移 $na$ ，其中 $n\in \Bbb{Z}$ 。因为势场周期为 $a$ ，</p>
 <div>
@@ -174,28 +179,32 @@ $$
 =\exp\left[+\mathrm{i}(k-k^\prime) na\right]\cfrac{1}{2\pi}\int_{\Bbb{R}}V(x)\exp\left[+\mathrm{i}(k-k^\prime) x\right]\,\mathrm{d}x \\
 \\\end{gathered}
 \tag{5}
-$$</div>
+$$
+</div>
 
 <p>因此除非 $(k-k^\prime)a&#x3D;2\pi m,m\in\Bbb{Z}$ ，否则</p>
 <div>
 $$
 \cfrac{1}{2\pi}\int_{\Bbb{R}}V(x)\exp\left[+\mathrm{i}(k-k^\prime) x\right]\,\mathrm{d}x =0
 \tag{6}
-$$</div>
+$$
+</div>
 
 <p>我们记 $V(x)$ 的傅立叶逆变换为</p>
 <div>
 $$
 \cfrac{1}{2\pi}\int_{\Bbb{R}}V(x)\exp\left[+\mathrm{i}(k-k^\prime) x\right]\,\mathrm{d}x =V(k-k^\prime)
 \tag{7}
-$$</div>
+$$
+</div>
 
 <p>则</p>
 <div>
 $$
 \bra{k^\prime}H\ket{k} = \cfrac{\hbar^2k^2}{2m}\delta(k-k^\prime) + V(k-k^\prime)
 \tag{8}
-$$</div>
+$$
+</div>
 
 <p>其中当 $k-k^\prime \neq 2\pi m&#x2F;a,m\in\Bbb{Z}$ 时 $V(k-k^\prime)&#x3D;0$ </p>
 <p>考虑矩阵元非零情况，此时必须满足 $k-k^\prime &#x3D; 2\pi m&#x2F;a,m\in\Bbb{Z}$ </p>
@@ -211,7 +220,8 @@ $$
 = \exp \left( \mathrm{i} k x \right) u(x) \\
 \\\end{gathered}
 \tag{9}
-$$</div>
+$$
+</div>
 
 <p>易知 $u(x)$ 为周期为 $a$ 的函数，这个结果反映了Bloch定理。</p>
 </div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2023-07-09T08:06:25.000Z" title="2023/7/9 16:06:25">2023-07-09</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E7%89%A9%E7%90%86/">物理</a></span><span class="level-item">14 分钟读完 (大约2129个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2023/07/09/Dirac%E6%96%B9%E7%A8%8B%E7%9A%84%E9%9D%9E%E7%9B%B8%E5%AF%B9%E8%AE%BA%E8%BF%91%E4%BC%BC/">Dirac方程的非相对论近似</a></p><div class="content"><p>Chenxi Yu</p>
@@ -220,8 +230,8 @@ $$</div>
 $$
 (\mathrm{i}\hbar \gamma^\mu \partial_\mu - mc)\psi=0
 \tag{1}
-$$</div>
-
+$$
+</div>
 
 <p> $\gamma^\mu$ 有无数种选择，其中一种表象为</p>
 <div>
@@ -233,7 +243,8 @@ $$
 \end{pmatrix}
 \label{dirac-representation-1}
 \tag{2}
-$$</div>
+$$
+</div>
 
 <p>其中 $\sigma^\mu&#x3D;(1,\sigma^1,\sigma^2,\sigma^3),\overline{\sigma}^\mu&#x3D;(1,-\sigma^1,-\sigma^2,-\sigma^3)$ </p>
 <p> $\sigma^1,\sigma^2,\sigma^3$ 为泡利矩阵</p>
@@ -257,50 +268,52 @@ $$
 0 & -1 \\
 \end{pmatrix}
 \tag{3}
-$$</div>
+$$
+</div>
 
 <p>从Dirac方程，给出其哈密顿算符</p>
 <div>
 $$
 H=\mathrm{i}\hbar \partial_t
 \tag{4}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
 \mathrm{i}\hbar \gamma^\mu \partial_\mu - mc=0
 \tag{5}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
 \frac{1}{c}\mathrm{i}\hbar \gamma^0 \partial_t+\mathrm{i}\hbar \sum_{j=0}^3 \gamma^j \partial_j - mc=0
 \tag{6}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
 \mathrm{i}\hbar \partial_t+c\mathrm{i}\hbar \sum_{j=0}^3 \gamma^0\gamma^j \partial_j - \gamma^0 mc^2=0
 \tag{7}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
 H-c \sum_{j=0}^3 \gamma^0\gamma^j p_j - \gamma^0 mc^2=0
 \tag{8}
-$$</div>
-
+$$
+</div>
 
 <p>记 $\alpha^j&#x3D;\gamma^0\gamma^j,\beta&#x3D;\gamma^0$ </p>
 <div>
 $$
 H=c\alpha \cdot p+\beta mc^2
 \tag{9}
-$$</div>
+$$
+</div>
 
 <p>根据 $\eqref{dirac-representation-1}$ 中给出的表象，</p>
 <div>
@@ -314,7 +327,8 @@ $$
 1 & 0 \\
 \end{pmatrix}\\
 \tag{10}
-$$</div>
+$$
+</div>
 
 <p>另一种更方便的表象可以通过幺正变换 $U$ 得到</p>
 <div>
@@ -326,8 +340,8 @@ U=\cfrac{1}{\sqrt{2}}\begin{pmatrix}
 \\
 U^\dagger U=UU^\dagger=1
 \tag{11}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
@@ -336,8 +350,8 @@ $$
 \sigma^j & 0 \\
 \end{pmatrix}\\
 \tag{12}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
@@ -346,8 +360,8 @@ $$
 0 & -1 \\
 \end{pmatrix}\\
 \tag{13}
-$$</div>
-
+$$
+</div>
 
 <p>接下来的讨论都会使用该表象。</p>
 <h2 id="外场下Dirac方程"><a href="#外场下Dirac方程" class="headerlink" title="外场下Dirac方程"></a>外场下Dirac方程</h2><p>根据最小耦合原理，加入电磁场只需</p>
@@ -355,7 +369,8 @@ $$</div>
 $$
 \mathrm{i}\hbar \partial_\mu \rightarrow \mathrm{i}\hbar \partial_\mu-qA_\mu
 \tag{14}
-$$</div>
+$$
+</div>
 
 <p> $q$ 为电荷， $A_\mu&#x3D;(\cfrac{\phi}{c},A_1,A_2,A_3)&#x3D;(\cfrac{\phi}{c},-A^1,-A^2,-A^3)$ ， $\phi$ 为电势， $A&#x3D;(A^1,A^2,A^3)$ 为磁势。</p>
 <p>对于电子， $q&#x3D;-e$ </p>
@@ -364,15 +379,15 @@ $$</div>
 $$
 \mathrm{i}\hbar\partial_t+e\phi=c\alpha \cdot (p+eA)+\beta mc^2
 \tag{15}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
 H=c\alpha \cdot (p+eA)+\beta mc^2-e\phi
 \tag{16}
-$$</div>
-
+$$
+</div>
 
 <p>记 $U&#x3D;-e\phi$ </p>
 <div>
@@ -380,8 +395,8 @@ $$
 H=c\alpha \cdot (p+eA)+\beta mc^2+U
 \label{dirac-with-external-fields}
 \tag{17}
-$$</div>
-
+$$
+</div>
 
 <h2 id="非相对论近似"><a href="#非相对论近似" class="headerlink" title="非相对论近似"></a>非相对论近似</h2><p>设</p>
 <div>
@@ -391,7 +406,8 @@ $$
 \psi_- \\
 \end{pmatrix}
 \tag{18}
-$$</div>
+$$
+</div>
 
 <p>其中 $\psi_+$ 表示正频率解（正能量，电子）， $\psi_-$ 表示负频率解（负能量，正电子）</p>
 <p>代入存在外场下的Dirac方程 $\eqref{dirac-with-external-fields}$ ，求解哈密顿量的特征值问题</p>
@@ -402,7 +418,8 @@ c\sigma \cdot (p+eA)\psi_- = (E-U-mc^2)\psi_+ \\
 c\sigma \cdot (p+eA)\psi_+ = (E-U+mc^2)\psi_- \\
 \\\end{gathered}
 \tag{19}
-$$</div>
+$$
+</div>
 
 <p>[1]给出了一个近似求解的方法：</p>
 <p>利用其中一个式子消去 $\psi_-$ ，</p>
@@ -410,8 +427,8 @@ $$</div>
 $$
 \psi_-= \cfrac{1}{E-U+mc^2} c\sigma \cdot (p+eA)\psi_+
 \tag{20}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
@@ -419,8 +436,8 @@ $$
 \cfrac{1}{2m}\left[\sigma \cdot (p+eA)\right] f \left[\sigma \cdot (p+eA)\right]\psi_+ = (E-U-mc^2)\psi_+ \\
 \\\end{gathered}
 \tag{21}
-$$</div>
-
+$$
+</div>
 
 <p>其中 $f&#x3D;\cfrac{2mc^2}{E-U+mc^2}$ </p>
 <p>我们先证明一个等式</p>
@@ -430,30 +447,30 @@ $$
 =-\mathrm{i}\hbar \left[\nabla(f\psi)-f\nabla\psi\right]
 =-\mathrm{i}\hbar \nabla f \psi
 \tag{22}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
 [p,f]=-\mathrm{i}\hbar \nabla f
 \tag{23}
-$$</div>
-
+$$
+</div>
 
 <p>故</p>
 <div>
 $$
 [\sigma \cdot (p+eA)]f=f[\sigma \cdot (p+eA)]-\mathrm{i}\hbar \sigma \cdot \nabla f
 \tag{24}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
 \left[\sigma \cdot (p+eA)\right]^2 f=\left[\sigma \cdot (p+eA)\right] f \left[\sigma \cdot (p+eA)\right]-\mathrm{i}\hbar\left[\sigma \cdot (p+eA)\right]( \sigma \cdot \nabla f)
 \tag{25}
-$$</div>
-
+$$
+</div>
 
 <p>此即正频率解所满足的方程。</p>
 <div>
@@ -465,15 +482,15 @@ $$
 \end{gathered}
 \label{dirac-non-relativistic}
 \tag{26}
-$$</div>
-
+$$
+</div>
 
 <h3 id="零阶近似"><a href="#零阶近似" class="headerlink" title="零阶近似"></a>零阶近似</h3><p>因为非相对论下静能远大于动能，</p></div><a class="article-more button is-small is-size-7" href="/2023/07/09/Dirac%E6%96%B9%E7%A8%8B%E7%9A%84%E9%9D%9E%E7%9B%B8%E5%AF%B9%E8%AE%BA%E8%BF%91%E4%BC%BC/#more">阅读更多</a></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2023-06-19T14:00:36.000Z" title="2023/6/19 22:00:36">2023-06-19</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E6%95%B0%E5%AD%A6/">数学</a></span><span class="level-item">2 分钟读完 (大约272个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2023/06/19/Legendre%20transformation/">Legendre transformation</a></p><div class="content"><div>
 $$
 f^\ast (p)=\sup_x\left[ px - f(x) \right]
 \tag{1}
-$$</div>
-
+$$
+</div>
 
 <p> $f(x)$ 凹函数</p>
 <p>由极大值条件</p>
@@ -484,8 +501,8 @@ $$
 \cfrac{\mathrm{d}^2}{\mathrm{d}x^2}\left[ px - f(x) \right]\lt 0
 \end{cases}
 \tag{2}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
@@ -494,45 +511,45 @@ p = f^\prime(x) \\
 \cfrac{\mathrm{d}^2}{\mathrm{d}x^2}f(x)\gt 0
 \end{cases}
 \tag{3}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
 \cfrac{\mathrm{d}p}{\mathrm{d}x}=f^{\prime\prime}(x)\gt 0
 \tag{4}
-$$</div>
-
+$$
+</div>
 
 <p>故 $p&#x3D;f^\prime(x)$ 存在反函数，记为 $x&#x3D;g(p)$ </p>
 <div>
 $$
 f^\ast (p)=pg(p)-f(g(p))
 \tag{5}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
 \cfrac{\mathrm{d}}{\mathrm{d}p}f^\ast (p)=g(p)+pg^\prime(p)-f^\prime(g(p))g^\prime(p)
 \tag{6}
-$$</div>
-
+$$
+</div>
 
 <p>因为 $f^\prime(g(p))&#x3D;f^\prime(x)&#x3D;p$ ，所以</p>
 <div>
 $$
 \cfrac{\mathrm{d}}{\mathrm{d}p}f^\ast (p)=g(p)=x
 \tag{7}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
 \cfrac{\mathrm{d}^2}{\mathrm{d}p^2}f^\ast (p)=g^\prime(p)=\cfrac{1}{f^{\prime\prime}(x)}\gt 0
 \tag{8}
-$$</div>
-
+$$
+</div>
 
 <p>所以 $f^\ast (p)$ 是凹函数</p>
 <p>下面求 $f^\ast (p)$ 的Legendre变换 $f^{\ast \ast }(s)$ </p>
@@ -540,8 +557,8 @@ $$</div>
 $$
 f^{\ast \ast }(s)=\sup_p\left[ sp - f^\ast (p) \right]
 \tag{9}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
@@ -550,8 +567,8 @@ $$
 \cfrac{\mathrm{d}^2}{\mathrm{d}p^2}\left[ sp - f^\ast (p) \right]\lt 0
 \end{cases}
 \tag{10}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
@@ -560,15 +577,15 @@ s = g(p)\\
 \cfrac{\mathrm{d}^2}{\mathrm{d}p^2}f^\ast (p) \gt  0
 \end{cases}
 \tag{11}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
 f^{\ast \ast }(s)=pg(p) - f^\ast (p)=f(g(p))=f(s)
 \tag{12}
-$$</div>
-
+$$
+</div>
 
 </div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2023-04-03T14:14:43.000Z" title="2023/4/3 22:14:43">2023-04-03</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E7%89%A9%E7%90%86/">物理</a></span><span class="level-item">3 分钟读完 (大约463个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2023/04/03/pead/">pead</a></p><div class="content"><p>好吧，波函数是会受电场影响的</p>
 <p>如果不考虑电场，用变分法求解波函数，即在所有波函数空间内找到 $\ket{\phi}$ 让下面这个泛函最小：（假设哈密顿量 $H_0$ ）</p>
@@ -576,28 +593,32 @@ $$</div>
 $$
 \bra{\phi}H_0\ket{\phi}
 \tag{1}
-$$</div>
+$$
+</div>
 
 <p>同时 $\ket{\phi}$ 要满足归一化条件</p>
 <div>
 $$
 \braket{\phi\vert\phi}=1
 \tag{2}
-$$</div>
+$$
+</div>
 
 <p>用拉格朗日乘数法，引入拉格朗日乘数 $E$ ，求下面泛函最小值</p>
 <div>
 $$
 \bra{\phi}H_0\ket{\phi}-E(\braket{\phi\vert\phi}-1)
 \tag{3}
-$$</div>
+$$
+</div>
 
 <p>对上面这个泛函求泛函导数，令它等于 $0$ ，得到的方程就是薛定谔方程（从中也得知前面设的拉格朗日乘数就是体系能量）</p>
 <div>
 $$
 H_0\ket{\phi}-E\ket{\phi}=0
 \tag{4}
-$$</div>
+$$
+</div>
 
 <p>求解薛定谔方程就是通常的矩阵对角化</p>
 <p>考虑加电场情况，设电场为 $\varepsilon$ ，按[1]的说法就是此时应该求electric enthalpy functional的最小值：（能量+电场耦合项）</p>
@@ -605,7 +626,8 @@ $$</div>
 $$
 \bra{\phi}H_0\ket{\phi}-\varepsilon \cdot P[\phi]
 \tag{5}
-$$</div>
+$$
+</div>
 
 <p>其中 $P[\phi]$ 是极化关于波函数的泛函，由modern theory of polarization可以给出表达式。</p>
 <p>用同样的方法求它的最小值，先用拉格朗日乘数法，引入拉格朗日乘数 $E$ ，求下面泛函最小值</p>
@@ -613,14 +635,16 @@ $$</div>
 $$
 \bra{\phi}H_0\ket{\phi}-\varepsilon \cdot P[\phi]-E(\braket{\phi\vert\phi}-1)
 \tag{6}
-$$</div>
+$$
+</div>
 
 <p>然后令泛函导数等于 $0$ </p>
 <div>
 $$
 H_0\ket{\phi}-\varepsilon \cdot \cfrac{\delta P[\phi]}{\delta \bra{\phi}} - E \ket{\phi}=0
 \tag{7}
-$$</div>
+$$
+</div>
 
 <p>极化对波函数导数 $\cfrac{\delta P[\phi]}{\delta \bra{\phi}}$ 可以用波函数表示（根据modern theory of polarization）</p>
 <p>所以相当于哈密顿变了。求解方法还是矩阵对角化。</p>

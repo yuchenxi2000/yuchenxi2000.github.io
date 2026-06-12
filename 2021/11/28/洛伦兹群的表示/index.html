@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>洛伦兹群的表示 - YCX&#039;s Blog</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="YCX&#039;s Blog"><meta name="msapplication-TileImage" content="favicon.ico"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="YCX&#039;s Blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="洛伦兹群李代数上篇我们讨论了洛伦兹群的向量表示（没看过的快去看呀！总角动量、狄拉克方程洛伦兹不变性）  $$ \begin{align} \Lambda_{\mu\nu} &amp;amp;&amp;#x3D; g_{\mu\nu}+\frac{1}{2}{\rm i}\Omega_{\sigma\rho}\frac{1}{\rm i}(\delta^{\sigma}_{\ \mu}\delta^{\rho}_{\ \nu}-\d"><meta property="og:type" content="blog"><meta property="og:title" content="洛伦兹群的表示"><meta property="og:url" content="https://yuchenxi2000.github.io/2021/11/28/%E6%B4%9B%E4%BC%A6%E5%85%B9%E7%BE%A4%E7%9A%84%E8%A1%A8%E7%A4%BA/"><meta property="og:site_name" content="YCX&#039;s Blog"><meta property="og:description" content="洛伦兹群李代数上篇我们讨论了洛伦兹群的向量表示（没看过的快去看呀！总角动量、狄拉克方程洛伦兹不变性）  $$ \begin{align} \Lambda_{\mu\nu} &amp;amp;&amp;#x3D; g_{\mu\nu}+\frac{1}{2}{\rm i}\Omega_{\sigma\rho}\frac{1}{\rm i}(\delta^{\sigma}_{\ \mu}\delta^{\rho}_{\ \nu}-\d"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://yuchenxi2000.github.io/img/og_image.png"><meta property="article:published_time" content="2021-11-27T19:18:58.000Z"><meta property="article:modified_time" content="2026-04-03T14:05:08.526Z"><meta property="article:author" content="Chenxi Yu"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://yuchenxi2000.github.io/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://yuchenxi2000.github.io/2021/11/28/%E6%B4%9B%E4%BC%A6%E5%85%B9%E7%BE%A4%E7%9A%84%E8%A1%A8%E7%A4%BA/"},"headline":"洛伦兹群的表示","image":["https://yuchenxi2000.github.io/img/og_image.png"],"datePublished":"2021-11-27T19:18:58.000Z","dateModified":"2026-04-03T14:05:08.526Z","author":{"@type":"Person","name":"Chenxi Yu"},"publisher":{"@type":"Organization","name":"YCX's Blog","logo":{"@type":"ImageObject","url":"https://yuchenxi2000.github.io/2021/11/28/%E6%B4%9B%E4%BC%A6%E5%85%B9%E7%BE%A4%E7%9A%84%E8%A1%A8%E7%A4%BA/android-chrome-512x512.png"}},"description":"洛伦兹群李代数上篇我们讨论了洛伦兹群的向量表示（没看过的快去看呀！总角动量、狄拉克方程洛伦兹不变性）  $$ \\begin{align} \\Lambda_{\\mu\\nu} &amp;&#x3D; g_{\\mu\\nu}+\\frac{1}{2}{\\rm i}\\Omega_{\\sigma\\rho}\\frac{1}{\\rm i}(\\delta^{\\sigma}_{\\ \\mu}\\delta^{\\rho}_{\\ \\nu}-\\d"}</script><link rel="canonical" href="https://yuchenxi2000.github.io/2021/11/28/%E6%B4%9B%E4%BC%A6%E5%85%B9%E7%BE%A4%E7%9A%84%E8%A1%A8%E7%A4%BA/"><link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link data-pjax rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link data-pjax rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!--!--><!-- hexo injector head_end start --><script>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>洛伦兹群的表示 - YCX&#039;s Blog</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="YCX&#039;s Blog"><meta name="msapplication-TileImage" content="favicon.ico"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="YCX&#039;s Blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="洛伦兹群李代数上篇我们讨论了洛伦兹群的向量表示（没看过的快去看呀！总角动量、狄拉克方程洛伦兹不变性）  $$ \begin{align} \Lambda_{\mu\nu} &amp;amp;&amp;#x3D; g_{\mu\nu}+\frac{1}{2}{\rm i}\Omega_{\sigma\rho}\frac{1}{\rm i}(\delta^{\sigma}_{\ \mu}\delta^{\rho}_{\ \nu}-\d"><meta property="og:type" content="blog"><meta property="og:title" content="洛伦兹群的表示"><meta property="og:url" content="https://yuchenxi2000.github.io/2021/11/28/%E6%B4%9B%E4%BC%A6%E5%85%B9%E7%BE%A4%E7%9A%84%E8%A1%A8%E7%A4%BA/"><meta property="og:site_name" content="YCX&#039;s Blog"><meta property="og:description" content="洛伦兹群李代数上篇我们讨论了洛伦兹群的向量表示（没看过的快去看呀！总角动量、狄拉克方程洛伦兹不变性）  $$ \begin{align} \Lambda_{\mu\nu} &amp;amp;&amp;#x3D; g_{\mu\nu}+\frac{1}{2}{\rm i}\Omega_{\sigma\rho}\frac{1}{\rm i}(\delta^{\sigma}_{\ \mu}\delta^{\rho}_{\ \nu}-\d"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://yuchenxi2000.github.io/img/og_image.png"><meta property="article:published_time" content="2021-11-27T19:18:58.000Z"><meta property="article:modified_time" content="2026-06-12T17:47:28.858Z"><meta property="article:author" content="Chenxi Yu"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://yuchenxi2000.github.io/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://yuchenxi2000.github.io/2021/11/28/%E6%B4%9B%E4%BC%A6%E5%85%B9%E7%BE%A4%E7%9A%84%E8%A1%A8%E7%A4%BA/"},"headline":"洛伦兹群的表示","image":["https://yuchenxi2000.github.io/img/og_image.png"],"datePublished":"2021-11-27T19:18:58.000Z","dateModified":"2026-06-12T17:47:28.858Z","author":{"@type":"Person","name":"Chenxi Yu"},"publisher":{"@type":"Organization","name":"YCX's Blog","logo":{"@type":"ImageObject","url":"https://yuchenxi2000.github.io/2021/11/28/%E6%B4%9B%E4%BC%A6%E5%85%B9%E7%BE%A4%E7%9A%84%E8%A1%A8%E7%A4%BA/android-chrome-512x512.png"}},"description":"洛伦兹群李代数上篇我们讨论了洛伦兹群的向量表示（没看过的快去看呀！总角动量、狄拉克方程洛伦兹不变性）  $$ \\begin{align} \\Lambda_{\\mu\\nu} &amp;&#x3D; g_{\\mu\\nu}+\\frac{1}{2}{\\rm i}\\Omega_{\\sigma\\rho}\\frac{1}{\\rm i}(\\delta^{\\sigma}_{\\ \\mu}\\delta^{\\rho}_{\\ \\nu}-\\d"}</script><link rel="canonical" href="https://yuchenxi2000.github.io/2021/11/28/%E6%B4%9B%E4%BC%A6%E5%85%B9%E7%BE%A4%E7%9A%84%E8%A1%A8%E7%A4%BA/"><link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link data-pjax rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link data-pjax rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!--!--><!-- hexo injector head_end start --><script>
   (function () {
       function switchTab() {
           if (!location.hash) {
@@ -29,7 +29,7 @@
       switchTab();
       window.addEventListener('hashchange', switchTab, false);
   })();
-  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 8.1.1"></head><body class="is-1-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-12"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-11-27T19:18:58.000Z" title="2021/11/28 03:18:58">2021-11-28</time>发表</span><span class="level-item">8 分钟读完 (大约1176个字)</span></div></div><h1 class="title is-3 is-size-4-mobile">洛伦兹群的表示</h1><div class="content"><h2 id="洛伦兹群李代数"><a href="#洛伦兹群李代数" class="headerlink" title="洛伦兹群李代数"></a>洛伦兹群李代数</h2><p>上篇我们讨论了洛伦兹群的向量表示（没看过的快去看呀！<a href="/2021/11/26/%E6%80%BB%E8%A7%92%E5%8A%A8%E9%87%8F%E3%80%81%E7%8B%84%E6%8B%89%E5%85%8B%E6%96%B9%E7%A8%8B%E6%B4%9B%E4%BC%A6%E5%85%B9%E4%B8%8D%E5%8F%98%E6%80%A7/" title="总角动量、狄拉克方程洛伦兹不变性">总角动量、狄拉克方程洛伦兹不变性</a>）</p>
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 8.1.1"></head><body class="is-1-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-12"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-11-27T19:18:58.000Z" title="2021/11/28 03:18:58">2021-11-28</time>发表</span><span class="level-item">8 分钟读完 (大约1161个字)</span></div></div><h1 class="title is-3 is-size-4-mobile">洛伦兹群的表示</h1><div class="content"><h2 id="洛伦兹群李代数"><a href="#洛伦兹群李代数" class="headerlink" title="洛伦兹群李代数"></a>洛伦兹群李代数</h2><p>上篇我们讨论了洛伦兹群的向量表示（没看过的快去看呀！<a href="/2021/11/26/%E6%80%BB%E8%A7%92%E5%8A%A8%E9%87%8F%E3%80%81%E7%8B%84%E6%8B%89%E5%85%8B%E6%96%B9%E7%A8%8B%E6%B4%9B%E4%BC%A6%E5%85%B9%E4%B8%8D%E5%8F%98%E6%80%A7/" title="总角动量、狄拉克方程洛伦兹不变性">总角动量、狄拉克方程洛伦兹不变性</a>）</p>
 <div>
 $$
 \begin{align}
@@ -38,23 +38,24 @@ $$
 &= g_{\mu\nu}+\frac{1}{2}{\rm i}\Omega_{\sigma\rho}S^{\sigma\rho}\ _{\mu\nu} \\
 \end{align}
 \tag{1}
-$$</div>
+$$
+</div>
 
 <p>记洛伦兹变换算符 $U(\Lambda)$<br>无穷小洛伦兹变换下可以展开成</p>
 <div>
 $$
 U(\Lambda)=1+\frac{1}{2}{\rm i}\Omega_{\mu\nu}M^{\mu\nu}
 \tag{2}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
 U(\Lambda)^{-1}U(\Lambda^\prime)U(\Lambda)=U(\Lambda^{-1}\Lambda^\prime\Lambda)
-\label{commutator:2PTa27MxAm5UCnUo}
+\label{commutator}
 \tag{3}
-$$</div>
-
+$$
+</div>
 
 <p>由以下算符恒等式，只保留 $\Omega^\prime\Omega$ 项，</p>
 <div>
@@ -66,17 +67,17 @@ $$
 &=[A, B]+...
 \end{align}
 \tag{4}
-$$</div>
+$$
+</div>
 
-
-<p> $\eqref{commutator:2PTa27MxAm5UCnUo}$ 左手边</p>
+<p> $\eqref{commutator}$ 左手边</p>
 <div>
 $$
 \text{LHS}
 =-\frac{1}{4}\Omega_{\mu\nu}^\prime\Omega_{\sigma\rho}[M^{\mu\nu}, M^{\sigma\rho}]+...
 \tag{5}
-$$</div>
-
+$$
+</div>
 
 <p>计算 $[S^{\mu\nu}, S^{\sigma\rho}]$ </p>
 <div>
@@ -90,7 +91,8 @@ $$
 &= {\rm i}(g^{\nu\rho}S^{\mu\sigma}\ _a^{\ c}-g^{\mu\rho}S^{\nu\sigma}\ _a^{\ c}-g^{\nu\sigma}S^{\mu\rho}\ _a^{\ c}+g^{\mu\sigma}S^{\nu\rho}\ _a^{\ c})
 \end{align}
 \tag{6}
-$$</div>
+$$
+</div>
 
 <p>同样只保留 $\Omega^\prime\Omega$ 项</p>
 <div>
@@ -101,24 +103,26 @@ $$
 &= -\frac{1}{4}{\rm i}\Omega_{\mu\nu}^\prime\Omega_{\sigma\rho}(g^{\nu\rho}S^{\mu\sigma}-g^{\mu\rho}S^{\nu\sigma}-g^{\nu\sigma}S^{\mu\rho}+g^{\mu\sigma}S^{\nu\rho})+...
 \end{align}
 \tag{7}
-$$</div>
+$$
+</div>
 
-<p>于是 $\eqref{commutator:2PTa27MxAm5UCnUo}$ 右手边</p>
+<p>于是 $\eqref{commutator}$ 右手边</p>
 <div>
 $$
 \text{RHS}
 =-\frac{1}{4}{\rm i}\Omega_{\mu\nu}^\prime\Omega_{\sigma\rho}(g^{\nu\rho}M^{\mu\sigma}-g^{\mu\rho}M^{\nu\sigma}-g^{\nu\sigma}M^{\mu\rho}+g^{\mu\sigma}M^{\nu\rho})+...
 \tag{8}
-$$</div>
-
+$$
+</div>
 
 <p>所以</p>
 <div>
 $$
 [M^{\mu\nu}, M^{\sigma\rho}]={\rm i}(g^{\nu\rho}M^{\mu\sigma}-g^{\mu\rho}M^{\nu\sigma}-g^{\nu\sigma}M^{\mu\rho}+g^{\mu\sigma}M^{\nu\rho})
-\label{lie-algebra:2PTa27MxAm5UCnUo}
+\label{lie-algebra}
 \tag{9}
-$$</div>
+$$
+</div>
 
 <p>算符 $M^{\mu\nu}$ 满足洛伦兹群李代数。</p>
 <h2 id="洛伦兹群表示"><a href="#洛伦兹群表示" class="headerlink" title="洛伦兹群表示"></a>洛伦兹群表示</h2><p>算符 $M^{\mu\nu}$ 可以用我们更熟悉的角动量、boost算符表示</p>
@@ -126,9 +130,10 @@ $$</div>
 $$
 J_i=\frac{1}{2}\varepsilon_{ijk}M^{jk},\, K_a=M^{a0},\,(i, j, k, a\in \{1, 2, 3\})
 \tag{10}
-$$</div>
+$$
+</div>
 
-<p>那么根据 $\eqref{lie-algebra:2PTa27MxAm5UCnUo}$ ，</p>
+<p>那么根据 $\eqref{lie-algebra}$ ，</p>
 <div>
 $$
 \begin{align}
@@ -138,15 +143,15 @@ $$
 &={\rm i}J_3
 \end{align}
 \tag{11}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
 [J_1, J_1]=[M^{23}, M^{23}]=0
 \tag{12}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
@@ -157,15 +162,15 @@ $$
 &=-{\rm i}J_3
 \end{align}
 \tag{13}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
 [K_1, K_1]=[M^{01}, M^{01}]=0
 \tag{14}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
@@ -176,15 +181,15 @@ $$
 &={\rm i}K_3
 \end{align}
 \tag{15}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
 [J_1, K_1]=[M^{23}, M^{10}]=0
 \tag{16}
-$$</div>
-
+$$
+</div>
 
 <p>一般地有</p>
 <div>
@@ -195,7 +200,8 @@ $$
 [K_i, K_j]=-{\rm i}\varepsilon_{ijk}K_k\\
 \end{align}
 \tag{17}
-$$</div>
+$$
+</div>
 
 <p>如果令 $N_k&#x3D;\frac{1}{2}(J_k-{\rm i}K_k),N_k^\dagger&#x3D;\frac{1}{2}(J_k+{\rm i}K_k)$ </p>
 <div>
@@ -206,22 +212,22 @@ $$
 &={\rm i}\varepsilon_{ijk}N_k
 \end{align}
 \tag{18}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
 [N_i, N_j^\dagger]=0
 \tag{19}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
 [N_i^\dagger, N_j^\dagger]={\rm i}\varepsilon_{ijk}N_k^\dagger
 \tag{20}
-$$</div>
-
+$$
+</div>
 
 <p>由此可见洛伦兹群是semisimple的。 $N_i, N^\dagger_i$ 分别构成 $SU(2)$ 的李代数。 $SU(2)$ 的表示由整数或半整数标记，洛伦兹群的表示则由两个整数或半整数标记，记为 $(2n+1, 2n^\prime+1)$ </p>
 <h2 id="旋量表示"><a href="#旋量表示" class="headerlink" title="旋量表示"></a>旋量表示</h2><p>接下来我们求 $(2,1)$ 表示（左手旋量场，left-handed spinor）</p>
@@ -230,15 +236,15 @@ $$</div>
 $$
 [\phi,M^{\mu\nu}]=(L^{\mu\nu}+S^{\mu\nu})\phi
 \tag{21}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
 [\phi,J^3]=(L^3+S^{12})\phi
 \tag{22}
-$$</div>
-
+$$
+</div>
 
 <p>回忆一下量子力学中总角动量&#x3D;角动量+自旋，自旋1&#x2F;2粒子的自旋算符为三个泡利矩阵。 $L^3$ 的存在是由于坐标系的旋转，一般的场都存在这项。</p>
 <p>于是 $S^{12}&#x3D;\frac{1}{2}\sigma_3$ 。一般的结论：</p>
@@ -246,46 +252,48 @@ $$</div>
 $$
 S^{ij}=\frac{1}{2}\varepsilon^{ijk}\sigma_k,\,(i,j,k\in\{1,2,3\})
 \tag{23}
-$$</div>
+$$
+</div>
 
 <p>由 $J_i&#x3D;N_i+N_i^\dagger,K_i&#x3D;{\rm i}(N_i-N_i^\dagger)$ ，我们令 $N_i^\dagger$ 构成 $SU(2)$ 的标量表示（左手旋量），则对于左手旋量场 $N^\dagger_i&#x3D;0$ ，于是</p>
 <div>
 $$
 S^{i0}=\frac{1}{2}{\rm i}\sigma_i,\,(i \in \{1, 2, 3\})
 \tag{24}
-$$</div>
+$$
+</div>
 
 <p>对于右手旋量场，它的厄米共轭是左手旋量场。</p>
 <div>
 $$
 [\phi^\dagger,M^{\mu\nu}]=(L^{\mu\nu}+S^{\mu\nu}_L)\phi^\dagger
 \tag{25}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
 [M^{\mu\nu},\phi]=\phi L^{\mu\nu}+S_L^{\mu\nu}\ ^\ast  \phi
 \tag{26}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
 [\phi,M^{\mu\nu}]=-\phi L^{\mu\nu}-S_L^{\mu\nu}\ ^\ast  \phi
 \tag{27}
-$$</div>
-
+$$
+</div>
 
 <p>于是</p>
 <div>
 $$
 S_R^{\mu\nu}=-S_L^{\mu\nu}\ ^\ast 
 \tag{28}
-$$</div>
+$$
+</div>
 
-
-</div><div class="article-licensing box"><div class="licensing-title"><p>洛伦兹群的表示</p><p><a href="https://yuchenxi2000.github.io/2021/11/28/洛伦兹群的表示/">https://yuchenxi2000.github.io/2021/11/28/洛伦兹群的表示/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>Chenxi Yu</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2021-11-28</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2026-04-03</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2021/11/28/%E8%B7%AF%E5%BE%84%E7%A7%AF%E5%88%86%E8%92%99%E7%89%B9%E5%8D%A1%E6%B4%9B/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">路径积分蒙特卡洛</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2021/11/26/%E6%80%BB%E8%A7%92%E5%8A%A8%E9%87%8F%E3%80%81%E7%8B%84%E6%8B%89%E5%85%8B%E6%96%B9%E7%A8%8B%E6%B4%9B%E4%BC%A6%E5%85%B9%E4%B8%8D%E5%8F%98%E6%80%A7/"><span class="level-item">总角动量、狄拉克方程洛伦兹不变性</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><!--!--><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a><p class="is-size-7"><span>&copy; 2026 Chenxi Yu</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="fab fa-creative-commons-nc"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/yuchenxi2000"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
+</div><div class="article-licensing box"><div class="licensing-title"><p>洛伦兹群的表示</p><p><a href="https://yuchenxi2000.github.io/2021/11/28/洛伦兹群的表示/">https://yuchenxi2000.github.io/2021/11/28/洛伦兹群的表示/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>Chenxi Yu</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2021-11-28</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2026-06-13</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2021/11/28/%E8%B7%AF%E5%BE%84%E7%A7%AF%E5%88%86%E8%92%99%E7%89%B9%E5%8D%A1%E6%B4%9B/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">路径积分蒙特卡洛</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2021/11/26/%E6%80%BB%E8%A7%92%E5%8A%A8%E9%87%8F%E3%80%81%E7%8B%84%E6%8B%89%E5%85%8B%E6%96%B9%E7%A8%8B%E6%B4%9B%E4%BC%A6%E5%85%B9%E4%B8%8D%E5%8F%98%E6%80%A7/"><span class="level-item">总角动量、狄拉克方程洛伦兹不变性</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><!--!--><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a><p class="is-size-7"><span>&copy; 2026 Chenxi Yu</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="fab fa-creative-commons-nc"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/yuchenxi2000"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
             article: {
                 highlight: {
                     clipboard: true,

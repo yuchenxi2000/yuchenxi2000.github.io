@@ -37,44 +37,45 @@
 $$
 U_{ij} = \delta_{ij} + w_{ij}
 \tag{1}
-$$</div>
+$$
+</div>
 
 <p>其中 $w_{ij}$ 中的元素为小量。利用其为二阶酉矩阵，</p>
 <div>
 $$
 (U^\dagger U)_{ij}=U^\ast _{ki}U_{kj}=\delta_{ij}
 \tag{2}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
 (\delta_{ki} + w_{ki}^\ast )(\delta_{kj} + w_{kj})=\delta_{ij}
 \tag{3}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
 w_{ji}^\ast  + w_{ij}=0
 \tag{4}
-$$</div>
-
+$$
+</div>
 
 <p>再根据行列式为1，</p>
 <div>
 $$
 \det U \approx 1 + \operatorname{Tr} w = 1
 \tag{5}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
 w_{ii}=0
 \tag{6}
-$$</div>
-
+$$
+</div>
 
 <p>由此得出矩阵 $w$ 的形式为</p>
 <div>
@@ -98,7 +99,8 @@ w_3
 0 & \mathrm{i}
 \end{pmatrix}
 \tag{7}
-$$</div>
+$$
+</div>
 
 <p>由此得到三个生成元，用泡利矩阵表示为 $-\mathrm{i}\sigma_x,-\mathrm{i}\sigma_y,-\mathrm{i}\sigma_z$ 。它们的李括号为（下标 $1,2,3$ 分别对应三个坐标 $x,y,z$ ）</p>
 <div>
@@ -107,8 +109,8 @@ $$
 \lbrack -\mathrm{i}\sigma_i, -\mathrm{i}\sigma_j\rbrack =-2\mathrm{i}\varepsilon_{ijk}\sigma_k \\
 \\\end{gathered}
 \tag{8}
-$$</div>
-
+$$
+</div>
 
 <blockquote>
 <p>如果设 $S_i&#x3D;1&#x2F;2\hbar\sigma_i$ ，那么得到量子力学中1&#x2F;2自旋角动量的对易关系 $[S_i,S_j]&#x3D;\mathrm{i}\hbar \varepsilon_{ijk}S_k$ 。</p>
@@ -118,14 +120,16 @@ $$</div>
 $$
 \exp(-\mathrm{i}a \cdot \sigma) = \sum_{k=0}^\infty \cfrac{(-\mathrm{i}a \cdot \sigma)^k}{k!}
 \tag{9}
-$$</div>
+$$
+</div>
 
 <p>计算上式的重点是计算 $a \cdot \sigma$ 的任意次幂。为此我们先证一个等式：</p>
 <div>
 $$
 (\sigma \cdot a)(\sigma \cdot b)=a \cdot b + \mathrm{i} \sigma \cdot (a \times b)
 \tag{10}
-$$</div>
+$$
+</div>
 
 <p>证明方法是利用泡利矩阵的性质</p>
 <div>
@@ -135,8 +139,8 @@ $$
 \sigma_i \sigma_j = \mathrm{i} \varepsilon_{ijk}\sigma_k & (i \ne j)
 \end{cases}
 \tag{11}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
@@ -146,16 +150,16 @@ $$
 &= a \cdot b + \mathrm{i}\sigma \cdot (a \times b)
 \end{aligned}
 \tag{12}
-$$</div>
-
+$$
+</div>
 
 <p>根据这个恒等式有</p>
 <div>
 $$
 (a \cdot \sigma)^2=\lvert a \rvert^2
 \tag{13}
-$$</div>
-
+$$
+</div>
 
 <p>我们将偶数次幂的和与奇数次幂的和分开，</p>
 <div>
@@ -167,7 +171,8 @@ $$
 = \cos \lvert a \rvert -\mathrm{i} \cfrac{a \cdot \sigma}{\lvert a \rvert} \sin\lvert a \rvert
 \\\end{gathered}
 \tag{14}
-$$</div>
+$$
+</div>
 
 <p>上式出现 $a$ 的模长，为方便设 $a&#x3D;\alpha n$ ，其中 $\lvert n \rvert &#x3D; 1$ 。</p>
 <div>
@@ -175,7 +180,8 @@ $$
 \exp(-\mathrm{i} a \cdot \sigma)
 = \cos \alpha -\mathrm{i} n \cdot \sigma \sin \alpha
 \tag{15}
-$$</div>
+$$
+</div>
 
 <p>我们设</p>
 <div>
@@ -187,7 +193,8 @@ y = n_2\sin \alpha \\
 z = n_3\sin \alpha
 \end{cases}
 \tag{16}
-$$</div>
+$$
+</div>
 
 <p>那么 $t^2+x^2+y^2+z^2&#x3D;1$ ，且</p>
 <div>
@@ -195,7 +202,8 @@ $$
 \exp(-\mathrm{i} a \cdot \sigma)
 = t - \mathrm{i} (x\sigma_1 + y\sigma_2 + z\sigma_3)
 \tag{17}
-$$</div>
+$$
+</div>
 
 <p>于是 $SU(2)$ 群同胚于球面 $S^3$ 。</p>
 <h2 id="mathrm-SO-3"><a href="#mathrm-SO-3" class="headerlink" title="$\mathrm{SO}(3)$"></a>$\mathrm{SO}(3)$</h2><p>用类似的方法求李群生成元，设旋转矩阵 $R$ ，在单位矩阵附近展开：</p>
@@ -203,12 +211,14 @@ $$</div>
 $$
 R_{ij}=\delta_{ij}+w_{ij}
 \tag{18}
-$$</div></div><a class="article-more button is-small is-size-7" href="/2026/01/22/SU(2)%E5%92%8CSO(3)%E7%9A%84%E6%8C%87%E6%95%B0%E6%98%A0%E5%B0%84%E8%AE%A1%E7%AE%97/#more">阅读更多</a></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2025-11-11T08:24:59.000Z" title="2025/11/11 16:24:59">2025-11-11</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E6%95%B0%E5%AD%A6/">数学</a></span><span class="level-item">4 分钟读完 (大约621个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2025/11/11/%E7%BE%A4%E7%9A%84%E5%8D%8A%E7%9B%B4%E7%A7%AF/">群的半直积</a></p><div class="content"><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>群 $K$ 在 $H$ 上的作用</p>
+$$
+</div></div><a class="article-more button is-small is-size-7" href="/2026/01/22/SU(2)%E5%92%8CSO(3)%E7%9A%84%E6%8C%87%E6%95%B0%E6%98%A0%E5%B0%84%E8%AE%A1%E7%AE%97/#more">阅读更多</a></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2025-11-11T08:24:59.000Z" title="2025/11/11 16:24:59">2025-11-11</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E6%95%B0%E5%AD%A6/">数学</a></span><span class="level-item">4 分钟读完 (大约621个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2025/11/11/%E7%BE%A4%E7%9A%84%E5%8D%8A%E7%9B%B4%E7%A7%AF/">群的半直积</a></p><div class="content"><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>群 $K$ 在 $H$ 上的作用</p>
 <div>
 $$
 kh=\phi(k)(h)
 \tag{1}
-$$</div>
+$$
+</div>
 
 <p>其中 $\phi:K \to \operatorname{Aut}(H)$ 是群同态。</p>
 <p>证明其为群作用：</p>
@@ -219,14 +229,16 @@ e_Kh=\phi(e_K)(h)=h \\
 (k_1k_2)h=\phi(k_1k_2)(h)=\phi(k_1)\phi(k_2)(h)=k_1(k_2h)
 \\\end{gathered}
 \tag{2}
-$$</div>
+$$
+</div>
 
 <p>由此可以定义群的半直积 $G&#x3D;H \rtimes_{\phi}K$ ，乘法定义为</p>
 <div>
 $$
 (h_1,k_1)(h_2,k_2)=(h_1\phi(k_1)(h_2),k_1k_2)
 \tag{3}
-$$</div>
+$$
+</div>
 
 <p>下面证明其构成群。</p>
 <p>注意群 $G$ 在 $H$ 上的作用， $(h,k)h_0&#x3D;h\phi(k)(h_0)$ ，由此诱导出的群乘法</p>
@@ -241,14 +253,16 @@ $$
 =(h_1 \phi(k_1)(h_2), k_1k_2) \cdot h_0 \\
 \\\end{gathered}
 \tag{4}
-$$</div>
+$$
+</div>
 
 <p>因此群乘法定义</p>
 <div>
 $$
 (h_1,k_1)(h_2,k_2) = (h_1 \phi(k_1)(h_2), k_1k_2)
 \tag{5}
-$$</div>
+$$
+</div>
 
 <p>所以该群乘法满足结合律。</p>
 <p>存在单位元 $(e_H,e_K)$ ：</p>
@@ -259,7 +273,8 @@ $$
 (h,k)(e_H,e_K)=(h\phi(k)(e_H),ke_K)=(h,k) \\
 \\\end{gathered}
 \tag{6}
-$$</div>
+$$
+</div>
 
 <p>存在逆元 $(h,k)^{-1}&#x3D;(\phi(k^{-1})(h^{-1}),k^{-1})$ ：</p>
 <div>
@@ -273,7 +288,8 @@ $$
 =(e_H,e_K) \\
 \\\end{gathered}
 \tag{7}
-$$</div>
+$$
+</div>
 
 <h2 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h2><p>晶体群，点群 $R$ ，平移群 $t$ ，晶体群为 ${R,t}&#x3D;t \rtimes R$ </p>
 <h2 id="半直积性质"><a href="#半直积性质" class="headerlink" title="半直积性质"></a>半直积性质</h2><p> $\vert G\vert &#x3D;\vert H\vert \vert K\vert $ 。证明方法：存在集合 $H \times K$ 到群 $H \rtimes K$ 的双射 $h,k \to (h,k)$ </p>
@@ -287,7 +303,8 @@ $$
 (h_1\phi(k_1k_2^{-1})(h_2^{-1}),k_1k_2^{-1})=(e_H,e_K) \\
 \\\end{gathered}
 \tag{8}
-$$</div>
+$$
+</div>
 
 <p>于是有 $k_1k_2^{-1}&#x3D;e_K,h_1h_2^{-1}&#x3D;e_H$ ，所以 $h_1&#x3D;h_2,k_1&#x3D;k_2$ 。</p>
 <p> ${(h,e_K) \mid h\in H}$ 和 ${(e_H,k) \mid k\in K}$ 分别同构于 $H,K$ </p>
@@ -297,7 +314,8 @@ $$</div>
 $$
 (h_1,e_K)(h_2,e_K)=(h_1\phi(e_K)(h_2),e_K)=(h_1h_2,e_K)
 \tag{9}
-$$</div>
+$$
+</div>
 
 <p> $H \triangleleft G$ 。这个只需证明</p>
 <div>
@@ -308,8 +326,8 @@ $$
 =(\phi(k)(h),e_K)
 \\\end{gathered}
 \tag{10}
-$$</div>
-
+$$
+</div>
 
 
 <p> $H \cap K&#x3D;{(e_H,e_K)}$ 。显然。</p>
@@ -348,7 +366,8 @@ $$</div>
 $$
 \lvert X \rvert = \lvert X_G \rvert + \sum_{i} \lvert \mathcal{O}_{x_i} \rvert
 \tag{1}
-$$</div>
+$$
+</div>
 
 <p>其中指标 $i$ 遍历所有非平凡轨道， $x_i$ 为轨道 $\mathcal{O}_{x_i}$ 中的代表元素。</p>
 <p>接下来我们考虑群元的共轭， $(g, x) \mapsto gxg^{-1}$ 。此时不动点的集合为 $Z(G)&#x3D;{x \in G: \forall g \in G, xg&#x3D;gx}$ 称作中心，非平凡轨道为共轭类，稳定化子称为中心化子 $C(x_i)&#x3D;{g \in G: gx_i&#x3D;x_ig}$ ，类方程为</p>
@@ -356,7 +375,8 @@ $$</div>
 $$
 \lvert G \rvert = \lvert Z(G) \rvert + \sum_i [G:C(x_i)]
 \tag{2}
-$$</div>
+$$
+</div>
 
 <p>令 $[G:C(x_i)]&#x3D;n_i$ ，也写做 $\lvert G \rvert &#x3D; \lvert Z(G) \rvert + \sum_i n_i$ </p>
 <p>可以证明中心是正规子群。</p>
@@ -372,7 +392,8 @@ $$</div>
 $$
 g=g^{\sum_{i=1}^n a_ib_i}=\prod_{i=1}^n g^{a_ib_i}
 \tag{1}
-$$</div>
+$$
+</div>
 
 <p>因为 $(g^{a_ib_i})^{\beta_i}&#x3D;(g^{\lvert g \rvert})^{b_i}&#x3D;e$ ，因此 $g^{a_ib_i} \in G_i$ 。因为 $G$ 是阿贝尔群，所以为写成 $G_i$ 的内直积我们只需要证 $g$ 有唯一分解。</p>
 <p>设 $g&#x3D;\prod g_i&#x3D;\prod h_i,g_i \in G_i, h_i \in G_i$ 。有 $\prod g_i h_i^{-1}&#x3D;e, g_i h_i^{-1} \in G_i$ 。 $G_i$ 是 $p_i$ -群，因此 $g_ih_i^{-1}$ 的阶是 $p_i$ 的幂， $\prod g_i h_i^{-1}$ 的阶是所有 $g_ih_i^{-1}$ 的阶的最小公倍数，等于 $1$ （因为 $e$ 的阶为 $1$ ），所以 $\lvert g_i h_i^{-1} \rvert &#x3D; 1, g_i&#x3D;h_i$ 。</p>
@@ -393,7 +414,8 @@ $$</div>
 $$
 G \cong Z_{p_1^{\alpha_1}} \times Z_{p_2^{\alpha_2}} \times \dots \times Z_{p_n^{\alpha_n}}
 \tag{2}
-$$</div>
+$$
+</div>
 
 <p>其中 $p_i$ 为质数，且允许相等。</p>
 <h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><p>[1] Thomas W. Judson, Abstract Algebra: Theory and Applications</p>
@@ -402,7 +424,8 @@ $$</div>
 $$
 (h_1, k_1) \circ (h_2, k_2) = (h_1h_2, k_1k_2)
 \tag{1}
-$$</div>
+$$
+</div>
 
 <p>可验证其满足群的定义，单位元 $(e_1, e_2)$ （其中 $H,K$ 单位元分别为 $e_1,e_2$ ），逆元 $(h, k)^{-1}&#x3D;(h^{-1}, k^{-1})$ ，此外容易验证满足结合律。</p>
 <h2 id="内直积"><a href="#内直积" class="headerlink" title="内直积"></a>内直积</h2><p>如果群 $G$ 的两子群 $H,K$ 满足</p>
@@ -414,7 +437,8 @@ H \cap K = \{e\} \\
 H \triangleleft G, K \triangleleft G \\
 \end{cases}
 \tag{2}
-$$</div>
+$$
+</div>
 
 <p>则称 $G$ 等于 $H,K$ 的内直积， $G&#x3D;H \times K$ </p>
 <p>上面定义中第一条为集合的乘积， $HK &#x3D; {hk: h \in H, k \in K}$ </p>
@@ -433,7 +457,8 @@ khk^{-1}=h' \\
 h^{-1}kh=k' \\
 \\\end{gathered}
 \tag{3}
-$$</div>
+$$
+</div>
 
 <p>由此得</p>
 <div>
@@ -443,7 +468,8 @@ kh=h'k \\
 kh=hk' \\
 \\\end{gathered}
 \tag{4}
-$$</div>
+$$
+</div>
 
 <p>于是 $kh$ 存在两种分解 $h’k,hk’$ ，用上面证明的分解唯一性得到 $h’&#x3D;h,k’&#x3D;k$ ，所以 $kh&#x3D;hk$ 。</p>
 <h3 id="2"><a href="#2" class="headerlink" title="2"></a>2</h3><p>证明两条性质能推出定义。</p>
@@ -454,7 +480,8 @@ $$</div>
 $$
 ghg^{-1}=h'k'hk'^{-1}h'^{-1}=h'hh'^{-1} \in H
 \tag{5}
-$$</div>
+$$
+</div>
 
 <p>所以 $H \triangleleft G$ 。</p>
 <hr>
@@ -467,7 +494,8 @@ H \cap K = \{e\} \\
 H \triangleleft G, K \triangleleft G \\
 \end{cases}
 \tag{6}
-$$</div>
+$$
+</div>
 
 <p>我们证明从 $\lvert G \rvert&#x3D;\lvert H \rvert \lvert K \rvert,H \cap K &#x3D; {e}$ 可以推出 $G&#x3D;HK$ 。</p>
 <p>根据群的封闭性有 $HK \subseteq G$ ，下面证明不可能有 $HK \subsetneqq G$ ，于是就有 $HK&#x3D;G$ 。</p>
@@ -476,14 +504,16 @@ $$</div>
 $$
 H=\{h_i:i \in [0,\lvert H \rvert)\},K=\{k_j:j \in [0,\lvert K \rvert)\}
 \tag{7}
-$$</div>
+$$
+</div>
 
 <p>那么</p>
 <div>
 $$
 HK=\{h_ik_j:i \in [0,\lvert H \rvert),j \in [0,\lvert K \rvert)\}
 \tag{8}
-$$</div>
+$$
+</div>
 
 <p>假设 $h_ik_j&#x3D;h_mk_n$ ，根据 $H \cap K &#x3D; {e}$ 有 $h_m^{-1}h_i&#x3D;k_nk_j^{-1}&#x3D;e$ ，从而 $h_i&#x3D;h_m,k_j&#x3D;k_n$ ，所以 $HK$ 中无重复元素， $\lvert HK \rvert &#x3D; \lvert H \rvert \lvert K \rvert$ 。</p>
 <p>那么有 $\lvert HK \rvert &#x3D; \lvert G \rvert$ ，从而不可能有 $HK \subsetneqq G$ ，否则 $\lvert HK \rvert \lt  \lvert G \rvert$ ，所以 $HK&#x3D;G$ 。</p>
@@ -494,7 +524,8 @@ $$</div>
 $$
 \phi((h_1,k_1))\phi((h_2,k_2))=h_1k_1h_2k_2=h_1h_2k_1k_2=\phi((h_1h_2,k_1k_2))
 \tag{9}
-$$</div>
+$$
+</div>
 
 <p>所以内直积与外直积同构。</p>
 <h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><p>[1] <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/620893105">https://zhuanlan.zhihu.com/p/620893105</a></p>
@@ -515,14 +546,16 @@ g(a,b,c)=\begin{pmatrix}
 0 & 0 & 1 \\
 \end{pmatrix}
 \tag{1}
-$$</div>
+$$
+</div>
 
 <p>其中 $a,b,c \in Z_p$ 。群的乘法定义为矩阵乘法，计算得到</p>
 <div>
 $$
 g(a_1,b_1,c_1)g(a_2,b_2,c_2)=g(a_1+a_2,b_1+b_2+a_1c_2,c_1+c_2)
 \tag{2}
-$$</div>
+$$
+</div>
 
 <p>单位元为 $g(0,0,0)$ ，逆元为 $g(a,b,c)^{-1}&#x3D;g(-a,ac-b,-c)$ </p>
 <p>下面求中心。设 $g(a,b,c)$ 与任意的 $g(a’,b’,c’)$ 可交换。</p>
@@ -534,7 +567,8 @@ g(a+a',b+b'+ac',c+c')=g(a+a',b+b'+ac',c+c') \\
 ac'=a'c \mod p
 \\\end{gathered}
 \tag{3}
-$$</div>
+$$
+</div>
 
 <p>上式对任意 $a’,c’$ 成立，故 $a&#x3D;c&#x3D;0 \mod p$ ，中心为 $Z(G)&#x3D;{g(0,b,0),b\in Z_p}$ </p>
 <p>商群为 $G&#x2F;Z(G)&#x3D;{Z(G)g(a,0,c),a,c\in Z_p} \cong Z_p \times Z_p$ </p>
@@ -550,7 +584,8 @@ $$
 a^{n(1+p)^m}=a^{n+nmp}
 \\\end{gathered}
 \tag{4}
-$$</div>
+$$
+</div>
 
 <p>所以 $b^ma^n&#x3D;a^{n+nmp}b^m$ ， $G$ 群元恰好为 $a^m b^n, 0 \leq m \lt  p^2, 0 \leq n \lt  p$ ，由此得出 $G$ 的阶为 $p^3$ 。</p>
 <p>然后求 $G$ 的中心。设 $a^{m}b^{n}$ 与任意群元 $a^{m’}b^{n’}$ 交换，下面求 $m,n$ 需要满足的条件：</p>
@@ -563,7 +598,8 @@ a^{m+m'+nm'p}=a^{m'+m+n'mp} \\
 nm'p=n'mp \mod p^2
 \\\end{gathered}
 \tag{5}
-$$</div>
+$$
+</div>
 
 <p> $m’,n’$ 可以任取，我们取 $m’&#x3D;1,n’&#x3D;0$ 得到 $n&#x3D;0 \mod p$ ；取 $m’&#x3D;0,n’&#x3D;1$ 得到 $mp&#x3D;0 \mod p^2$ ，即 $m$ 为 $p$ 的倍数。于是得到中心为 $Z(G)&#x3D;\langle a^p \rangle$ ，商群为 $G&#x2F;Z(G)&#x3D;{Z(G)a^mb^n,0 \leq m,n \lt  p}\cong Z_p \times Z_p$ </p>
 <h2 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h2><p> $p^3$ 阶群在同构意义下有5个，其中3个阿贝尔群：</p>
@@ -579,7 +615,8 @@ $$</div>
 $$
 G/\ker \phi \cong \phi(G)
 \tag{1}
-$$</div>
+$$
+</div>
 
 <p>记 $H&#x3D;\ker \phi$ ，定义映射 $f:gH \to \phi(g)$ （用到核是正则子群的结论）。</p>
 <p>证 $f$ 良定义。 $\forall a,b \in G,aH&#x3D;bH,\exists h \in H,a&#x3D;bh, \phi(a)&#x3D;\phi(bh)&#x3D;\phi(b)\phi(h)&#x3D;\phi(b)$ ，所以 $f$ 良定义。其中根据核的定义有 $\phi(h)&#x3D;e$ 。</p>
@@ -612,7 +649,8 @@ h_1(H \cap N)h_2(H \cap N)=h_1h_2(H \cap N), \\
 \phi(h_1(H \cap N)h_2(H \cap N))=h_1h_2eN \\
 \\\end{gathered}
 \tag{2}
-$$</div>
+$$
+</div>
 
 <p>等式右边</p>
 <div>
@@ -621,7 +659,8 @@ $$
 =
 h_1eNh_2eN=h_1eh_2eN=h_1h_2eN
 \tag{3}
-$$</div>
+$$
+</div>
 
 <p>所以是群同态。</p>
 <p>映射是满射。由群的重排定理， $\forall hn \in HN, hnN&#x3D;hN&#x3D;heN$ ，所以映射是满射。</p>
@@ -633,7 +672,8 @@ $$</div>
 $$
 \lvert H \cap N \rvert = \cfrac{\lvert H \rvert \lvert N \rvert}{\lvert HN \rvert}
 \tag{4}
-$$</div>
+$$
+</div>
 
 <p>该定理还有另一个证法：定义 $\phi: h \to heN$ ，则 $\ker \phi &#x3D; H \cap N$ ，运用第一同构定理得 $H&#x2F;(H \cap N) \cong HN&#x2F;N$ </p>
 <h2 id="第三同构定理"><a href="#第三同构定理" class="headerlink" title="第三同构定理"></a>第三同构定理</h2><p>设 $N\triangleleft G,H\triangleleft G,N \subseteq H$ ，则 $(G&#x2F;N)&#x2F;(H&#x2F;N)\cong G&#x2F;H$ </p>
@@ -675,7 +715,8 @@ $$
 } \\
 \\\end{gathered}
 \tag{1}
-$$</div>
+$$
+</div>
 
 <p>四元数群： ${\pm 1, \pm \mathrm{i}, \pm \mathrm{j}, \pm \mathrm{k}}$ </p>
 <p>四元数有泡利矩阵表示：</p>
@@ -688,7 +729,8 @@ $$
 \mathrm{k} \to -\mathrm{i}\sigma_z \\
 \\\end{gathered}
 \tag{2}
-$$</div>
+$$
+</div>
 
 <p>其中左边的 $\mathrm{i}$ 是四元数单位，右边的 $\mathrm{i}$ 是复数单位。</p>
 <p>泡利矩阵是二阶复矩阵，其中的复数单位可以再次用上面的矩阵替换，于是得到四元数的四阶矩阵表示</p>
@@ -721,22 +763,24 @@ $$
 } \\
 \\\end{gathered}
 \tag{3}
-$$</div>
-
+$$
+</div>
 
 </div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2025-07-31T23:45:22.000Z" title="2025/8/1 07:45:22">2025-08-01</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E6%95%B0%E5%AD%A6/">数学</a></span><span class="level-item">几秒读完 (大约40个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2025/08/01/%E5%87%A0%E4%B8%AA%E7%BE%A4%E7%9A%84%E4%BA%A4%E6%8D%A2%E6%80%A7/">几个群的交换性</a></p><div class="content"><p>$S_n$ is nonabelian for $n \ge 3$ </p>
 <div>
 $$
 (12)(13) \ne (13)(12)
 \tag{1}
-$$</div>
+$$
+</div>
 
 <p> $A_n$ is nonabelian for $n \ge 4$ </p>
 <div>
 $$
 (234)(123) \ne (123)(234)
 \tag{2}
-$$</div>
+$$
+</div>
 
 <p> $D_n$ is nonabelian for $n \ge 3$ </p>
 <p> $r^n&#x3D;1,s^2&#x3D;1,srs&#x3D;r^{-1}$ </p>
@@ -744,7 +788,8 @@ $$</div>
 $$
 sr=r^{-1}s
 \tag{3}
-$$</div>
+$$
+</div>
 
 <p>For $n \ge 3$ , $r \ne r^{-1}$ </p>
 </div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2025-07-25T13:44:56.000Z" title="2025/7/25 21:44:56">2025-07-25</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E6%95%B0%E5%AD%A6/">数学</a></span><span class="level-item">9 分钟读完 (大约1422个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2025/07/25/%E4%B8%AD%E5%9B%BD%E5%89%A9%E4%BD%99%E3%80%81%E6%AC%A7%E6%8B%89%E5%87%BD%E6%95%B0%E5%8F%8A%E4%B8%80%E4%BA%9B%E6%95%B0%E8%AE%BA%E5%92%8C%E7%BE%A4%E8%AE%BA/">中国剩余、欧拉函数及一些数论和群论</a></p><div class="content"><h2 id="中国剩余定理"><a href="#中国剩余定理" class="headerlink" title="中国剩余定理"></a>中国剩余定理</h2><p>中国剩余定理：如果 $m_1,m_2,\dots,m_n$ 两两互素，则对于任意的 $a_1,a_2,\dots,a_n$ ，方程组</p>
@@ -757,7 +802,8 @@ x=a_2 \mod m_2 \\
 x=a_n \mod m_n \\
 \end{cases}
 \tag{1}
-$$</div>
+$$
+</div>
 
 <p>存在整数解，且在模 $N$ 的意义下唯一（ $N&#x3D;\prod_{k&#x3D;1}^n m_k$ ）</p>
 <p>证明：对任意 $1\le k \le n$ ，因为 $N&#x2F;m_k$ 和 $m_k$ 互素，所以 $N&#x2F;m_k$ 是 $Z_{m_k}$ 中单位元，记逆元为 $\left(\cfrac{N}{m_k}\right)_{m_k}$ ，可以构造解为</p>
@@ -765,7 +811,8 @@ $$</div>
 $$
 x=\sum_{k=1}^n a_k\cfrac{N}{m_k}\left(\cfrac{N}{m_k}\right)_{m_k}
 \tag{2}
-$$</div>
+$$
+</div>
 
 <p>假设存在两个解 $x,y$ ，则 $\forall k,x&#x3D;y\mod m_k$ ，因为 $m_1,m_2,\dots,m_n$ 两两互素，所以 $x&#x3D;y\mod N$ </p>
 <h2 id="单位群-U-n"><a href="#单位群-U-n" class="headerlink" title="单位群 $U_n$"></a>单位群 $U_n$</h2><p>群 $Z_n&#x3D;{0,1,2,\dots,n-1}$ 在加法操作下构成群，但在乘法下不构成群，因为 $0$ 没有逆元。我们将存在乘法逆元的单位（units）构成一集合，可以证明这是一个群，被称为模 $n$ 的单位群。</p>
@@ -774,7 +821,8 @@ $$</div>
 $$
 (b^{-1}a^{-1})ab=1,ab(b^{-1}a^{-1})=1
 \tag{3}
-$$</div>
+$$
+</div>
 
 <p>所以 $ab$ 也为单位，加上显然任意元素的逆元也是单位、存在群单位元 $1$ ，所以构成群，记为 $U_n$ 。</p>
 <p> $a$ 是单位当且仅当 $\gcd(a,n)&#x3D;1$ 。如果 $a$ 存在乘法逆元则 $\exists m,aa^{-1}+mn&#x3D;1$ ，于是 $\gcd(a, n)&#x3D;1$ 。如果 $\gcd(a,n)&#x3D;1$ 则 $\exists k,m,\mathrm{s.t.}, ka+mn&#x3D;1$ ，那么 $k$ 就是 $a$ 的乘法逆元。</p>
@@ -783,21 +831,24 @@ $$</div>
 $$
 a^{\phi(n)}=1 \mod n \, ,\gcd(a,n)=1
 \tag{4}
-$$</div>
+$$
+</div>
 
 <p>对于 $n&#x3D;p$ 为质数的特殊情形， $\phi(p)&#x3D;p-1$ ，</p>
 <div>
 $$
 a^{p-1}=1 \mod p
 \tag{5}
-$$</div>
+$$
+</div>
 
 <p>下面对任意正整数计算 $\phi(n)$ 。首先对于 $p^k$ （ $p$ 为质数），直接考虑 $Z_n$ 中和 $p^k$ 互质的个数，</p>
 <div>
 $$
 \phi(p^k)=(p^k-1)-(p^{k-1}-1)=p^k\left(1-\cfrac{1}{p}\right)
 \tag{6}
-$$</div>
+$$
+</div>
 
 <p>运用中国剩余定理我们可以证明对于互素的 $m,n$ ， $\phi(mn)&#x3D;\phi(m)\phi(n)$ </p>
 <p>只需要证 $U_m \times U_n \cong U_{mn}$ 。 $\forall p\in U_m,q\in U_n$ ，根据中国剩余定理，</p>
@@ -808,7 +859,8 @@ t=p\mod m \\
 t=q\mod n
 \end{cases}
 \tag{7}
-$$</div>
+$$
+</div>
 
 <p>存在唯一的 $t\in U_{mn}$ 。对于 $\forall t\in U_{mn}$ ，因为 $\gcd(t,mn)&#x3D;1$ 且 $m,n$ 互素，所以 $\gcd(t,m)&#x3D;1,\gcd(t,n)&#x3D;1$ ，设 $t$ 模 $m,n$ 分别为 $p,q$ ，则 $p\in U_m,q\in U_n$ </p>
 <p>所以 $U_m \times U_n \cong U_{mn}$ ，因此 $\phi(mn)&#x3D;\phi(m)\phi(n)$ </p>
@@ -817,15 +869,15 @@ $$</div>
 $$
 \phi(n)=\prod_{i=1}^m \phi(p_{i}^{k_{i}})=n\prod_{i=1}^m \left(1-\cfrac{1}{p_i}\right)
 \tag{8}
-$$</div>
-
+$$
+</div>
 
 <h2 id="Wilson定理"><a href="#Wilson定理" class="headerlink" title="Wilson定理"></a>Wilson定理</h2><div>
 $$
 (p-1)!=-1\mod p
 \tag{9}
-$$</div>
-
+$$
+</div>
 
 <p>当且仅当 $p$ 是质数。</p>
 <p> $p&#x3D;2$ 显然。 $p\ne 2$ 时考虑 $U_n$ 中二阶元（逆是自身），它们是如下方程的解</p>
@@ -836,21 +888,24 @@ x^2=1\mod p \\
 (x-1)(x+1)=0\mod p \\
 \\\end{gathered}
 \tag{10}
-$$</div>
+$$
+</div>
 
 <p>因为 $p$ 是质数，所以 $x&#x3D;1,p-1$ 。除此之外其他的单位可以两两配对，乘积为 $1$ ，所以</p>
 <div>
 $$
 (p-1)!=1 \times (p-1)=-1 \mod p
 \tag{11}
-$$</div>
+$$
+</div>
 
 <p>假设 $p$ 不是质数：先设 $p&#x3D;ab,1\lt a\lt b\lt p$ ，则</p>
 <div>
 $$
 (p-1)!=1 \dots  a \dots b \dots (p-1)=0 \mod p
 \tag{12}
-$$</div>
+$$
+</div>
 
 <p>再设 $p&#x3D;q^2,q\gt 2$ 。此时 $(p-1)!$ 中包含 $q,2q$ ，所以 $(p-1)!&#x3D;0 \mod p$ </p>
 <p>最后， $p&#x3D;4$ ，此时 $(p-1)!&#x3D;2 \mod p$ </p>
@@ -865,7 +920,8 @@ $$
 = n \\
 \\\end{gathered}
 \tag{13}
-$$</div>
+$$
+</div>
 
 <p>其中根据归纳假设， $k&#x3D;\sum_{d’ \mid k} \phi(d’)$ 。所以该结论成立。</p>
 <h2 id="循环群"><a href="#循环群" class="headerlink" title="循环群"></a>循环群</h2><p>当 $m,n$ 互质时， $Z_m\times Z_n\cong Z_{mn}$ 。假设 $Z_m,Z_n$ 的生成元分别为 $a,b$ 。</p>
@@ -876,7 +932,8 @@ Z_m=\left\lt a\right\gt ,Z_n=\left\lt b\right\gt  \\
 Z_m \times Z_n=\{(a^i,b^j),i\lt m,j\lt n\} \\
 \\\end{gathered}
 \tag{14}
-$$</div>
+$$
+</div>
 
 <p>我们取 $\hat{c}&#x3D;(a,b) \in Z_m \times Z_n$ ，下面我们证明 $Z_m \times Z_n$ 是由 $\hat{c}$ 生成的循环群。</p>
 <p> $\forall i\lt m,j\lt n$ ，由中国剩余定理，存在 $k$ 满足下方程</p>
@@ -887,7 +944,8 @@ k=i \mod m \\
 k=j \mod n \\
 \end{cases}
 \tag{15}
-$$</div>
+$$
+</div>
 
 <p>所以 $\forall i\lt m,j\lt n,\exists k,(a^i,b^j)&#x3D;(a,b)^k&#x3D;\hat{c}^k$ </p>
 <p>所以当 $m,n$ 互质时， $Z_m\times Z_n\cong Z_{mn}$ </p>
@@ -896,7 +954,8 @@ $$</div>
 $$
 Z_n \cong \prod_{i=1}^m Z_{p_{i}^{k_{i}}}
 \tag{16}
-$$</div>
+$$
+</div>
 
 <p>对于素数幂阶循环群，幂次大于 $1$ 的不能进一步分解，因为分解的直积的群元至多是 $p$ 阶的。比如 $Z_{p^3}$ ， $Z_p\times Z_p\times Z_p,Z_p\times Z_{p^2}$ 中不存在 $p^3$ 阶元。</p>
 <h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><p>[1] <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/600282116">https://zhuanlan.zhihu.com/p/600282116</a></p>

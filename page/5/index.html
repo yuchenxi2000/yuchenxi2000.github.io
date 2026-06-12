@@ -36,22 +36,24 @@
 $$
 H = \sum_i E_i c_i^\dagger c_i
 \tag{1}
-$$</div>
-
+$$
+</div>
 
 <p>某个态 $i$ 的占据数算符</p>
 <div>
 $$
 N_i = c_i^\dagger c_i
 \tag{2}
-$$</div>
+$$
+</div>
 
 <p>总粒子数算符</p>
 <div>
 $$
 N=\sum_i c_i^\dagger c_i
 \tag{3}
-$$</div>
+$$
+</div>
 
 <p>占据数算符在巨正则系综下的统计平均</p>
 <div>
@@ -62,7 +64,8 @@ $$
 = -\cfrac{1}{\beta} \cfrac{\partial}{\partial E_i} \ln \operatorname{Tr} \left[e^{-\beta (H - \mu N)}\right]
 \\\end{gathered}
 \tag{4}
-$$</div>
+$$
+</div>
 
 <p>其中 $\braket{N_i}$ 表示在平衡态下的平均值。我们选择巨正则系综，因为在该系综下计算最为简便。下面将看到，在巨正则系综下迹能分解成两项之积，其中较复杂的一项与 $E_i$ 无关，因此简化了计算。</p>
 <h2 id="费米子"><a href="#费米子" class="headerlink" title="费米子"></a>费米子</h2><p>由费米子的泡利不相容原理，将迹的每一项分成第 $i$ 个态占据和不占据两类，于是有下式</p>
@@ -70,8 +73,8 @@ $$</div>
 $$
 \operatorname{Tr} \left[e^{-\beta(H - \mu N)}\right] = \left[1 + e^{-\beta(E_i - \mu)}\right] \operatorname{Tr}\left\{e^{-\beta[H-E_i c_i^\dagger c_i - \mu (N-c_i^\dagger c_i)]}\right\}
 \tag{5}
-$$</div>
-
+$$
+</div>
 
 <p>其中右边乘积的第二项意义为除去第 $i$ 个能级的体系的配分函数，取对数后它对 $E_i$ 的导数为 $0$ 。</p>
 <p>因为</p>
@@ -83,14 +86,16 @@ $$
 = \cfrac{-\beta}{e^{\beta(E_i-\mu)} + 1}
 \\\end{gathered}
 \tag{6}
-$$</div>
+$$
+</div>
 
 <p>所以有</p>
 <div>
 $$
 \braket{N_i} = \cfrac{1}{e^{\beta(E_i-\mu)} + 1}
 \tag{7}
-$$</div>
+$$
+</div>
 
 <p>此即费米-狄拉克分布。</p>
 <h2 id="玻色子"><a href="#玻色子" class="headerlink" title="玻色子"></a>玻色子</h2><p>与费米子不同，玻色子在一个能级上能有任意数目的占据，因此我们将迹的每一项分成第 $i$ 个态占据数为 $j$ 的项之和，再利用等差数列级数求和，于是有下式</p>
@@ -101,7 +106,8 @@ $$
 = \cfrac{1}{1 - e^{-\beta(E_i - \mu)}} \operatorname{Tr}\left\{e^{-\beta[H-E_i c_i^\dagger c_i - \mu (N-c_i^\dagger c_i)]}\right\}
 \\\end{gathered}
 \tag{8}
-$$</div>
+$$
+</div>
 
 <p>第二项意义仍为除去第 $i$ 个能级的体系的配分函数。</p></div><a class="article-more button is-small is-size-7" href="/2025/12/09/%E8%B4%B9%E7%B1%B3%E5%AD%90%E5%92%8C%E6%B3%A2%E8%89%B2%E5%AD%90%E7%9A%84%E7%BB%9F%E8%AE%A1%E5%88%86%E5%B8%83%EF%BC%88%E4%BA%8C%EF%BC%89/#more">阅读更多</a></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2025-11-25T05:10:26.000Z" title="2025/11/25 13:10:26">2025-11-25</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E7%89%A9%E7%90%86/">物理</a></span><span class="level-item">9 分钟读完 (大约1322个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2025/11/25/Hatree%E3%80%81Fock%E3%80%81BCS%E5%B9%B3%E5%9D%87%E5%9C%BA%E8%BF%91%E4%BC%BC/">Hatree、Fock、BCS平均场近似</a></p><div class="content"><p>该笔记主要内容是对 <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/613087754">https://zhuanlan.zhihu.com/p/613087754</a> 中相关推导的注解。</p>
 <p>费米子产生、湮灭算符 $c_i^\dagger, c_i$ ，体系哈密顿量：</p>
@@ -109,8 +115,8 @@ $$</div>
 $$
 H = \sum_{i} E_{i} c_i^\dagger c_i + \frac{1}{2} \sum_{ij} V_{ij} c_i^\dagger c_j^\dagger c_j c_i
 \tag{1}
-$$</div>
-
+$$
+</div>
 
 <p>其中 $V_{ii}&#x3D;0,V_{ij}&#x3D;V_{ji}$ 。</p>
 <p> $H_0 &#x3D; E_i c_i^\dagger c_i$ 容易通过独立粒子处理，剩下的相互作用难以处理，需要近似。</p>
@@ -125,8 +131,8 @@ A_i^\dagger A_j \\
 = \braket{A_j} A_i^\dagger + \braket{A_i^\dagger} A_j - \braket{A_i^\dagger} \braket{A_j}
 \\\end{gathered}
 \tag{2}
-$$</div>
-
+$$
+</div>
 
 <p>对于相互作用项 $\frac{1}{2} V_{ij} c_i^\dagger c_j^\dagger c_j c_i$ ，有三种方法选择 $A$ ：</p>
 <ol>
@@ -141,8 +147,8 @@ $$</div>
 $$
 \rho = \cfrac{e^{-\beta H}}{\operatorname{Tr}(e^{-\beta H})}
 \tag{3}
-$$</div>
-
+$$
+</div>
 
 <p>自由能：</p>
 <div>
@@ -154,8 +160,8 @@ F = E - TS\\
 = -kT\ln \operatorname{Tr}(e^{-\beta H})
 \\\end{gathered}
 \tag{4}
-$$</div>
-
+$$
+</div>
 
 <p>推导中我们用到了矩阵的对数的如下性质</p>
 <div>
@@ -167,8 +173,8 @@ e^{\ln A + I \ln c} = e^{\ln A} e^{I \ln c} = cA \\
 \ln A+cI=\ln (cA) \\
 \\\end{gathered}
 \tag{5}
-$$</div>
-
+$$
+</div>
 
 <p>我们采用平均场近似，设相应的序参量为 $X$ ，平均场哈密顿量为 $H_{MF}&#x3D;H_0+\lambda X$ </p>
 <div>
@@ -180,8 +186,8 @@ $$
 = \braket{X}_{MF}
 \\\end{gathered}
 \tag{6}
-$$</div>
-
+$$
+</div>
 
 <p>下式的推导中，注意我们始终在平均场的基态下计算，因此不论对于真实哈密顿量还是平均场哈密顿量，它们的熵都是相等的（因为熵只与基态相关），因此自由能之差的期望值就是能量之差的期望。</p>
 <div>
@@ -191,8 +197,8 @@ $$
 = \cfrac{\partial}{\partial \lambda} \braket{V_{int}}_{MF} - \cfrac{\partial}{\partial \lambda} \braket{\lambda X}_{MF} \\
 \\\end{gathered}
 \tag{7}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
@@ -203,16 +209,16 @@ $$
 = \braket{X}_{MF} + \lambda \cfrac{\partial}{\partial \lambda} \braket{X}_{MF}
 \\\end{gathered}
 \tag{8}
-$$</div>
-
+$$
+</div>
 
 <p>我们要求自由能对参数的变分为零：</p>
 <div>
 $$
 \cfrac{\partial F}{\partial \lambda} = 0
 \tag{9}
-$$</div>
-
+$$
+</div>
 
 <p>得到使得自由能最小化的 $\lambda$ ：</p>
 <div>
@@ -222,23 +228,23 @@ $$
 \lambda = \cfrac{\partial \braket{V_{int}}_{MF}}{\partial \braket{X}_{MF}} \\
 \\\end{gathered}
 \tag{10}
-$$</div>
-
+$$
+</div>
 
 <p>对于多个序参量情形，上述推导需要做如下修改：</p>
 <div>
 $$
 H = H_0 + \lambda_k X_k
 \tag{11}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
 \cfrac{\partial F_{MF}}{\partial \lambda_k} = \braket{X_k}_{MF}
 \tag{12}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
@@ -246,8 +252,8 @@ $$
 \cfrac{\partial}{\partial \lambda_k} (F-F_{MF}) = \cfrac{\partial}{\partial \lambda_k} \braket{V_{int}}_{MF} - \cfrac{\partial}{\partial \lambda_k} \braket{\lambda_l X_l}_{MF} \\
 \\\end{gathered}
 \tag{13}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
@@ -258,15 +264,15 @@ $$
 = \braket{X_k}_{MF} + \lambda_l \cfrac{\partial}{\partial \lambda_k} \braket{X_l}_{MF}
 \\\end{gathered}
 \tag{14}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
 -\braket{X_k}_{MF} = \cfrac{\partial}{\partial \lambda_k} \braket{V_{int}}_{MF} - \braket{X_k}_{MF} - \lambda_l \cfrac{\partial}{\partial \lambda_k} \braket{X_l}_{MF}
 \tag{15}
-$$</div>
-
+$$
+</div>
 
 
 <div>
@@ -276,8 +282,8 @@ $$
 \lambda_l = \cfrac{\partial \braket{V_{int}}_{MF}}{\partial \braket{X_l}_{MF}} \\
 \\\end{gathered}
 \tag{16}
-$$</div>
-
+$$
+</div>
 
 
 <p>对于最开始列出的相互作用，计算其平均场下期望，运用Wick’s theorem（证明参考<a href="/2025/12/09/%E6%9C%89%E9%99%90%E6%B8%A9%E5%BA%A6%E4%B8%8BWick%E5%AE%9A%E7%90%86/" title="有限温度下Wick定理">有限温度下Wick定理</a>）：</p>
@@ -288,8 +294,8 @@ $$
 = \braket{c_i^\dagger c_j^\dagger}_{MF} \braket{c_j c_i}_{MF} - \braket{c_i^\dagger c_j}_{MF} \braket{c_j^\dagger c_i}_{MF} + \braket{c_i^\dagger c_i}_{MF} \braket{c_j^\dagger c_j}_{MF}
 \\\end{gathered}
 \tag{17}
-$$</div>
-
+$$
+</div>
 
 <p>由此可求出平均场的各系数，得到平均场近似哈密顿量</p>
 <div>
@@ -299,7 +305,8 @@ H_{MF} = H_0 + H_{H} + H_{F} + H_{BCS} \\
 = H_0 + \sum_{j} \lambda_{j}^H c_j^\dagger c_j + \sum_{ij} \lambda_{ij}^F c_i^\dagger c_j + \sum_{ij} \left( \lambda_{ij}^{BCS} c_i^\dagger c_j^\dagger + \overline{\lambda}_{ij}^{BCS} c_j c_i \right)
 \\\end{gathered}
 \tag{18}
-$$</div>
+$$
+</div>
 
 <p>其中</p>
 <div>
@@ -311,8 +318,8 @@ $$
 \overline{\lambda}_{ij}^{BCS} = \frac{1}{2} V_{ij} \braket{c_i^\dagger c_j^\dagger}_{MF} \\
 \\\end{gathered}
 \tag{19}
-$$</div>
-
+$$
+</div>
 
 </div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2025-11-18T07:10:13.000Z" title="2025/11/18 15:10:13">2025-11-18</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E9%9F%B3%E4%B9%90/">音乐</a></span><span class="level-item">10 分钟读完 (大约1499个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2025/11/18/%E4%BA%A8%E5%BE%B7%E5%B0%94%E7%9A%84%E9%94%AE%E7%9B%98%E4%B9%90%E6%9B%B2%EF%BC%9A%E8%A2%AB%E5%BF%BD%E8%A7%86%E7%9A%84%E8%89%BA%E6%9C%AF%E5%AE%9D%E5%BA%93/">亨德尔的键盘乐曲：被忽视的艺术宝库</a></p><div class="content"><p>对于多数钢琴演奏者而言，巴赫可能是也是唯一一位被人们所熟知的巴洛克大师。而同时期的另一位巴洛克大师——亨德尔却一直缺席，可能因为他的成名曲多为乐队所作，如弥赛亚（其中的哈利路亚）和水上音乐、皇家焰火音乐。我至今还记得初中音乐课上听到的水上音乐，其中的第二首中的Rigaudon给我留下了深刻印象以至于十年后还能回忆起在音乐教室里听这首曲子的下午，那是在一切为了升学的时光里为数不多的慰藉了。然而，亨德尔的键盘音乐少为人所知，可能因为没有像巴赫一样严谨，堪称典型的对位技巧，也可能巴赫主要成就在键盘音乐，所以成了典型代表。如果深入了解巴赫的音乐后，偶然聆听亨德尔的键盘乐曲，会有耳目一新的感觉，尤其是他的赋格与巴赫的赋格的对比，会感叹到原来赋格也能如此自由。比如八大组曲（HWV426-433）里的HWV427的最后一首Allegro，HWV429的Allegro，以及HWV433的Allegro。（虽然标题是Allegro，但我觉得它们更像赋格）所谓巴洛克组曲，就是多种巴洛克舞曲的集合，当然也包括由于路易十四流行起来的法国序曲等。这些舞曲一般有着一定的编排方式，比如Allemande一般在最前面，后面可能跟着Courante，然后是Sarabande，而Gigue一般在最后头。也有在Allemande前面加Prelude的情形，总之它有一定的结构，但也有作曲家自由发挥的成分。最为大众熟知的可能是巴赫的法国组曲BWV中的Allemande，因为它是当年七级考级曲目（我跳级了没考【滑稽】），甚至钢琴老师翻到这首时感叹听得耳朵要起茧了。除了法国组曲，巴赫还有英国组曲、德国组曲（帕蒂塔）这几套巴洛克组曲。弹多了巴赫的组曲，难免感到有些无聊，可能就像油管评论区所说的“亨德尔的音乐为国王而作，但巴赫的音乐为上帝而作”。在我看来，这未必是抬高巴赫的成就，反而是生动地阐明了两人不同的风格：巴赫常年任教堂的管风琴师，所以作品更倾向于表现宗教的精神；而亨德尔是英国皇家歌剧院总监，因此相比之下作品更有烟火味，或者用中国的话说有“乡土气息”。此外我个人感觉亨德尔的巴洛克舞曲更有巴洛克的味道，因为巴洛克舞曲本来就起源于民间舞蹈，自然需要展现那个时代民众的精神风貌。巴赫作品的人性光辉则藏于严谨的结构之中，典型的例子是他的法国组曲、英国组曲与帕蒂塔。个人感受是英国组曲是相对来说最难理解的，法国组曲是最容易理解的，帕蒂塔其次。我问了deepseek，它分析说英国组曲追求的是宏大的结构与严谨的复调，更加抽象，因此更难懂。帕蒂塔相对好些，然而对比起其他作曲家还是有些抽象了。比如演奏这些作品，在一开始没什么感受，甚至一度在意技巧的表达细节，但整套组曲演奏过半时就不自觉地代入其中，有时演奏完全曲会有种怅然若失的感觉。同样适用于哥德堡变奏曲，典型地越弹&#x2F;听越兴奋的，不知道为什么被传成了助眠曲，听着越来越兴奋，是怎么睡得着的。另外一个区别比较大的点是，亨德尔的组曲更多契合羽管键琴的发声方式，很多装饰音的表达需要参考羽管键琴的演绎版本。他的一些舞曲相比巴赫的看起来比较“素”，那是因为有很多是给装饰音留的空隙，需要按自己的理解加入装饰音替补空白。这条同样适用其他巴洛克时期的作品，巴洛克音乐并不机械、古板，有着很多自由发挥的空间。在听相关演出时，经常因为听到独特的装饰音而感动，瞬间有一种发现新天地的感觉。对于亨德尔的一些巴洛克舞曲，装饰音本身已成为乐曲有机的一部分，展现着独属于巴洛克的华丽的风格，也表现出演奏者独特的审美品味。<br>以上为个人体验，本人不可能也没时间研究相关文献，如果有出入以专业人士为准。关于亨德尔的键盘乐曲，在此推荐一些容易上手聆听的作品供参考。首先是八大组曲HWV426-433。其中比较容易理解的有HWV432的Passacaglia，HWV428的Air and 5 variations，HWV430的Air and variations。然后是Chaconne（恰空舞曲），HWV435以及HWV485。还有其他组曲，比较短小的有HWV452，HWV447，HWV440，HWV436的最后一首Minuet。以及HWV441的Courante和Gigue。</p>
 </div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2025-11-15T14:03:48.000Z" title="2025/11/15 22:03:48">2025-11-15</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E7%89%A9%E7%90%86/">物理</a></span><span class="level-item">8 分钟读完 (大约1216个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2025/11/15/%E5%B8%83%E9%87%8C%E6%B8%8A%E5%8C%BA/">布里渊区</a></p><div class="content"><p>由Bloch定理，波函数具有如下形式，其中 $u(x)$ 为周期函数</p>
@@ -320,7 +327,8 @@ $$</div>
 $$
 \exp(\mathrm{i}k \cdot x)u(x)
 \tag{1}
-$$</div>
+$$
+</div>
 
 <p>考虑使得波函数不变（可以差一个相因子）的平移变换</p>
 <div>
@@ -329,15 +337,16 @@ $$
 \exp[\mathrm{i}(k+K) \cdot x] = \exp(\mathrm{i}k \cdot x) \exp(\mathrm{i}K \cdot x) \\
 \\\end{gathered}
 \tag{2}
-$$</div>
+$$
+</div>
 
 <p>我们要求 $\exp(\mathrm{i}K \cdot x)$ 也是周期函数。假设Bravais格子为 $N_1R_1 + N_2R_2 + N_3R_3$ 。由此可以求出矢量 $K$ 的一组基矢（倒空间基矢）：</p>
 <div>
 $$
 K_k = 2 \pi \cdot \cfrac{1}{2} \varepsilon_{ijk} \cfrac{R_i \times R_j}{\det(R)}
 \tag{3}
-$$</div>
-
+$$
+</div>
 
 <blockquote>
 <p>注：上式中1&#x2F;2因子是由于置换符号 $\varepsilon$ 的性质，当我们交换指标i,j时，置换符号取反，后面的叉乘也取反，所以整体乘上2</p>
@@ -353,7 +362,8 @@ R_2=(0,a,0) \\
 R_3=(0,0,a) \\
 \\\end{gathered}
 \tag{4}
-$$</div>
+$$
+</div>
 
 <p>体积 $a^3$ 。</p>
 <p>倒空间基矢，仍为简单立方</p>
@@ -365,7 +375,8 @@ K_2=\cfrac{2\pi}{a}(0,1,0) \\
 K_3=\cfrac{2\pi}{a}(0,0,1) \\
 \\\end{gathered}
 \tag{5}
-$$</div>
+$$
+</div>
 
 <p>布里渊区就是边长为 $2\pi&#x2F;a$ 的立方体，体积 $8\pi^3&#x2F;a^3$ 。</p>
 <h2 id="面心立方（FCC）"><a href="#面心立方（FCC）" class="headerlink" title="面心立方（FCC）"></a>面心立方（FCC）</h2><p>晶格矢量</p>
@@ -377,7 +388,8 @@ R_2=(a/2,0,a/2) \\
 R_3=(a/2,a/2,0) \\
 \\\end{gathered}
 \tag{6}
-$$</div>
+$$
+</div>
 
 <p>体积 $a^3&#x2F;4$ 。</p>
 <p>倒空间基矢，由此可见倒空间格子为体心立方（BCC）</p></div><a class="article-more button is-small is-size-7" href="/2025/11/15/%E5%B8%83%E9%87%8C%E6%B8%8A%E5%8C%BA/#more">阅读更多</a></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2025-11-11T08:24:59.000Z" title="2025/11/11 16:24:59">2025-11-11</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E6%95%B0%E5%AD%A6/">数学</a></span><span class="level-item">4 分钟读完 (大约621个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2025/11/11/%E7%BE%A4%E7%9A%84%E5%8D%8A%E7%9B%B4%E7%A7%AF/">群的半直积</a></p><div class="content"><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>群 $K$ 在 $H$ 上的作用</p>
@@ -385,7 +397,8 @@ $$</div>
 $$
 kh=\phi(k)(h)
 \tag{1}
-$$</div>
+$$
+</div>
 
 <p>其中 $\phi:K \to \operatorname{Aut}(H)$ 是群同态。</p>
 <p>证明其为群作用：</p>
@@ -396,14 +409,16 @@ e_Kh=\phi(e_K)(h)=h \\
 (k_1k_2)h=\phi(k_1k_2)(h)=\phi(k_1)\phi(k_2)(h)=k_1(k_2h)
 \\\end{gathered}
 \tag{2}
-$$</div>
+$$
+</div>
 
 <p>由此可以定义群的半直积 $G&#x3D;H \rtimes_{\phi}K$ ，乘法定义为</p>
 <div>
 $$
 (h_1,k_1)(h_2,k_2)=(h_1\phi(k_1)(h_2),k_1k_2)
 \tag{3}
-$$</div>
+$$
+</div>
 
 <p>下面证明其构成群。</p>
 <p>注意群 $G$ 在 $H$ 上的作用， $(h,k)h_0&#x3D;h\phi(k)(h_0)$ ，由此诱导出的群乘法</p>
@@ -418,14 +433,16 @@ $$
 =(h_1 \phi(k_1)(h_2), k_1k_2) \cdot h_0 \\
 \\\end{gathered}
 \tag{4}
-$$</div>
+$$
+</div>
 
 <p>因此群乘法定义</p>
 <div>
 $$
 (h_1,k_1)(h_2,k_2) = (h_1 \phi(k_1)(h_2), k_1k_2)
 \tag{5}
-$$</div>
+$$
+</div>
 
 <p>所以该群乘法满足结合律。</p>
 <p>存在单位元 $(e_H,e_K)$ ：</p>
@@ -436,7 +453,8 @@ $$
 (h,k)(e_H,e_K)=(h\phi(k)(e_H),ke_K)=(h,k) \\
 \\\end{gathered}
 \tag{6}
-$$</div>
+$$
+</div>
 
 <p>存在逆元 $(h,k)^{-1}&#x3D;(\phi(k^{-1})(h^{-1}),k^{-1})$ ：</p>
 <div>
@@ -450,7 +468,8 @@ $$
 =(e_H,e_K) \\
 \\\end{gathered}
 \tag{7}
-$$</div>
+$$
+</div>
 
 <h2 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h2><p>晶体群，点群 $R$ ，平移群 $t$ ，晶体群为 ${R,t}&#x3D;t \rtimes R$ </p>
 <h2 id="半直积性质"><a href="#半直积性质" class="headerlink" title="半直积性质"></a>半直积性质</h2><p> $\vert G\vert &#x3D;\vert H\vert \vert K\vert $ 。证明方法：存在集合 $H \times K$ 到群 $H \rtimes K$ 的双射 $h,k \to (h,k)$ </p>
@@ -464,7 +483,8 @@ $$
 (h_1\phi(k_1k_2^{-1})(h_2^{-1}),k_1k_2^{-1})=(e_H,e_K) \\
 \\\end{gathered}
 \tag{8}
-$$</div>
+$$
+</div>
 
 <p>于是有 $k_1k_2^{-1}&#x3D;e_K,h_1h_2^{-1}&#x3D;e_H$ ，所以 $h_1&#x3D;h_2,k_1&#x3D;k_2$ 。</p>
 <p> ${(h,e_K) \mid h\in H}$ 和 ${(e_H,k) \mid k\in K}$ 分别同构于 $H,K$ </p>
@@ -474,7 +494,8 @@ $$</div>
 $$
 (h_1,e_K)(h_2,e_K)=(h_1\phi(e_K)(h_2),e_K)=(h_1h_2,e_K)
 \tag{9}
-$$</div>
+$$
+</div>
 
 <p> $H \triangleleft G$ 。这个只需证明</p>
 <div>
@@ -485,8 +506,8 @@ $$
 =(\phi(k)(h),e_K)
 \\\end{gathered}
 \tag{10}
-$$</div>
-
+$$
+</div>
 
 
 <p> $H \cap K&#x3D;{(e_H,e_K)}$ 。显然。</p>

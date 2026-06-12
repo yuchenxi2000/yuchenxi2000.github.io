@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>非平衡格林函数（三）：电流表达式推导 - YCX&#039;s Blog</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="YCX&#039;s Blog"><meta name="msapplication-TileImage" content="favicon.ico"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="YCX&#039;s Blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="本文是非平衡格林函数系列最后一篇，我们求解电流表达式。 电流表达式推导假设体系由有限的中心区和半无限、和中心区接触的电极构成。 从自能和格林函数的关系式出发（其中自能包括中心区相互作用和接触自能）  $$ G &amp;#x3D; G_0 + G_0 \Sigma G &amp;#x3D; G_0 + G \Sigma G_0 \tag{1} $$   其中 $ G_0 $ 可以认为是 $ \mathrm{i} \hbar \par"><meta property="og:type" content="blog"><meta property="og:title" content="非平衡格林函数（三）：电流表达式推导"><meta property="og:url" content="https://yuchenxi2000.github.io/2025/12/19/%E9%9D%9E%E5%B9%B3%E8%A1%A1%E6%A0%BC%E6%9E%97%E5%87%BD%E6%95%B0%EF%BC%88%E4%B8%89%EF%BC%89%EF%BC%9A%E7%94%B5%E6%B5%81%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%8E%A8%E5%AF%BC/"><meta property="og:site_name" content="YCX&#039;s Blog"><meta property="og:description" content="本文是非平衡格林函数系列最后一篇，我们求解电流表达式。 电流表达式推导假设体系由有限的中心区和半无限、和中心区接触的电极构成。 从自能和格林函数的关系式出发（其中自能包括中心区相互作用和接触自能）  $$ G &amp;#x3D; G_0 + G_0 \Sigma G &amp;#x3D; G_0 + G \Sigma G_0 \tag{1} $$   其中 $ G_0 $ 可以认为是 $ \mathrm{i} \hbar \par"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://yuchenxi2000.github.io/img/og_image.png"><meta property="article:published_time" content="2025-12-19T07:05:05.000Z"><meta property="article:modified_time" content="2026-04-03T14:05:07.560Z"><meta property="article:author" content="Chenxi Yu"><meta property="article:tag" content="物理"><meta property="article:tag" content="量子力学"><meta property="article:tag" content="NEGF"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://yuchenxi2000.github.io/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://yuchenxi2000.github.io/2025/12/19/%E9%9D%9E%E5%B9%B3%E8%A1%A1%E6%A0%BC%E6%9E%97%E5%87%BD%E6%95%B0%EF%BC%88%E4%B8%89%EF%BC%89%EF%BC%9A%E7%94%B5%E6%B5%81%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%8E%A8%E5%AF%BC/"},"headline":"非平衡格林函数（三）：电流表达式推导","image":["https://yuchenxi2000.github.io/img/og_image.png"],"datePublished":"2025-12-19T07:05:05.000Z","dateModified":"2026-04-03T14:05:07.560Z","author":{"@type":"Person","name":"Chenxi Yu"},"publisher":{"@type":"Organization","name":"YCX's Blog","logo":{"@type":"ImageObject","url":"https://yuchenxi2000.github.io/2025/12/19/%E9%9D%9E%E5%B9%B3%E8%A1%A1%E6%A0%BC%E6%9E%97%E5%87%BD%E6%95%B0%EF%BC%88%E4%B8%89%EF%BC%89%EF%BC%9A%E7%94%B5%E6%B5%81%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%8E%A8%E5%AF%BC/android-chrome-512x512.png"}},"description":"本文是非平衡格林函数系列最后一篇，我们求解电流表达式。 电流表达式推导假设体系由有限的中心区和半无限、和中心区接触的电极构成。 从自能和格林函数的关系式出发（其中自能包括中心区相互作用和接触自能）  $$ G &#x3D; G_0 + G_0 \\Sigma G &#x3D; G_0 + G \\Sigma G_0 \\tag{1} $$   其中 $ G_0 $ 可以认为是 $ \\mathrm{i} \\hbar \\par"}</script><link rel="canonical" href="https://yuchenxi2000.github.io/2025/12/19/%E9%9D%9E%E5%B9%B3%E8%A1%A1%E6%A0%BC%E6%9E%97%E5%87%BD%E6%95%B0%EF%BC%88%E4%B8%89%EF%BC%89%EF%BC%9A%E7%94%B5%E6%B5%81%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%8E%A8%E5%AF%BC/"><link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link data-pjax rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link data-pjax rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!--!--><!-- hexo injector head_end start --><script>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>非平衡格林函数（三）：电流表达式推导 - YCX&#039;s Blog</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="YCX&#039;s Blog"><meta name="msapplication-TileImage" content="favicon.ico"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="YCX&#039;s Blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="本文是非平衡格林函数系列最后一篇，我们求解电流表达式。 电流表达式推导假设体系由有限的中心区和半无限、和中心区接触的电极构成。 从自能和格林函数的关系式出发（其中自能包括中心区相互作用和接触自能）  $$ G &amp;#x3D; G_0 + G_0 \Sigma G &amp;#x3D; G_0 + G \Sigma G_0 \tag{1} $$   其中 $ G_0 $ 可以认为是 $ \mathrm{i} \hbar \par"><meta property="og:type" content="blog"><meta property="og:title" content="非平衡格林函数（三）：电流表达式推导"><meta property="og:url" content="https://yuchenxi2000.github.io/2025/12/19/%E9%9D%9E%E5%B9%B3%E8%A1%A1%E6%A0%BC%E6%9E%97%E5%87%BD%E6%95%B0%EF%BC%88%E4%B8%89%EF%BC%89%EF%BC%9A%E7%94%B5%E6%B5%81%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%8E%A8%E5%AF%BC/"><meta property="og:site_name" content="YCX&#039;s Blog"><meta property="og:description" content="本文是非平衡格林函数系列最后一篇，我们求解电流表达式。 电流表达式推导假设体系由有限的中心区和半无限、和中心区接触的电极构成。 从自能和格林函数的关系式出发（其中自能包括中心区相互作用和接触自能）  $$ G &amp;#x3D; G_0 + G_0 \Sigma G &amp;#x3D; G_0 + G \Sigma G_0 \tag{1} $$   其中 $ G_0 $ 可以认为是 $ \mathrm{i} \hbar \par"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://yuchenxi2000.github.io/img/og_image.png"><meta property="article:published_time" content="2025-12-19T07:05:05.000Z"><meta property="article:modified_time" content="2026-06-12T17:24:25.003Z"><meta property="article:author" content="Chenxi Yu"><meta property="article:tag" content="物理"><meta property="article:tag" content="量子力学"><meta property="article:tag" content="NEGF"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://yuchenxi2000.github.io/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://yuchenxi2000.github.io/2025/12/19/%E9%9D%9E%E5%B9%B3%E8%A1%A1%E6%A0%BC%E6%9E%97%E5%87%BD%E6%95%B0%EF%BC%88%E4%B8%89%EF%BC%89%EF%BC%9A%E7%94%B5%E6%B5%81%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%8E%A8%E5%AF%BC/"},"headline":"非平衡格林函数（三）：电流表达式推导","image":["https://yuchenxi2000.github.io/img/og_image.png"],"datePublished":"2025-12-19T07:05:05.000Z","dateModified":"2026-06-12T17:24:25.003Z","author":{"@type":"Person","name":"Chenxi Yu"},"publisher":{"@type":"Organization","name":"YCX's Blog","logo":{"@type":"ImageObject","url":"https://yuchenxi2000.github.io/2025/12/19/%E9%9D%9E%E5%B9%B3%E8%A1%A1%E6%A0%BC%E6%9E%97%E5%87%BD%E6%95%B0%EF%BC%88%E4%B8%89%EF%BC%89%EF%BC%9A%E7%94%B5%E6%B5%81%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%8E%A8%E5%AF%BC/android-chrome-512x512.png"}},"description":"本文是非平衡格林函数系列最后一篇，我们求解电流表达式。 电流表达式推导假设体系由有限的中心区和半无限、和中心区接触的电极构成。 从自能和格林函数的关系式出发（其中自能包括中心区相互作用和接触自能）  $$ G &#x3D; G_0 + G_0 \\Sigma G &#x3D; G_0 + G \\Sigma G_0 \\tag{1} $$   其中 $ G_0 $ 可以认为是 $ \\mathrm{i} \\hbar \\par"}</script><link rel="canonical" href="https://yuchenxi2000.github.io/2025/12/19/%E9%9D%9E%E5%B9%B3%E8%A1%A1%E6%A0%BC%E6%9E%97%E5%87%BD%E6%95%B0%EF%BC%88%E4%B8%89%EF%BC%89%EF%BC%9A%E7%94%B5%E6%B5%81%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%8E%A8%E5%AF%BC/"><link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link data-pjax rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link data-pjax rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!--!--><!-- hexo injector head_end start --><script>
   (function () {
       function switchTab() {
           if (!location.hash) {
@@ -36,8 +36,8 @@
 $$
 G = G_0 + G_0 \Sigma G = G_0 + G \Sigma G_0
 \tag{1}
-$$</div>
-
+$$
+</div>
 
 <p>其中 $ G_0 $ 可以认为是 $ \mathrm{i} \hbar \partial&#x2F;\partial t-H_0 $ 逆算符（作用在左边），或者 $ -\mathrm{i} \hbar \partial&#x2F;\partial t_0-H_0 $ 逆算符（作用在右边）。等式两边同时乘上 $ G_0 $ 的逆算符（一次左乘一次右乘），</p>
 <div>
@@ -47,15 +47,16 @@ $$
 -\mathrm{i} \hbar \cfrac{\partial}{\partial t_0} G(t, t_0)= G(t, t_0)H_0 + \delta(t-t_0) + G \Sigma \\
 \\\end{gathered}
 \tag{2}
-$$</div>
-
+$$
+</div>
 
 <p>其中 $ \Sigma G $ 的意义是</p>
 <div>
 $$
 \sum_k\int_C \Sigma_{ik}(t,\tau) G_{kj}(\tau,t_0) \, \mathrm{d} \tau
 \tag{3}
-$$</div>
+$$
+</div>
 
 <p>其中积分路径 $ C $ 表示一条从 $ t_0 $ 到 $ t $ 最后再回到 $ t_0 $ 的路径。</p>
 <p>下面的推导中都会将 $ \Sigma G $ 简写，最后才把它展开。</p>
@@ -67,8 +68,8 @@ $$
 \mathrm{i} \hbar (\cfrac{\partial}{\partial t}+\cfrac{\partial}{\partial t_0}) G(t, t_0)= H_0G(t, t_0)-G(t, t_0)H_0+\Sigma G-G \Sigma \\
 \\\end{gathered}
 \tag{4}
-$$</div>
-
+$$
+</div>
 
 <p>我们求lesser Green’s function，因为它和粒子数有关</p>
 <div>
@@ -77,8 +78,8 @@ $$
 \mathrm{i} \hbar (\cfrac{\partial}{\partial t}+\cfrac{\partial}{\partial t_0}) G^\lt (t, t_0)= H_0G^\lt (t, t_0)-G^\lt (t, t_0)H_0+(\Sigma G-G \Sigma)^\lt  \\
 \\\end{gathered}
 \tag{5}
-$$</div>
-
+$$
+</div>
 
 <p>（此即Kadanoff-Baym equation）</p>
 <p>中心区电子总数</p>
@@ -88,22 +89,23 @@ $$
 N = \sum_n \bra{\Phi}\psi_n^\dagger(t)\psi_n(t)\ket{\Phi} = -\mathrm{i} \hbar \mathrm{Tr} \, G^\lt (t,t) \\
 \\\end{gathered}
 \tag{6}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
 \cfrac{\partial N}{\partial t} = -\mathrm{Tr}\, \lim_{t \to t_0} \mathrm{i} \hbar (\cfrac{\partial}{\partial t}+\cfrac{\partial}{\partial t_0}) G^\lt (t, t_0)
 \tag{7}
-$$</div>
-
+$$
+</div>
 
 <p>中心区电子总数对时间的导数和流出中心区的电流的关系</p>
 <div>
 $$
 J = -e\cfrac{\partial N}{\partial t}
 \tag{8}
-$$</div>
+$$
+</div>
 
 <p>于是</p>
 <div>
@@ -114,14 +116,16 @@ J
 = e \lim_{t \to t_0} \mathrm{Tr} [H_0G^\lt (t, t_0)-G^\lt (t, t_0)H_0+(\Sigma G-G \Sigma)^\lt ] \\
 \\\end{gathered}
 \tag{9}
-$$</div>
+$$
+</div>
 
 <p>根据trace的cyclic性质，</p>
 <div>
 $$
 \mathrm{Tr} (A_1A_2...A_{n-1}A_n)=\mathrm{Tr} (A_nA_1A_2...A_{n-1})
 \tag{10}
-$$</div>
+$$
+</div>
 
 <p>于是</p>
 <div>
@@ -131,16 +135,16 @@ J
 = e \lim_{t \to t_0} \mathrm{Tr} (\Sigma G-G \Sigma)^\lt  \\
 \\\end{gathered}
 \tag{11}
-$$</div>
-
+$$
+</div>
 
 <p>接下来用Langreth定理算 $ (\Sigma G-G \Sigma)^\lt  $ </p>
 <div>
 $$
 (\Sigma G - G \Sigma)^\lt  = \Sigma^r G^\lt  + \Sigma^\lt  G^a - (G^r \Sigma^\lt  + G^\lt  \Sigma^a)
 \tag{12}
-$$</div>
-
+$$
+</div>
 
 <p>用恒等式</p>
 <div>
@@ -150,8 +154,8 @@ G^r - G^a = G^\gt  - G^\lt  \\
 \Sigma^r - \Sigma^a = \Sigma^\gt  - \Sigma^\lt  \\
 \\\end{gathered}
 \tag{13}
-$$</div>
-
+$$
+</div>
 
 
 <div>
@@ -163,8 +167,8 @@ $$
 = \mathrm{Tr} (\Sigma^\gt  G^\lt  - \Sigma^\lt  G^\gt ) \\
 \\\end{gathered}
 \tag{14}
-$$</div>
-
+$$
+</div>
 
 <p>上式推导过程中用了trace的cyclic性质。</p>
 <p>接下来把简写的 $ \Sigma G $ 等展开</p>
@@ -176,7 +180,8 @@ J
 = e \lim_{t \to t_0} \mathrm{Tr} \int_{-\infty}^{+\infty}[\Sigma^\gt (t,\tau)  G^\lt (\tau,t_0) - \Sigma^\lt (t,\tau) G^\gt (\tau,t_0)] \, \mathrm{d} \tau \\
 \\\end{gathered}
 \tag{15}
-$$</div>
+$$
+</div>
 
 <p>上式中 $ \Sigma G $ 等乘积应理解为矩阵相乘</p>
 <p>然后假设体系处于steady state（稳态），那么格林函数啥的都有一个性质</p>
@@ -184,7 +189,8 @@ $$</div>
 $$
 G(t,t_0)=G(t-t_0)
 \tag{16}
-$$</div>
+$$
+</div>
 
 <p>然后 $ \int \Sigma^\gt (t,\tau)  G^\lt (\tau,t_0), \mathrm{d} \tau $ 这些都变成了卷积，于是可以做傅立叶变换。</p>
 <p>傅立叶变换定义为</p>
@@ -195,7 +201,8 @@ G(E)=\int G(t) \exp (\mathrm{i} Et/\hbar) \, \mathrm{d} t \\
 G(t)= \cfrac{1}{2\pi\hbar} \int G(E) \exp (-\mathrm{i} Et/\hbar) \, \mathrm{d} E \\
 \\\end{gathered}
 \tag{17}
-$$</div>
+$$
+</div>
 
 <p>于是</p>
 <div>
@@ -206,7 +213,8 @@ J
 = \cfrac{e}{h} \mathrm{Tr} \int_{-\infty}^{+\infty}[\Sigma^\gt (E)  G^\lt (E) - \Sigma^\lt (E) G^\gt (E)] \, \mathrm{d} E \\
 \\\end{gathered}
 \tag{18}
-$$</div>
+$$
+</div>
 
 <p>这就是从中心区中流出的电流表达式。</p>
 <h2 id="电流守恒证明"><a href="#电流守恒证明" class="headerlink" title="电流守恒证明"></a>电流守恒证明</h2><p>为公式简洁起见，下面推导中将采用如下简写</p>
@@ -214,10 +222,12 @@ $$</div>
 $$
 \int_{-\infty}^{+\infty} A(E) B(E) \, \mathrm{d} E = AB
 \tag{19}
-$$</div>
+$$
+</div>
 
 <p>根据Keldysh公式</p>
 <span id="more"></span>
+
 <div>
 $$
 \begin{gathered}
@@ -225,8 +235,8 @@ G^\lt  = G^r \Sigma^\lt  G^a \\
 G^\gt  = G^r \Sigma^\gt  G^a \\
 \\\end{gathered}
 \tag{20}
-$$</div>
-
+$$
+</div>
 
 <p>运用 $ G^r - G^a &#x3D; G^\gt  - G^\lt  $ ，</p>
 <div>
@@ -238,8 +248,8 @@ G^r - G^a = G^r \Sigma^\gt  G^a - G^r \Sigma^\lt  G^a \\
 (G^a)^{-1} - (G^r)^{-1} = \Sigma^\gt  - \Sigma^\lt  \\
 \\\end{gathered}
 \tag{21}
-$$</div>
-
+$$
+</div>
 
 <p>接下来证一个等式</p>
 <div>
@@ -254,8 +264,8 @@ $$
 = 0 \\
 \\\end{gathered}
 \tag{22}
-$$</div>
-
+$$
+</div>
 
 <p>最后一步用到trace的cyclic性质。</p>
 <p>假设自能矩阵包含中心区相互作用部分 $ \Sigma_{int} $ ，左边接触自能 $ \Sigma_{L} $ ，右边接触自能 $ \Sigma_{R} $ </p>
@@ -263,22 +273,24 @@ $$</div>
 $$
 \Sigma = \Sigma_{L} + \Sigma_{R} + \Sigma_{int}
 \tag{23}
-$$</div>
+$$
+</div>
 
 <p>假设相互作用满足条件</p>
 <div>
 $$
 \mathrm{Tr} (\Sigma_{int}^\lt  G^\gt  - \Sigma_{int}^\gt  G^\lt ) = 0
 \tag{24}
-$$</div>
+$$
+</div>
 
 <p>那么根据 $ \mathrm{Tr} (\Sigma^\lt  G^\gt  - \Sigma^\gt  G^\lt )&#x3D;0 $ 可知</p>
 <div>
 $$
 \mathrm{Tr} (\Sigma_L^\lt  G^\gt  - \Sigma_L^\gt  G^\lt )+\mathrm{Tr} (\Sigma_R^\lt  G^\gt  - \Sigma_R^\gt  G^\lt )=0
 \tag{25}
-$$</div>
-
+$$
+</div>
 
 <p>定义（别忘了本节开头设定的简写）</p>
 <div>
@@ -288,14 +300,16 @@ J_L = \cfrac{e}{h} \mathrm{Tr} \, (\Sigma_L^\lt  G^\gt  - \Sigma_L^\gt  G^\lt ) 
 J_R = \cfrac{e}{h} \mathrm{Tr} \, (\Sigma_R^\lt  G^\gt  - \Sigma_R^\gt  G^\lt ) \\
 \\\end{gathered}
 \tag{26}
-$$</div>
+$$
+</div>
 
 <p>那么可以得出电流守恒</p>
 <div>
 $$
 J=-(J_L+J_R)=0
 \tag{27}
-$$</div>
+$$
+</div>
 
 <p>其中 $ J $ 是上节推导出的，从中心区流出的电流。</p>
 <p>可以看出 $ J_L $ 只与左边接触有关， $ J_R $ 只与右边接触有关。由此可知 $ J_L $ 是从左边接触流入中心区的电流， $ J_R $ 是从右边接触流入中心区的电流。</p>
@@ -308,8 +322,8 @@ G^\lt  = G^r \Sigma^\lt  G^a \\
 G^\gt  = G^r \Sigma^\gt  G^a \\
 \\\end{gathered}
 \tag{28}
-$$</div>
-
+$$
+</div>
 
 <p>假设接触处于平衡态</p>
 <div>
@@ -321,8 +335,8 @@ $$
 \Sigma_R^\gt  = -\mathrm{i} \Gamma_R (1-f_R) \\
 \\\end{gathered}
 \tag{29}
-$$</div>
-
+$$
+</div>
 
 <p>其中 $ f_L,f_R $ 为左右接触的分布函数，温度 $ T $ 时，假设化学势分别为 $ \mu_L,\mu_R $ ，则利用费米狄拉克分布</p>
 <div>
@@ -332,7 +346,8 @@ f_L(E)=\cfrac{1}{1+\exp \left[(E-\mu_L)/(kT)\right]} \\
 f_R(E)=\cfrac{1}{1+\exp \left[(E-\mu_R)/(kT)\right]}
 \\\end{gathered}
 \tag{30}
-$$</div>
+$$
+</div>
 
 <p>算算算，把Keldysh公式和自能表达式代入</p>
 <div>
@@ -346,8 +361,8 @@ $$
 = \mathrm{Tr} [\Gamma_L (f_R-f_L) G^r \Gamma_R G^a] \\
 \\\end{gathered}
 \tag{31}
-$$</div>
-
+$$
+</div>
 
 <p>同理</p>
 <div>
@@ -358,8 +373,8 @@ $$
 = \mathrm{Tr} [\Gamma_R (f_L-f_R) G^r \Gamma_L G^a] \\
 \\\end{gathered}
 \tag{32}
-$$</div>
-
+$$
+</div>
 
 <p>根据上节的电流守恒，</p>
 <div>
@@ -369,8 +384,8 @@ J_L + J_R = 0 \\
 \mathrm{Tr} (\Gamma_L G^r \Gamma_R G^a) = \mathrm{Tr} (\Gamma_R G^r \Gamma_L G^a)
 \\\end{gathered}
 \tag{33}
-$$</div>
-
+$$
+</div>
 
 <p>所以</p>
 <div>
@@ -381,8 +396,8 @@ J_L - J_R \\
 = \cfrac{e}{h}(f_L-f_R) \mathrm{Tr} (\Gamma_L G^r \Gamma_R G^a + \Gamma_R G^r \Gamma_L G^a) \\
 \\\end{gathered}
 \tag{34}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
@@ -390,15 +405,16 @@ $$
 J = \cfrac{1}{2}(J_L - J_R) = \cfrac{e}{h}(f_L-f_R) \mathrm{Tr} (\Gamma_L G^r \Gamma_R G^a)=\cfrac{e}{h}T(f_L-f_R) \\
 \\\end{gathered}
 \tag{35}
-$$</div>
-
+$$
+</div>
 
 <p>注意上式包含简写，最终的表达式为</p>
 <div>
 $$
 J=\cfrac{e}{h}\int_{-\infty}^{+\infty} T(E) [f_L(E) - f_R(E)] \,\mathrm{d} E
 \tag{36}
-$$</div>
+$$
+</div>
 
 <p>其中传输函数（transmission）（ $ G^r\rightarrow G^r(E) $ ，知道就好，懒得写了）</p>
 <div>
@@ -407,7 +423,8 @@ T(E)
 = \mathrm{Tr} (\Gamma_L G^r \Gamma_R G^a)
 = \mathrm{Tr} (\Gamma_R G^r \Gamma_L G^a)
 \tag{37}
-$$</div>
+$$
+</div>
 
 <p>由上电流表达式可以得出量子电导 $ \sigma&#x3D;e^2&#x2F;h $ 。</p>
 <p>注意很多书里多乘了个 $ 2 $ ，给出的表达式为：</p>
@@ -415,13 +432,14 @@ $$</div>
 $$
 J=\cfrac{2e}{h}\int_{-\infty}^{+\infty} T(E) [f_L(E) - f_R(E)] \,\mathrm{d} E
 \tag{38}
-$$</div>
+$$
+</div>
 
 <p>那是因为那本书里默认自旋简并，类似我们考虑非磁性固体能带的情形，此时我们说某一条能带，其上能占据两个电子，其实是自旋向上与向下的两条带。</p>
 <h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p>[1] Mahdi Pourfath, The Non-Equilibrium Green’s Function Method for Nanoscale Device Simulation</p>
 <p>[2] Hartmut J.W. Haug, Antti-Pekka Jauho, Quantum Kinetics in Transport and Optics of Semiconductors</p>
 <p>[3] Supriyo Datta, Electronic Transport in Mesoscopic Systems</p>
-</div><div class="article-licensing box"><div class="licensing-title"><p>非平衡格林函数（三）：电流表达式推导</p><p><a href="https://yuchenxi2000.github.io/2025/12/19/非平衡格林函数（三）：电流表达式推导/">https://yuchenxi2000.github.io/2025/12/19/非平衡格林函数（三）：电流表达式推导/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>Chenxi Yu</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2025-12-19</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2026-04-03</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/%E7%89%A9%E7%90%86/">物理</a><a class="link-muted mr-2" rel="tag" href="/tags/%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6/">量子力学</a><a class="link-muted mr-2" rel="tag" href="/tags/NEGF/">NEGF</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2025/12/19/%E9%9D%9E%E5%B9%B3%E8%A1%A1%E6%A0%BC%E6%9E%97%E5%87%BD%E6%95%B0%EF%BC%88%E4%B8%80%EF%BC%89%EF%BC%9A%E5%8D%8A%E6%97%A0%E9%99%90%E7%94%B5%E6%9E%81%E7%9A%84%E5%A4%84%E7%90%86/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">非平衡格林函数（一）：半无限电极的处理</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2025/12/09/%E6%9C%89%E9%99%90%E6%B8%A9%E5%BA%A6%E4%B8%8BWick%E5%AE%9A%E7%90%86/"><span class="level-item">有限温度下Wick定理</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><!--!--><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a><p class="is-size-7"><span>&copy; 2026 Chenxi Yu</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="fab fa-creative-commons-nc"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/yuchenxi2000"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
+</div><div class="article-licensing box"><div class="licensing-title"><p>非平衡格林函数（三）：电流表达式推导</p><p><a href="https://yuchenxi2000.github.io/2025/12/19/非平衡格林函数（三）：电流表达式推导/">https://yuchenxi2000.github.io/2025/12/19/非平衡格林函数（三）：电流表达式推导/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>Chenxi Yu</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2025-12-19</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2026-06-13</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/%E7%89%A9%E7%90%86/">物理</a><a class="link-muted mr-2" rel="tag" href="/tags/%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6/">量子力学</a><a class="link-muted mr-2" rel="tag" href="/tags/NEGF/">NEGF</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2025/12/19/%E9%9D%9E%E5%B9%B3%E8%A1%A1%E6%A0%BC%E6%9E%97%E5%87%BD%E6%95%B0%EF%BC%88%E4%B8%80%EF%BC%89%EF%BC%9A%E5%8D%8A%E6%97%A0%E9%99%90%E7%94%B5%E6%9E%81%E7%9A%84%E5%A4%84%E7%90%86/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">非平衡格林函数（一）：半无限电极的处理</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2025/12/09/%E6%9C%89%E9%99%90%E6%B8%A9%E5%BA%A6%E4%B8%8BWick%E5%AE%9A%E7%90%86/"><span class="level-item">有限温度下Wick定理</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><!--!--><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a><p class="is-size-7"><span>&copy; 2026 Chenxi Yu</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="fab fa-creative-commons-nc"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/yuchenxi2000"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
             article: {
                 highlight: {
                     clipboard: true,

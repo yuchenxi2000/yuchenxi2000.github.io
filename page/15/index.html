@@ -35,7 +35,8 @@
 $$
 \int_{-\infty}^{+\infty} e^{-x^2} \mathrm{d}x
 \tag{1}
-$$</div>
+$$
+</div>
 
 <p>用一个技巧，化为二重积分，在极坐标下积分</p>
 <div>
@@ -49,22 +50,24 @@ $$
 = \pi
 \\\end{gathered}
 \tag{2}
-$$</div>
+$$
+</div>
 
 <p>所以</p>
 <div>
 $$
 \int_{-\infty}^{+\infty} e^{-x^2} \mathrm{d}x = \sqrt{\pi}
 \tag{3}
-$$</div>
-
+$$
+</div>
 
 <h2 id="Gamma-函数"><a href="#Gamma-函数" class="headerlink" title="$\Gamma$ 函数"></a>$\Gamma$ 函数</h2><p>定义</p>
 <div>
 $$
 \Gamma(z)=\int_0^{+\infty} s^{z-1}e^{-s}\mathrm{d}s
 \tag{4}
-$$</div>
+$$
+</div>
 
 <p>性质</p>
 <div>
@@ -77,8 +80,8 @@ $$
 = \sqrt{\pi}
 \\\end{gathered}
 \tag{5}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
@@ -89,22 +92,23 @@ $$
 = z\Gamma(z)
 \\\end{gathered}
 \tag{6}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
 \Gamma(1)=\int_0^{+\infty} e^{-s}\mathrm{d}s = 1
 \tag{7}
-$$</div>
-
+$$
+</div>
 
 <p>对于 $n\in \mathbb{N}$ ，</p>
 <div>
 $$
 \Gamma(n+1)=n\Gamma(n)=\dots = n!
 \tag{8}
-$$</div>
+$$
+</div>
 
 <p>对于 $n\in \mathbb{N}^\ast $ ，</p>
 <div>
@@ -115,8 +119,8 @@ $$
 = \cfrac{(2n-1)!!\sqrt{\pi}}{2^n}
 \\\end{gathered}
 \tag{9}
-$$</div>
-
+$$
+</div>
 
 <h2 id="单位球面积"><a href="#单位球面积" class="headerlink" title="单位球面积"></a>单位球面积</h2><p>参考Peskin, An Introduction to Quantum Field Theory, p270</p>
 <p>非常简洁，想当年我用 $d$ 维球坐标，一堆三角函数硬算……</p>
@@ -125,7 +129,8 @@ $$</div>
 $$
 \mathrm{d}^d x=x^{d-1} \mathrm{d}x \mathrm{d}\Omega
 \tag{10}
-$$</div>
+$$
+</div>
 
 <p>上式中右边的 $x$ 应理解为 $d$ 维坐标 $x$ 的模长 $\lvert x \rvert$ ，问就是懒得改了</p>
 <p>根据如下推导</p>
@@ -139,7 +144,8 @@ $$
 = \left(\int \mathrm{d} \Omega_d\right) \frac{1}{2}\Gamma(d/2) \\
 \\\end{gathered}
 \tag{11}
-$$</div>
+$$
+</div>
 
 <p>所以有</p>
 <div>
@@ -152,8 +158,8 @@ $$
 \cfrac{2\pi^{k+1}} {k!}, & d=2k+2,k\in\mathbb{N} \\
 \end{cases}
 \tag{12}
-$$</div>
-
+$$
+</div>
 
 <h2 id="单位球体积"><a href="#单位球体积" class="headerlink" title="单位球体积"></a>单位球体积</h2><p>用球坐标，将体积分化为面积分即得。</p>
 <div>
@@ -163,8 +169,8 @@ V_d = \int_0^1 r^{d-1} \mathrm{d} r \cdot \int \mathrm{d} \Omega \\
 = \cfrac{1}{d}\Omega_d
 \\\end{gathered}
 \tag{13}
-$$</div>
-
+$$
+</div>
 
 <h2 id="常见维度"><a href="#常见维度" class="headerlink" title="常见维度"></a>常见维度</h2><p>常见维度下的单位球面积、体积：</p>
 <table>
@@ -200,16 +206,16 @@ $$
 =s^2A^2+B^2+\mathrm{i}s[A,B] \\
 \\\end{gathered}
 \tag{1}
-$$</div>
-
+$$
+</div>
 
 <p>对上式取期望，因为上式是正定算符，所以有</p>
 <div>
 $$
 s^2\braket{A^2}+\braket{B^2}+s\braket{\mathrm{i}[A,B]} \geq 0
 \tag{2}
-$$</div>
-
+$$
+</div>
 
 <p> $s$ 为实数， $\mathrm{i}[A,B]$ 为厄米算符（在 $A,B$ 为厄米算符的前提下），所以上式中的系数全部为实数。</p>
 <p>我们根据这个结论：若二次函数 $ax^2+bx+c \geq 0$ 对任意 $x$ 成立，则有 $b^2-4ac \leq 0$ ，得到</p>
@@ -217,7 +223,8 @@ $$</div>
 $$
 \braket{A^2}\braket{B^2} \geq \frac{1}{4}\lvert\braket{\mathrm{i}[A,B]}\rvert^2
 \tag{3}
-$$</div>
+$$
+</div>
 
 <p>取 $A&#x3D;x,B&#x3D;p,[A,B]&#x3D;\mathrm{i}\hbar$ ，代入上式得到不确定性原理</p>
 <div>
@@ -227,8 +234,8 @@ $$
 \sqrt{\braket{x^2}}\sqrt{\braket{p^2}} \geq \cfrac{\hbar}{2} \\
 \\\end{gathered}
 \tag{4}
-$$</div>
-
+$$
+</div>
 
 </div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2024-07-24T13:04:51.000Z" title="2024/7/24 21:04:51">2024-07-24</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E7%89%A9%E7%90%86/">物理</a></span><span class="level-item">2 分钟读完 (大约335个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2024/07/24/Kramers%E5%AE%9A%E7%90%86/">Kramers定理</a></p><div class="content"><p>具有时间反演对称性的费米子系统必定至少两重简并</p>
 <p>以下证明参考 <a target="_blank" rel="noopener" href="https://yxli8023.github.io/2020/09/30/TRS.html">https://yxli8023.github.io/2020/09/30/TRS.html</a></p>
@@ -238,7 +245,8 @@ $$</div>
 $$
 H\mathcal{T}=\mathcal{T}H
 \tag{1}
-$$</div>
+$$
+</div>
 
 <p>根据 $\ket{\psi}$ 为本征态，</p>
 <div>
@@ -249,7 +257,8 @@ H\mathcal{T}\ket{\phi}=\mathcal{T}H\ket{\phi} \\
 =E\mathcal{T}\ket{\phi}
 \\\end{gathered}
 \tag{2}
-$$</div>
+$$
+</div>
 
 <p>所以 $\ket{\phi}$ 为具有相同本征值的本征态。假设 $\ket{\phi},\ket{\psi}$ 为同一个态，</p>
 <p>则两者差一个相因子</p>
@@ -257,7 +266,8 @@ $$</div>
 $$
 \ket{\phi}=e^{\mathrm{i}\theta}\ket{\psi}
 \tag{3}
-$$</div>
+$$
+</div>
 
 <p>计算 $\ket{\phi}$ 的时间反演（其中利用到时间反演算符的反线性性质），</p>
 <div>
@@ -268,7 +278,8 @@ $$
 = e^{-\mathrm{i}\theta}\ket{\phi}
 \\\end{gathered}
 \tag{4}
-$$</div>
+$$
+</div>
 
 <p>再次时间反演</p>
 <div>
@@ -279,7 +290,8 @@ $$
 =\ket{\phi}
 \\\end{gathered}
 \tag{5}
-$$</div>
+$$
+</div>
 
 <p>这与 $\mathcal{T}^2&#x3D;-1$ （对于费米子&#x2F;半自旋粒子）矛盾，所以 $\mathcal{T}\ket{\psi},\ket{\psi}$ 不是同一个态，因此至少有二重简并。</p>
 <blockquote>
@@ -291,7 +303,8 @@ $$</div>
 $$
 \int \psi(x)x\psi^\ast (x) \mathrm{d}x = \int \psi^\ast (x)x\psi(x) \mathrm{d}x
 \tag{1}
-$$</div>
+$$
+</div>
 
 <p>然后计算动量平均值</p>
 <div>
@@ -304,7 +317,8 @@ $$
 \int \psi^\ast (x)\left(+\mathrm{i}\cfrac{\mathrm{d}}{\mathrm{d}x}\right)\psi(x) \mathrm{d}x \\
 \\\end{gathered}
 \tag{2}
-$$</div>
+$$
+</div>
 
 <p>于是算符 $\mathcal{T}&#x3D;\mathcal{K}$ 满足上述要求，即为我们需要的时间反演算符。</p>
 <h2 id="自旋1-2粒子"><a href="#自旋1-2粒子" class="headerlink" title="自旋1&#x2F;2粒子"></a>自旋1&#x2F;2粒子</h2><p>为满足位置、动量在时间反演后的要求，假设时间反演算符为如下形式</p>
@@ -312,14 +326,16 @@ $$</div>
 $$
 \mathcal{T}=U\mathcal{K}
 \tag{3}
-$$</div>
+$$
+</div>
 
 <p>为满足时间反演后波函数归一化要求， $U$ 为幺正算符。再根据厄米算符与幺正算符的关系，以及任意二阶厄米算符能表示成单位矩阵和三个泡利算符的线性组合，因此假设</p>
 <div>
 $$
 U=e^{\mathrm{i}a_0+\mathrm{i}\sigma \cdot a}
 \tag{4}
-$$</div>
+$$
+</div>
 
 <p>其中 $e^{\mathrm{i}a_0}$ 只是一个相因子，以下推导省略这个相因子。</p>
 <p>计算变换后沿 $b$ 方向的自旋 $S&#x3D;1&#x2F;2\hbar\sigma \cdot b$ </p>
@@ -327,7 +343,8 @@ $$</div>
 $$
 \cfrac{\hbar}{2}\int \psi(x)e^{-\mathrm{i}\sigma\cdot a}(\sigma \cdot b)e^{+\mathrm{i}\sigma\cdot a}\psi^\ast (x) \mathrm{d}x
 \tag{5}
-$$</div>
+$$
+</div>
 
 <p>如果我们知道四元数与泡利矩阵存在同构：</p>
 <div>
@@ -339,14 +356,16 @@ j \rightarrow -\mathrm{i}\sigma_y \\
 k \rightarrow -\mathrm{i}\sigma_z \\
 \end{cases}
 \tag{6}
-$$</div>
+$$
+</div>
 
 <p>再根据三维旋转可以用四元数乘积表示（参见<a href="/2020/07/03/%E4%B8%89%E7%BB%B4%E7%A9%BA%E9%97%B4%E6%97%8B%E8%BD%AC%E7%9A%84%E5%9B%9B%E5%85%83%E6%95%B0%E8%A1%A8%E7%A4%BA/" title="三维空间旋转的四元数表示">三维空间旋转的四元数表示</a>），加上泡利矩阵指数函数的值（参见<a href="/2026/01/22/SU(2)%E5%92%8CSO(3)%E7%9A%84%E6%8C%87%E6%95%B0%E6%98%A0%E5%B0%84%E8%AE%A1%E7%AE%97/" title="SU(2)和SO(3)的指数映射计算">SU(2)和SO(3)的指数映射计算</a>）</p>
 <div>
 $$
 e^{-\mathrm{i}\sigma\cdot a}=\cos\lvert a \rvert-\mathrm{i}\cfrac{\sigma \cdot a}{\lvert a \rvert}\sin\lvert a \rvert
 \tag{7}
-$$</div>
+$$
+</div>
 
 <p>这正是<a href="/2020/07/03/%E4%B8%89%E7%BB%B4%E7%A9%BA%E9%97%B4%E6%97%8B%E8%BD%AC%E7%9A%84%E5%9B%9B%E5%85%83%E6%95%B0%E8%A1%A8%E7%A4%BA/" title="三维空间旋转的四元数表示">三维空间旋转的四元数表示</a>中的 $U(2\lvert a \rvert)$ 。</p>
 <p>于是 $e^{-\mathrm{i}\sigma\cdot a}(\sigma \cdot b)e^{+\mathrm{i}\sigma\cdot a}$ 的结果就是将矢量 $b$ 绕 $a$ 旋转 $2\lvert a \rvert$ 。设旋转后的矢量为 $c$ ，那么时间反演后自旋</p>
@@ -354,7 +373,8 @@ $$</div>
 $$
 \cfrac{\hbar}{2}\int \psi(x)(\sigma \cdot c)\psi^\ast (x) \mathrm{d}x =\cfrac{\hbar}{2}\int \psi^\ast (x)(\sigma \cdot c)^T\psi(x) \mathrm{d}x
 \tag{8}
-$$</div>
+$$
+</div>
 
 <p>因为转置后 $\sigma_y$ 变号，其余不变，所以转置算符的作用是 $xz$ 平面的镜像对称。因此时间反演后，自旋先绕 $a$ 旋转 $2\lvert a \rvert$ ，然后沿 $xz$ 平面镜像对称。为了得到空间反演，我们需要先绕 $y$ 轴旋转 $180^\circ$ 后再沿 $xz$ 平面做镜像对称，由此可以确定 $a&#x3D;(0,\pi&#x2F;2,0)$ ，因此自旋反演算符为</p>
 <div>
@@ -365,7 +385,8 @@ $$
 = e^{\mathrm{i}a_0} \mathrm{i}\sigma_y \mathcal{K} \\
 \\\end{gathered}
 \tag{9}
-$$</div>
+$$
+</div>
 
 <p>相因子 $\exp(\mathrm{i}a_0)$ 可以任取，曾谨言的《量子力学 II》中选择相因子使得</p>
 <div>
@@ -374,23 +395,24 @@ $$
 \mathcal{T} = -\mathrm{i}\sigma_y \mathcal{K} \\
 \\\end{gathered}
 \tag{10}
-$$</div>
-
+$$
+</div>
 
 <h2 id="任意自旋粒子"><a href="#任意自旋粒子" class="headerlink" title="任意自旋粒子"></a>任意自旋粒子</h2><p>在上一小节中，我们知道共轭算符（对泡利矩阵相当于转置）的作用是 $xz$ 平面的镜像对称，为了得到空间反演，需要再沿 $y$ 轴旋转 $180^\circ$ 。而任意自旋粒子的旋转可以用自旋算符表示，因此时间反演算符为</p>
 <div>
 $$
 \mathcal{T}=e^{-\mathrm{i}\pi S_y/\hbar}\mathcal{K}
 \tag{11}
-$$</div>
-
+$$
+</div>
 
 <p>计算 $\mathcal{T}^2$ ，</p>
 <div>
 $$
 \mathcal{T}^2=e^{-2\mathrm{i}\pi S_y/\hbar}
 \tag{12}
-$$</div>
+$$
+</div>
 
 <p>对于自旋整数粒子， $\mathcal{T}^2&#x3D;1$ ；对于自旋半整数粒子， $\mathcal{T}^2&#x3D;-1$ </p>
 </div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2024-06-02T05:57:03.000Z" title="2024/6/2 13:57:03">2024-06-02</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E6%95%B0%E5%AD%A6/">数学</a></span><span class="level-item">5 分钟读完 (大约775个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2024/06/02/%E5%86%B2%E9%87%8F%E5%AE%9A%E7%90%86/">冲量定理</a></p><div class="content"><p>冲量定理给出了将非齐次微分方程化为齐次方程的求解方法，广泛运用于常微分方程、偏微分方程的求解中。</p>
@@ -399,8 +421,8 @@ $$</div>
 $$
 F(x) = \int_{\alpha(x)}^{\beta(x)} f(x,y)\mathrm{d}y
 \tag{1}
-$$</div>
-
+$$
+</div>
 
 <p>直接用导数的定义</p>
 <div>
@@ -411,15 +433,16 @@ F(x+\Delta x)-F(x) = \int_{\alpha(x+\Delta x)}^{\beta(x+\Delta x)} f(x+\Delta x,
 = \int_{\alpha(x+\Delta x)}^{\beta(x+\Delta x)} f(x+\Delta x,y) - f(x,y)\mathrm{d}y + \int_{\beta(x)}^{\beta(x+\Delta x)} f(x,y)\mathrm{d}y - \int_{\alpha(x)}^{\alpha(x+\Delta x)} f(x,y)\mathrm{d}y \\
 \\\end{gathered}
 \tag{2}
-$$</div>
-
+$$
+</div>
 
 <p>不追求严格证明，第一项在除 $\Delta x$ 、求极限后，上下限就是 $\beta(x),\alpha(x)$ ，积分里面变成 $\partial f &#x2F; \partial x$ ；第二、三项运用积分中值定理（以第二项为例）</p>
 <div>
 $$
 \cfrac{1}{\Delta x}\int_{\beta(x)}^{\beta(x+\Delta x)} f(x,y)\mathrm{d}y =\cfrac{\beta(x+\Delta x) - \beta(x)}{\Delta x} f(x,\varepsilon)
 \tag{3}
-$$</div>
+$$
+</div>
 
 <p>其中 $\beta(x) \leq \varepsilon \leq \beta(x+\Delta x)$ </p>
 <p>所以导数为</p>
@@ -430,8 +453,8 @@ $$
 = \int_{\alpha(x)}^{\beta(x)} \cfrac{\partial f(x,y)}{\partial x} \mathrm{d}y + \cfrac{\mathrm{d}\beta(x)}{\mathrm{d}x}f(x,\beta(x)) - \cfrac{\mathrm{d}\alpha(x)}{\mathrm{d}x}f(x, \alpha(x)) \\
 \\\end{gathered}
 \tag{4}
-$$</div>
-
+$$
+</div>
 
 <h2 id="冲量定理的证明"><a href="#冲量定理的证明" class="headerlink" title="冲量定理的证明"></a>冲量定理的证明</h2><p>求解非齐次方程</p>
 <div>
@@ -442,8 +465,8 @@ x(0)=0 \\
 \cfrac{\mathrm{d}}{\mathrm{d}t}x(0)=0 \\
 \end{cases}
 \tag{5}
-$$</div>
-
+$$
+</div>
 
 <p>构造 $X(t,\tau)$ 为下齐次方程的解</p>
 <div>
@@ -454,16 +477,16 @@ X(\tau,\tau)=0 \\
 \cfrac{\mathrm{d}}{\mathrm{d}t}X(\tau,\tau)=f(\tau) \\
 \end{cases}
 \tag{6}
-$$</div>
-
+$$
+</div>
 
 <p>下证明下面这个就是对应非齐次方程的解，对该函数求导时用到了我们先前推导的结论</p>
 <div>
 $$
 x(t)=\int_0^t X(t,\tau) \mathrm{d}\tau
 \tag{7}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
@@ -472,8 +495,8 @@ $$
 =\int_0^t \cfrac{\partial X(t,\tau)}{\partial t} \mathrm{d}\tau
 \\\end{gathered}
 \tag{8}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
@@ -482,8 +505,8 @@ $$
 =\int_0^t \cfrac{\partial^2 X(t,\tau)}{\partial t^2} \mathrm{d}\tau + f(t)
 \\\end{gathered}
 \tag{9}
-$$</div>
-
+$$
+</div>
 
 <p>直接代入非齐次方程，根据 $X(t,\tau)$ 满足的齐次方程可知 $x(t)$ 满足非齐次方程，在上面这些式子里代入初值 $t&#x3D;0$ 就可见 $x(t)$ 也满足初值条件。</p>
 </div></article></div><nav class="pagination" role="navigation" aria-label="pagination"><div class="pagination-previous"><a href="/page/14/">上一页</a></div><div class="pagination-next"><a href="/page/16/">下一页</a></div><ul class="pagination-list is-hidden-mobile"><li><a class="pagination-link" href="/">1</a></li><li><span class="pagination-ellipsis">&hellip;</span></li><li><a class="pagination-link" href="/page/14/">14</a></li><li><a class="pagination-link is-current" href="/page/15/">15</a></li><li><a class="pagination-link" href="/page/16/">16</a></li><li><span class="pagination-ellipsis">&hellip;</span></li><li><a class="pagination-link" href="/page/23/">23</a></li></ul></nav></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar is-rounded" src="/android-chrome-512x512.png" alt="Chenxi Yu"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">Chenxi Yu</p><p class="is-size-6 is-block">PhD in PKU</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>Beijing, China</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives/"><p class="title">114</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories/"><p class="title">5</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags/"><p class="title">34</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/yuchenxi2000" target="_blank" rel="me noopener">关注我</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="me noopener" title="Github" href="https://github.com/yuchenxi2000"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="me noopener" title="Bilibili" href="https://space.bilibili.com/244355869"><i class="fab fa-bilibili"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="me noopener" title="Zhihu" href="https://www.zhihu.com/people/cha-xi-74-16"><i class="fab fa-zhihu"></i></a></div></div></div><!--!--><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">分类</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/%E5%85%B6%E4%BB%96/"><span class="level-start"><span class="level-item">其他</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/%E6%95%B0%E5%AD%A6/"><span class="level-start"><span class="level-item">数学</span></span><span class="level-end"><span class="level-item tag">44</span></span></a></li><li><a class="level is-mobile" href="/categories/%E7%89%A9%E7%90%86/"><span class="level-start"><span class="level-item">物理</span></span><span class="level-end"><span class="level-item tag">51</span></span></a></li><li><a class="level is-mobile" href="/categories/%E7%BC%96%E7%A8%8B/"><span class="level-start"><span class="level-item">编程</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/%E9%9F%B3%E4%B9%90/"><span class="level-start"><span class="level-item">音乐</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></div></div></div><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2026-06-11T15:59:31.000Z">2026-06-11</time></p><p class="title"><a href="/2026/06/11/Vibe%20Coding%E5%88%9D%E6%8E%A2/">Vibe Coding初探</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2026-06-11T15:58:05.000Z">2026-06-11</time></p><p class="title"><a href="/2026/06/11/VaspAuto%EF%BC%9A%E8%B6%85%E7%AE%97%E8%87%AA%E5%8A%A8%E6%8C%82%E6%9C%BA%E6%A1%86%E6%9E%B6/">VaspAuto：超算自动挂机框架</a></p><p class="categories"><a href="/categories/%E7%BC%96%E7%A8%8B/">编程</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2026-06-11T15:57:20.000Z">2026-06-11</time></p><p class="title"><a href="/2026/06/11/%E6%A4%8D%E7%89%A9%E5%A8%98%E5%A4%A7%E6%88%98%E5%83%B5%E5%B0%B8%E4%BF%AE%E6%94%B9%E5%99%A8/">植物娘大战僵尸修改器</a></p><p class="categories"><a href="/categories/%E7%BC%96%E7%A8%8B/">编程</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2026-04-03T13:08:18.000Z">2026-04-03</time></p><p class="title"><a href="/2026/04/03/%E5%A6%82%E4%BD%95%E7%A7%91%E5%AD%A6%E5%9C%B0%E5%9C%A8hexo%E9%87%8C%E5%86%99%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F/">如何科学地在hexo里写数学公式</a></p><p class="categories"><a href="/categories/%E5%85%B6%E4%BB%96/">其他</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2026-04-03T09:08:02.000Z">2026-04-03</time></p><p class="title"><a href="/2026/04/03/%E8%A7%84%E8%8C%83%E5%9C%BA%E8%AE%BA%E4%B8%8E%E5%BE%AE%E5%88%86%E5%87%A0%E4%BD%95/">规范场论与微分几何</a></p><p class="categories"><a href="/categories/%E7%89%A9%E7%90%86/">物理</a></p></div></article></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/NEGF/"><span class="tag">NEGF</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E4%BB%A3%E6%95%B0/"><span class="tag">代数</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%85%89%E5%AD%A6/"><span class="tag">光学</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%85%B6%E4%BB%96/"><span class="tag">其他</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%87%A0%E4%BD%95%E4%BB%A3%E6%95%B0/"><span class="tag">几何代数</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%9B%BA%E4%BD%93%E7%89%A9%E7%90%86/"><span class="tag">固体物理</span><span class="tag">13</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0/"><span class="tag">复变函数</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%A4%A9%E4%BD%93%E7%89%A9%E7%90%86/"><span class="tag">天体物理</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%AF%86%E5%BA%A6%E6%B3%9B%E5%87%BD%E7%90%86%E8%AE%BA/"><span class="tag">密度泛函理论</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%B7%B4%E6%B4%9B%E5%85%8B%E9%9F%B3%E4%B9%90/"><span class="tag">巴洛克音乐</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%B9%B3%E9%9D%A2%E5%87%A0%E4%BD%95/"><span class="tag">平面几何</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%B9%BF%E4%B9%89%E7%9B%B8%E5%AF%B9%E8%AE%BA/"><span class="tag">广义相对论</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%BC%B9%E6%80%A7%E5%8A%9B%E5%AD%A6/"><span class="tag">弹性力学</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%BE%AE%E5%88%86%E5%87%A0%E4%BD%95/"><span class="tag">微分几何</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B/"><span class="tag">微分方程</span><span class="tag">9</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%95%B0%E5%80%BC%E6%96%B9%E6%B3%95/"><span class="tag">数值方法</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%95%B0%E5%AD%A6/"><span class="tag">数学</span><span class="tag">44</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/"><span class="tag">数学分析</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%95%B0%E8%AE%BA/"><span class="tag">数论</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%A6%82%E7%8E%87%E7%BB%9F%E8%AE%A1/"><span class="tag">概率统计</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/"><span class="tag">泛函分析</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%89%A9%E7%90%86/"><span class="tag">物理</span><span class="tag">56</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%89%B9%E6%AE%8A%E5%87%BD%E6%95%B0/"><span class="tag">特殊函数</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%94%B5%E5%8A%A8%E5%8A%9B%E5%AD%A6/"><span class="tag">电动力学</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%9B%B8%E5%AF%B9%E8%AE%BA/"><span class="tag">相对论</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%AC%AC%E4%B8%80%E6%80%A7%E5%8E%9F%E7%90%86%E8%AE%A1%E7%AE%97/"><span class="tag">第一性原理计算</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%BB%9F%E8%AE%A1%E5%8A%9B%E5%AD%A6/"><span class="tag">统计力学</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%BC%96%E7%A8%8B/"><span class="tag">编程</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%BE%A4%E8%AE%BA/"><span class="tag">群论</span><span class="tag">12</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6/"><span class="tag">量子力学</span><span class="tag">30</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E9%87%8F%E5%AD%90%E5%9C%BA%E8%AE%BA/"><span class="tag">量子场论</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E9%9D%9E%E6%AC%A7%E5%87%A0%E4%BD%95/"><span class="tag">非欧几何</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E9%9F%B3%E4%B9%90/"><span class="tag">音乐</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E9%AB%98%E6%80%A7%E8%83%BD%E8%AE%A1%E7%AE%97/"><span class="tag">高性能计算</span><span class="tag">1</span></a></div></div></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a><p class="is-size-7"><span>&copy; 2026 Chenxi Yu</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="fab fa-creative-commons-nc"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/yuchenxi2000"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {

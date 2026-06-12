@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>量子力学中角动量算符本征值的因式分解求解 - YCX&#039;s Blog</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="YCX&#039;s Blog"><meta name="msapplication-TileImage" content="favicon.ico"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="YCX&#039;s Blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="为简洁省略 $\hbar$  本征值角动量算符定义：  $$ \begin{gathered} \lbrack L_x,L_y\rbrack &amp;#x3D;\mathrm{i} L_z \\ [L_y,L_z]&amp;#x3D;\mathrm{i} L_x \\ [L_z,L_x]&amp;#x3D;\mathrm{i} L_y \\ \\\end{gathered} \tag{1} $$   下证明 $L^2,L_z$ 对易  $$ \be"><meta property="og:type" content="blog"><meta property="og:title" content="量子力学中角动量算符本征值的因式分解求解"><meta property="og:url" content="https://yuchenxi2000.github.io/2024/08/26/%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E4%B8%AD%E8%A7%92%E5%8A%A8%E9%87%8F%E7%AE%97%E7%AC%A6%E6%9C%AC%E5%BE%81%E5%80%BC%E7%9A%84%E5%9B%A0%E5%BC%8F%E5%88%86%E8%A7%A3%E6%B1%82%E8%A7%A3/"><meta property="og:site_name" content="YCX&#039;s Blog"><meta property="og:description" content="为简洁省略 $\hbar$  本征值角动量算符定义：  $$ \begin{gathered} \lbrack L_x,L_y\rbrack &amp;#x3D;\mathrm{i} L_z \\ [L_y,L_z]&amp;#x3D;\mathrm{i} L_x \\ [L_z,L_x]&amp;#x3D;\mathrm{i} L_y \\ \\\end{gathered} \tag{1} $$   下证明 $L^2,L_z$ 对易  $$ \be"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://yuchenxi2000.github.io/img/og_image.png"><meta property="article:published_time" content="2024-08-26T08:10:19.000Z"><meta property="article:modified_time" content="2026-04-03T14:05:08.388Z"><meta property="article:author" content="Chenxi Yu"><meta property="article:tag" content="物理"><meta property="article:tag" content="量子力学"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://yuchenxi2000.github.io/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://yuchenxi2000.github.io/2024/08/26/%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E4%B8%AD%E8%A7%92%E5%8A%A8%E9%87%8F%E7%AE%97%E7%AC%A6%E6%9C%AC%E5%BE%81%E5%80%BC%E7%9A%84%E5%9B%A0%E5%BC%8F%E5%88%86%E8%A7%A3%E6%B1%82%E8%A7%A3/"},"headline":"量子力学中角动量算符本征值的因式分解求解","image":["https://yuchenxi2000.github.io/img/og_image.png"],"datePublished":"2024-08-26T08:10:19.000Z","dateModified":"2026-04-03T14:05:08.388Z","author":{"@type":"Person","name":"Chenxi Yu"},"publisher":{"@type":"Organization","name":"YCX's Blog","logo":{"@type":"ImageObject","url":"https://yuchenxi2000.github.io/2024/08/26/%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E4%B8%AD%E8%A7%92%E5%8A%A8%E9%87%8F%E7%AE%97%E7%AC%A6%E6%9C%AC%E5%BE%81%E5%80%BC%E7%9A%84%E5%9B%A0%E5%BC%8F%E5%88%86%E8%A7%A3%E6%B1%82%E8%A7%A3/android-chrome-512x512.png"}},"description":"为简洁省略 $\\hbar$  本征值角动量算符定义：  $$ \\begin{gathered} \\lbrack L_x,L_y\\rbrack &#x3D;\\mathrm{i} L_z \\\\ [L_y,L_z]&#x3D;\\mathrm{i} L_x \\\\ [L_z,L_x]&#x3D;\\mathrm{i} L_y \\\\ \\\\\\end{gathered} \\tag{1} $$   下证明 $L^2,L_z$ 对易  $$ \\be"}</script><link rel="canonical" href="https://yuchenxi2000.github.io/2024/08/26/%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E4%B8%AD%E8%A7%92%E5%8A%A8%E9%87%8F%E7%AE%97%E7%AC%A6%E6%9C%AC%E5%BE%81%E5%80%BC%E7%9A%84%E5%9B%A0%E5%BC%8F%E5%88%86%E8%A7%A3%E6%B1%82%E8%A7%A3/"><link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link data-pjax rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link data-pjax rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!--!--><!-- hexo injector head_end start --><script>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>量子力学中角动量算符本征值的因式分解求解 - YCX&#039;s Blog</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="YCX&#039;s Blog"><meta name="msapplication-TileImage" content="favicon.ico"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="YCX&#039;s Blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="为简洁省略 $\hbar$  本征值角动量算符定义：  $$ \begin{gathered} \lbrack L_x,L_y\rbrack &amp;#x3D;\mathrm{i} L_z \\ [L_y,L_z]&amp;#x3D;\mathrm{i} L_x \\ [L_z,L_x]&amp;#x3D;\mathrm{i} L_y \\ \\\end{gathered} \tag{1} $$   下证明 $L^2,L_z$ 对易  $$ \be"><meta property="og:type" content="blog"><meta property="og:title" content="量子力学中角动量算符本征值的因式分解求解"><meta property="og:url" content="https://yuchenxi2000.github.io/2024/08/26/%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E4%B8%AD%E8%A7%92%E5%8A%A8%E9%87%8F%E7%AE%97%E7%AC%A6%E6%9C%AC%E5%BE%81%E5%80%BC%E7%9A%84%E5%9B%A0%E5%BC%8F%E5%88%86%E8%A7%A3%E6%B1%82%E8%A7%A3/"><meta property="og:site_name" content="YCX&#039;s Blog"><meta property="og:description" content="为简洁省略 $\hbar$  本征值角动量算符定义：  $$ \begin{gathered} \lbrack L_x,L_y\rbrack &amp;#x3D;\mathrm{i} L_z \\ [L_y,L_z]&amp;#x3D;\mathrm{i} L_x \\ [L_z,L_x]&amp;#x3D;\mathrm{i} L_y \\ \\\end{gathered} \tag{1} $$   下证明 $L^2,L_z$ 对易  $$ \be"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://yuchenxi2000.github.io/img/og_image.png"><meta property="article:published_time" content="2024-08-26T08:10:19.000Z"><meta property="article:modified_time" content="2026-06-12T17:24:25.853Z"><meta property="article:author" content="Chenxi Yu"><meta property="article:tag" content="物理"><meta property="article:tag" content="量子力学"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://yuchenxi2000.github.io/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://yuchenxi2000.github.io/2024/08/26/%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E4%B8%AD%E8%A7%92%E5%8A%A8%E9%87%8F%E7%AE%97%E7%AC%A6%E6%9C%AC%E5%BE%81%E5%80%BC%E7%9A%84%E5%9B%A0%E5%BC%8F%E5%88%86%E8%A7%A3%E6%B1%82%E8%A7%A3/"},"headline":"量子力学中角动量算符本征值的因式分解求解","image":["https://yuchenxi2000.github.io/img/og_image.png"],"datePublished":"2024-08-26T08:10:19.000Z","dateModified":"2026-06-12T17:24:25.853Z","author":{"@type":"Person","name":"Chenxi Yu"},"publisher":{"@type":"Organization","name":"YCX's Blog","logo":{"@type":"ImageObject","url":"https://yuchenxi2000.github.io/2024/08/26/%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E4%B8%AD%E8%A7%92%E5%8A%A8%E9%87%8F%E7%AE%97%E7%AC%A6%E6%9C%AC%E5%BE%81%E5%80%BC%E7%9A%84%E5%9B%A0%E5%BC%8F%E5%88%86%E8%A7%A3%E6%B1%82%E8%A7%A3/android-chrome-512x512.png"}},"description":"为简洁省略 $\\hbar$  本征值角动量算符定义：  $$ \\begin{gathered} \\lbrack L_x,L_y\\rbrack &#x3D;\\mathrm{i} L_z \\\\ [L_y,L_z]&#x3D;\\mathrm{i} L_x \\\\ [L_z,L_x]&#x3D;\\mathrm{i} L_y \\\\ \\\\\\end{gathered} \\tag{1} $$   下证明 $L^2,L_z$ 对易  $$ \\be"}</script><link rel="canonical" href="https://yuchenxi2000.github.io/2024/08/26/%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E4%B8%AD%E8%A7%92%E5%8A%A8%E9%87%8F%E7%AE%97%E7%AC%A6%E6%9C%AC%E5%BE%81%E5%80%BC%E7%9A%84%E5%9B%A0%E5%BC%8F%E5%88%86%E8%A7%A3%E6%B1%82%E8%A7%A3/"><link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link data-pjax rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link data-pjax rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!--!--><!-- hexo injector head_end start --><script>
   (function () {
       function switchTab() {
           if (!location.hash) {
@@ -39,8 +39,8 @@ $$
 [L_z,L_x]=\mathrm{i} L_y \\
 \\\end{gathered}
 \tag{1}
-$$</div>
-
+$$
+</div>
 
 <p>下证明 $L^2,L_z$ 对易</p>
 <div>
@@ -51,8 +51,8 @@ $$
 = -\mathrm{i}L_xL_y-\mathrm{i}L_yL_x
 \\\end{gathered}
 \tag{2}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
@@ -62,23 +62,23 @@ $$
 = \mathrm{i}L_yL_x+\mathrm{i}L_xL_y
 \\\end{gathered}
 \tag{3}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
 [L^2,L_z]=0
 \tag{4}
-$$</div>
-
+$$
+</div>
 
 <p>所以可以求 $L^2,L_z$ 的共同本征态。求解前先定义升降算符，类似谐振子的因式分解求解：</p>
 <div>
 $$
 L_\pm = L_x \pm \mathrm{i}L_y
 \tag{5}
-$$</div>
-
+$$
+</div>
 
 <p>可以证明升降算符的对易关系</p>
 <div>
@@ -91,15 +91,16 @@ $$
 = 2L_z \\
 \\\end{gathered}
 \tag{6}
-$$</div>
-
+$$
+</div>
 
 <p> $L^2$ 用升降算符表示</p>
 <div>
 $$
 L^2=\frac{1}{2}(L_+L_-+L_-L_+)+L_z^2
 \tag{7}
-$$</div>
+$$
+</div>
 
 <p>下面说明升降算符的名称由来</p>
 <div>
@@ -112,8 +113,8 @@ $$
 = L_+
 \\\end{gathered}
 \tag{8}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
@@ -125,8 +126,8 @@ $$
 = -L_-
 \\\end{gathered}
 \tag{9}
-$$</div>
-
+$$
+</div>
 
 <p>因此，可以证明如果 $\ket{l}$ 为 $L_z$ 本征值 $m$ 的本征态，则 $L_+\ket{l}$ 为 $L_z$ 本征值 $m+1$ 的本征态，因此 $L_+$ 叫升算符。</p>
 <div>
@@ -136,8 +137,8 @@ L_zL_+=L_+(L_z+1) \\
 L_z\ket{\phi}=m\ket{\phi}, \quad L_zL_+\ket{\phi}=(m+1)L_+\ket{\phi} \\
 \\\end{gathered}
 \tag{10}
-$$</div>
-
+$$
+</div>
 
 <p> $L_-$ 同理，为降算符。</p>
 <p>求 $L^2,L_z$ 共同本征态的本征值。由 $L^2&#x3D;L_x^2+L_y^2+L_z^2$ 得出 $L_z$ 有上下界，设分别为 $l_1,l_2$ 。则</p>
@@ -148,7 +149,8 @@ L_-\ket{l_1}=0 \\
 L_+\ket{l_2}=0 \\
 \\\end{gathered}
 \tag{11}
-$$</div>
+$$
+</div>
 
 <p>否则，用升降算符分别作用在 $\ket{l_2},\ket{l_1}$ 上，得到本征值 $l_2+1,l_1-1$ 的本征态，得出 $l_1,l_2$ 并非为上下界，矛盾。</p>
 <p>根据升降算符的性质， $\ket{l_2}$ 可以由 $\ket{l_1}$ 在算符 $L_+$ 的多次作用下得到，因此 $l_2-l_1 \in \mathbb{N}^\ast $ 。（否则，会得到 $L_z$ 无上界的结论，矛盾）</p>
@@ -160,14 +162,16 @@ $$</div>
 $$
 L^2=\frac{1}{2}(L_+L_-+L_-L_+)+L_z^2
 \tag{12}
-$$</div>
+$$
+</div>
 
 <p>及</p>
 <div>
 $$
 [L_+,L_-] = 2L_z
 \tag{13}
-$$</div>
+$$
+</div>
 
 <p>，将 $L^2$ 作用在 $\ket{l_1},\ket{l_2}$ 上：</p>
 <div>
@@ -178,7 +182,8 @@ L^2\ket{l_1}=(L_+L_-+L_z^2-L_z)\ket{l_1}=(L_z^2-L_z)\ket{l_1} \\
 l^2+l=l_1^2-l_1 \\
 \\\end{gathered}
 \tag{14}
-$$</div>
+$$
+</div>
 
 <p>该方程有两个解 $l_1&#x3D;-l,l+1$ </p>
 <div>
@@ -189,7 +194,8 @@ L^2\ket{l_2}=(L_-L_++L_z^2+L_z)\ket{l_2}=(L_z^2+L_z)\ket{l_2} \\
 l^2+l=l_2^2+l_2 \\
 \\\end{gathered}
 \tag{15}
-$$</div>
+$$
+</div>
 
 <p>该方程有两个解 $l_2&#x3D;l,-l-1$ </p>
 <p>因为 $l_1\lt l_2$ ，所以 $l_1&#x3D;-l,l_2&#x3D;l$ </p>
@@ -206,7 +212,8 @@ L_+L_-+L_-L_+=2(L^2-L_z^2) \\
 L_+L_--L_-L_+=2L_z
 \\\end{gathered}
 \tag{16}
-$$</div>
+$$
+</div>
 
 <p>可以得出</p>
 <div>
@@ -216,7 +223,8 @@ L_-L_+=L^2-L_z^2-L^z \\
 L_+L_-=L^2-L_z^2+L_z
 \\\end{gathered}
 \tag{17}
-$$</div>
+$$
+</div>
 
 <p>然后利用升降算符的性质， $L_-\ket{l,0}&#x3D;0,L_+\ket{l,l}&#x3D;0$ ，我们可以得到 $L_z$ 本征值相差1的本征矢之间的关系。首先升降算符的作用是 $L_z$ 本征值加减1；然后求归一化系数：</p>
 <div>
@@ -226,7 +234,8 @@ $$
 \bra{l,m}L_+L_-\ket{l,m}=l(l+1)-m(m-1)
 \\\end{gathered}
 \tag{18}
-$$</div>
+$$
+</div>
 
 <p>得到归一化系数后，选取相位（我们选相位为1），得到本征矢之间关系</p>
 <div>
@@ -236,7 +245,8 @@ $$
 \ket{l,m-1}=\cfrac{L_-\ket{l,m}}{\sqrt{l(l+1)-m(m-1)}}
 \\\end{gathered}
 \tag{19}
-$$</div>
+$$
+</div>
 
 <p>因此可以从任意本征矢出发，得到 $L^2$ 本征矢值相同， $L_z$ 本征值不同的本征矢，比如从 $\ket{l,0}$ 出发得到 $\ket{l,m}$ ，根据 $m$ 符号选择使用升算符还是降算符。</p>
 <p>然而通过升降算符只能得到 $L^2$ 本征值相同的本征矢，为得到 $L^2$ 本征值不同的本征矢，一个容易的方法是采用角动量的Schwinger表象。</p>
@@ -248,7 +258,8 @@ $$
 [a,a^\dagger]=[b,b^\dagger]=1
 \\\end{gathered}
 \tag{20}
-$$</div>
+$$
+</div>
 
 <p>定义角动量算符，以及“总粒子数”算符</p>
 <div>
@@ -260,7 +271,8 @@ J_z = \cfrac{1}{2} (a^\dagger a - b^\dagger b) \\
 N = a^\dagger a + b^\dagger b
 \\\end{gathered}
 \tag{21}
-$$</div>
+$$
+</div>
 
 <p>可以验证其为厄米算符并且满足角动量对易关系。</p>
 <p>可以证明</p>
@@ -268,7 +280,8 @@ $$</div>
 $$
 J^2=\cfrac{N}{2}\left(\cfrac{N}{2} + 1\right)
 \tag{22}
-$$</div>
+$$
+</div>
 
 <p>由此可以得知角动量本征值为半整数。</p>
 <p>然后我们考察 $N_1&#x3D;a^\dagger a$ 本征值 $n_1$ ， $N_2&#x3D;b^\dagger b$ 本征值 $n_2$ 的态， $\ket{n_1n_2}$ ：</p>
@@ -280,7 +293,8 @@ J_z\ket{n_1n_2}=\cfrac{n_1-n_2}{2}\ket{n_1n_2} \\
 J^2\ket{n_1n_2}=\cfrac{n_1+n_2}{2}\left(\cfrac{n_1+n_2}{2} + 1\right)\ket{n_1n_2} \\
 \\\end{gathered}
 \tag{23}
-$$</div>
+$$
+</div>
 
 <p>由此可知 $\ket{n_1n_2}$ 是角动量本征态，并且</p>
 <div>
@@ -290,15 +304,16 @@ j=\cfrac{n_1+n_2}{2} \\
 m=\cfrac{n_1-n_2}{2}
 \\\end{gathered}
 \tag{24}
-$$</div>
+$$
+</div>
 
 <p>因此</p>
 <div>
 $$
 \ket{jm}=\cfrac{(a^\dagger)^{j+m} (b^\dagger)^{j-m}}{(j+m)!(j-m)!}\ket{0}
 \tag{25}
-$$</div>
-
+$$
+</div>
 
 <p>仿造上节定义升降算符</p>
 <div>
@@ -308,7 +323,8 @@ J_+ = J_x + \mathrm{i}J_y = a^\dagger b \\
 J_- = J_x - \mathrm{i}J_y = b^\dagger a
 \\\end{gathered}
 \tag{26}
-$$</div>
+$$
+</div>
 
 <p>类似可证它们的作用是加减 $J_z$ 本征值。</p>
 <p>然后定义以下两个算符</p>
@@ -319,7 +335,8 @@ K_+ = a^\dagger b^\dagger \\
 K_- = a b \\
 \\\end{gathered}
 \tag{27}
-$$</div>
+$$
+</div>
 
 <p>可以证明其作用是升降 $L^2$ 本征值：</p>
 <div>
@@ -329,10 +346,10 @@ K_+\ket{jm} = \sqrt{(j+m+1)(j-m+1)}\ket{j+1,m} \\
 K_-\ket{jm} = \sqrt{(j+m)(j-m)}\ket{j-1,m} \\
 \\\end{gathered}
 \tag{28}
-$$</div>
+$$
+</div>
 
-
-</div><div class="article-licensing box"><div class="licensing-title"><p>量子力学中角动量算符本征值的因式分解求解</p><p><a href="https://yuchenxi2000.github.io/2024/08/26/量子力学中角动量算符本征值的因式分解求解/">https://yuchenxi2000.github.io/2024/08/26/量子力学中角动量算符本征值的因式分解求解/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>Chenxi Yu</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2024-08-26</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2026-04-03</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/%E7%89%A9%E7%90%86/">物理</a><a class="link-muted mr-2" rel="tag" href="/tags/%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6/">量子力学</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2024/09/04/%E7%A2%B3%E7%BA%B3%E7%B1%B3%E5%B8%A6%E8%83%BD%E5%B8%A6/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">碳纳米带能带</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2024/08/25/%E8%B4%B9%E7%B1%B3%E5%AD%90%E5%92%8C%E6%B3%A2%E8%89%B2%E5%AD%90%E7%9A%84%E7%BB%9F%E8%AE%A1%E5%88%86%E5%B8%83/"><span class="level-item">费米子和波色子的统计分布</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><!--!--><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a><p class="is-size-7"><span>&copy; 2026 Chenxi Yu</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="fab fa-creative-commons-nc"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/yuchenxi2000"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
+</div><div class="article-licensing box"><div class="licensing-title"><p>量子力学中角动量算符本征值的因式分解求解</p><p><a href="https://yuchenxi2000.github.io/2024/08/26/量子力学中角动量算符本征值的因式分解求解/">https://yuchenxi2000.github.io/2024/08/26/量子力学中角动量算符本征值的因式分解求解/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>Chenxi Yu</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2024-08-26</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2026-06-13</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/%E7%89%A9%E7%90%86/">物理</a><a class="link-muted mr-2" rel="tag" href="/tags/%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6/">量子力学</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2024/09/04/%E7%A2%B3%E7%BA%B3%E7%B1%B3%E5%B8%A6%E8%83%BD%E5%B8%A6/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">碳纳米带能带</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2024/08/25/%E8%B4%B9%E7%B1%B3%E5%AD%90%E5%92%8C%E6%B3%A2%E8%89%B2%E5%AD%90%E7%9A%84%E7%BB%9F%E8%AE%A1%E5%88%86%E5%B8%83/"><span class="level-item">费米子和波色子的统计分布</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><!--!--><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a><p class="is-size-7"><span>&copy; 2026 Chenxi Yu</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="fab fa-creative-commons-nc"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/yuchenxi2000"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
             article: {
                 highlight: {
                     clipboard: true,

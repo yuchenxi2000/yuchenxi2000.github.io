@@ -34,22 +34,24 @@
 $$
 \Delta = \nabla^2 = \cfrac{\partial^2}{\partial^2 x} + \cfrac{\partial^2}{\partial^2 y} + \cfrac{\partial^2}{\partial^2 z}
 \tag{1}
-$$</div>
-
+$$
+</div>
 
 <h2 id="一般方法"><a href="#一般方法" class="headerlink" title="一般方法"></a>一般方法</h2><p>本质上是换元，将对直角坐标 $x_i$ 对导数化为对极坐标&#x2F;球坐标 $\theta_j$ 的导数。定义一个矩阵</p>
 <div>
 $$
 a_{ij} = \cfrac{\partial \theta_i}{\partial x_j}
 \tag{2}
-$$</div>
+$$
+</div>
 
 <p>那么有</p>
 <div>
 $$
 \cfrac{\partial}{\partial x_i}=\sum_j a_{ij}\cfrac{\partial}{\partial \theta_j}
 \tag{3}
-$$</div>
+$$
+</div>
 
 <p>接下来计算拉普拉斯算子</p>
 <div>
@@ -58,15 +60,16 @@ $$
 \sum_{ij} \cfrac{\partial a_{ij}}{\partial x_i}\cfrac{\partial}{\partial \theta_j}
 +\sum_{ijk} a_{ij}a_{ik}\cfrac{\partial^2}{\partial \theta_j \partial \theta_k}
 \tag{4}
-$$</div>
+$$
+</div>
 
 <p>简单的写，用矩阵的语言表达：</p>
 <div>
 $$
 \nabla^2 = (\nabla_x A) \nabla_\theta + \nabla_\theta (A^T A) \nabla_\theta
 \tag{5}
-$$</div>
-
+$$
+</div>
 
 <p>其中第一项的nabla算子作用到右边 $A$ 上，而第二项应该理解为nabla算子不作用在右边 $A^TA$ 上。</p>
 <h2 id="极坐标"><a href="#极坐标" class="headerlink" title="极坐标"></a>极坐标</h2><p>极坐标定义：</p>
@@ -77,8 +80,8 @@ x = \rho \cos \theta \\
 y = \rho \sin \theta \\
 \end{cases}
 \tag{6}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
@@ -87,8 +90,8 @@ $$
 \theta = \arctan \cfrac{y}{x} \\
 \end{cases}
 \tag{7}
-$$</div>
-
+$$
+</div>
 
 <p>求矩阵 $A$ </p>
 <div>
@@ -107,7 +110,8 @@ $$
 \partial_\theta \\
 \end{pmatrix}
 \tag{8}
-$$</div>
+$$
+</div>
 
 <p>计算 $A^TA$ </p>
 <div>
@@ -127,7 +131,8 @@ A^TA =
 0 & \cfrac{1}{\rho^2} \\
 \end{pmatrix} \\
 \tag{9}
-$$</div>
+$$
+</div>
 
 <p>计算 $\nabla_xA$ </p>
 <div>
@@ -137,8 +142,8 @@ $$
 \cfrac{1}{\rho} & 0 \\
 \end{pmatrix} \\
 \tag{10}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
@@ -147,8 +152,8 @@ $$
 =\cfrac{\rho^2-x^2}{\rho^3}
 \\\end{gathered}
 \tag{11}
-$$</div>
-
+$$
+</div>
 
 <p>于是</p>
 <div>
@@ -158,8 +163,8 @@ $$
 + \cfrac{1}{\rho} \cfrac{\partial}{\partial \rho}
 + \cfrac{1}{\rho^2} \cfrac{\partial^2}{\partial \theta^2}
 \tag{12}
-$$</div>
-
+$$
+</div>
 
 <h2 id="球坐标"><a href="#球坐标" class="headerlink" title="球坐标"></a>球坐标</h2><p>球坐标定义：</p>
 <div>
@@ -170,8 +175,8 @@ y=r\sin\theta\sin\phi \\
 z=r\cos\theta \\
 \end{cases}
 \tag{13}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
@@ -181,8 +186,8 @@ r = \sqrt{x^2+y^2+z^2} \\
 \phi = \arctan \cfrac{y}{x} \\
 \end{cases}
 \tag{14}
-$$</div>
-
+$$
+</div>
 
 <p>求矩阵 $A$ </p>
 <div>
@@ -210,7 +215,8 @@ $$
 \partial_\phi \\
 \end{pmatrix}
 \tag{15}
-$$</div>
+$$
+</div>
 
 <p>矩阵 $A$ ，替换成直角坐标的变量</p>
 <div>
@@ -227,7 +233,8 @@ $$
 & 0 \\
 \end{pmatrix}
 \tag{16}
-$$</div>
+$$
+</div>
 
 <p>计算 $A^TA$ </p>
 <div>
@@ -263,7 +270,8 @@ $$
 \end{pmatrix}
 \end{gathered}
 \tag{17}
-$$</div>
+$$
+</div>
 
 <p>计算 $\nabla_xA$ </p>
 <div>
@@ -273,7 +281,8 @@ $$
 \cfrac{2}{r} & \cfrac{\cos \theta}{r^2\sin\theta} & 0 \\
 \end{pmatrix} \\
 \tag{18}
-$$</div>
+$$
+</div>
 
 <p>于是</p>
 <div>
@@ -283,8 +292,8 @@ $$
 +\cfrac{\cos \theta}{r^2\sin\theta}\cfrac{\partial}{\partial \theta}
 +\cfrac{1}{r^2\sin^2\theta}\cfrac{\partial^2}{\partial \phi^2}
 \tag{19}
-$$</div>
-
+$$
+</div>
 
 </div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2024-10-05T13:18:57.000Z" title="2024/10/5 21:18:57">2024-10-05</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E7%89%A9%E7%90%86/">物理</a></span><span class="level-item">15 分钟读完 (大约2190个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2024/10/05/%E6%8A%95%E5%BD%B1%E7%BC%80%E5%8A%A0%E6%B3%A2%E6%B3%95%EF%BC%88PAW%EF%BC%89%E4%B8%80%E4%BA%9B%E8%AF%81%E6%98%8E/">投影缀加波法（PAW）一些证明</a></p><div class="content"><p>除非特殊说明，下面的 $kr$ 都表示 $k,r$ 的点乘，即 $k \cdot r$ </p>
 <h2 id="1"><a href="#1" class="headerlink" title="1"></a>1</h2><p>不同 $k$ 对应的波函数正交：</p>
@@ -292,8 +301,8 @@ $$</div>
 $$
 \psi_{km}(r)=\exp(\mathrm{i}kr) u_{km}(r)
 \tag{1}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
@@ -304,22 +313,22 @@ $$
 = \left(\sum_R \exp[\mathrm{i}(k-k')R]\right) \cdot \int_{\Omega} \exp[\mathrm{i}(k-k')r] u^\ast _{k'n}(r)u_{km}(r) \, \mathrm{d}r \\
 \\\end{gathered}
 \tag{2}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
 \sum_R \exp[\mathrm{i}(k-k')R] \propto \delta(k-k')
 \tag{3}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
 \braket{\psi_{k'n}\vert\psi_{km}}\propto \delta(k-k') \int_{\Omega} u^\ast _{k'n}(r) u_{km}(r) \, \mathrm{d}r
 \tag{4}
-$$</div>
-
+$$
+</div>
 
 <p>因此不同 $k$ 对应的波函数正交。我们省略了发散的乘子，因为它是无穷大的体系造成的。省略后，在 $\mathbb{R}^3$ 上的积分化为在原胞 $\Omega$ 上的积分。虽然波函数定义在 $\mathbb{R}^3$ 上，但是计算时只计算原胞内。这个问题我们在下一章节也会讨论。</p>
 <h2 id="2"><a href="#2" class="headerlink" title="2"></a>2</h2><p>以下参考 <a target="_blank" rel="noopener" href="https://qijingzheng.github.io/posts/VASP-All-Electron-WFC/">https://qijingzheng.github.io/posts/VASP-All-Electron-WFC/</a></p>
@@ -329,36 +338,40 @@ $$</div>
 $$
 H=-\cfrac{1}{2}\nabla^2 + V_H + V_{xc}
 \tag{5}
-$$</div>
+$$
+</div>
 
 <p>参考<a href="/2023/11/16/%E8%B5%9D%E5%8A%BF%E6%96%B9%E6%B3%95/" title="赝势方法">赝势方法</a>，运用PAW</p>
 <div>
 $$
 \psi = T\tilde{\psi}
 \tag{6}
-$$</div>
+$$
+</div>
 
 <p>其中波函数 $\psi$ 和赝波函数 $\tilde{\psi}$ 的变换为</p>
 <div>
 $$
 T=1+\sum_i (\ket{\phi_i}-\ket{\tilde{\phi}_i})\bra{p_i}
 \tag{7}
-$$</div>
+$$
+</div>
 
 <p>我们举的例子为哈密顿量。</p>
 <div>
 $$
 \bra{\psi}H\ket{\psi}=\bra{\tilde{\psi}}T^\dagger H T\ket{\tilde{\psi}}
 \tag{8}
-$$</div>
+$$
+</div>
 
 <p>定义 $k$ 相关的投影算子</p>
 <div>
 $$
 \ket{p_k}=\exp(-\mathrm{i}kr)\ket{p}
 \tag{9}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
@@ -370,8 +383,8 @@ T^\dagger H T \\
 + \sum_{ij} \ket{p_i}(\bra{\phi_i}-\bra{\tilde{\phi}_i})H(\ket{\phi_j}-\ket{\tilde{\phi}_j})\bra{p_j} \\
 \\\end{gathered}
 \tag{10}
-$$</div>
-
+$$
+</div>
 
 <p>下面开始计算。我们只计算其中一项 $H\sum_i (\ket{\phi_i}-\ket{\tilde{\phi}_i})\bra{p_i}$ 的矩阵元。 $H$ 这一项可以由章节1得到。</p>
 <div>
@@ -386,14 +399,16 @@ $$
 = \sum_{i\alpha}\exp[\mathrm{i}k(\tau_i+R_\alpha)] [\phi_i(r'-\tau_i-R_\alpha)-\tilde{\phi}_i(r'-\tau_i-R_\alpha)] \beta_{ik} \\
 \\\end{gathered}
 \tag{11}
-$$</div>
+$$
+</div>
 
 <p>其中</p>
 <div>
 $$
 \beta_{ik} = \int_{\Omega} p_{ik}^\ast (r-\tau_i) \tilde{u}_k(r) \, \mathrm{d}r
 \tag{12}
-$$</div>
+$$
+</div>
 
 <p>上面这一项有个相因子 $\exp[\mathrm{i}k(\tau_i+R_\alpha)]$ ，但下面可以看到如果写出整个表达式，该项会抵消。</p>
 <div>
@@ -407,15 +422,16 @@ $$
 = \delta(k-k') \sum_{i} \beta_{ikm} \gamma_{ikn}
 \\\end{gathered}
 \tag{13}
-$$</div>
+$$
+</div>
 
 <p>其中</p>
 <div>
 $$
 \gamma_{ikn} = \int_{\Omega} \tilde{u}^\ast _{k'n}(r)\exp[-\mathrm{i}k'(r-\tau_i)] [H\phi_i(r-\tau_i)-H\tilde{\phi}_i(r-\tau_i)] \, \mathrm{d}r
 \tag{14}
-$$</div>
-
+$$
+</div>
 
 <p>同样，我们省略了无穷大的乘子，把在 $\mathbb{R}^3$ 上的积分化为在原胞 $\Omega$ 上的积分。</p>
 <h2 id="3"><a href="#3" class="headerlink" title="3"></a>3</h2><p>同样参考 <a target="_blank" rel="noopener" href="https://qijingzheng.github.io/posts/VASP-All-Electron-WFC/">https://qijingzheng.github.io/posts/VASP-All-Electron-WFC/</a></p>
@@ -425,14 +441,16 @@ $$</div>
 $$
 \beta_{ikm}=\braket{p_{ik} \vert \tilde{u}_{km}}
 \tag{15}
-$$</div>
+$$
+</div>
 
 <p> $\tilde{u}$ 是周期函数，可以傅立叶展开（而 $p$ 不是）</p>
 <div>
 $$
 \ket{\tilde{u}_{km}}=\sum_G \ket{G}\braket{G \vert \tilde{u}_{km}}
 \tag{16}
-$$</div>
+$$
+</div>
 
 <p>所以</p>
 <div>
@@ -445,7 +463,8 @@ $$
 = \sum_G \exp(\mathrm{i}G\tau_i) \braket{p_{i}(r) \vert G+k} \braket{G \vert \tilde{u}_{km}(r)} \\
 \\\end{gathered}
 \tag{17}
-$$</div>
+$$
+</div>
 
 <p>注意 $\braket{p_i \vert G+k}$ 不能理解为傅立叶展开系数，因为 $p$ 不是周期函数不能展开。</p>
 <h2 id="4"><a href="#4" class="headerlink" title="4"></a>4</h2><p>对2，3章节的内容给出一个简单的总结，这些式子归结为如下形式：</p>
@@ -453,7 +472,8 @@ $$</div>
 $$
 \sum_{ij} \braket{\tilde{\psi}_2 \vert q_i}D_{ij}\braket{p_j \vert \tilde{\psi}_1}
 \tag{18}
-$$</div>
+$$
+</div>
 
 <p>其中 $q_i,p_j$ 为在PAW球上具有紧支集的任意函数。比如哈密顿量矩阵（假设局域算子）</p>
 <div>
@@ -470,7 +490,8 @@ $$
 =
 \\\end{gathered}
 \tag{19}
-$$</div>
+$$
+</div>
 
 <p>可以写成 $\bra{\tilde{\psi}_2}H\ket{\tilde{\psi}_1}$ 和上面给出的形式之和。</p>
 <p>对在PAW球上具有紧支集的任意函数 $p_i$ ，定义 $k$ 相关的函数</p>
@@ -478,7 +499,8 @@ $$</div>
 $$
 p_{ik}(r)=\exp(-\mathrm{i}kr)p_{i}(r)
 \tag{20}
-$$</div>
+$$
+</div>
 
 <p> $i,j$ 应该是所有原胞内的原子编号，这里我们分开原胞内原子编号 $j$ 和原胞编号 $\beta$ 。</p>
 <div>
@@ -489,8 +511,8 @@ $$
 = \exp[\mathrm{i}k(\tau_j+R_\beta)] \int_{\Omega} p^\ast _{jk}(r-\tau_j) {\tilde{u}_1}_k(r) \, \mathrm{d}r \\
 \\\end{gathered}
 \tag{21}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
@@ -499,8 +521,8 @@ $$
 = \sum_{i\alpha,j\beta}\exp[\mathrm{i}k(\tau_j+R_\beta)-\mathrm{i}k'(\tau_i+R_\alpha)]  D_{ij} \int_{\Omega} {\tilde{u}^\ast _2}_k(r) q_{jk'}(r-\tau_i) \, \mathrm{d}r \int_{\Omega} p^\ast _{jk}(r-\tau_j) {\tilde{u}_1}_k(r) \, \mathrm{d}r
 \\\end{gathered}
 \tag{22}
-$$</div>
-
+$$
+</div>
 
 </div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2024-09-08T07:11:12.000Z" title="2024/9/8 15:11:12">2024-09-08</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E7%89%A9%E7%90%86/">物理</a></span><span class="level-item">11 分钟读完 (大约1589个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2024/09/08/%E5%B9%B3%E5%9D%87%E6%9C%89%E6%95%88%E8%B4%A8%E9%87%8F/">平均有效质量</a></p><div class="content"><p>我在半导体物理相关文献中经常看到载流子有效质量和态密度有效质量的概念和表达式，一直疑惑为什么它们的形式不一样。我根据自己理解给出了它们的推导，如有错误欢迎指出。</p>
 <h2 id="载流子有效质量Carrier-effective-mass"><a href="#载流子有效质量Carrier-effective-mass" class="headerlink" title="载流子有效质量Carrier effective mass"></a>载流子有效质量Carrier effective mass</h2><p>能带抛物线近似下，倒有效质量张量的定义</p>
@@ -508,24 +530,24 @@ $$</div>
 $$
 \cfrac{\partial^2 \varepsilon}{\partial k_i \partial k_j} = \hbar^2\left(\cfrac{1}{m}\right)_{ij}
 \tag{1}
-$$</div>
-
+$$
+</div>
 
 <p>载流子遵循的运动方程</p>
 <div>
 $$
 F=\hbar \cfrac{\mathrm{d} k}{\mathrm{d} t} = qE
 \tag{2}
-$$</div>
-
+$$
+</div>
 
 <p>在两次碰撞间，动量变化量（其中 $\tau$ 为弛豫时间）</p>
 <div>
 $$
 \delta k = qE \tau / \hbar
 \tag{3}
-$$</div>
-
+$$
+</div>
 
 <p>载流子的群速度</p>
 <div>
@@ -535,16 +557,16 @@ v_g = \cfrac{1}{\hbar} \cfrac{\partial \varepsilon}{\partial k} \\
 = \hbar\left(\cfrac{1}{m}\right)_{ij} k_j
 \\\end{gathered}
 \tag{4}
-$$</div>
-
+$$
+</div>
 
 <p>在两次碰撞间，群速度变化量</p>
 <div>
 $$
 (\delta v_g)_i = q\left(\cfrac{1}{m}\right)_{ij} E_j \tau
 \tag{5}
-$$</div>
-
+$$
+</div>
 
 <p>考虑多晶样品，假设各晶向的晶粒均匀分布。我们求所有可能晶向的迁移率的平均值。</p>
 <p>在电场方向，考虑到坐标轴可以以电场为轴任意旋转，再将结果加和，因此虽然 $\delta v_g$ 可能方向和 $E_j$ 不同，但是平均后和 $E$ 同向。将 $\delta v_g$ 向电场方向投影，或者 $\delta v_g$ 和 $E$ 方向单位矢量点乘就可以得到平均后迁移率</p>
@@ -553,8 +575,8 @@ $$</div>
 $$
 n=(\sin\theta\cos\phi,\sin\theta\sin\phi,\cos\theta)
 \tag{6}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
@@ -566,8 +588,8 @@ $$
 = \cfrac{1}{3}\left(\cfrac{1}{m_{xx}}+\cfrac{1}{m_{yy}}+\cfrac{1}{m_{zz}}\right) \int \mathrm{d} n
 \\\end{gathered}
 \tag{7}
-$$</div>
-
+$$
+</div>
 
 <p>所以平均有效质量（载流子有效质量）即为</p>
 <div>
@@ -577,8 +599,8 @@ $$
 \cfrac{3}{m_{\text{eff}}} = \mathrm{Tr} \cfrac{1}{m}
 \\\end{gathered}
 \tag{8}
-$$</div>
-
+$$
+</div>
 
 
 <p>其中我们计算球面平均时用到如下结论</p>
@@ -592,8 +614,8 @@ $$
 = (n-1)\left(\int_0^{\pi/2} \sin^{n-2} x \mathrm{d} x - \int_0^{\pi/2} \sin^{n} x \mathrm{d} x\right) \\
 \\\end{gathered}
 \tag{9}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
@@ -601,8 +623,8 @@ $$
 \int_0^{\pi/2} \sin^n x \mathrm{d}x = \cfrac{n-1}{n}\int_0^{\pi/2} \sin^{n-2} x \mathrm{d} x \\
 \\\end{gathered}
 \tag{10}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
@@ -612,31 +634,31 @@ $$
 \cfrac{(n-1)!!}{n!!}\cfrac{\pi}{2} & n \text{ is even} \\
 \end{cases}
 \tag{11}
-$$</div>
-
+$$
+</div>
 
 <p>矩阵的迹在正交变换下不变，假设旋转矩阵 $U$ </p>
 <div>
 $$
 \mathrm{Tr}(UAU^\dagger) = \mathrm{Tr}(U^\dagger UA)=\mathrm{Tr} A
 \tag{12}
-$$</div>
-
+$$
+</div>
 
 <p>故载流子有效质量及其定义式也在正交变换下不变。</p>
 <h2 id="态密度有效质量DOS-effective-mass"><a href="#态密度有效质量DOS-effective-mass" class="headerlink" title="态密度有效质量DOS effective mass"></a>态密度有效质量DOS effective mass</h2><div>
 $$
 a_i \cdot b_j = 2\pi\delta_{ij}
 \tag{13}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
 k=\cfrac{n_i}{N_i}b_i
 \tag{14}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
@@ -645,8 +667,8 @@ $$
 = \cfrac{(2\pi)^3}{V} \mathrm{d}^3n \\
 \\\end{gathered}
 \tag{15}
-$$</div>
-
+$$
+</div>
 
 <p>其中 $[b_x,b_y,b_z]&#x3D;(b_x\times b_y)\cdot b_z$ 。根据晶格矢量 $a$ 与倒格矢 $b$ 的正交关系可以得到 $[a_x,a_y,a_z][b_x,b_y,b_z]&#x3D;(2\pi)^3$ （两矩阵互为逆矩阵，然后式子两端求行列式），其中原胞体积 $V&#x3D;[a_x,a_y,a_z]$ 。</p>
 <p>注意上面没有考虑自旋简并。下面计算DOS时会加入自旋简并。</p>
@@ -654,7 +676,8 @@ $$</div>
 $$
 \varepsilon = \cfrac{\hbar^2}{2} \left(\cfrac{1}{m}\right)_{ij}k_ik_j
 \tag{16}
-$$</div>
+$$
+</div>
 
 <p>我们计算能量 $0\sim\varepsilon$ 包裹的椭球的体积（假设 $1&#x2F;m$ 对称正定。要求对称因为偏导数的交换性质，要求正定因为需要能带的抛物线近似成立，因此曲面为一椭球而不是其他体积无穷的二次曲面）</p>
 <p>对 $1&#x2F;m$ 做Cholesky分解 $1&#x2F;m&#x3D;L^TL$ ，</p>
@@ -665,7 +688,8 @@ $$
 2\varepsilon/\hbar^2=\lvert Lk \rvert^2 \\
 \\\end{gathered}
 \tag{17}
-$$</div>
+$$
+</div>
 
 <p>求该椭球体积的方法：用体积积分的换元法。设 $u&#x3D;Lk$ ，则 $\lvert u \rvert^2 &#x3D; 2\varepsilon&#x2F;\hbar^2$ 。这是一个球，它的体积可以用球体积公式求出。再考虑到换元后体积微元为 $\mathrm{d}^3u&#x3D;\lvert \det L \rvert \mathrm{d}^3 k$ ，由此知将球体积除以 $\lvert \det L \rvert$ 就可以求得方程对应曲面在 $k$ 空间中围成的椭球的体积。</p>
 <p>所以</p>
@@ -677,8 +701,8 @@ $$
 = \cfrac{4\pi(2\varepsilon)^{3/2}}{3\hbar^3\sqrt{\det (1/m)}} \\
 \\\end{gathered}
 \tag{18}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
@@ -687,8 +711,8 @@ $$
 = \cfrac{4\pi \sqrt{2}}{\hbar^3\sqrt{\det (1/m)}} \sqrt{\varepsilon} \mathrm{d}\varepsilon \\
 \\\end{gathered}
 \tag{19}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
@@ -698,15 +722,16 @@ D(\varepsilon) = \cfrac{2\mathrm{d}n^3}{V\mathrm{d}\varepsilon} \\
 = \cfrac{\sqrt{2\varepsilon}}{\pi^2\hbar^3\sqrt{\det (1/m)}}
 \\\end{gathered}
 \tag{20}
-$$</div>
-
+$$
+</div>
 
 <p>其中用到一个结论</p>
 <div>
 $$
 \det(1/m)=\det(L^TL)=\det(L^T)\det L=(\det L)^2
 \tag{21}
-$$</div>
+$$
+</div>
 
 <blockquote>
 <p>注：这里的态密度表达式看着和其他参考文献不一样，只是因为其他文献中的是普朗克常数 $h$ ，而这里的是约化普朗克常数 $\hbar&#x3D;h&#x2F;(2\pi)$ </p>
@@ -720,21 +745,24 @@ $$
 0 & 0 & 1/m \\
 \end{pmatrix}
 \tag{22}
-$$</div>
+$$
+</div>
 
 <p>则态密度</p>
 <div>
 $$
 D(\varepsilon) = \cfrac{m^{3/2}\sqrt{2\varepsilon}}{\pi^2\hbar^3}
 \tag{23}
-$$</div>
+$$
+</div>
 
 <p>对于一般情形，我们将其等效到各向同性的情形，定义一个 $m_{\text{eff}}$ 。则</p>
 <div>
 $$
 \cfrac{1}{m_{\text{eff}}^3}=\det{\cfrac{1}{m}}
 \tag{24}
-$$</div>
+$$
+</div>
 
 <p>行列式在正交变换下不变</p>
 <div>
@@ -746,8 +774,8 @@ $$
 = \det A
 \\\end{gathered}
 \tag{25}
-$$</div>
-
+$$
+</div>
 
 <p>，所以态密度有效质量也在正交变换下不变。</p>
 <p>若倒有效质量张量有如下形式：</p>
@@ -759,15 +787,16 @@ $$
 0 & 0 & 1/m_z \\
 \end{pmatrix}
 \tag{26}
-$$</div>
+$$
+</div>
 
 <p>则态密度有效质量</p>
 <div>
 $$
 m_{\text{eff}}=\sqrt[3]{m_xm_ym_z}
 \tag{27}
-$$</div>
-
+$$
+</div>
 
 <p>此即很多书籍中的公式。</p>
 <h3 id="多能谷情形"><a href="#多能谷情形" class="headerlink" title="多能谷情形"></a>多能谷情形</h3><p>比如硅是间接带隙半导体，导带底不在 $\Gamma$ 点，对应能谷有 $6$ 个。</p>
@@ -776,7 +805,8 @@ $$</div>
 $$
 m_{\text{eff}}=6^{2/3}\sqrt[3]{m_lm_t^2}
 \tag{28}
-$$</div>
+$$
+</div>
 
 <p> $m_l$ 为纵向有效质量， $m_t$ 为横向有效质量。</p>
 </div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2024-09-03T16:07:57.000Z" title="2024/9/4 00:07:57">2024-09-04</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E7%89%A9%E7%90%86/">物理</a></span><span class="level-item">6 分钟读完 (大约931个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2024/09/04/%E7%A2%B3%E7%BA%B3%E7%B1%B3%E5%B8%A6%E8%83%BD%E5%B8%A6/">碳纳米带能带</a></p><div class="content"><p>参考[1]，将碳纳米带分成纵向包含两列的片状结构。横向为无限延伸的方向，纵向为有限的方向。</p>
@@ -793,7 +823,8 @@ H_1^\dagger & H_0 & H_1 &\cdots & 0 & 0 \\
 H_1 & 0 & 0 & \cdots & H_1^\dagger & H_0 \\
 \end{pmatrix}
 \tag{1}
-$$</div>
+$$
+</div>
 
 <p>其中假设 $H_0$ 为某一片的哈密顿量， $H_1$ 为某一片与相邻一片的相互作用。 $H_0,H_1$ 可以根据几何关系写出，需要假设相邻碳原子的紧束缚系数 $t$ 。</p>
 <p>横向上假设有 $N$ 个片结构，将上述哈密顿量变换到 $k$ 空间</p>
@@ -806,7 +837,8 @@ H(k',k)=\cfrac{1}{N}\sum_{nm} \exp(-\mathrm{i}ak'n) H_{nm} \exp(\mathrm{i}akm) \
 = \delta(k'-k)[H_{0} + H_{1} \exp(+\mathrm{i}ak) + H_{1}^\dagger \exp(-\mathrm{i}ak)] \\
 \\\end{gathered}
 \tag{2}
-$$</div>
+$$
+</div>
 
 <p>其中我们假设相邻片结构的间距为 $a$ ， $k$ 的取值为 $k&#x3D;\cfrac{2\pi n}{aN},n\in [0,N),n\in \mathbb{Z}$ ，因此</p>
 <div>
@@ -824,7 +856,8 @@ N, & k = k' \\
 \end{cases} \\
 = N \delta(k'-k)
 \tag{3}
-$$</div>
+$$
+</div>
 
 <p>因此 $k$ 空间中的哈密顿量关于 $k$ 对角化，接下来只需要对片结构内的原子序号对角化即可</p>
 <p>代码，针对armchair：</p>
@@ -844,8 +877,8 @@ $$
 [L_z,L_x]=\mathrm{i} L_y \\
 \\\end{gathered}
 \tag{1}
-$$</div>
-
+$$
+</div>
 
 <p>下证明 $L^2,L_z$ 对易</p>
 <div>
@@ -856,8 +889,8 @@ $$
 = -\mathrm{i}L_xL_y-\mathrm{i}L_yL_x
 \\\end{gathered}
 \tag{2}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
@@ -867,23 +900,23 @@ $$
 = \mathrm{i}L_yL_x+\mathrm{i}L_xL_y
 \\\end{gathered}
 \tag{3}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
 [L^2,L_z]=0
 \tag{4}
-$$</div>
-
+$$
+</div>
 
 <p>所以可以求 $L^2,L_z$ 的共同本征态。求解前先定义升降算符，类似谐振子的因式分解求解：</p>
 <div>
 $$
 L_\pm = L_x \pm \mathrm{i}L_y
 \tag{5}
-$$</div>
-
+$$
+</div>
 
 <p>可以证明升降算符的对易关系</p>
 <div>
@@ -896,15 +929,16 @@ $$
 = 2L_z \\
 \\\end{gathered}
 \tag{6}
-$$</div>
-
+$$
+</div>
 
 <p> $L^2$ 用升降算符表示</p>
 <div>
 $$
 L^2=\frac{1}{2}(L_+L_-+L_-L_+)+L_z^2
 \tag{7}
-$$</div>
+$$
+</div>
 
 <p>下面说明升降算符的名称由来</p>
 <div>
@@ -917,8 +951,8 @@ $$
 = L_+
 \\\end{gathered}
 \tag{8}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
@@ -930,8 +964,8 @@ $$
 = -L_-
 \\\end{gathered}
 \tag{9}
-$$</div>
-
+$$
+</div>
 
 <p>因此，可以证明如果 $\ket{l}$ 为 $L_z$ 本征值 $m$ 的本征态，则 $L_+\ket{l}$ 为 $L_z$ 本征值 $m+1$ 的本征态，因此 $L_+$ 叫升算符。</p>
 <div>
@@ -941,8 +975,8 @@ L_zL_+=L_+(L_z+1) \\
 L_z\ket{\phi}=m\ket{\phi}, \quad L_zL_+\ket{\phi}=(m+1)L_+\ket{\phi} \\
 \\\end{gathered}
 \tag{10}
-$$</div>
-
+$$
+</div>
 
 <p> $L_-$ 同理，为降算符。</p>
 <p>求 $L^2,L_z$ 共同本征态的本征值。由 $L^2&#x3D;L_x^2+L_y^2+L_z^2$ 得出 $L_z$ 有上下界，设分别为 $l_1,l_2$ 。则</p>
@@ -953,7 +987,8 @@ L_-\ket{l_1}=0 \\
 L_+\ket{l_2}=0 \\
 \\\end{gathered}
 \tag{11}
-$$</div>
+$$
+</div>
 
 <p>否则，用升降算符分别作用在 $\ket{l_2},\ket{l_1}$ 上，得到本征值 $l_2+1,l_1-1$ 的本征态，得出 $l_1,l_2$ 并非为上下界，矛盾。</p>
 <p>根据升降算符的性质， $\ket{l_2}$ 可以由 $\ket{l_1}$ 在算符 $L_+$ 的多次作用下得到，因此 $l_2-l_1 \in \mathbb{N}^\ast $ 。（否则，会得到 $L_z$ 无上界的结论，矛盾）</p>

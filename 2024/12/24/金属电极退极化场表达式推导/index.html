@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>金属电极退极化场表达式推导 - YCX&#039;s Blog</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="YCX&#039;s Blog"><meta name="msapplication-TileImage" content="favicon.ico"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="YCX&#039;s Blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="铁电电容器中，铁电层中退极化场的来源是金属电极对极化电荷的不完全屏蔽。 器件结构：金属1，铁电层，金属2。为计算方便，假设金属电极半无限厚。各层的范围 $(-\infty,0),[0,t_{FE}],(t_{FE},+\infty)$  对于金属， $\rho \propto \phi-\phi_F$ ，金属一侧泊松方程  $$ -\cfrac{\mathrm{d}^2\phi}{\mathrm{"><meta property="og:type" content="blog"><meta property="og:title" content="金属电极退极化场表达式推导"><meta property="og:url" content="https://yuchenxi2000.github.io/2024/12/24/%E9%87%91%E5%B1%9E%E7%94%B5%E6%9E%81%E9%80%80%E6%9E%81%E5%8C%96%E5%9C%BA%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%8E%A8%E5%AF%BC/"><meta property="og:site_name" content="YCX&#039;s Blog"><meta property="og:description" content="铁电电容器中，铁电层中退极化场的来源是金属电极对极化电荷的不完全屏蔽。 器件结构：金属1，铁电层，金属2。为计算方便，假设金属电极半无限厚。各层的范围 $(-\infty,0),[0,t_{FE}],(t_{FE},+\infty)$  对于金属， $\rho \propto \phi-\phi_F$ ，金属一侧泊松方程  $$ -\cfrac{\mathrm{d}^2\phi}{\mathrm{"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://yuchenxi2000.github.io/img/og_image.png"><meta property="article:published_time" content="2024-12-24T11:38:29.000Z"><meta property="article:modified_time" content="2026-04-03T14:05:08.217Z"><meta property="article:author" content="Chenxi Yu"><meta property="article:tag" content="物理"><meta property="article:tag" content="固体物理"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://yuchenxi2000.github.io/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://yuchenxi2000.github.io/2024/12/24/%E9%87%91%E5%B1%9E%E7%94%B5%E6%9E%81%E9%80%80%E6%9E%81%E5%8C%96%E5%9C%BA%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%8E%A8%E5%AF%BC/"},"headline":"金属电极退极化场表达式推导","image":["https://yuchenxi2000.github.io/img/og_image.png"],"datePublished":"2024-12-24T11:38:29.000Z","dateModified":"2026-04-03T14:05:08.217Z","author":{"@type":"Person","name":"Chenxi Yu"},"publisher":{"@type":"Organization","name":"YCX's Blog","logo":{"@type":"ImageObject","url":"https://yuchenxi2000.github.io/2024/12/24/%E9%87%91%E5%B1%9E%E7%94%B5%E6%9E%81%E9%80%80%E6%9E%81%E5%8C%96%E5%9C%BA%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%8E%A8%E5%AF%BC/android-chrome-512x512.png"}},"description":"铁电电容器中，铁电层中退极化场的来源是金属电极对极化电荷的不完全屏蔽。 器件结构：金属1，铁电层，金属2。为计算方便，假设金属电极半无限厚。各层的范围 $(-\\infty,0),[0,t_{FE}],(t_{FE},+\\infty)$  对于金属， $\\rho \\propto \\phi-\\phi_F$ ，金属一侧泊松方程  $$ -\\cfrac{\\mathrm{d}^2\\phi}{\\mathrm{"}</script><link rel="canonical" href="https://yuchenxi2000.github.io/2024/12/24/%E9%87%91%E5%B1%9E%E7%94%B5%E6%9E%81%E9%80%80%E6%9E%81%E5%8C%96%E5%9C%BA%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%8E%A8%E5%AF%BC/"><link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link data-pjax rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link data-pjax rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!--!--><!-- hexo injector head_end start --><script>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>金属电极退极化场表达式推导 - YCX&#039;s Blog</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="YCX&#039;s Blog"><meta name="msapplication-TileImage" content="favicon.ico"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="YCX&#039;s Blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="铁电电容器中，铁电层中退极化场的来源是金属电极对极化电荷的不完全屏蔽。 器件结构：金属1，铁电层，金属2。为计算方便，假设金属电极半无限厚。各层的范围 $(-\infty,0),[0,t_{FE}],(t_{FE},+\infty)$  对于金属， $\rho \propto \phi-\phi_F$ ，金属一侧泊松方程  $$ -\cfrac{\mathrm{d}^2\phi}{\mathrm{"><meta property="og:type" content="blog"><meta property="og:title" content="金属电极退极化场表达式推导"><meta property="og:url" content="https://yuchenxi2000.github.io/2024/12/24/%E9%87%91%E5%B1%9E%E7%94%B5%E6%9E%81%E9%80%80%E6%9E%81%E5%8C%96%E5%9C%BA%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%8E%A8%E5%AF%BC/"><meta property="og:site_name" content="YCX&#039;s Blog"><meta property="og:description" content="铁电电容器中，铁电层中退极化场的来源是金属电极对极化电荷的不完全屏蔽。 器件结构：金属1，铁电层，金属2。为计算方便，假设金属电极半无限厚。各层的范围 $(-\infty,0),[0,t_{FE}],(t_{FE},+\infty)$  对于金属， $\rho \propto \phi-\phi_F$ ，金属一侧泊松方程  $$ -\cfrac{\mathrm{d}^2\phi}{\mathrm{"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://yuchenxi2000.github.io/img/og_image.png"><meta property="article:published_time" content="2024-12-24T11:38:29.000Z"><meta property="article:modified_time" content="2026-06-12T17:24:25.676Z"><meta property="article:author" content="Chenxi Yu"><meta property="article:tag" content="物理"><meta property="article:tag" content="固体物理"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://yuchenxi2000.github.io/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://yuchenxi2000.github.io/2024/12/24/%E9%87%91%E5%B1%9E%E7%94%B5%E6%9E%81%E9%80%80%E6%9E%81%E5%8C%96%E5%9C%BA%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%8E%A8%E5%AF%BC/"},"headline":"金属电极退极化场表达式推导","image":["https://yuchenxi2000.github.io/img/og_image.png"],"datePublished":"2024-12-24T11:38:29.000Z","dateModified":"2026-06-12T17:24:25.676Z","author":{"@type":"Person","name":"Chenxi Yu"},"publisher":{"@type":"Organization","name":"YCX's Blog","logo":{"@type":"ImageObject","url":"https://yuchenxi2000.github.io/2024/12/24/%E9%87%91%E5%B1%9E%E7%94%B5%E6%9E%81%E9%80%80%E6%9E%81%E5%8C%96%E5%9C%BA%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%8E%A8%E5%AF%BC/android-chrome-512x512.png"}},"description":"铁电电容器中，铁电层中退极化场的来源是金属电极对极化电荷的不完全屏蔽。 器件结构：金属1，铁电层，金属2。为计算方便，假设金属电极半无限厚。各层的范围 $(-\\infty,0),[0,t_{FE}],(t_{FE},+\\infty)$  对于金属， $\\rho \\propto \\phi-\\phi_F$ ，金属一侧泊松方程  $$ -\\cfrac{\\mathrm{d}^2\\phi}{\\mathrm{"}</script><link rel="canonical" href="https://yuchenxi2000.github.io/2024/12/24/%E9%87%91%E5%B1%9E%E7%94%B5%E6%9E%81%E9%80%80%E6%9E%81%E5%8C%96%E5%9C%BA%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%8E%A8%E5%AF%BC/"><link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link data-pjax rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link data-pjax rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!--!--><!-- hexo injector head_end start --><script>
   (function () {
       function switchTab() {
           if (!location.hash) {
@@ -36,7 +36,8 @@
 $$
 -\cfrac{\mathrm{d}^2\phi}{\mathrm{d}x^2}=-\cfrac{1}{\lambda_1^2}\phi
 \tag{1}
-$$</div>
+$$
+</div>
 
 <p>可参考Thomas-Fermi屏蔽。 $\lambda_1$ 为金属1的屏蔽长度。</p>
 <p>然后我们依次写出各层的电势（把 $x&#x3D;-\infty$ 处定义为电势零点）</p>
@@ -49,7 +50,8 @@ $$
 (\phi_0 - E t_{FE})\exp[(t_{FE}-x)/\lambda_2]+V\{1-\exp[(t_{FE}-x)/\lambda_2]\}, & x \gt  t_{FE}
 \end{cases}
 \tag{2}
-$$</div>
+$$
+</div>
 
 <p> $\phi_0$ 表示 $x&#x3D;0$ 处电势。 $V$ 为器件两端电势差。</p>
 <p>然后用电位移垂直界面分量连续的条件，</p>
@@ -57,7 +59,8 @@ $$</div>
 $$
 -k_1/\lambda_1\phi_0=kE+P=k_2/\lambda_2[\phi_0-Et_{FE}]-k_2/\lambda_2V
 \tag{3}
-$$</div>
+$$
+</div>
 
 <p>其中我们记各层的介电常数 $k_1,k,k_2$ 。</p>
 <p>解出 $\phi_0$ ：</p>
@@ -67,7 +70,8 @@ $$
 \left[t_{FE}+k\left(\cfrac{\lambda_1}{k_1}+\cfrac{\lambda_1}{k_2}\right)\right]\phi_0=\cfrac{\lambda_1}{k_1}(kV-t_{FE}P) \\
 \\\end{gathered}
 \tag{4}
-$$</div>
+$$
+</div>
 
 <p>和 $E$ ：</p>
 <div>
@@ -76,7 +80,8 @@ $$
 E=-\cfrac{V+P\left(\cfrac{\lambda_1}{k_1}+\cfrac{\lambda_1}{k_2}\right)}{t_{FE}+k\left(\cfrac{\lambda_1}{k_1}+\cfrac{\lambda_2}{k_2}\right)} \\
 \\\end{gathered}
 \tag{5}
-$$</div>
+$$
+</div>
 
 <p>退极化场：</p>
 <div>
@@ -87,25 +92,28 @@ E_d
 = -\cfrac{P}{k}\cfrac{C_{FE}}{C_{FE}+C_{M}} \\
 \\\end{gathered}
 \tag{6}
-$$</div>
+$$
+</div>
 
 <p>其中铁电电容</p>
 <div>
 $$
 C_{FE} = \cfrac{k}{t_{FE}}
 \tag{7}
-$$</div>
+$$
+</div>
 
 <p>两个金属电极的电容（用串联电容公式）</p>
 <div>
 $$
 \cfrac{1}{C_{M}} = \cfrac{\lambda_1}{k_1} + \cfrac{\lambda_2}{k_2}
 \tag{8}
-$$</div>
+$$
+</div>
 
 <p>如果是理想金属 $\lambda_1&#x3D;\lambda_2&#x3D;0,k_1&#x3D;k_2&#x3D;+\infty$ ，那么无退极化场。</p>
 <h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><p><a target="_blank" rel="noopener" href="https://pubs.aip.org/aip/jap/article/44/8/3379/6486/Depolarization-fields-in-thin-ferroelectric-films">https://pubs.aip.org/aip/jap/article/44/8/3379/6486/Depolarization-fields-in-thin-ferroelectric-films</a></p>
-</div><div class="article-licensing box"><div class="licensing-title"><p>金属电极退极化场表达式推导</p><p><a href="https://yuchenxi2000.github.io/2024/12/24/金属电极退极化场表达式推导/">https://yuchenxi2000.github.io/2024/12/24/金属电极退极化场表达式推导/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>Chenxi Yu</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2024-12-24</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2026-04-03</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/%E7%89%A9%E7%90%86/">物理</a><a class="link-muted mr-2" rel="tag" href="/tags/%E5%9B%BA%E4%BD%93%E7%89%A9%E7%90%86/">固体物理</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2024/12/29/Kramers-Kronig%E5%85%B3%E7%B3%BB/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">Kramers-Kronig关系</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2024/11/27/Gummel%E8%BF%AD%E4%BB%A3%E6%B3%95/"><span class="level-item">Gummel迭代法</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><!--!--><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a><p class="is-size-7"><span>&copy; 2026 Chenxi Yu</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="fab fa-creative-commons-nc"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/yuchenxi2000"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
+</div><div class="article-licensing box"><div class="licensing-title"><p>金属电极退极化场表达式推导</p><p><a href="https://yuchenxi2000.github.io/2024/12/24/金属电极退极化场表达式推导/">https://yuchenxi2000.github.io/2024/12/24/金属电极退极化场表达式推导/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>Chenxi Yu</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2024-12-24</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2026-06-13</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/%E7%89%A9%E7%90%86/">物理</a><a class="link-muted mr-2" rel="tag" href="/tags/%E5%9B%BA%E4%BD%93%E7%89%A9%E7%90%86/">固体物理</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2024/12/29/Kramers-Kronig%E5%85%B3%E7%B3%BB/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">Kramers-Kronig关系</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2024/11/27/Gummel%E8%BF%AD%E4%BB%A3%E6%B3%95/"><span class="level-item">Gummel迭代法</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><!--!--><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a><p class="is-size-7"><span>&copy; 2026 Chenxi Yu</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="fab fa-creative-commons-nc"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/yuchenxi2000"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
             article: {
                 highlight: {
                     clipboard: true,

@@ -39,7 +39,8 @@ x=a_2 \mod m_2 \\
 x=a_n \mod m_n \\
 \end{cases}
 \tag{1}
-$$</div>
+$$
+</div>
 
 <p>存在整数解，且在模 $N$ 的意义下唯一（ $N&#x3D;\prod_{k&#x3D;1}^n m_k$ ）</p>
 <p>证明：对任意 $1\le k \le n$ ，因为 $N&#x2F;m_k$ 和 $m_k$ 互素，所以 $N&#x2F;m_k$ 是 $Z_{m_k}$ 中单位元，记逆元为 $\left(\cfrac{N}{m_k}\right)_{m_k}$ ，可以构造解为</p>
@@ -47,7 +48,8 @@ $$</div>
 $$
 x=\sum_{k=1}^n a_k\cfrac{N}{m_k}\left(\cfrac{N}{m_k}\right)_{m_k}
 \tag{2}
-$$</div>
+$$
+</div>
 
 <p>假设存在两个解 $x,y$ ，则 $\forall k,x&#x3D;y\mod m_k$ ，因为 $m_1,m_2,\dots,m_n$ 两两互素，所以 $x&#x3D;y\mod N$ </p>
 <h2 id="单位群-U-n"><a href="#单位群-U-n" class="headerlink" title="单位群 $U_n$"></a>单位群 $U_n$</h2><p>群 $Z_n&#x3D;{0,1,2,\dots,n-1}$ 在加法操作下构成群，但在乘法下不构成群，因为 $0$ 没有逆元。我们将存在乘法逆元的单位（units）构成一集合，可以证明这是一个群，被称为模 $n$ 的单位群。</p>
@@ -56,7 +58,8 @@ $$</div>
 $$
 (b^{-1}a^{-1})ab=1,ab(b^{-1}a^{-1})=1
 \tag{3}
-$$</div>
+$$
+</div>
 
 <p>所以 $ab$ 也为单位，加上显然任意元素的逆元也是单位、存在群单位元 $1$ ，所以构成群，记为 $U_n$ 。</p>
 <p> $a$ 是单位当且仅当 $\gcd(a,n)&#x3D;1$ 。如果 $a$ 存在乘法逆元则 $\exists m,aa^{-1}+mn&#x3D;1$ ，于是 $\gcd(a, n)&#x3D;1$ 。如果 $\gcd(a,n)&#x3D;1$ 则 $\exists k,m,\mathrm{s.t.}, ka+mn&#x3D;1$ ，那么 $k$ 就是 $a$ 的乘法逆元。</p>
@@ -65,21 +68,24 @@ $$</div>
 $$
 a^{\phi(n)}=1 \mod n \, ,\gcd(a,n)=1
 \tag{4}
-$$</div>
+$$
+</div>
 
 <p>对于 $n&#x3D;p$ 为质数的特殊情形， $\phi(p)&#x3D;p-1$ ，</p>
 <div>
 $$
 a^{p-1}=1 \mod p
 \tag{5}
-$$</div>
+$$
+</div>
 
 <p>下面对任意正整数计算 $\phi(n)$ 。首先对于 $p^k$ （ $p$ 为质数），直接考虑 $Z_n$ 中和 $p^k$ 互质的个数，</p>
 <div>
 $$
 \phi(p^k)=(p^k-1)-(p^{k-1}-1)=p^k\left(1-\cfrac{1}{p}\right)
 \tag{6}
-$$</div>
+$$
+</div>
 
 <p>运用中国剩余定理我们可以证明对于互素的 $m,n$ ， $\phi(mn)&#x3D;\phi(m)\phi(n)$ </p>
 <p>只需要证 $U_m \times U_n \cong U_{mn}$ 。 $\forall p\in U_m,q\in U_n$ ，根据中国剩余定理，</p>
@@ -90,7 +96,8 @@ t=p\mod m \\
 t=q\mod n
 \end{cases}
 \tag{7}
-$$</div>
+$$
+</div>
 
 <p>存在唯一的 $t\in U_{mn}$ 。对于 $\forall t\in U_{mn}$ ，因为 $\gcd(t,mn)&#x3D;1$ 且 $m,n$ 互素，所以 $\gcd(t,m)&#x3D;1,\gcd(t,n)&#x3D;1$ ，设 $t$ 模 $m,n$ 分别为 $p,q$ ，则 $p\in U_m,q\in U_n$ </p>
 <p>所以 $U_m \times U_n \cong U_{mn}$ ，因此 $\phi(mn)&#x3D;\phi(m)\phi(n)$ </p>
@@ -99,15 +106,15 @@ $$</div>
 $$
 \phi(n)=\prod_{i=1}^m \phi(p_{i}^{k_{i}})=n\prod_{i=1}^m \left(1-\cfrac{1}{p_i}\right)
 \tag{8}
-$$</div>
-
+$$
+</div>
 
 <h2 id="Wilson定理"><a href="#Wilson定理" class="headerlink" title="Wilson定理"></a>Wilson定理</h2><div>
 $$
 (p-1)!=-1\mod p
 \tag{9}
-$$</div>
-
+$$
+</div>
 
 <p>当且仅当 $p$ 是质数。</p>
 <p> $p&#x3D;2$ 显然。 $p\ne 2$ 时考虑 $U_n$ 中二阶元（逆是自身），它们是如下方程的解</p>
@@ -118,21 +125,24 @@ x^2=1\mod p \\
 (x-1)(x+1)=0\mod p \\
 \\\end{gathered}
 \tag{10}
-$$</div>
+$$
+</div>
 
 <p>因为 $p$ 是质数，所以 $x&#x3D;1,p-1$ 。除此之外其他的单位可以两两配对，乘积为 $1$ ，所以</p>
 <div>
 $$
 (p-1)!=1 \times (p-1)=-1 \mod p
 \tag{11}
-$$</div>
+$$
+</div>
 
 <p>假设 $p$ 不是质数：先设 $p&#x3D;ab,1\lt a\lt b\lt p$ ，则</p>
 <div>
 $$
 (p-1)!=1 \dots  a \dots b \dots (p-1)=0 \mod p
 \tag{12}
-$$</div>
+$$
+</div>
 
 <p>再设 $p&#x3D;q^2,q\gt 2$ 。此时 $(p-1)!$ 中包含 $q,2q$ ，所以 $(p-1)!&#x3D;0 \mod p$ </p>
 <p>最后， $p&#x3D;4$ ，此时 $(p-1)!&#x3D;2 \mod p$ </p>
@@ -147,7 +157,8 @@ $$
 = n \\
 \\\end{gathered}
 \tag{13}
-$$</div>
+$$
+</div>
 
 <p>其中根据归纳假设， $k&#x3D;\sum_{d’ \mid k} \phi(d’)$ 。所以该结论成立。</p>
 <h2 id="循环群"><a href="#循环群" class="headerlink" title="循环群"></a>循环群</h2><p>当 $m,n$ 互质时， $Z_m\times Z_n\cong Z_{mn}$ 。假设 $Z_m,Z_n$ 的生成元分别为 $a,b$ 。</p>
@@ -158,7 +169,8 @@ Z_m=\left\lt a\right\gt ,Z_n=\left\lt b\right\gt  \\
 Z_m \times Z_n=\{(a^i,b^j),i\lt m,j\lt n\} \\
 \\\end{gathered}
 \tag{14}
-$$</div>
+$$
+</div>
 
 <p>我们取 $\hat{c}&#x3D;(a,b) \in Z_m \times Z_n$ ，下面我们证明 $Z_m \times Z_n$ 是由 $\hat{c}$ 生成的循环群。</p>
 <p> $\forall i\lt m,j\lt n$ ，由中国剩余定理，存在 $k$ 满足下方程</p>
@@ -169,7 +181,8 @@ k=i \mod m \\
 k=j \mod n \\
 \end{cases}
 \tag{15}
-$$</div>
+$$
+</div>
 
 <p>所以 $\forall i\lt m,j\lt n,\exists k,(a^i,b^j)&#x3D;(a,b)^k&#x3D;\hat{c}^k$ </p>
 <p>所以当 $m,n$ 互质时， $Z_m\times Z_n\cong Z_{mn}$ </p>
@@ -178,7 +191,8 @@ $$</div>
 $$
 Z_n \cong \prod_{i=1}^m Z_{p_{i}^{k_{i}}}
 \tag{16}
-$$</div>
+$$
+</div>
 
 <p>对于素数幂阶循环群，幂次大于 $1$ 的不能进一步分解，因为分解的直积的群元至多是 $p$ 阶的。比如 $Z_{p^3}$ ， $Z_p\times Z_p\times Z_p,Z_p\times Z_{p^2}$ 中不存在 $p^3$ 阶元。</p>
 <h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><p>[1] <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/600282116">https://zhuanlan.zhihu.com/p/600282116</a></p>

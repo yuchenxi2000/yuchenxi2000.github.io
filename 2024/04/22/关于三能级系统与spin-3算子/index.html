@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>关于三能级系统与spin-3算子 - YCX&#039;s Blog</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="YCX&#039;s Blog"><meta name="msapplication-TileImage" content="favicon.ico"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="YCX&#039;s Blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="spin-3算子与三阶厄米矩阵spin-3算子定义：  $$ S_x&amp;#x3D; \begin{pmatrix} 0 &amp;amp; \mathrm{i} &amp;amp; 0 \\ -\mathrm{i} &amp;amp; 0 &amp;amp; 0 \\ 0 &amp;amp; 0 &amp;amp; 0 \\ \end{pmatrix} \tag{1} $$    $$ S_y&amp;#x3D;\begin{pmatrix} 0 &amp;amp; 0 &amp;amp; -\mathrm{i} \\ 0 &amp;amp; 0 &amp;amp; 0 \\ \ma"><meta property="og:type" content="blog"><meta property="og:title" content="关于三能级系统与spin-3算子"><meta property="og:url" content="https://yuchenxi2000.github.io/2024/04/22/%E5%85%B3%E4%BA%8E%E4%B8%89%E8%83%BD%E7%BA%A7%E7%B3%BB%E7%BB%9F%E4%B8%8Espin-3%E7%AE%97%E5%AD%90/"><meta property="og:site_name" content="YCX&#039;s Blog"><meta property="og:description" content="spin-3算子与三阶厄米矩阵spin-3算子定义：  $$ S_x&amp;#x3D; \begin{pmatrix} 0 &amp;amp; \mathrm{i} &amp;amp; 0 \\ -\mathrm{i} &amp;amp; 0 &amp;amp; 0 \\ 0 &amp;amp; 0 &amp;amp; 0 \\ \end{pmatrix} \tag{1} $$    $$ S_y&amp;#x3D;\begin{pmatrix} 0 &amp;amp; 0 &amp;amp; -\mathrm{i} \\ 0 &amp;amp; 0 &amp;amp; 0 \\ \ma"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://yuchenxi2000.github.io/img/og_image.png"><meta property="article:published_time" content="2024-04-22T06:24:44.000Z"><meta property="article:modified_time" content="2026-04-03T14:05:08.011Z"><meta property="article:author" content="Chenxi Yu"><meta property="article:tag" content="物理"><meta property="article:tag" content="量子力学"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://yuchenxi2000.github.io/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://yuchenxi2000.github.io/2024/04/22/%E5%85%B3%E4%BA%8E%E4%B8%89%E8%83%BD%E7%BA%A7%E7%B3%BB%E7%BB%9F%E4%B8%8Espin-3%E7%AE%97%E5%AD%90/"},"headline":"关于三能级系统与spin-3算子","image":["https://yuchenxi2000.github.io/img/og_image.png"],"datePublished":"2024-04-22T06:24:44.000Z","dateModified":"2026-04-03T14:05:08.011Z","author":{"@type":"Person","name":"Chenxi Yu"},"publisher":{"@type":"Organization","name":"YCX's Blog","logo":{"@type":"ImageObject","url":"https://yuchenxi2000.github.io/2024/04/22/%E5%85%B3%E4%BA%8E%E4%B8%89%E8%83%BD%E7%BA%A7%E7%B3%BB%E7%BB%9F%E4%B8%8Espin-3%E7%AE%97%E5%AD%90/android-chrome-512x512.png"}},"description":"spin-3算子与三阶厄米矩阵spin-3算子定义：  $$ S_x&#x3D; \\begin{pmatrix} 0 &amp; \\mathrm{i} &amp; 0 \\\\ -\\mathrm{i} &amp; 0 &amp; 0 \\\\ 0 &amp; 0 &amp; 0 \\\\ \\end{pmatrix} \\tag{1} $$    $$ S_y&#x3D;\\begin{pmatrix} 0 &amp; 0 &amp; -\\mathrm{i} \\\\ 0 &amp; 0 &amp; 0 \\\\ \\ma"}</script><link rel="canonical" href="https://yuchenxi2000.github.io/2024/04/22/%E5%85%B3%E4%BA%8E%E4%B8%89%E8%83%BD%E7%BA%A7%E7%B3%BB%E7%BB%9F%E4%B8%8Espin-3%E7%AE%97%E5%AD%90/"><link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link data-pjax rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link data-pjax rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!--!--><!-- hexo injector head_end start --><script>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>关于三能级系统与spin-3算子 - YCX&#039;s Blog</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="YCX&#039;s Blog"><meta name="msapplication-TileImage" content="favicon.ico"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="YCX&#039;s Blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="spin-3算子与三阶厄米矩阵spin-3算子定义：  $$ S_x&amp;#x3D; \begin{pmatrix} 0 &amp;amp; \mathrm{i} &amp;amp; 0 \\ -\mathrm{i} &amp;amp; 0 &amp;amp; 0 \\ 0 &amp;amp; 0 &amp;amp; 0 \\ \end{pmatrix} \tag{1} $$    $$ S_y&amp;#x3D;\begin{pmatrix} 0 &amp;amp; 0 &amp;amp; -\mathrm{i} \\ 0 &amp;amp; 0 &amp;amp; 0 \\ \ma"><meta property="og:type" content="blog"><meta property="og:title" content="关于三能级系统与spin-3算子"><meta property="og:url" content="https://yuchenxi2000.github.io/2024/04/22/%E5%85%B3%E4%BA%8E%E4%B8%89%E8%83%BD%E7%BA%A7%E7%B3%BB%E7%BB%9F%E4%B8%8Espin-3%E7%AE%97%E5%AD%90/"><meta property="og:site_name" content="YCX&#039;s Blog"><meta property="og:description" content="spin-3算子与三阶厄米矩阵spin-3算子定义：  $$ S_x&amp;#x3D; \begin{pmatrix} 0 &amp;amp; \mathrm{i} &amp;amp; 0 \\ -\mathrm{i} &amp;amp; 0 &amp;amp; 0 \\ 0 &amp;amp; 0 &amp;amp; 0 \\ \end{pmatrix} \tag{1} $$    $$ S_y&amp;#x3D;\begin{pmatrix} 0 &amp;amp; 0 &amp;amp; -\mathrm{i} \\ 0 &amp;amp; 0 &amp;amp; 0 \\ \ma"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://yuchenxi2000.github.io/img/og_image.png"><meta property="article:published_time" content="2024-04-22T06:24:44.000Z"><meta property="article:modified_time" content="2026-06-12T17:24:25.467Z"><meta property="article:author" content="Chenxi Yu"><meta property="article:tag" content="物理"><meta property="article:tag" content="量子力学"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://yuchenxi2000.github.io/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://yuchenxi2000.github.io/2024/04/22/%E5%85%B3%E4%BA%8E%E4%B8%89%E8%83%BD%E7%BA%A7%E7%B3%BB%E7%BB%9F%E4%B8%8Espin-3%E7%AE%97%E5%AD%90/"},"headline":"关于三能级系统与spin-3算子","image":["https://yuchenxi2000.github.io/img/og_image.png"],"datePublished":"2024-04-22T06:24:44.000Z","dateModified":"2026-06-12T17:24:25.467Z","author":{"@type":"Person","name":"Chenxi Yu"},"publisher":{"@type":"Organization","name":"YCX's Blog","logo":{"@type":"ImageObject","url":"https://yuchenxi2000.github.io/2024/04/22/%E5%85%B3%E4%BA%8E%E4%B8%89%E8%83%BD%E7%BA%A7%E7%B3%BB%E7%BB%9F%E4%B8%8Espin-3%E7%AE%97%E5%AD%90/android-chrome-512x512.png"}},"description":"spin-3算子与三阶厄米矩阵spin-3算子定义：  $$ S_x&#x3D; \\begin{pmatrix} 0 &amp; \\mathrm{i} &amp; 0 \\\\ -\\mathrm{i} &amp; 0 &amp; 0 \\\\ 0 &amp; 0 &amp; 0 \\\\ \\end{pmatrix} \\tag{1} $$    $$ S_y&#x3D;\\begin{pmatrix} 0 &amp; 0 &amp; -\\mathrm{i} \\\\ 0 &amp; 0 &amp; 0 \\\\ \\ma"}</script><link rel="canonical" href="https://yuchenxi2000.github.io/2024/04/22/%E5%85%B3%E4%BA%8E%E4%B8%89%E8%83%BD%E7%BA%A7%E7%B3%BB%E7%BB%9F%E4%B8%8Espin-3%E7%AE%97%E5%AD%90/"><link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link data-pjax rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link data-pjax rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!--!--><!-- hexo injector head_end start --><script>
   (function () {
       function switchTab() {
           if (!location.hash) {
@@ -39,8 +39,8 @@ S_x=
 0 & 0 & 0 \\
 \end{pmatrix}
 \tag{1}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
@@ -50,8 +50,8 @@ S_y=\begin{pmatrix}
 \mathrm{i} & 0 & 0 \\
 \end{pmatrix}
 \tag{2}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
@@ -61,8 +61,8 @@ S_z=\begin{pmatrix}
 0 & -\mathrm{i} & 0 \\
 \end{pmatrix}
 \tag{3}
-$$</div>
-
+$$
+</div>
 
 <p>满足角动量对易关系</p>
 <div>
@@ -73,7 +73,8 @@ $$
 [S_z, S_x] = \mathrm{i}S_y \\
 \\\end{gathered}
 \tag{4}
-$$</div>
+$$
+</div>
 
 <p>此外可计算得</p>
 <div>
@@ -99,7 +100,8 @@ S_z S_x + S_x S_z =
 -1 & 0 & 0 \\
 \end{pmatrix}
 \tag{5}
-$$</div>
+$$
+</div>
 
 <p>并且</p>
 <div>
@@ -125,7 +127,8 @@ S_z^2 =
 0 & 0 & 1 \\
 \end{pmatrix}
 \tag{6}
-$$</div>
+$$
+</div>
 
 <p>加上 $S_x,S_y,S_z$ ，可证明这些算子的线性组合可以表示任意三阶厄米矩阵：</p>
 <div>
@@ -137,8 +140,8 @@ H^{(0)}
 +
 \frac{1}{2}\sum_{ij} H^{(2)}_{ij} (S_iS_j+S_jS_i)
 \tag{7}
-$$</div>
-
+$$
+</div>
 
 <blockquote>
 <p>和二能级系统不同，只需要单位算符加三个Pauli算符就能表示所有二阶厄米矩阵</p>
@@ -148,7 +151,8 @@ $$</div>
 $$
 S^2=S_x^2+S_y^2+S_z^2=2
 \tag{8}
-$$</div>
+$$
+</div>
 
 <p>由 $S^2&#x3D;S(S+1)$ 可知自旋为1。</p>
 <p>由于</p>
@@ -160,7 +164,8 @@ $$
 [S^2,S_z]=0 \\
 \\\end{gathered}
 \tag{9}
-$$</div>
+$$
+</div>
 
 <p>我们求 $S^2,S_z$ 共同本征值。</p>
 <p>下面求 $S_z$ 本征值</p>
@@ -168,8 +173,8 @@ $$</div>
 $$
 \det (S_z-\lambda)=0
 \tag{10}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
@@ -179,15 +184,15 @@ $$
 0 & \mathrm{i} & -\lambda \\
 \end{vmatrix}=0
 \tag{11}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
 (-\lambda)(\lambda^2-1) = 0
 \tag{12}
-$$</div>
-
+$$
+</div>
 
 <p>本征值与对应本征矢分别为</p>
 <table>
@@ -210,7 +215,7 @@ $$</div>
 <td>$\cfrac{\sqrt{2}}{2}(0, 1, -\mathrm{i})$</td>
 </tr>
 </tbody></table>
-</div><div class="article-licensing box"><div class="licensing-title"><p>关于三能级系统与spin-3算子</p><p><a href="https://yuchenxi2000.github.io/2024/04/22/关于三能级系统与spin-3算子/">https://yuchenxi2000.github.io/2024/04/22/关于三能级系统与spin-3算子/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>Chenxi Yu</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2024-04-22</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2026-04-03</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/%E7%89%A9%E7%90%86/">物理</a><a class="link-muted mr-2" rel="tag" href="/tags/%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6/">量子力学</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2024/05/03/%E4%B8%89%E6%AC%A1%E6%96%B9%E7%A8%8B%E6%B1%82%E6%A0%B9%EF%BC%88%E5%9F%BA%E4%BA%8E%E5%8F%8D%E4%B8%89%E8%A7%92%E5%87%BD%E6%95%B0%EF%BC%89/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">三次方程求根（基于反三角函数）</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2024/02/22/%E5%85%B3%E4%BA%8E%E4%B8%89%E6%AC%A1%E6%96%B9%E7%A8%8B%E6%B1%82%E6%A0%B9%E5%85%AC%E5%BC%8F/"><span class="level-item">关于三次方程求根公式</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><!--!--><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a><p class="is-size-7"><span>&copy; 2026 Chenxi Yu</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="fab fa-creative-commons-nc"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/yuchenxi2000"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
+</div><div class="article-licensing box"><div class="licensing-title"><p>关于三能级系统与spin-3算子</p><p><a href="https://yuchenxi2000.github.io/2024/04/22/关于三能级系统与spin-3算子/">https://yuchenxi2000.github.io/2024/04/22/关于三能级系统与spin-3算子/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>Chenxi Yu</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2024-04-22</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2026-06-13</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/%E7%89%A9%E7%90%86/">物理</a><a class="link-muted mr-2" rel="tag" href="/tags/%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6/">量子力学</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2024/05/03/%E4%B8%89%E6%AC%A1%E6%96%B9%E7%A8%8B%E6%B1%82%E6%A0%B9%EF%BC%88%E5%9F%BA%E4%BA%8E%E5%8F%8D%E4%B8%89%E8%A7%92%E5%87%BD%E6%95%B0%EF%BC%89/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">三次方程求根（基于反三角函数）</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2024/02/22/%E5%85%B3%E4%BA%8E%E4%B8%89%E6%AC%A1%E6%96%B9%E7%A8%8B%E6%B1%82%E6%A0%B9%E5%85%AC%E5%BC%8F/"><span class="level-item">关于三次方程求根公式</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><!--!--><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a><p class="is-size-7"><span>&copy; 2026 Chenxi Yu</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="fab fa-creative-commons-nc"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/yuchenxi2000"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
             article: {
                 highlight: {
                     clipboard: true,

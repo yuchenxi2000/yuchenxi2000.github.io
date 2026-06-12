@@ -34,7 +34,8 @@
 $$
 \exp(\mathrm{i}k \cdot x)u(x)
 \tag{1}
-$$</div>
+$$
+</div>
 
 <p>考虑使得波函数不变（可以差一个相因子）的平移变换</p>
 <div>
@@ -43,15 +44,16 @@ $$
 \exp[\mathrm{i}(k+K) \cdot x] = \exp(\mathrm{i}k \cdot x) \exp(\mathrm{i}K \cdot x) \\
 \\\end{gathered}
 \tag{2}
-$$</div>
+$$
+</div>
 
 <p>我们要求 $\exp(\mathrm{i}K \cdot x)$ 也是周期函数。假设Bravais格子为 $N_1R_1 + N_2R_2 + N_3R_3$ 。由此可以求出矢量 $K$ 的一组基矢（倒空间基矢）：</p>
 <div>
 $$
 K_k = 2 \pi \cdot \cfrac{1}{2} \varepsilon_{ijk} \cfrac{R_i \times R_j}{\det(R)}
 \tag{3}
-$$</div>
-
+$$
+</div>
 
 <blockquote>
 <p>注：上式中1&#x2F;2因子是由于置换符号 $\varepsilon$ 的性质，当我们交换指标i,j时，置换符号取反，后面的叉乘也取反，所以整体乘上2</p>
@@ -67,7 +69,8 @@ R_2=(0,a,0) \\
 R_3=(0,0,a) \\
 \\\end{gathered}
 \tag{4}
-$$</div>
+$$
+</div>
 
 <p>体积 $a^3$ 。</p>
 <p>倒空间基矢，仍为简单立方</p>
@@ -79,7 +82,8 @@ K_2=\cfrac{2\pi}{a}(0,1,0) \\
 K_3=\cfrac{2\pi}{a}(0,0,1) \\
 \\\end{gathered}
 \tag{5}
-$$</div>
+$$
+</div>
 
 <p>布里渊区就是边长为 $2\pi&#x2F;a$ 的立方体，体积 $8\pi^3&#x2F;a^3$ 。</p>
 <h2 id="面心立方（FCC）"><a href="#面心立方（FCC）" class="headerlink" title="面心立方（FCC）"></a>面心立方（FCC）</h2><p>晶格矢量</p>
@@ -91,7 +95,8 @@ R_2=(a/2,0,a/2) \\
 R_3=(a/2,a/2,0) \\
 \\\end{gathered}
 \tag{6}
-$$</div>
+$$
+</div>
 
 <p>体积 $a^3&#x2F;4$ 。</p>
 <p>倒空间基矢，由此可见倒空间格子为体心立方（BCC）</p></div><a class="article-more button is-small is-size-7" href="/2025/11/15/%E5%B8%83%E9%87%8C%E6%B8%8A%E5%8C%BA/#more">阅读更多</a></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2024-12-24T11:38:29.000Z" title="2024/12/24 19:38:29">2024-12-24</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E7%89%A9%E7%90%86/">物理</a></span><span class="level-item">3 分钟读完 (大约437个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2024/12/24/%E9%87%91%E5%B1%9E%E7%94%B5%E6%9E%81%E9%80%80%E6%9E%81%E5%8C%96%E5%9C%BA%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%8E%A8%E5%AF%BC/">金属电极退极化场表达式推导</a></p><div class="content"><p>铁电电容器中，铁电层中退极化场的来源是金属电极对极化电荷的不完全屏蔽。</p>
@@ -101,7 +106,8 @@ $$</div>
 $$
 -\cfrac{\mathrm{d}^2\phi}{\mathrm{d}x^2}=-\cfrac{1}{\lambda_1^2}\phi
 \tag{1}
-$$</div>
+$$
+</div>
 
 <p>可参考Thomas-Fermi屏蔽。 $\lambda_1$ 为金属1的屏蔽长度。</p>
 <p>然后我们依次写出各层的电势（把 $x&#x3D;-\infty$ 处定义为电势零点）</p>
@@ -114,7 +120,8 @@ $$
 (\phi_0 - E t_{FE})\exp[(t_{FE}-x)/\lambda_2]+V\{1-\exp[(t_{FE}-x)/\lambda_2]\}, & x \gt  t_{FE}
 \end{cases}
 \tag{2}
-$$</div>
+$$
+</div>
 
 <p> $\phi_0$ 表示 $x&#x3D;0$ 处电势。 $V$ 为器件两端电势差。</p>
 <p>然后用电位移垂直界面分量连续的条件，</p>
@@ -122,7 +129,8 @@ $$</div>
 $$
 -k_1/\lambda_1\phi_0=kE+P=k_2/\lambda_2[\phi_0-Et_{FE}]-k_2/\lambda_2V
 \tag{3}
-$$</div>
+$$
+</div>
 
 <p>其中我们记各层的介电常数 $k_1,k,k_2$ 。</p>
 <p>解出 $\phi_0$ ：</p>
@@ -132,7 +140,8 @@ $$
 \left[t_{FE}+k\left(\cfrac{\lambda_1}{k_1}+\cfrac{\lambda_1}{k_2}\right)\right]\phi_0=\cfrac{\lambda_1}{k_1}(kV-t_{FE}P) \\
 \\\end{gathered}
 \tag{4}
-$$</div>
+$$
+</div>
 
 <p>和 $E$ ：</p>
 <div>
@@ -141,7 +150,8 @@ $$
 E=-\cfrac{V+P\left(\cfrac{\lambda_1}{k_1}+\cfrac{\lambda_1}{k_2}\right)}{t_{FE}+k\left(\cfrac{\lambda_1}{k_1}+\cfrac{\lambda_2}{k_2}\right)} \\
 \\\end{gathered}
 \tag{5}
-$$</div>
+$$
+</div>
 
 <p>退极化场：</p>
 <div>
@@ -152,21 +162,24 @@ E_d
 = -\cfrac{P}{k}\cfrac{C_{FE}}{C_{FE}+C_{M}} \\
 \\\end{gathered}
 \tag{6}
-$$</div>
+$$
+</div>
 
 <p>其中铁电电容</p>
 <div>
 $$
 C_{FE} = \cfrac{k}{t_{FE}}
 \tag{7}
-$$</div>
+$$
+</div>
 
 <p>两个金属电极的电容（用串联电容公式）</p>
 <div>
 $$
 \cfrac{1}{C_{M}} = \cfrac{\lambda_1}{k_1} + \cfrac{\lambda_2}{k_2}
 \tag{8}
-$$</div>
+$$
+</div>
 
 <p>如果是理想金属 $\lambda_1&#x3D;\lambda_2&#x3D;0,k_1&#x3D;k_2&#x3D;+\infty$ ，那么无退极化场。</p>
 <h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><p><a target="_blank" rel="noopener" href="https://pubs.aip.org/aip/jap/article/44/8/3379/6486/Depolarization-fields-in-thin-ferroelectric-films">https://pubs.aip.org/aip/jap/article/44/8/3379/6486/Depolarization-fields-in-thin-ferroelectric-films</a></p>
@@ -176,7 +189,8 @@ $$</div>
 $$
 -\cfrac{\mathrm{d}^2\phi}{\mathrm{d}x^2} = -\cfrac{q}{\varepsilon}[n-p-N_D+N_A]
 \tag{1}
-$$</div>
+$$
+</div>
 
 <p>其中</p>
 <div>
@@ -186,28 +200,32 @@ n=n_i\exp(\cfrac{q}{kT}\phi) \\
 p=n_i\exp(-\cfrac{q}{kT}\phi) \\
 \\\end{gathered}
 \tag{2}
-$$</div>
+$$
+</div>
 
 <p>牛顿迭代法：假设方程的解为</p>
 <div>
 $$
 F(x_0)=0
 \tag{3}
-$$</div>
+$$
+</div>
 
 <p>那么将方程线性化，根据解的条件，</p>
 <div>
 $$
 F(x)+F'(x)(x_0-x)=0
 \tag{4}
-$$</div>
+$$
+</div>
 
 <p>我们让下一次迭代的变量逼近解，所以 $x_0$ 就是下一次迭代的变量</p>
 <div>
 $$
 x_0=x-\cfrac{F(x)}{F'(x)}
 \tag{5}
-$$</div>
+$$
+</div>
 
 <p>此即非线性方程的牛顿迭代法。</p>
 <p>运用到泊松方程里，设</p>
@@ -215,21 +233,24 @@ $$</div>
 $$
 F[\phi] = \cfrac{\mathrm{d}^2\phi}{\mathrm{d}x^2} - \cfrac{q}{\varepsilon}[n-p-N_D+N_A]
 \tag{6}
-$$</div>
+$$
+</div>
 
 <p>有“导数”</p>
 <div>
 $$
 F'[\phi] = \cfrac{\mathrm{d}^2}{\mathrm{d}x^2} - \cfrac{q}{\varepsilon}\cfrac{q}{kT}(n+p)
 \tag{7}
-$$</div>
+$$
+</div>
 
 <p>根据牛顿迭代方程，</p>
 <div>
 $$
 F[\phi]+F'[\phi](\phi'-\phi) = 0
 \tag{8}
-$$</div>
+$$
+</div>
 
 <p>所以</p>
 <div>
@@ -239,15 +260,15 @@ $$
 +\cfrac{\mathrm{d}^2\phi'}{\mathrm{d}x^2}-\cfrac{\mathrm{d}^2\phi}{\mathrm{d}x^2} - \cfrac{q}{\varepsilon}\cfrac{q}{kT}(n+p)(\phi'-\phi)=0
 \\\end{gathered}
 \tag{9}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
 \cfrac{\mathrm{d}^2\phi'}{\mathrm{d}x^2} - \cfrac{q^2}{kT\varepsilon}(n+p)\phi' = \cfrac{q}{\varepsilon}[n-p-N_D+N_A - \cfrac{q}{kT}(n+p)\phi]
 \tag{10}
-$$</div>
-
+$$
+</div>
 
 <p>此即Gummel迭代法。</p>
 <p>归一化：设 $n,p,N_D,N_A$ 相对于 $n_0$ ， $\phi$ 相对于 $V_t&#x3D;kT&#x2F;q$ </p>
@@ -255,8 +276,8 @@ $$</div>
 $$
 \cfrac{\mathrm{d}^2\phi'}{\mathrm{d}x^2} - \cfrac{qn_0}{\varepsilon V_t}(n+p)\phi' = \cfrac{qn_0}{\varepsilon V_t}[n-p-N_D+N_A - (n+p)\phi]
 \tag{11}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
@@ -265,8 +286,8 @@ n=\exp(\phi) \\
 p=\exp(-\phi) \\
 \\\end{gathered}
 \tag{12}
-$$</div>
-
+$$
+</div>
 
 <p>平衡状态下自洽求解上面三个方程即可。</p>
 <h2 id="非平衡状态"><a href="#非平衡状态" class="headerlink" title="非平衡状态"></a>非平衡状态</h2><p>非平衡状态下电流连续性方程</p>
@@ -277,8 +298,8 @@ $$
 q\cfrac{\partial p}{\partial t} + \nabla J_p = qU \\
 \\\end{gathered}
 \tag{13}
-$$</div>
-
+$$
+</div>
 
 <p>电流表达式</p>
 <div>
@@ -288,14 +309,16 @@ J_n=qn\mu_n \varepsilon + qD_n \nabla n \\
 J_p=qp\mu_p \varepsilon - qD_p \nabla p \\
 \\\end{gathered}
 \tag{14}
-$$</div>
+$$
+</div>
 
 <p>根据</p>
 <div>
 $$
 \varepsilon=-\nabla \phi
 \tag{15}
-$$</div>
+$$
+</div>
 
 <p>以及爱因斯坦关系</p>
 <div>
@@ -305,8 +328,8 @@ qD_n = kT\mu_n \\
 qD_p = kT\mu_p \\
 \\\end{gathered}
 \tag{16}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
@@ -317,8 +340,8 @@ J_n
 = qD_n\exp\left(\cfrac{q}{kT}\phi\right)\nabla \left[n\exp\left(-\cfrac{q}{kT}\phi\right)\right] \\
 \\\end{gathered}
 \tag{17}
-$$</div>
-
+$$
+</div>
 
 <p>最后一步相当于引入了积分因子 $\exp[-q\phi&#x2F;(kT)]$ </p>
 <p>同理，对于 $J_p$ 有</p>
@@ -329,21 +352,24 @@ J_p
 = -qD_p\exp\left(-\cfrac{q}{kT}\phi\right)\nabla \left[p\exp\left(\cfrac{q}{kT}\phi\right)\right] \\
 \\\end{gathered}
 \tag{18}
-$$</div>
+$$
+</div>
 
 <p>稳态下</p>
 <div>
 $$
 \cfrac{\partial n}{\partial t}=\cfrac{\partial p}{\partial t}=0
 \tag{19}
-$$</div>
+$$
+</div>
 
 <p>电流连续性方程化为（ $n$ 的方程）</p>
 <div>
 $$
 \nabla J_n = -qU
 \tag{20}
-$$</div>
+$$
+</div>
 
 <p>下面给出一维情形下的离散化形式，假设等间距网格，步长 $h$ </p>
 <div>
@@ -353,8 +379,8 @@ $$
 = \int_{x_i}^{x_{i+1}} qD_n\nabla \left[n\exp\left(-\cfrac{q}{kT}\phi\right)\right] \mathrm{d}x \\
 \\\end{gathered}
 \tag{21}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
@@ -364,29 +390,32 @@ J_{n,i+1/2}\cfrac{kT}{q}\cfrac{h}{\phi_{i}-\phi_{i+1}}\left[\exp\left(-\cfrac{q}
 qD_{i+1/2} \left[n_{i+1}\exp\left(-\cfrac{q}{kT}\phi_{i+1}\right)-n_i\exp\left(-\cfrac{q}{kT}\phi_i\right)\right]
 \\\end{gathered}
 \tag{22}
-$$</div>
-
+$$
+</div>
 
 <p>记</p>
 <div>
 $$
 B(x)=\cfrac{x}{\exp(x)-1}
 \tag{23}
-$$</div>
+$$
+</div>
 
 <p>同时用归一化</p>
 <div>
 $$
 J_{n,i+1/2}=\cfrac{qn_0D_{i+1/2}}{h}\left[B(\phi_{i+1}-\phi_i)n_{i+1}-B(\phi_{i}-\phi_{i+1})n_i\right]
 \tag{24}
-$$</div>
+$$
+</div>
 
 <p>用一阶导数近似公式</p>
 <div>
 $$
 J_{n,i+1/2}-J_{n,i-1/2}=-hqU_i
 \tag{25}
-$$</div>
+$$
+</div>
 
 <p>即得电流连续性方程离散化形式：</p>
 <div>
@@ -397,8 +426,8 @@ D_{i+1/2}\left[B(\phi_{i+1}-\phi_i)n_{i+1}-B(\phi_{i}-\phi_{i+1})n_i\right]
 =-\cfrac{h^2}{n_0}U_i
 \\\end{gathered}
 \tag{26}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
@@ -409,8 +438,8 @@ D_{i+1/2}B(\phi_{i+1}-\phi_i)n_{i+1} \\
 =-\cfrac{h^2}{n_0}U_i
 \\\end{gathered}
 \tag{27}
-$$</div>
-
+$$
+</div>
 
 <p>非平衡状态下，需要自洽求解泊松方程和两个电流连续性方程。</p>
 <h2 id="两种状态求解的联系"><a href="#两种状态求解的联系" class="headerlink" title="两种状态求解的联系"></a>两种状态求解的联系</h2><p>平衡状态下自洽求解泊松方程和电子、空穴浓度公式。</p>
@@ -422,22 +451,24 @@ $$
 J_n
 = qD_n\exp\left(\cfrac{q}{kT}\phi\right)\nabla \left[n\exp\left(-\cfrac{q}{kT}\phi\right)\right]
 \tag{28}
-$$</div>
+$$
+</div>
 
 <p>平衡状态 $J_n&#x3D;0$ （下面为简单进行归一化）</p>
 <div>
 $$
 n\exp(-\phi)=\text{const.}
 \tag{29}
-$$</div>
+$$
+</div>
 
 <p>考虑 $np&#x3D;1$ ，再定义合适的电势零点，有</p>
 <div>
 $$
 n=\exp(\phi),p=\exp(-\phi)
 \tag{30}
-$$</div>
-
+$$
+</div>
 
 </div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2024-09-08T07:11:12.000Z" title="2024/9/8 15:11:12">2024-09-08</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E7%89%A9%E7%90%86/">物理</a></span><span class="level-item">11 分钟读完 (大约1589个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2024/09/08/%E5%B9%B3%E5%9D%87%E6%9C%89%E6%95%88%E8%B4%A8%E9%87%8F/">平均有效质量</a></p><div class="content"><p>我在半导体物理相关文献中经常看到载流子有效质量和态密度有效质量的概念和表达式，一直疑惑为什么它们的形式不一样。我根据自己理解给出了它们的推导，如有错误欢迎指出。</p>
 <h2 id="载流子有效质量Carrier-effective-mass"><a href="#载流子有效质量Carrier-effective-mass" class="headerlink" title="载流子有效质量Carrier effective mass"></a>载流子有效质量Carrier effective mass</h2><p>能带抛物线近似下，倒有效质量张量的定义</p>
@@ -445,24 +476,24 @@ $$</div>
 $$
 \cfrac{\partial^2 \varepsilon}{\partial k_i \partial k_j} = \hbar^2\left(\cfrac{1}{m}\right)_{ij}
 \tag{1}
-$$</div>
-
+$$
+</div>
 
 <p>载流子遵循的运动方程</p>
 <div>
 $$
 F=\hbar \cfrac{\mathrm{d} k}{\mathrm{d} t} = qE
 \tag{2}
-$$</div>
-
+$$
+</div>
 
 <p>在两次碰撞间，动量变化量（其中 $\tau$ 为弛豫时间）</p>
 <div>
 $$
 \delta k = qE \tau / \hbar
 \tag{3}
-$$</div>
-
+$$
+</div>
 
 <p>载流子的群速度</p>
 <div>
@@ -472,16 +503,16 @@ v_g = \cfrac{1}{\hbar} \cfrac{\partial \varepsilon}{\partial k} \\
 = \hbar\left(\cfrac{1}{m}\right)_{ij} k_j
 \\\end{gathered}
 \tag{4}
-$$</div>
-
+$$
+</div>
 
 <p>在两次碰撞间，群速度变化量</p>
 <div>
 $$
 (\delta v_g)_i = q\left(\cfrac{1}{m}\right)_{ij} E_j \tau
 \tag{5}
-$$</div>
-
+$$
+</div>
 
 <p>考虑多晶样品，假设各晶向的晶粒均匀分布。我们求所有可能晶向的迁移率的平均值。</p>
 <p>在电场方向，考虑到坐标轴可以以电场为轴任意旋转，再将结果加和，因此虽然 $\delta v_g$ 可能方向和 $E_j$ 不同，但是平均后和 $E$ 同向。将 $\delta v_g$ 向电场方向投影，或者 $\delta v_g$ 和 $E$ 方向单位矢量点乘就可以得到平均后迁移率</p>
@@ -490,8 +521,8 @@ $$</div>
 $$
 n=(\sin\theta\cos\phi,\sin\theta\sin\phi,\cos\theta)
 \tag{6}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
@@ -503,8 +534,8 @@ $$
 = \cfrac{1}{3}\left(\cfrac{1}{m_{xx}}+\cfrac{1}{m_{yy}}+\cfrac{1}{m_{zz}}\right) \int \mathrm{d} n
 \\\end{gathered}
 \tag{7}
-$$</div>
-
+$$
+</div>
 
 <p>所以平均有效质量（载流子有效质量）即为</p>
 <div>
@@ -514,8 +545,8 @@ $$
 \cfrac{3}{m_{\text{eff}}} = \mathrm{Tr} \cfrac{1}{m}
 \\\end{gathered}
 \tag{8}
-$$</div>
-
+$$
+</div>
 
 
 <p>其中我们计算球面平均时用到如下结论</p>
@@ -529,8 +560,8 @@ $$
 = (n-1)\left(\int_0^{\pi/2} \sin^{n-2} x \mathrm{d} x - \int_0^{\pi/2} \sin^{n} x \mathrm{d} x\right) \\
 \\\end{gathered}
 \tag{9}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
@@ -538,8 +569,8 @@ $$
 \int_0^{\pi/2} \sin^n x \mathrm{d}x = \cfrac{n-1}{n}\int_0^{\pi/2} \sin^{n-2} x \mathrm{d} x \\
 \\\end{gathered}
 \tag{10}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
@@ -549,31 +580,31 @@ $$
 \cfrac{(n-1)!!}{n!!}\cfrac{\pi}{2} & n \text{ is even} \\
 \end{cases}
 \tag{11}
-$$</div>
-
+$$
+</div>
 
 <p>矩阵的迹在正交变换下不变，假设旋转矩阵 $U$ </p>
 <div>
 $$
 \mathrm{Tr}(UAU^\dagger) = \mathrm{Tr}(U^\dagger UA)=\mathrm{Tr} A
 \tag{12}
-$$</div>
-
+$$
+</div>
 
 <p>故载流子有效质量及其定义式也在正交变换下不变。</p>
 <h2 id="态密度有效质量DOS-effective-mass"><a href="#态密度有效质量DOS-effective-mass" class="headerlink" title="态密度有效质量DOS effective mass"></a>态密度有效质量DOS effective mass</h2><div>
 $$
 a_i \cdot b_j = 2\pi\delta_{ij}
 \tag{13}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
 k=\cfrac{n_i}{N_i}b_i
 \tag{14}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
@@ -582,8 +613,8 @@ $$
 = \cfrac{(2\pi)^3}{V} \mathrm{d}^3n \\
 \\\end{gathered}
 \tag{15}
-$$</div>
-
+$$
+</div>
 
 <p>其中 $[b_x,b_y,b_z]&#x3D;(b_x\times b_y)\cdot b_z$ 。根据晶格矢量 $a$ 与倒格矢 $b$ 的正交关系可以得到 $[a_x,a_y,a_z][b_x,b_y,b_z]&#x3D;(2\pi)^3$ （两矩阵互为逆矩阵，然后式子两端求行列式），其中原胞体积 $V&#x3D;[a_x,a_y,a_z]$ 。</p>
 <p>注意上面没有考虑自旋简并。下面计算DOS时会加入自旋简并。</p>
@@ -591,7 +622,8 @@ $$</div>
 $$
 \varepsilon = \cfrac{\hbar^2}{2} \left(\cfrac{1}{m}\right)_{ij}k_ik_j
 \tag{16}
-$$</div>
+$$
+</div>
 
 <p>我们计算能量 $0\sim\varepsilon$ 包裹的椭球的体积（假设 $1&#x2F;m$ 对称正定。要求对称因为偏导数的交换性质，要求正定因为需要能带的抛物线近似成立，因此曲面为一椭球而不是其他体积无穷的二次曲面）</p>
 <p>对 $1&#x2F;m$ 做Cholesky分解 $1&#x2F;m&#x3D;L^TL$ ，</p>
@@ -602,7 +634,8 @@ $$
 2\varepsilon/\hbar^2=\lvert Lk \rvert^2 \\
 \\\end{gathered}
 \tag{17}
-$$</div>
+$$
+</div>
 
 <p>求该椭球体积的方法：用体积积分的换元法。设 $u&#x3D;Lk$ ，则 $\lvert u \rvert^2 &#x3D; 2\varepsilon&#x2F;\hbar^2$ 。这是一个球，它的体积可以用球体积公式求出。再考虑到换元后体积微元为 $\mathrm{d}^3u&#x3D;\lvert \det L \rvert \mathrm{d}^3 k$ ，由此知将球体积除以 $\lvert \det L \rvert$ 就可以求得方程对应曲面在 $k$ 空间中围成的椭球的体积。</p>
 <p>所以</p>
@@ -614,8 +647,8 @@ $$
 = \cfrac{4\pi(2\varepsilon)^{3/2}}{3\hbar^3\sqrt{\det (1/m)}} \\
 \\\end{gathered}
 \tag{18}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
@@ -624,8 +657,8 @@ $$
 = \cfrac{4\pi \sqrt{2}}{\hbar^3\sqrt{\det (1/m)}} \sqrt{\varepsilon} \mathrm{d}\varepsilon \\
 \\\end{gathered}
 \tag{19}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
@@ -635,15 +668,16 @@ D(\varepsilon) = \cfrac{2\mathrm{d}n^3}{V\mathrm{d}\varepsilon} \\
 = \cfrac{\sqrt{2\varepsilon}}{\pi^2\hbar^3\sqrt{\det (1/m)}}
 \\\end{gathered}
 \tag{20}
-$$</div>
-
+$$
+</div>
 
 <p>其中用到一个结论</p>
 <div>
 $$
 \det(1/m)=\det(L^TL)=\det(L^T)\det L=(\det L)^2
 \tag{21}
-$$</div>
+$$
+</div>
 
 <blockquote>
 <p>注：这里的态密度表达式看着和其他参考文献不一样，只是因为其他文献中的是普朗克常数 $h$ ，而这里的是约化普朗克常数 $\hbar&#x3D;h&#x2F;(2\pi)$ </p>
@@ -657,21 +691,24 @@ $$
 0 & 0 & 1/m \\
 \end{pmatrix}
 \tag{22}
-$$</div>
+$$
+</div>
 
 <p>则态密度</p>
 <div>
 $$
 D(\varepsilon) = \cfrac{m^{3/2}\sqrt{2\varepsilon}}{\pi^2\hbar^3}
 \tag{23}
-$$</div>
+$$
+</div>
 
 <p>对于一般情形，我们将其等效到各向同性的情形，定义一个 $m_{\text{eff}}$ 。则</p>
 <div>
 $$
 \cfrac{1}{m_{\text{eff}}^3}=\det{\cfrac{1}{m}}
 \tag{24}
-$$</div>
+$$
+</div>
 
 <p>行列式在正交变换下不变</p>
 <div>
@@ -683,8 +720,8 @@ $$
 = \det A
 \\\end{gathered}
 \tag{25}
-$$</div>
-
+$$
+</div>
 
 <p>，所以态密度有效质量也在正交变换下不变。</p>
 <p>若倒有效质量张量有如下形式：</p>
@@ -696,15 +733,16 @@ $$
 0 & 0 & 1/m_z \\
 \end{pmatrix}
 \tag{26}
-$$</div>
+$$
+</div>
 
 <p>则态密度有效质量</p>
 <div>
 $$
 m_{\text{eff}}=\sqrt[3]{m_xm_ym_z}
 \tag{27}
-$$</div>
-
+$$
+</div>
 
 <p>此即很多书籍中的公式。</p>
 <h3 id="多能谷情形"><a href="#多能谷情形" class="headerlink" title="多能谷情形"></a>多能谷情形</h3><p>比如硅是间接带隙半导体，导带底不在 $\Gamma$ 点，对应能谷有 $6$ 个。</p>
@@ -713,7 +751,8 @@ $$</div>
 $$
 m_{\text{eff}}=6^{2/3}\sqrt[3]{m_lm_t^2}
 \tag{28}
-$$</div>
+$$
+</div>
 
 <p> $m_l$ 为纵向有效质量， $m_t$ 为横向有效质量。</p>
 </div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2024-09-03T16:07:57.000Z" title="2024/9/4 00:07:57">2024-09-04</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E7%89%A9%E7%90%86/">物理</a></span><span class="level-item">6 分钟读完 (大约931个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2024/09/04/%E7%A2%B3%E7%BA%B3%E7%B1%B3%E5%B8%A6%E8%83%BD%E5%B8%A6/">碳纳米带能带</a></p><div class="content"><p>参考[1]，将碳纳米带分成纵向包含两列的片状结构。横向为无限延伸的方向，纵向为有限的方向。</p>
@@ -730,7 +769,8 @@ H_1^\dagger & H_0 & H_1 &\cdots & 0 & 0 \\
 H_1 & 0 & 0 & \cdots & H_1^\dagger & H_0 \\
 \end{pmatrix}
 \tag{1}
-$$</div>
+$$
+</div>
 
 <p>其中假设 $H_0$ 为某一片的哈密顿量， $H_1$ 为某一片与相邻一片的相互作用。 $H_0,H_1$ 可以根据几何关系写出，需要假设相邻碳原子的紧束缚系数 $t$ 。</p>
 <p>横向上假设有 $N$ 个片结构，将上述哈密顿量变换到 $k$ 空间</p>
@@ -743,7 +783,8 @@ H(k',k)=\cfrac{1}{N}\sum_{nm} \exp(-\mathrm{i}ak'n) H_{nm} \exp(\mathrm{i}akm) \
 = \delta(k'-k)[H_{0} + H_{1} \exp(+\mathrm{i}ak) + H_{1}^\dagger \exp(-\mathrm{i}ak)] \\
 \\\end{gathered}
 \tag{2}
-$$</div>
+$$
+</div>
 
 <p>其中我们假设相邻片结构的间距为 $a$ ， $k$ 的取值为 $k&#x3D;\cfrac{2\pi n}{aN},n\in [0,N),n\in \mathbb{Z}$ ，因此</p>
 <div>
@@ -761,7 +802,8 @@ N, & k = k' \\
 \end{cases} \\
 = N \delta(k'-k)
 \tag{3}
-$$</div>
+$$
+</div>
 
 <p>因此 $k$ 空间中的哈密顿量关于 $k$ 对角化，接下来只需要对片结构内的原子序号对角化即可</p>
 <p>代码，针对armchair：</p>
@@ -771,7 +813,7 @@ $$</div>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> scipy</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"></span><br><span class="line">N = <span class="number">10</span></span><br><span class="line">t = <span class="number">2.7</span></span><br><span class="line"></span><br><span class="line">H0 = np.zeros([N, N])</span><br><span class="line">H1 = np.zeros([N, N])</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(N - <span class="number">1</span>):</span><br><span class="line">    H0[i, i + <span class="number">1</span>] = -t</span><br><span class="line"></span><br><span class="line">H0 = H0 + H0.T</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>, N - <span class="number">1</span>, <span class="number">4</span>):</span><br><span class="line">    H1[i, i + <span class="number">1</span>] = -t</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">3</span>, N, <span class="number">4</span>):</span><br><span class="line">    H1[i, i - <span class="number">1</span>] = -t</span><br><span class="line"></span><br><span class="line">Nk = <span class="number">100</span></span><br><span class="line"></span><br><span class="line">H_eig = np.zeros([Nk, N])</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> ki <span class="keyword">in</span> <span class="built_in">range</span>(Nk):</span><br><span class="line">    k = <span class="number">2</span> * np.pi * (ki / Nk - <span class="number">0.5</span>)</span><br><span class="line">    phase = np.exp(<span class="number">1j</span> * k)</span><br><span class="line">    H = H0 + H1 * phase + H1.T * np.conj(phase)</span><br><span class="line">    H_eig[ki] = scipy.linalg.eigh(H)[<span class="number">0</span>]</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> n <span class="keyword">in</span> <span class="built_in">range</span>(N):</span><br><span class="line">    plt.plot(H_eig[:, n])</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
 
 <p>碳纳米管类似，不过需要注意纵向也是周期性的。所以要考虑如何接起来的问题，哈密顿量需要额外设置系数，并且对宽度有限制。</p>
-<p>Armchair nanotube：</p></div><a class="article-more button is-small is-size-7" href="/2024/09/04/%E7%A2%B3%E7%BA%B3%E7%B1%B3%E5%B8%A6%E8%83%BD%E5%B8%A6/#more">阅读更多</a></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2023-10-16T02:43:24.000Z" title="2023/10/16 10:43:24">2023-10-16</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E7%89%A9%E7%90%86/">物理</a></span><span class="level-item">4 分钟读完 (大约586个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2023/10/16/%E5%90%84%E5%90%91%E5%BC%82%E6%80%A7%E7%A3%81%E9%98%BB%E5%92%8C%E5%B9%B3%E9%9D%A2%E9%9C%8D%E5%B0%94%E6%95%88%E5%BA%94/">各向异性磁阻和平面霍尔效应</a></p><div class="content"><p>各项同性介质中，设磁场 $z$ 轴方向，磁阻张量为[1]</p>
+<p>Armchair nanotube：</p></div><a class="article-more button is-small is-size-7" href="/2024/09/04/%E7%A2%B3%E7%BA%B3%E7%B1%B3%E5%B8%A6%E8%83%BD%E5%B8%A6/#more">阅读更多</a></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2023-10-16T02:43:24.000Z" title="2023/10/16 10:43:24">2023-10-16</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E7%89%A9%E7%90%86/">物理</a></span><span class="level-item">4 分钟读完 (大约590个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2023/10/16/%E5%90%84%E5%90%91%E5%BC%82%E6%80%A7%E7%A3%81%E9%98%BB%E5%92%8C%E5%B9%B3%E9%9D%A2%E9%9C%8D%E5%B0%94%E6%95%88%E5%BA%94/">各向异性磁阻和平面霍尔效应</a></p><div class="content"><p>各项同性介质中，设磁场 $z$ 轴方向，磁阻张量为[1]</p>
 <div>
 $$
 \begin{pmatrix}
@@ -791,19 +833,20 @@ j_y \\
 j_z \\
 \end{pmatrix}
 \tag{1}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
-E = \rho_\perp j +
+\begin{aligned}
+E &= \rho_\perp j +
 \begin{pmatrix}
 0 & -\rho_H & 0 \\
 \rho_H & 0 & 0 \\
 0 & 0 & \rho_\parallel - \rho_\perp \\
 \end{pmatrix} j
 \\
-=
+&=
 \rho_\perp j + (\rho_\parallel - \rho_\perp)j_z\hat{z} +
 \begin{pmatrix}
 0 & -\rho_H & 0 \\
@@ -811,18 +854,20 @@ E = \rho_\perp j +
 0 & 0 & 0 \\
 \end{pmatrix} j
 \\
-=
+&=
 \rho_\perp j + (\rho_\parallel - \rho_\perp)j_z\hat{z} + \rho_H \hat{z} \times j
+\end{aligned}
 \tag{2}
-$$</div>
-
+$$
+</div>
 
 <p>对于任意方向的磁场，设磁场方向 $n &#x3D; (\sin \theta \cos \phi, \sin \theta \sin \phi, \cos \theta)$ </p>
 <div>
 $$
 E = \rho_\perp j + (\rho_\parallel - \rho_\perp) (j \cdot n)n + \rho_H n \times j
 \tag{3}
-$$</div>
+$$
+</div>
 
 <p>将上式写成矩阵形式</p>
 <div>
@@ -836,15 +881,15 @@ n \times j =
 )
 \\\end{gathered}
 \tag{4}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
 (j \cdot n)n = (\sin \theta \cos \phi j_x + \sin \theta \sin \phi j_y + \cos \theta j_z) n
 \tag{5}
-$$</div>
-
+$$
+</div>
 
 <p>磁阻张量为</p>
 <div>
@@ -856,7 +901,8 @@ $$
 \rho_{zx} & \rho_{zy} & \rho_{zz} \\
 \end{pmatrix}
 \tag{6}
-$$</div>
+$$
+</div>
 
 <p>其中</p>
 <div>
@@ -873,14 +919,16 @@ $$
 \rho_{xz} = (\rho_\parallel - \rho_\perp)\sin \theta \cos \theta \cos \phi + \rho_H \sin \theta \sin \phi \\
 \end{cases}
 \tag{7}
-$$</div>
+$$
+</div>
 
 <p>从中可以看出AMR为</p>
 <div>
 $$
 R_{AMR} = \rho_{xx} = \rho_\perp + (\rho_\parallel - \rho_\perp)\sin^2\theta\cos^2\phi
 \tag{8}
-$$</div>
+$$
+</div>
 
 <p>其中 $\sin\theta\cos\phi &#x3D; n \cdot \hat{x} &#x3D; \cos \left\lt n,\hat{x}\right\gt $ ， $\left\lt n,\hat{x}\right\gt &#x3D;\left\lt B,j\right\gt $ 为磁场和电流夹角</p>
 <p>于是</p>
@@ -888,7 +936,8 @@ $$</div>
 $$
 R_{AMR} = \rho_\perp + (\rho_\parallel - \rho_\perp)\cos^2 \left\lt B,j\right\gt 
 \tag{9}
-$$</div>
+$$
+</div>
 
 <p>Hall电阻为</p>
 <div>
@@ -898,21 +947,24 @@ R_H = \rho_{yx} = \rho_H \cos \theta + (\rho_\parallel - \rho_\perp)\sin^2 \thet
 = \rho_{AHE} \cos \theta + \rho_{PHE} \sin^2 \theta \sin 2\phi
 \\\end{gathered}
 \tag{10}
-$$</div>
+$$
+</div>
 
 <p>其中反常霍尔效应系数（对于铁磁材料）</p>
 <div>
 $$
 \rho_{AHE} = \rho_H
 \tag{11}
-$$</div>
+$$
+</div>
 
 <p>其中平面霍尔效应系数</p>
 <div>
 $$
 \rho_{PHE} = (\rho_\parallel - \rho_\perp)/2
 \tag{12}
-$$</div>
+$$
+</div>
 
 <p>上面Hall电阻推导解释了[2,3]中Hall电压表达式的来源。</p>
 <h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><p>[1] doi:10.1016&#x2F;S0081-1947(08)60101-0</p>
@@ -924,30 +976,30 @@ $$</div>
 $$
 \sigma_P \propto N_{1,\uparrow} N_{2,\uparrow} + N_{1,\downarrow} N_{2,\downarrow}
 \tag{1}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
 \sigma_A \propto N_{1,\uparrow} N_{2,\downarrow} + N_{1,\downarrow} N_{2,\uparrow}
 \tag{2}
-$$</div>
-
+$$
+</div>
 
 <p>定义自旋磁化率</p>
 <div>
 $$
 P_1 = \cfrac{N_{1,\uparrow} - N_{1,\downarrow}}{N_{1,\uparrow} + N_{1,\downarrow}}
 \tag{3}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
 P_2 = \cfrac{N_{2,\uparrow} - N_{2,\downarrow}}{N_{2,\uparrow} + N_{2,\downarrow}}
 \tag{4}
-$$</div>
-
+$$
+</div>
 
 <p>于是</p>
 <div>
@@ -959,8 +1011,8 @@ $$
 = \cfrac{1 + P_1P_2}{2}
 \\\end{gathered}
 \tag{5}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
@@ -971,8 +1023,8 @@ $$
 = \cfrac{1 - P_1P_2}{2}
 \\\end{gathered}
 \tag{6}
-$$</div>
-
+$$
+</div>
 
 <p>于是TMR等于</p>
 <div>
@@ -982,8 +1034,8 @@ $$
 = \cfrac{2P_1P_2}{1 - P_1P_2}
 \\\end{gathered}
 \tag{7}
-$$</div>
-
+$$
+</div>
 
 <h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><p>[1] <a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/abs/pii/0375960175901747">https://www.sciencedirect.com/science/article/abs/pii/0375960175901747</a></p>
 </div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2023-09-19T08:54:59.000Z" title="2023/9/19 16:54:59">2023-09-19</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E7%89%A9%E7%90%86/">物理</a></span><span class="level-item">8 分钟读完 (大约1239个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2023/09/19/STT/">STT</a></p><div class="content"><h1 id="STT-spin-transfer-torque"><a href="#STT-spin-transfer-torque" class="headerlink" title="STT (spin transfer torque)"></a>STT (spin transfer torque)</h1><p>该文章只是一个总结，具体推导，我，不会。。。</p>
@@ -995,7 +1047,8 @@ $$</div>
 $$
 H_{sd} = -J_{ex} s \cdot S
 \tag{1}
-$$</div>
+$$
+</div>
 
 <p>其中 $s$ 为s轨道电子自旋， $S$ 为d轨道电子自旋。</p>
 <p>一般认为d轨道电子自旋随时间变化缓慢，可以用经典方法处理。在连续极限下，可表示为磁化场：</p>
@@ -1003,16 +1056,16 @@ $$</div>
 $$
 M/\lvert M\rvert = -S / \lvert S \rvert
 \tag{2}
-$$</div>
-
+$$
+</div>
 
 <h2 id="Slonczewski-STT"><a href="#Slonczewski-STT" class="headerlink" title="Slonczewski STT"></a>Slonczewski STT</h2><p>原始文献[1]中提到five-layer model，非铁磁层&#x2F;铁磁层&#x2F;非铁磁层&#x2F;铁磁层&#x2F;非铁磁层结构。电流从其中流过时，两个铁磁层都会受到torque作用。假设两个铁磁层自旋分别为 $s_1,s_2$ ，则两层里受到的torque分别为</p>
 <div>
 $$
 \tau_{1,2} \propto S_{1,2} \times (s_1 \times s_2)
 \tag{3}
-$$</div>
-
+$$
+</div>
 
 <p>一般的STT-MRAM结构为铁磁固定层fixed layer、中间层spacer layer和存储信息的free layer</p>
 <p>Slonczewski STT一般的表达式为[2]</p>
@@ -1030,7 +1083,8 @@ $$
 1)(\mathbf{m}\cdot\mathbf{m}_\text{p})}
 \\\end{gathered}
 \tag{4}
-$$</div>
+$$
+</div>
 
 <p>其中 $\mathbf{m}_\text{p}$ 为fixed layer的磁化矢量， $J$ 为电流密度， $\Lambda,\varepsilon^\prime$ 为spacer layer的材料参数， $P$ 为电流的极化（majority spin和minority spin相对占比， $P&#x3D;(n_+-n_-)&#x2F;(n_++n_-)$ ）</p>
 <p>具体推导需要用到线性响应理论和格林函数，我不会:(</p>
@@ -1045,14 +1099,16 @@ $$
    \left(\vec{M} \times \hat{j} \cdot \nabla \vec{M} \right)
   -\frac{\xi v}{M_{\mathrm{sat}}} \, \vec{M} \times \hat{j} \cdot \nabla \vec{M}
 \tag{5}
-$$</div>
+$$
+</div>
 
 <p>其中 $\xi$ 表示非绝热系数， $v$ 为畴壁移动“速度”</p>
 <div>
 $$
 v = \frac{P \; j \; \mu_B}{e \; M_{\mathrm{sat}} \; (1 + \xi^2)}
 \tag{6}
-$$</div>
+$$
+</div>
 
 <p> $P$ 为自旋流的极化， $j$ 为电流密度</p>
 <h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><p>[1] <a target="_blank" rel="noopener" href="https://doi.org/10.1016/0304-8853(96)00062-5">https://doi.org/10.1016/0304-8853(96)00062-5</a></p>
@@ -1065,15 +1121,16 @@ $$</div>
 $$
 \cfrac{\mathrm{d} M}{\mathrm{d} t} = -\mu_0\gamma (M \times H_{eff}) + \cfrac{\alpha}{M_S}\left(M \times \cfrac{\mathrm{d} M}{\mathrm{d} t}\right) + T
 \tag{7}
-$$</div>
-
+$$
+</div>
 
 <p>我们用单位化的磁矩 $m&#x3D;M&#x2F;M_S$ 代替磁矩：</p>
 <div>
 $$
 \cfrac{\mathrm{d} m}{\mathrm{d} t} = -\mu_0\gamma (m \times H_{eff}) + \alpha\left(m \times \cfrac{\mathrm{d} m}{\mathrm{d} t}\right) + \tau
 \tag{8}
-$$</div>
+$$
+</div>
 
 <p>其中damping term包含磁矩对时间导数，求解不方便，需要将磁矩对时间导数写成显式形式。</p>
 <p>回忆<a href="/2023/09/19/STT/" title="STT">STT</a>中给出的向量方程及其通解：</p>
@@ -1082,7 +1139,8 @@ $$</div>
 $$
 a \times x + x = b
 \tag{9}
-$$</div>
+$$
+</div>
 
 <p>通解为：</p>
 <div>
@@ -1091,7 +1149,8 @@ $$
 x = \cfrac{(a \cdot b) a + b - a \times b}{a \cdot a + 1} \\
 \\\end{gathered}
 \tag{10}
-$$</div>
+$$
+</div>
 
 <p>对应到LLG方程，其中的系数 $a,b$ 为：</p>
 <div>
@@ -1101,7 +1160,8 @@ a = -\alpha m \\
 b = -\mu_0\gamma (m \times H_{eff}) + \tau
 \end{cases}
 \tag{11}
-$$</div>
+$$
+</div>
 
 <p>直接写出解</p>
 <div>
@@ -1111,7 +1171,8 @@ $$
 = \cfrac{\alpha^2 (m \cdot \tau) m -\mu_0\gamma (m \times H_{eff}) + \tau -\mu_0\gamma \alpha m \times (m \times H_{eff}) + \alpha m \times \tau}{\alpha^2 + 1} \\
 \\\end{gathered}
 \tag{12}
-$$</div>
+$$
+</div>
 
 <p>因为 $m$ 模长固定为 $1$ ，所以 $m \cdot \tau &#x3D; 0$ （这个是所有torque必须满足的条件！）</p>
 <div>
@@ -1124,7 +1185,8 @@ $$
 +\cfrac{\alpha m \times \tau}{\alpha^2 + 1} \\
 \\\end{gathered}
 \tag{13}
-$$</div>
+$$
+</div>
 
 <p>前两项为外磁场、damping贡献，最后一项是其他torque贡献。</p>
 <p>回到我们关心的问题，原始LLG方程中Slonczewski STT表达式为</p>
@@ -1132,7 +1194,8 @@ $$</div>
 $$
 \tau = \gamma \beta \varepsilon^\prime m_p \times m + \gamma \beta \varepsilon m \times (m_p \times m)
 \tag{14}
-$$</div>
+$$
+</div>
 
 <p>可以验证，变换后的LLG方程中该torque表达式 $\cfrac{\tau}{\alpha^2 + 1}<br>+\cfrac{\alpha m \times \tau}{\alpha^2 + 1}$ 正好就是前文给出的式子。</p>
 </div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2023-09-18T01:41:47.000Z" title="2023/9/18 09:41:47">2023-09-18</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E7%89%A9%E7%90%86/">物理</a></span><span class="level-item">9 分钟读完 (大约1283个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2023/09/18/32%E4%B8%AA%E7%82%B9%E7%BE%A4%E4%B8%ADDM%E7%9B%B8%E4%BA%92%E4%BD%9C%E7%94%A8/">32个点群中DM相互作用</a></p><div class="content"><blockquote>
@@ -1148,22 +1211,24 @@ $$
 = 2h\sum_i S_i \times \partial_x S_i
 \\\end{gathered}
 \tag{1}
-$$</div>
-
+$$
+</div>
 
 <p>该项需要点乘一个常向量使其成为标量，三维情形下，还需要考虑 $y,z$ 方向上的偏导数。于是DM相互作用有如下形式</p>
 <div>
 $$
 \sum_j\sum_i D_j \cdot (S_i \times \partial_j S_i)
 \tag{2}
-$$</div>
+$$
+</div>
 
 <p>在连续极限下，DM相互作用用磁化场 $m$ 表示为：（后面为简化表达式，省略积分符号）</p>
 <div>
 $$
 E_{DMI} = \iiint D \cdot (m \times \nabla m) \,\mathrm{d}x \mathrm{d}y \mathrm{d}z
 \tag{3}
-$$</div>
+$$
+</div>
 
 <p>其中 $D$ 为张量，</p>
 <div>
@@ -1173,7 +1238,8 @@ E_{DMI} = \sum_i D_i \cdot (m \times \partial_i m) \\
 = \sum_{ij} D_{ij} (m \times \partial_i m)_j \\
 \\\end{gathered}
 \tag{4}
-$$</div>
+$$
+</div>
 
 <p>DMI可以写成Lifshitz invariant（Lifshitz不变量）的线性组合</p>
 <p>Lifshitz invariant定义为</p>
@@ -1181,8 +1247,8 @@ $$</div>
 $$
 L_{ij}^k = m_i \partial_k m_j - m_j \partial_k m_i
 \tag{5}
-$$</div>
-
+$$
+</div>
 
 <p>由于其关于下标反对称，因此只有9个独立的Lifshitz invariant：</p>
 <div>
@@ -1191,8 +1257,8 @@ $$
 L_{yz}^x, L_{yz}^y, L_{yz}^z, L_{zx}^x, L_{zx}^y, L_{zx}^z, L_{xy}^x, L_{xy}^y, L_{xy}^z \\
 \\\end{gathered}
 \tag{6}
-$$</div>
-
+$$
+</div>
 
 <p>DMI写作Lifshitz invariant的线性组合：</p>
 <div>
@@ -1203,7 +1269,8 @@ E_{DMI} = \sum_{ij\alpha\beta} D_{ij} \varepsilon_{j \alpha \beta}m_{\alpha} \pa
 = \sum_{ij\alpha\beta} \frac{1}{2}D_{ij} \varepsilon_{j \alpha \beta} L_{\alpha\beta}^i \\
 \\\end{gathered}
 \tag{7}
-$$</div>
+$$
+</div>
 
 <p>体系的特定对称性会对DMI系数有约束，对称性的存在会减少独立的DMI系数。</p>
 <p>为研究满足特定对称群的DMI作用形式，我们研究Lifshitz invariant在对称操作下的变换。在正交变换 $U$ 下，Lifshitz invariant的变换为</p></div><a class="article-more button is-small is-size-7" href="/2023/09/18/32%E4%B8%AA%E7%82%B9%E7%BE%A4%E4%B8%ADDM%E7%9B%B8%E4%BA%92%E4%BD%9C%E7%94%A8/#more">阅读更多</a></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2023-08-09T08:18:27.000Z" title="2023/8/9 16:18:27">2023-08-09</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E7%89%A9%E7%90%86/">物理</a></span><span class="level-item">7 分钟读完 (大约975个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2023/08/09/%E6%96%AF%E6%A0%BC%E6%98%8E%E5%AD%90/">斯格明子</a></p><div class="content"><p>设二维磁性材料，归一化的磁化场分布 $n&#x3D;n(x,y)$ </p>
@@ -1211,15 +1278,16 @@ $$</div>
 $$
 N = \cfrac{1}{4\pi} \int n \cdot \left( \cfrac{\partial n}{\partial x} \times \cfrac{\partial n}{\partial y} \right) \, \mathrm{d}x \mathrm{d}y
 \tag{1}
-$$</div>
-
+$$
+</div>
 
 <h2 id="二维磁化场的球极映射"><a href="#二维磁化场的球极映射" class="headerlink" title="二维磁化场的球极映射"></a>二维磁化场的球极映射</h2><p>假设极限</p>
 <div>
 $$
 \lim_{(x,y) \to \infty} n
 \tag{2}
-$$</div>
+$$
+</div>
 
 <p>存在（或者说磁矩在无穷远处趋于定值），则可以做球极映射：</p>
 <div>
@@ -1229,7 +1297,8 @@ $$
 \theta = 2 \arctan \cfrac{\sqrt{x^2+y^2}}{2} \\
 \end{cases}
 \tag{3}
-$$</div>
+$$
+</div>
 
 <p>反变换</p>
 <div>
@@ -1239,7 +1308,8 @@ x = 2 \tan \cfrac{\theta}{2} \cos \phi \\
 y = 2 \tan \cfrac{\theta}{2} \sin \phi \\
 \end{cases}
 \tag{4}
-$$</div>
+$$
+</div>
 
 <p>可以证明平面上的winding number可以对应到球面上</p>
 <div>
@@ -1249,8 +1319,8 @@ $$
 \cfrac{\partial n}{\partial y} = \cfrac{x}{x^2+y^2}\cfrac{\partial n}{\partial \phi} + \cfrac{1}{1+\cfrac{x^2+y^2}{4}} \cfrac{y}{\sqrt{x^2+y^2}} \cfrac{\partial n}{\partial \theta}
 \\\end{gathered}
 \tag{5}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
@@ -1260,8 +1330,8 @@ $$
 = \cfrac{1}{2 \sec^2 \cfrac{\theta}{2} \tan \cfrac{\theta}{2}} \cfrac{\partial n}{\partial \theta} \times \cfrac{\partial n}{\partial \phi}
 \\\end{gathered}
 \tag{6}
-$$</div>
-
+$$
+</div>
 
 <p>计算测度</p>
 <div>
@@ -1283,7 +1353,8 @@ $$
 2 \sec^2 \cfrac{\theta}{2} \tan \cfrac{\theta}{2}
 \mathrm{d}\theta \mathrm{d}\phi
 \tag{7}
-$$</div>
+$$
+</div>
 
 <p>于是</p>
 <div>
@@ -1293,7 +1364,8 @@ N = \cfrac{1}{4\pi} \int n \cdot \left( \cfrac{\partial n}{\partial x} \times \c
 = \cfrac{1}{4\pi} \int n \cdot \left( \cfrac{\partial n}{\partial \theta} \times \cfrac{\partial n}{\partial \phi} \right) \, \mathrm{d}\theta \mathrm{d}\phi
 \\\end{gathered}
 \tag{8}
-$$</div>
+$$
+</div>
 
 <p>可见换到球面后winding number形式不变。</p>
 <h2 id="拓扑分类"><a href="#拓扑分类" class="headerlink" title="拓扑分类"></a>拓扑分类</h2><p>设</p>
@@ -1301,7 +1373,8 @@ $$</div>
 $$
 n=(\sin\theta_n\cos\phi_n, \sin\theta_n\sin\phi_n, \cos\theta_n)
 \tag{9}
-$$</div>
+$$
+</div>
 
 <p>即用球面坐标表示 $n$ 。</p>
 <div>
@@ -1329,7 +1402,8 @@ $$
 ) \cfrac{\partial \phi_n}{\partial \theta}
 \\\end{gathered}
 \tag{10}
-$$</div>
+$$
+</div>
 
 <p>定义</p>
 <div>
@@ -1349,7 +1423,8 @@ n_2=
 )
 \\\end{gathered}
 \tag{11}
-$$</div>
+$$
+</div>
 
 <p>可以验证 $n_1,n_2,n$ 互相垂直。</p>
 <p>则</p>
@@ -1359,7 +1434,8 @@ $$
 = n_1 \cfrac{\partial \theta_n}{\partial \theta}
 + n_2 \cfrac{\partial \phi_n}{\partial \theta}
 \tag{12}
-$$</div>
+$$
+</div>
 
 <p>同理有</p>
 <div>
@@ -1368,7 +1444,8 @@ $$
 = n_1 \cfrac{\partial \theta_n}{\partial \phi}
 + n_2 \cfrac{\partial \phi_n}{\partial \phi}
 \tag{13}
-$$</div>
+$$
+</div>
 
 <p>则</p>
 <div>
@@ -1383,8 +1460,8 @@ $$
  \cfrac{\partial \phi_n}{\partial \theta} \right)
 \\\end{gathered}
 \tag{14}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
@@ -1395,8 +1472,8 @@ n \cdot \left(\cfrac{\partial n}{\partial \theta} \times \cfrac{\partial n}{\par
  \cfrac{\partial \phi_n}{\partial \theta} \right)
 \\\end{gathered}
 \tag{15}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
@@ -1411,15 +1488,16 @@ N
 \left(\phi_n \vert_{\phi=2\pi} - \phi_n \vert_{\phi=0} \right)
 \\\end{gathered}
 \tag{16}
-$$</div>
-
+$$
+</div>
 
 <p>假设无穷远处磁矩向上，原点处向下。假设 $\phi$ 绕一圈后，磁矩绕 $m$ 圈（即 $\phi_n$ 绕 $m$ 圈），则</p>
 <div>
 $$
 N=m
 \tag{17}
-$$</div>
+$$
+</div>
 
 <p>此即winding number的意义：无穷远处磁矩向上，原点处向下时， $\phi$ 绕一圈后，磁矩绕 $N$ 圈。</p>
 <p>假设 $N$ 非 $0$ ，此时不能通过连续变换到磁矩为常数的情形（因为磁矩为常数时 $N&#x3D;0$ ），此即拓扑保护。</p>

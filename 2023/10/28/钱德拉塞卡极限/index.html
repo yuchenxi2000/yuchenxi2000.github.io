@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>钱德拉塞卡极限 - YCX&#039;s Blog</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="YCX&#039;s Blog"><meta name="msapplication-TileImage" content="favicon.ico"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="YCX&#039;s Blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="动机是Bing搜索发现一篇知乎上的文章讲钱德拉塞卡极限的，排名很靠前，但发现其中的计算存在一些问题。问题出现在数值计算里，它的ODE数值求解是自己手写的算法，导致在 $r&amp;#x3D;0^+$ 附近收敛性不好，所以最后展示的质量-半径图像里在 $r&amp;#x3D;0^+$ 附近出现了不应该出现的单调递增。按照物理图像，质量越大半径越小，图像应该是单调递减的。原文章链接如下： https:&amp;#x2F;&amp;#x2F;zhuanl"><meta property="og:type" content="blog"><meta property="og:title" content="钱德拉塞卡极限"><meta property="og:url" content="https://yuchenxi2000.github.io/2023/10/28/%E9%92%B1%E5%BE%B7%E6%8B%89%E5%A1%9E%E5%8D%A1%E6%9E%81%E9%99%90/"><meta property="og:site_name" content="YCX&#039;s Blog"><meta property="og:description" content="动机是Bing搜索发现一篇知乎上的文章讲钱德拉塞卡极限的，排名很靠前，但发现其中的计算存在一些问题。问题出现在数值计算里，它的ODE数值求解是自己手写的算法，导致在 $r&amp;#x3D;0^+$ 附近收敛性不好，所以最后展示的质量-半径图像里在 $r&amp;#x3D;0^+$ 附近出现了不应该出现的单调递增。按照物理图像，质量越大半径越小，图像应该是单调递减的。原文章链接如下： https:&amp;#x2F;&amp;#x2F;zhuanl"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://yuchenxi2000.github.io/2023/10/28/%E9%92%B1%E5%BE%B7%E6%8B%89%E5%A1%9E%E5%8D%A1%E6%9E%81%E9%99%90/fig.png"><meta property="article:published_time" content="2023-10-28T11:02:24.000Z"><meta property="article:modified_time" content="2026-04-03T14:21:09.711Z"><meta property="article:author" content="Chenxi Yu"><meta property="article:tag" content="物理"><meta property="article:tag" content="天体物理"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://yuchenxi2000.github.io/2023/10/28/%E9%92%B1%E5%BE%B7%E6%8B%89%E5%A1%9E%E5%8D%A1%E6%9E%81%E9%99%90/fig.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://yuchenxi2000.github.io/2023/10/28/%E9%92%B1%E5%BE%B7%E6%8B%89%E5%A1%9E%E5%8D%A1%E6%9E%81%E9%99%90/"},"headline":"钱德拉塞卡极限","image":["https://yuchenxi2000.github.io/2023/10/28/%E9%92%B1%E5%BE%B7%E6%8B%89%E5%A1%9E%E5%8D%A1%E6%9E%81%E9%99%90/fig.png"],"datePublished":"2023-10-28T11:02:24.000Z","dateModified":"2026-04-03T14:21:09.711Z","author":{"@type":"Person","name":"Chenxi Yu"},"publisher":{"@type":"Organization","name":"YCX's Blog","logo":{"@type":"ImageObject","url":"https://yuchenxi2000.github.io/2023/10/28/%E9%92%B1%E5%BE%B7%E6%8B%89%E5%A1%9E%E5%8D%A1%E6%9E%81%E9%99%90/android-chrome-512x512.png"}},"description":"动机是Bing搜索发现一篇知乎上的文章讲钱德拉塞卡极限的，排名很靠前，但发现其中的计算存在一些问题。问题出现在数值计算里，它的ODE数值求解是自己手写的算法，导致在 $r&#x3D;0^+$ 附近收敛性不好，所以最后展示的质量-半径图像里在 $r&#x3D;0^+$ 附近出现了不应该出现的单调递增。按照物理图像，质量越大半径越小，图像应该是单调递减的。原文章链接如下： https:&#x2F;&#x2F;zhuanl"}</script><link rel="canonical" href="https://yuchenxi2000.github.io/2023/10/28/%E9%92%B1%E5%BE%B7%E6%8B%89%E5%A1%9E%E5%8D%A1%E6%9E%81%E9%99%90/"><link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link data-pjax rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link data-pjax rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!--!--><!-- hexo injector head_end start --><script>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>钱德拉塞卡极限 - YCX&#039;s Blog</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="YCX&#039;s Blog"><meta name="msapplication-TileImage" content="favicon.ico"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="YCX&#039;s Blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="动机是Bing搜索发现一篇知乎上的文章讲钱德拉塞卡极限的，排名很靠前，但发现其中的计算存在一些问题。问题出现在数值计算里，它的ODE数值求解是自己手写的算法，导致在 $r&amp;#x3D;0^+$ 附近收敛性不好，所以最后展示的质量-半径图像里在 $r&amp;#x3D;0^+$ 附近出现了不应该出现的单调递增。按照物理图像，质量越大半径越小，图像应该是单调递减的。原文章链接如下： https:&amp;#x2F;&amp;#x2F;zhuanl"><meta property="og:type" content="blog"><meta property="og:title" content="钱德拉塞卡极限"><meta property="og:url" content="https://yuchenxi2000.github.io/2023/10/28/%E9%92%B1%E5%BE%B7%E6%8B%89%E5%A1%9E%E5%8D%A1%E6%9E%81%E9%99%90/"><meta property="og:site_name" content="YCX&#039;s Blog"><meta property="og:description" content="动机是Bing搜索发现一篇知乎上的文章讲钱德拉塞卡极限的，排名很靠前，但发现其中的计算存在一些问题。问题出现在数值计算里，它的ODE数值求解是自己手写的算法，导致在 $r&amp;#x3D;0^+$ 附近收敛性不好，所以最后展示的质量-半径图像里在 $r&amp;#x3D;0^+$ 附近出现了不应该出现的单调递增。按照物理图像，质量越大半径越小，图像应该是单调递减的。原文章链接如下： https:&amp;#x2F;&amp;#x2F;zhuanl"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://yuchenxi2000.github.io/2023/10/28/%E9%92%B1%E5%BE%B7%E6%8B%89%E5%A1%9E%E5%8D%A1%E6%9E%81%E9%99%90/fig.png"><meta property="article:published_time" content="2023-10-28T11:02:24.000Z"><meta property="article:modified_time" content="2026-06-12T17:24:26.102Z"><meta property="article:author" content="Chenxi Yu"><meta property="article:tag" content="物理"><meta property="article:tag" content="天体物理"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://yuchenxi2000.github.io/2023/10/28/%E9%92%B1%E5%BE%B7%E6%8B%89%E5%A1%9E%E5%8D%A1%E6%9E%81%E9%99%90/fig.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://yuchenxi2000.github.io/2023/10/28/%E9%92%B1%E5%BE%B7%E6%8B%89%E5%A1%9E%E5%8D%A1%E6%9E%81%E9%99%90/"},"headline":"钱德拉塞卡极限","image":["https://yuchenxi2000.github.io/2023/10/28/%E9%92%B1%E5%BE%B7%E6%8B%89%E5%A1%9E%E5%8D%A1%E6%9E%81%E9%99%90/fig.png"],"datePublished":"2023-10-28T11:02:24.000Z","dateModified":"2026-06-12T17:24:26.102Z","author":{"@type":"Person","name":"Chenxi Yu"},"publisher":{"@type":"Organization","name":"YCX's Blog","logo":{"@type":"ImageObject","url":"https://yuchenxi2000.github.io/2023/10/28/%E9%92%B1%E5%BE%B7%E6%8B%89%E5%A1%9E%E5%8D%A1%E6%9E%81%E9%99%90/android-chrome-512x512.png"}},"description":"动机是Bing搜索发现一篇知乎上的文章讲钱德拉塞卡极限的，排名很靠前，但发现其中的计算存在一些问题。问题出现在数值计算里，它的ODE数值求解是自己手写的算法，导致在 $r&#x3D;0^+$ 附近收敛性不好，所以最后展示的质量-半径图像里在 $r&#x3D;0^+$ 附近出现了不应该出现的单调递增。按照物理图像，质量越大半径越小，图像应该是单调递减的。原文章链接如下： https:&#x2F;&#x2F;zhuanl"}</script><link rel="canonical" href="https://yuchenxi2000.github.io/2023/10/28/%E9%92%B1%E5%BE%B7%E6%8B%89%E5%A1%9E%E5%8D%A1%E6%9E%81%E9%99%90/"><link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link data-pjax rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link data-pjax rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!--!--><!-- hexo injector head_end start --><script>
   (function () {
       function switchTab() {
           if (!location.hash) {
@@ -40,16 +40,16 @@
 $$
 -\int_0^{r_0} \cfrac{G \cdot \rho(r_0)V \cdot \rho(r)4\pi r^2 \mathrm{d} r}{r_0^2} \hat{r}
 \tag{1}
-$$</div>
-
+$$
+</div>
 
 <p> $\hat{r}$ 为 $r$ 的单位矢量。</p>
 <h3 id="压力"><a href="#压力" class="headerlink" title="压力"></a>压力</h3><div>
 $$
 -\int_{\partial V} p(r) \mathrm{d} S = -\int_{V} \nabla p(r) \mathrm{d} V = -V \nabla p(r_0)
 \tag{2}
-$$</div>
-
+$$
+</div>
 
 <p> $\partial V$ 表示 $V$ 的表面， $\mathrm{d} S$ 表示面积微元（为矢量）。</p>
 <p>因为压强分布球对称，故</p>
@@ -57,8 +57,8 @@ $$</div>
 $$
 \nabla p = \cfrac{\mathrm{d} p}{\mathrm{d} r} \hat{r}
 \tag{3}
-$$</div>
-
+$$
+</div>
 
 <span id="more"></span>
 
@@ -67,22 +67,22 @@ $$</div>
 $$
 -\int_0^{r_0} \cfrac{G \cdot \rho(r_0)V \cdot \rho(r)4\pi r^2 \mathrm{d} r}{r_0^2} \hat{r} -V \cfrac{\mathrm{d} p}{\mathrm{d} r} \hat{r} = 0
 \tag{4}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
 -\int_0^{r_0} \cfrac{G \cdot \rho(r_0) \rho(r)4\pi r^2 \mathrm{d} r}{r_0^2} - \cfrac{\mathrm{d} p}{\mathrm{d} r} = 0
 \tag{5}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
 \cfrac{\mathrm{d} p}{\mathrm{d} r} = - \cfrac{4\pi G \rho}{r^2} \int_0^{r} \rho r^2 \mathrm{d} r
 \tag{6}
-$$</div>
-
+$$
+</div>
 
 <p>为求解出该方程需要知道密度和压强的关系 $p&#x3D;p(\rho)$ </p>
 <h2 id="电子简并压"><a href="#电子简并压" class="headerlink" title="电子简并压"></a>电子简并压</h2><p>电子简并压产生自泡利不相容原理</p>
@@ -96,7 +96,8 @@ N &= 2\frac{4\pi}{3}k_F^3/[(2\pi)^3/V] \\
 &= \cfrac{1 }{3 \pi^2} k_F^3 V \\
 \end{aligned}
 \tag{7}
-$$</div>
+$$
+</div>
 
 <p>计算体系自由能</p>
 <div>
@@ -106,7 +107,8 @@ E &= \int_0^{k_F}\sqrt{\hbar^2c^2k^2+m^2c^4} \cdot 2\cdot 4\pi k^2 \mathrm{d} k/
 &= \cfrac{V}{\pi^2} \int_0^{k_F} k^2\sqrt{\hbar^2c^2k^2+m^2c^4} \mathrm{d} k
 \end{aligned}
 \tag{8}
-$$</div>
+$$
+</div>
 
 <p>计算压强</p>
 <div>
@@ -118,7 +120,8 @@ $$
 &= \cfrac{1}{\pi^2} \int_0^{k_F} k^2\sqrt{\hbar^2c^2k^2+m^2c^4} \mathrm{d} k - \cfrac{1}{3\pi^2}  k_F^3\sqrt{\hbar^2c^2k_F^2+m^2c^4} \\
 \end{aligned}
 \tag{9}
-$$</div>
+$$
+</div>
 
 <p>设 $x&#x3D;\hbar k&#x2F;(mc)$ </p>
 <div>
@@ -132,8 +135,8 @@ $$
 &= -\cfrac{mc^2}{8\pi^2}\left(\cfrac{mc}{\hbar}\right)^3 F(x)
 \end{aligned}
 \tag{10}
-$$</div>
-
+$$
+</div>
 
 <p>其中的积分可用下技巧计算得到</p>
 <div>
@@ -145,7 +148,8 @@ I &= \int x^2\sqrt{x^2+1} \mathrm{d} x \\
 &= \frac{1}{3} x (x^2+1) \sqrt{x^2+1} - \frac{1}{3}\int \sqrt{x^2+1} \mathrm{d} x - \frac{1}{3}I \\
 \end{aligned}
 \tag{11}
-$$</div>
+$$
+</div>
 
 <p>（积分后续步骤略，相信学过高等数学的都会积）</p>
 <p>得到压强表达式</p>
@@ -153,23 +157,23 @@ $$</div>
 $$
 p = \cfrac{mc^2}{8\pi^2}\left(\cfrac{mc}{\hbar}\right)^3 F(x_F)
 \tag{12}
-$$</div>
-
+$$
+</div>
 
 <p>其中</p>
 <div>
 $$
 F(x) = x\sqrt{x^2+1}\left(\frac{2}{3}x^2-1\right) + \ln \left(x + \sqrt{x^2+1}\right)
 \tag{13}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
 x_F = \hbar k_F / (mc)
 \tag{14}
-$$</div>
-
+$$
+</div>
 
 <p>假设核子质量为 $m_a$ ，核子数、电子数之比为 $\mu_a$ （大多数情况下约为 $2$ ）</p>
 <div>
@@ -179,8 +183,8 @@ k_F = \sqrt[3]{3\pi^2 N/V} \\
 = \sqrt[3]{3\pi^2 \rho / (m_a\mu_a)}
 \\\end{gathered}
 \tag{15}
-$$</div>
-
+$$
+</div>
 
 <h2 id="钱德拉塞卡极限"><a href="#钱德拉塞卡极限" class="headerlink" title="钱德拉塞卡极限"></a>钱德拉塞卡极限</h2><p>设常数使得</p>
 <div>
@@ -190,7 +194,8 @@ p = C_1 F(x_F) \\
 \rho = C_2 x_F^3
 \\\end{gathered}
 \tag{16}
-$$</div>
+$$
+</div>
 
 <p>计算</p>
 <div>
@@ -200,14 +205,16 @@ $$
 = \cfrac{8 C_1 x_F^2}{9 C_2 \sqrt{x_F^2 + 1}}
 \\\end{gathered}
 \tag{17}
-$$</div>
+$$
+</div>
 
 <p>代入上节计算的方程</p>
 <div>
 $$
 \cfrac{\mathrm{d} \rho}{\mathrm{d} r} = - \cfrac{9\pi G C_2^2 x_F \sqrt{x_F^2 + 1}}{2 C_1 r^2} \int_0^{r} \rho r^2 \mathrm{d} r
 \tag{18}
-$$</div>
+$$
+</div>
 
 <p>给定初始条件 $\rho(0)$ 可以求解出密度分布，从而求解出天体质量、半径等。画出质量-半径曲线可发现质量存在最大值，即为钱德拉塞卡极限——电子简并压能支撑的最大质量。</p>
 <h2 id="数值计算"><a href="#数值计算" class="headerlink" title="数值计算"></a>数值计算</h2><p>定义半径 $r$ 以内的质量</p>
@@ -215,7 +222,8 @@ $$</div>
 $$
 M = \int_0^{r} 4\pi \rho r^2 \mathrm{d} r
 \tag{19}
-$$</div>
+$$
+</div>
 
 <p>那么上节最后的方程可写为</p>
 <div>
@@ -225,7 +233,8 @@ $$
 \cfrac{\mathrm{d} M}{\mathrm{d} r} = 4\pi \rho r^2 \\
 \end{cases}
 \tag{20}
-$$</div>
+$$
+</div>
 
 <p>可用常微分方程解法处理。</p>
 <h3 id="数值处理技巧"><a href="#数值处理技巧" class="headerlink" title="数值处理技巧"></a>数值处理技巧</h3><p>为方便数值计算，防止溢出，对求解的物理量进行归一化（normalize）</p>
@@ -240,7 +249,8 @@ $$
 \cfrac{\mathrm{d} M/M_s}{\mathrm{d} r/r_0} = \cfrac{4\pi r_0^3 \rho_0}{M_s} \rho/\rho_0 \, r^2/r_0^2 \\
 \end{cases}
 \tag{21}
-$$</div>
+$$
+</div>
 
 <p>为方便设常数使得上方程成为</p>
 <div>
@@ -250,7 +260,8 @@ $$
 \cfrac{\mathrm{d} M/M_s}{\mathrm{d} r/r_0} = C_4 \rho/\rho_0 \, r^2/r_0^2 \\
 \end{cases}
 \tag{22}
-$$</div>
+$$
+</div>
 
 <p>接下来考虑边界条件。中心处 $r&#x3D;0,M&#x3D;0$ ，我们需要一直积分到 $\rho&#x3D;0$ 处，然后记录此时的 $r,M$ 。 $r,M,\rho$ 有三个变量，我们选择一个作为自变量，要求其他两个变量已知，那么自变量只能选择 $\rho$ ，并选择中心处作为微分方程初值，此时初始条件为 $r&#x3D;0,M&#x3D;0$ ，自变量 $\rho$ 范围 $[\rho(0),0]$ ，其中 $\rho(0)$ 表示中心处的 $\rho$ （我们自己给定一个值）。</p>
 <p>把上方程转换为用 $\rho$ 为自变量：</p>
@@ -261,7 +272,8 @@ $$
 \cfrac{\mathrm{d} M/M_s}{\mathrm{d} \rho/\rho_0} = -\cfrac{C_4}{C_3} \cfrac{\rho/\rho_0 \, r^4/r_0^4}{x_F \sqrt{x_F^2 + 1}M/M_s} \\
 \end{cases}
 \tag{23}
-$$</div>
+$$
+</div>
 
 <p>数值求解时需要注意两点。</p>
 <ol>
@@ -274,7 +286,8 @@ $$</div>
 $$
 M/M_s \approx \frac{1}{3} C_4 \rho/\rho_0 \, r^3/r_0^3
 \tag{24}
-$$</div>
+$$
+</div>
 
 <p>这个的处理方法是选定一个足够小的 $r$ ，那么此时上述近似关系成立，把满足上式的 $r,M$ 作为初值，而不是会使得右侧分母为 $0$ 的 $r&#x3D;0,M&#x3D;0$ 。</p>
 <p>然后是 $\rho \to 0^+$ ，此时其他两个量都是有限正数，因此</p>
@@ -285,7 +298,8 @@ $$
 \cfrac{\mathrm{d} M/M_s}{\mathrm{d} \rho/\rho_0} \propto 0 \\
 \end{cases}
 \tag{25}
-$$</div>
+$$
+</div>
 
 <p>会出现问题的是第一个方程，右侧会趋于无穷大。可以通过换元解决这个问题：</p>
 <p>设 $t&#x3D;-(\rho&#x2F;\rho_0)^{2&#x2F;3}$ ，则</p>
@@ -293,7 +307,8 @@ $$</div>
 $$
 \cfrac{\mathrm{d} r/r_0}{\mathrm{d} t} \propto 1
 \tag{26}
-$$</div>
+$$
+</div>
 
 <p>换元后的方程没有分母为 $0$ 的问题。</p>
 <p>经过以上处理后，方程变为</p>
@@ -304,7 +319,8 @@ $$
 \cfrac{\mathrm{d} M/M_s}{\mathrm{d} t} = \cfrac{D_2\rho/\rho_0 \, r^4/r_0^4}{\sqrt{x_F^2 + 1}M/M_s} \\
 \end{cases}
 \tag{27}
-$$</div>
+$$
+</div>
 
 <p>其中</p>
 <div>
@@ -314,16 +330,17 @@ D_1 = \frac{3}{2} \sqrt[3]{\cfrac{C_2}{\rho_0}} \cfrac{1}{C_3} \\
 D_2 = C_4D_1 \\
 \\\end{gathered}
 \tag{28}
-$$</div>
+$$
+</div>
 
 <p>上方程在求解时不会遇到任何数值问题。只要保证 $r$ 的初值取足够小的正数，至少小于天体半径。</p>
 <p>代码（Python，需要numpy, scipy, matplotlib包）</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> scipy.integrate</span><br><span class="line"></span><br><span class="line">G = <span class="number">6.67430e-11</span>  <span class="comment"># gravity constant</span></span><br><span class="line">h = <span class="number">6.62607015e-34</span>  <span class="comment"># Planck constant</span></span><br><span class="line">hbar = h / <span class="number">2</span> / np.pi  <span class="comment"># reduced Planck constant</span></span><br><span class="line">ma = <span class="number">1.66053904e-27</span>  <span class="comment"># neutron / proton mass</span></span><br><span class="line">m = <span class="number">9.1093837015e-31</span>  <span class="comment"># electron mass</span></span><br><span class="line">c = <span class="number">299792458</span>  <span class="comment"># light speed</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># normalization constants</span></span><br><span class="line">Ms = <span class="number">1.98847e+30</span>  <span class="comment"># sun mass</span></span><br><span class="line">r0 = <span class="number">1e6</span></span><br><span class="line">rho0 = <span class="number">1e12</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># constants in ODE</span></span><br><span class="line">C1 = m * c ** <span class="number">2</span> / <span class="number">8</span> / np.pi ** <span class="number">2</span> * (m * c / hbar) ** <span class="number">3</span></span><br><span class="line">C2 = <span class="number">2</span> * ma / <span class="number">3</span> / np.pi ** <span class="number">2</span> * (m * c / hbar) ** <span class="number">3</span></span><br><span class="line">C3 = <span class="number">9</span> * G * C2 ** <span class="number">2</span> * Ms / <span class="number">8</span> / C1 / r0 / rho0</span><br><span class="line">C4 = <span class="number">4</span> * np.pi * r0 ** <span class="number">3</span> * rho0 / Ms</span><br><span class="line">D1 = <span class="number">3</span>/<span class="number">2</span> * np.power(C2 / rho0, <span class="number">1</span>/<span class="number">3</span>) / C3</span><br><span class="line">D2 = <span class="number">3</span>/<span class="number">2</span> * np.power(C2 / rho0, <span class="number">1</span>/<span class="number">3</span>) * C4 / C3</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">solve</span>(<span class="params">rho_center, r_init=<span class="number">1e-5</span></span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">func</span>(<span class="params">rho2, y</span>):</span><br><span class="line">        rho = np.power(-rho2, <span class="number">3</span>/<span class="number">2</span>)</span><br><span class="line">        r = y[<span class="number">0</span>]</span><br><span class="line">        M = y[<span class="number">1</span>]</span><br><span class="line">        x = np.power(rho0 / C2 * rho, <span class="number">1</span>/<span class="number">3</span>)</span><br><span class="line">        <span class="keyword">return</span> np.array([</span><br><span class="line">            D1 * r ** <span class="number">2</span> / (np.sqrt(x ** <span class="number">2</span> + <span class="number">1</span>) * M),</span><br><span class="line">            D2 * rho * r ** <span class="number">4</span> / (np.sqrt(x ** <span class="number">2</span> + <span class="number">1</span>) * M)</span><br><span class="line">        ])</span><br><span class="line">    ode_solver = scipy.integrate.ode(func).set_integrator(<span class="string">&#x27;dopri5&#x27;</span>)</span><br><span class="line">    M_init = <span class="number">1</span>/<span class="number">3</span> * C4 * rho_center * r_init ** <span class="number">3</span></span><br><span class="line">    ode_solver.set_initial_value(np.array([r_init, M_init]), -np.power(rho_center, <span class="number">2</span>/<span class="number">3</span>))</span><br><span class="line">    <span class="keyword">return</span> ode_solver.integrate(<span class="number">0</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">N = <span class="number">20</span></span><br><span class="line">Rho = np.power(<span class="number">10.0</span>, np.linspace(-<span class="number">2</span>, <span class="number">4</span>, num=N))</span><br><span class="line">Mass = np.zeros(N)</span><br><span class="line">Radius = np.zeros(N)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(N):</span><br><span class="line">    res = solve(Rho[i])</span><br><span class="line">    Mass[i] = res[<span class="number">1</span>]</span><br><span class="line">    Radius[i] = res[<span class="number">0</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># print(Radius)</span></span><br><span class="line"><span class="comment"># print(Mass)</span></span><br><span class="line">plt.plot(Radius, Mass)</span><br><span class="line"><span class="comment"># plt.scatter(Radius, Mass)</span></span><br><span class="line">plt.title(<span class="string">&#x27;Chandrasekhar limit&#x27;</span>)</span><br><span class="line">plt.xlabel(<span class="string">r&#x27;Radius ( $\times 10^6 \mathrm&#123;m&#125;$ )&#x27;</span>)</span><br><span class="line">plt.ylabel(<span class="string">&#x27;Mass (relative to sun)&#x27;</span>)</span><br><span class="line">plt.show()</span><br><span class="line"><span class="comment"># plt.savefig(&#x27;fig.png&#x27;, dpi=300)</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> scipy.integrate</span><br><span class="line"></span><br><span class="line">G = <span class="number">6.67430e-11</span>  <span class="comment"># gravity constant</span></span><br><span class="line">h = <span class="number">6.62607015e-34</span>  <span class="comment"># Planck constant</span></span><br><span class="line">hbar = h / <span class="number">2</span> / np.pi  <span class="comment"># reduced Planck constant</span></span><br><span class="line">ma = <span class="number">1.66053904e-27</span>  <span class="comment"># neutron / proton mass</span></span><br><span class="line">m = <span class="number">9.1093837015e-31</span>  <span class="comment"># electron mass</span></span><br><span class="line">c = <span class="number">299792458</span>  <span class="comment"># light speed</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># normalization constants</span></span><br><span class="line">Ms = <span class="number">1.98847e+30</span>  <span class="comment"># sun mass</span></span><br><span class="line">r0 = <span class="number">1e6</span></span><br><span class="line">rho0 = <span class="number">1e12</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># constants in ODE</span></span><br><span class="line">C1 = m * c ** <span class="number">2</span> / <span class="number">8</span> / np.pi ** <span class="number">2</span> * (m * c / hbar) ** <span class="number">3</span></span><br><span class="line">C2 = <span class="number">2</span> * ma / <span class="number">3</span> / np.pi ** <span class="number">2</span> * (m * c / hbar) ** <span class="number">3</span></span><br><span class="line">C3 = <span class="number">9</span> * G * C2 ** <span class="number">2</span> * Ms / <span class="number">8</span> / C1 / r0 / rho0</span><br><span class="line">C4 = <span class="number">4</span> * np.pi * r0 ** <span class="number">3</span> * rho0 / Ms</span><br><span class="line">D1 = <span class="number">3</span>/<span class="number">2</span> * np.power(C2 / rho0, <span class="number">1</span>/<span class="number">3</span>) / C3</span><br><span class="line">D2 = <span class="number">3</span>/<span class="number">2</span> * np.power(C2 / rho0, <span class="number">1</span>/<span class="number">3</span>) * C4 / C3</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">solve</span>(<span class="params">rho_center, r_init=<span class="number">1e-5</span></span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">func</span>(<span class="params">rho2, y</span>):</span><br><span class="line">        rho = np.power(-rho2, <span class="number">3</span>/<span class="number">2</span>)</span><br><span class="line">        r = y[<span class="number">0</span>]</span><br><span class="line">        M = y[<span class="number">1</span>]</span><br><span class="line">        x = np.power(rho0 / C2 * rho, <span class="number">1</span>/<span class="number">3</span>)</span><br><span class="line">        <span class="keyword">return</span> np.array([</span><br><span class="line">            D1 * r ** <span class="number">2</span> / (np.sqrt(x ** <span class="number">2</span> + <span class="number">1</span>) * M),</span><br><span class="line">            D2 * rho * r ** <span class="number">4</span> / (np.sqrt(x ** <span class="number">2</span> + <span class="number">1</span>) * M)</span><br><span class="line">        ])</span><br><span class="line">    ode_solver = scipy.integrate.ode(func).set_integrator(<span class="string">&#x27;dopri5&#x27;</span>)</span><br><span class="line">    M_init = <span class="number">1</span>/<span class="number">3</span> * C4 * rho_center * r_init ** <span class="number">3</span></span><br><span class="line">    ode_solver.set_initial_value(np.array([r_init, M_init]), -np.power(rho_center, <span class="number">2</span>/<span class="number">3</span>))</span><br><span class="line">    <span class="keyword">return</span> ode_solver.integrate(<span class="number">0</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">N = <span class="number">20</span></span><br><span class="line">Rho = np.power(<span class="number">10.0</span>, np.linspace(-<span class="number">2</span>, <span class="number">4</span>, num=N))</span><br><span class="line">Mass = np.zeros(N)</span><br><span class="line">Radius = np.zeros(N)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(N):</span><br><span class="line">    res = solve(Rho[i])</span><br><span class="line">    Mass[i] = res[<span class="number">1</span>]</span><br><span class="line">    Radius[i] = res[<span class="number">0</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># print(Radius)</span></span><br><span class="line"><span class="comment"># print(Mass)</span></span><br><span class="line">plt.plot(Radius, Mass)</span><br><span class="line"><span class="comment"># plt.scatter(Radius, Mass)</span></span><br><span class="line">plt.title(<span class="string">&#x27;Chandrasekhar limit&#x27;</span>)</span><br><span class="line">plt.xlabel(<span class="string">r&#x27;Radius ($\times 10^6 \mathrm&#123;m&#125;$)&#x27;</span>)</span><br><span class="line">plt.ylabel(<span class="string">&#x27;Mass (relative to sun)&#x27;</span>)</span><br><span class="line">plt.show()</span><br><span class="line"><span class="comment"># plt.savefig(&#x27;fig.png&#x27;, dpi=300)</span></span><br></pre></td></tr></table></figure>
 
 <p>下图是数值结果，可以看到质量随半径减小而单调递增，并且在半径趋于 $0$ 时趋于一个最大值，约等于太阳质量1.46倍（即钱德拉塞卡极限）</p>
 <img src="/2023/10/28/%E9%92%B1%E5%BE%B7%E6%8B%89%E5%A1%9E%E5%8D%A1%E6%9E%81%E9%99%90/fig.png" class="">
 
-</div><div class="article-licensing box"><div class="licensing-title"><p>钱德拉塞卡极限</p><p><a href="https://yuchenxi2000.github.io/2023/10/28/钱德拉塞卡极限/">https://yuchenxi2000.github.io/2023/10/28/钱德拉塞卡极限/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>Chenxi Yu</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2023-10-28</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2026-04-03</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/%E7%89%A9%E7%90%86/">物理</a><a class="link-muted mr-2" rel="tag" href="/tags/%E5%A4%A9%E4%BD%93%E7%89%A9%E7%90%86/">天体物理</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2023/11/04/%E5%85%B3%E4%BA%8E%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E4%B8%AD%E8%A7%92%E5%8A%A8%E9%87%8F%EF%BC%88%E4%B8%80%EF%BC%89/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">关于量子力学中角动量（一）</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2023/10/17/WKB%E8%BF%91%E4%BC%BC%E4%B8%8E%E9%87%8F%E5%AD%90%E9%9A%A7%E7%A9%BF/"><span class="level-item">WKB近似与量子隧穿</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><!--!--><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a><p class="is-size-7"><span>&copy; 2026 Chenxi Yu</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="fab fa-creative-commons-nc"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/yuchenxi2000"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
+</div><div class="article-licensing box"><div class="licensing-title"><p>钱德拉塞卡极限</p><p><a href="https://yuchenxi2000.github.io/2023/10/28/钱德拉塞卡极限/">https://yuchenxi2000.github.io/2023/10/28/钱德拉塞卡极限/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>Chenxi Yu</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2023-10-28</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2026-06-13</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/%E7%89%A9%E7%90%86/">物理</a><a class="link-muted mr-2" rel="tag" href="/tags/%E5%A4%A9%E4%BD%93%E7%89%A9%E7%90%86/">天体物理</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2023/11/04/%E5%85%B3%E4%BA%8E%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E4%B8%AD%E8%A7%92%E5%8A%A8%E9%87%8F%EF%BC%88%E4%B8%80%EF%BC%89/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">关于量子力学中角动量（一）</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2023/10/17/WKB%E8%BF%91%E4%BC%BC%E4%B8%8E%E9%87%8F%E5%AD%90%E9%9A%A7%E7%A9%BF/"><span class="level-item">WKB近似与量子隧穿</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><!--!--><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a><p class="is-size-7"><span>&copy; 2026 Chenxi Yu</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="fab fa-creative-commons-nc"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/yuchenxi2000"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
             article: {
                 highlight: {
                     clipboard: true,

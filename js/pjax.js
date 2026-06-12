@@ -37,7 +37,25 @@
         // Plugin [MathJax] reload logic
         if (window.MathJax) {
             try {
-                window.MathJax.typesetPromise && window.MathJax.typesetPromise();
+                var mj = window.MathJax;
+                if (mj.typesetClear) mj.typesetClear();
+                // MathJax v3.2.x 的 bug: typesetClear()/document.clear() 不会清空
+                // inputJax._parseOptions.tags 里的 labels/allLabels，导致 PJAX 返回时
+                // \tag{1} 等自动编号被重复注册。需手动清除所有 inputJax 缓存中的 tags。
+                var clearTags = function(inputJax) {
+                    var tags = inputJax && inputJax._parseOptions && inputJax._parseOptions.tags;
+                    if (tags) { tags.labels = {}; tags.allLabels = {}; }
+                };
+                var inputJaxList = mj.startup && mj.startup.input;
+                if (inputJaxList) inputJaxList.forEach(clearTags);
+                var doc = mj.startup && mj.startup.document;
+                if (doc && doc.inputJax) doc.inputJax.forEach(clearTags);
+                // CHTML 输出处理器内部缓存了一份 inputJax
+                try {
+                    var outDoc = doc && doc.outputJax && doc.outputJax.document;
+                    if (outDoc && outDoc.inputJax) outDoc.inputJax.forEach(clearTags);
+                } catch(e) {}
+                if (mj.typesetPromise) mj.typesetPromise();
             } catch (e) {
                 console.error('MathJax reload error:', e);
             }

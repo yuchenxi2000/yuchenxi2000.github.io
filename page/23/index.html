@@ -39,7 +39,8 @@
 $$
 \cfrac{\mathrm{d}}{\mathrm{d}y}\int_{\alpha(y)}^{\beta(y)} f(x, y) \mathrm{d}x = \beta'(y)f(\beta(y),y)-\alpha'(y)f(\alpha(y),y)+\int_{\alpha(y)}^{\beta(y)} \cfrac{\partial f(x,y)}{\partial y} \mathrm{d}x
 \tag{1}
-$$</div>
+$$
+</div>
 
 <p>下面开始正式推导。</p>
 <p>泊松方程：</p>
@@ -47,21 +48,24 @@ $$</div>
 $$
 -\cfrac{\mathrm{d}^2 \psi(x)}{\mathrm{d}x^2}=\cfrac{\rho(x)}{\varepsilon}
 \tag{2}
-$$</div>
+$$
+</div>
 
 <p>设空间电荷区范围 $[-x_p,x_n]$ 。电荷为</p>
 <div>
 $$
 Q = \int_0^{x_n} \rho(x) \mathrm{d}x = -\int_{-x_p}^{0} \rho(x) \mathrm{d}x
 \tag{3}
-$$</div>
+$$
+</div>
 
 <p>根据假设 $E(x_n)&#x3D;0$ ，因此可以求得电场：</p>
 <div>
 $$
 E(x) = E(x) - E(x_n) = \int_{x_n}^x \cfrac{\rho(x)}{\varepsilon} \mathrm{d}x
 \tag{4}
-$$</div>
+$$
+</div>
 
 <p>空间电荷区电势差：</p>
 <div>
@@ -69,7 +73,8 @@ $$
 \psi_i - V = -\int_{-x_p}^{x_n} E(x) \mathrm{d}x 
 = -\int_{-x_p}^{x_n} \left(\int_{x_n}^x \cfrac{\rho(y)}{\varepsilon} \mathrm{d}y\right) \mathrm{d}x
 \tag{5}
-$$</div>
+$$
+</div>
 
 <p>其中 $\psi_i$ 为PN区费米能级之差</p>
 <p>由此可求出电容：</p>
@@ -77,28 +82,32 @@ $$</div>
 $$
 C = -\cfrac{\mathrm{d}Q}{\mathrm{d}V} = -\cfrac{\cfrac{\mathrm{d}Q(x_n)}{\mathrm{d}x_n}}{\cfrac{\mathrm{d}V(x_n)}{\mathrm{d}x_n}}
 \tag{6}
-$$</div>
+$$
+</div>
 
 <p>注意， $x_p$ 可视为 $x_n$ 的隐函数。当电压增大时，两者一同变大，但遵循一定关系以维持电荷平衡。它们之间的导数可以求得如下，根据电荷守恒</p>
 <div>
 $$
 Q = \int_0^{x_n} \rho(x) \mathrm{d}x = -\int_{-x_p}^{0} \rho(x) \mathrm{d}x
 \tag{7}
-$$</div>
+$$
+</div>
 
 <p>两边对 $x_n$ 求导，利用一开始给出的上下限为函数的积分求导公式，得到</p>
 <div>
 $$
 \cfrac{\mathrm{d}x_p}{\mathrm{d}x_n}=-\cfrac{\rho(x_n)}{\rho(x_p)}
 \tag{8}
-$$</div>
+$$
+</div>
 
 <p>有了这个结论，我们接下来分别将 $Q,V$ 对 $x_n$ 求导：</p>
 <div>
 $$
 Q = \int_0^{x_n} \rho(x) \mathrm{d}x, \cfrac{\mathrm{d}Q}{\mathrm{d}x_n}=\rho(x_n)
 \tag{9}
-$$</div>
+$$
+</div>
 
 <p>电场其实是 $x,x_n$ 的函数，记为 $E(x,x_n)$ </p>
 <div>
@@ -112,8 +121,8 @@ $$
 &= -(x_n+x_p) \cfrac{\rho(x_n)}{\varepsilon}
 \end{aligned}
 \tag{10}
-$$</div>
-
+$$
+</div>
 
 <blockquote>
 <p>因为上下限相等所以 $E(x_n,x_n)&#x3D;0$ ；根据电荷守恒，有 $E(-x_p,x_n)&#x3D;0$ </p>
@@ -124,7 +133,8 @@ $$
 C = -\cfrac{\cfrac{\mathrm{d}Q(x_n)}{\mathrm{d}x_n}}{\cfrac{\mathrm{d}V(x_n)}{\mathrm{d}x_n}}
 = \cfrac{\varepsilon}{x_n+x_p}=\cfrac{\varepsilon}{W}
 \tag{11}
-$$</div>
+$$
+</div>
 
 <p>等式右边就是近似的平行板电容。</p>
 </div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2020-08-07T05:48:32.000Z" title="2020/8/7 13:48:32">2020-08-07</time>发表</span><span class="level-item">7 分钟读完 (大约1053个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2020/08/07/Modern%20Thoery%20of%20Polarization/">Modern Thoery of Polarization</a></p><div class="content"><p>以下推导全是本人瞎推的，仅供参考<del>因为找不到推导</del></p>
@@ -133,48 +143,48 @@ $$</div>
 $$
 \psi_k(r) = e^{\mathrm{i}k \cdot r} u_k(r)
 \tag{1}
-$$</div>
-
+$$
+</div>
 
 <p>wannier functions 定义为</p>
 <div>
 $$
 W_R(r) = \frac{1}{\sqrt{N}} \sum_k e^{-\mathrm{i}k \cdot R} \psi_k(r)
 \tag{2}
-$$</div>
-
+$$
+</div>
 
 <p>求和、积分有替代关系， $\Omega$ 为元胞体积</p>
 <div>
 $$
 \sum_k \to \frac{N}{\Omega} \int_{BZ} {\rm d}^3 k
 \tag{3}
-$$</div>
-
+$$
+</div>
 
 <p>由 Bloch 函数性质知</p>
 <div>
 $$
 W_{R+R^\prime}(r+R^\prime) = W_R(r)
 \tag{4}
-$$</div>
-
+$$
+</div>
 
 <p>所以 $W_R(r)$ 只与 $r-R$ 有关。所以wannier function也写作</p>
 <div>
 $$
 W(r-R):=W_R(r)
 \tag{5}
-$$</div>
-
+$$
+</div>
 
 <p>wannier function 可以看作 localized orbital，因为若 $r-R \to \infty$ ，根据 Riemann–Lebesgue lemma，</p>
 <div>
 $$
 W_R(r) = \frac{1}{\sqrt{N}} \sum_k e^{\mathrm{i}k \cdot (r-R)} u_k(r) \to 0
 \tag{6}
-$$</div>
-
+$$
+</div>
 
 <p>不同晶胞的 wannier function 正交。</p>
 <div>
@@ -187,16 +197,16 @@ $$
 =& \delta_{R, R^\prime}
 \end{align}
 \tag{7}
-$$</div>
-
+$$
+</div>
 
 <h2 id="Polarization"><a href="#Polarization" class="headerlink" title="Polarization"></a>Polarization</h2><p>传统的定义：</p>
 <div>
 $$
 P = \int r \rho(r) {\rm d}r
 \tag{8}
-$$</div>
-
+$$
+</div>
 
 <p>但是，上式和元胞选取有关。最简单的例子就是一维双原子链，正负电荷交错排列。选取正电荷在左的元胞、正电荷在右的元胞会得到一正一负的结果。</p>
 <p>究其原因是因为 $r\rho(r)$ 不是周期性的。但是，电极化的差（微商）是和元胞选取无关的。我们求解</p>
@@ -204,23 +214,23 @@ $$</div>
 $$
 \Delta P=\int_0^1 \frac{{\rm d}P}{{\rm d}\lambda} {\rm d}\lambda
 \tag{9}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
 \Delta P = \int r \Delta \rho(r) {\rm d}r
 \tag{10}
-$$</div>
-
+$$
+</div>
 
 <p>密度由下式给出，求和n遍及所有占据的能带。</p>
 <div>
 $$
 \rho(r) = \frac{2e}{(2\pi)^3}\sum_n \int_{BZ}{\rm d}k \lvert\psi_{nk}(r)\rvert^2
 \tag{11}
-$$</div>
-
+$$
+</div>
 
 <p> $\Delta P$ 可以用 wannier function 表达，推导略去常数</p>
 <div>
@@ -233,8 +243,8 @@ $$
 \sim& \int_{cell} {\rm d}r \sum_n \sum_{R} r\lvert W_{R}(r)\rvert^2 \\
 \end{align}
 \tag{12}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
@@ -243,8 +253,8 @@ $$
 = \frac{2e}{\Omega} \sum_n \int {\rm d}r \ r(\lvert W^{(1)}(r)\rvert^2 - \lvert W^{(0)}(r)\rvert^2) \\
 \\\end{gathered}
 \tag{13}
-$$</div>
-
+$$
+</div>
 
 <p>上面的 $\Delta P$ 表达式是正确的，但是需要证明这是个物理上的可观测量。可证明 $\Delta P$ 和berry phase联系在一起。</p>
 <div>
@@ -261,15 +271,15 @@ P
 \sim& \sum_n \sum_{k} \mathrm{i} \langle u_{nk} \lvert \nabla_k \rvert u_{nk} \rangle \\
 \end{align}
 \tag{14}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
 P = \mathrm{i} \frac{2e}{8\pi^3} \sum_n \int_{BZ} {\rm d}k \ \langle u_{nk} \lvert \nabla_k \rvert u_{nk} \rangle
 \tag{15}
-$$</div>
-
+$$
+</div>
 
 <h2 id="Finite-electric-field"><a href="#Finite-electric-field" class="headerlink" title="Finite electric field"></a>Finite electric field</h2><p>DFT计算中需要对晶体加有限电场，然而均匀电场的势能不是周期性的。</p>
 <p>处理方法是加上一项电场、电极化作用能，把electric enthalpy functional作为最小化的泛函。</p>
@@ -277,8 +287,8 @@ $$</div>
 $$
 F[\rho]=E_{KS}[\rho]-\Omega\epsilon \cdot P
 \tag{16}
-$$</div>
-
+$$
+</div>
 
 <p>其中 $\epsilon$ 是电场强度， $\Omega$ 是元胞体积，P用berry phase的方法计算。</p>
 <h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><ol>
@@ -298,14 +308,16 @@ $$</div>
 $$
 b=U(\alpha / 2)aU(-\alpha / 2)
 \tag{1}
-$$</div>
+$$
+</div>
 
 <p>其中</p>
 <div>
 $$
 U(\alpha)=\cos \alpha + \sin \alpha (n_x i + n_y j + n_z k)
 \tag{2}
-$$</div>
+$$
+</div>
 
 <p>简要证明：</p>
 <div>
@@ -320,23 +332,24 @@ b
 a
 \end{vmatrix} ^ 2
 \tag{3}
-$$</div>
+$$
+</div>
 
 <p>所以变换保持模长不变</p>
 <div>
 $$
 a \parallel n,\, U(\alpha / 2) a U(-\alpha / 2)=a
 \tag{4}
-$$</div>
-
+$$
+</div>
 
 <p>平行于n的向量保持不变</p>
 <div>
 $$
 a \bot n,\, U(\alpha/2)a = a \cos \frac {\alpha} {2} + na \sin  \frac {\alpha} {2}
 \tag{5}
-$$</div>
-
+$$
+</div>
 
 <p>可证 $na$ 和 $n,a$ 垂直，所以左乘是将垂直于 $n$ 的向量旋转 $\alpha &#x2F; 2$ ，再加上右乘就是旋转 $\alpha$ 。</p>
 <p>因为所有向量都可以分成垂直、平行两部分，所以证毕。</p>

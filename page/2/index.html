@@ -45,7 +45,8 @@ $$
 = \mathrm{d}(1 - \cos\theta) \mathrm{d} \phi \\
 \\\end{gathered}
 \tag{1}
-$$</div>
+$$
+</div>
 
 <p>如果面积元有 $\mathrm{d}\theta \mathrm{d} \phi$ 的形式，那么我们直接在长方形 $(\theta,\phi)\in [-\pi,\pi) \times [0,2\pi)$ 上随机取点即可，其中长方形上随机取点的方法是对两个坐标分别随机取点。但是前面有一个 $\sin\theta$ 因子，应该如何处理？</p>
 <p>方法是使用坐标变换：</p>
@@ -56,14 +57,16 @@ u = 1 - \cos \theta \\
 v = \phi
 \end{cases}
 \tag{2}
-$$</div>
+$$
+</div>
 
 <p>变换后，面积元化为</p>
 <div>
 $$
 \mathrm{d}S = \mathrm{d}u \mathrm{d}v
 \tag{3}
-$$</div>
+$$
+</div>
 
 <p>于是我们在长方形 $(u,v)\in [0,2) \times [0,2\pi)$ 上随机取点，然后变换回 $(\theta,\phi)$ ，最后根据下式</p>
 <div>
@@ -74,7 +77,8 @@ y = \sin\theta \sin\phi \\
 z = \cos\theta \\
 \end{cases}
 \tag{4}
-$$</div>
+$$
+</div>
 
 <p>得到球面上随机的点。</p>
 <blockquote>
@@ -90,14 +94,16 @@ $$</div>
 $$
 P'=\cfrac{365!}{(365-n)!365^n}
 \tag{1}
-$$</div>
+$$
+</div>
 
 <p>所以存在两个生日相同的人的概率是</p>
 <div>
 $$
 P=1-P'=1 - \cfrac{365!}{(365-n)!365^n}
 \tag{2}
-$$</div>
+$$
+</div>
 
 <p>当至少23个人时，这个概率就已经大于0.5；至少41人时，大于0.9。</p>
 <p>下面是代码</p>
@@ -118,7 +124,8 @@ $$</div>
 $$
 H=\xi(r)S \cdot L
 \tag{1}
-$$</div>
+$$
+</div>
 
 <p>计算对易子 $[H,J_z]$ ：</p>
 <div>
@@ -130,14 +137,16 @@ $$
 [H,J_z]=0
 \\\end{gathered}
 \tag{2}
-$$</div>
+$$
+</div>
 
 <p>计算对易子 $[H,J^2]$ 。根据</p>
 <div>
 $$
 [H,J_z^2]=[H,J_z]J_z+J_z[H,J_z]=0
 \tag{3}
-$$</div>
+$$
+</div>
 
 <p>由对称性，x，y方向也成立，因此 $[H,J^2]&#x3D;0$ 。</p>
 <p>计算对易子 $[H,L^2]$ 。这个可以由自旋轨道耦合项与 $L^2$ 对易得出，因为 $L^2$ 与三个角动量分量对易，并且角动量与自旋属于不同自由度，彼此对易。</p>

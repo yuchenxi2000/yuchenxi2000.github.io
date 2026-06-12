@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>非平衡格林函数（一）：半无限电极的处理 - YCX&#039;s Blog</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="YCX&#039;s Blog"><meta name="msapplication-TileImage" content="favicon.ico"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="YCX&#039;s Blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="本文是非平衡格林函数系列第一篇，我们解决包含半无限大电极的体系的格林函数计算问题，在后一篇会解决接触自能求解问题。 最近看非平衡格林函数 其中有个问题，计算格林函数的区域是有限的，但算输运时假设电极是半无限的，或者边界是无反射的。所以要把无限维的格林函数（矩阵）做截断，使得有限区域的格林函数只依赖该区域而不用将体系延拓至无限。 这个问题可以描述如下。假设体系哈密顿量 $ H $ ，分成有限区域的"><meta property="og:type" content="blog"><meta property="og:title" content="非平衡格林函数（一）：半无限电极的处理"><meta property="og:url" content="https://yuchenxi2000.github.io/2025/12/19/%E9%9D%9E%E5%B9%B3%E8%A1%A1%E6%A0%BC%E6%9E%97%E5%87%BD%E6%95%B0%EF%BC%88%E4%B8%80%EF%BC%89%EF%BC%9A%E5%8D%8A%E6%97%A0%E9%99%90%E7%94%B5%E6%9E%81%E7%9A%84%E5%A4%84%E7%90%86/"><meta property="og:site_name" content="YCX&#039;s Blog"><meta property="og:description" content="本文是非平衡格林函数系列第一篇，我们解决包含半无限大电极的体系的格林函数计算问题，在后一篇会解决接触自能求解问题。 最近看非平衡格林函数 其中有个问题，计算格林函数的区域是有限的，但算输运时假设电极是半无限的，或者边界是无反射的。所以要把无限维的格林函数（矩阵）做截断，使得有限区域的格林函数只依赖该区域而不用将体系延拓至无限。 这个问题可以描述如下。假设体系哈密顿量 $ H $ ，分成有限区域的"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://yuchenxi2000.github.io/img/og_image.png"><meta property="article:published_time" content="2025-12-19T07:06:32.000Z"><meta property="article:modified_time" content="2026-04-03T14:05:07.594Z"><meta property="article:author" content="Chenxi Yu"><meta property="article:tag" content="物理"><meta property="article:tag" content="量子力学"><meta property="article:tag" content="NEGF"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://yuchenxi2000.github.io/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://yuchenxi2000.github.io/2025/12/19/%E9%9D%9E%E5%B9%B3%E8%A1%A1%E6%A0%BC%E6%9E%97%E5%87%BD%E6%95%B0%EF%BC%88%E4%B8%80%EF%BC%89%EF%BC%9A%E5%8D%8A%E6%97%A0%E9%99%90%E7%94%B5%E6%9E%81%E7%9A%84%E5%A4%84%E7%90%86/"},"headline":"非平衡格林函数（一）：半无限电极的处理","image":["https://yuchenxi2000.github.io/img/og_image.png"],"datePublished":"2025-12-19T07:06:32.000Z","dateModified":"2026-04-03T14:05:07.594Z","author":{"@type":"Person","name":"Chenxi Yu"},"publisher":{"@type":"Organization","name":"YCX's Blog","logo":{"@type":"ImageObject","url":"https://yuchenxi2000.github.io/2025/12/19/%E9%9D%9E%E5%B9%B3%E8%A1%A1%E6%A0%BC%E6%9E%97%E5%87%BD%E6%95%B0%EF%BC%88%E4%B8%80%EF%BC%89%EF%BC%9A%E5%8D%8A%E6%97%A0%E9%99%90%E7%94%B5%E6%9E%81%E7%9A%84%E5%A4%84%E7%90%86/android-chrome-512x512.png"}},"description":"本文是非平衡格林函数系列第一篇，我们解决包含半无限大电极的体系的格林函数计算问题，在后一篇会解决接触自能求解问题。 最近看非平衡格林函数 其中有个问题，计算格林函数的区域是有限的，但算输运时假设电极是半无限的，或者边界是无反射的。所以要把无限维的格林函数（矩阵）做截断，使得有限区域的格林函数只依赖该区域而不用将体系延拓至无限。 这个问题可以描述如下。假设体系哈密顿量 $ H $ ，分成有限区域的"}</script><link rel="canonical" href="https://yuchenxi2000.github.io/2025/12/19/%E9%9D%9E%E5%B9%B3%E8%A1%A1%E6%A0%BC%E6%9E%97%E5%87%BD%E6%95%B0%EF%BC%88%E4%B8%80%EF%BC%89%EF%BC%9A%E5%8D%8A%E6%97%A0%E9%99%90%E7%94%B5%E6%9E%81%E7%9A%84%E5%A4%84%E7%90%86/"><link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link data-pjax rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link data-pjax rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!--!--><!-- hexo injector head_end start --><script>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>非平衡格林函数（一）：半无限电极的处理 - YCX&#039;s Blog</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="YCX&#039;s Blog"><meta name="msapplication-TileImage" content="favicon.ico"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="YCX&#039;s Blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="本文是非平衡格林函数系列第一篇，我们解决包含半无限大电极的体系的格林函数计算问题，在后一篇会解决接触自能求解问题。 最近看非平衡格林函数 其中有个问题，计算格林函数的区域是有限的，但算输运时假设电极是半无限的，或者边界是无反射的。所以要把无限维的格林函数（矩阵）做截断，使得有限区域的格林函数只依赖该区域而不用将体系延拓至无限。 这个问题可以描述如下。假设体系哈密顿量 $ H $ ，分成有限区域的"><meta property="og:type" content="blog"><meta property="og:title" content="非平衡格林函数（一）：半无限电极的处理"><meta property="og:url" content="https://yuchenxi2000.github.io/2025/12/19/%E9%9D%9E%E5%B9%B3%E8%A1%A1%E6%A0%BC%E6%9E%97%E5%87%BD%E6%95%B0%EF%BC%88%E4%B8%80%EF%BC%89%EF%BC%9A%E5%8D%8A%E6%97%A0%E9%99%90%E7%94%B5%E6%9E%81%E7%9A%84%E5%A4%84%E7%90%86/"><meta property="og:site_name" content="YCX&#039;s Blog"><meta property="og:description" content="本文是非平衡格林函数系列第一篇，我们解决包含半无限大电极的体系的格林函数计算问题，在后一篇会解决接触自能求解问题。 最近看非平衡格林函数 其中有个问题，计算格林函数的区域是有限的，但算输运时假设电极是半无限的，或者边界是无反射的。所以要把无限维的格林函数（矩阵）做截断，使得有限区域的格林函数只依赖该区域而不用将体系延拓至无限。 这个问题可以描述如下。假设体系哈密顿量 $ H $ ，分成有限区域的"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://yuchenxi2000.github.io/img/og_image.png"><meta property="article:published_time" content="2025-12-19T07:06:32.000Z"><meta property="article:modified_time" content="2026-06-12T17:24:25.037Z"><meta property="article:author" content="Chenxi Yu"><meta property="article:tag" content="物理"><meta property="article:tag" content="量子力学"><meta property="article:tag" content="NEGF"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://yuchenxi2000.github.io/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://yuchenxi2000.github.io/2025/12/19/%E9%9D%9E%E5%B9%B3%E8%A1%A1%E6%A0%BC%E6%9E%97%E5%87%BD%E6%95%B0%EF%BC%88%E4%B8%80%EF%BC%89%EF%BC%9A%E5%8D%8A%E6%97%A0%E9%99%90%E7%94%B5%E6%9E%81%E7%9A%84%E5%A4%84%E7%90%86/"},"headline":"非平衡格林函数（一）：半无限电极的处理","image":["https://yuchenxi2000.github.io/img/og_image.png"],"datePublished":"2025-12-19T07:06:32.000Z","dateModified":"2026-06-12T17:24:25.037Z","author":{"@type":"Person","name":"Chenxi Yu"},"publisher":{"@type":"Organization","name":"YCX's Blog","logo":{"@type":"ImageObject","url":"https://yuchenxi2000.github.io/2025/12/19/%E9%9D%9E%E5%B9%B3%E8%A1%A1%E6%A0%BC%E6%9E%97%E5%87%BD%E6%95%B0%EF%BC%88%E4%B8%80%EF%BC%89%EF%BC%9A%E5%8D%8A%E6%97%A0%E9%99%90%E7%94%B5%E6%9E%81%E7%9A%84%E5%A4%84%E7%90%86/android-chrome-512x512.png"}},"description":"本文是非平衡格林函数系列第一篇，我们解决包含半无限大电极的体系的格林函数计算问题，在后一篇会解决接触自能求解问题。 最近看非平衡格林函数 其中有个问题，计算格林函数的区域是有限的，但算输运时假设电极是半无限的，或者边界是无反射的。所以要把无限维的格林函数（矩阵）做截断，使得有限区域的格林函数只依赖该区域而不用将体系延拓至无限。 这个问题可以描述如下。假设体系哈密顿量 $ H $ ，分成有限区域的"}</script><link rel="canonical" href="https://yuchenxi2000.github.io/2025/12/19/%E9%9D%9E%E5%B9%B3%E8%A1%A1%E6%A0%BC%E6%9E%97%E5%87%BD%E6%95%B0%EF%BC%88%E4%B8%80%EF%BC%89%EF%BC%9A%E5%8D%8A%E6%97%A0%E9%99%90%E7%94%B5%E6%9E%81%E7%9A%84%E5%A4%84%E7%90%86/"><link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link data-pjax rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link data-pjax rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!--!--><!-- hexo injector head_end start --><script>
   (function () {
       function switchTab() {
           if (!location.hash) {
@@ -41,7 +41,8 @@ E-H_0 & -\tau \\
 -\tau^\dagger & E-H_1
 \end{pmatrix}
 \tag{1}
-$$</div>
+$$
+</div>
 
 <p>左上角为有限区域内哈密顿量，右下角为区域外哈密顿量，其余为相互作用。</p>
 <p>我们知道格林函数为 $ G&#x3D;(E-H)^{-1} $ ，于是问题转化为求上面这个矩阵的逆。</p>
@@ -54,14 +55,16 @@ E-H_0 & -\tau & 1 & 0\\
 -\tau^\dagger & E-H_1 & 0 & 1
 \end{pmatrix}
 \tag{2}
-$$</div>
+$$
+</div>
 
 <p>做行变换</p>
 <div>
 $$
 ① \rightarrow ①+\tau(E-H_1)^{-1}②
 \tag{3}
-$$</div>
+$$
+</div>
 
 <p>得</p>
 <div>
@@ -71,21 +74,24 @@ E-H_0-\tau(E-H_1)^{-1}\tau^\dagger & 0 & 1 & \tau(E-H_1)^{-1} \\
 -\tau^\dagger & E-H_1 & 0 & 1
 \end{pmatrix}
 \tag{4}
-$$</div>
+$$
+</div>
 
 <p>记</p>
 <div>
 $$
 G_0^{-1}=E-H_0-\tau(E-H_1)^{-1}\tau^\dagger
 \tag{5}
-$$</div>
+$$
+</div>
 
 <p>做行变换</p>
 <div>
 $$
 ① \rightarrow G_0①
 \tag{6}
-$$</div>
+$$
+</div>
 
 <p>得</p>
 <div>
@@ -95,14 +101,16 @@ $$
 -\tau^\dagger & E-H_1 & 0 & 1
 \end{pmatrix}
 \tag{7}
-$$</div>
+$$
+</div>
 
 <p>做行变换</p>
 <div>
 $$
 ② \rightarrow ② + \tau^\dagger ①
 \tag{8}
-$$</div>
+$$
+</div>
 
 <p>得</p>
 <div>
@@ -112,14 +120,16 @@ $$
 0 & E-H_1 & \tau^\dagger G_0 & 1 + \tau^\dagger G_0\tau(E-H_1)^{-1}
 \end{pmatrix}
 \tag{9}
-$$</div>
+$$
+</div>
 
 <p>做行变换</p>
 <div>
 $$
 ② \rightarrow (E-H_1)^{-1} ②
 \tag{10}
-$$</div>
+$$
+</div>
 
 <p>得</p>
 <div>
@@ -129,14 +139,16 @@ $$
 0 & 1 & (E-H_1)^{-1}\tau^\dagger G_0 & G_1
 \end{pmatrix}
 \tag{11}
-$$</div>
+$$
+</div>
 
 <p>其中</p>
 <div>
 $$
 G_1=(E-H_1)^{-1}+(E-H_1)^{-1}\tau^\dagger G_0\tau(E-H_1)^{-1}
 \tag{12}
-$$</div>
+$$
+</div>
 
 <p>所以格林函数为</p>
 <div>
@@ -147,21 +159,24 @@ G_0 & G_0\tau(E-H_1)^{-1} \\
 (E-H_1)^{-1}\tau^\dagger G_0 & G_1
 \end{pmatrix}
 \tag{13}
-$$</div>
+$$
+</div>
 
 <p>我们只关心有限区域内的格林函数：</p>
 <div>
 $$
 G_0=(E-H_0-\Sigma_0)^{-1}
 \tag{14}
-$$</div>
+$$
+</div>
 
 <p>其中</p>
 <div>
 $$
 \Sigma_0=\tau(E-H_1)^{-1}\tau^\dagger
 \tag{15}
-$$</div>
+$$
+</div>
 
 <p>为自能矩阵。</p>
 <p>非平衡格林函数的一个假设是自能矩阵可以写成各个贡献的和，比如电极（lead）贡献的接触自能，电子-电子相互作用，电子-声子相互作用之和。假设不同电极对自能矩阵的贡献是加和关系，这个是因为我们近似认为相互作用矩阵 $ \tau $ 只包含有限个非0项，只有和导体相接触的部分有相互作用，而不同电极之间无相互作用，所以可以相加。</p>
@@ -171,7 +186,8 @@ $$</div>
 $$
 G_1^{-1} = E - H_1 - \tau^\dagger (E - H_0)^{-1}\tau
 \tag{16}
-$$</div>
+$$
+</div>
 
 <span id="more"></span>
 
@@ -184,7 +200,8 @@ $$
 G_1=(E-H_1-\Sigma_1)^{-1}
 \end{gathered}
 \tag{17}
-$$</div>
+$$
+</div>
 
 <p>这说明所谓“有限区域内”“区域外”是相对的概念，内外之分完全看实际问题描述。</p>
 <p>我们的任务是从</p>
@@ -192,22 +209,24 @@ $$</div>
 $$
 G_1=(E-H_1)^{-1}+(E-H_1)^{-1}\tau^\dagger G_0\tau(E-H_1)^{-1}
 \tag{18}
-$$</div>
+$$
+</div>
 
 <p>出发，证明：</p>
 <div>
 $$
 G_1^{-1} = E - H_1 - \tau^\dagger (E - H_0)^{-1}\tau
 \tag{19}
-$$</div>
+$$
+</div>
 
 <p>证明思路是假设下式成立，进行化简，最后化成 $ 0&#x3D;0 $ ，这就证明了猜想。</p>
 <div>
 $$
 1=[E - H_1 - \tau^\dagger (E - H_0)^{-1}\tau][(E-H_1)^{-1}+(E-H_1)^{-1}\tau^\dagger G_0\tau(E-H_1)^{-1}]
 \tag{20}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
@@ -216,61 +235,61 @@ $$
 -\tau^\dagger (E - H_0)^{-1}\tau (E-H_1)^{-1}\tau^\dagger G_0\tau(E-H_1)^{-1}
 \end{split}
 \tag{21}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
 \tau^\dagger (E - H_0)^{-1}\tau(E-H_1)^{-1}+\tau^\dagger (E - H_0)^{-1}\tau (E-H_1)^{-1}\tau^\dagger G_0\tau(E-H_1)^{-1} = \tau^\dagger G_0\tau(E-H_1)^{-1}
 \tag{22}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
 \tau^\dagger (E - H_0)^{-1}\tau+\tau^\dagger (E - H_0)^{-1}\tau (E-H_1)^{-1}\tau^\dagger G_0\tau = \tau^\dagger G_0\tau
 \tag{23}
-$$</div>
-
+$$
+</div>
 
 <p>（下面一步逆推是对的，正推是错的。但是我们的证明过程和化简正好是反过来的，所以可以这么推）</p>
 <div>
 $$
 (E - H_0)^{-1} + (E - H_0)^{-1}\tau (E-H_1)^{-1}\tau^\dagger G_0 = G_0
 \tag{24}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
 1 + \tau (E-H_1)^{-1}\tau^\dagger G_0 = (E - H_0) G_0
 \tag{25}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
 1 = [(E - H_0) - \tau (E-H_1)^{-1}\tau^\dagger] G_0
 \tag{26}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
 1=1
 \tag{27}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
 0=0
 \tag{28}
-$$</div>
-
+$$
+</div>
 
 <p>证毕。</p>
-</div><div class="article-licensing box"><div class="licensing-title"><p>非平衡格林函数（一）：半无限电极的处理</p><p><a href="https://yuchenxi2000.github.io/2025/12/19/非平衡格林函数（一）：半无限电极的处理/">https://yuchenxi2000.github.io/2025/12/19/非平衡格林函数（一）：半无限电极的处理/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>Chenxi Yu</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2025-12-19</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2026-04-03</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/%E7%89%A9%E7%90%86/">物理</a><a class="link-muted mr-2" rel="tag" href="/tags/%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6/">量子力学</a><a class="link-muted mr-2" rel="tag" href="/tags/NEGF/">NEGF</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2025/12/19/%E9%9D%9E%E5%B9%B3%E8%A1%A1%E6%A0%BC%E6%9E%97%E5%87%BD%E6%95%B0%EF%BC%88%E4%BA%8C%EF%BC%89%EF%BC%9A%E6%8E%A5%E8%A7%A6%E8%87%AA%E8%83%BD%E7%9A%84%E8%BF%AD%E4%BB%A3%E6%B1%82%E6%B3%95/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">非平衡格林函数（二）：接触自能的迭代求法</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2025/12/19/%E9%9D%9E%E5%B9%B3%E8%A1%A1%E6%A0%BC%E6%9E%97%E5%87%BD%E6%95%B0%EF%BC%88%E4%B8%89%EF%BC%89%EF%BC%9A%E7%94%B5%E6%B5%81%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%8E%A8%E5%AF%BC/"><span class="level-item">非平衡格林函数（三）：电流表达式推导</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><!--!--><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a><p class="is-size-7"><span>&copy; 2026 Chenxi Yu</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="fab fa-creative-commons-nc"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/yuchenxi2000"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
+</div><div class="article-licensing box"><div class="licensing-title"><p>非平衡格林函数（一）：半无限电极的处理</p><p><a href="https://yuchenxi2000.github.io/2025/12/19/非平衡格林函数（一）：半无限电极的处理/">https://yuchenxi2000.github.io/2025/12/19/非平衡格林函数（一）：半无限电极的处理/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>Chenxi Yu</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2025-12-19</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2026-06-13</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/%E7%89%A9%E7%90%86/">物理</a><a class="link-muted mr-2" rel="tag" href="/tags/%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6/">量子力学</a><a class="link-muted mr-2" rel="tag" href="/tags/NEGF/">NEGF</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2025/12/19/%E9%9D%9E%E5%B9%B3%E8%A1%A1%E6%A0%BC%E6%9E%97%E5%87%BD%E6%95%B0%EF%BC%88%E4%BA%8C%EF%BC%89%EF%BC%9A%E6%8E%A5%E8%A7%A6%E8%87%AA%E8%83%BD%E7%9A%84%E8%BF%AD%E4%BB%A3%E6%B1%82%E6%B3%95/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">非平衡格林函数（二）：接触自能的迭代求法</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2025/12/19/%E9%9D%9E%E5%B9%B3%E8%A1%A1%E6%A0%BC%E6%9E%97%E5%87%BD%E6%95%B0%EF%BC%88%E4%B8%89%EF%BC%89%EF%BC%9A%E7%94%B5%E6%B5%81%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%8E%A8%E5%AF%BC/"><span class="level-item">非平衡格林函数（三）：电流表达式推导</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><!--!--><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a><p class="is-size-7"><span>&copy; 2026 Chenxi Yu</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="fab fa-creative-commons-nc"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/yuchenxi2000"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
             article: {
                 highlight: {
                     clipboard: true,

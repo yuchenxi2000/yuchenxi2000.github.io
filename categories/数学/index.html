@@ -45,7 +45,8 @@ $$
 = \mathrm{d}(1 - \cos\theta) \mathrm{d} \phi \\
 \\\end{gathered}
 \tag{1}
-$$</div>
+$$
+</div>
 
 <p>如果面积元有 $\mathrm{d}\theta \mathrm{d} \phi$ 的形式，那么我们直接在长方形 $(\theta,\phi)\in [-\pi,\pi) \times [0,2\pi)$ 上随机取点即可，其中长方形上随机取点的方法是对两个坐标分别随机取点。但是前面有一个 $\sin\theta$ 因子，应该如何处理？</p>
 <p>方法是使用坐标变换：</p>
@@ -56,14 +57,16 @@ u = 1 - \cos \theta \\
 v = \phi
 \end{cases}
 \tag{2}
-$$</div>
+$$
+</div>
 
 <p>变换后，面积元化为</p>
 <div>
 $$
 \mathrm{d}S = \mathrm{d}u \mathrm{d}v
 \tag{3}
-$$</div>
+$$
+</div>
 
 <p>于是我们在长方形 $(u,v)\in [0,2) \times [0,2\pi)$ 上随机取点，然后变换回 $(\theta,\phi)$ ，最后根据下式</p>
 <div>
@@ -74,7 +77,8 @@ y = \sin\theta \sin\phi \\
 z = \cos\theta \\
 \end{cases}
 \tag{4}
-$$</div>
+$$
+</div>
 
 <p>得到球面上随机的点。</p>
 <blockquote>
@@ -86,14 +90,16 @@ $$</div>
 $$
 P'=\cfrac{365!}{(365-n)!365^n}
 \tag{1}
-$$</div>
+$$
+</div>
 
 <p>所以存在两个生日相同的人的概率是</p>
 <div>
 $$
 P=1-P'=1 - \cfrac{365!}{(365-n)!365^n}
 \tag{2}
-$$</div>
+$$
+</div>
 
 <p>当至少23个人时，这个概率就已经大于0.5；至少41人时，大于0.9。</p>
 <p>下面是代码</p>
@@ -110,7 +116,8 @@ $$
 u(x, 0) = f(x)
 \end{cases}
 \tag{1}
-$$</div>
+$$
+</div>
 
 <p>不失一般性地，我们令其中的常数因子为1，否则可以改变 $t,x$ 的尺度使得其为1。</p>
 <p>然后我们使用分离变量法，设 $u(x,t)&#x3D;X(x)T(t)$ 。因为要求解有边界，所以分离变量法中的常数必定为负数。</p>
@@ -118,7 +125,8 @@ $$</div>
 $$
 T_t/T = X_{xx}/X = -k^2
 \tag{2}
-$$</div>
+$$
+</div>
 
 <p>我们解得</p>
 <div>
@@ -128,14 +136,16 @@ T_k(t) = \exp(-k^2t) \\
 X_k(x) = \exp (\pm\mathrm{i}kx)
 \\\end{gathered}
 \tag{3}
-$$</div>
+$$
+</div>
 
 <p>对于任意的 $f(x)$ ，我们将其用 $\exp (\pm\mathrm{i}kx)$ 展开（傅里叶变换定义详见附录），</p>
 <div>
 $$
 f(x) = \cfrac{1}{2\pi} \int_{-\infty}^{+\infty} F(\omega) e^{\mathrm{i}\omega x} \mathrm{d}\omega
 \tag{4}
-$$</div>
+$$
+</div>
 
 <p>根据分离变量的结果，边界条件为 $u(x,0)&#x3D;X_k(x)$ 的解为 $u(x,t)&#x3D;X_k(x)T_k(t)$ 。我们现在已经把任意函数 $f(x)$ 用 $X_k(x)$ 展开，由此可以写出任意边界条件的解为</p>
 <div>
@@ -148,14 +158,16 @@ u(x, t) &= \cfrac{1}{2\pi} \int_{-\infty}^{+\infty} F(\omega) e^{\mathrm{i}\omeg
 &= \cfrac{1}{\sqrt{4\pi t}} \int_{-\infty}^{+\infty} f(y) e^{-(x-y)^2/(4t)} \mathrm{d}y
 \end{aligned}
 \tag{5}
-$$</div>
+$$
+</div>
 
 <p>可以验证该函数满足方程以及边界条件。为计算简便，可以直接验证积分核</p>
 <div>
 $$
 K(x,t) = \cfrac{1}{\sqrt{4\pi t}}e^{-x^2/(4t)}
 \tag{6}
-$$</div>
+$$
+</div>
 
 <p>满足方程且 $t \to 0$ 的极限为 $\delta(x)$ ，再根据 $u(x,t)$ 为积分核与 $f(x)$ 的卷积得出 $u(x,t)$ 满足方程以及边界条件。</p>
 <h2 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h2><p>傅里叶变换定义</p>
@@ -166,7 +178,8 @@ $$
 \mathcal{F}^{-1}[F(\omega)] = f(x) = \cfrac{1}{2\pi} \int_{-\infty}^{+\infty} F(\omega) e^{\mathrm{i}\omega x} \mathrm{d}\omega
 \\\end{gathered}
 \tag{7}
-$$</div>
+$$
+</div>
 
 <p>高斯函数的傅里叶变换</p>
 <div>
@@ -177,8 +190,8 @@ $$
 =& \sqrt{\cfrac{\pi}{a}}e^{-\omega^2/(4a)}
 \end{aligned}
 \tag{8}
-$$</div>
-
+$$
+</div>
 
 </div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2026-01-22T10:54:07.000Z" title="2026/1/22 18:54:07">2026-01-22</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E6%95%B0%E5%AD%A6/">数学</a></span><span class="level-item">12 分钟读完 (大约1815个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2026/01/22/SU(2)%E5%92%8CSO(3)%E7%9A%84%E6%8C%87%E6%95%B0%E6%98%A0%E5%B0%84%E8%AE%A1%E7%AE%97/">SU(2)和SO(3)的指数映射计算</a></p><div class="content"><h1 id="mathrm-SU-2-和-mathrm-SO-3-的指数映射计算"><a href="#mathrm-SU-2-和-mathrm-SO-3-的指数映射计算" class="headerlink" title="$\mathrm{SU}(2)$ 和 $\mathrm{SO}(3)$ 的指数映射计算"></a>$\mathrm{SU}(2)$ 和 $\mathrm{SO}(3)$ 的指数映射计算</h1><p>暴力计算两个李群的指数映射，方法就是算矩阵的指数函数，通过幂级数展开式计算。</p>
 <p>计算结果可以给出旋量、向量绕某个轴旋转任意角度后的结果（罗德里格斯公式）</p>
@@ -188,44 +201,45 @@ $$</div>
 $$
 U_{ij} = \delta_{ij} + w_{ij}
 \tag{1}
-$$</div>
+$$
+</div>
 
 <p>其中 $w_{ij}$ 中的元素为小量。利用其为二阶酉矩阵，</p>
 <div>
 $$
 (U^\dagger U)_{ij}=U^\ast _{ki}U_{kj}=\delta_{ij}
 \tag{2}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
 (\delta_{ki} + w_{ki}^\ast )(\delta_{kj} + w_{kj})=\delta_{ij}
 \tag{3}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
 w_{ji}^\ast  + w_{ij}=0
 \tag{4}
-$$</div>
-
+$$
+</div>
 
 <p>再根据行列式为1，</p>
 <div>
 $$
 \det U \approx 1 + \operatorname{Tr} w = 1
 \tag{5}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
 w_{ii}=0
 \tag{6}
-$$</div>
-
+$$
+</div>
 
 <p>由此得出矩阵 $w$ 的形式为</p>
 <div>
@@ -249,7 +263,8 @@ w_3
 0 & \mathrm{i}
 \end{pmatrix}
 \tag{7}
-$$</div>
+$$
+</div>
 
 <p>由此得到三个生成元，用泡利矩阵表示为 $-\mathrm{i}\sigma_x,-\mathrm{i}\sigma_y,-\mathrm{i}\sigma_z$ 。它们的李括号为（下标 $1,2,3$ 分别对应三个坐标 $x,y,z$ ）</p>
 <div>
@@ -258,8 +273,8 @@ $$
 \lbrack -\mathrm{i}\sigma_i, -\mathrm{i}\sigma_j\rbrack =-2\mathrm{i}\varepsilon_{ijk}\sigma_k \\
 \\\end{gathered}
 \tag{8}
-$$</div>
-
+$$
+</div>
 
 <blockquote>
 <p>如果设 $S_i&#x3D;1&#x2F;2\hbar\sigma_i$ ，那么得到量子力学中1&#x2F;2自旋角动量的对易关系 $[S_i,S_j]&#x3D;\mathrm{i}\hbar \varepsilon_{ijk}S_k$ 。</p>
@@ -269,14 +284,16 @@ $$</div>
 $$
 \exp(-\mathrm{i}a \cdot \sigma) = \sum_{k=0}^\infty \cfrac{(-\mathrm{i}a \cdot \sigma)^k}{k!}
 \tag{9}
-$$</div>
+$$
+</div>
 
 <p>计算上式的重点是计算 $a \cdot \sigma$ 的任意次幂。为此我们先证一个等式：</p>
 <div>
 $$
 (\sigma \cdot a)(\sigma \cdot b)=a \cdot b + \mathrm{i} \sigma \cdot (a \times b)
 \tag{10}
-$$</div>
+$$
+</div>
 
 <p>证明方法是利用泡利矩阵的性质</p>
 <div>
@@ -286,8 +303,8 @@ $$
 \sigma_i \sigma_j = \mathrm{i} \varepsilon_{ijk}\sigma_k & (i \ne j)
 \end{cases}
 \tag{11}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
@@ -297,16 +314,16 @@ $$
 &= a \cdot b + \mathrm{i}\sigma \cdot (a \times b)
 \end{aligned}
 \tag{12}
-$$</div>
-
+$$
+</div>
 
 <p>根据这个恒等式有</p>
 <div>
 $$
 (a \cdot \sigma)^2=\lvert a \rvert^2
 \tag{13}
-$$</div>
-
+$$
+</div>
 
 <p>我们将偶数次幂的和与奇数次幂的和分开，</p>
 <div>
@@ -318,7 +335,8 @@ $$
 = \cos \lvert a \rvert -\mathrm{i} \cfrac{a \cdot \sigma}{\lvert a \rvert} \sin\lvert a \rvert
 \\\end{gathered}
 \tag{14}
-$$</div>
+$$
+</div>
 
 <p>上式出现 $a$ 的模长，为方便设 $a&#x3D;\alpha n$ ，其中 $\lvert n \rvert &#x3D; 1$ 。</p>
 <div>
@@ -326,7 +344,8 @@ $$
 \exp(-\mathrm{i} a \cdot \sigma)
 = \cos \alpha -\mathrm{i} n \cdot \sigma \sin \alpha
 \tag{15}
-$$</div>
+$$
+</div>
 
 <p>我们设</p>
 <div>
@@ -338,7 +357,8 @@ y = n_2\sin \alpha \\
 z = n_3\sin \alpha
 \end{cases}
 \tag{16}
-$$</div>
+$$
+</div>
 
 <p>那么 $t^2+x^2+y^2+z^2&#x3D;1$ ，且</p>
 <div>
@@ -346,7 +366,8 @@ $$
 \exp(-\mathrm{i} a \cdot \sigma)
 = t - \mathrm{i} (x\sigma_1 + y\sigma_2 + z\sigma_3)
 \tag{17}
-$$</div>
+$$
+</div>
 
 <p>于是 $SU(2)$ 群同胚于球面 $S^3$ 。</p>
 <h2 id="mathrm-SO-3"><a href="#mathrm-SO-3" class="headerlink" title="$\mathrm{SO}(3)$"></a>$\mathrm{SO}(3)$</h2><p>用类似的方法求李群生成元，设旋转矩阵 $R$ ，在单位矩阵附近展开：</p>
@@ -354,7 +375,8 @@ $$</div>
 $$
 R_{ij}=\delta_{ij}+w_{ij}
 \tag{18}
-$$</div></div><a class="article-more button is-small is-size-7" href="/2026/01/22/SU(2)%E5%92%8CSO(3)%E7%9A%84%E6%8C%87%E6%95%B0%E6%98%A0%E5%B0%84%E8%AE%A1%E7%AE%97/#more">阅读更多</a></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2026-01-18T14:54:25.000Z" title="2026/1/18 22:54:25">2026-01-18</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E6%95%B0%E5%AD%A6/">数学</a></span><span class="level-item">6 分钟读完 (大约837个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2026/01/18/%E5%87%A0%E4%BD%95%E4%BB%A3%E6%95%B0%E8%A7%86%E8%A7%92%E4%B8%8B%E7%9A%84%E7%94%B5%E7%A3%81%E5%9C%BA%E7%90%86%E8%AE%BA/">几何代数视角下的电磁场理论</a></p><div class="content"><h2 id="单位制与符号约定"><a href="#单位制与符号约定" class="headerlink" title="单位制与符号约定"></a>单位制与符号约定</h2><p>本文采用自然单位制， $c&#x3D;\hbar&#x3D;\varepsilon_0&#x3D;1$ 。希腊字母上下标表示四个四维时空分量 $t,x,y,z$ ；而拉丁字母上下标表示三维空间分量 $x,y,z$ 。度规张量的符号约定如下</p>
+$$
+</div></div><a class="article-more button is-small is-size-7" href="/2026/01/22/SU(2)%E5%92%8CSO(3)%E7%9A%84%E6%8C%87%E6%95%B0%E6%98%A0%E5%B0%84%E8%AE%A1%E7%AE%97/#more">阅读更多</a></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2026-01-18T14:54:25.000Z" title="2026/1/18 22:54:25">2026-01-18</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E6%95%B0%E5%AD%A6/">数学</a></span><span class="level-item">6 分钟读完 (大约837个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2026/01/18/%E5%87%A0%E4%BD%95%E4%BB%A3%E6%95%B0%E8%A7%86%E8%A7%92%E4%B8%8B%E7%9A%84%E7%94%B5%E7%A3%81%E5%9C%BA%E7%90%86%E8%AE%BA/">几何代数视角下的电磁场理论</a></p><div class="content"><h2 id="单位制与符号约定"><a href="#单位制与符号约定" class="headerlink" title="单位制与符号约定"></a>单位制与符号约定</h2><p>本文采用自然单位制， $c&#x3D;\hbar&#x3D;\varepsilon_0&#x3D;1$ 。希腊字母上下标表示四个四维时空分量 $t,x,y,z$ ；而拉丁字母上下标表示三维空间分量 $x,y,z$ 。度规张量的符号约定如下</p>
 <div>
 $$
 \eta_{\mu\nu} = 
@@ -365,15 +387,16 @@ $$
 0 & 0 & 0 & -1 \\
 \end{pmatrix}
 \tag{1}
-$$</div>
-
+$$
+</div>
 
 <h2 id="时空代数"><a href="#时空代数" class="headerlink" title="时空代数"></a>时空代数</h2><p>时空代数为四维闵可夫斯基空间中的几何代数。其中定义了两个向量的几何积：</p>
 <div>
 $$
 ab = a \cdot b + a \wedge b
 \tag{2}
-$$</div>
+$$
+</div>
 
 <p>右边第一项即向量的标量积（点乘），结果为标量，满足交换律；第二项为外积（锲积），满足反交换律。将两个向量锲积结果定义为二重矢量，类似可以定义多重矢量。根据锲积元素个数，将标量称为零形式，矢量为一形式，两个矢量的锲积为二形式，以此类推。</p>
 <p>将四维闵可夫斯基空间中四个基向量记为 $\gamma_\mu$ ；它们相互正交归一：</p>
@@ -381,7 +404,8 @@ $$</div>
 $$
 \gamma_\mu \cdot \gamma_\nu = \eta_{\mu\nu}
 \tag{3}
-$$</div>
+$$
+</div>
 
 <p>其中 $\eta_{\mu\nu}$ 为闵可夫斯基时空度规。根据正交归一条件可知对于不同的基向量，几何积就是锲积，以下不会区分两种积的形式。</p>
 <h2 id="麦克斯韦方程"><a href="#麦克斯韦方程" class="headerlink" title="麦克斯韦方程"></a>麦克斯韦方程</h2><p>在自然单位制下的真空麦克斯韦方程</p>
@@ -394,42 +418,48 @@ $$
 \nabla \times B - \cfrac{\partial E}{\partial t} = j
 \end{cases}
 \tag{4}
-$$</div>
+$$
+</div>
 
 <p>定义电流四矢量：</p>
 <div>
 $$
 J = \rho \gamma_0 + j^k \gamma_k
 \tag{5}
-$$</div>
+$$
+</div>
 
 <p>以及电磁势矢量：</p>
 <div>
 $$
 A = \phi \gamma_0 + A^k \gamma_k
 \tag{6}
-$$</div>
+$$
+</div>
 
 <p>如果知道麦克斯韦方程用电磁场张量的表示，可知电磁场张量和电磁势的梯度存在关系。下面我们计算电磁势矢量的梯度，首先给出梯度算子的形式：</p>
 <div>
 $$
 \nabla = \gamma^\mu \partial_\mu
 \tag{7}
-$$</div>
+$$
+</div>
 
 <p>其中基矢量上下标的转换关系如下</p>
 <div>
 $$
 \gamma^\mu = \eta^{\mu\nu} \gamma_\nu
 \tag{8}
-$$</div>
+$$
+</div>
 
 <p>电磁势矢量的梯度为</p>
 <div>
 $$
 \nabla A = \partial_0 \phi + \partial_k A^k + (\partial_k \phi + \partial_0 A^k) \gamma_0 \gamma_k - \cfrac{1}{2}(\partial_i A^j - \partial_j A^i) \gamma_i \gamma_j
 \tag{9}
-$$</div>
+$$
+</div>
 
 <p>我们发现电磁势矢量的梯度是一个标量和一个二重矢量之和，而标量部分是洛伦兹规范条件。规范不止一种，如果需要考虑不同规范，那么就简单地取几何积的锲积部分得到电磁场。又根据电磁场和电磁势的关系，</p>
 <div>
@@ -439,7 +469,8 @@ E = -\nabla \phi - \cfrac{\partial A}{\partial t} \\
 B = \nabla \times A
 \end{cases}
 \tag{10}
-$$</div>
+$$
+</div>
 
 <p>由此看出梯度和电磁势矢量的锲积就是电磁场，一个二重向量场：</p>
 <div>
@@ -450,7 +481,8 @@ F =& \nabla \wedge A \\
 =& -E_k \gamma_0 \gamma_k - \varepsilon_{ijk} B_k \gamma_i \gamma_j
 \end{aligned}
 \tag{11}
-$$</div>
+$$
+</div>
 
 <p>可以验证其梯度就是电流四矢量</p>
 <div>
@@ -462,22 +494,24 @@ $$
 =& J
 \end{aligned}
 \tag{12}
-$$</div>
+$$
+</div>
 
 <p>于是在时空代数下，麦克斯韦方程有简洁形式</p>
 <div>
 $$
 \nabla F = J
 \tag{13}
-$$</div>
-
+$$
+</div>
 
 </div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2025-11-11T08:24:59.000Z" title="2025/11/11 16:24:59">2025-11-11</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E6%95%B0%E5%AD%A6/">数学</a></span><span class="level-item">4 分钟读完 (大约621个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2025/11/11/%E7%BE%A4%E7%9A%84%E5%8D%8A%E7%9B%B4%E7%A7%AF/">群的半直积</a></p><div class="content"><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>群 $K$ 在 $H$ 上的作用</p>
 <div>
 $$
 kh=\phi(k)(h)
 \tag{1}
-$$</div>
+$$
+</div>
 
 <p>其中 $\phi:K \to \operatorname{Aut}(H)$ 是群同态。</p>
 <p>证明其为群作用：</p>
@@ -488,14 +522,16 @@ e_Kh=\phi(e_K)(h)=h \\
 (k_1k_2)h=\phi(k_1k_2)(h)=\phi(k_1)\phi(k_2)(h)=k_1(k_2h)
 \\\end{gathered}
 \tag{2}
-$$</div>
+$$
+</div>
 
 <p>由此可以定义群的半直积 $G&#x3D;H \rtimes_{\phi}K$ ，乘法定义为</p>
 <div>
 $$
 (h_1,k_1)(h_2,k_2)=(h_1\phi(k_1)(h_2),k_1k_2)
 \tag{3}
-$$</div>
+$$
+</div>
 
 <p>下面证明其构成群。</p>
 <p>注意群 $G$ 在 $H$ 上的作用， $(h,k)h_0&#x3D;h\phi(k)(h_0)$ ，由此诱导出的群乘法</p>
@@ -510,14 +546,16 @@ $$
 =(h_1 \phi(k_1)(h_2), k_1k_2) \cdot h_0 \\
 \\\end{gathered}
 \tag{4}
-$$</div>
+$$
+</div>
 
 <p>因此群乘法定义</p>
 <div>
 $$
 (h_1,k_1)(h_2,k_2) = (h_1 \phi(k_1)(h_2), k_1k_2)
 \tag{5}
-$$</div>
+$$
+</div>
 
 <p>所以该群乘法满足结合律。</p>
 <p>存在单位元 $(e_H,e_K)$ ：</p>
@@ -528,7 +566,8 @@ $$
 (h,k)(e_H,e_K)=(h\phi(k)(e_H),ke_K)=(h,k) \\
 \\\end{gathered}
 \tag{6}
-$$</div>
+$$
+</div>
 
 <p>存在逆元 $(h,k)^{-1}&#x3D;(\phi(k^{-1})(h^{-1}),k^{-1})$ ：</p>
 <div>
@@ -542,7 +581,8 @@ $$
 =(e_H,e_K) \\
 \\\end{gathered}
 \tag{7}
-$$</div>
+$$
+</div>
 
 <h2 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h2><p>晶体群，点群 $R$ ，平移群 $t$ ，晶体群为 ${R,t}&#x3D;t \rtimes R$ </p>
 <h2 id="半直积性质"><a href="#半直积性质" class="headerlink" title="半直积性质"></a>半直积性质</h2><p> $\vert G\vert &#x3D;\vert H\vert \vert K\vert $ 。证明方法：存在集合 $H \times K$ 到群 $H \rtimes K$ 的双射 $h,k \to (h,k)$ </p>
@@ -556,7 +596,8 @@ $$
 (h_1\phi(k_1k_2^{-1})(h_2^{-1}),k_1k_2^{-1})=(e_H,e_K) \\
 \\\end{gathered}
 \tag{8}
-$$</div>
+$$
+</div>
 
 <p>于是有 $k_1k_2^{-1}&#x3D;e_K,h_1h_2^{-1}&#x3D;e_H$ ，所以 $h_1&#x3D;h_2,k_1&#x3D;k_2$ 。</p>
 <p> ${(h,e_K) \mid h\in H}$ 和 ${(e_H,k) \mid k\in K}$ 分别同构于 $H,K$ </p>
@@ -566,7 +607,8 @@ $$</div>
 $$
 (h_1,e_K)(h_2,e_K)=(h_1\phi(e_K)(h_2),e_K)=(h_1h_2,e_K)
 \tag{9}
-$$</div>
+$$
+</div>
 
 <p> $H \triangleleft G$ 。这个只需证明</p>
 <div>
@@ -577,8 +619,8 @@ $$
 =(\phi(k)(h),e_K)
 \\\end{gathered}
 \tag{10}
-$$</div>
-
+$$
+</div>
 
 
 <p> $H \cap K&#x3D;{(e_H,e_K)}$ 。显然。</p>
@@ -598,7 +640,8 @@ a+0=a \\
 a+S(b)=S(a+b)
 \\\end{gathered}
 \tag{1}
-$$</div>
+$$
+</div>
 
 <h2 id="两种定义等价性"><a href="#两种定义等价性" class="headerlink" title="两种定义等价性"></a>两种定义等价性</h2><p> $0+0&#x3D;0$ 。设 $0+a&#x3D;a$ ， $0+S(a)&#x3D;S(0+a)&#x3D;S(a)$ ，由数学归纳法得 $\forall a,0+a&#x3D;a$ </p>
 <p> $S(a)+0&#x3D;S(a)&#x3D;S(a+0)$ 。归纳假设 $S(a)+b&#x3D;S(a+b)$ ，证 $S(a)+S(b)&#x3D;S(a+S(b))$ 。</p>
@@ -610,7 +653,8 @@ S(a)+S(b)=S(S(a)+b) \\
 =S(a+S(b)) \\
 \\\end{gathered}
 \tag{2}
-$$</div>
+$$
+</div>
 
 <p>其中用到加法定义式2</p>
 <h2 id="结合律"><a href="#结合律" class="headerlink" title="结合律"></a>结合律</h2><p> $(a+b)+c&#x3D;a+(b+c)$ ，对 $c$ 使用数学归纳法。</p>
@@ -619,7 +663,8 @@ $$</div>
 $$
 (a+b)+S(c)=S((a+b)+c)=S(a+(b+c))=a+S(b+c)=a+(b+S(c))
 \tag{3}
-$$</div>
+$$
+</div>
 
 <h2 id="交换律"><a href="#交换律" class="headerlink" title="交换律"></a>交换律</h2><p> $a+b&#x3D;b+a$ ，对 $b$ 使用数学归纳法。</p>
 <p>使用两种定义等价性， $a+0&#x3D;a&#x3D;0+a$ 。</p>
@@ -631,14 +676,16 @@ a0=0 \\
 aS(b)=ab+a
 \\\end{gathered}
 \tag{4}
-$$</div>
+$$
+</div>
 
 <h2 id="乘法分配律1"><a href="#乘法分配律1" class="headerlink" title="乘法分配律1"></a>乘法分配律1</h2><p> $(a+b)c&#x3D;ac+bc$ ，对 $c$ 使用数学归纳法。</p>
 <div>
 $$
 (a+b)0=0=0+0=a0+b0
 \tag{5}
-$$</div>
+$$
+</div>
 
 <p>设 $(a+b)c&#x3D;ac+bc$ ，</p>
 <div>
@@ -650,7 +697,8 @@ $$
 =aS(c)+bS(c)
 \\\end{gathered}
 \tag{6}
-$$</div>
+$$
+</div>
 
 <p>其中用到了加法结合律、交换律</p>
 <h2 id="引理"><a href="#引理" class="headerlink" title="引理"></a>引理</h2><p> $0a&#x3D;0$ ，对 $a$ 使用数学归纳法。</p>
@@ -666,7 +714,8 @@ c(a+S(b))=cS(a+b) \\
 =ca+cS(b)
 \\\end{gathered}
 \tag{7}
-$$</div>
+$$
+</div>
 
 <p>其中用到了加法定义与加法结合律</p>
 <h2 id="乘法结合律"><a href="#乘法结合律" class="headerlink" title="乘法结合律"></a>乘法结合律</h2><p> $(ab)c&#x3D;a(bc)$ ，对 $c$ 使用数学归纳法。 $(ab)0&#x3D;0&#x3D;a0&#x3D;a(b0)$ </p>
@@ -679,28 +728,32 @@ $$
 =a(bS(c))
 \\\end{gathered}
 \tag{8}
-$$</div>
+$$
+</div>
 
 <p>其中用到了乘法分配律2</p></div><a class="article-more button is-small is-size-7" href="/2025/10/20/%E5%85%AC%E7%90%86%E5%8C%96%E7%AE%97%E6%9C%AF/#more">阅读更多</a></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2025-09-13T14:18:52.000Z" title="2025/9/13 22:18:52">2025-09-13</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E6%95%B0%E5%AD%A6/">数学</a></span><span class="level-item">1 分钟读完 (大约209个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2025/09/13/%E5%85%B3%E4%BA%8E%E5%81%8F%E5%AF%BC%E6%95%B0%E4%B8%8E%E5%B8%B8%E5%AF%BC%E6%95%B0%E5%8C%BA%E5%88%AB/">关于偏导数与常导数区别</a></p><div class="content"><p>偏导数不能理解为除法，不同于常微分。更基本的是全微分的表达式：</p>
 <div>
 $$
 \mathrm{d}z = \cfrac{\partial z}{\partial x} \mathrm{d}x + \cfrac{\partial z}{\partial y} \mathrm{d}y
 \tag{1}
-$$</div>
+$$
+</div>
 
 <p>对它移项，理解为 $x$ 的全微分：</p>
 <div>
 $$
 \cfrac{\partial z}{\partial x} \mathrm{d}x = \mathrm{d}z - \cfrac{\partial z}{\partial y} \mathrm{d}y
 \tag{2}
-$$</div>
+$$
+</div>
 
 <p>然后 $x$ 的全微分有另一个表达式，</p>
 <div>
 $$
 \mathrm{d}x = \cfrac{\partial x}{\partial z} \mathrm{d}z + \cfrac{\partial x}{\partial y} \mathrm{d}y
 \tag{3}
-$$</div>
+$$
+</div>
 
 <p>对比两式即得</p>
 <div>
@@ -710,14 +763,16 @@ $$
 -\cfrac{\partial z}{\partial y}\Big/\cfrac{\partial z}{\partial x} = \cfrac{\partial x}{\partial y} \\
 \end{cases}
 \tag{4}
-$$</div>
+$$
+</div>
 
 <p>其中第二个式子可以化为</p>
 <div>
 $$
 \cfrac{\partial z}{\partial x} \cfrac{\partial x}{\partial y} \cfrac{\partial y}{\partial z} = -1
 \tag{5}
-$$</div>
+$$
+</div>
 
 <p>由此可看出偏导数不同于常微分，不能理解为“除法”。</p>
 </div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2025-08-26T05:21:12.000Z" title="2025/8/26 13:21:12">2025-08-26</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E6%95%B0%E5%AD%A6/">数学</a></span><span class="level-item">6 分钟读完 (大约908个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2025/08/26/%E7%BE%A4%E4%BD%9C%E7%94%A8/">群作用</a></p><div class="content"><p>设 $X$ 是一个集合， $G$ 是一个群。群作用是一个映射 $G \times X \to X$ 定义为 $(g, x) \mapsto gx$ ，使得</p>
@@ -755,7 +810,8 @@ $$</div>
 $$
 \lvert X \rvert = \lvert X_G \rvert + \sum_{i} \lvert \mathcal{O}_{x_i} \rvert
 \tag{1}
-$$</div>
+$$
+</div>
 
 <p>其中指标 $i$ 遍历所有非平凡轨道， $x_i$ 为轨道 $\mathcal{O}_{x_i}$ 中的代表元素。</p>
 <p>接下来我们考虑群元的共轭， $(g, x) \mapsto gxg^{-1}$ 。此时不动点的集合为 $Z(G)&#x3D;{x \in G: \forall g \in G, xg&#x3D;gx}$ 称作中心，非平凡轨道为共轭类，稳定化子称为中心化子 $C(x_i)&#x3D;{g \in G: gx_i&#x3D;x_ig}$ ，类方程为</p>
@@ -763,7 +819,8 @@ $$</div>
 $$
 \lvert G \rvert = \lvert Z(G) \rvert + \sum_i [G:C(x_i)]
 \tag{2}
-$$</div>
+$$
+</div>
 
 <p>令 $[G:C(x_i)]&#x3D;n_i$ ，也写做 $\lvert G \rvert &#x3D; \lvert Z(G) \rvert + \sum_i n_i$ </p>
 <p>可以证明中心是正规子群。</p>
@@ -779,7 +836,8 @@ $$</div>
 $$
 g=g^{\sum_{i=1}^n a_ib_i}=\prod_{i=1}^n g^{a_ib_i}
 \tag{1}
-$$</div>
+$$
+</div>
 
 <p>因为 $(g^{a_ib_i})^{\beta_i}&#x3D;(g^{\lvert g \rvert})^{b_i}&#x3D;e$ ，因此 $g^{a_ib_i} \in G_i$ 。因为 $G$ 是阿贝尔群，所以为写成 $G_i$ 的内直积我们只需要证 $g$ 有唯一分解。</p>
 <p>设 $g&#x3D;\prod g_i&#x3D;\prod h_i,g_i \in G_i, h_i \in G_i$ 。有 $\prod g_i h_i^{-1}&#x3D;e, g_i h_i^{-1} \in G_i$ 。 $G_i$ 是 $p_i$ -群，因此 $g_ih_i^{-1}$ 的阶是 $p_i$ 的幂， $\prod g_i h_i^{-1}$ 的阶是所有 $g_ih_i^{-1}$ 的阶的最小公倍数，等于 $1$ （因为 $e$ 的阶为 $1$ ），所以 $\lvert g_i h_i^{-1} \rvert &#x3D; 1, g_i&#x3D;h_i$ 。</p>
@@ -800,7 +858,8 @@ $$</div>
 $$
 G \cong Z_{p_1^{\alpha_1}} \times Z_{p_2^{\alpha_2}} \times \dots \times Z_{p_n^{\alpha_n}}
 \tag{2}
-$$</div>
+$$
+</div>
 
 <p>其中 $p_i$ 为质数，且允许相等。</p>
 <h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><p>[1] Thomas W. Judson, Abstract Algebra: Theory and Applications</p>

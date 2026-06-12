@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>STT - YCX&#039;s Blog</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="YCX&#039;s Blog"><meta name="msapplication-TileImage" content="favicon.ico"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="YCX&#039;s Blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="STT (spin transfer torque)该文章只是一个总结，具体推导，我，不会。。。 （下面新 $\LaTeX$ 命令定义请忽略） 平衡条件与LLG方程见微磁学 两种机制：Slonczewski STT &amp;amp; Zhang-li STT sd model假设铁磁材料的铁磁性起源是其中含d轨道的过渡金属原子，其中d轨道局域电子贡献磁矩，而s轨道巡游电子参与导电，那么STT就是s轨道电"><meta property="og:type" content="blog"><meta property="og:title" content="STT"><meta property="og:url" content="https://yuchenxi2000.github.io/2023/09/19/STT/"><meta property="og:site_name" content="YCX&#039;s Blog"><meta property="og:description" content="STT (spin transfer torque)该文章只是一个总结，具体推导，我，不会。。。 （下面新 $\LaTeX$ 命令定义请忽略） 平衡条件与LLG方程见微磁学 两种机制：Slonczewski STT &amp;amp; Zhang-li STT sd model假设铁磁材料的铁磁性起源是其中含d轨道的过渡金属原子，其中d轨道局域电子贡献磁矩，而s轨道巡游电子参与导电，那么STT就是s轨道电"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://yuchenxi2000.github.io/img/og_image.png"><meta property="article:published_time" content="2023-09-19T08:54:59.000Z"><meta property="article:modified_time" content="2026-04-03T14:05:06.900Z"><meta property="article:author" content="Chenxi Yu"><meta property="article:tag" content="物理"><meta property="article:tag" content="固体物理"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://yuchenxi2000.github.io/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://yuchenxi2000.github.io/2023/09/19/STT/"},"headline":"STT","image":["https://yuchenxi2000.github.io/img/og_image.png"],"datePublished":"2023-09-19T08:54:59.000Z","dateModified":"2026-04-03T14:05:06.900Z","author":{"@type":"Person","name":"Chenxi Yu"},"publisher":{"@type":"Organization","name":"YCX's Blog","logo":{"@type":"ImageObject","url":"https://yuchenxi2000.github.io/2023/09/19/STT/android-chrome-512x512.png"}},"description":"STT (spin transfer torque)该文章只是一个总结，具体推导，我，不会。。。 （下面新 $\\LaTeX$ 命令定义请忽略） 平衡条件与LLG方程见微磁学 两种机制：Slonczewski STT &amp; Zhang-li STT sd model假设铁磁材料的铁磁性起源是其中含d轨道的过渡金属原子，其中d轨道局域电子贡献磁矩，而s轨道巡游电子参与导电，那么STT就是s轨道电"}</script><link rel="canonical" href="https://yuchenxi2000.github.io/2023/09/19/STT/"><link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link data-pjax rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link data-pjax rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!--!--><!-- hexo injector head_end start --><script>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>STT - YCX&#039;s Blog</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="YCX&#039;s Blog"><meta name="msapplication-TileImage" content="favicon.ico"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="YCX&#039;s Blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="STT (spin transfer torque)该文章只是一个总结，具体推导，我，不会。。。 （下面新 $\LaTeX$ 命令定义请忽略） 平衡条件与LLG方程见微磁学 两种机制：Slonczewski STT &amp;amp; Zhang-li STT sd model假设铁磁材料的铁磁性起源是其中含d轨道的过渡金属原子，其中d轨道局域电子贡献磁矩，而s轨道巡游电子参与导电，那么STT就是s轨道电"><meta property="og:type" content="blog"><meta property="og:title" content="STT"><meta property="og:url" content="https://yuchenxi2000.github.io/2023/09/19/STT/"><meta property="og:site_name" content="YCX&#039;s Blog"><meta property="og:description" content="STT (spin transfer torque)该文章只是一个总结，具体推导，我，不会。。。 （下面新 $\LaTeX$ 命令定义请忽略） 平衡条件与LLG方程见微磁学 两种机制：Slonczewski STT &amp;amp; Zhang-li STT sd model假设铁磁材料的铁磁性起源是其中含d轨道的过渡金属原子，其中d轨道局域电子贡献磁矩，而s轨道巡游电子参与导电，那么STT就是s轨道电"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://yuchenxi2000.github.io/img/og_image.png"><meta property="article:published_time" content="2023-09-19T08:54:59.000Z"><meta property="article:modified_time" content="2026-06-12T17:24:24.251Z"><meta property="article:author" content="Chenxi Yu"><meta property="article:tag" content="物理"><meta property="article:tag" content="固体物理"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://yuchenxi2000.github.io/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://yuchenxi2000.github.io/2023/09/19/STT/"},"headline":"STT","image":["https://yuchenxi2000.github.io/img/og_image.png"],"datePublished":"2023-09-19T08:54:59.000Z","dateModified":"2026-06-12T17:24:24.251Z","author":{"@type":"Person","name":"Chenxi Yu"},"publisher":{"@type":"Organization","name":"YCX's Blog","logo":{"@type":"ImageObject","url":"https://yuchenxi2000.github.io/2023/09/19/STT/android-chrome-512x512.png"}},"description":"STT (spin transfer torque)该文章只是一个总结，具体推导，我，不会。。。 （下面新 $\\LaTeX$ 命令定义请忽略） 平衡条件与LLG方程见微磁学 两种机制：Slonczewski STT &amp; Zhang-li STT sd model假设铁磁材料的铁磁性起源是其中含d轨道的过渡金属原子，其中d轨道局域电子贡献磁矩，而s轨道巡游电子参与导电，那么STT就是s轨道电"}</script><link rel="canonical" href="https://yuchenxi2000.github.io/2023/09/19/STT/"><link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link data-pjax rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link data-pjax rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!--!--><!-- hexo injector head_end start --><script>
   (function () {
       function switchTab() {
           if (!location.hash) {
@@ -38,7 +38,8 @@
 $$
 H_{sd} = -J_{ex} s \cdot S
 \tag{1}
-$$</div>
+$$
+</div>
 
 <p>其中 $s$ 为s轨道电子自旋， $S$ 为d轨道电子自旋。</p>
 <p>一般认为d轨道电子自旋随时间变化缓慢，可以用经典方法处理。在连续极限下，可表示为磁化场：</p>
@@ -46,16 +47,16 @@ $$</div>
 $$
 M/\lvert M\rvert = -S / \lvert S \rvert
 \tag{2}
-$$</div>
-
+$$
+</div>
 
 <h2 id="Slonczewski-STT"><a href="#Slonczewski-STT" class="headerlink" title="Slonczewski STT"></a>Slonczewski STT</h2><p>原始文献[1]中提到five-layer model，非铁磁层&#x2F;铁磁层&#x2F;非铁磁层&#x2F;铁磁层&#x2F;非铁磁层结构。电流从其中流过时，两个铁磁层都会受到torque作用。假设两个铁磁层自旋分别为 $s_1,s_2$ ，则两层里受到的torque分别为</p>
 <div>
 $$
 \tau_{1,2} \propto S_{1,2} \times (s_1 \times s_2)
 \tag{3}
-$$</div>
-
+$$
+</div>
 
 <p>一般的STT-MRAM结构为铁磁固定层fixed layer、中间层spacer layer和存储信息的free layer</p>
 <p>Slonczewski STT一般的表达式为[2]</p>
@@ -73,7 +74,8 @@ $$
 1)(\mathbf{m}\cdot\mathbf{m}_\text{p})}
 \\\end{gathered}
 \tag{4}
-$$</div>
+$$
+</div>
 
 <p>其中 $\mathbf{m}_\text{p}$ 为fixed layer的磁化矢量， $J$ 为电流密度， $\Lambda,\varepsilon^\prime$ 为spacer layer的材料参数， $P$ 为电流的极化（majority spin和minority spin相对占比， $P&#x3D;(n_+-n_-)&#x2F;(n_++n_-)$ ）</p>
 <p>具体推导需要用到线性响应理论和格林函数，我不会:(</p>
@@ -88,14 +90,16 @@ $$
    \left(\vec{M} \times \hat{j} \cdot \nabla \vec{M} \right)
   -\frac{\xi v}{M_{\mathrm{sat}}} \, \vec{M} \times \hat{j} \cdot \nabla \vec{M}
 \tag{5}
-$$</div>
+$$
+</div>
 
 <p>其中 $\xi$ 表示非绝热系数， $v$ 为畴壁移动“速度”</p>
 <div>
 $$
 v = \frac{P \; j \; \mu_B}{e \; M_{\mathrm{sat}} \; (1 + \xi^2)}
 \tag{6}
-$$</div>
+$$
+</div>
 
 <p> $P$ 为自旋流的极化， $j$ 为电流密度</p>
 <h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><p>[1] <a target="_blank" rel="noopener" href="https://doi.org/10.1016/0304-8853(96)00062-5">https://doi.org/10.1016/0304-8853(96)00062-5</a></p>
@@ -108,15 +112,16 @@ $$</div>
 $$
 \cfrac{\mathrm{d} M}{\mathrm{d} t} = -\mu_0\gamma (M \times H_{eff}) + \cfrac{\alpha}{M_S}\left(M \times \cfrac{\mathrm{d} M}{\mathrm{d} t}\right) + T
 \tag{7}
-$$</div>
-
+$$
+</div>
 
 <p>我们用单位化的磁矩 $m&#x3D;M&#x2F;M_S$ 代替磁矩：</p>
 <div>
 $$
 \cfrac{\mathrm{d} m}{\mathrm{d} t} = -\mu_0\gamma (m \times H_{eff}) + \alpha\left(m \times \cfrac{\mathrm{d} m}{\mathrm{d} t}\right) + \tau
 \tag{8}
-$$</div>
+$$
+</div>
 
 <p>其中damping term包含磁矩对时间导数，求解不方便，需要将磁矩对时间导数写成显式形式。</p>
 <p>回忆<a href="/2023/09/19/STT/" title="STT">STT</a>中给出的向量方程及其通解：</p>
@@ -125,7 +130,8 @@ $$</div>
 $$
 a \times x + x = b
 \tag{9}
-$$</div>
+$$
+</div>
 
 <p>通解为：</p>
 <div>
@@ -134,7 +140,8 @@ $$
 x = \cfrac{(a \cdot b) a + b - a \times b}{a \cdot a + 1} \\
 \\\end{gathered}
 \tag{10}
-$$</div>
+$$
+</div>
 
 <p>对应到LLG方程，其中的系数 $a,b$ 为：</p>
 <div>
@@ -144,7 +151,8 @@ a = -\alpha m \\
 b = -\mu_0\gamma (m \times H_{eff}) + \tau
 \end{cases}
 \tag{11}
-$$</div>
+$$
+</div>
 
 <p>直接写出解</p>
 <div>
@@ -154,7 +162,8 @@ $$
 = \cfrac{\alpha^2 (m \cdot \tau) m -\mu_0\gamma (m \times H_{eff}) + \tau -\mu_0\gamma \alpha m \times (m \times H_{eff}) + \alpha m \times \tau}{\alpha^2 + 1} \\
 \\\end{gathered}
 \tag{12}
-$$</div>
+$$
+</div>
 
 <p>因为 $m$ 模长固定为 $1$ ，所以 $m \cdot \tau &#x3D; 0$ （这个是所有torque必须满足的条件！）</p>
 <div>
@@ -167,7 +176,8 @@ $$
 +\cfrac{\alpha m \times \tau}{\alpha^2 + 1} \\
 \\\end{gathered}
 \tag{13}
-$$</div>
+$$
+</div>
 
 <p>前两项为外磁场、damping贡献，最后一项是其他torque贡献。</p>
 <p>回到我们关心的问题，原始LLG方程中Slonczewski STT表达式为</p>
@@ -175,10 +185,11 @@ $$</div>
 $$
 \tau = \gamma \beta \varepsilon^\prime m_p \times m + \gamma \beta \varepsilon m \times (m_p \times m)
 \tag{14}
-$$</div>
+$$
+</div>
 
 <p>可以验证，变换后的LLG方程中该torque表达式 $\cfrac{\tau}{\alpha^2 + 1}<br>+\cfrac{\alpha m \times \tau}{\alpha^2 + 1}$ 正好就是前文给出的式子。</p>
-</div><div class="article-licensing box"><div class="licensing-title"><p>STT</p><p><a href="https://yuchenxi2000.github.io/2023/09/19/STT/">https://yuchenxi2000.github.io/2023/09/19/STT/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>Chenxi Yu</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2023-09-19</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2026-04-03</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/%E7%89%A9%E7%90%86/">物理</a><a class="link-muted mr-2" rel="tag" href="/tags/%E5%9B%BA%E4%BD%93%E7%89%A9%E7%90%86/">固体物理</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2023/10/02/%E6%BD%AE%E6%B1%90%E7%8E%B0%E8%B1%A12/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">潮汐现象2</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2023/09/18/32%E4%B8%AA%E7%82%B9%E7%BE%A4%E4%B8%ADDM%E7%9B%B8%E4%BA%92%E4%BD%9C%E7%94%A8/"><span class="level-item">32个点群中DM相互作用</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><!--!--><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a><p class="is-size-7"><span>&copy; 2026 Chenxi Yu</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="fab fa-creative-commons-nc"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/yuchenxi2000"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
+</div><div class="article-licensing box"><div class="licensing-title"><p>STT</p><p><a href="https://yuchenxi2000.github.io/2023/09/19/STT/">https://yuchenxi2000.github.io/2023/09/19/STT/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>Chenxi Yu</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2023-09-19</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2026-06-13</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/%E7%89%A9%E7%90%86/">物理</a><a class="link-muted mr-2" rel="tag" href="/tags/%E5%9B%BA%E4%BD%93%E7%89%A9%E7%90%86/">固体物理</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2023/10/02/%E6%BD%AE%E6%B1%90%E7%8E%B0%E8%B1%A12/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">潮汐现象2</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2023/09/18/32%E4%B8%AA%E7%82%B9%E7%BE%A4%E4%B8%ADDM%E7%9B%B8%E4%BA%92%E4%BD%9C%E7%94%A8/"><span class="level-item">32个点群中DM相互作用</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><!--!--><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a><p class="is-size-7"><span>&copy; 2026 Chenxi Yu</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="fab fa-creative-commons-nc"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/yuchenxi2000"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
             article: {
                 highlight: {
                     clipboard: true,

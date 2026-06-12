@@ -45,14 +45,16 @@ c & a & b & 0 & \cdots & 0 & 0 \\
 0 & 0 & 0 & 0 & \cdots & c & a \\
 \end{pmatrix}
 \tag{1}
-$$</div>
+$$
+</div>
 
 <p>记它的逆矩阵为 $ G^{(n)} $ ，求</p>
 <div>
 $$
 \lim_{n \to \infty} {G^{(n)}}_{11}
 \tag{2}
-$$</div>
+$$
+</div>
 
 <p>即求逆矩阵的左上角元素（元素可能为矩阵！）当 $ n\to \infty $ 时的极限。</p>
 <p>用归纳法可以得到递推公式。</p>
@@ -64,8 +66,8 @@ B^{(n)}=
 b & 0 & \cdots & 0
 \end{pmatrix}
 \tag{3}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
@@ -74,8 +76,8 @@ C^{(n)}=
 c \\ 0 \\ \vdots \\ 0
 \end{pmatrix}
 \tag{4}
-$$</div>
-
+$$
+</div>
 
 <p>则</p>
 <div>
@@ -86,7 +88,8 @@ a & B^{(n)} \\
 C^{(n)} & A^{(n)} \\
 \end{pmatrix}
 \tag{5}
-$$</div>
+$$
+</div>
 
 <p>增广矩阵法求逆：</p>
 <div>
@@ -96,8 +99,8 @@ a & B^{(n)} & 1 & 0\\
 C^{(n)} & A^{(n)} & 0 & 1\\
 \end{pmatrix}
 \tag{6}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
@@ -106,8 +109,8 @@ a-B^{(n)}G^{(n)}C^{(n)} & 0 & 1 & -B^{(n)}G^{(n)}\\
 C^{(n)} & A^{(n)} & 0 & 1\\
 \end{pmatrix}
 \tag{7}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
@@ -116,8 +119,8 @@ a-B^{(n)}G^{(n)}C^{(n)} & 0 & 1 & -B^{(n)}G^{(n)}\\
 0 & A^{(n)}-C^{(n)}a^{-1}B^{(n)} & -C^{(n)}a^{-1} & 1\\
 \end{pmatrix}
 \tag{8}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
@@ -126,22 +129,24 @@ $$
 0 & 1 & -(A^{(n)}-C^{(n)}a^{-1}B^{(n)})^{-1}C^{(n)}a^{-1} & (A^{(n)}-C^{(n)}a^{-1}B^{(n)})^{-1}\\
 \end{pmatrix}
 \tag{9}
-$$</div>
-
+$$
+</div>
 
 <p>我们记 $ G^{(n)} $ 左上角元素的逆为 $ d_n $ ，则</p>
 <div>
 $$
 d_{n+1}=a-B^{(n)}G^{(n)}C^{(n)}=a-bd_n^{-1}c
 \tag{10}
-$$</div>
+$$
+</div>
 
 <p>于是</p>
 <div>
 $$
 \lim_{n \to \infty} {G^{(n)}}_{11}=\lim_{n\to\infty}{d_{n}}^{-1}
 \tag{11}
-$$</div>
+$$
+</div>
 
 <p>最直接的求法就是根据定义。数列（“矩阵列”）的定义是递推式 $ d&#x3D;a-bd^{-1}c $ ， $ d_0&#x3D;a $ ，于是用初值 $ a $ 不断迭代直至收敛即可。</p>
 <p>非平衡格林函数（NEGF）理论中，该极限被用来求接触（contact）的自能矩阵。</p>
@@ -150,14 +155,16 @@ $$</div>
 $$
 \Sigma^{\mathrm{r}}=\tau g^{\mathrm{r}}\tau^\dagger,\,\eta\to0^+
 \tag{12}
-$$</div>
+$$
+</div>
 
 <p>其中 $ \tau $ 为接触和的相互作用（哈密顿）矩阵， $ g^{\mathrm{r}} $ 为接触的推迟格林函数。</p>
 <div>
 $$
 g^{\mathrm{r}}=(E-H+\mathrm{i}\eta)^{-1},\,\eta\to0^+
 \tag{13}
-$$</div>
+$$
+</div>
 
 <p>接触一般视作半无限，所以哈密顿矩阵是无限维的。实际应用中一般计算出有限区域格林函数然后取极限。因为接触和的相互作用一般是短程的，所以只需要求解格林函数的一部分。在数学上就是上面提出的矩阵极限问题。</p>
 <p>但是在非平衡格林函数（NEGF）的应用中，人们发现一些特殊的 $ a,b,c $ 取值会使迭代进行的十分缓慢。因此有人提出了另一种迭代更高效的迭代方法。</p>
@@ -166,14 +173,16 @@ $$</div>
 $$
 F(d)=a-bd^{-1}c
 \tag{14}
-$$</div>
+$$
+</div>
 
 <p>那么迭代求解方法</p>
 <div>
 $$
 d_1=F(d_0),\,d_2=F(d_1),\,d_3=F(d_2),\,...
 \tag{15}
-$$</div>
+$$
+</div>
 
 <p>那个高效的迭代方法：</p></div><a class="article-more button is-small is-size-7" href="/2025/12/19/%E9%9D%9E%E5%B9%B3%E8%A1%A1%E6%A0%BC%E6%9E%97%E5%87%BD%E6%95%B0%EF%BC%88%E4%BA%8C%EF%BC%89%EF%BC%9A%E6%8E%A5%E8%A7%A6%E8%87%AA%E8%83%BD%E7%9A%84%E8%BF%AD%E4%BB%A3%E6%B1%82%E6%B3%95/#more">阅读更多</a></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2025-12-19T07:06:32.000Z" title="2025/12/19 15:06:32">2025-12-19</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E7%89%A9%E7%90%86/">物理</a></span><span class="level-item">7 分钟读完 (大约1097个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2025/12/19/%E9%9D%9E%E5%B9%B3%E8%A1%A1%E6%A0%BC%E6%9E%97%E5%87%BD%E6%95%B0%EF%BC%88%E4%B8%80%EF%BC%89%EF%BC%9A%E5%8D%8A%E6%97%A0%E9%99%90%E7%94%B5%E6%9E%81%E7%9A%84%E5%A4%84%E7%90%86/">非平衡格林函数（一）：半无限电极的处理</a></p><div class="content"><p>本文是非平衡格林函数系列第一篇，我们解决包含半无限大电极的体系的格林函数计算问题，在后一篇会解决接触自能求解问题。</p>
 <p>最近看非平衡格林函数</p>
@@ -187,7 +196,8 @@ E-H_0 & -\tau \\
 -\tau^\dagger & E-H_1
 \end{pmatrix}
 \tag{1}
-$$</div>
+$$
+</div>
 
 <p>左上角为有限区域内哈密顿量，右下角为区域外哈密顿量，其余为相互作用。</p>
 <p>我们知道格林函数为 $ G&#x3D;(E-H)^{-1} $ ，于是问题转化为求上面这个矩阵的逆。</p>
@@ -200,14 +210,16 @@ E-H_0 & -\tau & 1 & 0\\
 -\tau^\dagger & E-H_1 & 0 & 1
 \end{pmatrix}
 \tag{2}
-$$</div>
+$$
+</div>
 
 <p>做行变换</p>
 <div>
 $$
 ① \rightarrow ①+\tau(E-H_1)^{-1}②
 \tag{3}
-$$</div>
+$$
+</div>
 
 <p>得</p>
 <div>
@@ -217,21 +229,24 @@ E-H_0-\tau(E-H_1)^{-1}\tau^\dagger & 0 & 1 & \tau(E-H_1)^{-1} \\
 -\tau^\dagger & E-H_1 & 0 & 1
 \end{pmatrix}
 \tag{4}
-$$</div>
+$$
+</div>
 
 <p>记</p>
 <div>
 $$
 G_0^{-1}=E-H_0-\tau(E-H_1)^{-1}\tau^\dagger
 \tag{5}
-$$</div>
+$$
+</div>
 
 <p>做行变换</p>
 <div>
 $$
 ① \rightarrow G_0①
 \tag{6}
-$$</div>
+$$
+</div>
 
 <p>得</p>
 <div>
@@ -241,14 +256,16 @@ $$
 -\tau^\dagger & E-H_1 & 0 & 1
 \end{pmatrix}
 \tag{7}
-$$</div>
+$$
+</div>
 
 <p>做行变换</p>
 <div>
 $$
 ② \rightarrow ② + \tau^\dagger ①
 \tag{8}
-$$</div>
+$$
+</div>
 
 <p>得</p>
 <div>
@@ -258,14 +275,16 @@ $$
 0 & E-H_1 & \tau^\dagger G_0 & 1 + \tau^\dagger G_0\tau(E-H_1)^{-1}
 \end{pmatrix}
 \tag{9}
-$$</div>
+$$
+</div>
 
 <p>做行变换</p>
 <div>
 $$
 ② \rightarrow (E-H_1)^{-1} ②
 \tag{10}
-$$</div>
+$$
+</div>
 
 <p>得</p>
 <div>
@@ -275,14 +294,16 @@ $$
 0 & 1 & (E-H_1)^{-1}\tau^\dagger G_0 & G_1
 \end{pmatrix}
 \tag{11}
-$$</div>
+$$
+</div>
 
 <p>其中</p>
 <div>
 $$
 G_1=(E-H_1)^{-1}+(E-H_1)^{-1}\tau^\dagger G_0\tau(E-H_1)^{-1}
 \tag{12}
-$$</div>
+$$
+</div>
 
 <p>所以格林函数为</p>
 <div>
@@ -293,21 +314,24 @@ G_0 & G_0\tau(E-H_1)^{-1} \\
 (E-H_1)^{-1}\tau^\dagger G_0 & G_1
 \end{pmatrix}
 \tag{13}
-$$</div>
+$$
+</div>
 
 <p>我们只关心有限区域内的格林函数：</p>
 <div>
 $$
 G_0=(E-H_0-\Sigma_0)^{-1}
 \tag{14}
-$$</div>
+$$
+</div>
 
 <p>其中</p>
 <div>
 $$
 \Sigma_0=\tau(E-H_1)^{-1}\tau^\dagger
 \tag{15}
-$$</div>
+$$
+</div>
 
 <p>为自能矩阵。</p>
 <p>非平衡格林函数的一个假设是自能矩阵可以写成各个贡献的和，比如电极（lead）贡献的接触自能，电子-电子相互作用，电子-声子相互作用之和。假设不同电极对自能矩阵的贡献是加和关系，这个是因为我们近似认为相互作用矩阵 $ \tau $ 只包含有限个非0项，只有和导体相接触的部分有相互作用，而不同电极之间无相互作用，所以可以相加。</p>
@@ -317,15 +341,16 @@ $$</div>
 $$
 G_1^{-1} = E - H_1 - \tau^\dagger (E - H_0)^{-1}\tau
 \tag{16}
-$$</div></div><a class="article-more button is-small is-size-7" href="/2025/12/19/%E9%9D%9E%E5%B9%B3%E8%A1%A1%E6%A0%BC%E6%9E%97%E5%87%BD%E6%95%B0%EF%BC%88%E4%B8%80%EF%BC%89%EF%BC%9A%E5%8D%8A%E6%97%A0%E9%99%90%E7%94%B5%E6%9E%81%E7%9A%84%E5%A4%84%E7%90%86/#more">阅读更多</a></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2025-12-19T07:05:05.000Z" title="2025/12/19 15:05:05">2025-12-19</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E7%89%A9%E7%90%86/">物理</a></span><span class="level-item">16 分钟读完 (大约2415个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2025/12/19/%E9%9D%9E%E5%B9%B3%E8%A1%A1%E6%A0%BC%E6%9E%97%E5%87%BD%E6%95%B0%EF%BC%88%E4%B8%89%EF%BC%89%EF%BC%9A%E7%94%B5%E6%B5%81%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%8E%A8%E5%AF%BC/">非平衡格林函数（三）：电流表达式推导</a></p><div class="content"><p>本文是非平衡格林函数系列最后一篇，我们求解电流表达式。</p>
+$$
+</div></div><a class="article-more button is-small is-size-7" href="/2025/12/19/%E9%9D%9E%E5%B9%B3%E8%A1%A1%E6%A0%BC%E6%9E%97%E5%87%BD%E6%95%B0%EF%BC%88%E4%B8%80%EF%BC%89%EF%BC%9A%E5%8D%8A%E6%97%A0%E9%99%90%E7%94%B5%E6%9E%81%E7%9A%84%E5%A4%84%E7%90%86/#more">阅读更多</a></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2025-12-19T07:05:05.000Z" title="2025/12/19 15:05:05">2025-12-19</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E7%89%A9%E7%90%86/">物理</a></span><span class="level-item">16 分钟读完 (大约2415个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2025/12/19/%E9%9D%9E%E5%B9%B3%E8%A1%A1%E6%A0%BC%E6%9E%97%E5%87%BD%E6%95%B0%EF%BC%88%E4%B8%89%EF%BC%89%EF%BC%9A%E7%94%B5%E6%B5%81%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%8E%A8%E5%AF%BC/">非平衡格林函数（三）：电流表达式推导</a></p><div class="content"><p>本文是非平衡格林函数系列最后一篇，我们求解电流表达式。</p>
 <h2 id="电流表达式推导"><a href="#电流表达式推导" class="headerlink" title="电流表达式推导"></a>电流表达式推导</h2><p>假设体系由有限的中心区和半无限、和中心区接触的电极构成。</p>
 <p>从自能和格林函数的关系式出发（其中自能包括中心区相互作用和接触自能）</p>
 <div>
 $$
 G = G_0 + G_0 \Sigma G = G_0 + G \Sigma G_0
 \tag{1}
-$$</div>
-
+$$
+</div>
 
 <p>其中 $ G_0 $ 可以认为是 $ \mathrm{i} \hbar \partial&#x2F;\partial t-H_0 $ 逆算符（作用在左边），或者 $ -\mathrm{i} \hbar \partial&#x2F;\partial t_0-H_0 $ 逆算符（作用在右边）。等式两边同时乘上 $ G_0 $ 的逆算符（一次左乘一次右乘），</p>
 <div>
@@ -335,15 +360,16 @@ $$
 -\mathrm{i} \hbar \cfrac{\partial}{\partial t_0} G(t, t_0)= G(t, t_0)H_0 + \delta(t-t_0) + G \Sigma \\
 \\\end{gathered}
 \tag{2}
-$$</div>
-
+$$
+</div>
 
 <p>其中 $ \Sigma G $ 的意义是</p>
 <div>
 $$
 \sum_k\int_C \Sigma_{ik}(t,\tau) G_{kj}(\tau,t_0) \, \mathrm{d} \tau
 \tag{3}
-$$</div>
+$$
+</div>
 
 <p>其中积分路径 $ C $ 表示一条从 $ t_0 $ 到 $ t $ 最后再回到 $ t_0 $ 的路径。</p>
 <p>下面的推导中都会将 $ \Sigma G $ 简写，最后才把它展开。</p>
@@ -355,8 +381,8 @@ $$
 \mathrm{i} \hbar (\cfrac{\partial}{\partial t}+\cfrac{\partial}{\partial t_0}) G(t, t_0)= H_0G(t, t_0)-G(t, t_0)H_0+\Sigma G-G \Sigma \\
 \\\end{gathered}
 \tag{4}
-$$</div>
-
+$$
+</div>
 
 <p>我们求lesser Green’s function，因为它和粒子数有关</p>
 <div>
@@ -365,8 +391,8 @@ $$
 \mathrm{i} \hbar (\cfrac{\partial}{\partial t}+\cfrac{\partial}{\partial t_0}) G^\lt (t, t_0)= H_0G^\lt (t, t_0)-G^\lt (t, t_0)H_0+(\Sigma G-G \Sigma)^\lt  \\
 \\\end{gathered}
 \tag{5}
-$$</div>
-
+$$
+</div>
 
 <p>（此即Kadanoff-Baym equation）</p>
 <p>中心区电子总数</p>
@@ -376,22 +402,23 @@ $$
 N = \sum_n \bra{\Phi}\psi_n^\dagger(t)\psi_n(t)\ket{\Phi} = -\mathrm{i} \hbar \mathrm{Tr} \, G^\lt (t,t) \\
 \\\end{gathered}
 \tag{6}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
 \cfrac{\partial N}{\partial t} = -\mathrm{Tr}\, \lim_{t \to t_0} \mathrm{i} \hbar (\cfrac{\partial}{\partial t}+\cfrac{\partial}{\partial t_0}) G^\lt (t, t_0)
 \tag{7}
-$$</div>
-
+$$
+</div>
 
 <p>中心区电子总数对时间的导数和流出中心区的电流的关系</p>
 <div>
 $$
 J = -e\cfrac{\partial N}{\partial t}
 \tag{8}
-$$</div>
+$$
+</div>
 
 <p>于是</p>
 <div>
@@ -402,14 +429,16 @@ J
 = e \lim_{t \to t_0} \mathrm{Tr} [H_0G^\lt (t, t_0)-G^\lt (t, t_0)H_0+(\Sigma G-G \Sigma)^\lt ] \\
 \\\end{gathered}
 \tag{9}
-$$</div>
+$$
+</div>
 
 <p>根据trace的cyclic性质，</p>
 <div>
 $$
 \mathrm{Tr} (A_1A_2...A_{n-1}A_n)=\mathrm{Tr} (A_nA_1A_2...A_{n-1})
 \tag{10}
-$$</div>
+$$
+</div>
 
 <p>于是</p>
 <div>
@@ -419,16 +448,16 @@ J
 = e \lim_{t \to t_0} \mathrm{Tr} (\Sigma G-G \Sigma)^\lt  \\
 \\\end{gathered}
 \tag{11}
-$$</div>
-
+$$
+</div>
 
 <p>接下来用Langreth定理算 $ (\Sigma G-G \Sigma)^\lt  $ </p>
 <div>
 $$
 (\Sigma G - G \Sigma)^\lt  = \Sigma^r G^\lt  + \Sigma^\lt  G^a - (G^r \Sigma^\lt  + G^\lt  \Sigma^a)
 \tag{12}
-$$</div>
-
+$$
+</div>
 
 <p>用恒等式</p>
 <div>
@@ -438,8 +467,8 @@ G^r - G^a = G^\gt  - G^\lt  \\
 \Sigma^r - \Sigma^a = \Sigma^\gt  - \Sigma^\lt  \\
 \\\end{gathered}
 \tag{13}
-$$</div>
-
+$$
+</div>
 
 
 <div>
@@ -451,8 +480,8 @@ $$
 = \mathrm{Tr} (\Sigma^\gt  G^\lt  - \Sigma^\lt  G^\gt ) \\
 \\\end{gathered}
 \tag{14}
-$$</div>
-
+$$
+</div>
 
 <p>上式推导过程中用了trace的cyclic性质。</p>
 <p>接下来把简写的 $ \Sigma G $ 等展开</p>
@@ -464,7 +493,8 @@ J
 = e \lim_{t \to t_0} \mathrm{Tr} \int_{-\infty}^{+\infty}[\Sigma^\gt (t,\tau)  G^\lt (\tau,t_0) - \Sigma^\lt (t,\tau) G^\gt (\tau,t_0)] \, \mathrm{d} \tau \\
 \\\end{gathered}
 \tag{15}
-$$</div>
+$$
+</div>
 
 <p>上式中 $ \Sigma G $ 等乘积应理解为矩阵相乘</p>
 <p>然后假设体系处于steady state（稳态），那么格林函数啥的都有一个性质</p>
@@ -472,7 +502,8 @@ $$</div>
 $$
 G(t,t_0)=G(t-t_0)
 \tag{16}
-$$</div>
+$$
+</div>
 
 <p>然后 $ \int \Sigma^\gt (t,\tau)  G^\lt (\tau,t_0), \mathrm{d} \tau $ 这些都变成了卷积，于是可以做傅立叶变换。</p>
 <p>傅立叶变换定义为</p>
@@ -483,7 +514,8 @@ G(E)=\int G(t) \exp (\mathrm{i} Et/\hbar) \, \mathrm{d} t \\
 G(t)= \cfrac{1}{2\pi\hbar} \int G(E) \exp (-\mathrm{i} Et/\hbar) \, \mathrm{d} E \\
 \\\end{gathered}
 \tag{17}
-$$</div>
+$$
+</div>
 
 <p>于是</p>
 <div>
@@ -494,7 +526,8 @@ J
 = \cfrac{e}{h} \mathrm{Tr} \int_{-\infty}^{+\infty}[\Sigma^\gt (E)  G^\lt (E) - \Sigma^\lt (E) G^\gt (E)] \, \mathrm{d} E \\
 \\\end{gathered}
 \tag{18}
-$$</div>
+$$
+</div>
 
 <p>这就是从中心区中流出的电流表达式。</p>
 <h2 id="电流守恒证明"><a href="#电流守恒证明" class="headerlink" title="电流守恒证明"></a>电流守恒证明</h2><p>为公式简洁起见，下面推导中将采用如下简写</p>
@@ -502,7 +535,8 @@ $$</div>
 $$
 \int_{-\infty}^{+\infty} A(E) B(E) \, \mathrm{d} E = AB
 \tag{19}
-$$</div>
+$$
+</div>
 
 <p>根据Keldysh公式</p></div><a class="article-more button is-small is-size-7" href="/2025/12/19/%E9%9D%9E%E5%B9%B3%E8%A1%A1%E6%A0%BC%E6%9E%97%E5%87%BD%E6%95%B0%EF%BC%88%E4%B8%89%EF%BC%89%EF%BC%9A%E7%94%B5%E6%B5%81%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%8E%A8%E5%AF%BC/#more">阅读更多</a></article></div></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar is-rounded" src="/android-chrome-512x512.png" alt="Chenxi Yu"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">Chenxi Yu</p><p class="is-size-6 is-block">PhD in PKU</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>Beijing, China</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives/"><p class="title">114</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories/"><p class="title">5</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags/"><p class="title">34</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/yuchenxi2000" target="_blank" rel="me noopener">关注我</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="me noopener" title="Github" href="https://github.com/yuchenxi2000"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="me noopener" title="Bilibili" href="https://space.bilibili.com/244355869"><i class="fab fa-bilibili"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="me noopener" title="Zhihu" href="https://www.zhihu.com/people/cha-xi-74-16"><i class="fab fa-zhihu"></i></a></div></div></div><!--!--><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">分类</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/%E5%85%B6%E4%BB%96/"><span class="level-start"><span class="level-item">其他</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/%E6%95%B0%E5%AD%A6/"><span class="level-start"><span class="level-item">数学</span></span><span class="level-end"><span class="level-item tag">44</span></span></a></li><li><a class="level is-mobile" href="/categories/%E7%89%A9%E7%90%86/"><span class="level-start"><span class="level-item">物理</span></span><span class="level-end"><span class="level-item tag">51</span></span></a></li><li><a class="level is-mobile" href="/categories/%E7%BC%96%E7%A8%8B/"><span class="level-start"><span class="level-item">编程</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/%E9%9F%B3%E4%B9%90/"><span class="level-start"><span class="level-item">音乐</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></div></div></div><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2026-06-11T15:59:31.000Z">2026-06-11</time></p><p class="title"><a href="/2026/06/11/Vibe%20Coding%E5%88%9D%E6%8E%A2/">Vibe Coding初探</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2026-06-11T15:58:05.000Z">2026-06-11</time></p><p class="title"><a href="/2026/06/11/VaspAuto%EF%BC%9A%E8%B6%85%E7%AE%97%E8%87%AA%E5%8A%A8%E6%8C%82%E6%9C%BA%E6%A1%86%E6%9E%B6/">VaspAuto：超算自动挂机框架</a></p><p class="categories"><a href="/categories/%E7%BC%96%E7%A8%8B/">编程</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2026-06-11T15:57:20.000Z">2026-06-11</time></p><p class="title"><a href="/2026/06/11/%E6%A4%8D%E7%89%A9%E5%A8%98%E5%A4%A7%E6%88%98%E5%83%B5%E5%B0%B8%E4%BF%AE%E6%94%B9%E5%99%A8/">植物娘大战僵尸修改器</a></p><p class="categories"><a href="/categories/%E7%BC%96%E7%A8%8B/">编程</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2026-04-03T13:08:18.000Z">2026-04-03</time></p><p class="title"><a href="/2026/04/03/%E5%A6%82%E4%BD%95%E7%A7%91%E5%AD%A6%E5%9C%B0%E5%9C%A8hexo%E9%87%8C%E5%86%99%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F/">如何科学地在hexo里写数学公式</a></p><p class="categories"><a href="/categories/%E5%85%B6%E4%BB%96/">其他</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2026-04-03T09:08:02.000Z">2026-04-03</time></p><p class="title"><a href="/2026/04/03/%E8%A7%84%E8%8C%83%E5%9C%BA%E8%AE%BA%E4%B8%8E%E5%BE%AE%E5%88%86%E5%87%A0%E4%BD%95/">规范场论与微分几何</a></p><p class="categories"><a href="/categories/%E7%89%A9%E7%90%86/">物理</a></p></div></article></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/NEGF/"><span class="tag">NEGF</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E4%BB%A3%E6%95%B0/"><span class="tag">代数</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%85%89%E5%AD%A6/"><span class="tag">光学</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%85%B6%E4%BB%96/"><span class="tag">其他</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%87%A0%E4%BD%95%E4%BB%A3%E6%95%B0/"><span class="tag">几何代数</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%9B%BA%E4%BD%93%E7%89%A9%E7%90%86/"><span class="tag">固体物理</span><span class="tag">13</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0/"><span class="tag">复变函数</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%A4%A9%E4%BD%93%E7%89%A9%E7%90%86/"><span class="tag">天体物理</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%AF%86%E5%BA%A6%E6%B3%9B%E5%87%BD%E7%90%86%E8%AE%BA/"><span class="tag">密度泛函理论</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%B7%B4%E6%B4%9B%E5%85%8B%E9%9F%B3%E4%B9%90/"><span class="tag">巴洛克音乐</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%B9%B3%E9%9D%A2%E5%87%A0%E4%BD%95/"><span class="tag">平面几何</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%B9%BF%E4%B9%89%E7%9B%B8%E5%AF%B9%E8%AE%BA/"><span class="tag">广义相对论</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%BC%B9%E6%80%A7%E5%8A%9B%E5%AD%A6/"><span class="tag">弹性力学</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%BE%AE%E5%88%86%E5%87%A0%E4%BD%95/"><span class="tag">微分几何</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B/"><span class="tag">微分方程</span><span class="tag">9</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%95%B0%E5%80%BC%E6%96%B9%E6%B3%95/"><span class="tag">数值方法</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%95%B0%E5%AD%A6/"><span class="tag">数学</span><span class="tag">44</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/"><span class="tag">数学分析</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%95%B0%E8%AE%BA/"><span class="tag">数论</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%A6%82%E7%8E%87%E7%BB%9F%E8%AE%A1/"><span class="tag">概率统计</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/"><span class="tag">泛函分析</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%89%A9%E7%90%86/"><span class="tag">物理</span><span class="tag">56</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%89%B9%E6%AE%8A%E5%87%BD%E6%95%B0/"><span class="tag">特殊函数</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%94%B5%E5%8A%A8%E5%8A%9B%E5%AD%A6/"><span class="tag">电动力学</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%9B%B8%E5%AF%B9%E8%AE%BA/"><span class="tag">相对论</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%AC%AC%E4%B8%80%E6%80%A7%E5%8E%9F%E7%90%86%E8%AE%A1%E7%AE%97/"><span class="tag">第一性原理计算</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%BB%9F%E8%AE%A1%E5%8A%9B%E5%AD%A6/"><span class="tag">统计力学</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%BC%96%E7%A8%8B/"><span class="tag">编程</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%BE%A4%E8%AE%BA/"><span class="tag">群论</span><span class="tag">12</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6/"><span class="tag">量子力学</span><span class="tag">30</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E9%87%8F%E5%AD%90%E5%9C%BA%E8%AE%BA/"><span class="tag">量子场论</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E9%9D%9E%E6%AC%A7%E5%87%A0%E4%BD%95/"><span class="tag">非欧几何</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E9%9F%B3%E4%B9%90/"><span class="tag">音乐</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E9%AB%98%E6%80%A7%E8%83%BD%E8%AE%A1%E7%AE%97/"><span class="tag">高性能计算</span><span class="tag">1</span></a></div></div></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a><p class="is-size-7"><span>&copy; 2026 Chenxi Yu</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="fab fa-creative-commons-nc"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/yuchenxi2000"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
             article: {

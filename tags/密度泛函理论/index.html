@@ -34,7 +34,8 @@
 $$
 \Psi = \Psi(r_1,r_2, \cdots,r_N)
 \tag{1}
-$$</div>
+$$
+</div>
 
 <p>该函数的维度是 $3N$ ，并且需要满足交换反对称性。除非需要计算的是原子序数小的轻原子，否则计算量是巨大的。假设对空间坐标 $r_i$ 进行离散化，每个坐标的网格格点数为 $M$ ，那么计算复杂度至少是 $O(M^{3N})$ 。</p>
 <p>幸运地是Kohn-Sham定理解决了这个计算复杂度问题。根据Kohn-Sham定理，基态能量完全由电子密度决定，电子密度包含了所有我们关心的物理信息，实现了目标求解量的降维，从 $3N$ 维降至 $3$ 维。</p>
@@ -51,15 +52,16 @@ $$</div>
 $$
 E = E[n(r)]
 \tag{2}
-$$</div>
+$$
+</div>
 
 <p>然而，这个能量泛函是未知的。解决方法是将其拆分成熟悉的部分和剩下的部分之和，然后对剩下部分做近似：动能，电子与原子核的库伦作用，电子间库伦作用*，以及未知的交换关联作用。</p>
 <div>
 $$
 E = T + E_{ext} + E_H + E_{xc}
 \tag{3}
-$$</div>
-
+$$
+</div>
 
 <blockquote>
 <p>*注：又叫Hatree能。严格来说不能叫电子间库伦作用，因为其中包含了非物理的自相互作用</p>
@@ -69,8 +71,8 @@ $$</div>
 $$
 \psi_{km}(r)=\exp(\mathrm{i}kr) u_{km}(r)
 \tag{1}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
@@ -81,22 +83,22 @@ $$
 = \left(\sum_R \exp[\mathrm{i}(k-k')R]\right) \cdot \int_{\Omega} \exp[\mathrm{i}(k-k')r] u^\ast _{k'n}(r)u_{km}(r) \, \mathrm{d}r \\
 \\\end{gathered}
 \tag{2}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
 \sum_R \exp[\mathrm{i}(k-k')R] \propto \delta(k-k')
 \tag{3}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
 \braket{\psi_{k'n}\vert\psi_{km}}\propto \delta(k-k') \int_{\Omega} u^\ast _{k'n}(r) u_{km}(r) \, \mathrm{d}r
 \tag{4}
-$$</div>
-
+$$
+</div>
 
 <p>因此不同 $k$ 对应的波函数正交。我们省略了发散的乘子，因为它是无穷大的体系造成的。省略后，在 $\mathbb{R}^3$ 上的积分化为在原胞 $\Omega$ 上的积分。虽然波函数定义在 $\mathbb{R}^3$ 上，但是计算时只计算原胞内。这个问题我们在下一章节也会讨论。</p>
 <h2 id="2"><a href="#2" class="headerlink" title="2"></a>2</h2><p>以下参考 <a target="_blank" rel="noopener" href="https://qijingzheng.github.io/posts/VASP-All-Electron-WFC/">https://qijingzheng.github.io/posts/VASP-All-Electron-WFC/</a></p>
@@ -106,36 +108,40 @@ $$</div>
 $$
 H=-\cfrac{1}{2}\nabla^2 + V_H + V_{xc}
 \tag{5}
-$$</div>
+$$
+</div>
 
 <p>参考<a href="/2023/11/16/%E8%B5%9D%E5%8A%BF%E6%96%B9%E6%B3%95/" title="赝势方法">赝势方法</a>，运用PAW</p>
 <div>
 $$
 \psi = T\tilde{\psi}
 \tag{6}
-$$</div>
+$$
+</div>
 
 <p>其中波函数 $\psi$ 和赝波函数 $\tilde{\psi}$ 的变换为</p>
 <div>
 $$
 T=1+\sum_i (\ket{\phi_i}-\ket{\tilde{\phi}_i})\bra{p_i}
 \tag{7}
-$$</div>
+$$
+</div>
 
 <p>我们举的例子为哈密顿量。</p>
 <div>
 $$
 \bra{\psi}H\ket{\psi}=\bra{\tilde{\psi}}T^\dagger H T\ket{\tilde{\psi}}
 \tag{8}
-$$</div>
+$$
+</div>
 
 <p>定义 $k$ 相关的投影算子</p>
 <div>
 $$
 \ket{p_k}=\exp(-\mathrm{i}kr)\ket{p}
 \tag{9}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
@@ -147,8 +153,8 @@ T^\dagger H T \\
 + \sum_{ij} \ket{p_i}(\bra{\phi_i}-\bra{\tilde{\phi}_i})H(\ket{\phi_j}-\ket{\tilde{\phi}_j})\bra{p_j} \\
 \\\end{gathered}
 \tag{10}
-$$</div>
-
+$$
+</div>
 
 <p>下面开始计算。我们只计算其中一项 $H\sum_i (\ket{\phi_i}-\ket{\tilde{\phi}_i})\bra{p_i}$ 的矩阵元。 $H$ 这一项可以由章节1得到。</p>
 <div>
@@ -163,14 +169,16 @@ $$
 = \sum_{i\alpha}\exp[\mathrm{i}k(\tau_i+R_\alpha)] [\phi_i(r'-\tau_i-R_\alpha)-\tilde{\phi}_i(r'-\tau_i-R_\alpha)] \beta_{ik} \\
 \\\end{gathered}
 \tag{11}
-$$</div>
+$$
+</div>
 
 <p>其中</p>
 <div>
 $$
 \beta_{ik} = \int_{\Omega} p_{ik}^\ast (r-\tau_i) \tilde{u}_k(r) \, \mathrm{d}r
 \tag{12}
-$$</div>
+$$
+</div>
 
 <p>上面这一项有个相因子 $\exp[\mathrm{i}k(\tau_i+R_\alpha)]$ ，但下面可以看到如果写出整个表达式，该项会抵消。</p>
 <div>
@@ -184,15 +192,16 @@ $$
 = \delta(k-k') \sum_{i} \beta_{ikm} \gamma_{ikn}
 \\\end{gathered}
 \tag{13}
-$$</div>
+$$
+</div>
 
 <p>其中</p>
 <div>
 $$
 \gamma_{ikn} = \int_{\Omega} \tilde{u}^\ast _{k'n}(r)\exp[-\mathrm{i}k'(r-\tau_i)] [H\phi_i(r-\tau_i)-H\tilde{\phi}_i(r-\tau_i)] \, \mathrm{d}r
 \tag{14}
-$$</div>
-
+$$
+</div>
 
 <p>同样，我们省略了无穷大的乘子，把在 $\mathbb{R}^3$ 上的积分化为在原胞 $\Omega$ 上的积分。</p>
 <h2 id="3"><a href="#3" class="headerlink" title="3"></a>3</h2><p>同样参考 <a target="_blank" rel="noopener" href="https://qijingzheng.github.io/posts/VASP-All-Electron-WFC/">https://qijingzheng.github.io/posts/VASP-All-Electron-WFC/</a></p>
@@ -202,14 +211,16 @@ $$</div>
 $$
 \beta_{ikm}=\braket{p_{ik} \vert \tilde{u}_{km}}
 \tag{15}
-$$</div>
+$$
+</div>
 
 <p> $\tilde{u}$ 是周期函数，可以傅立叶展开（而 $p$ 不是）</p>
 <div>
 $$
 \ket{\tilde{u}_{km}}=\sum_G \ket{G}\braket{G \vert \tilde{u}_{km}}
 \tag{16}
-$$</div>
+$$
+</div>
 
 <p>所以</p>
 <div>
@@ -222,7 +233,8 @@ $$
 = \sum_G \exp(\mathrm{i}G\tau_i) \braket{p_{i}(r) \vert G+k} \braket{G \vert \tilde{u}_{km}(r)} \\
 \\\end{gathered}
 \tag{17}
-$$</div>
+$$
+</div>
 
 <p>注意 $\braket{p_i \vert G+k}$ 不能理解为傅立叶展开系数，因为 $p$ 不是周期函数不能展开。</p>
 <h2 id="4"><a href="#4" class="headerlink" title="4"></a>4</h2><p>对2，3章节的内容给出一个简单的总结，这些式子归结为如下形式：</p>
@@ -230,7 +242,8 @@ $$</div>
 $$
 \sum_{ij} \braket{\tilde{\psi}_2 \vert q_i}D_{ij}\braket{p_j \vert \tilde{\psi}_1}
 \tag{18}
-$$</div>
+$$
+</div>
 
 <p>其中 $q_i,p_j$ 为在PAW球上具有紧支集的任意函数。比如哈密顿量矩阵（假设局域算子）</p>
 <div>
@@ -247,7 +260,8 @@ $$
 =
 \\\end{gathered}
 \tag{19}
-$$</div>
+$$
+</div>
 
 <p>可以写成 $\bra{\tilde{\psi}_2}H\ket{\tilde{\psi}_1}$ 和上面给出的形式之和。</p>
 <p>对在PAW球上具有紧支集的任意函数 $p_i$ ，定义 $k$ 相关的函数</p>
@@ -255,7 +269,8 @@ $$</div>
 $$
 p_{ik}(r)=\exp(-\mathrm{i}kr)p_{i}(r)
 \tag{20}
-$$</div>
+$$
+</div>
 
 <p> $i,j$ 应该是所有原胞内的原子编号，这里我们分开原胞内原子编号 $j$ 和原胞编号 $\beta$ 。</p>
 <div>
@@ -266,8 +281,8 @@ $$
 = \exp[\mathrm{i}k(\tau_j+R_\beta)] \int_{\Omega} p^\ast _{jk}(r-\tau_j) {\tilde{u}_1}_k(r) \, \mathrm{d}r \\
 \\\end{gathered}
 \tag{21}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
@@ -276,8 +291,8 @@ $$
 = \sum_{i\alpha,j\beta}\exp[\mathrm{i}k(\tau_j+R_\beta)-\mathrm{i}k'(\tau_i+R_\alpha)]  D_{ij} \int_{\Omega} {\tilde{u}^\ast _2}_k(r) q_{jk'}(r-\tau_i) \, \mathrm{d}r \int_{\Omega} p^\ast _{jk}(r-\tau_j) {\tilde{u}_1}_k(r) \, \mathrm{d}r
 \\\end{gathered}
 \tag{22}
-$$</div>
-
+$$
+</div>
 
 </div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2023-11-16T12:36:51.000Z" title="2023/11/16 20:36:51">2023-11-16</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E7%89%A9%E7%90%86/">物理</a></span><span class="level-item">22 分钟读完 (大约3333个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2023/11/16/%E8%B5%9D%E5%8A%BF%E6%96%B9%E6%B3%95/">赝势方法</a></p><div class="content"><h2 id="Orthogonalized-plane-wave"><a href="#Orthogonalized-plane-wave" class="headerlink" title="Orthogonalized plane wave"></a>Orthogonalized plane wave</h2><p>参考：</p>
 <p><a target="_blank" rel="noopener" href="http://fdjpkc.fudan.edu.cn/_upload/article/files/b2/20/f0e82943466dbfeefba03ad52497/b37cc14f-9e23-4fe5-b98d-025e4e532b87.pdf">http://fdjpkc.fudan.edu.cn/_upload/article/files/b2/20/f0e82943466dbfeefba03ad52497/b37cc14f-9e23-4fe5-b98d-025e4e532b87.pdf</a></p>
@@ -285,8 +300,8 @@ $$</div>
 $$
 \ket{\chi_p} = \ket{p} - \sum_j \braket{u_j \mid p} \ket{u_j}
 \tag{1}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
@@ -294,8 +309,8 @@ $$
 \braket{q \mid \chi_p} = \delta_{qp} - \sum_j \braket{q \mid u_j} \braket{u_j \mid p} \\
 \\\end{gathered}
 \tag{2}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
@@ -305,8 +320,8 @@ $$
 = \braket{q \mid p} - \sum_j \braket{u_j \mid p} \braket{q \mid u_j}
 \\\end{gathered}
 \tag{3}
-$$</div>
-
+$$
+</div>
 
 <p>记芯电子波函数为 $u_i$ ，假设波函数为平面波 $\ket{\tilde{\psi}}$ 和芯电子 $\ket{u_i}$ 的线性组合。</p>
 <div>
@@ -316,8 +331,8 @@ $$
 = \sum_p c_p \ket{p} + \sum_i b_i \ket{u_i} \\
 \\\end{gathered}
 \tag{4}
-$$</div>
-
+$$
+</div>
 
 <p>对 $i$ 求和要遍及所有被电子占据的原子壳层，例如Na要对1s,2s,2p壳层求和，系数 $b_i$ 的选择要使代表3s的 $\ket{\psi}$ 与芯函数 $\ket{u_i}$ 正交。对于价电子波函数，需要与芯电子正交，于是</p>
 <div>
@@ -328,8 +343,8 @@ $$
 \braket{u_i \mid \chi_p} = \braket{u_i \mid p} + a_i = 0 \\
 \\\end{gathered}
 \tag{5}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
@@ -340,8 +355,8 @@ $$
 = \ket{\tilde{\psi}} - \sum_j \braket{u_j \mid \tilde{\psi}} \ket{u_j} \\
 \\\end{gathered}
 \tag{6}
-$$</div>
-
+$$
+</div>
 
 <p>平面波函数需要满足的方程为</p>
 <div>
@@ -351,15 +366,15 @@ H\ket{\psi} = E\ket{\psi} \\
 H \ket{\tilde{\psi}} - H \sum_j \braket{u_j \mid \tilde{\psi}} \ket{u_j} = E \ket{\tilde{\psi}} - E\sum_j \braket{u_j \mid \tilde{\psi}} \ket{u_j} \\
 \\\end{gathered}
 \tag{7}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
 H \ket{u_i} = E_i \ket{u_i}
 \tag{8}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
@@ -368,8 +383,8 @@ H \ket{\tilde{\psi}} - \sum_j E_j \braket{u_j \mid \tilde{\psi}} \ket{u_j} = E \
 \left[H + \sum_j (E - E_j) \ket{u_j}\bra{u_j} \right] \ket{\tilde{\psi}}  = E \ket{\tilde{\psi}} \\
 \\\end{gathered}
 \tag{9}
-$$</div>
-
+$$
+</div>
 
 <h2 id="Norm-conserving-pseudopotential"><a href="#Norm-conserving-pseudopotential" class="headerlink" title="Norm-conserving pseudopotential"></a>Norm-conserving pseudopotential</h2><p>参考：</p>
 <p><a target="_blank" rel="noopener" href="https://journals.aps.org/prb/pdf/10.1103/PhysRevB.41.7892">https://journals.aps.org/prb/pdf/10.1103/PhysRevB.41.7892</a></p>
@@ -380,37 +395,39 @@ $$</div>
 $$
 (T + V_{AE} - \varepsilon_i) \ket{\psi_i} = 0
 \tag{10}
-$$</div>
+$$
+</div>
 
 <p>接下来是一些定义</p>
 <div>
 $$
 \ket{\chi_i} = (\varepsilon_i - T - V_{loc}) \ket{\phi_i}
 \tag{11}
-$$</div>
+$$
+</div>
 
 <p>其中 $V_{loc}$ 是赝势的局域（local）部分</p>
 <div>
 $$
 B_{ij} = \braket{\phi_i \mid \chi_j}
 \tag{12}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
 \ket{\beta_i} = \sum_j \ket{\chi_j} (B^{-1})_{ji}
 \tag{13}
-$$</div>
-
+$$
+</div>
 
 <p>可以证明 $\ket{\beta_i}$ 和 $\ket{\phi_i}$ 互为对偶</p>
 <div>
 $$
 \sum_i \ket{\beta_i} B_{ik} = \sum_i B_{ik} \sum_j (B^{-1})_{ji} \ket{\chi_j} = \ket{\chi_k}
 \tag{14}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
@@ -420,15 +437,16 @@ $$
 \braket{\beta_i\mid\phi_j} = \delta_{ij}
 \\\end{gathered}
 \tag{15}
-$$</div>
-
+$$
+</div>
 
 <p>定义赝势的非局域（nonlocal）部分</p>
 <div>
 $$
 V_{NL} = \sum_{ij} B_{ij} \ket{\beta_i}\bra{\beta_j}
 \tag{16}
-$$</div>
+$$
+</div>
 
 <p>可以证明 $\ket{\phi_i}$ 为 $T + V_{loc} + V_{NL} - \varepsilon_i$ 的本征矢</p></div><a class="article-more button is-small is-size-7" href="/2023/11/16/%E8%B5%9D%E5%8A%BF%E6%96%B9%E6%B3%95/#more">阅读更多</a></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2023-04-03T14:14:43.000Z" title="2023/4/3 22:14:43">2023-04-03</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E7%89%A9%E7%90%86/">物理</a></span><span class="level-item">3 分钟读完 (大约463个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2023/04/03/pead/">pead</a></p><div class="content"><p>好吧，波函数是会受电场影响的</p>
 <p>如果不考虑电场，用变分法求解波函数，即在所有波函数空间内找到 $\ket{\phi}$ 让下面这个泛函最小：（假设哈密顿量 $H_0$ ）</p>
@@ -436,28 +454,32 @@ $$</div>
 $$
 \bra{\phi}H_0\ket{\phi}
 \tag{1}
-$$</div>
+$$
+</div>
 
 <p>同时 $\ket{\phi}$ 要满足归一化条件</p>
 <div>
 $$
 \braket{\phi\vert\phi}=1
 \tag{2}
-$$</div>
+$$
+</div>
 
 <p>用拉格朗日乘数法，引入拉格朗日乘数 $E$ ，求下面泛函最小值</p>
 <div>
 $$
 \bra{\phi}H_0\ket{\phi}-E(\braket{\phi\vert\phi}-1)
 \tag{3}
-$$</div>
+$$
+</div>
 
 <p>对上面这个泛函求泛函导数，令它等于 $0$ ，得到的方程就是薛定谔方程（从中也得知前面设的拉格朗日乘数就是体系能量）</p>
 <div>
 $$
 H_0\ket{\phi}-E\ket{\phi}=0
 \tag{4}
-$$</div>
+$$
+</div>
 
 <p>求解薛定谔方程就是通常的矩阵对角化</p>
 <p>考虑加电场情况，设电场为 $\varepsilon$ ，按[1]的说法就是此时应该求electric enthalpy functional的最小值：（能量+电场耦合项）</p>
@@ -465,7 +487,8 @@ $$</div>
 $$
 \bra{\phi}H_0\ket{\phi}-\varepsilon \cdot P[\phi]
 \tag{5}
-$$</div>
+$$
+</div>
 
 <p>其中 $P[\phi]$ 是极化关于波函数的泛函，由modern theory of polarization可以给出表达式。</p>
 <p>用同样的方法求它的最小值，先用拉格朗日乘数法，引入拉格朗日乘数 $E$ ，求下面泛函最小值</p>
@@ -473,14 +496,16 @@ $$</div>
 $$
 \bra{\phi}H_0\ket{\phi}-\varepsilon \cdot P[\phi]-E(\braket{\phi\vert\phi}-1)
 \tag{6}
-$$</div>
+$$
+</div>
 
 <p>然后令泛函导数等于 $0$ </p>
 <div>
 $$
 H_0\ket{\phi}-\varepsilon \cdot \cfrac{\delta P[\phi]}{\delta \bra{\phi}} - E \ket{\phi}=0
 \tag{7}
-$$</div>
+$$
+</div>
 
 <p>极化对波函数导数 $\cfrac{\delta P[\phi]}{\delta \bra{\phi}}$ 可以用波函数表示（根据modern theory of polarization）</p>
 <p>所以相当于哈密顿变了。求解方法还是矩阵对角化。</p>

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>Reissner-Nordström黑洞解 - YCX&#039;s Blog</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="YCX&#039;s Blog"><meta name="msapplication-TileImage" content="favicon.ico"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="YCX&#039;s Blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="本文先回顾一下四维时空里电磁场理论，然后进行求解。求解过程依赖Schwarzschild黑洞解中的一些结果。 电磁场张量与能量动量张量我们先给出闵可夫斯基空间中电磁场理论用张量描述形式，然后推广到任意弯曲时空。 定义电流四矢量和电磁势四矢量：  $$ \begin{gathered} j^\mu &amp;#x3D; (\rho, j^1, j^2, j^3) \\ A^\mu &amp;#x3D; (\phi, A^1, A^2,"><meta property="og:type" content="blog"><meta property="og:title" content="Reissner-Nordström黑洞解"><meta property="og:url" content="https://yuchenxi2000.github.io/2026/02/16/Reissner-Nordstr%C3%B6m%E9%BB%91%E6%B4%9E%E8%A7%A3/"><meta property="og:site_name" content="YCX&#039;s Blog"><meta property="og:description" content="本文先回顾一下四维时空里电磁场理论，然后进行求解。求解过程依赖Schwarzschild黑洞解中的一些结果。 电磁场张量与能量动量张量我们先给出闵可夫斯基空间中电磁场理论用张量描述形式，然后推广到任意弯曲时空。 定义电流四矢量和电磁势四矢量：  $$ \begin{gathered} j^\mu &amp;#x3D; (\rho, j^1, j^2, j^3) \\ A^\mu &amp;#x3D; (\phi, A^1, A^2,"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://yuchenxi2000.github.io/img/og_image.png"><meta property="article:published_time" content="2026-02-16T04:01:41.000Z"><meta property="article:modified_time" content="2026-04-03T14:05:06.799Z"><meta property="article:author" content="Chenxi Yu"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://yuchenxi2000.github.io/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://yuchenxi2000.github.io/2026/02/16/Reissner-Nordstr%C3%B6m%E9%BB%91%E6%B4%9E%E8%A7%A3/"},"headline":"Reissner-Nordström黑洞解","image":["https://yuchenxi2000.github.io/img/og_image.png"],"datePublished":"2026-02-16T04:01:41.000Z","dateModified":"2026-04-03T14:05:06.799Z","author":{"@type":"Person","name":"Chenxi Yu"},"publisher":{"@type":"Organization","name":"YCX's Blog","logo":{"@type":"ImageObject","url":"https://yuchenxi2000.github.io/2026/02/16/Reissner-Nordstr%C3%B6m%E9%BB%91%E6%B4%9E%E8%A7%A3/android-chrome-512x512.png"}},"description":"本文先回顾一下四维时空里电磁场理论，然后进行求解。求解过程依赖Schwarzschild黑洞解中的一些结果。 电磁场张量与能量动量张量我们先给出闵可夫斯基空间中电磁场理论用张量描述形式，然后推广到任意弯曲时空。 定义电流四矢量和电磁势四矢量：  $$ \\begin{gathered} j^\\mu &#x3D; (\\rho, j^1, j^2, j^3) \\\\ A^\\mu &#x3D; (\\phi, A^1, A^2,"}</script><link rel="canonical" href="https://yuchenxi2000.github.io/2026/02/16/Reissner-Nordstr%C3%B6m%E9%BB%91%E6%B4%9E%E8%A7%A3/"><link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link data-pjax rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link data-pjax rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!--!--><!-- hexo injector head_end start --><script>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>Reissner-Nordström黑洞解 - YCX&#039;s Blog</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="YCX&#039;s Blog"><meta name="msapplication-TileImage" content="favicon.ico"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="YCX&#039;s Blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="本文先回顾一下四维时空里电磁场理论，然后进行求解。求解过程依赖Schwarzschild黑洞解中的一些结果。 电磁场张量与能量动量张量我们先给出闵可夫斯基空间中电磁场理论用张量描述形式，然后推广到任意弯曲时空。 定义电流四矢量和电磁势四矢量：  $$ \begin{gathered} j^\mu &amp;#x3D; (\rho, j^1, j^2, j^3) \\ A^\mu &amp;#x3D; (\phi, A^1, A^2,"><meta property="og:type" content="blog"><meta property="og:title" content="Reissner-Nordström黑洞解"><meta property="og:url" content="https://yuchenxi2000.github.io/2026/02/16/Reissner-Nordstr%C3%B6m%E9%BB%91%E6%B4%9E%E8%A7%A3/"><meta property="og:site_name" content="YCX&#039;s Blog"><meta property="og:description" content="本文先回顾一下四维时空里电磁场理论，然后进行求解。求解过程依赖Schwarzschild黑洞解中的一些结果。 电磁场张量与能量动量张量我们先给出闵可夫斯基空间中电磁场理论用张量描述形式，然后推广到任意弯曲时空。 定义电流四矢量和电磁势四矢量：  $$ \begin{gathered} j^\mu &amp;#x3D; (\rho, j^1, j^2, j^3) \\ A^\mu &amp;#x3D; (\phi, A^1, A^2,"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://yuchenxi2000.github.io/img/og_image.png"><meta property="article:published_time" content="2026-02-16T04:01:41.000Z"><meta property="article:modified_time" content="2026-06-12T17:24:24.139Z"><meta property="article:author" content="Chenxi Yu"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://yuchenxi2000.github.io/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://yuchenxi2000.github.io/2026/02/16/Reissner-Nordstr%C3%B6m%E9%BB%91%E6%B4%9E%E8%A7%A3/"},"headline":"Reissner-Nordström黑洞解","image":["https://yuchenxi2000.github.io/img/og_image.png"],"datePublished":"2026-02-16T04:01:41.000Z","dateModified":"2026-06-12T17:24:24.139Z","author":{"@type":"Person","name":"Chenxi Yu"},"publisher":{"@type":"Organization","name":"YCX's Blog","logo":{"@type":"ImageObject","url":"https://yuchenxi2000.github.io/2026/02/16/Reissner-Nordstr%C3%B6m%E9%BB%91%E6%B4%9E%E8%A7%A3/android-chrome-512x512.png"}},"description":"本文先回顾一下四维时空里电磁场理论，然后进行求解。求解过程依赖Schwarzschild黑洞解中的一些结果。 电磁场张量与能量动量张量我们先给出闵可夫斯基空间中电磁场理论用张量描述形式，然后推广到任意弯曲时空。 定义电流四矢量和电磁势四矢量：  $$ \\begin{gathered} j^\\mu &#x3D; (\\rho, j^1, j^2, j^3) \\\\ A^\\mu &#x3D; (\\phi, A^1, A^2,"}</script><link rel="canonical" href="https://yuchenxi2000.github.io/2026/02/16/Reissner-Nordstr%C3%B6m%E9%BB%91%E6%B4%9E%E8%A7%A3/"><link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link data-pjax rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link data-pjax rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!--!--><!-- hexo injector head_end start --><script>
   (function () {
       function switchTab() {
           if (!location.hash) {
@@ -39,8 +39,8 @@ j^\mu = (\rho, j^1, j^2, j^3) \\
 A^\mu = (\phi, A^1, A^2, A^3)
 \\\end{gathered}
 \tag{1}
-$$</div>
-
+$$
+</div>
 
 <p>根据电场强度、磁感应强度和电磁势的关系，</p>
 <div>
@@ -50,8 +50,8 @@ E = -\nabla \phi - \cfrac{\partial A}{\partial t} \\
 B = \nabla \times A
 \\\end{gathered}
 \tag{2}
-$$</div>
-
+$$
+</div>
 
 <p>我们定义一个反对称的电磁场张量，并且其6个非0分量即为电场强度与磁感应强度：</p>
 <div>
@@ -65,8 +65,8 @@ F^{\mu\nu} = \partial^\mu A^\nu - \partial^\nu A^\mu \\
 -E^3 & B^2 & -B^1 & 0 \\
 \end{pmatrix}
 \tag{3}
-$$</div>
-
+$$
+</div>
 
 <p>真空中麦克斯韦方程：</p>
 <div>
@@ -78,24 +78,24 @@ $$
 \nabla \times E = - \cfrac{\partial B}{\partial t}
 \end{cases}
 \tag{4}
-$$</div>
-
+$$
+</div>
 
 <p>可以验证，真空中麦克斯韦方程可以用电磁场张量表示。表现为电磁场张量的散度等于电流四矢量，对应前两个有源方程：</p>
 <div>
 $$
 \partial_\nu F^{\mu\nu} = (\rho, j^1,j^2,j^3)=j^\mu
 \tag{5}
-$$</div>
-
+$$
+</div>
 
 <p>以及比安基Bianchi恒等式，对应后两个无源方程：</p>
 <div>
 $$
 \partial^\rho F^{\mu\nu} + \partial^\nu F^{\rho\mu} + \partial^\mu F^{\nu\rho} = 0
 \tag{6}
-$$</div>
-
+$$
+</div>
 
 <blockquote>
 <p>Bianchi恒等式是电磁场张量本身性质，推导方法是将电磁场张量定义式（用电磁势表示）代入</p>
@@ -109,14 +109,16 @@ $$</div>
 $$
 T^{\mu\nu}=-F^{\mu\lambda} F_{\lambda}^{\cdot\nu}-\cfrac{1}{4}g^{\mu\nu}F^{\alpha\beta}F_{\alpha\beta}
 \tag{7}
-$$</div>
+$$
+</div>
 
 <p>可以验证其满足守恒律</p>
 <div>
 $$
 \partial_{\nu}T^{\mu\nu}=0
 \tag{8}
-$$</div>
+$$
+</div>
 
 <p>并且为对称张量。</p>
 <p>电磁场能量动量张量的另一个重要性质是零迹（由定义式计算可得）：</p>
@@ -124,7 +126,8 @@ $$</div>
 $$
 T^\mu_{\cdot\, \mu} = 0
 \tag{9}
-$$</div>
+$$
+</div>
 
 <p>将电磁场张量定义、麦克斯韦方程、能量动量守恒律推广到任意弯曲时空，只需要把普通偏导数替换成协变导数：</p>
 <div>
@@ -135,18 +138,20 @@ F^{\mu\nu}_{\,\,\,\,\,;\nu}=j^\mu \quad F^{\mu\nu;\rho} + F^{\rho\mu;\nu} + F^{\
 {j^\mu}_{;\mu}=0 \quad T^{\mu\nu}_{\,\,\,\,\,;\nu}=0
 \\\end{gathered}
 \tag{10}
-$$</div>
-
+$$
+</div>
 
 <h2 id="Reissner-Nordstrom度规求解"><a href="#Reissner-Nordstrom度规求解" class="headerlink" title="Reissner-Nordström度规求解"></a>Reissner-Nordström度规求解</h2><p>参照<a href="/2026/02/15/Schwarzschild%E9%BB%91%E6%B4%9E%E8%A7%A3/" title="Schwarzschild黑洞解">Schwarzschild黑洞解</a>，在球对称、静态时空假设下，度规只包含两个未知函数，我们从度规出发给出了Ricci张量的表达式。在无物质情形，爱因斯坦方程就是Ricci张量为0；存在电磁场时，爱因斯坦方程为：</p>
 <div>
 $$
 R_{\mu\nu}=-8\pi G \left(T_{\mu\nu}-\cfrac{1}{2}g_{\mu\nu}T\right)
 \tag{11}
-$$</div>
+$$
+</div>
 
 <p>电磁场能量动量张量零迹，因此只需要计算电磁场能量动量张量。为计算电磁场能量动量张量，我们先利用麦克斯韦方程求解电磁场张量。在球对称、静态时空假设下，空间中只存在径向电场，因此我们假设电磁场张量为：（其中 $u$ 为 $r$ 的函数）</p>
 <span id="more"></span>
+
 <div>
 $$
 F^{\mu\nu} = 
@@ -157,14 +162,16 @@ F^{\mu\nu} =
 0 & 0 & 0 & 0 \\
 \end{pmatrix}
 \tag{12}
-$$</div>
+$$
+</div>
 
 <p>然后根据无源麦克斯韦方程：</p>
 <div>
 $$
 F^{\mu\nu}_{\,\,\,\,\,;\nu}=F^{\mu\nu}_{\,\,\,\,\,,\nu}+\Gamma^{\nu}_{\lambda\nu}F^{\mu \lambda}=0
 \tag{13}
-$$</div>
+$$
+</div>
 
 <p>我们只有一个未知函数，因此只有一个有效方程：</p>
 <div>
@@ -174,14 +181,16 @@ F^{0\nu}_{\,\,\,\,\,;\nu}=F^{01}_{\,\,\,\,\,,1}+\Gamma^{\nu}_{1\nu}F^{01} \\
 = u_r+\left(\cfrac{f_r}{2f}+\cfrac{g_r}{2g}+\cfrac{2}{r}\right)u = 0
 \\\end{gathered}
 \tag{14}
-$$</div>
+$$
+</div>
 
 <p>解得</p>
 <div>
 $$
 u^2fgr^4=C_1/(8\pi G)
 \tag{15}
-$$</div>
+$$
+</div>
 
 <p>该式给出 $f,g,u$ 的关系，可以消去一个未知函数。</p>
 <p>为了列出爱因斯坦方程，我们需要求出电磁场能量动量张量（从电磁场张量，根据定义）：</p>
@@ -195,7 +204,8 @@ T_{\mu\nu} =
 0 & 0 & 0 & \cfrac{1}{2}fgr^2u^2\sin^2\theta \\
 \end{pmatrix}
 \tag{16}
-$$</div>
+$$
+</div>
 
 <p>因为 $u$ 和 $f,g$ 有关，只需要两个独立方程。我们选择 $00,11$ 分量：</p>
 <div>
@@ -205,9 +215,11 @@ R_{00}=-8\pi G T_{00} \\
 R_{11}=-8\pi G T_{11} \\
 \end{cases}
 \tag{17}
-$$</div>
+$$
+</div>
 
 <a href="/2026/02/15/Schwarzschild%E9%BB%91%E6%B4%9E%E8%A7%A3/" title="Schwarzschild黑洞解">Schwarzschild黑洞解</a>给出了 $R\_{00},R\_{11}$ ，本文给出了 $T\_{00},T\_{11}$ ，代入得
+
 <div>
 $$
 \begin{cases}
@@ -216,7 +228,8 @@ $$
 u^2fgr^4=C_1/(8\pi G)
 \end{cases}
 \tag{18}
-$$</div>
+$$
+</div>
 
 <p>将 $u$ 消去</p>
 <div>
@@ -226,7 +239,8 @@ $$
 \left(\cfrac{f_r}{2f}\right)_r - \cfrac{f_r}{2f} \cfrac{g_r}{2g} + \cfrac{f_r}{2f} \cfrac{f_r}{2f} -\cfrac{g_r}{rg} = \cfrac{C_1 g}{2r^4}
 \end{cases}
 \tag{19}
-$$</div>
+$$
+</div>
 
 <p>化简</p>
 <div>
@@ -236,7 +250,8 @@ $$
 2fgf_{rr}-ff_rg_r-gf_r^2 -\cfrac{4f^2g_r}{r} = \cfrac{4 C_1 f^2g^2}{2r^4}
 \end{cases}
 \tag{20}
-$$</div>
+$$
+</div>
 
 <p>两式相加，得到 $f,g$ 的关系</p>
 <div>
@@ -246,36 +261,39 @@ $$
 fg=C_2
 \\\end{gathered}
 \tag{21}
-$$</div>
+$$
+</div>
 
 <p>第二个方程中，将 $g$ 消去，</p>
 <div>
 $$
 f_{rr} + \cfrac{2f_r}{r} = \cfrac{C_1C_2}{r^4}
 \tag{22}
-$$</div>
+$$
+</div>
 
 <p>两边乘积分因子 $r^2$ ，然后积分</p>
 <div>
 $$
 r^2f_{rr} + 2rf_r = \cfrac{C_1C_2}{r^2}
 \tag{23}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
 (r^2f_{r})_r = \cfrac{C_1C_2}{r^2}
 \tag{24}
-$$</div>
-
+$$
+</div>
 
 <p>解得</p>
 <div>
 $$
 f = C_4 - \cfrac{C_3}{r}+\cfrac{C_1C_2}{2r^2}
 \tag{25}
-$$</div>
+$$
+</div>
 
 <p>根据在无穷远处度规趋于闵可夫斯基度规，爱因斯坦方程的牛顿近似 $f \approx 1-2GM&#x2F;r$ ，以及点电荷的电磁场张量，可以确定出其中的常数：（选择单位制使得 $4\pi\varepsilon_0&#x3D;1$ ）</p>
 <div>
@@ -287,7 +305,8 @@ C_3 = 2GM \\
 C_4 = 1
 \end{cases}
 \tag{26}
-$$</div>
+$$
+</div>
 
 <p>解得 $f,g,u$ </p>
 <div>
@@ -298,7 +317,8 @@ g = \cfrac{1}{f} \\
 u = \cfrac{Q}{4\pi r^2}
 \end{cases}
 \tag{27}
-$$</div>
+$$
+</div>
 
 <p>其中 $M$ 的物理意义为黑洞质量， $Q$ 的意义为电荷量。</p>
 <p>Reissner-Nordström度规：</p>
@@ -312,17 +332,18 @@ g_{\mu\nu} =
 0 & 0 & 0 & r^2\sin^2\theta \\
 \end{pmatrix}
 \tag{28}
-$$</div>
+$$
+</div>
 
 <p>用不变距离表示</p>
 <div>
 $$
 \mathrm{d}s^2 = -\left(1-\cfrac{2GM}{r}+\cfrac{GQ^2}{4\pi r^2}\right)\mathrm{d}t^2+\cfrac{\mathrm{d}r^2}{1-\cfrac{2GM}{r}+\cfrac{GQ^2}{4\pi r^2}}+r^2\mathrm{d}\theta^2+r^2\sin^2\theta\mathrm{d}\phi^2
 \tag{29}
-$$</div>
+$$
+</div>
 
-
-</div><div class="article-licensing box"><div class="licensing-title"><p>Reissner-Nordström黑洞解</p><p><a href="https://yuchenxi2000.github.io/2026/02/16/Reissner-Nordström黑洞解/">https://yuchenxi2000.github.io/2026/02/16/Reissner-Nordström黑洞解/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>Chenxi Yu</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2026-02-16</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2026-04-03</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2026/02/26/Land%C3%A9%20g-factor/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">Landé g-factor</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2026/02/15/Schwarzschild%E9%BB%91%E6%B4%9E%E8%A7%A3/"><span class="level-item">Schwarzschild黑洞解</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><!--!--><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a><p class="is-size-7"><span>&copy; 2026 Chenxi Yu</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="fab fa-creative-commons-nc"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/yuchenxi2000"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
+</div><div class="article-licensing box"><div class="licensing-title"><p>Reissner-Nordström黑洞解</p><p><a href="https://yuchenxi2000.github.io/2026/02/16/Reissner-Nordström黑洞解/">https://yuchenxi2000.github.io/2026/02/16/Reissner-Nordström黑洞解/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>Chenxi Yu</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2026-02-16</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2026-06-13</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2026/02/26/Land%C3%A9%20g-factor/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">Landé g-factor</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2026/02/15/Schwarzschild%E9%BB%91%E6%B4%9E%E8%A7%A3/"><span class="level-item">Schwarzschild黑洞解</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><!--!--><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a><p class="is-size-7"><span>&copy; 2026 Chenxi Yu</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="fab fa-creative-commons-nc"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/yuchenxi2000"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
             article: {
                 highlight: {
                     clipboard: true,

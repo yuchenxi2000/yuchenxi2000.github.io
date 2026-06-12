@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>Modern Thoery of Polarization - YCX&#039;s Blog</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="YCX&#039;s Blog"><meta name="msapplication-TileImage" content="favicon.ico"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="YCX&#039;s Blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="以下推导全是本人瞎推的，仅供参考因为找不到推导 Wannier functionsbloch state  $$ \psi_k(r) &amp;#x3D; e^{\mathrm{i}k \cdot r} u_k(r) \tag{1} $$   wannier functions 定义为  $$ W_R(r) &amp;#x3D; \frac{1}{\sqrt{N}} \sum_k e^{-\mathrm{i}k \cdot R} \"><meta property="og:type" content="blog"><meta property="og:title" content="Modern Thoery of Polarization"><meta property="og:url" content="https://yuchenxi2000.github.io/2020/08/07/Modern%20Thoery%20of%20Polarization/"><meta property="og:site_name" content="YCX&#039;s Blog"><meta property="og:description" content="以下推导全是本人瞎推的，仅供参考因为找不到推导 Wannier functionsbloch state  $$ \psi_k(r) &amp;#x3D; e^{\mathrm{i}k \cdot r} u_k(r) \tag{1} $$   wannier functions 定义为  $$ W_R(r) &amp;#x3D; \frac{1}{\sqrt{N}} \sum_k e^{-\mathrm{i}k \cdot R} \"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://yuchenxi2000.github.io/img/og_image.png"><meta property="article:published_time" content="2020-08-07T05:48:32.000Z"><meta property="article:modified_time" content="2026-04-03T14:05:06.589Z"><meta property="article:author" content="Chenxi Yu"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://yuchenxi2000.github.io/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://yuchenxi2000.github.io/2020/08/07/Modern%20Thoery%20of%20Polarization/"},"headline":"Modern Thoery of Polarization","image":["https://yuchenxi2000.github.io/img/og_image.png"],"datePublished":"2020-08-07T05:48:32.000Z","dateModified":"2026-04-03T14:05:06.589Z","author":{"@type":"Person","name":"Chenxi Yu"},"publisher":{"@type":"Organization","name":"YCX's Blog","logo":{"@type":"ImageObject","url":"https://yuchenxi2000.github.io/2020/08/07/Modern%20Thoery%20of%20Polarization/android-chrome-512x512.png"}},"description":"以下推导全是本人瞎推的，仅供参考因为找不到推导 Wannier functionsbloch state  $$ \\psi_k(r) &#x3D; e^{\\mathrm{i}k \\cdot r} u_k(r) \\tag{1} $$   wannier functions 定义为  $$ W_R(r) &#x3D; \\frac{1}{\\sqrt{N}} \\sum_k e^{-\\mathrm{i}k \\cdot R} \\"}</script><link rel="canonical" href="https://yuchenxi2000.github.io/2020/08/07/Modern%20Thoery%20of%20Polarization/"><link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link data-pjax rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link data-pjax rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!--!--><!-- hexo injector head_end start --><script>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>Modern Thoery of Polarization - YCX&#039;s Blog</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="YCX&#039;s Blog"><meta name="msapplication-TileImage" content="favicon.ico"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="YCX&#039;s Blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="以下推导全是本人瞎推的，仅供参考因为找不到推导 Wannier functionsbloch state  $$ \psi_k(r) &amp;#x3D; e^{\mathrm{i}k \cdot r} u_k(r) \tag{1} $$   wannier functions 定义为  $$ W_R(r) &amp;#x3D; \frac{1}{\sqrt{N}} \sum_k e^{-\mathrm{i}k \cdot R} \"><meta property="og:type" content="blog"><meta property="og:title" content="Modern Thoery of Polarization"><meta property="og:url" content="https://yuchenxi2000.github.io/2020/08/07/Modern%20Thoery%20of%20Polarization/"><meta property="og:site_name" content="YCX&#039;s Blog"><meta property="og:description" content="以下推导全是本人瞎推的，仅供参考因为找不到推导 Wannier functionsbloch state  $$ \psi_k(r) &amp;#x3D; e^{\mathrm{i}k \cdot r} u_k(r) \tag{1} $$   wannier functions 定义为  $$ W_R(r) &amp;#x3D; \frac{1}{\sqrt{N}} \sum_k e^{-\mathrm{i}k \cdot R} \"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://yuchenxi2000.github.io/img/og_image.png"><meta property="article:published_time" content="2020-08-07T05:48:32.000Z"><meta property="article:modified_time" content="2026-06-12T16:50:49.482Z"><meta property="article:author" content="Chenxi Yu"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://yuchenxi2000.github.io/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://yuchenxi2000.github.io/2020/08/07/Modern%20Thoery%20of%20Polarization/"},"headline":"Modern Thoery of Polarization","image":["https://yuchenxi2000.github.io/img/og_image.png"],"datePublished":"2020-08-07T05:48:32.000Z","dateModified":"2026-06-12T16:50:49.482Z","author":{"@type":"Person","name":"Chenxi Yu"},"publisher":{"@type":"Organization","name":"YCX's Blog","logo":{"@type":"ImageObject","url":"https://yuchenxi2000.github.io/2020/08/07/Modern%20Thoery%20of%20Polarization/android-chrome-512x512.png"}},"description":"以下推导全是本人瞎推的，仅供参考因为找不到推导 Wannier functionsbloch state  $$ \\psi_k(r) &#x3D; e^{\\mathrm{i}k \\cdot r} u_k(r) \\tag{1} $$   wannier functions 定义为  $$ W_R(r) &#x3D; \\frac{1}{\\sqrt{N}} \\sum_k e^{-\\mathrm{i}k \\cdot R} \\"}</script><link rel="canonical" href="https://yuchenxi2000.github.io/2020/08/07/Modern%20Thoery%20of%20Polarization/"><link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link data-pjax rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link data-pjax rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!--!--><!-- hexo injector head_end start --><script>
   (function () {
       function switchTab() {
           if (!location.hash) {
@@ -35,48 +35,48 @@
 $$
 \psi_k(r) = e^{\mathrm{i}k \cdot r} u_k(r)
 \tag{1}
-$$</div>
-
+$$
+</div>
 
 <p>wannier functions 定义为</p>
 <div>
 $$
 W_R(r) = \frac{1}{\sqrt{N}} \sum_k e^{-\mathrm{i}k \cdot R} \psi_k(r)
 \tag{2}
-$$</div>
-
+$$
+</div>
 
 <p>求和、积分有替代关系， $\Omega$ 为元胞体积</p>
 <div>
 $$
 \sum_k \to \frac{N}{\Omega} \int_{BZ} {\rm d}^3 k
 \tag{3}
-$$</div>
-
+$$
+</div>
 
 <p>由 Bloch 函数性质知</p>
 <div>
 $$
 W_{R+R^\prime}(r+R^\prime) = W_R(r)
 \tag{4}
-$$</div>
-
+$$
+</div>
 
 <p>所以 $W_R(r)$ 只与 $r-R$ 有关。所以wannier function也写作</p>
 <div>
 $$
 W(r-R):=W_R(r)
 \tag{5}
-$$</div>
-
+$$
+</div>
 
 <p>wannier function 可以看作 localized orbital，因为若 $r-R \to \infty$ ，根据 Riemann–Lebesgue lemma，</p>
 <div>
 $$
 W_R(r) = \frac{1}{\sqrt{N}} \sum_k e^{\mathrm{i}k \cdot (r-R)} u_k(r) \to 0
 \tag{6}
-$$</div>
-
+$$
+</div>
 
 <p>不同晶胞的 wannier function 正交。</p>
 <div>
@@ -89,16 +89,16 @@ $$
 =& \delta_{R, R^\prime}
 \end{align}
 \tag{7}
-$$</div>
-
+$$
+</div>
 
 <h2 id="Polarization"><a href="#Polarization" class="headerlink" title="Polarization"></a>Polarization</h2><p>传统的定义：</p>
 <div>
 $$
 P = \int r \rho(r) {\rm d}r
 \tag{8}
-$$</div>
-
+$$
+</div>
 
 <p>但是，上式和元胞选取有关。最简单的例子就是一维双原子链，正负电荷交错排列。选取正电荷在左的元胞、正电荷在右的元胞会得到一正一负的结果。</p>
 <p>究其原因是因为 $r\rho(r)$ 不是周期性的。但是，电极化的差（微商）是和元胞选取无关的。我们求解</p>
@@ -106,23 +106,23 @@ $$</div>
 $$
 \Delta P=\int_0^1 \frac{{\rm d}P}{{\rm d}\lambda} {\rm d}\lambda
 \tag{9}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
 \Delta P = \int r \Delta \rho(r) {\rm d}r
 \tag{10}
-$$</div>
-
+$$
+</div>
 
 <p>密度由下式给出，求和n遍及所有占据的能带。</p>
 <div>
 $$
 \rho(r) = \frac{2e}{(2\pi)^3}\sum_n \int_{BZ}{\rm d}k \lvert\psi_{nk}(r)\rvert^2
 \tag{11}
-$$</div>
-
+$$
+</div>
 
 <p> $\Delta P$ 可以用 wannier function 表达，推导略去常数</p>
 <div>
@@ -135,8 +135,8 @@ $$
 \sim& \int_{cell} {\rm d}r \sum_n \sum_{R} r\lvert W_{R}(r)\rvert^2 \\
 \end{align}
 \tag{12}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
@@ -145,8 +145,8 @@ $$
 = \frac{2e}{\Omega} \sum_n \int {\rm d}r \ r(\lvert W^{(1)}(r)\rvert^2 - \lvert W^{(0)}(r)\rvert^2) \\
 \\\end{gathered}
 \tag{13}
-$$</div>
-
+$$
+</div>
 
 <p>上面的 $\Delta P$ 表达式是正确的，但是需要证明这是个物理上的可观测量。可证明 $\Delta P$ 和berry phase联系在一起。</p>
 <div>
@@ -163,15 +163,15 @@ P
 \sim& \sum_n \sum_{k} \mathrm{i} \langle u_{nk} \lvert \nabla_k \rvert u_{nk} \rangle \\
 \end{align}
 \tag{14}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
 P = \mathrm{i} \frac{2e}{8\pi^3} \sum_n \int_{BZ} {\rm d}k \ \langle u_{nk} \lvert \nabla_k \rvert u_{nk} \rangle
 \tag{15}
-$$</div>
-
+$$
+</div>
 
 <h2 id="Finite-electric-field"><a href="#Finite-electric-field" class="headerlink" title="Finite electric field"></a>Finite electric field</h2><p>DFT计算中需要对晶体加有限电场，然而均匀电场的势能不是周期性的。</p>
 <p>处理方法是加上一项电场、电极化作用能，把electric enthalpy functional作为最小化的泛函。</p>
@@ -179,8 +179,8 @@ $$</div>
 $$
 F[\rho]=E_{KS}[\rho]-\Omega\epsilon \cdot P
 \tag{16}
-$$</div>
-
+$$
+</div>
 
 <p>其中 $\epsilon$ 是电场强度， $\Omega$ 是元胞体积，P用berry phase的方法计算。</p>
 <h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><ol>
@@ -195,7 +195,7 @@ $$</div>
 <li><p>Berry-phase treatment of the homogeneous electric field perturbation in insulators</p>
 </li>
 </ol>
-</div><div class="article-licensing box"><div class="licensing-title"><p>Modern Thoery of Polarization</p><p><a href="https://yuchenxi2000.github.io/2020/08/07/Modern Thoery of Polarization/">https://yuchenxi2000.github.io/2020/08/07/Modern Thoery of Polarization/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>Chenxi Yu</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2020-08-07</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2026-04-03</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2020/09/23/PN%E7%BB%93%E8%80%97%E5%B0%BD%E8%BF%91%E4%BC%BC%E7%94%B5%E5%AE%B9%E7%AD%89%E6%95%88%E4%BA%8E%E5%B9%B3%E8%A1%8C%E6%9D%BF%E7%94%B5%E5%AE%B9%E7%9A%84%E8%AF%81%E6%98%8E/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">PN结耗尽近似电容等效于平行板电容的证明</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2020/07/03/%E4%B8%89%E7%BB%B4%E7%A9%BA%E9%97%B4%E6%97%8B%E8%BD%AC%E7%9A%84%E5%9B%9B%E5%85%83%E6%95%B0%E8%A1%A8%E7%A4%BA/"><span class="level-item">三维空间旋转的四元数表示</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><!--!--><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a><p class="is-size-7"><span>&copy; 2026 Chenxi Yu</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="fab fa-creative-commons-nc"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/yuchenxi2000"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
+</div><div class="article-licensing box"><div class="licensing-title"><p>Modern Thoery of Polarization</p><p><a href="https://yuchenxi2000.github.io/2020/08/07/Modern Thoery of Polarization/">https://yuchenxi2000.github.io/2020/08/07/Modern Thoery of Polarization/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>Chenxi Yu</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2020-08-07</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2026-06-13</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2020/09/23/PN%E7%BB%93%E8%80%97%E5%B0%BD%E8%BF%91%E4%BC%BC%E7%94%B5%E5%AE%B9%E7%AD%89%E6%95%88%E4%BA%8E%E5%B9%B3%E8%A1%8C%E6%9D%BF%E7%94%B5%E5%AE%B9%E7%9A%84%E8%AF%81%E6%98%8E/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">PN结耗尽近似电容等效于平行板电容的证明</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2020/07/03/%E4%B8%89%E7%BB%B4%E7%A9%BA%E9%97%B4%E6%97%8B%E8%BD%AC%E7%9A%84%E5%9B%9B%E5%85%83%E6%95%B0%E8%A1%A8%E7%A4%BA/"><span class="level-item">三维空间旋转的四元数表示</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><!--!--><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a><p class="is-size-7"><span>&copy; 2026 Chenxi Yu</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="fab fa-creative-commons-nc"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/yuchenxi2000"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
             article: {
                 highlight: {
                     clipboard: true,

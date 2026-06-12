@@ -34,7 +34,8 @@
 $$
 (h_1, k_1) \circ (h_2, k_2) = (h_1h_2, k_1k_2)
 \tag{1}
-$$</div>
+$$
+</div>
 
 <p>可验证其满足群的定义，单位元 $(e_1, e_2)$ （其中 $H,K$ 单位元分别为 $e_1,e_2$ ），逆元 $(h, k)^{-1}&#x3D;(h^{-1}, k^{-1})$ ，此外容易验证满足结合律。</p>
 <h2 id="内直积"><a href="#内直积" class="headerlink" title="内直积"></a>内直积</h2><p>如果群 $G$ 的两子群 $H,K$ 满足</p>
@@ -46,7 +47,8 @@ H \cap K = \{e\} \\
 H \triangleleft G, K \triangleleft G \\
 \end{cases}
 \tag{2}
-$$</div>
+$$
+</div>
 
 <p>则称 $G$ 等于 $H,K$ 的内直积， $G&#x3D;H \times K$ </p>
 <p>上面定义中第一条为集合的乘积， $HK &#x3D; {hk: h \in H, k \in K}$ </p>
@@ -65,7 +67,8 @@ khk^{-1}=h' \\
 h^{-1}kh=k' \\
 \\\end{gathered}
 \tag{3}
-$$</div>
+$$
+</div>
 
 <p>由此得</p>
 <div>
@@ -75,7 +78,8 @@ kh=h'k \\
 kh=hk' \\
 \\\end{gathered}
 \tag{4}
-$$</div>
+$$
+</div>
 
 <p>于是 $kh$ 存在两种分解 $h’k,hk’$ ，用上面证明的分解唯一性得到 $h’&#x3D;h,k’&#x3D;k$ ，所以 $kh&#x3D;hk$ 。</p>
 <h3 id="2"><a href="#2" class="headerlink" title="2"></a>2</h3><p>证明两条性质能推出定义。</p>
@@ -86,7 +90,8 @@ $$</div>
 $$
 ghg^{-1}=h'k'hk'^{-1}h'^{-1}=h'hh'^{-1} \in H
 \tag{5}
-$$</div>
+$$
+</div>
 
 <p>所以 $H \triangleleft G$ 。</p>
 <hr>
@@ -99,7 +104,8 @@ H \cap K = \{e\} \\
 H \triangleleft G, K \triangleleft G \\
 \end{cases}
 \tag{6}
-$$</div>
+$$
+</div>
 
 <p>我们证明从 $\lvert G \rvert&#x3D;\lvert H \rvert \lvert K \rvert,H \cap K &#x3D; {e}$ 可以推出 $G&#x3D;HK$ 。</p>
 <p>根据群的封闭性有 $HK \subseteq G$ ，下面证明不可能有 $HK \subsetneqq G$ ，于是就有 $HK&#x3D;G$ 。</p>
@@ -108,14 +114,16 @@ $$</div>
 $$
 H=\{h_i:i \in [0,\lvert H \rvert)\},K=\{k_j:j \in [0,\lvert K \rvert)\}
 \tag{7}
-$$</div>
+$$
+</div>
 
 <p>那么</p>
 <div>
 $$
 HK=\{h_ik_j:i \in [0,\lvert H \rvert),j \in [0,\lvert K \rvert)\}
 \tag{8}
-$$</div>
+$$
+</div>
 
 <p>假设 $h_ik_j&#x3D;h_mk_n$ ，根据 $H \cap K &#x3D; {e}$ 有 $h_m^{-1}h_i&#x3D;k_nk_j^{-1}&#x3D;e$ ，从而 $h_i&#x3D;h_m,k_j&#x3D;k_n$ ，所以 $HK$ 中无重复元素， $\lvert HK \rvert &#x3D; \lvert H \rvert \lvert K \rvert$ 。</p>
 <p>那么有 $\lvert HK \rvert &#x3D; \lvert G \rvert$ ，从而不可能有 $HK \subsetneqq G$ ，否则 $\lvert HK \rvert \lt  \lvert G \rvert$ ，所以 $HK&#x3D;G$ 。</p>
@@ -126,7 +134,8 @@ $$</div>
 $$
 \phi((h_1,k_1))\phi((h_2,k_2))=h_1k_1h_2k_2=h_1h_2k_1k_2=\phi((h_1h_2,k_1k_2))
 \tag{9}
-$$</div>
+$$
+</div>
 
 <p>所以内直积与外直积同构。</p>
 <h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><p>[1] <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/620893105">https://zhuanlan.zhihu.com/p/620893105</a></p>
@@ -147,14 +156,16 @@ g(a,b,c)=\begin{pmatrix}
 0 & 0 & 1 \\
 \end{pmatrix}
 \tag{1}
-$$</div>
+$$
+</div>
 
 <p>其中 $a,b,c \in Z_p$ 。群的乘法定义为矩阵乘法，计算得到</p>
 <div>
 $$
 g(a_1,b_1,c_1)g(a_2,b_2,c_2)=g(a_1+a_2,b_1+b_2+a_1c_2,c_1+c_2)
 \tag{2}
-$$</div>
+$$
+</div>
 
 <p>单位元为 $g(0,0,0)$ ，逆元为 $g(a,b,c)^{-1}&#x3D;g(-a,ac-b,-c)$ </p>
 <p>下面求中心。设 $g(a,b,c)$ 与任意的 $g(a’,b’,c’)$ 可交换。</p>
@@ -166,7 +177,8 @@ g(a+a',b+b'+ac',c+c')=g(a+a',b+b'+ac',c+c') \\
 ac'=a'c \mod p
 \\\end{gathered}
 \tag{3}
-$$</div>
+$$
+</div>
 
 <p>上式对任意 $a’,c’$ 成立，故 $a&#x3D;c&#x3D;0 \mod p$ ，中心为 $Z(G)&#x3D;{g(0,b,0),b\in Z_p}$ </p>
 <p>商群为 $G&#x2F;Z(G)&#x3D;{Z(G)g(a,0,c),a,c\in Z_p} \cong Z_p \times Z_p$ </p>
@@ -182,7 +194,8 @@ $$
 a^{n(1+p)^m}=a^{n+nmp}
 \\\end{gathered}
 \tag{4}
-$$</div>
+$$
+</div>
 
 <p>所以 $b^ma^n&#x3D;a^{n+nmp}b^m$ ， $G$ 群元恰好为 $a^m b^n, 0 \leq m \lt  p^2, 0 \leq n \lt  p$ ，由此得出 $G$ 的阶为 $p^3$ 。</p>
 <p>然后求 $G$ 的中心。设 $a^{m}b^{n}$ 与任意群元 $a^{m’}b^{n’}$ 交换，下面求 $m,n$ 需要满足的条件：</p>
@@ -195,7 +208,8 @@ a^{m+m'+nm'p}=a^{m'+m+n'mp} \\
 nm'p=n'mp \mod p^2
 \\\end{gathered}
 \tag{5}
-$$</div>
+$$
+</div>
 
 <p> $m’,n’$ 可以任取，我们取 $m’&#x3D;1,n’&#x3D;0$ 得到 $n&#x3D;0 \mod p$ ；取 $m’&#x3D;0,n’&#x3D;1$ 得到 $mp&#x3D;0 \mod p^2$ ，即 $m$ 为 $p$ 的倍数。于是得到中心为 $Z(G)&#x3D;\langle a^p \rangle$ ，商群为 $G&#x2F;Z(G)&#x3D;{Z(G)a^mb^n,0 \leq m,n \lt  p}\cong Z_p \times Z_p$ </p>
 <h2 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h2><p> $p^3$ 阶群在同构意义下有5个，其中3个阿贝尔群：</p>
@@ -211,7 +225,8 @@ $$</div>
 $$
 G/\ker \phi \cong \phi(G)
 \tag{1}
-$$</div>
+$$
+</div>
 
 <p>记 $H&#x3D;\ker \phi$ ，定义映射 $f:gH \to \phi(g)$ （用到核是正则子群的结论）。</p>
 <p>证 $f$ 良定义。 $\forall a,b \in G,aH&#x3D;bH,\exists h \in H,a&#x3D;bh, \phi(a)&#x3D;\phi(bh)&#x3D;\phi(b)\phi(h)&#x3D;\phi(b)$ ，所以 $f$ 良定义。其中根据核的定义有 $\phi(h)&#x3D;e$ 。</p>
@@ -244,7 +259,8 @@ h_1(H \cap N)h_2(H \cap N)=h_1h_2(H \cap N), \\
 \phi(h_1(H \cap N)h_2(H \cap N))=h_1h_2eN \\
 \\\end{gathered}
 \tag{2}
-$$</div>
+$$
+</div>
 
 <p>等式右边</p>
 <div>
@@ -253,7 +269,8 @@ $$
 =
 h_1eNh_2eN=h_1eh_2eN=h_1h_2eN
 \tag{3}
-$$</div>
+$$
+</div>
 
 <p>所以是群同态。</p>
 <p>映射是满射。由群的重排定理， $\forall hn \in HN, hnN&#x3D;hN&#x3D;heN$ ，所以映射是满射。</p>
@@ -265,7 +282,8 @@ $$</div>
 $$
 \lvert H \cap N \rvert = \cfrac{\lvert H \rvert \lvert N \rvert}{\lvert HN \rvert}
 \tag{4}
-$$</div>
+$$
+</div>
 
 <p>该定理还有另一个证法：定义 $\phi: h \to heN$ ，则 $\ker \phi &#x3D; H \cap N$ ，运用第一同构定理得 $H&#x2F;(H \cap N) \cong HN&#x2F;N$ </p>
 <h2 id="第三同构定理"><a href="#第三同构定理" class="headerlink" title="第三同构定理"></a>第三同构定理</h2><p>设 $N\triangleleft G,H\triangleleft G,N \subseteq H$ ，则 $(G&#x2F;N)&#x2F;(H&#x2F;N)\cong G&#x2F;H$ </p>
@@ -307,7 +325,8 @@ $$
 } \\
 \\\end{gathered}
 \tag{1}
-$$</div>
+$$
+</div>
 
 <p>四元数群： ${\pm 1, \pm \mathrm{i}, \pm \mathrm{j}, \pm \mathrm{k}}$ </p>
 <p>四元数有泡利矩阵表示：</p>
@@ -320,7 +339,8 @@ $$
 \mathrm{k} \to -\mathrm{i}\sigma_z \\
 \\\end{gathered}
 \tag{2}
-$$</div>
+$$
+</div>
 
 <p>其中左边的 $\mathrm{i}$ 是四元数单位，右边的 $\mathrm{i}$ 是复数单位。</p>
 <p>泡利矩阵是二阶复矩阵，其中的复数单位可以再次用上面的矩阵替换，于是得到四元数的四阶矩阵表示</p>
@@ -353,22 +373,24 @@ $$
 } \\
 \\\end{gathered}
 \tag{3}
-$$</div>
-
+$$
+</div>
 
 </div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2025-07-31T23:45:22.000Z" title="2025/8/1 07:45:22">2025-08-01</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E6%95%B0%E5%AD%A6/">数学</a></span><span class="level-item">几秒读完 (大约40个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2025/08/01/%E5%87%A0%E4%B8%AA%E7%BE%A4%E7%9A%84%E4%BA%A4%E6%8D%A2%E6%80%A7/">几个群的交换性</a></p><div class="content"><p>$S_n$ is nonabelian for $n \ge 3$ </p>
 <div>
 $$
 (12)(13) \ne (13)(12)
 \tag{1}
-$$</div>
+$$
+</div>
 
 <p> $A_n$ is nonabelian for $n \ge 4$ </p>
 <div>
 $$
 (234)(123) \ne (123)(234)
 \tag{2}
-$$</div>
+$$
+</div>
 
 <p> $D_n$ is nonabelian for $n \ge 3$ </p>
 <p> $r^n&#x3D;1,s^2&#x3D;1,srs&#x3D;r^{-1}$ </p>
@@ -376,7 +398,8 @@ $$</div>
 $$
 sr=r^{-1}s
 \tag{3}
-$$</div>
+$$
+</div>
 
 <p>For $n \ge 3$ , $r \ne r^{-1}$ </p>
 </div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2025-07-28T10:03:54.000Z" title="2025/7/28 18:03:54">2025-07-28</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E6%95%B0%E5%AD%A6/">数学</a></span><span class="level-item">几秒读完 (大约91个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2025/07/28/%E4%B8%80%E9%98%B6%E5%B8%B8%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B%E9%80%9A%E8%A7%A3/">一阶常微分方程通解</a></p><div class="content"><p>不难，仅作参考</p>
@@ -385,7 +408,8 @@ $$</div>
 $$
 y'+py=q
 \tag{1}
-$$</div>
+$$
+</div>
 
 <p>为凑成 $(uy)’&#x3D;uy’+u’y$ 形式，</p>
 <div>
@@ -395,7 +419,8 @@ $$
 u=\exp \left(\int p \, \mathrm{d} x\right)
 \\\end{gathered}
 \tag{2}
-$$</div>
+$$
+</div>
 
 <p>两边乘 $u$ ，</p>
 <div>
@@ -406,15 +431,16 @@ y=\cfrac{1}{u}\left(\int qu\,\mathrm{d} x+C\right) \\
 y=\exp \left(-\int p \, \mathrm{d} x\right)\left[\int q\exp \left(\int p \, \mathrm{d} x\right)\,\mathrm{d} x+C\right]
 \\\end{gathered}
 \tag{3}
-$$</div>
-
+$$
+</div>
 
 </div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2025-07-28T09:48:32.000Z" title="2025/7/28 17:48:32">2025-07-28</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E6%95%B0%E5%AD%A6/">数学</a></span><span class="level-item">7 分钟读完 (大约1021个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2025/07/28/%E5%85%A8%E6%9B%B2%E7%8E%87%E4%B8%8E%E4%B8%AD%E6%9B%B2%E7%8E%87/">全曲率与中曲率</a></p><div class="content"><p>下面回顾一下曲线论知识，曲率定义</p>
 <div>
 $$
 k=\cfrac{\mathrm{d} \theta}{\mathrm{d} s}
 \tag{1}
-$$</div>
+$$
+</div>
 
 <p>设曲线方程 $r&#x3D;r(s)$ ， $s$ 为弧长。记 $\dot{r}&#x3D;\cfrac{\mathrm{d} r}{\mathrm{d} s},\ddot{r}&#x3D;\cfrac{\mathrm{d}^2 r}{\mathrm{d} s^2}$ </p>
 <p>首先 $\dot{r}$ 垂直 $\ddot{r}$ ，因为 $\lvert\dot{r}\rvert&#x3D;1,2\dot{r}\cdot\ddot{r}&#x3D;\mathrm{d}(\dot{r}^2)&#x2F;\mathrm{d} s&#x3D;0$ </p>
@@ -428,7 +454,8 @@ $$
 \lvert k\rvert=\cfrac{\lvert\delta \theta\rvert}{\lvert\delta s\rvert}=\lvert \ddot{r} \rvert
 \\\end{gathered}
 \tag{2}
-$$</div>
+$$
+</div>
 
 <p>定义 $\ddot{r}$ 方向单位矢量 $\beta$ ，则 $\ddot{r}&#x3D;k\beta$ </p>
 <p>设曲面的第一基本齐式：</p>
@@ -436,22 +463,24 @@ $$</div>
 $$
 \mathrm{d} s^2=E\mathrm{d} u^2 + 2F \mathrm{d} u \mathrm{d} v + G \mathrm{d} v^2
 \tag{3}
-$$</div>
-
+$$
+</div>
 
 <p>第二基本齐式：</p>
 <div>
 $$
 2n\cdot \mathrm{d} r = n\cdot\ddot{r}\mathrm{d} s^2=L\mathrm{d} u^2 + 2M \mathrm{d} u \mathrm{d} v + N \mathrm{d} v^2
 \tag{4}
-$$</div>
+$$
+</div>
 
 <p>第一基本齐式系数为度规张量（我们记 $u&#x3D;x^1,v&#x3D;x^2$ ）</p>
 <div>
 $$
 \mathrm{d} s^2=g_{\alpha\beta}\mathrm{d} x^\alpha \mathrm{d} x^\beta
 \tag{5}
-$$</div>
+$$
+</div>
 
 <p>参考<a href="/2025/07/27/%E5%8F%98%E5%88%86%E6%B3%95%E5%BA%94%E7%94%A8%EF%BC%9A%E6%9C%80%E9%80%9F%E9%99%8D%E7%BA%BF%E3%80%81%E6%B5%8B%E5%9C%B0%E7%BA%BF%E4%B8%8E%E6%9E%81%E5%B0%8F%E6%9B%B2%E9%9D%A2/" title="变分法应用：最速降线、测地线与极小曲面">变分法应用：最速降线、测地线与极小曲面</a>， $n\cdot r_{\alpha\beta}&#x3D;b_{\alpha\beta}$ ，所以第二基本齐式为 $b_{\alpha\beta}\mathrm{d} x^\alpha\mathrm{d} x^\beta$ 。</p>
 <p>下面求曲面上的曲线的曲率。根据曲线曲率定义， $\ddot{r}&#x3D;k\beta$ ，两边点乘法向量 $n$ ，记夹角 $\theta&#x3D;\langle n,\beta\rangle$ </p>
@@ -462,7 +491,8 @@ n\cdot\ddot{r}=kn\cdot \beta \\
 k\cos\theta=\cfrac{n\cdot\ddot{r}\mathrm{d} s^2}{\mathrm{d} s^2}=\cfrac{L\mathrm{d} u^2 + 2M \mathrm{d} u \mathrm{d} v + N \mathrm{d} v^2}{E\mathrm{d} u^2 + 2F \mathrm{d} u \mathrm{d} v + G \mathrm{d} v^2}
 \\\end{gathered}
 \tag{6}
-$$</div>
+$$
+</div>
 
 <p>当 $\theta&#x3D;0,\pi$ 时，曲率绝对值最大。我们取法向量所在的一个平面，与曲面交线为法截线，对应曲率为法曲率。</p>
 <p>下面证明法曲率存在最大最小值，而且对应曲线切线方向相互垂直（法曲率非常数时）。</p>
@@ -471,8 +501,8 @@ $$</div>
 $$
 k=\cfrac{Lt^2+2Mt+N}{Et^2+2Ft+G}\label{eq1}
 \tag{7}
-$$</div>
-
+$$
+</div>
 
 <p>求导数</p>
 <div>
@@ -482,8 +512,8 @@ $$
 =2\cfrac{(FL-ME)t^2+(LG-EN)t+(MG-NF)}{(\dots)^2} \\
 \\\end{gathered}
 \tag{8}
-$$</div>
-
+$$
+</div>
 
 <p>分母恒正，分子为二次函数。因为 $t\to \pm\infty$ 时曲率为相等的有限常数，所以分子二次函数必定有两个根（不考虑曲率为常数情形，下同）</p>
 <p>假设两个根为 $t_1,t_2$ ，由韦达定理可证它们对应的切矢量相互垂直：</p>
@@ -494,32 +524,32 @@ Et_1t_2+F(t_1+t_2)+G=\cfrac{E(MG-NF)}{FL-ME}+\cfrac{F(EN-LG)}{FL-ME}+G \\
 = \cfrac{EMG-ENF+EFN-FLG+GFL-MEG}{FL-ME} = 0
 \\\end{gathered}
 \tag{9}
-$$</div>
-
+$$
+</div>
 
 <p>接下来我们求 $k_1k_2,k_1+k_2$ 。虽然可以用关于 $t$ 的方程的韦达定理求解（将 $t$ 代入 $k$ 的表达式），但计算非常繁琐。下面采用另一种方法。我们把方程 $\eqref{eq1}$ 化为关于 $t$ 的二次方程：</p>
 <div>
 $$
 (L-kE)t^2+2(M-kF)t+(N-kG) = 0
 \tag{10}
-$$</div>
-
+$$
+</div>
 
 <p>因为 $k_1,k_2$ 对应的是极值，所以该方程有且仅有一个实根，因此判别式为零。</p>
 <div>
 $$
 (M-kF)^2-(L-kE)(N-kG)=0
 \tag{11}
-$$</div>
-
+$$
+</div>
 
 <p>由此得到 $k$ 满足的二次方程：</p>
 <div>
 $$
 k^{2} \left(E G - F^{2}\right) - k \left(E N - 2 F M + G L\right) + L N - M^{2} = 0
 \tag{12}
-$$</div>
-
+$$
+</div>
 
 <p>由此再运用韦达定理得到全曲率与中曲率表达式：</p>
 <div>
@@ -529,8 +559,8 @@ K=k_1k_2=\cfrac{LN-M^2}{EG-F^2} \\
 H=\cfrac{k_1+k_2}{2} = \cfrac{EN-2FM+GL}{2(EG-F^2)}
 \\\end{gathered}
 \tag{13}
-$$</div>
-
+$$
+</div>
 
 <p>用张量 $g_{\alpha\beta},b_{\alpha\beta}$ ，可以把它们写成</p>
 <div>
@@ -540,7 +570,8 @@ K=\cfrac{b}{g} \\
 H=\cfrac{1}{2}b_\alpha^{\cdot\alpha}
 \\\end{gathered}
 \tag{14}
-$$</div>
+$$
+</div>
 
 <p>其中 $g,b$ 分别为张量 $g_{\alpha\beta},b_{\alpha\beta}$ 的行列式。由此可见全曲率与中曲率都是等距不变量。（中曲率表达式推导详见<a href="/2025/07/27/%E5%8F%98%E5%88%86%E6%B3%95%E5%BA%94%E7%94%A8%EF%BC%9A%E6%9C%80%E9%80%9F%E9%99%8D%E7%BA%BF%E3%80%81%E6%B5%8B%E5%9C%B0%E7%BA%BF%E4%B8%8E%E6%9E%81%E5%B0%8F%E6%9B%B2%E9%9D%A2/" title="变分法应用：最速降线、测地线与极小曲面">变分法应用：最速降线、测地线与极小曲面</a>）</p>
 </div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2025-07-27T10:13:15.000Z" title="2025/7/27 18:13:15">2025-07-27</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E6%95%B0%E5%AD%A6/">数学</a></span><span class="level-item">13 分钟读完 (大约2013个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2025/07/27/%E5%8F%98%E5%88%86%E6%B3%95%E5%BA%94%E7%94%A8%EF%BC%9A%E6%9C%80%E9%80%9F%E9%99%8D%E7%BA%BF%E3%80%81%E6%B5%8B%E5%9C%B0%E7%BA%BF%E4%B8%8E%E6%9E%81%E5%B0%8F%E6%9B%B2%E9%9D%A2/">变分法应用：最速降线、测地线与极小曲面</a></p><div class="content"><h2 id="最速降线问题"><a href="#最速降线问题" class="headerlink" title="最速降线问题"></a>最速降线问题</h2><p>以 $-y$ 为重力方向，从 $(0,h)$ 落到 $(a,0)$ 。根据机械能守恒， $mv^2&#x2F;2&#x3D;mg(h-y)$ ，所以下落时间</p>
@@ -548,22 +579,23 @@ $$</div>
 $$
 t=\int_0^a \cfrac{\mathrm{d} s}{v}=\int_0^{a} \sqrt{\cfrac{1+y'^2}{2g(h-y)}} \mathrm{d} x = \int_0^a F(y,y') \mathrm{d} x
 \tag{1}
-$$</div>
+$$
+</div>
 
 <p>运用欧拉-拉格朗日方程</p>
 <div>
 $$
 \cfrac{\partial F}{\partial y} - \cfrac{\mathrm{d}}{\mathrm{d} x}\left(\cfrac{\partial F}{\partial y'}\right)=0
 \tag{2}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
 \cfrac{1}{2(h-y)}\sqrt{\cfrac{1+y'^2}{2g(h-y)}}-\cfrac{\mathrm{d}}{\mathrm{d} x}\left(\cfrac{y'}{\sqrt{2g(h-y)(1+y'^2)}}\right)=0
 \tag{3}
-$$</div>
-
+$$
+</div>
 
 <p>经过冗长的计算后，</p>
 <div>
@@ -572,65 +604,68 @@ $$
 1+y'^2=2(h-y)y'' \\
 \\\end{gathered}
 \tag{4}
-$$</div>
+$$
+</div>
 
 <p>用解二阶常微分方程方法，进行换元 $w&#x3D;y’,y’’&#x3D;w\mathrm{d} w&#x2F;\mathrm{d} y$ </p>
 <div>
 $$
 1+w^2=2(h-y)w\cfrac{\mathrm{d} w}{\mathrm{d} y}
 \tag{5}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
 \cfrac{\mathrm{d} y}{h-y}=\cfrac{2w\mathrm{d} w}{1+w^2}
 \tag{6}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
 \ln C_0-\ln(h-y)=\ln(1+w^2)
 \tag{7}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
 1+w^2=\cfrac{C_0}{h-y}
 \tag{8}
-$$</div>
-
+$$
+</div>
 
 <div>
 $$
 \cfrac{\mathrm{d} y}{\mathrm{d} x}=\sqrt{\cfrac{C_1+y}{h-y}}
 \tag{9}
-$$</div>
-
+$$
+</div>
 
 <p>做换元 $u&#x3D;\sqrt{y+C_1}$ ，</p>
 <div>
 $$
 2\sqrt{h+C_1-u^2}\mathrm{d} u=\mathrm{d} x
 \tag{10}
-$$</div>
+$$
+</div>
 
 <p>再做换元 $u&#x3D;\sqrt{h+C_1}\sin\theta$ ，</p>
 <div>
 $$
 x=(h+C_1)[\theta-\cfrac{1}{2}\sin(2\theta)]
 \tag{11}
-$$</div>
+$$
+</div>
 
 <p>根据前两次换元得到 $\theta$ 与 $y$ 关系</p>
 <div>
 $$
 y=(h+C_1)\sin^2\theta-C_1=\cfrac{h-C_1}{2}-\cfrac{h+C_1}{2}\cos(2\theta)
 \tag{12}
-$$</div>
-
+$$
+</div>
 
 <p>此即为摆线</p>
 <div>
@@ -640,15 +675,16 @@ x=\theta-\sin\theta \\
 y=1-\cos\theta
 \end{cases}
 \tag{13}
-$$</div>
-
+$$
+</div>
 
 <h2 id="测地线问题"><a href="#测地线问题" class="headerlink" title="测地线问题"></a>测地线问题</h2><p>曲面度规张量 $g_{\alpha\beta}$ ，其上一条曲线的参数方程为 $u^\alpha(t)$ ，参数 $t$ 取值 $t\in[0,1]$ ，长度为</p>
 <div>
 $$
 \mathcal{F}[u^\gamma]=\int_0^1 \sqrt{g_{\alpha\beta}\cfrac{\mathrm{d} u^\alpha}{\mathrm{d} t}\cfrac{\mathrm{d} u^\beta}{\mathrm{d} t}} \mathrm{d} t = \int_0^1 F\left(u^\gamma, \cfrac{\mathrm{d} u^\beta}{\mathrm{d} t}\right) \mathrm{d} t
 \tag{14}
-$$</div>
+$$
+</div>
 
 <p>运用欧拉-拉格朗日方程</p></div><a class="article-more button is-small is-size-7" href="/2025/07/27/%E5%8F%98%E5%88%86%E6%B3%95%E5%BA%94%E7%94%A8%EF%BC%9A%E6%9C%80%E9%80%9F%E9%99%8D%E7%BA%BF%E3%80%81%E6%B5%8B%E5%9C%B0%E7%BA%BF%E4%B8%8E%E6%9E%81%E5%B0%8F%E6%9B%B2%E9%9D%A2/#more">阅读更多</a></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2025-07-25T13:44:56.000Z" title="2025/7/25 21:44:56">2025-07-25</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E6%95%B0%E5%AD%A6/">数学</a></span><span class="level-item">9 分钟读完 (大约1422个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2025/07/25/%E4%B8%AD%E5%9B%BD%E5%89%A9%E4%BD%99%E3%80%81%E6%AC%A7%E6%8B%89%E5%87%BD%E6%95%B0%E5%8F%8A%E4%B8%80%E4%BA%9B%E6%95%B0%E8%AE%BA%E5%92%8C%E7%BE%A4%E8%AE%BA/">中国剩余、欧拉函数及一些数论和群论</a></p><div class="content"><h2 id="中国剩余定理"><a href="#中国剩余定理" class="headerlink" title="中国剩余定理"></a>中国剩余定理</h2><p>中国剩余定理：如果 $m_1,m_2,\dots,m_n$ 两两互素，则对于任意的 $a_1,a_2,\dots,a_n$ ，方程组</p>
 <div>
@@ -660,7 +696,8 @@ x=a_2 \mod m_2 \\
 x=a_n \mod m_n \\
 \end{cases}
 \tag{1}
-$$</div>
+$$
+</div>
 
 <p>存在整数解，且在模 $N$ 的意义下唯一（ $N&#x3D;\prod_{k&#x3D;1}^n m_k$ ）</p>
 <p>证明：对任意 $1\le k \le n$ ，因为 $N&#x2F;m_k$ 和 $m_k$ 互素，所以 $N&#x2F;m_k$ 是 $Z_{m_k}$ 中单位元，记逆元为 $\left(\cfrac{N}{m_k}\right)_{m_k}$ ，可以构造解为</p>
@@ -668,7 +705,8 @@ $$</div>
 $$
 x=\sum_{k=1}^n a_k\cfrac{N}{m_k}\left(\cfrac{N}{m_k}\right)_{m_k}
 \tag{2}
-$$</div>
+$$
+</div>
 
 <p>假设存在两个解 $x,y$ ，则 $\forall k,x&#x3D;y\mod m_k$ ，因为 $m_1,m_2,\dots,m_n$ 两两互素，所以 $x&#x3D;y\mod N$ </p>
 <h2 id="单位群-U-n"><a href="#单位群-U-n" class="headerlink" title="单位群 $U_n$"></a>单位群 $U_n$</h2><p>群 $Z_n&#x3D;{0,1,2,\dots,n-1}$ 在加法操作下构成群，但在乘法下不构成群，因为 $0$ 没有逆元。我们将存在乘法逆元的单位（units）构成一集合，可以证明这是一个群，被称为模 $n$ 的单位群。</p>
@@ -677,7 +715,8 @@ $$</div>
 $$
 (b^{-1}a^{-1})ab=1,ab(b^{-1}a^{-1})=1
 \tag{3}
-$$</div>
+$$
+</div>
 
 <p>所以 $ab$ 也为单位，加上显然任意元素的逆元也是单位、存在群单位元 $1$ ，所以构成群，记为 $U_n$ 。</p>
 <p> $a$ 是单位当且仅当 $\gcd(a,n)&#x3D;1$ 。如果 $a$ 存在乘法逆元则 $\exists m,aa^{-1}+mn&#x3D;1$ ，于是 $\gcd(a, n)&#x3D;1$ 。如果 $\gcd(a,n)&#x3D;1$ 则 $\exists k,m,\mathrm{s.t.}, ka+mn&#x3D;1$ ，那么 $k$ 就是 $a$ 的乘法逆元。</p>
@@ -686,21 +725,24 @@ $$</div>
 $$
 a^{\phi(n)}=1 \mod n \, ,\gcd(a,n)=1
 \tag{4}
-$$</div>
+$$
+</div>
 
 <p>对于 $n&#x3D;p$ 为质数的特殊情形， $\phi(p)&#x3D;p-1$ ，</p>
 <div>
 $$
 a^{p-1}=1 \mod p
 \tag{5}
-$$</div>
+$$
+</div>
 
 <p>下面对任意正整数计算 $\phi(n)$ 。首先对于 $p^k$ （ $p$ 为质数），直接考虑 $Z_n$ 中和 $p^k$ 互质的个数，</p>
 <div>
 $$
 \phi(p^k)=(p^k-1)-(p^{k-1}-1)=p^k\left(1-\cfrac{1}{p}\right)
 \tag{6}
-$$</div>
+$$
+</div>
 
 <p>运用中国剩余定理我们可以证明对于互素的 $m,n$ ， $\phi(mn)&#x3D;\phi(m)\phi(n)$ </p>
 <p>只需要证 $U_m \times U_n \cong U_{mn}$ 。 $\forall p\in U_m,q\in U_n$ ，根据中国剩余定理，</p>
@@ -711,7 +753,8 @@ t=p\mod m \\
 t=q\mod n
 \end{cases}
 \tag{7}
-$$</div>
+$$
+</div>
 
 <p>存在唯一的 $t\in U_{mn}$ 。对于 $\forall t\in U_{mn}$ ，因为 $\gcd(t,mn)&#x3D;1$ 且 $m,n$ 互素，所以 $\gcd(t,m)&#x3D;1,\gcd(t,n)&#x3D;1$ ，设 $t$ 模 $m,n$ 分别为 $p,q$ ，则 $p\in U_m,q\in U_n$ </p>
 <p>所以 $U_m \times U_n \cong U_{mn}$ ，因此 $\phi(mn)&#x3D;\phi(m)\phi(n)$ </p>
@@ -720,15 +763,15 @@ $$</div>
 $$
 \phi(n)=\prod_{i=1}^m \phi(p_{i}^{k_{i}})=n\prod_{i=1}^m \left(1-\cfrac{1}{p_i}\right)
 \tag{8}
-$$</div>
-
+$$
+</div>
 
 <h2 id="Wilson定理"><a href="#Wilson定理" class="headerlink" title="Wilson定理"></a>Wilson定理</h2><div>
 $$
 (p-1)!=-1\mod p
 \tag{9}
-$$</div>
-
+$$
+</div>
 
 <p>当且仅当 $p$ 是质数。</p>
 <p> $p&#x3D;2$ 显然。 $p\ne 2$ 时考虑 $U_n$ 中二阶元（逆是自身），它们是如下方程的解</p>
@@ -739,21 +782,24 @@ x^2=1\mod p \\
 (x-1)(x+1)=0\mod p \\
 \\\end{gathered}
 \tag{10}
-$$</div>
+$$
+</div>
 
 <p>因为 $p$ 是质数，所以 $x&#x3D;1,p-1$ 。除此之外其他的单位可以两两配对，乘积为 $1$ ，所以</p>
 <div>
 $$
 (p-1)!=1 \times (p-1)=-1 \mod p
 \tag{11}
-$$</div>
+$$
+</div>
 
 <p>假设 $p$ 不是质数：先设 $p&#x3D;ab,1\lt a\lt b\lt p$ ，则</p>
 <div>
 $$
 (p-1)!=1 \dots  a \dots b \dots (p-1)=0 \mod p
 \tag{12}
-$$</div>
+$$
+</div>
 
 <p>再设 $p&#x3D;q^2,q\gt 2$ 。此时 $(p-1)!$ 中包含 $q,2q$ ，所以 $(p-1)!&#x3D;0 \mod p$ </p>
 <p>最后， $p&#x3D;4$ ，此时 $(p-1)!&#x3D;2 \mod p$ </p>
@@ -768,7 +814,8 @@ $$
 = n \\
 \\\end{gathered}
 \tag{13}
-$$</div>
+$$
+</div>
 
 <p>其中根据归纳假设， $k&#x3D;\sum_{d’ \mid k} \phi(d’)$ 。所以该结论成立。</p>
 <h2 id="循环群"><a href="#循环群" class="headerlink" title="循环群"></a>循环群</h2><p>当 $m,n$ 互质时， $Z_m\times Z_n\cong Z_{mn}$ 。假设 $Z_m,Z_n$ 的生成元分别为 $a,b$ 。</p>
@@ -779,7 +826,8 @@ Z_m=\left\lt a\right\gt ,Z_n=\left\lt b\right\gt  \\
 Z_m \times Z_n=\{(a^i,b^j),i\lt m,j\lt n\} \\
 \\\end{gathered}
 \tag{14}
-$$</div>
+$$
+</div>
 
 <p>我们取 $\hat{c}&#x3D;(a,b) \in Z_m \times Z_n$ ，下面我们证明 $Z_m \times Z_n$ 是由 $\hat{c}$ 生成的循环群。</p>
 <p> $\forall i\lt m,j\lt n$ ，由中国剩余定理，存在 $k$ 满足下方程</p>
@@ -790,7 +838,8 @@ k=i \mod m \\
 k=j \mod n \\
 \end{cases}
 \tag{15}
-$$</div>
+$$
+</div>
 
 <p>所以 $\forall i\lt m,j\lt n,\exists k,(a^i,b^j)&#x3D;(a,b)^k&#x3D;\hat{c}^k$ </p>
 <p>所以当 $m,n$ 互质时， $Z_m\times Z_n\cong Z_{mn}$ </p>
@@ -799,7 +848,8 @@ $$</div>
 $$
 Z_n \cong \prod_{i=1}^m Z_{p_{i}^{k_{i}}}
 \tag{16}
-$$</div>
+$$
+</div>
 
 <p>对于素数幂阶循环群，幂次大于 $1$ 的不能进一步分解，因为分解的直积的群元至多是 $p$ 阶的。比如 $Z_{p^3}$ ， $Z_p\times Z_p\times Z_p,Z_p\times Z_{p^2}$ 中不存在 $p^3$ 阶元。</p>
 <h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><p>[1] <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/600282116">https://zhuanlan.zhihu.com/p/600282116</a></p>
@@ -821,7 +871,8 @@ $$
 +(uz+tw+vy-sx)k \\
 \\\end{gathered}
 \tag{1}
-$$</div>
+$$
+</div>
 
 <p>如果用矩阵表示</p>
 <div>
@@ -839,7 +890,8 @@ y \\
 z \\
 \end{pmatrix}
 \tag{2}
-$$</div>
+$$
+</div>
 
 <p>这个矩阵是个正交矩阵。由此可以得出结论，对于任意的四维向量 $(u,v,s,t)$ ，可以写出剩余的三个向量构成正交系。如果是三维，也能构造相应的坐标系，但没有这么直接（至少我试着感觉困难。应该要考虑三个分量的大小、是否为0）</p>
 <p>对于任意四维旋转，能否进行分解？</p>
@@ -853,7 +905,8 @@ Q_2Q_1=q_2^2 \\
 \cfrac{Q_1}{Q_2}=q_1^2
 \\\end{gathered}
 \tag{3}
-$$</div>
+$$
+</div>
 
 <p>其中涉及四元数开根号。因为是旋转，所以 $Q_1,Q_2$ 都是单位四元数。又根据四元数模长的公式， $\vert a\vert \vert b\vert &#x3D;\vert ab\vert $ </p>
 <p>所以 $q_2^2,q_1^2$ 都是单位四元数。我们有</p>
@@ -863,8 +916,8 @@ $$
 =
 \cos2\theta+\sin2\theta(n_xi+n_yj+n_zk)
 \tag{4}
-$$</div>
-
+$$
+</div>
 
 </div></article></div><nav class="pagination" role="navigation" aria-label="pagination"><div class="pagination-previous"><a href="/tags/%E6%95%B0%E5%AD%A6/">上一页</a></div><div class="pagination-next"><a href="/tags/%E6%95%B0%E5%AD%A6/page/3/">下一页</a></div><ul class="pagination-list is-hidden-mobile"><li><a class="pagination-link" href="/tags/%E6%95%B0%E5%AD%A6/">1</a></li><li><a class="pagination-link is-current" href="/tags/%E6%95%B0%E5%AD%A6/page/2/">2</a></li><li><a class="pagination-link" href="/tags/%E6%95%B0%E5%AD%A6/page/3/">3</a></li><li><a class="pagination-link" href="/tags/%E6%95%B0%E5%AD%A6/page/4/">4</a></li><li><a class="pagination-link" href="/tags/%E6%95%B0%E5%AD%A6/page/5/">5</a></li></ul></nav></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar is-rounded" src="/android-chrome-512x512.png" alt="Chenxi Yu"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">Chenxi Yu</p><p class="is-size-6 is-block">PhD in PKU</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>Beijing, China</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives/"><p class="title">114</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories/"><p class="title">5</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags/"><p class="title">34</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/yuchenxi2000" target="_blank" rel="me noopener">关注我</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="me noopener" title="Github" href="https://github.com/yuchenxi2000"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="me noopener" title="Bilibili" href="https://space.bilibili.com/244355869"><i class="fab fa-bilibili"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="me noopener" title="Zhihu" href="https://www.zhihu.com/people/cha-xi-74-16"><i class="fab fa-zhihu"></i></a></div></div></div><!--!--><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">分类</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/%E5%85%B6%E4%BB%96/"><span class="level-start"><span class="level-item">其他</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/%E6%95%B0%E5%AD%A6/"><span class="level-start"><span class="level-item">数学</span></span><span class="level-end"><span class="level-item tag">44</span></span></a></li><li><a class="level is-mobile" href="/categories/%E7%89%A9%E7%90%86/"><span class="level-start"><span class="level-item">物理</span></span><span class="level-end"><span class="level-item tag">51</span></span></a></li><li><a class="level is-mobile" href="/categories/%E7%BC%96%E7%A8%8B/"><span class="level-start"><span class="level-item">编程</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/%E9%9F%B3%E4%B9%90/"><span class="level-start"><span class="level-item">音乐</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></div></div></div><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2026-06-11T15:59:31.000Z">2026-06-11</time></p><p class="title"><a href="/2026/06/11/Vibe%20Coding%E5%88%9D%E6%8E%A2/">Vibe Coding初探</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2026-06-11T15:58:05.000Z">2026-06-11</time></p><p class="title"><a href="/2026/06/11/VaspAuto%EF%BC%9A%E8%B6%85%E7%AE%97%E8%87%AA%E5%8A%A8%E6%8C%82%E6%9C%BA%E6%A1%86%E6%9E%B6/">VaspAuto：超算自动挂机框架</a></p><p class="categories"><a href="/categories/%E7%BC%96%E7%A8%8B/">编程</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2026-06-11T15:57:20.000Z">2026-06-11</time></p><p class="title"><a href="/2026/06/11/%E6%A4%8D%E7%89%A9%E5%A8%98%E5%A4%A7%E6%88%98%E5%83%B5%E5%B0%B8%E4%BF%AE%E6%94%B9%E5%99%A8/">植物娘大战僵尸修改器</a></p><p class="categories"><a href="/categories/%E7%BC%96%E7%A8%8B/">编程</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2026-04-03T13:08:18.000Z">2026-04-03</time></p><p class="title"><a href="/2026/04/03/%E5%A6%82%E4%BD%95%E7%A7%91%E5%AD%A6%E5%9C%B0%E5%9C%A8hexo%E9%87%8C%E5%86%99%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F/">如何科学地在hexo里写数学公式</a></p><p class="categories"><a href="/categories/%E5%85%B6%E4%BB%96/">其他</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2026-04-03T09:08:02.000Z">2026-04-03</time></p><p class="title"><a href="/2026/04/03/%E8%A7%84%E8%8C%83%E5%9C%BA%E8%AE%BA%E4%B8%8E%E5%BE%AE%E5%88%86%E5%87%A0%E4%BD%95/">规范场论与微分几何</a></p><p class="categories"><a href="/categories/%E7%89%A9%E7%90%86/">物理</a></p></div></article></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/NEGF/"><span class="tag">NEGF</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E4%BB%A3%E6%95%B0/"><span class="tag">代数</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%85%89%E5%AD%A6/"><span class="tag">光学</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%85%B6%E4%BB%96/"><span class="tag">其他</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%87%A0%E4%BD%95%E4%BB%A3%E6%95%B0/"><span class="tag">几何代数</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%9B%BA%E4%BD%93%E7%89%A9%E7%90%86/"><span class="tag">固体物理</span><span class="tag">13</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0/"><span class="tag">复变函数</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%A4%A9%E4%BD%93%E7%89%A9%E7%90%86/"><span class="tag">天体物理</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%AF%86%E5%BA%A6%E6%B3%9B%E5%87%BD%E7%90%86%E8%AE%BA/"><span class="tag">密度泛函理论</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%B7%B4%E6%B4%9B%E5%85%8B%E9%9F%B3%E4%B9%90/"><span class="tag">巴洛克音乐</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%B9%B3%E9%9D%A2%E5%87%A0%E4%BD%95/"><span class="tag">平面几何</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%B9%BF%E4%B9%89%E7%9B%B8%E5%AF%B9%E8%AE%BA/"><span class="tag">广义相对论</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%BC%B9%E6%80%A7%E5%8A%9B%E5%AD%A6/"><span class="tag">弹性力学</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%BE%AE%E5%88%86%E5%87%A0%E4%BD%95/"><span class="tag">微分几何</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B/"><span class="tag">微分方程</span><span class="tag">9</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%95%B0%E5%80%BC%E6%96%B9%E6%B3%95/"><span class="tag">数值方法</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%95%B0%E5%AD%A6/"><span class="tag">数学</span><span class="tag">44</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/"><span class="tag">数学分析</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%95%B0%E8%AE%BA/"><span class="tag">数论</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%A6%82%E7%8E%87%E7%BB%9F%E8%AE%A1/"><span class="tag">概率统计</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/"><span class="tag">泛函分析</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%89%A9%E7%90%86/"><span class="tag">物理</span><span class="tag">56</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%89%B9%E6%AE%8A%E5%87%BD%E6%95%B0/"><span class="tag">特殊函数</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%94%B5%E5%8A%A8%E5%8A%9B%E5%AD%A6/"><span class="tag">电动力学</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%9B%B8%E5%AF%B9%E8%AE%BA/"><span class="tag">相对论</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%AC%AC%E4%B8%80%E6%80%A7%E5%8E%9F%E7%90%86%E8%AE%A1%E7%AE%97/"><span class="tag">第一性原理计算</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%BB%9F%E8%AE%A1%E5%8A%9B%E5%AD%A6/"><span class="tag">统计力学</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%BC%96%E7%A8%8B/"><span class="tag">编程</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%BE%A4%E8%AE%BA/"><span class="tag">群论</span><span class="tag">12</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6/"><span class="tag">量子力学</span><span class="tag">30</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E9%87%8F%E5%AD%90%E5%9C%BA%E8%AE%BA/"><span class="tag">量子场论</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E9%9D%9E%E6%AC%A7%E5%87%A0%E4%BD%95/"><span class="tag">非欧几何</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E9%9F%B3%E4%B9%90/"><span class="tag">音乐</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E9%AB%98%E6%80%A7%E8%83%BD%E8%AE%A1%E7%AE%97/"><span class="tag">高性能计算</span><span class="tag">1</span></a></div></div></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a><p class="is-size-7"><span>&copy; 2026 Chenxi Yu</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="fab fa-creative-commons-nc"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/yuchenxi2000"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
             article: {
