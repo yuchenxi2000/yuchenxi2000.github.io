@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>Vibe Coding初探 - YCX&#039;s Blog</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="YCX&#039;s Blog"><meta name="msapplication-TileImage" content="favicon.ico"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="YCX&#039;s Blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="氛围编程这个概念应该前段时间就有了，但现在才开始尝试，估计因为本人写代码能力比较强，我的一个朋友就选择写代码直接交给AI。当时我嗤之以鼻，因为我觉得AI只能写现有的代码，无法写当时我在开发的科研用软件包（这个软件包是hafnon，一个用声子模式展开研究氧化铪铁电的Python包）。事实是我想对了一部分，AI的确不太懂需求这方面，但我发现AI对于代码风格的把控水平还算可以，这之前没有意料到。 最初我"><meta property="og:type" content="blog"><meta property="og:title" content="Vibe Coding初探"><meta property="og:url" content="https://yuchenxi2000.github.io/2026/06/11/Vibe%20Coding%E5%88%9D%E6%8E%A2/"><meta property="og:site_name" content="YCX&#039;s Blog"><meta property="og:description" content="氛围编程这个概念应该前段时间就有了，但现在才开始尝试，估计因为本人写代码能力比较强，我的一个朋友就选择写代码直接交给AI。当时我嗤之以鼻，因为我觉得AI只能写现有的代码，无法写当时我在开发的科研用软件包（这个软件包是hafnon，一个用声子模式展开研究氧化铪铁电的Python包）。事实是我想对了一部分，AI的确不太懂需求这方面，但我发现AI对于代码风格的把控水平还算可以，这之前没有意料到。 最初我"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://yuchenxi2000.github.io/img/og_image.png"><meta property="article:published_time" content="2026-06-11T15:59:31.000Z"><meta property="article:modified_time" content="2026-06-12T13:56:20.954Z"><meta property="article:author" content="Chenxi Yu"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://yuchenxi2000.github.io/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://yuchenxi2000.github.io/2026/06/11/Vibe%20Coding%E5%88%9D%E6%8E%A2/"},"headline":"Vibe Coding初探","image":["https://yuchenxi2000.github.io/img/og_image.png"],"datePublished":"2026-06-11T15:59:31.000Z","dateModified":"2026-06-12T13:56:20.954Z","author":{"@type":"Person","name":"Chenxi Yu"},"publisher":{"@type":"Organization","name":"YCX's Blog","logo":{"@type":"ImageObject","url":"https://yuchenxi2000.github.io/2026/06/11/Vibe%20Coding%E5%88%9D%E6%8E%A2/android-chrome-512x512.png"}},"description":"氛围编程这个概念应该前段时间就有了，但现在才开始尝试，估计因为本人写代码能力比较强，我的一个朋友就选择写代码直接交给AI。当时我嗤之以鼻，因为我觉得AI只能写现有的代码，无法写当时我在开发的科研用软件包（这个软件包是hafnon，一个用声子模式展开研究氧化铪铁电的Python包）。事实是我想对了一部分，AI的确不太懂需求这方面，但我发现AI对于代码风格的把控水平还算可以，这之前没有意料到。 最初我"}</script><link rel="canonical" href="https://yuchenxi2000.github.io/2026/06/11/Vibe%20Coding%E5%88%9D%E6%8E%A2/"><link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link data-pjax rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link data-pjax rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!--!--><!-- hexo injector head_end start --><script>
+  (function () {
+      function switchTab() {
+          if (!location.hash) {
+            return;
+          }
+
+          const id = '#' + CSS.escape(location.hash.substring(1));
+          const $tabMenu = document.querySelector(`.tabs a[href="${id}"]`);
+          if (!$tabMenu) {
+            return;
+          }
+
+          const $tabMenuContainer = $tabMenu.parentElement.parentElement;
+          Array.from($tabMenuContainer.children).forEach($menu => $menu.classList.remove('is-active'));
+          Array.from($tabMenuContainer.querySelectorAll('a'))
+              .map($menu => document.getElementById($menu.getAttribute("href").substring(1)))
+              .forEach($content => $content.classList.add('is-hidden'));
+
+          if ($tabMenu) {
+              $tabMenu.parentElement.classList.add('is-active');
+          }
+          const $activeTab = document.querySelector(id);
+          if ($activeTab) {
+              $activeTab.classList.remove('is-hidden');
+          }
+      }
+      switchTab();
+      window.addEventListener('hashchange', switchTab, false);
+  })();
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 8.1.1"></head><body class="is-1-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-12"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2026-06-11T15:59:31.000Z" title="2026/6/11 23:59:31">2026-06-11</time>发表</span><span class="level-item">7 分钟读完 (大约1040个字)</span></div></div><h1 class="title is-3 is-size-4-mobile">Vibe Coding初探</h1><div class="content"><p>氛围编程这个概念应该前段时间就有了，但现在才开始尝试，估计因为本人写代码能力比较强，我的一个朋友就选择写代码直接交给AI。当时我嗤之以鼻，因为我觉得AI只能写现有的代码，无法写当时我在开发的科研用软件包（这个软件包是<a target="_blank" rel="noopener" href="https://github.com/yuchenxi2000/hafnon">hafnon</a>，一个用声子模式展开研究氧化铪铁电的Python包）。事实是我想对了一部分，AI的确不太懂需求这方面，但我发现AI对于代码风格的把控水平还算可以，这之前没有意料到。</p>
+<p>最初我给AI的任务只是将它作为高级的搜索引擎在用。比如不知道Python的一些库的用法，往常是浏览器里搜，现在直接问AI更省事，何况AI不懂的它也能联网搜。当时用的还是DeepSeek的App版，毕竟只是查查资料。</p>
+<p>但后来我开始让AI帮生成代码。原因是我在前段时间短暂回坑PvZ键控期间（<a href="/2026/03/28/PvZ%E9%AB%98%E7%B2%BE%E5%BA%A6%E9%94%AE%E6%8E%A7%E6%A1%86%E6%9E%B6AvZ/" title="PvZ高精度键控框架AvZ">PvZ高精度键控框架AvZ</a>），在开发禅境花园自动照料盆栽脚本时，需要键盘输入一个字符时弹出一个窗口。我之前一直用的macOS，Windows不常用并且没有在上面写过代码，于是不懂Windows窗口系统，于是让AI写这段代码。事实证明AI写得还行，只不过有一些语法错误，纠正了就能跑通。于是后面遇到编程知识盲区就让AI处理，包括开发植物娘修改器时（<a href="/2026/06/11/%E6%A4%8D%E7%89%A9%E5%A8%98%E5%A4%A7%E6%88%98%E5%83%B5%E5%B0%B8%E4%BF%AE%E6%94%B9%E5%99%A8/" title="植物娘大战僵尸修改器">植物娘大战僵尸修改器</a>），C#、IronPython、MonoMod相关都是问AI的。虽然网页版也够用，毕竟发挥我个人主观能动性部分偏多，最多让AI写个demo然后我照着改。</p>
+<p>最近觉得应该尝试一下Coding Agent，毕竟有周围人在用。使用了Claude Code+DeepSeek v4 Pro的方案，因为听说Harness比模型的能力更重要。尝试让AI帮我的植物娘修改器新增了功能，帮我翻新VaspAuto代码（见<a href="/2026/06/11/VaspAuto%EF%BC%9A%E8%B6%85%E7%AE%97%E8%87%AA%E5%8A%A8%E6%8C%82%E6%9C%BA%E6%A1%86%E6%9E%B6/" title="VaspAuto：超算自动挂机框架">VaspAuto：超算自动挂机框架</a>），感觉还可以。目前我觉得AI擅长的是推理、理解代码用途，比如让AI查反编译搞清游戏内某个方法的用途，这种任务虽然自己能做，但是得分析半天，而AI在这上面效率很高。另一个擅长的是做小修改，添加一些新功能。此外，AI对代码风格、仓库文件结构的管理还行，能够瞬间把乱七八糟的代码变得像样子一些。但是AI不擅长的是大的代码重构和理解需求。做大的代码重构时，AI只能说尽量保证不出错，但还是有AI改完我得亲手改一遍的情况，明明拷贝粘贴一下，然后改改就行，可能差距就在“改改”上面。还有AI重构得不够优雅，只能说只满足你提的要求，但是隐含的意思一个都没做到，让人感觉明明再进一步就能做得更好，但是就是不做，有偷懒嫌疑。差距最大的是AI对需求的理解。你让AI做一个新功能，AI只能说满足功能需求就行，它不会长远地考虑，实现也不优雅，只能说勉强够用。AI并不懂你需要什么，在需求上只能自己想清楚以后给AI一条条框死，防止AI瞎整。</p>
+<p>这些就是目前的感受，如果后面有了新的体会可能会新写一篇。</p>
+</div><div class="article-licensing box"><div class="licensing-title"><p>Vibe Coding初探</p><p><a href="https://yuchenxi2000.github.io/2026/06/11/Vibe Coding初探/">https://yuchenxi2000.github.io/2026/06/11/Vibe Coding初探/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>Chenxi Yu</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2026-06-11</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2026-06-12</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2026/06/11/VaspAuto%EF%BC%9A%E8%B6%85%E7%AE%97%E8%87%AA%E5%8A%A8%E6%8C%82%E6%9C%BA%E6%A1%86%E6%9E%B6/"><span class="level-item">VaspAuto：超算自动挂机框架</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><!--!--><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a><p class="is-size-7"><span>&copy; 2026 Chenxi Yu</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="fab fa-creative-commons-nc"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/yuchenxi2000"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script data-pjax src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script data-pjax src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "此网站使用Cookie来改善您的体验。",
+          dismiss: "知道了！",
+          allow: "允许使用Cookie",
+          deny: "拒绝",
+          link: "了解更多",
+          policy: "Cookie政策",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js"></script><script src="/js/pjax.js"></script><!--!--><script type="text/javascript" id="MathJax-script" async>MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      },
+      svg: {
+        fontCache: 'global'
+      },
+      chtml: {
+        matchFontHeight: false
+      }
+    };</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js"></script><!--!--><!--!--><script data-pjax src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script data-pjax src="/js/insight.js" defer></script><script data-pjax>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script></body></html>
