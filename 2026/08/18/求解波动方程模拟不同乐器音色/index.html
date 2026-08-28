@@ -1,0 +1,584 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>求解波动方程模拟不同乐器音色 - YCX&#039;s Blog</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="YCX&#039;s Blog"><meta name="msapplication-TileImage" content="favicon.ico"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="YCX&#039;s Blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="起因是看了一个视频，展示的是高速摄像机下琴弦（拨弦乐器）的振动。不同于想象中的按正弦波振动，从静止状态下（琴弦被拉成两条线段）释放的琴弦的振动过程会保留初始状态下的尖点。我当时就想，能否从第一性原理出发，只通过求解波动方程来模拟弦的振动，以及模拟不同乐器的声音？ 一开始想象出的模型是简单的一维振动方程：  $$ \mu\frac{\partial^2u}{\partial t^2} &amp;#x3D;T\frac"><meta property="og:type" content="blog"><meta property="og:title" content="求解波动方程模拟不同乐器音色"><meta property="og:url" content="https://yuchenxi2000.github.io/2026/08/18/%E6%B1%82%E8%A7%A3%E6%B3%A2%E5%8A%A8%E6%96%B9%E7%A8%8B%E6%A8%A1%E6%8B%9F%E4%B8%8D%E5%90%8C%E4%B9%90%E5%99%A8%E9%9F%B3%E8%89%B2/"><meta property="og:site_name" content="YCX&#039;s Blog"><meta property="og:description" content="起因是看了一个视频，展示的是高速摄像机下琴弦（拨弦乐器）的振动。不同于想象中的按正弦波振动，从静止状态下（琴弦被拉成两条线段）释放的琴弦的振动过程会保留初始状态下的尖点。我当时就想，能否从第一性原理出发，只通过求解波动方程来模拟弦的振动，以及模拟不同乐器的声音？ 一开始想象出的模型是简单的一维振动方程：  $$ \mu\frac{\partial^2u}{\partial t^2} &amp;#x3D;T\frac"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://yuchenxi2000.github.io/img/og_image.png"><meta property="article:published_time" content="2026-08-18T09:50:28.000Z"><meta property="article:modified_time" content="2026-08-28T14:28:07.699Z"><meta property="article:author" content="Chenxi Yu"><meta property="article:tag" content="物理"><meta property="article:tag" content="数学"><meta property="article:tag" content="音乐"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://yuchenxi2000.github.io/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://yuchenxi2000.github.io/2026/08/18/%E6%B1%82%E8%A7%A3%E6%B3%A2%E5%8A%A8%E6%96%B9%E7%A8%8B%E6%A8%A1%E6%8B%9F%E4%B8%8D%E5%90%8C%E4%B9%90%E5%99%A8%E9%9F%B3%E8%89%B2/"},"headline":"求解波动方程模拟不同乐器音色","image":["https://yuchenxi2000.github.io/img/og_image.png"],"datePublished":"2026-08-18T09:50:28.000Z","dateModified":"2026-08-28T14:28:07.699Z","author":{"@type":"Person","name":"Chenxi Yu"},"publisher":{"@type":"Organization","name":"YCX's Blog","logo":{"@type":"ImageObject","url":"https://yuchenxi2000.github.io/2026/08/18/%E6%B1%82%E8%A7%A3%E6%B3%A2%E5%8A%A8%E6%96%B9%E7%A8%8B%E6%A8%A1%E6%8B%9F%E4%B8%8D%E5%90%8C%E4%B9%90%E5%99%A8%E9%9F%B3%E8%89%B2/android-chrome-512x512.png"}},"description":"起因是看了一个视频，展示的是高速摄像机下琴弦（拨弦乐器）的振动。不同于想象中的按正弦波振动，从静止状态下（琴弦被拉成两条线段）释放的琴弦的振动过程会保留初始状态下的尖点。我当时就想，能否从第一性原理出发，只通过求解波动方程来模拟弦的振动，以及模拟不同乐器的声音？ 一开始想象出的模型是简单的一维振动方程：  $$ \\mu\\frac{\\partial^2u}{\\partial t^2} &#x3D;T\\frac"}</script><link rel="canonical" href="https://yuchenxi2000.github.io/2026/08/18/%E6%B1%82%E8%A7%A3%E6%B3%A2%E5%8A%A8%E6%96%B9%E7%A8%8B%E6%A8%A1%E6%8B%9F%E4%B8%8D%E5%90%8C%E4%B9%90%E5%99%A8%E9%9F%B3%E8%89%B2/"><link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link data-pjax rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link data-pjax rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!--!--><!-- hexo injector head_end start --><script>
+  (function () {
+      function switchTab() {
+          if (!location.hash) {
+            return;
+          }
+
+          const id = '#' + CSS.escape(location.hash.substring(1));
+          const $tabMenu = document.querySelector(`.tabs a[href="${id}"]`);
+          if (!$tabMenu) {
+            return;
+          }
+
+          const $tabMenuContainer = $tabMenu.parentElement.parentElement;
+          Array.from($tabMenuContainer.children).forEach($menu => $menu.classList.remove('is-active'));
+          Array.from($tabMenuContainer.querySelectorAll('a'))
+              .map($menu => document.getElementById($menu.getAttribute("href").substring(1)))
+              .forEach($content => $content.classList.add('is-hidden'));
+
+          if ($tabMenu) {
+              $tabMenu.parentElement.classList.add('is-active');
+          }
+          const $activeTab = document.querySelector(id);
+          if ($activeTab) {
+              $activeTab.classList.remove('is-hidden');
+          }
+      }
+      switchTab();
+      window.addEventListener('hashchange', switchTab, false);
+  })();
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 8.1.1"></head><body class="is-1-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-12"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2026-08-18T09:50:28.000Z" title="8/18/2026, 5:50:28 PM">2026-08-18</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E9%9F%B3%E4%B9%90/">音乐</a></span><span class="level-item">29 分钟读完 (大约4351个字)</span></div></div><h1 class="title is-3 is-size-4-mobile">求解波动方程模拟不同乐器音色</h1><div class="content"><p>起因是看了一个视频，展示的是高速摄像机下琴弦（拨弦乐器）的振动。不同于想象中的按正弦波振动，从静止状态下（琴弦被拉成两条线段）释放的琴弦的振动过程会保留初始状态下的尖点。我当时就想，能否从第一性原理出发，只通过求解波动方程来模拟弦的振动，以及模拟不同乐器的声音？</p>
+<p>一开始想象出的模型是简单的一维振动方程：</p>
+<div>
+$$
+\mu\frac{\partial^2u}{\partial t^2}
+=T\frac{\partial^2u}{\partial x^2}
+\tag{1}
+$$
+</div>
+
+<p>设弦的坐标范围为 $x\in[0,a]$ ， $u(x,t)$ 表示横向位移， $\mu$ 表示线密度， $T$ 表示张力。</p>
+<p>对于拨弦乐器，我们可以假设弦被拉成两个相连线段，然后从静止释放。而对于击弦乐器（钢琴），一开始想的是用指定初速度的方式进行模拟，这样两类乐器都能用一种方式描述，只是初值条件不同。</p>
+<p>虽然后来被证明最初的模型对拨弦乐器较准确，对击弦乐器不准确；但这里还是给出拨弦乐器的求解过程。</p>
+<p>假设弦被手指拉离平衡位置，从静止开始自由振动，于是有如下初值条件：</p>
+<div>
+$$
+\begin{aligned}
+u(x,0)&=\begin{cases}
+\cfrac{h}{b}x \quad 0 \leq x \le b \\
+\cfrac{ah}{a-b}-\cfrac{h}{a-b}x \quad b \le x \leq a \\
+\end{cases} \\
+\cfrac{\partial}{\partial t} u(x,0)&=0
+\end{aligned}
+\tag{2}
+$$
+</div>
+
+<p>用分离变量&#x2F;傅立叶展开方法求解，为此先计算两个必要的积分：</p>
+<div>
+$$
+\int_0^a u(x,0)\sin\cfrac{n \pi x}{a} \mathrm{d}x
+= \frac{a^{3} h}{n^{2} \pi^{2} b \left(a - b\right)} \sin{\left(\frac{\pi b n}{a} \right)}
+\tag{3}
+$$
+</div>
+
+<div>
+$$
+\int_0^a \sin^2\cfrac{n \pi x}{a} \mathrm{d}x = \cfrac{a}{2}
+\tag{4}
+$$
+</div>
+
+<p>由此可将初值展开为正弦级数：</p>
+<div>
+$$
+u(x,0) = \sum_{n=1}^{\infty} \frac{2a^{2} h}{n^{2} \pi^{2} b \left(a - b\right)} \sin{\left(\frac{n\pi b}{a} \right)} \sin\cfrac{n \pi x}{a}
+\tag{5}
+$$
+</div>
+
+<p>得到波动方程的解</p>
+<div>
+$$
+u(x,t) = \sum_{n=1}^{\infty} \frac{2a^{2} h}{n^{2} \pi^{2} b \left(a - b\right)} \sin{\left(\frac{n\pi b}{a} \right)} \sin\cfrac{n \pi x}{a} \cos \cfrac{n\pi ct}{a}
+\tag{6}
+$$
+</div>
+
+<p>由求解得到波形导出的声音和现实乐器符合地较好，唯一缺失的是阻尼带来的声音衰减。</p>
+<p>而击弦模型与现实乐器相差较多，因此让 GPT 分析了原因。GPT 认为原因是缺少弦的刚度、初始速度不合理。查找的文献里面，琴弦的初始速度不是直接给定的量，而是通过和琴槌的耦合决定。或者说需要同时考虑琴槌-琴弦系统才能模拟钢琴的音效。我不太懂如何通过求解得到的波形导出音频文件，于是让 GPT 帮忙写代码，顺便改进两个模型，代码在倒数第二节（参考文献前）。下面两节描述改进后的模型，对拨弦模型的改进是增加了阻尼；对击弦模型的改进是增加刚度、阻尼以及单一波动方程改成琴槌-琴弦耦合方程，由 GPT 生成，经检查基本原理没什么问题。</p>
+<h2 id="拨弦模型：有阻尼柔性琴弦"><a href="#拨弦模型：有阻尼柔性琴弦" class="headerlink" title="拨弦模型：有阻尼柔性琴弦"></a>拨弦模型：有阻尼柔性琴弦</h2><p>三角形初位移已经能够较好地描述手指、拨片或羽管缓慢拉弦并快速释放时的状态，但无阻尼波动方程会使各阶模态永久振动。改进模型保留三角形初位移和零初速度，只给柔弦加入一个线性基础阻尼；暂不考虑弯曲刚度，也不显式求解拨弦装置与弦的接触过程。</p>
+<h3 id="有单一阻尼的柔弦方程"><a href="#有单一阻尼的柔弦方程" class="headerlink" title="有单一阻尼的柔弦方程"></a>有单一阻尼的柔弦方程</h3><p>弦满足</p>
+<div>
+$$
+\mu\frac{\partial^2u}{\partial t^2}
+=T\frac{\partial^2u}{\partial x^2}
+-2\mu\sigma\frac{\partial u}{\partial t},
+\tag{7}
+$$
+</div>
+
+<p>并采用固定端边界条件</p>
+<div>
+$$
+u(0,t)=u(a,t)=0.
+\tag{8}
+$$
+</div>
+
+<h3 id="三角形释放状态"><a href="#三角形释放状态" class="headerlink" title="三角形释放状态"></a>三角形释放状态</h3><p>设拨弦位置为 $x&#x3D;b$ ，释放位移为 $h$ ，则</p>
+<div>
+$$
+u(x,0)=
+\begin{cases}
+\dfrac{h}{b}x,
+&0\leq x\leq b,\\[6pt]
+\dfrac{h(a-x)}{a-b},
+&b\leq x\leq a,
+\end{cases}
+\tag{9}
+$$
+</div>
+
+<div>
+$$
+u_t(x,0)=0.
+\tag{10}
+$$
+</div>
+
+<h3 id="模态展开和带阻尼解析解"><a href="#模态展开和带阻尼解析解" class="headerlink" title="模态展开和带阻尼解析解"></a>模态展开和带阻尼解析解</h3><p>定义</p>
+<div>
+$$
+k_n=\frac{n\pi}{a},
+\qquad
+c=\sqrt{\frac{T}{\mu}},
+\qquad
+\omega_n=ck_n,
+\tag{11}
+$$
+</div>
+
+<p>并展开</p>
+<span id="more"></span>
+
+<div>
+$$
+u(x,t)=\sum_{n=1}^{\infty}q_n(t)\sin(k_nx).
+\tag{12}
+$$
+</div>
+
+<p>三角形初位移的第 $n$ 阶模态系数为</p>
+<div>
+$$
+A_n=q_n(0)
+=\frac{2a^2h}{n^2\pi^2b(a-b)}
+\sin\left(\frac{n\pi b}{a}\right).
+\tag{13}
+$$
+</div>
+
+<p>模态方程为</p>
+<div>
+$$
+\ddot q_n+2\sigma\dot q_n+\omega_n^2q_n=0.
+\tag{14}
+$$
+</div>
+
+<p>对于欠阻尼情形 $\sigma\lt \omega_n$ ，令</p>
+<div>
+$$
+\Omega_n=\sqrt{\omega_n^2-\sigma^2},
+\tag{15}
+$$
+</div>
+
+<p>则满足 $q_n(0)&#x3D;A_n$ 和 $\dot q_n(0)&#x3D;0$ 的解为</p>
+<div>
+$$
+q_n(t)=A_ne^{-\sigma t}
+\left[
+\cos(\Omega_nt)
++\frac{\sigma}{\Omega_n}\sin(\Omega_nt)
+\right].
+\tag{16}
+$$
+</div>
+
+<p>与在无阻尼解外部直接乘经验包络不同，这里求解的是带阻尼模态方程，并严格保持零初速度条件。</p>
+<h3 id="用-T-60-指定衰减"><a href="#用-T-60-指定衰减" class="headerlink" title="用 $T_{60}$ 指定衰减"></a>用 $T_{60}$ 指定衰减</h3><p> $T_{60}$ 表示模态振幅下降 $60,\mathrm{dB}$ ，即下降到初始值的 $10^{-3}$ ，所需的时间。对于包络 $e^{-\sigma t}$ ，有</p>
+<div>
+$$
+\sigma=\frac{3\ln10}{T_{60}}.
+\tag{17}
+$$
+</div>
+
+<p>当前实现默认使用 $T_{60}&#x3D;3.5,\mathrm{s}$ 。</p>
+<h3 id="琴桥输出"><a href="#琴桥输出" class="headerlink" title="琴桥输出"></a>琴桥输出</h3><p>忽略弯曲刚度时，右端琴桥横向反力为</p>
+<div>
+$$
+F_{\mathrm{bridge}}(t)
+=T u_x(a,t)
+=T\sum_{n=1}^{\infty}k_n(-1)^nq_n(t),
+\tag{18}
+$$
+</div>
+
+<p>整体正负号只取决于力方向约定。音频合成时使用低截止频率高通滤波器移除释放前的准静态琴桥力；该滤波属于音频后处理，不是琴弦阻尼。</p>
+<h2 id="击弦模型：有限接触琴槌与有阻尼刚性弦"><a href="#击弦模型：有限接触琴槌与有阻尼刚性弦" class="headerlink" title="击弦模型：有限接触琴槌与有阻尼刚性弦"></a>击弦模型：有限接触琴槌与有阻尼刚性弦</h2><p>击弦模型将琴槌简化为仅有一个平动自由度的质点，用有限宽度的接触分布将总接触力施加到弦上，并加入弦的弯曲刚度和频率相关阻尼。暂时不考虑毡层阻尼。</p>
+<h3 id="带中央平台的升余弦接触面"><a href="#带中央平台的升余弦接触面" class="headerlink" title="带中央平台的升余弦接触面"></a>带中央平台的升余弦接触面</h3><blockquote>
+<p>后面感觉不带中央平台是对的，钢琴的琴槌一般是尖的，但既然可以选择 $\omega_0&#x3D;0$ ，那么就留着了</p>
+</blockquote>
+<p>设琴槌中心击弦位置为 $x_h$ ，接触面的总宽度为 $w$ ，中央平台宽度为 $w_0$ ，其中</p>
+<div>
+$$
+0\leq w_0\lt w,\qquad
+\frac{w}{2}\lt x_h\lt a-\frac{w}{2}.
+\tag{19}
+$$
+</div>
+
+<p>记 $\xi&#x3D;x-x_h$ ，定义归一化的接触分布</p>
+<div>
+$$
+g(\xi)=\frac{2}{w+w_0}
+\begin{cases}
+1,
+& \vert \xi\vert \leq \cfrac{w_0}{2},\\[6pt]
+\cfrac{1}{2}\left[
+1+\cos\left(
+\pi\cfrac{2\vert \xi\vert -w_0}{w-w_0}
+\right)
+\right],
+& \cfrac{w_0}{2}\lt \vert \xi\vert \lt \cfrac{w}{2},\\[8pt]
+0,
+& \vert \xi\vert \geq \cfrac{w}{2}.
+\end{cases}
+\tag{20}
+$$
+</div>
+
+<p>该分布满足</p>
+<div>
+$$
+\int_0^a g(x-x_h)\,\mathrm{d}x=1.
+\tag{21}
+$$
+</div>
+
+<p>因此 $F_h(t)$ 表示琴槌施加的总接触力，而 $g(x-x_h)F_h(t)$ 表示弦上的单位长度受力。当 $w_0&#x3D;0$ 时，上式退化为没有平台的纯升余弦分布；取 $w_0\gt 0$ 可以描述琴槌毡被压平后出现的近似等压中央区域。 $w_0&#x2F;w$ 可以作为待定的音色参数，而不必预先假定平台一定存在。</p>
+<h3 id="琴槌与有阻尼刚性弦的耦合方程"><a href="#琴槌与有阻尼刚性弦的耦合方程" class="headerlink" title="琴槌与有阻尼刚性弦的耦合方程"></a>琴槌与有阻尼刚性弦的耦合方程</h3><p>设 $\mu$ 为弦的线密度， $T$ 为张力， $E$ 为杨氏模量， $I$ 为弦截面的面积惯性矩，则 $EI$ 为弦的弯曲刚度。采用包含基础损耗和频率相关损耗的两参数阻尼模型，弦在琴槌接触期间满足</p>
+<div>
+$$
+\mu\cfrac{\partial^2u}{\partial t^2}
+=T\cfrac{\partial^2u}{\partial x^2}
+-EI\cfrac{\partial^4u}{\partial x^4}
+-2\mu\sigma_0\cfrac{\partial u}{\partial t}
++2\mu\sigma_1\cfrac{\partial^3u}{\partial t\partial x^2}
++g(x-x_h)F_h(t).
+\tag{22}
+$$
+</div>
+
+<p> $\sigma_0$ 控制近似与频率无关的基础衰减， $\sigma_1$ 使空间变化更快的高阶模态具有更强的衰减。这里不加入琴槌毡的阻尼，因而琴槌接触律仍采用无耗散的非线性弹簧模型。</p>
+<p>为了继续使用正弦模态展开，这里采用简支边界条件</p>
+<div>
+$$
+u(0,t)=u(a,t)=0,
+\qquad
+u_{xx}(0,t)=u_{xx}(a,t)=0.
+\tag{23}
+$$
+</div>
+
+<p>该边界条件是保留解析正弦模态的理想化选择；真实钢琴的琴桥和弦枕具有有限机械阻抗。</p>
+<p>用 $y(t)$ 表示琴槌质点沿击弦方向的位移， $m_h$ 表示琴槌的等效质量。 $y$ 只依赖时间，并不表示一个连续的琴槌形变场。接触面对应的等效弦位移定义为</p>
+<div>
+$$
+\overline{u}_h(t)
+=\int_0^a g(x-x_h)u(x,t)\,\mathrm{d}x.
+\tag{24}
+$$
+</div>
+
+<p>琴槌毡的等效压缩量为</p>
+<div>
+$$
+\Delta(t)=y(t)-\overline{u}_h(t),
+\tag{25}
+$$
+</div>
+
+<p>接触力采用非线性弹簧模型</p>
+<div>
+$$
+F_h(t)=K[\Delta(t)]_+^p,
+\qquad
+[z]_+=\max(z,0),
+\qquad p\gt 1.
+\tag{26}
+$$
+</div>
+
+<p>琴槌质点满足牛顿第二定律</p>
+<div>
+$$
+m_h\cfrac{\mathrm{d}^2y}{\mathrm{d}t^2}=-F_h(t).
+\tag{27}
+$$
+</div>
+
+<p>这里使用同一个 $g$ 对琴槌总力进行空间分配，并对弦位移进行加权汇总，从而保持琴槌与弦之间的作用和反作用相互一致。初始时弦处于静止状态，琴槌刚刚接触弦并具有速度 $V_h$ ：</p>
+<div>
+$$
+u(x,0)=0,
+\qquad
+u_t(x,0)=0,
+\qquad
+y(0)=0,
+\qquad
+\dot y(0)=V_h.
+\tag{28}
+$$
+</div>
+
+<h3 id="模态方程"><a href="#模态方程" class="headerlink" title="模态方程"></a>模态方程</h3><p>令</p>
+<div>
+$$
+k_n=\frac{n\pi}{a},
+\qquad
+u(x,t)=\sum_{n=1}^{\infty}q_n(t)\sin(k_nx).
+\tag{29}
+$$
+</div>
+
+<p>定义接触分布与第 $n$ 阶弦模态的耦合系数</p>
+<div>
+$$
+G_n=\int_0^a g(x-x_h)\sin(k_nx)\,\mathrm{d}x.
+\tag{30}
+$$
+</div>
+
+<p>于是</p>
+<div>
+$$
+\overline{u}_h(t)=\sum_{n=1}^{\infty}G_nq_n(t),
+\tag{31}
+$$
+</div>
+
+<p>并且接触阶段的模态方程为</p>
+<div>
+$$
+\ddot q_n(t)+2\alpha_n\dot q_n(t)+\omega_n^2q_n(t)
+=\frac{2G_n}{\mu a}F_h(t),
+\tag{32}
+$$
+</div>
+
+<p>其中</p>
+<div>
+$$
+\omega_n^2
+=\frac{T}{\mu}k_n^2
++\frac{EI}{\mu}k_n^4.
+\tag{33}
+$$
+</div>
+
+
+<div>
+$$
+\alpha_n=\sigma_0+\sigma_1k_n^2.
+\tag{34}
+$$
+</div>
+
+<p>因此各阶固有频率不再严格等于基频的整数倍。 $g$ 决定琴槌有限接触宽度对不同模态的空间滤波， $F_h(t)$ 则决定有限接触时间产生的时间滤波。</p>
+<p>上述模态方程、琴槌运动方程和非线性接触力共同组成接触阶段需要求解的常微分方程组。数值计算时只需截取有限个模态。</p>
+<h3 id="琴槌分离后的自由振动"><a href="#琴槌分离后的自由振动" class="headerlink" title="琴槌分离后的自由振动"></a>琴槌分离后的自由振动</h3><p>设 $t_s$ 为琴槌毡压缩量在接触后第一次回到零、并开始减小的时刻。此后</p>
+<div>
+$$
+\Delta(t)\leq0,
+\qquad
+F_h(t)=0,
+\qquad t\geq t_s.
+\tag{35}
+$$
+</div>
+
+<p>每个模态随即独立地进行有阻尼自由振动。对于通常成立的欠阻尼情形 $\alpha_n\lt \omega_n$ ，定义</p>
+<div>
+$$
+\Omega_n=\sqrt{\omega_n^2-\alpha_n^2},
+\qquad
+\tau=t-t_s,
+\tag{36}
+$$
+</div>
+
+<p>则</p>
+<div>
+$$
+q_n(t)=e^{-\alpha_n\tau}
+\left\{
+q_n(t_s)\cos(\Omega_n\tau)
++\frac{\dot q_n(t_s)+\alpha_nq_n(t_s)}{\Omega_n}
+\sin(\Omega_n\tau)
+\right\},
+\qquad t\geq t_s.
+\tag{37}
+$$
+</div>
+
+<p>因此弦刚度通过 $\omega_n$ 影响后段自由振动的非谐频率，阻尼则通过 $e^{-\alpha_n\tau}$ 控制各阶模态的衰减包络。由于 $\alpha_n&#x3D;\sigma_0+\sigma_1k_n^2$ ，高阶模态通常具有更短的衰减时间。</p>
+<p>若以右端琴桥的横向反力作为音板的输入，在当前有阻尼刚性弦模型下可取</p>
+<div>
+$$
+F_{\mathrm{bridge}}(t)
+\propto
+T u_x(a,t)
+-EIu_{xxx}(a,t)
++2\mu\sigma_1u_{tx}(a,t),
+\tag{38}
+$$
+</div>
+
+<p>其整体正负号只取决于所选的力方向约定。这里的琴桥反力仍然只是音板的激励；得到最终辐射声还需要进一步考虑音板的传递特性。</p>
+<h3 id="数值求解"><a href="#数值求解" class="headerlink" title="数值求解"></a>数值求解</h3><p>对于当前的均匀弦、简支边界和固定接触分布，使用模态展开进行求解，因为弦刚度和两种阻尼在模态空间中都是对角的，数值计算时只需截取前 $N$ 个模态：</p>
+<div>
+$$
+\ddot{\boldsymbol q}
++2\boldsymbol A\dot{\boldsymbol q}
++\boldsymbol W\boldsymbol q
+=\frac{2F_h}{\mu a}\boldsymbol G,
+\tag{39}
+$$
+</div>
+
+<p>其中 $\boldsymbol A&#x3D;\operatorname{diag}(\alpha_n)$ 、 $\boldsymbol W&#x3D;\operatorname{diag}(\omega_n^2)$ ，非线性只通过</p>
+<div>
+$$
+F_h=K\left[y-{\boldsymbol G}^{\mathsf T}\boldsymbol q\right]_{+}^p
+\tag{40}
+$$
+</div>
+
+<p>进入系统。连同琴槌的 $y$ 和 $\dot y$ ，这是一个维数为 $2N+2$ 的常微分方程组，可以在接触阶段使用常规数值积分；琴槌分离后则可以直接使用上面的有阻尼自由振动解。</p>
+<h2 id="实现细节"><a href="#实现细节" class="headerlink" title="实现细节"></a>实现细节</h2><h3 id="使用方式"><a href="#使用方式" class="headerlink" title="使用方式"></a>使用方式</h3><p>下载本文附带的三个 python 脚本：</p>
+<ul>
+<li><p>对拨弦乐器的模拟 <a href="/2026/08/18/%E6%B1%82%E8%A7%A3%E6%B3%A2%E5%8A%A8%E6%96%B9%E7%A8%8B%E6%A8%A1%E6%8B%9F%E4%B8%8D%E5%90%8C%E4%B9%90%E5%99%A8%E9%9F%B3%E8%89%B2/simulate_plucked_string_modal.py" title="simulate_plucked_string_modal.py">simulate_plucked_string_modal.py</a> 。</p>
+</li>
+<li><p>对击弦乐器的模拟 <a href="/2026/08/18/%E6%B1%82%E8%A7%A3%E6%B3%A2%E5%8A%A8%E6%96%B9%E7%A8%8B%E6%A8%A1%E6%8B%9F%E4%B8%8D%E5%90%8C%E4%B9%90%E5%99%A8%E9%9F%B3%E8%89%B2/simulate_hammer_string_modal.py" title="simulate_hammer_string_modal.py">simulate_hammer_string_modal.py</a> 。</p>
+</li>
+<li><p>实现音高输入和不同律制 <a href="/2026/08/18/%E6%B1%82%E8%A7%A3%E6%B3%A2%E5%8A%A8%E6%96%B9%E7%A8%8B%E6%A8%A1%E6%8B%9F%E4%B8%8D%E5%90%8C%E4%B9%90%E5%99%A8%E9%9F%B3%E8%89%B2/musical_pitch.py" title="musical_pitch.py">musical_pitch.py</a> 。</p>
+</li>
+</ul>
+<p>这三个文件应该被放在同一个文件夹，且 python 路径应该为该文件夹（只要在当前目录运行即可）。</p>
+<h3 id="弦长、弦半径、张力设置"><a href="#弦长、弦半径、张力设置" class="headerlink" title="弦长、弦半径、张力设置"></a>弦长、弦半径、张力设置</h3><p>脚本默认使用张力调音高，但这是不正确的。选择张力调音高单纯为了实现方便。</p>
+<p>经过对C的测试，默认参数下C3～C5表现良好，但C2出现类似敲钟的声音，C6声音太闷。根源是不能只通过调张力来调音。C2在钢琴低音区，弦比中音区、高音区都长，并且通过缠弦方式变相增加等效线密度；而C6可以通过减小弦长、减小半径的方式改善音色。比如C2的可能模拟参数：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">python3 simulate_hammer_string_modal.py \</span><br><span class="line">  --note C2 \</span><br><span class="line">  --length 1.3 \</span><br><span class="line">  --string-radius 0.0005 \</span><br><span class="line">  --steel-density 23550 \</span><br><span class="line">  --hammer-mass 0.012 \</span><br><span class="line">  --output audio_output/C2_wound_proxy.wav</span><br></pre></td></tr></table></figure>
+
+<h3 id="音高输入和律制"><a href="#音高输入和律制" class="headerlink" title="音高输入和律制"></a>音高输入和律制</h3><p>两个求解器都支持两种等效的基频输入方式：</p>
+<ol>
+<li>用<code>--fundamental</code>直接给定基频，单位为Hz；</li>
+<li>用<code>--note</code>给定科学音高记号，例如<code>A3</code>、<code>C#4</code>或<code>Bb3</code>，再由标准音频率和律制换算基频。</li>
+</ol>
+<p><code>--fundamental</code>和<code>--note</code>互斥。使用音名时，<code>--a4-frequency</code>指定标准音A4的频率，默认值为 $440,\mathrm{Hz}$ 。</p>
+<p>默认律制为十二平均律，即<code>--temperament 12tet</code>。设目标音与A4相差 $m$ 个半音，则</p>
+<div>
+$$
+f_1=f_{\mathrm{A4}}2^{m/12}.
+\tag{41}
+$$
+</div>
+
+<p>另外提供：</p>
+<ul>
+<li><code>--temperament just</code>：十二音五限纯律；</li>
+<li><code>--temperament pythagorean</code>：五度相生律；</li>
+<li><code>--temperament quarter-comma-meantone</code>：四分之一音差中庸律；</li>
+<li><code>--tonic</code>：指定表格式纯律或五度相生律的主音，默认为C。</li>
+</ul>
+<p>纯律和五度相生律先根据主音确定音程比例，再整体缩放，使A4严格等于<code>--a4-frequency</code>。这两种表格式律制按十二个音级处理，因此升降号的等音写法映射到同一音级。</p>
+<p>四分之一音差中庸律把纯五度缩窄四分之一纯律音差。若 $p$ 表示调整后的五度频率比，则</p>
+<div>
+$$
+p=\frac{3/2}{(81/80)^{1/4}}=5^{1/4},
+\tag{42}
+$$
+</div>
+
+<p>约为 $696.578$ 音分。连续四个这样的五度减去两个八度，恰好得到纯大三度：</p>
+<div>
+$$
+\frac{p^4}{4}=\frac54.
+\tag{43}
+$$
+</div>
+
+<p>中庸律按照音名拼写沿五度链计算，因此<code>C#</code>与<code>Db</code>不是同一个频率，两者相差约 $41.06$ 音分。该实现仍整体缩放，使A4严格等于标准音频率。</p>
+<p>例如：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">python3 simulate_plucked_string_modal.py --note A3</span><br><span class="line">python3 simulate_hammer_string_modal.py --note C4 --a4-frequency 442</span><br><span class="line">python3 simulate_plucked_string_modal.py --note E4 --temperament just --tonic C</span><br><span class="line">python3 simulate_hammer_string_modal.py --note E4 --temperament quarter-comma-meantone</span><br><span class="line">python3 simulate_hammer_string_modal.py --fundamental 330</span><br></pre></td></tr></table></figure>
+
+<p>音高解析和律制换算的公共实现见 <a href="/2026/08/18/%E6%B1%82%E8%A7%A3%E6%B3%A2%E5%8A%A8%E6%96%B9%E7%A8%8B%E6%A8%A1%E6%8B%9F%E4%B8%8D%E5%90%8C%E4%B9%90%E5%99%A8%E9%9F%B3%E8%89%B2/musical_pitch.py" title="musical_pitch.py">musical_pitch.py</a> 。</p>
+<h3 id="输出增益与音量比较"><a href="#输出增益与音量比较" class="headerlink" title="输出增益与音量比较"></a>输出增益与音量比较</h3><p>两个求解器默认对每次生成的波形分别自动归一化，使峰值达到 $0.92$ 。这种默认设置便于试听并可避免大多数削波，但会消除不同物理参数造成的整体幅度差异，因此不适合直接比较音量。</p>
+<p>需要比较不同参数时，可用<code>--normalization-gain</code>为各次运行指定相同的固定增益。例如：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">python3 simulate_plucked_string_modal.py --note A3 --release-displacement 0.002 --normalization-gain 0.1 --output audio_output/pluck_2mm.wav</span><br><span class="line">python3 simulate_plucked_string_modal.py --note A3 --release-displacement 0.004 --normalization-gain 0.1 --output audio_output/pluck_4mm.wav</span><br></pre></td></tr></table></figure>
+
+<p>此时两次运行都将数值求解得到的琴桥信号直接乘以 $0.1$ ，不会再各自调整到相同峰值。<code>--normalization-gain 1</code>表示不进行幅度缩放；末尾的短淡出仍会保留，以避免音频在截断处产生爆音。</p>
+<p>每个WAV对应的JSON文件会记录：</p>
+<ul>
+<li><code>normalization_mode</code>：<code>automatic</code>或<code>fixed</code>；</li>
+<li><code>normalization_gain</code>：实际采用的增益；</li>
+<li><code>peak_before_gain</code>和<code>peak_after_gain</code>：增益前后的峰值；</li>
+<li><code>clipped_sample_count</code>：写入PCM前超过 $[-1,1]$ 范围的样本数。</li>
+</ul>
+<p>固定增益过大时会发生削波。进行音量比较时，应确保各个结果的<code>clipped_sample_count</code>都为零；若不为零，应对所有对比运行统一减小增益。</p>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ol>
+<li>J. Woodhouse, <em>On the Synthesis of Guitar Plucks</em>, Acta Acustica united with Acustica 90, 928–944 (2004)。</li>
+<li>X. Boutillon, <em>Model for piano hammers: Experimental determination and digital simulation</em>, Journal of the Acoustical Society of America 83(2), 746–754 (1988), <a target="_blank" rel="noopener" href="https://doi.org/10.1121/1.396117">https://doi.org/10.1121/1.396117</a>。</li>
+<li>A. Chaigne and A. Askenfelt, <em>Numerical simulations of piano strings. I. A physical model for a struck string using finite difference methods</em>, Journal of the Acoustical Society of America 95(2), 1112–1118 (1994), <a target="_blank" rel="noopener" href="https://doi.org/10.1121/1.408459">https://doi.org/10.1121/1.408459</a>。</li>
+</ol>
+</div><div class="article-licensing box"><div class="licensing-title"><p>求解波动方程模拟不同乐器音色</p><p><a href="https://yuchenxi2000.github.io/2026/08/18/求解波动方程模拟不同乐器音色/">https://yuchenxi2000.github.io/2026/08/18/求解波动方程模拟不同乐器音色/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>Chenxi Yu</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2026-08-18</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2026-08-28</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/%E7%89%A9%E7%90%86/">物理</a><a class="link-muted mr-2" rel="tag" href="/tags/%E6%95%B0%E5%AD%A6/">数学</a><a class="link-muted mr-2" rel="tag" href="/tags/%E9%9F%B3%E4%B9%90/">音乐</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2026/08/20/%E5%BE%8B%E5%88%B6/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">律制</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2026/06/11/Vibe%20Coding%E5%88%9D%E6%8E%A2/"><span class="level-item">Vibe Coding初探</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><!--!--><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a><p class="is-size-7"><span>&copy; 2026 Chenxi Yu</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="fab fa-creative-commons-nc"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/yuchenxi2000"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script data-pjax src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script data-pjax src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "此网站使用Cookie来改善您的体验。",
+          dismiss: "知道了！",
+          allow: "允许使用Cookie",
+          deny: "拒绝",
+          link: "了解更多",
+          policy: "Cookie政策",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js"></script><script src="/js/pjax.js"></script><!--!--><script type="text/javascript" id="MathJax-script" async>MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      },
+      svg: {
+        fontCache: 'global'
+      },
+      chtml: {
+        matchFontHeight: false
+      }
+    };</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js"></script><!--!--><!--!--><script data-pjax src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script data-pjax src="/js/insight.js" defer></script><script data-pjax>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script></body></html>

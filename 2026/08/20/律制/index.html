@@ -1,0 +1,547 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>律制 - YCX&#039;s Blog</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="YCX&#039;s Blog"><meta name="msapplication-TileImage" content="favicon.ico"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="YCX&#039;s Blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="五度相生律（Pythagorean temperament）^7按照以下五度链构造，五度之间音程 $3&amp;#x2F;2$ （完美五度）  $$ \cdots-B^{\flat}-F-C-G-D-A-E-B-\cdots \tag{1} $$   由于 $3&amp;#x2F;2 \approx 2^{7&amp;#x2F;12}$ ，因此12个五度应该为7个八度，但是两者不严格相等，会多出毕达哥拉斯音差（Pytha"><meta property="og:type" content="blog"><meta property="og:title" content="律制"><meta property="og:url" content="https://yuchenxi2000.github.io/2026/08/20/%E5%BE%8B%E5%88%B6/"><meta property="og:site_name" content="YCX&#039;s Blog"><meta property="og:description" content="五度相生律（Pythagorean temperament）^7按照以下五度链构造，五度之间音程 $3&amp;#x2F;2$ （完美五度）  $$ \cdots-B^{\flat}-F-C-G-D-A-E-B-\cdots \tag{1} $$   由于 $3&amp;#x2F;2 \approx 2^{7&amp;#x2F;12}$ ，因此12个五度应该为7个八度，但是两者不严格相等，会多出毕达哥拉斯音差（Pytha"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://yuchenxi2000.github.io/img/og_image.png"><meta property="article:published_time" content="2026-08-20T04:21:46.000Z"><meta property="article:modified_time" content="2026-08-28T14:34:40.537Z"><meta property="article:author" content="Chenxi Yu"><meta property="article:tag" content="音乐"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://yuchenxi2000.github.io/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://yuchenxi2000.github.io/2026/08/20/%E5%BE%8B%E5%88%B6/"},"headline":"律制","image":["https://yuchenxi2000.github.io/img/og_image.png"],"datePublished":"2026-08-20T04:21:46.000Z","dateModified":"2026-08-28T14:34:40.537Z","author":{"@type":"Person","name":"Chenxi Yu"},"publisher":{"@type":"Organization","name":"YCX's Blog","logo":{"@type":"ImageObject","url":"https://yuchenxi2000.github.io/2026/08/20/%E5%BE%8B%E5%88%B6/android-chrome-512x512.png"}},"description":"五度相生律（Pythagorean temperament）^7按照以下五度链构造，五度之间音程 $3&#x2F;2$ （完美五度）  $$ \\cdots-B^{\\flat}-F-C-G-D-A-E-B-\\cdots \\tag{1} $$   由于 $3&#x2F;2 \\approx 2^{7&#x2F;12}$ ，因此12个五度应该为7个八度，但是两者不严格相等，会多出毕达哥拉斯音差（Pytha"}</script><link rel="canonical" href="https://yuchenxi2000.github.io/2026/08/20/%E5%BE%8B%E5%88%B6/"><link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link data-pjax rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link data-pjax rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!--!--><!-- hexo injector head_end start --><script>
+  (function () {
+      function switchTab() {
+          if (!location.hash) {
+            return;
+          }
+
+          const id = '#' + CSS.escape(location.hash.substring(1));
+          const $tabMenu = document.querySelector(`.tabs a[href="${id}"]`);
+          if (!$tabMenu) {
+            return;
+          }
+
+          const $tabMenuContainer = $tabMenu.parentElement.parentElement;
+          Array.from($tabMenuContainer.children).forEach($menu => $menu.classList.remove('is-active'));
+          Array.from($tabMenuContainer.querySelectorAll('a'))
+              .map($menu => document.getElementById($menu.getAttribute("href").substring(1)))
+              .forEach($content => $content.classList.add('is-hidden'));
+
+          if ($tabMenu) {
+              $tabMenu.parentElement.classList.add('is-active');
+          }
+          const $activeTab = document.querySelector(id);
+          if ($activeTab) {
+              $activeTab.classList.remove('is-hidden');
+          }
+      }
+      switchTab();
+      window.addEventListener('hashchange', switchTab, false);
+  })();
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 8.1.1"></head><body class="is-1-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-12"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2026-08-20T04:21:46.000Z" title="2026/8/20 12:21:46">2026-08-20</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E9%9F%B3%E4%B9%90/">音乐</a></span><span class="level-item">12 分钟读完 (大约1749个字)</span></div></div><h1 class="title is-3 is-size-4-mobile">律制</h1><div class="content"><h2 id="五度相生律（Pythagorean-temperament）-7"><a href="#五度相生律（Pythagorean-temperament）-7" class="headerlink" title="五度相生律（Pythagorean temperament）^7"></a>五度相生律（Pythagorean temperament）<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/499217933">^7</a></h2><p>按照以下五度链构造，五度之间音程 $3&#x2F;2$ （完美五度）</p>
+<div>
+$$
+\cdots-B^{\flat}-F-C-G-D-A-E-B-\cdots
+\tag{1}
+$$
+</div>
+
+<p>由于 $3&#x2F;2 \approx 2^{7&#x2F;12}$ ，因此12个五度应该为7个八度，但是两者不严格相等，会多出毕达哥拉斯音差（Pythagoras comma），为 $3^{12}&#x2F;2^{19} \approx 1.0136$ ，或者 $23.46$ 音分。</p>
+<blockquote>
+<p>设频率比为f，音分定义为 $1200 \times \log_2f$ ，使得十二平均律第 $i$ 个音符相对于C的音分为 $100(i-1)$ 。</p>
+</blockquote>
+<p>这个音差导致五度圈不闭合，如果强行闭合那么最后一个五度比完美五度窄，大小就是毕达哥拉斯音差，这个就是五度相生律的狼五度。</p>
+<h2 id="纯律（just-intonation）-7"><a href="#纯律（just-intonation）-7" class="headerlink" title="纯律（just intonation）^7"></a>纯律（just intonation）<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/499217933">^7</a></h2><table>
+<thead>
+<tr>
+<th>Note</th>
+<th>Freq.</th>
+<th>Cents</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>C♯</td>
+<td>16&#x2F;15</td>
+<td>111.73</td>
+</tr>
+<tr>
+<td>D</td>
+<td>9&#x2F;8</td>
+<td>203.91</td>
+</tr>
+<tr>
+<td>E♭</td>
+<td>6&#x2F;5</td>
+<td>315.64</td>
+</tr>
+<tr>
+<td>E</td>
+<td>5&#x2F;4</td>
+<td>386.31</td>
+</tr>
+<tr>
+<td>F</td>
+<td>4&#x2F;3</td>
+<td>498.04</td>
+</tr>
+<tr>
+<td>F♯</td>
+<td>45&#x2F;32</td>
+<td>590.22</td>
+</tr>
+<tr>
+<td>G</td>
+<td>3&#x2F;2</td>
+<td>701.96</td>
+</tr>
+<tr>
+<td>A♭</td>
+<td>8&#x2F;5</td>
+<td>813.69</td>
+</tr>
+<tr>
+<td>A</td>
+<td>5&#x2F;3</td>
+<td>884.36</td>
+</tr>
+<tr>
+<td>B♭</td>
+<td>9&#x2F;5</td>
+<td>1017.60</td>
+</tr>
+<tr>
+<td>B</td>
+<td>15&#x2F;8</td>
+<td>1088.27</td>
+</tr>
+</tbody></table>
+<p>固定五度为3&#x2F;2，大三度为5&#x2F;4，保证转位（比如 $2C&#x2F;F&#x3D;G&#x2F;C$ ），尽可能让分数分子&#x2F;分母小</p>
+<p>构造过程：</p>
+<p> $G&#x2F;C&#x3D;3&#x2F;2,E&#x2F;C&#x3D;5&#x2F;4$ </p>
+<p> $2C&#x2F;F&#x3D;G&#x2F;C,F&#x3D;4&#x2F;3$ </p>
+<p> $2E&#x2F;A&#x3D;G&#x2F;C,A&#x3D;5&#x2F;3$ </p>
+<p> $B&#x2F;E&#x3D;G&#x2F;C,B&#x3D;15&#x2F;8$ </p>
+<p> $2D&#x2F;G&#x3D;G&#x2F;C,D&#x3D;9&#x2F;8$ </p>
+<p> $E^{\flat}&#x2F;C&#x3D;2C&#x2F;A,E^{\flat}&#x3D;6&#x2F;5$ </p>
+<p> $2C&#x2F;A^{\flat}&#x3D;E&#x2F;C,A^{\flat}&#x3D;8&#x2F;5$ </p>
+<p> $2D&#x2F;B^{\flat}&#x3D;E&#x2F;C,B^{\flat}&#x3D;9&#x2F;5$ </p>
+<p> $C^{\sharp}&#x2F;C&#x3D;2C&#x2F;B^{\flat},C^{\sharp}&#x3D;16&#x2F;15$ </p>
+<p> $2F^{\sharp}&#x2F;B&#x3D;G&#x2F;C,F^{\sharp}&#x3D;45&#x2F;32$ </p>
+<p>纯律的问题是</p>
+<ul>
+<li><p>一个音名可能有多个频率，取决于希望使用哪些和弦</p>
+</li>
+<li><p>无法自由地转调，远关系调的差异过大。</p>
+</li>
+</ul>
+<h2 id="中庸全音律（meantone）-4"><a href="#中庸全音律（meantone）-4" class="headerlink" title="中庸全音律（meantone）^4"></a>中庸全音律（meantone）<a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Meantone_temperament">^4</a></h2><p>五度相生律中五度音程是完美的 $3&#x2F;2$ ，但是大三度和 $5&#x2F;4$ 差距较大。中庸全音律通过调整五度音程，使大三度成为完美的 $5&#x2F;4$ ，调整方法是 $C-G-D-A-E$ 中每个五度减小 $1&#x2F;4$ 个句法音差（syntonic comma<a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Syntonic_comma">^6</a>），这样五度音程为 $5^{1&#x2F;4}$ ， $C-E&#x3D;5&#x2F;4$ 。</p>
+<p>但是中庸全音律仍存在和五度相生律类似的狼音问题。</p>
+<h2 id="良律（well-temperament）"><a href="#良律（well-temperament）" class="headerlink" title="良律（well temperament）"></a>良律（well temperament）</h2><p>巴洛克后期，为了自由地转调，提出了各种well temperament，特点是能够演奏全部24个大小调，但各调之间仍具有不同色彩。</p>
+<h3 id="Kirnburg-III-1"><a href="#Kirnburg-III-1" class="headerlink" title="Kirnburg III^1"></a>Kirnburg III<a target="_blank" rel="noopener" href="https://en.xen.wiki/w/Kirnberger_III">^1</a></h3><p>构造方法：五度链为</p>
+<span id="more"></span>
+
+<div>
+$$
+C^{\sharp}-A^{\flat}-E^{\flat}-B^{\flat}-F-[C-G-D-A-E]-B-F^{\sharp}
+\tag{2}
+$$
+</div>
+
+<p>其中，中括号内部分为了让 $C-E$ 为 $5&#x2F;4$ ，五度间隔被设置为 $5^{1&#x2F;4}$ ；其余为 $3&#x2F;2$ 。</p>
+<p>至于剩下的 $F^{\sharp}-C^{\sharp}$ ，整个链横跨7个八度，频率应该上升 $2^7$ ，必须改变 $F^{\sharp}-C^{\sharp}$ </p>
+<div>
+$$
+\cfrac{2^7}{\left(\cfrac{3}{2}\right)^7\times 5} \approx 1.4983
+\tag{3}
+$$
+</div>
+
+<p>或者700.00cents</p>
+<table>
+<thead>
+<tr>
+<th>Note</th>
+<th>Freq.</th>
+<th>Cents</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>C</td>
+<td>$1$</td>
+<td>0</td>
+</tr>
+<tr>
+<td>C♯</td>
+<td>$256&#x2F;243$</td>
+<td>90.22</td>
+</tr>
+<tr>
+<td>D</td>
+<td>$\sqrt{5}&#x2F;2$</td>
+<td>193.16</td>
+</tr>
+<tr>
+<td>E♭</td>
+<td>$32&#x2F;27$</td>
+<td>294.13</td>
+</tr>
+<tr>
+<td>E</td>
+<td>$5&#x2F;4$</td>
+<td>386.31</td>
+</tr>
+<tr>
+<td>F</td>
+<td>$4&#x2F;3$</td>
+<td>498.04</td>
+</tr>
+<tr>
+<td>F♯</td>
+<td>$45&#x2F;32$</td>
+<td>590.22</td>
+</tr>
+<tr>
+<td>G</td>
+<td>$5^{1&#x2F;4}$</td>
+<td>696.58</td>
+</tr>
+<tr>
+<td>A♭</td>
+<td>$128&#x2F;81$</td>
+<td>792.18</td>
+</tr>
+<tr>
+<td>A</td>
+<td>$5^{3&#x2F;4}&#x2F;2$</td>
+<td>889.74</td>
+</tr>
+<tr>
+<td>B♭</td>
+<td>$16&#x2F;9$</td>
+<td>996.09</td>
+</tr>
+<tr>
+<td>B</td>
+<td>$15&#x2F;8$</td>
+<td>1088.27</td>
+</tr>
+</tbody></table>
+<h3 id="Werkmeister-III-1"><a href="#Werkmeister-III-1" class="headerlink" title="Werkmeister III^1"></a>Werkmeister III<a target="_blank" rel="noopener" href="https://www.teoria.com/en/articles/temperaments/04-well-temperament.php">^1</a></h3><p>构造方法：五度链为</p>
+<div>
+$$
+C^{\sharp}-A^{\flat}-E^{\flat}-B^{\flat}-F-[C-G-D-A]-E-[B-F^{\sharp}]-C^{\sharp}
+\tag{4}
+$$
+</div>
+
+<p>其中，中括号内部分各增加了 $1&#x2F;4$ 个Pythagorean comma；其余为 $3&#x2F;2$ 。或者说中括号内部分在7个八度减去8个完美 $3&#x2F;2$ 五度后，剩下的4个五度进行平分。于是 $C-G$ 等于</p>
+<div>
+$$
+\left[2^7 \times \left(\cfrac{2}{3}\right)^{8} \right]^{1/4}=\cfrac{2^{3/4}\times 8}{9} \approx 1.4949
+\tag{5}
+$$
+</div>
+
+<p> $C-E$ 等于</p>
+<div>
+$$
+\left[2^7 \times \left(\cfrac{2}{3}\right)^{8} \right]^{3/4}\times \cfrac{3}{2} \times \cfrac{1}{4}
+= \cfrac{2^{1/4} \times 2^{8}}{3^5}
+\approx 1.2528
+\tag{6}
+$$
+</div>
+
+<p>接近 $5&#x2F;4$ ，差距3.9音分</p>
+<table>
+<thead>
+<tr>
+<th>Note</th>
+<th>Freq.</th>
+<th>Cents</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>C</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>C♯</td>
+<td>$256&#x2F;243$</td>
+<td>90.22</td>
+</tr>
+<tr>
+<td>D</td>
+<td>1.1174</td>
+<td>192.18</td>
+</tr>
+<tr>
+<td>E♭</td>
+<td>$32&#x2F;27$</td>
+<td>294.13</td>
+</tr>
+<tr>
+<td>E</td>
+<td>1.2528</td>
+<td>390.22</td>
+</tr>
+<tr>
+<td>F</td>
+<td>$4&#x2F;3$</td>
+<td>498.04</td>
+</tr>
+<tr>
+<td>F♯</td>
+<td>$1024&#x2F;729$</td>
+<td>588.27</td>
+</tr>
+<tr>
+<td>G</td>
+<td>1.4949</td>
+<td>696.09</td>
+</tr>
+<tr>
+<td>A♭</td>
+<td>$128&#x2F;81$</td>
+<td>792.18</td>
+</tr>
+<tr>
+<td>A</td>
+<td>1.6704</td>
+<td>888.27</td>
+</tr>
+<tr>
+<td>B♭</td>
+<td>$16&#x2F;9$</td>
+<td>996.09</td>
+</tr>
+<tr>
+<td>B</td>
+<td>1.8792</td>
+<td>1092.18</td>
+</tr>
+</tbody></table>
+<h3 id="其他well-temperament"><a href="#其他well-temperament" class="headerlink" title="其他well temperament"></a>其他well temperament</h3><p>除了上两种，还有很多种well temperament<a target="_blank" rel="noopener" href="https://www.hpschd.nu/index.html?nav/nav-4.html&t/welcome.html&https://www.hpschd.nu/tech/tmp/werckmeister.html">^2</a>。不同的well temperament有不同处理音差的方式，导致不同调性的色彩，具体见一个网站<a target="_blank" rel="noopener" href="https://www.hpschd.nu/index.html?nav/nav-4.html&t/welcome.html&https://www.hpschd.nu/tech/tmp/werckmeister.html">^2</a>。</p>
+<h2 id="十二平均律-7"><a href="#十二平均律-7" class="headerlink" title="十二平均律^7"></a>十二平均律<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/499217933">^7</a></h2><p>采用严格等比数列，公比为 $2^{1&#x2F;12}$ 。</p>
+<table>
+<thead>
+<tr>
+<th>Note</th>
+<th>Freq.</th>
+<th>Cents</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>C</td>
+<td>$1$</td>
+<td>0</td>
+</tr>
+<tr>
+<td>C♯</td>
+<td>$2^{1&#x2F;12}$</td>
+<td>100</td>
+</tr>
+<tr>
+<td>D</td>
+<td>$2^{1&#x2F;6}$</td>
+<td>200</td>
+</tr>
+<tr>
+<td>E♭</td>
+<td>$2^{1&#x2F;4}$</td>
+<td>300</td>
+</tr>
+<tr>
+<td>E</td>
+<td>$2^{1&#x2F;3}$</td>
+<td>400</td>
+</tr>
+<tr>
+<td>F</td>
+<td>$2^{5&#x2F;12}$</td>
+<td>500</td>
+</tr>
+<tr>
+<td>F♯</td>
+<td>$2^{1&#x2F;2}$</td>
+<td>600</td>
+</tr>
+<tr>
+<td>G</td>
+<td>$2^{7&#x2F;12}$</td>
+<td>700</td>
+</tr>
+<tr>
+<td>A♭</td>
+<td>$2^{2&#x2F;3}$</td>
+<td>800</td>
+</tr>
+<tr>
+<td>A</td>
+<td>$2^{3&#x2F;4}$</td>
+<td>900</td>
+</tr>
+<tr>
+<td>B♭</td>
+<td>$2^{5&#x2F;6}$</td>
+<td>1000</td>
+</tr>
+<tr>
+<td>B</td>
+<td>$2^{11&#x2F;12}$</td>
+<td>1100</td>
+</tr>
+</tbody></table>
+<p>这是现代钢琴上最常用的律制。五度和纯律相比相差较小（-1.96音分），但大三度相差较大（+13.69音分）。</p>
+<p>特点是十二个大&#x2F;小调是完全的平移关系，各调之间不存在调性色彩的区别。</p>
+<blockquote>
+<p>不过，由于现代乐器很多按十二平均律调律，很多人已经听不出大三度的区别了…</p>
+<p>此外纠正一个误区。巴赫著名的平均律其实和这里的十二平均律没有关系，他的著作英文叫Well-Tempered Clavier，因此用的律制是well temperament，翻译过来叫良律（有些人叫优律），总之翻译成平均律是误翻</p>
+</blockquote>
+<h3 id="现代钢琴非谐性与调律"><a href="#现代钢琴非谐性与调律" class="headerlink" title="现代钢琴非谐性与调律"></a>现代钢琴非谐性与调律</h3><p>现代钢琴由于琴弦的刚度导致的非谐性，八度不是严格的2，因此钢琴调律严格来说和十二平均律有细微差别。</p>
+<p>不考虑阻尼，有刚度弦振动方程为</p>
+<div>
+$$
+\mu\cfrac{\partial^2u}{\partial t^2}
+=T\cfrac{\partial^2u}{\partial x^2}
+-EI\cfrac{\partial^4u}{\partial x^4}
+\tag{7}
+$$
+</div>
+
+<p>其中 $\mu$ 为线密度， $u$ 为横向位移， $T$ 为张力， $E$ 为杨氏模量， $I$ 为弦截面的面积惯性矩， $EI$ 为弦的弯曲刚度。</p>
+<p>我们假设弦的坐标范围为 $x \in [0,a]$ ，取边界条件 $u(0,t)&#x3D;u(a,t)&#x3D;0$ ，那么方程可分离变量，解出特征频率为</p>
+<div>
+$$
+-\mu\omega^2
+=-T\left(\cfrac{n \pi}{a}\right)^2
+-EI\left(\cfrac{n \pi}{a}\right)^4
+\tag{8}
+$$
+</div>
+
+<div>
+$$
+\omega = \cfrac{n \pi}{a}\sqrt{\cfrac{T}{\mu}}\sqrt{1+\cfrac{EI}{T}\left(\cfrac{n \pi}{a}\right)^2}
+\tag{9}
+$$
+</div>
+
+<p>其中最后一个根号反映钢琴弦的非谐性，其导致第一泛音和基音之比偏离2，或者说八度不是严格的2。如果严格按十二平均律调音会导致八度非整数比，因此严格来说钢琴调律和十二平均律有细微差别。</p>
+<h2 id="其他非十二音体系"><a href="#其他非十二音体系" class="headerlink" title="其他非十二音体系"></a>其他非十二音体系</h2><p>为什么现在使用的律制一般属于十二音体系？因为十二音体系能把五度 $3&#x2F;2$ 、大三度 $5&#x2F;4$ 拟合地较好，且八度内音数量适中，适合演奏。</p>
+<p>假设我们要设计包含 $N$ 个音的平均律。那么每个音的音程为</p>
+<div>
+$$
+2^{0},2^{1/N},2^{2/N},\cdots,2^{(N-1)/N}
+\tag{10}
+$$
+</div>
+
+<p>为寻找与 $3&#x2F;2$ 之比最小的音，我们取其以2为底的对数，问题转化为离 $\log_2(3&#x2F;2)$ 最近的分数。</p>
+<p>同样，为寻找与 $5&#x2F;4$ 之比最小的音，我们求离 $\log_2(5&#x2F;4)$ 最近的分数。这些问题在数学上是求无理数的最佳有理逼近，根据这一准则可以找到一些满足要求的 $N$ ：</p>
+<table>
+<thead>
+<tr>
+<th>EDO</th>
+<th>纯五度逼近</th>
+<th>五度误差（cents）</th>
+<th>纯大三度逼近</th>
+<th>大三度误差（cents）</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>12</td>
+<td>7</td>
+<td>-1.96</td>
+<td>4</td>
+<td>13.69</td>
+</tr>
+<tr>
+<td>19</td>
+<td>11</td>
+<td>-7.22</td>
+<td>6</td>
+<td>-7.37</td>
+</tr>
+<tr>
+<td>22</td>
+<td>13</td>
+<td>7.14</td>
+<td>7</td>
+<td>-4.50</td>
+</tr>
+<tr>
+<td>31</td>
+<td>18</td>
+<td>-5.18</td>
+<td>10</td>
+<td>0.78</td>
+</tr>
+<tr>
+<td>41</td>
+<td>24</td>
+<td>0.48</td>
+<td>13</td>
+<td>-5.83</td>
+</tr>
+<tr>
+<td>53</td>
+<td>31</td>
+<td>-0.07</td>
+<td>17</td>
+<td>-1.41</td>
+</tr>
+</tbody></table>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p>[1] <a target="_blank" rel="noopener" href="https://www.teoria.com/en/articles/temperaments/04-well-temperament.php">https://www.teoria.com/en/articles/temperaments/04-well-temperament.php</a><br>[2] <a target="_blank" rel="noopener" href="https://www.hpschd.nu/index.html?nav/nav-4.html&t/welcome.html&https://www.hpschd.nu/tech/tmp/werckmeister.html">https://www.hpschd.nu/index.html?nav/nav-4.html&amp;t/welcome.html&amp;https://www.hpschd.nu/tech/tmp/werckmeister.html</a><br>[3] <a target="_blank" rel="noopener" href="https://en.xen.wiki/w/Kirnberger_III">https://en.xen.wiki/w/Kirnberger_III</a><br>[4] <a target="_blank" rel="noopener" href="https://en.xen.wiki/w/Meantone">https://en.xen.wiki/w/Meantone</a><br>[5] <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Meantone_temperament">https://en.wikipedia.org/wiki/Meantone_temperament</a><br>[6] <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Syntonic_comma">https://en.wikipedia.org/wiki/Syntonic_comma</a><br>[7] <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/499217933">https://zhuanlan.zhihu.com/p/499217933</a></p>
+</div><div class="article-licensing box"><div class="licensing-title"><p>律制</p><p><a href="https://yuchenxi2000.github.io/2026/08/20/律制/">https://yuchenxi2000.github.io/2026/08/20/律制/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>Chenxi Yu</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2026-08-20</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2026-08-28</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/%E9%9F%B3%E4%B9%90/">音乐</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2026/08/18/%E6%B1%82%E8%A7%A3%E6%B3%A2%E5%8A%A8%E6%96%B9%E7%A8%8B%E6%A8%A1%E6%8B%9F%E4%B8%8D%E5%90%8C%E4%B9%90%E5%99%A8%E9%9F%B3%E8%89%B2/"><span class="level-item">求解波动方程模拟不同乐器音色</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><!--!--><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a><p class="is-size-7"><span>&copy; 2026 Chenxi Yu</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="fab fa-creative-commons-nc"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/yuchenxi2000"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script data-pjax src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script data-pjax src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "此网站使用Cookie来改善您的体验。",
+          dismiss: "知道了！",
+          allow: "允许使用Cookie",
+          deny: "拒绝",
+          link: "了解更多",
+          policy: "Cookie政策",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js"></script><script src="/js/pjax.js"></script><!--!--><script type="text/javascript" id="MathJax-script" async>MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      },
+      svg: {
+        fontCache: 'global'
+      },
+      chtml: {
+        matchFontHeight: false
+      }
+    };</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js"></script><!--!--><!--!--><script data-pjax src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script data-pjax src="/js/insight.js" defer></script><script data-pjax>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script></body></html>
