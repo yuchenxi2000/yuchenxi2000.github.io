@@ -1,0 +1,458 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>Kondo模型推导 - YCX&#039;s Blog</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="YCX&#039;s Blog"><meta name="msapplication-TileImage" content="favicon.ico"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="YCX&#039;s Blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="单个缺陷的Anderson impurity model，在缺陷单占据的情况下，可近似得到Kondo model。下面进行推导，先定义Anderson impurity model：  $$ H&amp;#x3D;\sum_{k\sigma} \varepsilon_{k} c^\dagger_{k\sigma} c_{k\sigma} + \varepsilon_d \sum_{\sigma} n_{d \sig"><meta property="og:type" content="blog"><meta property="og:title" content="Kondo模型推导"><meta property="og:url" content="https://yuchenxi2000.github.io/2026/08/31/Kondo%E6%A8%A1%E5%9E%8B%E6%8E%A8%E5%AF%BC/"><meta property="og:site_name" content="YCX&#039;s Blog"><meta property="og:description" content="单个缺陷的Anderson impurity model，在缺陷单占据的情况下，可近似得到Kondo model。下面进行推导，先定义Anderson impurity model：  $$ H&amp;#x3D;\sum_{k\sigma} \varepsilon_{k} c^\dagger_{k\sigma} c_{k\sigma} + \varepsilon_d \sum_{\sigma} n_{d \sig"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://yuchenxi2000.github.io/img/og_image.png"><meta property="article:published_time" content="2026-08-31T07:44:01.000Z"><meta property="article:modified_time" content="2026-09-02T14:03:02.428Z"><meta property="article:author" content="Chenxi Yu"><meta property="article:tag" content="物理"><meta property="article:tag" content="量子力学"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://yuchenxi2000.github.io/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://yuchenxi2000.github.io/2026/08/31/Kondo%E6%A8%A1%E5%9E%8B%E6%8E%A8%E5%AF%BC/"},"headline":"Kondo模型推导","image":["https://yuchenxi2000.github.io/img/og_image.png"],"datePublished":"2026-08-31T07:44:01.000Z","dateModified":"2026-09-02T14:03:02.428Z","author":{"@type":"Person","name":"Chenxi Yu"},"publisher":{"@type":"Organization","name":"YCX's Blog","logo":{"@type":"ImageObject","url":"https://yuchenxi2000.github.io/2026/08/31/Kondo%E6%A8%A1%E5%9E%8B%E6%8E%A8%E5%AF%BC/android-chrome-512x512.png"}},"description":"单个缺陷的Anderson impurity model，在缺陷单占据的情况下，可近似得到Kondo model。下面进行推导，先定义Anderson impurity model：  $$ H&#x3D;\\sum_{k\\sigma} \\varepsilon_{k} c^\\dagger_{k\\sigma} c_{k\\sigma} + \\varepsilon_d \\sum_{\\sigma} n_{d \\sig"}</script><link rel="canonical" href="https://yuchenxi2000.github.io/2026/08/31/Kondo%E6%A8%A1%E5%9E%8B%E6%8E%A8%E5%AF%BC/"><link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link data-pjax rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link data-pjax rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!--!--><!-- hexo injector head_end start --><script>
+  (function () {
+      function switchTab() {
+          if (!location.hash) {
+            return;
+          }
+
+          const id = '#' + CSS.escape(location.hash.substring(1));
+          const $tabMenu = document.querySelector(`.tabs a[href="${id}"]`);
+          if (!$tabMenu) {
+            return;
+          }
+
+          const $tabMenuContainer = $tabMenu.parentElement.parentElement;
+          Array.from($tabMenuContainer.children).forEach($menu => $menu.classList.remove('is-active'));
+          Array.from($tabMenuContainer.querySelectorAll('a'))
+              .map($menu => document.getElementById($menu.getAttribute("href").substring(1)))
+              .forEach($content => $content.classList.add('is-hidden'));
+
+          if ($tabMenu) {
+              $tabMenu.parentElement.classList.add('is-active');
+          }
+          const $activeTab = document.querySelector(id);
+          if ($activeTab) {
+              $activeTab.classList.remove('is-hidden');
+          }
+      }
+      switchTab();
+      window.addEventListener('hashchange', switchTab, false);
+  })();
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 8.1.1"></head><body class="is-1-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-12"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2026-08-31T07:44:01.000Z" title="2026/8/31 15:44:01">2026-08-31</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E7%89%A9%E7%90%86/">物理</a></span><span class="level-item">15 分钟读完 (大约2280个字)</span></div></div><h1 class="title is-3 is-size-4-mobile">Kondo模型推导</h1><div class="content"><p>单个缺陷的Anderson impurity model，在缺陷单占据的情况下，可近似得到Kondo model。下面进行推导，先定义Anderson impurity model：</p>
+<div>
+$$
+H=\sum_{k\sigma} \varepsilon_{k} c^\dagger_{k\sigma} c_{k\sigma} + \varepsilon_d \sum_{\sigma} n_{d \sigma} + U n_{d \uparrow} n_{d \downarrow} + \sum_{k \sigma} \left(V_k c^\dagger_{k\sigma} d_\sigma + V_k^\ast  d^\dagger_\sigma c_{k\sigma} \right)
+\tag{1}
+$$
+</div>
+
+<p>其可以分为两项，对角项和缺陷-巡游电子耦合项：</p>
+<div>
+$$
+H_0=\sum_{k\sigma} \varepsilon_{k} c^\dagger_{k\sigma} c_{k\sigma} + \varepsilon_d \sum_{\sigma} n_{d \sigma} + U n_{d \uparrow} n_{d \downarrow}
+\tag{2}
+$$
+</div>
+
+<div>
+$$
+H_{\mathrm{int}}=\sum_{k \sigma} \left(V_k c^\dagger_{k\sigma} d_\sigma + V_k^\ast  d^\dagger_\sigma c_{k\sigma} \right)
+\tag{3}
+$$
+</div>
+
+<div>
+$$
+H = H_0 + H_{\mathrm{int}}
+\tag{4}
+$$
+</div>
+
+<h2 id="Schrieffer-Wolff-Transformation"><a href="#Schrieffer-Wolff-Transformation" class="headerlink" title="Schrieffer-Wolff Transformation"></a>Schrieffer-Wolff Transformation</h2><p>为直观展示展开的阶数，可以引入耦合强度常数 $g$ ，然后在推导的最后令 $g&#x3D;1$ ：</p>
+<p>哈密顿量为</p>
+<div>
+$$
+H = H_0 + gH_{\mathrm{int}}
+\tag{5}
+$$
+</div>
+
+<p>对其进行幺正变换，其中 $S$ 为反厄米算符</p>
+<div>
+$$
+U=e^{gS}
+\tag{6}
+$$
+</div>
+
+<p>变换后哈密顿量近似为</p>
+<div>
+$$
+\begin{aligned}
+H'
+&= e^{gS}He^{-gS} \\
+&= H+g[S,H]+\cfrac{g^2}{2!}[S,[S,H]]+\mathcal{O}(g^3) \\
+&= H_0+g\left(H_{\mathrm{int}}+[S,H_0]\right)+g^2[S,H_{\mathrm{int}}]+\cfrac{g^2}{2!}[S,[S,H_0]]+\mathcal{O}(g^3)
+\end{aligned}
+\tag{7}
+$$
+</div>
+
+<p>为使得近似是二阶的，令一阶项为零：</p>
+<div>
+$$
+H_{\mathrm{int}}+[S,H_0]=0
+\label{sw-trans-first-order}
+\tag{8}
+$$
+</div>
+
+<p>于是</p>
+<div>
+$$
+H' \approx H_0+\cfrac{g^2}{2}[S,H_{\mathrm{int}}]
+\label{sw-trans-hamiltonian}
+\tag{9}
+$$
+</div>
+
+<h2 id="通过S-W变换推导Kondo模型"><a href="#通过S-W变换推导Kondo模型" class="headerlink" title="通过S-W变换推导Kondo模型"></a>通过S-W变换推导Kondo模型</h2><h3 id="求反厄米算符-S"><a href="#求反厄米算符-S" class="headerlink" title="求反厄米算符 $S$"></a>求反厄米算符 $S$</h3><p>我们猜测对于Anderson impurity model，反厄米算符 $S$ 有如下形式</p>
+<div>
+$$
+S=\sum_{k\sigma} \left( a_{k} + b_{k} n_{d\overline{\sigma}} \right) c^\dagger_{k\sigma}d_{\sigma}  - \text{h.c.}
+\tag{10}
+$$
+</div>
+
+<p>其中 $\overline{\sigma}$ 表示自旋与 $\sigma$ 相反。</p>
+<p>根据条件 $\eqref{sw-trans-first-order}$ ，计算</p>
+<span id="more"></span>
+
+<div>
+$$
+[S,H_0] = 
+\sum_{k\sigma} \left[(\varepsilon_d-\varepsilon_k) (a_k + b_k n_{d\overline\sigma}) c^\dagger_{k\sigma} d_{\sigma} + U(a_k+b_k)n_{\overline{\sigma}} c^\dagger_{k\sigma} d_{\sigma}\right] + \text{h.c.}
+\tag{11}
+$$
+</div>
+
+<p>由此得出系数</p>
+<div>
+$$
+\begin{gathered}
+a_{k} = \cfrac{V_{k}}{\varepsilon_k-\varepsilon_d} \\
+b_{k} = \cfrac{UV_{k}}{(\varepsilon_k-\varepsilon_d)(\varepsilon_k-\varepsilon_d-U)}
+\\\end{gathered}
+\tag{12}
+$$
+</div>
+
+<p>代入得到反厄米算符 $S$ </p>
+<div>
+$$
+S=\sum_{k\sigma} V_k \left( \cfrac{1-n_{d\overline{\sigma}}}{\varepsilon_k - \varepsilon_d} + \cfrac{n_{d\overline{\sigma}}}{\varepsilon_k - \varepsilon_d - U} \right) c^\dagger_{k\sigma}d_{\sigma}  - \text{h.c.}
+\tag{13}
+$$
+</div>
+
+<p>上述求 $[S,H_0]$ 过程可以运用以下等式：</p>
+<div>
+$$
+\begin{gathered}
+\lbrack c_{k'\alpha},c^\dagger_{k\sigma} c_{k\sigma}\rbrack  = \delta_{kk'}\delta_{\alpha\sigma} c_{k\sigma}, \quad
+[c^\dagger_{k'\alpha},c^\dagger_{k\sigma} c_{k\sigma}] = -\delta_{kk'}\delta_{\alpha\sigma} c^\dagger_{k\sigma} \\
+[d_\alpha, n_{d\beta}]=\delta_{\alpha\beta}d_{\beta}, \quad 
+[d^\dagger_\alpha, n_{d\beta}]=-\delta_{\alpha\beta}d^\dagger_{\beta}
+\\\end{gathered}
+\tag{14}
+$$
+</div>
+
+<p>以及任意自旋的 $n_{d\alpha},n_{d\beta}$ 可交换。还有恒等式： $[AB,C]$ 中如果 $[A,C]&#x3D;0$ 那么可以把 $A$ 提出来变成 $A[B,C]$ ：</p>
+<div>
+$$
+[AB,C]=ABC-CAB=ABC-ACB=A[B,C]
+\tag{15}
+$$
+</div>
+
+<p>以及用类似方法证明的其他恒等式。</p>
+<h3 id="计算哈密顿量"><a href="#计算哈密顿量" class="headerlink" title="计算哈密顿量"></a>计算哈密顿量</h3><p>哈密顿量 $\eqref{sw-trans-hamiltonian}$ 中第一项已知，我们计算第二项。</p>
+<p>先计算其中不包含 $n_{d\overline{\sigma}}$ 的对易子：</p>
+<div>
+$$
+\begin{aligned}
+\lbrack c^\dagger_{k\alpha} d_\alpha, d^\dagger_\beta c_{p\beta}\rbrack 
+&=
+c^\dagger_{k\alpha} d_\alpha d^\dagger_\beta c_{p\beta} - d^\dagger_\beta c_{p\beta} c^\dagger_{k\alpha} d_\alpha \\
+&=
+\delta_{\alpha\beta} c^\dagger_{k\alpha} c_{p\beta} 
+-
+c^\dagger_{k\alpha} d^\dagger_\beta d_\alpha c_{p\beta} 
+- 
+\delta_{pk} \delta_{\alpha\beta} d^\dagger_\beta d_\alpha 
++ 
+d^\dagger_\beta c^\dagger_{k\alpha} c_{p\beta} d_\alpha 
+\\
+&=
+\delta_{\alpha\beta} c^\dagger_{k\alpha} c_{p\beta} 
+- 
+\delta_{pk} \delta_{\alpha\beta} d^\dagger_\beta d_\alpha
+\end{aligned}
+\tag{16}
+$$
+</div>
+
+<div>
+$$
+[d^\dagger_\alpha c_{k\alpha}, c^\dagger_{p\beta} d_\beta]
+=
+\delta_{kp}\delta_{\alpha\beta} d^\dagger_\alpha d_\beta
+-
+\delta_{\alpha\beta} c^\dagger_{p\beta} c_{k\alpha}
+\tag{17}
+$$
+</div>
+
+<p>下面计算包含 $n_{d\overline{\sigma}}$ 的对易子，使用恒等式处理算符乘积的对易子：</p>
+<div>
+$$
+[AB,C]=A[B,C]+[A,C]B
+\tag{18}
+$$
+</div>
+
+<p>计算得到</p>
+<div>
+$$
+\begin{gathered}
+\lbrack n_{d\overline\alpha}c^\dagger_{k\alpha} d_\alpha, d^\dagger_\beta c_{p\beta}\rbrack 
+=
+n_{d\overline\alpha}[c^\dagger_{k\alpha} d_\alpha, d^\dagger_\beta c_{p\beta}]
++
+[n_{d\overline\alpha}, d^\dagger_\beta c_{p\beta}] c^\dagger_{k\alpha} d_\alpha \\
+=n_{d\overline{\alpha}} \left(\delta_{\alpha\beta} c^\dagger_{k\alpha} c_{p\beta} 
+- 
+\delta_{pk} \delta_{\alpha\beta} d^\dagger_\beta d_\alpha\right)
++
+\delta_{\overline\alpha\beta}d^\dagger_\beta c_{p\beta} c^\dagger_{k\alpha} d_\alpha
+\\\end{gathered}
+\tag{19}
+$$
+</div>
+
+<div>
+$$
+[n_{d\overline\alpha} d^\dagger_\alpha c_{k\alpha}, c^\dagger_{p\beta} d_\beta]
+=
+n_{d\overline\alpha}
+\left( \delta_{kp}\delta_{\alpha\beta} d^\dagger_\alpha d_\beta - \delta_{\alpha\beta} c^\dagger_{p\beta} c_{k\alpha} \right)
+-
+\delta_{\overline\alpha\beta} c^\dagger_{p\beta} d_\beta d^\dagger_\alpha c_{k\alpha}
+\tag{20}
+$$
+</div>
+
+<p>所以</p>
+<div>
+$$
+\begin{aligned}
+\cfrac{1}{2}[S,H_{\mathrm{int}}]
+&=
+\cfrac{1}{2}\sum_{kp\sigma} 
+\left[ (a_k + n_{d\overline\sigma}b_k) V^\ast _p + (a^\ast _p + n_{d\overline\sigma}b^\ast _p) V_k \right] 
+\left( c^\dagger_{k\sigma} c_{p\sigma} - \delta_{pk} n_{d\sigma} \right)
+\\
+&+
+\cfrac{1}{2}\sum_{pk\sigma} 
+\left(b_k V^\ast _p + b^\ast _p V_k\right) d^\dagger_\overline\sigma c_{p\overline\sigma} c^\dagger_{k\sigma} d_\sigma
+\\
+&=
+\sum_{kp\sigma} \cfrac{1}{2}V_kV^\ast _p\left( \cfrac{1}{\varepsilon_k-\varepsilon_d} + \cfrac{1}{\varepsilon_p-\varepsilon_d} \right) c^\dagger_{k\sigma} c_{p\sigma}
+-
+\sum_{k} \cfrac{\lvert V_k \rvert^2}{\varepsilon_k-\varepsilon_d} \sum_\sigma n_{d\sigma}
+\\
+&+
+\sum_k 2\lvert V_k \rvert^2 \left( \cfrac{1}{\varepsilon_k-\varepsilon_d-U} - \cfrac{1}{\varepsilon_k-\varepsilon_d} \right) n_{d\uparrow}n_{d\downarrow}
+\\
+&+
+\sum_{kp\sigma} 
+\cfrac{1}{2} J_{kp}
+\left(
+d^\dagger_\overline\sigma d_\sigma c^\dagger_{k\sigma} c_{p\overline\sigma}
+-
+d^\dagger_\overline\sigma d_\overline\sigma c^\dagger_{k\sigma} c_{p\sigma}
+\right)
+\end{aligned}
+\label{sw-trans-second-order}
+\tag{21}
+$$
+</div>
+
+<p>其中第一项为势散射（部分，另一部分在第四项）；第二、三项为缺陷能级重整化；第四项为Kondo项（包含一部分自旋无关的势散射）。其中Kondo系数</p>
+<div>
+$$
+J_{kp} = V_k V^\ast _p \left( \cfrac{1}{\varepsilon_k-\varepsilon_d} + \cfrac{1}{\varepsilon_p-\varepsilon_d} - \cfrac{1}{\varepsilon_k-\varepsilon_d-U} - \cfrac{1}{\varepsilon_p-\varepsilon_d-U} \right)
+\tag{22}
+$$
+</div>
+
+<p>接下来把Kondo项用缺陷上电子自旋和巡游电子自旋表示。我们假设 $\varepsilon_d\lt E_F\lt \varepsilon_d+U$ ，此时缺陷能级半占据，缺陷上电子自旋算符：</p>
+<div>
+$$
+\begin{cases}
+S_z = \cfrac{1}{2}\left(d^\dagger_\uparrow d_\uparrow - d^\dagger_\downarrow d_\downarrow\right) \\
+S_+ = d^\dagger_\uparrow d_\downarrow \\
+S_- = d^\dagger_\downarrow d_\uparrow
+\end{cases}
+\tag{23}
+$$
+</div>
+
+<p>接下来假设缺陷和巡游电子耦合与 $k$ 无关， $V_k \sim V&#x2F;\sqrt{N}$ ，且巡游电子能量相近并把费米能级设为 $0$ ，那么定义Kondo常数为</p>
+<div>
+$$
+J_{K} = 2 \lvert V \rvert^2 \left( \cfrac{1}{-\varepsilon_d} + \cfrac{1}{\varepsilon_d+U} \right)
+\tag{24}
+$$
+</div>
+
+<p>且定义巡游电子自旋算符（其中 $\sigma$ 为三个泡利矩阵）</p>
+<div>
+$$
+s = \cfrac{1}{2N} \sum_{kp\alpha\beta} c^\dagger_{k\alpha} \sigma_{\alpha\beta} c_{p\beta}
+\tag{25}
+$$
+</div>
+
+<p>那么第四项为（其中 $n(0)$ 为坐标原点处巡游电子粒子数算符 $\sum_{kp\sigma}c^\dagger_{k\sigma}c_{p\sigma}&#x2F;N$ ）</p>
+<div>
+$$
+\begin{gathered}
+\text{4th term}/J_K\\
+=\cfrac{1}{2}(S_+s_-+S_-s_+)-\cfrac{1}{2}\left(\cfrac{1}{2} \pm S_z\right)\left(\cfrac{n(0)}{2} \mp s_z\right) \\
+=\cfrac{1}{2}(S_+s_-+S_-s_+)+S_zs_z - \cfrac{n(0)}{4} \\
+=S\cdot s - \cfrac{n(0)}{4}
+\\\end{gathered}
+\tag{26}
+$$
+</div>
+
+<p>所以第四项包含Kondo项 $J_K S \cdot s$ 。</p>
+<p>我们把坐标变换到实空间，就会知道这里的 $s$ 其实是坐标原点处的自旋算符 $s(0)$ ：</p>
+<p>根据傅立叶变换关系</p>
+<div>
+$$
+\begin{gathered}
+c^\dagger_{R\alpha} = \cfrac{1}{\sqrt{N}} \sum_{k} e^{-\mathrm{i}k \cdot R} c^\dagger_{k\alpha} \\
+c_{R\beta} = \cfrac{1}{\sqrt{N}} \sum_{k} e^{\mathrm{i}k \cdot R} c_{k\beta}
+\\\end{gathered}
+\tag{27}
+$$
+</div>
+
+<p>得到</p>
+<div>
+$$
+\begin{gathered}
+s = \cfrac{1}{2N} \sum_{kp\alpha\beta} c^\dagger_{k\alpha} \sigma_{\alpha\beta} c_{p\beta} \\
+= \cfrac{1}{2} \sum_{\alpha\beta} c^\dagger_{0\alpha} \sigma_{\alpha\beta} c_{0\beta}
+\\\end{gathered}
+\tag{28}
+$$
+</div>
+
+<blockquote>
+<p>注：上文中 $V_k \sim V&#x2F;\sqrt{N}$ 暗含缺陷位于坐标原点的条件。</p>
+<p>如果设 $V_k \sim Ve^{-\mathrm{i}k \cdot R}&#x2F;\sqrt{N}$ ，那么最后得出 $s$ 为坐标 $R$ 处自旋算符，即缺陷位于坐标 $R$ 处。</p>
+</blockquote>
+<h3 id="二阶微扰项物理含义"><a href="#二阶微扰项物理含义" class="headerlink" title="二阶微扰项物理含义"></a>二阶微扰项物理含义</h3><p>最后总结一下二阶微扰的三种不同成分及其物理意义。对于 Kondo 交换和势散射，取局域磁矩极限并投影到缺陷单占据子空间；对于 (\epsilon_d,U) 的重整化，则先讨论尚未投影到缺陷单占据子空间的二阶有效哈密顿量。</p>
+<p>S-W变换后哈密顿量二阶微扰 $\eqref{sw-trans-second-order}$ 中，第一和部分第四项组成势散射项：</p>
+<div>
+$$
+\begin{gathered}
+Wn(0) = \left(\cfrac{\lvert V \rvert^2}{-\varepsilon_d}-\cfrac{J_K}{4}\right) n(0) \\
+=\cfrac{\lvert V \rvert^2}{2}\left(\cfrac{1}{-\varepsilon_d}-\cfrac{1}{\varepsilon_d + U}\right) n(0)
+\\\end{gathered}
+\tag{29}
+$$
+</div>
+
+<p>在尚未投影到缺陷单占据子空间的哈密顿量中（也就是未假设缺陷单占据），第二项和第三项分别是对缺陷能级 $\varepsilon_d$ 和缺陷上库伦作用 $U$ 的重整化：</p>
+<div>
+$$
+\delta \varepsilon_d= - \sum_{k} \cfrac{\lvert V_k \rvert^2}{\varepsilon_k-\varepsilon_d}
+\tag{30}
+$$
+</div>
+
+<div>
+$$
+\delta U = \sum_k 2\lvert V_k \rvert^2 \left( \cfrac{1}{\varepsilon_k-\varepsilon_d-U} - \cfrac{1}{\varepsilon_k-\varepsilon_d} \right)
+\tag{31}
+$$
+</div>
+
+<p>考虑缺陷单占据的子空间时，这些电荷自由度不再显式保留。因为 $\sum_{\sigma}n_{d\sigma}&#x3D;1$ ， $\delta\varepsilon_d$ 只会贡献整体能量的平移； $n_{d\uparrow}n_{d\downarrow}&#x3D;0$ ，因此 $\delta U$ 不显式出现。</p>
+<p>第四项部分为Kondo项：</p>
+<div>
+$$
+J_K S \cdot s(0)
+\tag{32}
+$$
+</div>
+
+<p>一般我们研究Kondo效应时只关注Kondo交换作用，不考虑自旋无关的势散射，因此最终的Kondo模型</p>
+<div>
+$$
+H_{\text{kondo}}=\sum_{k\sigma} \varepsilon_{k} c^\dagger_{k\sigma} c_{k\sigma} + J_K S \cdot s(0)
+\tag{33}
+$$
+</div>
+
+</div><div class="article-licensing box"><div class="licensing-title"><p>Kondo模型推导</p><p><a href="https://yuchenxi2000.github.io/2026/08/31/Kondo模型推导/">https://yuchenxi2000.github.io/2026/08/31/Kondo模型推导/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>Chenxi Yu</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2026-08-31</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2026-09-02</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/%E7%89%A9%E7%90%86/">物理</a><a class="link-muted mr-2" rel="tag" href="/tags/%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6/">量子力学</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2026/08/20/%E5%BE%8B%E5%88%B6/"><span class="level-item">律制</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><!--!--><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a><p class="is-size-7"><span>&copy; 2026 Chenxi Yu</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="fab fa-creative-commons-nc"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/yuchenxi2000"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script data-pjax src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script data-pjax src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "此网站使用Cookie来改善您的体验。",
+          dismiss: "知道了！",
+          allow: "允许使用Cookie",
+          deny: "拒绝",
+          link: "了解更多",
+          policy: "Cookie政策",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js"></script><script src="/js/pjax.js"></script><!--!--><script type="text/javascript" id="MathJax-script" async>MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      },
+      svg: {
+        fontCache: 'global'
+      },
+      chtml: {
+        matchFontHeight: false
+      }
+    };</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js"></script><!--!--><!--!--><script data-pjax src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script data-pjax src="/js/insight.js" defer></script><script data-pjax>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script></body></html>
