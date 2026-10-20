@@ -29,7 +29,100 @@
       switchTab();
       window.addEventListener('hashchange', switchTab, false);
   })();
-  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 8.1.1"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2023-07-09T08:06:25.000Z" title="2023/7/9 16:06:25">2023-07-09</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E7%89%A9%E7%90%86/">物理</a></span><span class="level-item">14 分钟读完 (大约2129个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2023/07/09/Dirac%E6%96%B9%E7%A8%8B%E7%9A%84%E9%9D%9E%E7%9B%B8%E5%AF%B9%E8%AE%BA%E8%BF%91%E4%BC%BC/">Dirac方程的非相对论近似</a></p><div class="content"><p>Chenxi Yu</p>
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 8.1.1"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2023-07-10T12:03:17.000Z" title="2023/7/10 20:03:17">2023-07-10</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E7%89%A9%E7%90%86/">物理</a></span><span class="level-item">5 分钟读完 (大约723个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2023/07/10/%E5%91%A8%E6%9C%9F%E6%80%A7%E5%8A%BF%E5%9C%BA%E7%9A%84%E5%93%88%E5%AF%86%E9%A1%BF%E9%87%8F/">周期性势场的哈密顿量</a></p><div class="content"><p>假设某一维周期势场 $V(x)$ ，周期为 $a$ </p>
+<p>那么薛定谔方程写做</p>
+<div>
+$$
+\left[-\cfrac{\hbar^2}{2m}\nabla^2+V(x)\right]\psi(x)=E\psi(x)
+\tag{1}
+$$
+</div>
+
+<p>转换到k空间，即求解哈密顿量在k空间中的矩阵元</p>
+<div>
+$$
+\bra{k^\prime}H\ket{k}=\cfrac{1}{2\pi}\int_{\Bbb{R}}\exp(-\mathrm{i}k^\prime x)H(x)\exp(+\mathrm{i}k x)\,\mathrm{d}x
+\tag{2}
+$$
+</div>
+
+<p>其中</p>
+<div>
+$$
+\ket{k}=\cfrac{1}{\sqrt{2\pi}}\exp(+\mathrm{i}kx)
+\tag{3}
+$$
+</div>
+
+<div>
+$$
+\begin{gathered}
+\bra{k^\prime}H\ket{k}
+=\cfrac{1}{2\pi}\int_{\Bbb{R}}\exp(-\mathrm{i}k^\prime x)\left[-\cfrac{\hbar^2}{2m}\nabla^2+V(x)\right]\exp(+\mathrm{i}k x)\,\mathrm{d}x \\
+=\cfrac{1}{2\pi}\int_{\Bbb{R}}\cfrac{\hbar^2k^2}{2m}\exp\left[+\mathrm{i}(k-k^\prime) x\right]\,\mathrm{d}x
++ \cfrac{1}{2\pi}\int_{\Bbb{R}}V(x)\exp\left[+\mathrm{i}(k-k^\prime) x\right]\,\mathrm{d}x \\
+=\cfrac{\hbar^2k^2}{2m}\delta(k-k^\prime)
++ \cfrac{1}{2\pi}\int_{\Bbb{R}}V(x)\exp\left[+\mathrm{i}(k-k^\prime) x\right]\,\mathrm{d}x \\
+\\\end{gathered}
+\tag{4}
+$$
+</div>
+
+<p>接下来求第二项。将第二项平移 $na$ ，其中 $n\in \Bbb{Z}$ 。因为势场周期为 $a$ ，</p>
+<div>
+$$
+\begin{gathered}
+\cfrac{1}{2\pi}\int_{\Bbb{R}}V(x)\exp\left[+\mathrm{i}(k-k^\prime) x\right]\,\mathrm{d}x \\
+=\cfrac{1}{2\pi}\int_{\Bbb{R}}V(x+na)\exp\left[+\mathrm{i}(k-k^\prime) (x+na)\right]\,\mathrm{d}x \\
+=\exp\left[+\mathrm{i}(k-k^\prime) na\right]\cfrac{1}{2\pi}\int_{\Bbb{R}}V(x)\exp\left[+\mathrm{i}(k-k^\prime) x\right]\,\mathrm{d}x \\
+\\\end{gathered}
+\tag{5}
+$$
+</div>
+
+<p>因此除非 $(k-k^\prime)a&#x3D;2\pi m,m\in\Bbb{Z}$ ，否则</p>
+<div>
+$$
+\cfrac{1}{2\pi}\int_{\Bbb{R}}V(x)\exp\left[+\mathrm{i}(k-k^\prime) x\right]\,\mathrm{d}x =0
+\tag{6}
+$$
+</div>
+
+<p>我们记 $V(x)$ 的傅立叶逆变换为</p>
+<div>
+$$
+\cfrac{1}{2\pi}\int_{\Bbb{R}}V(x)\exp\left[+\mathrm{i}(k-k^\prime) x\right]\,\mathrm{d}x =V(k-k^\prime)
+\tag{7}
+$$
+</div>
+
+<p>则</p>
+<div>
+$$
+\bra{k^\prime}H\ket{k} = \cfrac{\hbar^2k^2}{2m}\delta(k-k^\prime) + V(k-k^\prime)
+\tag{8}
+$$
+</div>
+
+<p>其中当 $k-k^\prime \neq 2\pi m&#x2F;a,m\in\Bbb{Z}$ 时 $V(k-k^\prime)&#x3D;0$ </p>
+<p>考虑矩阵元非零情况，此时必须满足 $k-k^\prime &#x3D; 2\pi m&#x2F;a,m\in\Bbb{Z}$ </p>
+<p>我们可以将 $k$ 局限在 $2\pi&#x2F;a$ 范围内，然后设 $k-k^\prime&#x3D;G$ ，那么对于不同的 $k$ ，分别对角化哈密顿矩阵。（因为如果 $k$ 和 $k^\prime$ 都在 $2\pi&#x2F;a$ 范围内，那么矩阵元为零，说明对于 $2\pi&#x2F;a$ 范围内的 $k$ 哈密顿量已经部分对角化）</p>
+<p>在固体物理里面这个将 $k$ 局限在 $2\pi&#x2F;a$ 范围内就是只求解布里渊区内的 $k$ 点对应的哈密顿量， $2\pi&#x2F;a$ 就是一维问题的布里渊区大小。一般来说选择 $[-\pi&#x2F;a,+\pi&#x2F;a)$ 作为布里渊区。</p>
+<p>假设对于某个 $k$ 我们已经将哈密顿量对角化，并且得到特征矢量 $a_G$ ，那么波函数为</p>
+<div>
+$$
+\begin{gathered}
+\psi_k(x)
+= \sum_G a_G \exp \left[ \mathrm{i} (k + G) x \right] \\
+= \exp \left( \mathrm{i} k x \right) \sum_G a_G \exp \left( \mathrm{i} G x \right) \\
+= \exp \left( \mathrm{i} k x \right) u(x) \\
+\\\end{gathered}
+\tag{9}
+$$
+</div>
+
+<p>易知 $u(x)$ 为周期为 $a$ 的函数，这个结果反映了Bloch定理。</p>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2023-07-09T08:06:25.000Z" title="2023/7/9 16:06:25">2023-07-09</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E7%89%A9%E7%90%86/">物理</a></span><span class="level-item">14 分钟读完 (大约2129个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2023/07/09/Dirac%E6%96%B9%E7%A8%8B%E7%9A%84%E9%9D%9E%E7%9B%B8%E5%AF%B9%E8%AE%BA%E8%BF%91%E4%BC%BC/">Dirac方程的非相对论近似</a></p><div class="content"><p>Chenxi Yu</p>
 <p>2023.07.09</p>
 <h2 id="Dirac方程"><a href="#Dirac方程" class="headerlink" title="Dirac方程"></a>Dirac方程</h2><div>
 $$
@@ -532,104 +625,7 @@ $$
 </div>
 
 <p>矩阵的迹等于全部特征值的和，特征值全为 $\pm 1$ 且 $\operatorname{Tr} (\gamma_0)&#x3D;0$ 的 $\gamma_0$ 不存在，所以狄拉克矩阵必须为偶数维</p>
-</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-12-09T01:54:39.000Z" title="2021/12/9 09:54:39">2021-12-09</time>发表</span><span class="level-item">26 分钟读完 (大约3844个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/12/09/%E9%87%8F%E5%AD%90%E8%AE%A1%E7%AE%97/">量子计算</a></p><div class="content"><h2 id="Eigenstate-superposition-of-eigenstates"><a href="#Eigenstate-superposition-of-eigenstates" class="headerlink" title="Eigenstate &amp; superposition of eigenstates"></a>Eigenstate &amp; superposition of eigenstates</h2><ul>
-<li><p>量子态由希尔伯特空间的态矢描述</p>
-</li>
-<li><p>量子态与态矢的模长无关，模长相等的态矢构成等价类，由此准确地说量子态由射影希尔伯特空间（projected Hilbert space）的态矢描述（想象一下通过原点的射线）</p>
-</li>
-<li><p>本征态是力学量算符的本征值对应的态，宏观测量时测到的力学量值都是本征值。</p>
-</li>
-<li><p>本征态构成完备正交基（我们假设力学量算符都是厄米算符），所以一般的态矢可以用这组基分解。</p>
-</li>
-<li><p>根据Born rule，测到某本征值的概率是展开系数的模长平方。</p>
-</li>
-</ul>
-<h2 id="Pure-state-mixed-state"><a href="#Pure-state-mixed-state" class="headerlink" title="Pure state &amp; mixed state"></a>Pure state &amp; mixed state</h2><ul>
-<li><p>纯粹态可以用波函数（希尔伯特空间态矢）描述，而混合态不行</p>
-</li>
-<li><p>混合态描述与环境有纠缠的态，或者用统计方法研究未知系统</p>
-</li>
-<li><p>混合态用密度算符描述，给出某态矢在系综内的占比。</p>
-</li>
-</ul>
-<div>
-$$
-\rho=\sum_i P_i \ket{\phi_i}\bra{\phi_i}
-\tag{1}
-$$
-</div>
-
-<p>其中 $P_i$ 为 $\ket{\phi_i}$ 的占比</p>
-<ul>
-<li>密度算符随时间演化遵遁Liouville–von Neumann equation：</li>
-</ul>
-<div>
-$$
-\mathrm{i}\hbar \cfrac{\partial \rho}{\partial t} = [H, \rho]
-\tag{2}
-$$
-</div>
-
-<ul>
-<li>纯粹态和混合态的区别：</li>
-</ul>
-<p> $\frac{1}{\sqrt{2}}\ket{\uparrow}+\frac{1}{\sqrt{2}}\ket{\downarrow}$ 是纯粹态，50%的 $\ket{\uparrow}$ 与50%的 $\ket{\downarrow}$ 构成的系综是混合态</p>
-<h2 id="Entangled-state"><a href="#Entangled-state" class="headerlink" title="Entangled state"></a>Entangled state</h2><p>考虑具有两个独立自由度的二能级系统，希尔伯特空间的基矢是张量积：</p>
-<div>
-$$
-\ket{\uparrow} \ket{\uparrow},\,
-\ket{\uparrow} \ket{\downarrow},\,
-\ket{\downarrow} \ket{\uparrow},\,
-\ket{\downarrow} \ket{\downarrow}
-\tag{3}
-$$
-</div>
-
-<p>任何态矢能表示成这几个基矢的线性叠加。</p>
-<p>考虑</p>
-<div>
-$$
-\frac{1}{2} \ket{\uparrow} \ket{\uparrow}
--\frac{1}{2} \ket{\uparrow} \ket{\downarrow}
-+\frac{1}{2} \ket{\downarrow} \ket{\uparrow}
-- \frac{1}{2} \ket{\downarrow} \ket{\downarrow}
-=(\frac{1}{\sqrt{2}}\ket{\uparrow}+\frac{1}{\sqrt{2}}\ket{\downarrow})(\frac{1}{\sqrt{2}}\ket{\uparrow}-\frac{1}{\sqrt{2}}\ket{\downarrow})
-\tag{4}
-$$
-</div>
-
-<p>这个态矢能表示成两个原希尔伯特空间态矢的乘积。</p>
-<p>再考虑</p>
-<div>
-$$
-\frac{1}{\sqrt{2}} \ket{\uparrow} \ket{\uparrow}
-+ \frac{1}{\sqrt{2}} \ket{\downarrow} \ket{\downarrow}
-,\,
-\frac{1}{\sqrt{2}} \ket{\uparrow} \ket{\downarrow}
--\frac{1}{\sqrt{2}} \ket{\downarrow} \ket{\uparrow}
-\tag{5}
-$$
-</div>
-
-<p>它们不能表示成两个原希尔伯特空间态矢的乘积，叫纠缠态。</p>
-<p>混合态是与环境有纠缠的态，处于量子态的希尔伯特空间和环境希尔伯特空间的张量积空间。纠缠态不能分解成乘积，所以说混合态不能用波函数描述。</p>
-<p>和环境有相互作用的量子态最终会演化成和环境有纠缠的态，这就是退相干的来源。我们希望量子态的演化受薛定谔方程支配，但和环境作用退相干后量子态受到破坏，不再遵循薛定谔方程。</p>
-<h2 id="Qubit"><a href="#Qubit" class="headerlink" title="Qubit"></a>Qubit</h2><p>任何二能级系统都能构成一个qubit。实现方式：</p>
-<ul>
-<li><p>Josephson junction中顺时针&#x2F;逆时针电流</p>
-</li>
-<li><p>光子的两个极化状态</p>
-</li>
-<li><p>量子点对中电子在左&#x2F;右边的量子阱</p>
-</li>
-<li><p>量子点中电子自旋向上&#x2F;下</p>
-</li>
-<li><p>Superconducting phase qubit中基态&#x2F;第一激发态</p>
-</li>
-</ul>
-<p>等。</p>
-<p>为什么用量子点中电子自旋而不是基态&#x2F;第一激发态：和退相干问题有关。电子自旋与环境耦合小，退相干时间长</p>
-<h2 id="Quantum-gate"><a href="#Quantum-gate" class="headerlink" title="Quantum gate"></a>Quantum gate</h2><p>量子门可以看作作用在量子态上的幺正算符（unitary operator），或者用矩阵表示为酉矩阵</p></div><a class="article-more button is-small is-size-7" href="/2021/12/09/%E9%87%8F%E5%AD%90%E8%AE%A1%E7%AE%97/#more">阅读更多</a></article></div><nav class="pagination" role="navigation" aria-label="pagination"><div class="pagination-previous"><a href="/page/20/">上一页</a></div><div class="pagination-next"><a href="/page/22/">下一页</a></div><ul class="pagination-list is-hidden-mobile"><li><a class="pagination-link" href="/">1</a></li><li><span class="pagination-ellipsis">&hellip;</span></li><li><a class="pagination-link" href="/page/20/">20</a></li><li><a class="pagination-link is-current" href="/page/21/">21</a></li><li><a class="pagination-link" href="/page/22/">22</a></li><li><a class="pagination-link" href="/page/23/">23</a></li><li><a class="pagination-link" href="/page/24/">24</a></li></ul></nav></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar is-rounded" src="/android-chrome-512x512.png" alt="Chenxi Yu"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">Chenxi Yu</p><p class="is-size-6 is-block">PhD in PKU</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>Beijing, China</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives/"><p class="title">117</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories/"><p class="title">5</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags/"><p class="title">34</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/yuchenxi2000" target="_blank" rel="me noopener">关注我</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="me noopener" title="Github" href="https://github.com/yuchenxi2000"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="me noopener" title="Bilibili" href="https://space.bilibili.com/244355869"><i class="fab fa-bilibili"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="me noopener" title="Zhihu" href="https://www.zhihu.com/people/cha-xi-74-16"><i class="fab fa-zhihu"></i></a></div></div></div><!--!--><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">分类</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/%E5%85%B6%E4%BB%96/"><span class="level-start"><span class="level-item">其他</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/%E6%95%B0%E5%AD%A6/"><span class="level-start"><span class="level-item">数学</span></span><span class="level-end"><span class="level-item tag">44</span></span></a></li><li><a class="level is-mobile" href="/categories/%E7%89%A9%E7%90%86/"><span class="level-start"><span class="level-item">物理</span></span><span class="level-end"><span class="level-item tag">52</span></span></a></li><li><a class="level is-mobile" href="/categories/%E7%BC%96%E7%A8%8B/"><span class="level-start"><span class="level-item">编程</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/%E9%9F%B3%E4%B9%90/"><span class="level-start"><span class="level-item">音乐</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li></ul></div></div></div><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2026-08-31T07:44:01.000Z">2026-08-31</time></p><p class="title"><a href="/2026/08/31/Kondo%E6%A8%A1%E5%9E%8B%E6%8E%A8%E5%AF%BC/">Kondo模型推导</a></p><p class="categories"><a href="/categories/%E7%89%A9%E7%90%86/">物理</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2026-08-20T04:21:46.000Z">2026-08-20</time></p><p class="title"><a href="/2026/08/20/%E5%BE%8B%E5%88%B6/">律制</a></p><p class="categories"><a href="/categories/%E9%9F%B3%E4%B9%90/">音乐</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2026-08-18T09:50:28.000Z">2026-08-18</time></p><p class="title"><a href="/2026/08/18/%E6%B1%82%E8%A7%A3%E6%B3%A2%E5%8A%A8%E6%96%B9%E7%A8%8B%E6%A8%A1%E6%8B%9F%E4%B8%8D%E5%90%8C%E4%B9%90%E5%99%A8%E9%9F%B3%E8%89%B2/">求解波动方程模拟不同乐器音色</a></p><p class="categories"><a href="/categories/%E9%9F%B3%E4%B9%90/">音乐</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2026-06-11T15:59:31.000Z">2026-06-11</time></p><p class="title"><a href="/2026/06/11/Vibe%20Coding%E5%88%9D%E6%8E%A2/">Vibe Coding初探</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2026-06-11T15:58:05.000Z">2026-06-11</time></p><p class="title"><a href="/2026/06/11/VaspAuto%EF%BC%9A%E8%B6%85%E7%AE%97%E8%87%AA%E5%8A%A8%E6%8C%82%E6%9C%BA%E6%A1%86%E6%9E%B6/">VaspAuto：超算自动挂机框架</a></p><p class="categories"><a href="/categories/%E7%BC%96%E7%A8%8B/">编程</a></p></div></article></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/NEGF/"><span class="tag">NEGF</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E4%BB%A3%E6%95%B0/"><span class="tag">代数</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%85%89%E5%AD%A6/"><span class="tag">光学</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%85%B6%E4%BB%96/"><span class="tag">其他</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%87%A0%E4%BD%95%E4%BB%A3%E6%95%B0/"><span class="tag">几何代数</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%9B%BA%E4%BD%93%E7%89%A9%E7%90%86/"><span class="tag">固体物理</span><span class="tag">13</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0/"><span class="tag">复变函数</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%A4%A9%E4%BD%93%E7%89%A9%E7%90%86/"><span class="tag">天体物理</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%AF%86%E5%BA%A6%E6%B3%9B%E5%87%BD%E7%90%86%E8%AE%BA/"><span class="tag">密度泛函理论</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%B7%B4%E6%B4%9B%E5%85%8B%E9%9F%B3%E4%B9%90/"><span class="tag">巴洛克音乐</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%B9%B3%E9%9D%A2%E5%87%A0%E4%BD%95/"><span class="tag">平面几何</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%B9%BF%E4%B9%89%E7%9B%B8%E5%AF%B9%E8%AE%BA/"><span class="tag">广义相对论</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%BC%B9%E6%80%A7%E5%8A%9B%E5%AD%A6/"><span class="tag">弹性力学</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%BE%AE%E5%88%86%E5%87%A0%E4%BD%95/"><span class="tag">微分几何</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B/"><span class="tag">微分方程</span><span class="tag">9</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%95%B0%E5%80%BC%E6%96%B9%E6%B3%95/"><span class="tag">数值方法</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%95%B0%E5%AD%A6/"><span class="tag">数学</span><span class="tag">45</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/"><span class="tag">数学分析</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%95%B0%E8%AE%BA/"><span class="tag">数论</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%A6%82%E7%8E%87%E7%BB%9F%E8%AE%A1/"><span class="tag">概率统计</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/"><span class="tag">泛函分析</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%89%A9%E7%90%86/"><span class="tag">物理</span><span class="tag">58</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%89%B9%E6%AE%8A%E5%87%BD%E6%95%B0/"><span class="tag">特殊函数</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%94%B5%E5%8A%A8%E5%8A%9B%E5%AD%A6/"><span class="tag">电动力学</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%9B%B8%E5%AF%B9%E8%AE%BA/"><span class="tag">相对论</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%AC%AC%E4%B8%80%E6%80%A7%E5%8E%9F%E7%90%86%E8%AE%A1%E7%AE%97/"><span class="tag">第一性原理计算</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%BB%9F%E8%AE%A1%E5%8A%9B%E5%AD%A6/"><span class="tag">统计力学</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%BC%96%E7%A8%8B/"><span class="tag">编程</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%BE%A4%E8%AE%BA/"><span class="tag">群论</span><span class="tag">12</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6/"><span class="tag">量子力学</span><span class="tag">31</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E9%87%8F%E5%AD%90%E5%9C%BA%E8%AE%BA/"><span class="tag">量子场论</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E9%9D%9E%E6%AC%A7%E5%87%A0%E4%BD%95/"><span class="tag">非欧几何</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E9%9F%B3%E4%B9%90/"><span class="tag">音乐</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E9%AB%98%E6%80%A7%E8%83%BD%E8%AE%A1%E7%AE%97/"><span class="tag">高性能计算</span><span class="tag">1</span></a></div></div></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a><p class="is-size-7"><span>&copy; 2026 Chenxi Yu</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="fab fa-creative-commons-nc"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/yuchenxi2000"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
+</div></article></div><nav class="pagination" role="navigation" aria-label="pagination"><div class="pagination-previous"><a href="/page/20/">上一页</a></div><div class="pagination-next"><a href="/page/22/">下一页</a></div><ul class="pagination-list is-hidden-mobile"><li><a class="pagination-link" href="/">1</a></li><li><span class="pagination-ellipsis">&hellip;</span></li><li><a class="pagination-link" href="/page/20/">20</a></li><li><a class="pagination-link is-current" href="/page/21/">21</a></li><li><a class="pagination-link" href="/page/22/">22</a></li><li><a class="pagination-link" href="/page/23/">23</a></li><li><a class="pagination-link" href="/page/24/">24</a></li></ul></nav></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar is-rounded" src="/android-chrome-512x512.png" alt="Chenxi Yu"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">Chenxi Yu</p><p class="is-size-6 is-block">PhD in PKU</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>Beijing, China</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives/"><p class="title">118</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories/"><p class="title">5</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags/"><p class="title">35</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/yuchenxi2000" target="_blank" rel="me noopener">关注我</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="me noopener" title="Github" href="https://github.com/yuchenxi2000"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="me noopener" title="Bilibili" href="https://space.bilibili.com/244355869"><i class="fab fa-bilibili"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="me noopener" title="Zhihu" href="https://www.zhihu.com/people/cha-xi-74-16"><i class="fab fa-zhihu"></i></a></div></div></div><!--!--><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">分类</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/%E5%85%B6%E4%BB%96/"><span class="level-start"><span class="level-item">其他</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/%E6%95%B0%E5%AD%A6/"><span class="level-start"><span class="level-item">数学</span></span><span class="level-end"><span class="level-item tag">44</span></span></a></li><li><a class="level is-mobile" href="/categories/%E7%89%A9%E7%90%86/"><span class="level-start"><span class="level-item">物理</span></span><span class="level-end"><span class="level-item tag">53</span></span></a></li><li><a class="level is-mobile" href="/categories/%E7%BC%96%E7%A8%8B/"><span class="level-start"><span class="level-item">编程</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/%E9%9F%B3%E4%B9%90/"><span class="level-start"><span class="level-item">音乐</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li></ul></div></div></div><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2026-09-12T04:45:01.000Z">2026-09-12</time></p><p class="title"><a href="/2026/09/12/%E5%80%92%E7%AB%8B%E6%9D%86%E5%9C%A8%E9%AB%98%E9%A2%91%E6%8C%AF%E5%8A%A8%E4%B8%8B%E7%A8%B3%E5%AE%9A%E6%80%A7/">倒立杆在高频振动下稳定性</a></p><p class="categories"><a href="/categories/%E7%89%A9%E7%90%86/">物理</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2026-08-31T07:44:01.000Z">2026-08-31</time></p><p class="title"><a href="/2026/08/31/Kondo%E6%A8%A1%E5%9E%8B%E6%8E%A8%E5%AF%BC/">Kondo模型推导</a></p><p class="categories"><a href="/categories/%E7%89%A9%E7%90%86/">物理</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2026-08-20T04:21:46.000Z">2026-08-20</time></p><p class="title"><a href="/2026/08/20/%E5%BE%8B%E5%88%B6/">律制</a></p><p class="categories"><a href="/categories/%E9%9F%B3%E4%B9%90/">音乐</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2026-08-18T09:50:28.000Z">2026-08-18</time></p><p class="title"><a href="/2026/08/18/%E6%B1%82%E8%A7%A3%E6%B3%A2%E5%8A%A8%E6%96%B9%E7%A8%8B%E6%A8%A1%E6%8B%9F%E4%B8%8D%E5%90%8C%E4%B9%90%E5%99%A8%E9%9F%B3%E8%89%B2/">求解波动方程模拟不同乐器音色</a></p><p class="categories"><a href="/categories/%E9%9F%B3%E4%B9%90/">音乐</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2026-06-11T15:59:31.000Z">2026-06-11</time></p><p class="title"><a href="/2026/06/11/Vibe%20Coding%E5%88%9D%E6%8E%A2/">Vibe Coding初探</a></p></div></article></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/NEGF/"><span class="tag">NEGF</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E4%BB%A3%E6%95%B0/"><span class="tag">代数</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%85%89%E5%AD%A6/"><span class="tag">光学</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%85%B6%E4%BB%96/"><span class="tag">其他</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%87%A0%E4%BD%95%E4%BB%A3%E6%95%B0/"><span class="tag">几何代数</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%88%86%E6%9E%90%E5%8A%9B%E5%AD%A6/"><span class="tag">分析力学</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%9B%BA%E4%BD%93%E7%89%A9%E7%90%86/"><span class="tag">固体物理</span><span class="tag">13</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0/"><span class="tag">复变函数</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%A4%A9%E4%BD%93%E7%89%A9%E7%90%86/"><span class="tag">天体物理</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%AF%86%E5%BA%A6%E6%B3%9B%E5%87%BD%E7%90%86%E8%AE%BA/"><span class="tag">密度泛函理论</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%B7%B4%E6%B4%9B%E5%85%8B%E9%9F%B3%E4%B9%90/"><span class="tag">巴洛克音乐</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%B9%B3%E9%9D%A2%E5%87%A0%E4%BD%95/"><span class="tag">平面几何</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%B9%BF%E4%B9%89%E7%9B%B8%E5%AF%B9%E8%AE%BA/"><span class="tag">广义相对论</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%BC%B9%E6%80%A7%E5%8A%9B%E5%AD%A6/"><span class="tag">弹性力学</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%BE%AE%E5%88%86%E5%87%A0%E4%BD%95/"><span class="tag">微分几何</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B/"><span class="tag">微分方程</span><span class="tag">9</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%95%B0%E5%80%BC%E6%96%B9%E6%B3%95/"><span class="tag">数值方法</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%95%B0%E5%AD%A6/"><span class="tag">数学</span><span class="tag">45</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/"><span class="tag">数学分析</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%95%B0%E8%AE%BA/"><span class="tag">数论</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%A6%82%E7%8E%87%E7%BB%9F%E8%AE%A1/"><span class="tag">概率统计</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/"><span class="tag">泛函分析</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%89%A9%E7%90%86/"><span class="tag">物理</span><span class="tag">59</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%89%B9%E6%AE%8A%E5%87%BD%E6%95%B0/"><span class="tag">特殊函数</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%94%B5%E5%8A%A8%E5%8A%9B%E5%AD%A6/"><span class="tag">电动力学</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%9B%B8%E5%AF%B9%E8%AE%BA/"><span class="tag">相对论</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%AC%AC%E4%B8%80%E6%80%A7%E5%8E%9F%E7%90%86%E8%AE%A1%E7%AE%97/"><span class="tag">第一性原理计算</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%BB%9F%E8%AE%A1%E5%8A%9B%E5%AD%A6/"><span class="tag">统计力学</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%BC%96%E7%A8%8B/"><span class="tag">编程</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%BE%A4%E8%AE%BA/"><span class="tag">群论</span><span class="tag">12</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6/"><span class="tag">量子力学</span><span class="tag">31</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E9%87%8F%E5%AD%90%E5%9C%BA%E8%AE%BA/"><span class="tag">量子场论</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E9%9D%9E%E6%AC%A7%E5%87%A0%E4%BD%95/"><span class="tag">非欧几何</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E9%9F%B3%E4%B9%90/"><span class="tag">音乐</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E9%AB%98%E6%80%A7%E8%83%BD%E8%AE%A1%E7%AE%97/"><span class="tag">高性能计算</span><span class="tag">1</span></a></div></div></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/android-chrome-512x512.png" alt="YCX&#039;s Blog" height="28"></a><p class="is-size-7"><span>&copy; 2026 Chenxi Yu</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="fab fa-creative-commons-nc"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/yuchenxi2000"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
             article: {
                 highlight: {
                     clipboard: true,
